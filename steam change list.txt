@@ -1,0 +1,90 @@
+Here's an overview of the changes:
+
+Mechanics
+
+[list]
+[*]1m is now 1m (no more 30 m long tanks)
+[*]"realistic" ranges (source: trust me bro + wikipedia + some dude said it)
+[*]"realistic" (extremely shakily justified) aim times
+[*]"realistic" (extremely shakily justified) reload times
+[*]"realistic" (extremely shakily justified) rates of fire
+[*]"realistic" vehicle and infantry speeds 
+[*]"realistic" (extremely shakily justified) HE damage
+--Infantry will need a ride to get most places
+[*]No repairs for vehicles or reinforcements for squads
+[*]Fuel autonomy crudely corrected (result is you're not gonna run out of gas on these maps)
+[*]Supply amounts tuned to reflect the weight of various munitions (WIP)
+[*]Forests are much harder to traverse for vehicles and harder to see through
+[*]Amphibious speeds are much slower
+[*]Instead of a trickle, you get a lump of points every 10 minutes as new elements arrive
+--I recommend starting with 1000 points for initial skirmishes and recon before the heavy elements arrive
+[/list]
+Armor
+[list]
+[*]Completely reworked damage system with penetration and critical effects
+--In most cases a penetrating hit will result in a vehicle being bailed out or just exploding from a catastrophic ammo detonation
+--Sometimes a vehicle will survive with serious damage to critical systems (although sometime these effects don't get applied and I'm sill chasing that bug)
+--Damage does not scale with AP vs armor, rounds wither penetrate or don't
+--non-penetrating hits can still damage external systems and sometimes cause spalling
+[*]HMGs will damage light armor (sometimes quite badly)
+[*]Large caliber HE weapons require direct hits or very close hits to seriously damage armor (but a 500lb bomb landing 10m from a tank will end it)
+[*]Damage curves with range reworked for different weapon types
+--Heavy AP rounds drop off fairly little with range, autocannons fall off faster, especially smaller calibers
+[*]Tanks are harder to suppress without heavy firepower
+[*]Blow a track and you'll be sitting there for 15 minutes
+[*]NATO tank commanders are "head-out" and have better vision, but can be killed by non-penetrating hits, severely reducing overall efficiency (aim time, accuracy, vision, etc). The label on the tank will say "crew killed" because I can't change text labels yet.
+[*]When a tank loses a crewman overall efficiency drops as survivors try to fill in the role. Tanks with autoloaders cannot suffer a "loader killed" critcal
+[*]Newer NATO tanks are more likely to get bailed out, newer Soviet tanks (with autoloaders) are more likely to detonate catastrophically. This won't make much impact usually (they're out of action either way), but if you need destruction points, shoot it till it burns.
+[/list]
+Infantry
+[list]
+[*]Trucks and other particularly death-trap-ish transports just kill everyone onboard when they get destroyed, while IFVs with particular focus on crew survival will save most transported infantry when destroyed (by most weapons), other transports are somewhere in between
+[*]New suppression system
+--Infantry will become pinned and get much harder to see and damage but can't see or shoot effectively. Eventually they will panic and rout and can be killed easily
+[*]Infantry are much harder to see than tanks
+[*]US, Soviet, and RFA infantry have grenade launchers. UK and French infantry have rifle grenades. DDR units are just sad (but not completely, see below)
+[*]HE rounds available in limited numbers for:
+--RPG-7
+--Carl Gustav
+--LRAC
+--RPG-29
+[*]DDR and Soviet forces have a dedicated RPG-7 gunner without another weapon (because I am too lazy to model pistols so far) but they can carry more rounds as a result
+[*]Heavy AT weapons have very limited stocks in squads because they're, y'know, heavy
+--Many squads supplement their primary AT weapons with RPG-18s/M72s
+[*]Satchel charges are gone (at least i think I got them all)
+[*]Fewer infantry unit types overall (large armies try to have some level of standardization)
+--Some engineer units remain as assault forces
+[/list]
+Air and AA
+[*]SAMs will usually kill airplanes and helicopters in one hit and will rout surviving planes off the map, often with engine damage
+[*]Planes take a very long time to return to the battlefield after a sortie and must be undamaged to do so
+[*]The AGM-114 now has lock-on-after-launch (LOAL). This is slow to aim but allows you to fire on spotted units without direct line of sight
+[*]Heavy SAMs are gone
+[*]The F-117 and Mirage IV are gone (Because It's hard to see them as CAS planes)
+[*]Dedicated strike planes fly lower
+--Dometimes that helps them at least reach a bomb release point
+[*]AA is a lot more expensive and less available (except MANPADS)
+[*]MANPADS teams carry a far fewer rounds, take a long time to aim, and are quite inaccurate
+[/list]
+Artillery
+[list]
+[*]Most heavy artillery units eliminated
+--Replaced by forward observers that take a few minutes to aim but deliver ample firepower
+[*]Remaining howitzers now direct fire typical HE rounds so have potential in a direct fire role
+[*]Smoke effects last a bit longer
+[*]Forward observers are typically "scouts" but under the artillery tab
+[*]You can get a single battalion FO under the log tab who can call the heavy stuff
+-- For giggles the VDV can call in a Tochka-U through this FO, but it's pretty useless and I'll probably change it out
+[/list]
+Organization
+[list]
+[*]Battlegroups are now roughly battalion-sized (though it's unlikely you'll actually deploy everything)
+--Yes that means a "reasonable" 3rd Armored BG will have 28 M1A1HAs, so...good luck/be nice? or don't?
+--forces with smaller companies or weak units may get 5 companies instead of 4
+[*]"realistic" squad sizes and loadouts (so yeah, 5 man VDV dismount elements) 
+[*]Platoon, company, and battalion commanders
+--Platoon commanders can capture zones (because we can't change names yet you'll be looking for infantry units that have the commander trait but not the leader trait, in many forces these are rolled into one of the squads)
+--Company commanders give one extra experience level and can capture zones
+--Battalion commanders (any commander under log) cause every company commander to give +2 experience levels instead of +1
+[/list]
+That's all I can remember.

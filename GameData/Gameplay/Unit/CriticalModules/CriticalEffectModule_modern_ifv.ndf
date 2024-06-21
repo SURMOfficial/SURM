@@ -1,0 +1,146 @@
+export CriticalEffectModule_modern_ifv is TCriticalEffectModuleDescriptor
+(
+    Bounds = (1,100)
+    TerrainCriticalEffectTimer = 5.0
+
+    EffectsFromTerrain = []
+
+    EffectsOnFront =
+    [
+        /*CriticalEffect_AmmoExplosion(Roll=(1,25)),
+        CriticalEffect_BailedOut(Roll=(26,70)), 
+		CriticalEffect_TurretStuck(Roll=(71,81)), // Turret stuck -> no rotation tourelle
+        CriticalEffect_GunJammed(Roll=(82,85)), 
+		CriticalEffect_DriverKilled(Roll=(86,90)),
+		CriticalEffect_LoaderKilled(Roll=(91,95)) , // Loader wounded -> reload *0.5
+        CriticalEffect_ShooterKilled(Roll=(96,100) ),*/ // Crew panicked -> Deroute
+    ]
+
+    EffectsOnSides =
+    [
+        /*CriticalEffect_AmmoExplosion(Roll=(1,20)),
+        CriticalEffect_BailedOut(Roll=(21,61)),
+		CriticalEffect_TransmissionDestroyed(Roll=(62,71) ), // Transmission pétée -> 50% vitesse
+		CriticalEffect_TransmissionDamaged(Roll=(72,74)), // Transmission endommagée -> 50% vitesse
+		CriticalEffect_TurretStuck(Roll=(75,82)), // Turret stuck -> no rotation tourelle
+        CriticalEffect_GunJammed(Roll=(83,85)),
+		CriticalEffect_DriverKilled(Roll=(86,90)), 
+        CriticalEffect_ShooterKilled(Roll=(91,95) ), // Crew panicked -> Deroute
+		CriticalEffect_LoaderKilled(Roll=(96,100)),*/ // Loader wounded -> reload *0.5
+    ]
+
+    EffectsOnRear =
+    [
+        /*CriticalEffect_AmmoExplosion(Roll=(1,25)),
+        CriticalEffect_BailedOut(Roll=(26,54)), 
+		CriticalEffect_TurretStuck(Roll=(55,64)), // Turret stuck -> no rotation tourelle
+        CriticalEffect_TransmissionDestroyed(Roll=(65,82)), // Transmission pétée -> Full stop
+        CriticalEffect_TransmissionDamaged(Roll=(83,90)), // Transmission endommagée -> 50% vitesse
+        CriticalEffect_ShooterKilled(Roll=(91,95)), 
+		CriticalEffect_LoaderKilled(Roll=(96,100)),*/ // Loader wounded -> reload *0.5
+    ]
+
+    EffectsOnTop =
+    [
+        /*CriticalEffect_AmmoExplosion(Roll=(1,8)),
+        CriticalEffect_BailedOut(Roll=(9,65)),
+		CriticalEffect_TransmissionDestroyed(Roll=(66,75)), // Transmission pétée -> Full stop
+        CriticalEffect_TransmissionDamaged(Roll=(76,80)), // Transmission endommagée -> 50% vitesse
+		CriticalEffect_TurretStuck(Roll=(81,90)), // Turret stuck -> no rotation tourelle
+		CriticalEffect_LoaderKilled(Roll=(91,95)), //may change to something else
+        CriticalEffect_ShooterKilled(Roll=(96,100)), */
+    ]
+
+    PierceEffectsOnFront =
+    [
+        CriticalEffect_AmmoExplosion(Roll=(1,25)),
+        CriticalEffect_BailedOut(Roll=(26,70)), 
+		CriticalEffect_TurretStuck(Roll=(71,81)), // Turret stuck -> no rotation tourelle
+        CriticalEffect_GunJammed(Roll=(82,85)), 
+		CriticalEffect_DriverKilled(Roll=(86,90)),
+		CriticalEffect_CommanderKilled(Roll=(91,95)) , // Loader wounded -> reload *0.5
+        CriticalEffect_ShooterKilled(Roll=(96,100) ), // Crew panicked -> Deroute
+    ]
+
+    PierceEffectsOnSides =
+    [
+        CriticalEffect_AmmoExplosion(Roll=(1,20)),
+        CriticalEffect_BailedOut(Roll=(21,61)),
+		CriticalEffect_TransmissionDestroyed(Roll=(62,71) ), // Transmission pétée -> 50% vitesse
+		CriticalEffect_TransmissionDamaged(Roll=(72,74)), // Transmission endommagée -> 50% vitesse
+		CriticalEffect_TurretStuck(Roll=(75,82)), // Turret stuck -> no rotation tourelle
+        CriticalEffect_GunJammed(Roll=(83,85)),
+		CriticalEffect_DriverKilled(Roll=(86,90)), 
+        CriticalEffect_ShooterKilled(Roll=(91,95) ), // Crew panicked -> Deroute
+		CriticalEffect_CommanderKilled(Roll=(96,100)), // Loader wounded -> reload *0.5
+	]
+
+    PierceEffectsOnRear =
+    [
+        CriticalEffect_AmmoExplosion(Roll=(1,25)),
+        CriticalEffect_BailedOut(Roll=(26,54)), 
+		CriticalEffect_TurretStuck(Roll=(55,64)), // Turret stuck -> no rotation tourelle
+        CriticalEffect_TransmissionDestroyed(Roll=(65,82)), // Transmission pétée -> Full stop
+        CriticalEffect_TransmissionDamaged(Roll=(83,90)), // Transmission endommagée -> 50% vitesse
+        CriticalEffect_ShooterKilled(Roll=(91,95)), 
+		CriticalEffect_CommanderKilled(Roll=(96,100)), // Loader wounded -> reload *0.5
+    ]
+
+    PierceEffectsOnTop =
+    [
+        CriticalEffect_AmmoExplosion(Roll=(1,8)),
+        CriticalEffect_BailedOut(Roll=(9,65)),
+		CriticalEffect_TransmissionDestroyed(Roll=(66,75)), // Transmission pétée -> Full stop
+        CriticalEffect_TransmissionDamaged(Roll=(76,80)), // Transmission endommagée -> 50% vitesse
+		CriticalEffect_TurretStuck(Roll=(81,90)), // Turret stuck -> no rotation tourelle
+		CriticalEffect_CommanderKilled(Roll=(91,95)), //may change to something else
+        CriticalEffect_ShooterKilled(Roll=(96,100)), 
+    ]
+
+    RicochetEffectsOnFront =
+    [
+        CriticalEffect_ShooterKO(Roll=(1,3)), // Shooter KO -> Armes stop 10sec
+        CriticalEffect_DriverKO(Roll=(4,5)), // Driver KO -> Full stop 10sec
+		CriticalEffect_SightDamaged(Roll=(6,10)),
+		CriticalEffect_CompReset(Roll=(11,36)), //computer reset -> accuracy 0.5,would like aim time x2, aiming restart can't do those though
+        CriticalEffect_TracksBroken(Roll=(37,46)),// Shooter KO -> Armes stop 10sec
+		CriticalEffect_Spalling(Roll=(47,51)), // Spalling -> perd 2PV
+		CriticalEffect_CrewPanicked(Roll=(52,56)),
+		CriticalEffect_CommanderKilled(Roll=(57,71)),
+		CriticalEffect_Bounce(Roll=(72,100)), // BOUNCE
+
+    ]
+
+    RicochetEffectsOnSides =
+    [
+        CriticalEffect_ShooterKO(Roll=(1,3)), // Shooter KO -> Armes stop 10sec
+        CriticalEffect_DriverKO(Roll=(4,5)), // Driver KO -> Full stop 10sec
+		CriticalEffect_CompReset(Roll=(6,22)), //computer reset -> accuracy 0.5, aim time x2, aiming restart 
+        CriticalEffect_TracksBroken(Roll=(23,47)),// Shooter KO -> Armes stop 10sec
+		CriticalEffect_Spalling(Roll=(48,53)), // Spalling -> perd 2PV
+		CriticalEffect_CrewPanicked(Roll=(54,59)),
+		CriticalEffect_CommanderKilled(Roll=(60,74)),
+		CriticalEffect_Bounce(Roll=(75,100)), // BOUNCE
+       ]
+
+    RicochetEffectsOnRear =
+    [
+        CriticalEffect_ShooterKO(Roll=(1,1)), // Shooter KO -> Armes stop 10sec
+        CriticalEffect_TransmissionDamaged(Roll=(2,5)), // Transmission endommagée -> 50% vitesse
+		CriticalEffect_TracksBroken(Roll=(6,15)),// Shooter KO -> Armes stop 10sec
+		CriticalEffect_Spalling(Roll=(16,20)), // Spalling -> perd 2PV
+		CriticalEffect_CrewPanicked(Roll=(21,25)), // Spalling -> perd 2PV
+		CriticalEffect_CommanderKilled(Roll=(26,40)),
+        CriticalEffect_Bounce(Roll=(41,100)), // BOUNCE
+        ]
+    RicochetEffectsOnTop = 
+	[
+        CriticalEffect_ShooterKO(Roll=(1,6)), // Shooter KO -> Armes stop 10sec
+        CriticalEffect_DriverKO(Roll=(7,13)), // Driver KO -> Full stop 10sec
+		CriticalEffect_TransmissionDamaged(Roll=(14,20)), // Transmission endommagée -> 50% vitesse
+		CriticalEffect_Spalling(Roll=(21,25)), // Spalling -> perd 2PV
+        CriticalEffect_CrewPanicked(Roll=(26,30)), // Spalling -> perd 2PV
+		CriticalEffect_CommanderKilled(Roll=(31,45)),
+		CriticalEffect_Bounce(Roll=(46,100)), // BOUNCE
+		]
+)

@@ -1,0 +1,38 @@
+
+export CriticalEffectModule_Airplane is TCriticalEffectModuleDescriptor
+(
+    Bounds = (1,100)
+    TerrainCriticalEffectTimer = 5.0
+
+    EffectsOnFront =
+    [
+        AirplaneCriticalEffect_WingRippedOff(Roll = (1,75)),   //Wing ripped off -> Death
+		AirplaneCriticalEffect_EngineDamaged(Roll = (76,100)),   //Engine damaged -> Loss 2 HP
+        //AirplaneCriticalEffect_WingsDamaged(Roll = (76,85)),   //Wings damaged -> Loss 1 HP
+        //AirplaneCriticalEffect_PilotPanicked(Roll = (86,100)),   //Radiator Overheating -> Falling back
+    ]
+
+    EffectsOnSides =
+    [
+        AirplaneCriticalEffect_WingRippedOff(Roll = (1,75)),   //Wing ripped off -> Death
+		AirplaneCriticalEffect_EngineDamaged(Roll = (76,100)),   //Engine damaged -> Loss 2 HP
+        //AirplaneCriticalEffect_WingsDamaged(Roll = (76,85)),   //Wings damaged -> Loss 1 HP
+        //AirplaneCriticalEffect_PilotPanicked(Roll = (86,100)),   //Radiator Overheating -> Falling back
+    ]
+
+    EffectsOnRear =
+    [
+        AirplaneCriticalEffect_WingRippedOff(Roll = (1,75)),   //Wing ripped off -> Death
+		AirplaneCriticalEffect_EngineDamaged(Roll = (76,100)),   //Engine damaged -> Loss 2 HP
+        //AirplaneCriticalEffect_WingsDamaged(Roll = (76,85)),   //Wings damaged -> Loss 1 HP
+        //AirplaneCriticalEffect_PilotPanicked(Roll = (86,100)),   //Radiator Overheating -> Falling back
+    ]
+	
+	EffectsOnTop =
+    [
+        AirplaneCriticalEffect_WingRippedOff(Roll = (1,75)),   //Wing ripped off -> Death
+		AirplaneCriticalEffect_EngineDamaged(Roll = (76,100)),   //Engine damaged -> Loss 2 HP
+        //AirplaneCriticalEffect_WingsDamaged(Roll = (76,85)),   //Wings damaged -> Loss 1 HP
+        //AirplaneCriticalEffect_PilotPanicked(Roll = (86,100)),   //Radiator Overheating -> Falling back
+	]
+)

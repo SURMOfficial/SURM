@@ -1,0 +1,62 @@
+export CriticalEffectModule_CrewServed is TCriticalEffectModuleDescriptor
+(
+    Bounds = (1,100)
+    TerrainCriticalEffectTimer = 5.0
+
+    EffectsFromTerrain = []
+
+    EffectsOnFront =
+    [
+        CriticalEffect_GunJammed(Roll=(30,55)),// Shooter KO -> Armes stop 10sec
+        CriticalEffect_CrewKO(Roll=(56,85)),// Shooter KO -> Armes stop 10sec
+    ]
+
+    EffectsOnSides =
+    [
+        CriticalEffect_GunJammed(Roll=(30,55)),// Shooter KO -> Armes stop 10sec
+        CriticalEffect_CrewKO(Roll=(56,85)),// Shooter KO -> Armes stop 10sec
+    ]
+
+    EffectsOnRear =
+    [
+        CriticalEffect_GunJammed(Roll=(30,55)),// Shooter KO -> Armes stop 10sec
+        CriticalEffect_CrewKO(Roll=(56,85)),// Shooter KO -> Armes stop 10sec
+    ]
+
+    EffectsOnTop =
+    [
+        CriticalEffect_GunJammed(Roll=(30,55)),// Shooter KO -> Armes stop 10sec
+        CriticalEffect_CrewKO(Roll=(56,85)),// Shooter KO -> Armes stop 10sec
+    ]
+
+    PierceEffectsOnFront =
+    [
+    ]
+
+    PierceEffectsOnSides =
+    [
+    ]
+
+    PierceEffectsOnRear =
+    [
+    ]
+
+    PierceEffectsOnTop =
+    [
+    ]
+
+    RicochetEffectsOnFront =
+    [
+    ]
+
+    RicochetEffectsOnSides =
+    [
+    ]
+
+    RicochetEffectsOnRear =
+    [
+	]
+    RicochetEffectsOnTop = 
+	[
+	]
+)
