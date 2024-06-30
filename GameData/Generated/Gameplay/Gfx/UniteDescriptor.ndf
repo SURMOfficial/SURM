@@ -148533,6 +148533,7 @@ export Descriptor_Unit_M551A1_ACAV_Sheridan_US is TEntityDescriptor
             TagSet = [
                 "AllUnits",
                 "Unite",
+                "Unite_transportable",
                 "UNITE_M551A1_ACAV_Sheridan_US",
                 "Char_Reco",
                 "Char",
@@ -148672,6 +148673,14 @@ export Descriptor_Unit_M551A1_ACAV_Sheridan_US is TEntityDescriptor
                 )
             )
         ),
+		TTransportableModuleDescriptor
+		(
+			TransportedTexture                     = "UseInGame_Transport_howitzer"
+			TransportedSoldier                     = 'Howz_M101_105mm_FR'
+			NbSeatsOccupied                        = 35
+			TimeToLoad                             = 30
+			IsTowable                              = True
+		),
         TCadavreGeneratorModuleDescriptor( CadavreDescriptor = ~/Descriptor_UnitCadavre_M551A1_ACAV_Sheridan_US ),
         TIAStratModuleDescriptor
         (
@@ -148832,6 +148841,7 @@ export Descriptor_Unit_M551A1_TTS_Sheridan_CMD_US is TEntityDescriptor
             TagSet = [
                 "AllUnits",
                 "Unite",
+                "Unite_transportable",
                 "UNITE_M551A1_TTS_Sheridan_CMD_US",
                 "Char_CMD",
                 "Char",
@@ -148974,11 +148984,11 @@ export Descriptor_Unit_M551A1_TTS_Sheridan_CMD_US is TEntityDescriptor
         ),
             TTransportableModuleDescriptor
             (
-                TransportedTexture                     = "UseInGame_Transport"
-                TransportedSoldier                     = 'M551A1_TTS_Sheridan_CMD_US'
-                NbSeatsOccupied                        = 99
-                TimeToLoad                             = 0
-                IsTowable                              = False
+                TransportedTexture                     = "UseInGame_Transport_howitzer"
+                TransportedSoldier                     = 'Howz_M101_105mm_FR'
+                NbSeatsOccupied                        = 8
+                TimeToLoad                             = 30
+                IsTowable                              = True
             ),
         MissileCarriage is TemplateUnitMissileCarriage(Connoisseur = MissileCarriage_M551A1_TTS_Sheridan_CMD_US),
         TCadavreGeneratorModuleDescriptor( CadavreDescriptor = ~/Descriptor_UnitCadavre_M551A1_TTS_Sheridan_CMD_US ),
@@ -149144,6 +149154,7 @@ export Descriptor_Unit_M551A1_TTS_Sheridan_US is TEntityDescriptor
             TagSet = [
                 "AllUnits",
                 "Unite",
+                "Unite_transportable",
                 "UNITE_M551A1_TTS_Sheridan_US",
                 "Char_Standard",
                 "Char",
@@ -149284,11 +149295,11 @@ export Descriptor_Unit_M551A1_TTS_Sheridan_US is TEntityDescriptor
         ),
             TTransportableModuleDescriptor
             (
-                TransportedTexture                     = "UseInGame_Transport"
-                TransportedSoldier                     = 'M551A1_TTS_Sheridan_US'
-                NbSeatsOccupied                        = 99
-                TimeToLoad                             = 0
-                IsTowable                              = False
+                TransportedTexture                     = "UseInGame_Transport_howitzer"
+                TransportedSoldier                     = 'Howz_M101_105mm_FR'
+                NbSeatsOccupied                        = 8
+                TimeToLoad                             = 30
+                IsTowable                              = True
             ),
         MissileCarriage is TemplateUnitMissileCarriage(Connoisseur = MissileCarriage_M551A1_TTS_Sheridan_US),
         TCadavreGeneratorModuleDescriptor( CadavreDescriptor = ~/Descriptor_UnitCadavre_M551A1_TTS_Sheridan_US ),
@@ -267734,7 +267745,7 @@ export Descriptor_Unit_CH47_Chinook_UK is TEntityDescriptor
                                         "Crew",
                                         "Unite_transportable",
                                                     ]
-                   NbSeatsAvailable               = 44
+                   NbSeatsAvailable               = 36
                    WreckUnloadPhysicalDamageBonus = WreckUnloadDamageBonus_Chopper_Physical
                    WreckUnloadSuppressDamageBonus = WreckUnloadDamageBonus_Chopper_Suppress
                    WreckUnloadStunDamageBonus     = WreckUnloadDamageBonus_Chopper_Stun
@@ -282376,7 +282387,7 @@ export Descriptor_Unit_Mi_8TV_Gunship_SOV is TEntityDescriptor //needs work
                                         "Crew",
                                         "Unite_transportable",
                                                     ]
-                   NbSeatsAvailable               = 28
+                   NbSeatsAvailable               = 15
                    WreckUnloadPhysicalDamageBonus = WreckUnloadDamageBonus_Chopper_Physical
                    WreckUnloadSuppressDamageBonus = WreckUnloadDamageBonus_Chopper_Suppress
                    WreckUnloadStunDamageBonus     = WreckUnloadDamageBonus_Chopper_Stun
