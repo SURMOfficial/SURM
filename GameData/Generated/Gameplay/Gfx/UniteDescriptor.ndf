@@ -94022,7 +94022,7 @@ export Descriptor_Unit_Groupe_AT_FR is TEntityDescriptor //now includes the plat
             ),
     ]
 )
-export Descriptor_Unit_Groupe_AT_Wach_DDR is TEntityDescriptor
+export Descriptor_Unit_Groupe_AT_Wach_DDR is TEntityDescriptor  //RPG hunter group reduced to 5 men
 (
     DescriptorId       = GUID:{2277c00c-9d43-4cfa-a3c0-a8dd2467dce8}
     ClassNameForDebug  = 'Unit_Groupe_AT_Wach_DDR'
@@ -94089,7 +94089,7 @@ export Descriptor_Unit_Groupe_AT_Wach_DDR is TEntityDescriptor
         ),
         TBaseDamageModuleDescriptor
         (
-            MaxPhysicalDamages = 6
+            MaxPhysicalDamages = 5
             MaxSuppressionDamages = ~/Infanterie_MaxSuppressionDamages
             MaxStunDamages = ~/Infanterie_MaxStunDamages
             PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
@@ -94141,9 +94141,9 @@ export Descriptor_Unit_Groupe_AT_Wach_DDR is TEntityDescriptor
                 (0,[0,]),
                 (1,[0,]),
                 (2,[0,]),
-                (3,[0,]),
-                (4,[0,2,]),
-                (5,[0,1,]),
+                (3,[1,]),
+                (4,[2,]),
+                //(5,[0,1,]),
             ]
         ),
         FacingInfos is ~/FacingInfosModuleDescriptor,
@@ -94210,7 +94210,7 @@ export Descriptor_Unit_Groupe_AT_Wach_DDR is TEntityDescriptor
             (
                 TransportedTexture                     = "UseInGame_Transport_REGINF"
                 TransportedSoldier                     = 'Groupe_AT_Wach_DDR'
-                NbSeatsOccupied                        = 6
+                NbSeatsOccupied                        = 5
                 TimeToLoad                             = SquadLoadingTime
                 IsTowable                              = False
             ),
@@ -94308,7 +94308,7 @@ export Descriptor_Unit_Groupe_AT_Wach_DDR is TEntityDescriptor
                 ]
             )
             PositionHeightOffset = 1000.0
-            NbSoldiers = 6
+            NbSoldiers = 5
         ),
             TModuleSelector
             (
@@ -259737,8 +259737,8 @@ export Descriptor_Unit_Wachregiment_SMG_DDR is TEntityDescriptor //actually plat
                     Factory            = EDefaultFactories/Infantry
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 75),
-                        ($/GFX/Resources/Resource_Tickets, 75),
+                        ($/GFX/Resources/Resource_CommandPoints, 65),
+                        ($/GFX/Resources/Resource_Tickets, 65),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -259825,7 +259825,7 @@ export Descriptor_Unit_Wachregiment_SMG_DDR is TEntityDescriptor //actually plat
             (
                 UnitRole = 'tank_C'
                 SpecialtiesList = [
-                    'infantry',
+                    'hq_inf',
                     '_choc',
                     '_security',
                     '_resolute',
