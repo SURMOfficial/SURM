@@ -3212,6 +3212,21 @@ FXWeapon_Canon_HE_152mm_Sheridan is FiringAndProjectile
     ]
 )
 
+FXWeapon_Canon_Canister_152mm_Sheridan is FiringAndProjectile
+(
+    Happenings = [
+        TRandomHappening
+        (
+            Alternatives =
+            [
+                FXFiring_3( Action = $/GFX/GameFx/fx_tir_obus_152mm_M551_1 ),
+                FXFiring_3( Action = $/GFX/GameFx/fx_tir_obus_152mm_M551_2 ),
+                FXFiring_3( Action = $/GFX/GameFx/fx_tir_obus_152mm_M551_3 ),
+            ]
+        ),
+    ]
+)
+
 FXWeapon_Canon_HE_165mm_AVRE is FiringAndProjectile
 (
     Happenings = [

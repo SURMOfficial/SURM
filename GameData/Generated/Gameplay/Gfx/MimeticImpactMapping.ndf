@@ -1124,6 +1124,16 @@ AllImpactHappenings is MAP[
       ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ),
       ( EImpactSurface/Ricochet , TCompositeHappening( SubHappenings = [ FxRebondObusPetit, $/GFX/Sound/SoundHappening_ImpactObus_petitVehicule ] ) ),
     ])),
+  ([ 'CanisterM625' ], TImpactHappening( Happenings = MAP[
+      ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolBombletNoAirBurstMW1_, $/GFX/Sound/SoundHappening_ImpactBalles_burstSol ] ) ),
+      ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactSolBombletNoAirBurstMW1_, $/GFX/Sound/SoundHappening_ImpactBalles_burstSol ] ) ),
+      ( EImpactSurface/Air , TCompositeHappening( SubHappenings = [ FxOuvertureBombletesNoAirBurstMW1_, $/GFX/Sound/SoundHappening_ImpactCanon_petitSol ] ) ),
+      ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolBombletNoAirBurstMW1_, $/GFX/Sound/SoundHappening_ImpactBalles_burstBatiment ] ) ),
+      ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombletNoAirBurstMW1_, $/GFX/Sound/SoundHappening_ImpactBalles_burstVehicule ] ) ),
+      ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactDCAM197GatlingVehiculeAir_, $/GFX/Sound/SoundHappening_ImpactBalles_burstVehicule ] ) ),
+      ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_ImpactBalles_burstVehicule ),
+      ( EImpactSurface/Ricochet , TCompositeHappening( SubHappenings = [ OrientationWrapperFxImpactVehiculeM197Gatling, $/GFX/Sound/SoundHappening_ImpactBalles_burstVehicule ] ) ),
+    ])),
   ([ 'CanonAPM48' ], TImpactHappening( Happenings = MAP[
       ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolAPGros, $/GFX/Sound/SoundHappening_ImpactCanon_grosSol ] ) ),
       ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHEGros, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),

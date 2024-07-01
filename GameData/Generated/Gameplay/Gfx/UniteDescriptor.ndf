@@ -181058,14 +181058,14 @@ export Descriptor_Unit_PT76B_CMD_DDR is TEntityDescriptor
                 )
             )
         ),
-            TTransportableModuleDescriptor
-            (
-                TransportedTexture                     = "UseInGame_Transport"
-                TransportedSoldier                     = 'PT76B_CMD_DDR'
-                NbSeatsOccupied                        = 99
-                TimeToLoad                             = 0
-                IsTowable                              = False
-            ),
+		TTransportableModuleDescriptor
+		(
+			TransportedTexture                     = "UseInGame_Transport_howitzer"
+			TransportedSoldier                     = 'Howz_M101_105mm_FR'
+			NbSeatsOccupied                        = 35
+			TimeToLoad                             = 30
+			IsTowable                              = True
+		),
         TCadavreGeneratorModuleDescriptor( CadavreDescriptor = ~/Descriptor_UnitCadavre_PT76B_CMD_DDR ),
         TIAStratModuleDescriptor
                 (
@@ -181365,14 +181365,14 @@ export Descriptor_Unit_PT76B_DDR is TEntityDescriptor
                 )
             )
         ),
-            TTransportableModuleDescriptor
-            (
-                TransportedTexture                     = "UseInGame_Transport"
-                TransportedSoldier                     = 'PT76B_DDR'
-                NbSeatsOccupied                        = 99
-                TimeToLoad                             = 0
-                IsTowable                              = False
-            ),
+		TTransportableModuleDescriptor
+		(
+			TransportedTexture                     = "UseInGame_Transport_howitzer"
+			TransportedSoldier                     = 'Howz_M101_105mm_FR'
+			NbSeatsOccupied                        = 35
+			TimeToLoad                             = 30
+			IsTowable                              = True
+		),
         TCadavreGeneratorModuleDescriptor( CadavreDescriptor = ~/Descriptor_UnitCadavre_PT76B_DDR ),
         TIAStratModuleDescriptor
                 (
@@ -181662,14 +181662,14 @@ export Descriptor_Unit_PT76B_tank_DDR is TEntityDescriptor
                 )
             )
         ),
-            TTransportableModuleDescriptor
-            (
-                TransportedTexture                     = "UseInGame_Transport"
-                TransportedSoldier                     = 'PT76B_tank_DDR'
-                NbSeatsOccupied                        = 99
-                TimeToLoad                             = 0
-                IsTowable                              = False
-            ),
+		TTransportableModuleDescriptor
+		(
+			TransportedTexture                     = "UseInGame_Transport_howitzer"
+			TransportedSoldier                     = 'Howz_M101_105mm_FR'
+			NbSeatsOccupied                        = 35
+			TimeToLoad                             = 30
+			IsTowable                              = True
+		),
         TCadavreGeneratorModuleDescriptor( CadavreDescriptor = ~/Descriptor_UnitCadavre_PT76B_tank_DDR ),
         TIAStratModuleDescriptor
                 (

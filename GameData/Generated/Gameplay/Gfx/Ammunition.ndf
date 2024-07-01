@@ -24173,6 +24173,87 @@ Ammo_Canon_HE_152mm_Sheridan is TAmmunitionDescriptor
     DistanceForSpeed                      = 6500.0 * Metre
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
+Ammo_Canon_HE_M652_152mm_Sheridan is TAmmunitionDescriptor //canister
+(
+    DescriptorId                      = GUID:{5738958b-a944-4254-af1d-cdb6ae1f7592}
+    Name                              = 'NRMQDFTFPN'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'CMEFIPVBYI'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_artillerie Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = [ 'CanisterM625' ]
+    FxPower                           = EFXPower/Moyen
+    TempsEntreDeuxTirs                = 1.0
+    TempsEntreDeuxFx                  = 1.0
+    PorteeMaximaleGRU                    = GRUCorr * MeterCorr * ((400) * Metre)
+    PorteeMinimaleGRU                    = GRUCorr * ((100) * Metre)
+    AltitudeAPorteeMinimale           = ((27.5) * Metre)
+    AltitudeAPorteeMaximale           = ((55.0) * Metre)
+    AffecteParNombre                  = False
+    AngleDispersion                   = 0.002
+    DispersionAtMaxRange              = ((0) * Metre)
+    DispersionAtMinRange              = ((0) * Metre)
+    DispersionWithoutSorting          = True
+    CorrectedShotAimtimeMultiplier    = 1.0
+    RadiusSplashPhysicalDamages       = ((53) * MeterCorr * Metre)
+    PhysicalDamages                   = 8.2
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamages       = ((105) *MeterCorr * Metre)
+    SuppressDamages                   = ArtySuppressCorr * 183.0
+    AllowSuppressDamageWhenNoImpact                = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    InterdireTirReflexe               = False
+    MaximalSpeed              		  = 0.0
+    ShotWithoutPhysics                = False
+    FluidFriction                     = 0.0
+    NoiseDissimulationMalus           = 11.0
+    ShotsBeforeMaxNoise               = 1
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         DescriptorId          = GUID:{31a622a9-5ca5-41a9-8182-bf58b639a74b}
+         BaseCriticModifier = 0
+         //BaseEffectModifier = 0
+         BaseHitValueModifiers =
+         [
+             (EBaseHitValueModifier/Base, 0.0),
+             (EBaseHitValueModifier/Idling, AccCorrSov * AccCorrHE * 40),
+             (EBaseHitValueModifier/Moving, AccCorrSov * AccCorrHE * 20),
+             (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    TempsDeVisee                      = 6.0
+    TempsEntreDeuxSalves              = 14.0
+    TempsEntreDeuxSalves_Min           = -1.0
+    TempsEntreDeuxSalves_Max           = -1.0
+    NbTirParSalves                    = 1
+    SupplyCost                        = 2846
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = True
+    NbrProjectilesSimultanes          = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_sheridan"
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
+    FireTriggeringProbability         = 0.0
+    TargetUnitCenter                  = True
+    CanHarmAirplanes                  = True
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    FlightTimeForSpeed                    = 1.3
+    DistanceForSpeed                      = 6500.0 * Metre
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
 Ammo_Canon_HE_165mm_AVRE is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{24f47bbc-2031-470d-938b-170f1373d803}

@@ -1116,7 +1116,7 @@ export UnitEffect_Critic_Deroute_Infantry is TEffectsPackDescriptor
 		TUnitEffectIncreaseDamageTakenDescriptor //may remove
         (
             ModifierType        = ~/ModifierType_Multiplicatif
-            BonusDamage         = 0.7
+            BonusDamage         = 0.6
             DamageType          = EDamageType/Physical
         ),
 		//TDerouteUnitEffectDescriptor(),
@@ -2526,7 +2526,7 @@ export UnitEffect_Infanterie_Cowering is TEffectsPackDescriptor
 		TUnitEffectIncreaseConcealmentBonusDescriptor
         (
             ModifierType       = ~/ModifierType_Additionnel
-            BonusConcealmentBonus  = 7.5
+            BonusConcealmentBonus  = 6.0
         ),
         TUnitEffectIncreaseOpticalStrengthDescriptor
         (
@@ -2556,7 +2556,7 @@ export UnitEffect_Infanterie_Cowering is TEffectsPackDescriptor
 		TUnitEffectIncreaseDamageTakenDescriptor
         (
             ModifierType        = ~/ModifierType_Multiplicatif
-            BonusDamage         = 0.05
+            BonusDamage         = 0.03
             DamageType          = EDamageType/Suppress
         ),
     ]
@@ -2631,7 +2631,7 @@ export UnitEffect_Infanterie_Engaged is TEffectsPackDescriptor
 		TUnitEffectIncreaseConcealmentBonusDescriptor
         (
             ModifierType       = ~/ModifierType_Additionnel
-            BonusConcealmentBonus  = 2.5
+            BonusConcealmentBonus  = 2.2
         ),
 		TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
@@ -2700,7 +2700,7 @@ export UnitEffect_Infanterie_Pinned is TEffectsPackDescriptor
 		TUnitEffectIncreaseConcealmentBonusDescriptor
         (
             ModifierType       = ~/ModifierType_Additionnel
-            BonusConcealmentBonus  = 6.0
+            BonusConcealmentBonus  = 4.5
         ),
 		TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
@@ -2774,7 +2774,7 @@ export UnitEffect_Infanterie_Stressed is TEffectsPackDescriptor
 		TUnitEffectIncreaseConcealmentBonusDescriptor
         (
             ModifierType       = ~/ModifierType_Additionnel
-            BonusConcealmentBonus  = 3.2
+            BonusConcealmentBonus  = 2.7
         ),
 		TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
@@ -2846,7 +2846,7 @@ export UnitEffect_Infanterie_Suppressed is TEffectsPackDescriptor
 		TUnitEffectIncreaseConcealmentBonusDescriptor
         (
             ModifierType       = ~/ModifierType_Additionnel
-            BonusConcealmentBonus  = 4.5
+            BonusConcealmentBonus  = 3.5
         ),
 		TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
