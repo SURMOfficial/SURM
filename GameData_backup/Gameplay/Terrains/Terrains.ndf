@@ -72,6 +72,7 @@ export ForetLegere is TGameplayTerrain
 			(DamageFamily_roquette, MAP [(ResistanceFamily_infanterie,0.5)]),
 			(DamageFamily_flamme, MAP [(ResistanceFamily_infanterie,1.75)]),
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.5)]),
+			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.9)]),
         ]
     DebugColor = rgba[70, 252, 70, 255]
     DissimulationModifierGroundAir = 170
@@ -114,6 +115,7 @@ export PetitBatiment is TGameplayTerrain
 			(DamageFamily_roquette, MAP [(ResistanceFamily_infanterie,1.3)]),
 			(DamageFamily_flamme, MAP [(ResistanceFamily_infanterie,1.3)]),
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.2)]),
+			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
         ]
     DebugColor = rgba[0, 0, 0, 255]
     DissimulationModifierGroundAir = 60
@@ -156,6 +158,7 @@ export Batiment is TGameplayTerrain
 			(DamageFamily_roquette, MAP [(ResistanceFamily_infanterie,1.3)]),
 			(DamageFamily_flamme, MAP [(ResistanceFamily_infanterie,1.1)]),
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.05)]),
+			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.1)]),
         ]
     DebugColor = rgba[0, 0, 0, 255]
     DissimulationModifierGroundAir = 60
@@ -197,6 +200,7 @@ export Ruin is TGameplayTerrain
 			(DamageFamily_roquette, MAP [(ResistanceFamily_infanterie,0.75)]),
 			(DamageFamily_flamme, MAP [(ResistanceFamily_infanterie,0.8)]),
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.5)]),
+			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
         ]
     DebugColor = rgba[0, 6, 200, 255]
     DissimulationModifierGroundAir = 60

@@ -103,9 +103,9 @@ export Tactic_TeamUnitDescriptor is TEntityDescriptor
         (
             SoundAcknowUnitPriority = 1
             SoundAcknowUnitDuration = 5
-            DamageFeedbackTriggerLevel = 0.3        // niveau de santé restante pour trigger le feedback "damage received"
-            HeavyDamageFeedbackTriggerLevel = 0.41  // niveau de santé restante pour trigger le feedback "heavy damage received"
-            EnemyContactZoneRadius = 5000 * OneMeterInGameUnits // 10000 * RangeCorr * Metre   // 2000 * OneMeterInGameUnits
+            DamageFeedbackTriggerLevel = 0.5        // niveau de santé restante pour trigger le feedback "damage received"
+            HeavyDamageFeedbackTriggerLevel = 0.25  // niveau de santé restante pour trigger le feedback "heavy damage received"
+            EnemyContactZoneRadius = 10000 * Metre
         ),
         TTeamDescriptionModuleDescriptor
         (

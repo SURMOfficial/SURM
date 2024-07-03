@@ -19024,6 +19024,13 @@ DepictionOperator_M551A1_ACAV_Sheridan_US_Weapon6 is DepictionOperator_WeaponIns
     WeaponShootDataPropertyName = ["WeaponShootData_0_6", "WeaponShootData_1_6", "WeaponShootData_2_6", "WeaponShootData_3_6", ]
     NbProj = 4
 )
+DepictionOperator_M551A1_ACAV_Sheridan_US_Weapon7 is DepictionOperator_WeaponInstantFire
+(
+    FireEffectTag = "weapon_effet_tag7"
+    Anchors = ["fx_tourelle1_tir_01"]
+    WeaponShootDataPropertyName = ["WeaponShootData_0_7", ]
+    NbProj = 1
+)
 Gfx_M551A1_ACAV_Sheridan_US_Autogen is TacticVehicleDepictionTemplate
 (
     CoatingName = 'M551A1_ACAV_Sheridan_US'
@@ -19049,6 +19056,7 @@ Gfx_M551A1_ACAV_Sheridan_US_Autogen is TacticVehicleDepictionTemplate
         DepictionOperator_M551A1_ACAV_Sheridan_US_Weapon3,
         DepictionOperator_M551A1_ACAV_Sheridan_US_Weapon4,
         DepictionOperator_M551A1_ACAV_Sheridan_US_Weapon6,
+        DepictionOperator_M551A1_ACAV_Sheridan_US_Weapon7,
         DepictionOperator_MovementFX_Amphibious,
     ]
 
@@ -19058,6 +19066,7 @@ Gfx_M551A1_ACAV_Sheridan_US_Autogen is TacticVehicleDepictionTemplate
                 ( [ "weapon_effet_tag3" ], Weapon_HMG_12_7_mm_M2HB ),
                 ( [ "weapon_effet_tag4" ], Weapon_MMG_M240_abrams_7_62mm ),
                 ( [ "weapon_effet_tag6" ], Weapon_SMOKE_Vehicle_Grenadex8 ),
+                ( [ "weapon_effet_tag7" ], Weapon_Canon_Canister_152mm_Sheridan ),
             ]
             + DepictionAction_Stress_And_Wrecked
             + DepictionAction_MovementFX_Tracked
@@ -19110,6 +19119,13 @@ DepictionOperator_M551A1_TTS_Sheridan_CMD_US_Weapon6 is DepictionOperator_Weapon
     WeaponShootDataPropertyName = ["WeaponShootData_0_6", "WeaponShootData_1_6", "WeaponShootData_2_6", "WeaponShootData_3_6", ]
     NbProj = 4
 )
+DepictionOperator_M551A1_TTS_Sheridan_CMD_US_Weapon7 is DepictionOperator_WeaponInstantFire
+(
+    FireEffectTag = "weapon_effet_tag7"
+    Anchors = ["fx_tourelle1_tir_01"]
+    WeaponShootDataPropertyName = ["WeaponShootData_0_7", ]
+    NbProj = 1
+)
 Gfx_M551A1_TTS_Sheridan_CMD_US_Autogen is TacticVehicleDepictionTemplate
 (
     CoatingName = 'M551A1_TTS_Sheridan_CMD_US'
@@ -19134,6 +19150,7 @@ Gfx_M551A1_TTS_Sheridan_CMD_US_Autogen is TacticVehicleDepictionTemplate
         DepictionOperator_M551A1_TTS_Sheridan_CMD_US_Weapon4,
 		DepictionOperator_M551A1_TTS_Sheridan_CMD_US_Weapon5,
         DepictionOperator_M551A1_TTS_Sheridan_CMD_US_Weapon6,
+        DepictionOperator_M551A1_TTS_Sheridan_CMD_US_Weapon7,
         DepictionOperator_MovementFX_Amphibious,
     ]
 
@@ -19144,6 +19161,7 @@ Gfx_M551A1_TTS_Sheridan_CMD_US_Autogen is TacticVehicleDepictionTemplate
                 ( [ "weapon_effet_tag4" ], Weapon_HMG_12_7_mm_M2HB ),
 				( [ "weapon_effet_tag5" ], Weapon_MMG_M240_7_62mm ),
                 ( [ "weapon_effet_tag6" ], Weapon_SMOKE_Vehicle_Grenadex8 ),
+                ( [ "weapon_effet_tag7" ], Weapon_Canon_Canister_152mm_Sheridan ),
             ]
             + DepictionAction_Stress_And_Wrecked
             + DepictionAction_MovementFX_Tracked
@@ -19196,6 +19214,13 @@ DepictionOperator_M551A1_TTS_Sheridan_US_Weapon6 is DepictionOperator_WeaponInst
     WeaponShootDataPropertyName = ["WeaponShootData_0_6", "WeaponShootData_1_6", "WeaponShootData_2_6", "WeaponShootData_3_6", ]
     NbProj = 4
 )
+DepictionOperator_M551A1_TTS_Sheridan_US_Weapon7 is DepictionOperator_WeaponInstantFire
+(
+    FireEffectTag = "weapon_effet_tag7"
+    Anchors = ["fx_tourelle1_tir_01"]
+    WeaponShootDataPropertyName = ["WeaponShootData_0_7", ]
+    NbProj = 1
+)
 Gfx_M551A1_TTS_Sheridan_US_Autogen is TacticVehicleDepictionTemplate
 (
     CoatingName = 'M551A1_TTS_Sheridan_US'
@@ -19220,6 +19245,7 @@ Gfx_M551A1_TTS_Sheridan_US_Autogen is TacticVehicleDepictionTemplate
         DepictionOperator_M551A1_TTS_Sheridan_US_Weapon4,
 		DepictionOperator_M551A1_TTS_Sheridan_US_Weapon5,
         DepictionOperator_M551A1_TTS_Sheridan_US_Weapon6,
+        DepictionOperator_M551A1_TTS_Sheridan_US_Weapon7,
         DepictionOperator_MovementFX_Amphibious,
     ]
 
@@ -19230,6 +19256,7 @@ Gfx_M551A1_TTS_Sheridan_US_Autogen is TacticVehicleDepictionTemplate
                 ( [ "weapon_effet_tag4" ], Weapon_HMG_12_7_mm_M2HB ),
 				( [ "weapon_effet_tag5" ], Weapon_MMG_M240_7_62mm ),
                 ( [ "weapon_effet_tag6" ], Weapon_SMOKE_Vehicle_Grenadex8 ),
+                ( [ "weapon_effet_tag7" ], Weapon_Canon_Canister_152mm_Sheridan ),
             ]
             + DepictionAction_Stress_And_Wrecked
             + DepictionAction_MovementFX_Tracked

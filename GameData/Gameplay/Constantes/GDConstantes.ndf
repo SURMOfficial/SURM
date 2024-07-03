@@ -307,8 +307,8 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
     MergeAllWeaponOnSameTurretInUI = false // permet d'indiquer dans l'interface si on merge les armes sur une même tourelle
                                            // même si elles ont des munitions différentes (boites de munitions différentes).
 
-    MaxWeaponsOnUI = 6 // Nombre d'armes affichées sur les panneaux d'interface qui affiche les armes
-
+    //MaxWeaponsOnUI = 6 // Nombre d'armes affichées sur les panneaux d'interface qui affiche les armes
+	//angry noises, god knows why they removed that
 
     AdditionalSuppressDamagePerLostPhysicalDamage = 200 // 75 // c'est un multiplicateur des degats physiques qu'on va appliquer en stress.
 
@@ -348,6 +348,7 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
 	SplashRatioDamage = [0.0] //crappy solution but nothing seems to work anymore
 	SplashRatioDistance = [0.0]
     TagAllowedForMissileRoE = "AllowedForMissileRoE"
+    TagNonRadarTargetable = "Non_Radar_Targetable"
 
     // Lorsqu'un projectile explose sur un plan et fait des dégats de splash, on définit quels plans sont affectés
     SplashCollisionPlanes = MAP
@@ -356,7 +357,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
             ~/ECollisionPlane/NoCollision,
             [
                 ~/ECollisionPlane/NoCollision,
-                ~/ECollisionPlane/BoatOnWater,
                 ~/ECollisionPlane/Ground,
                 ~/ECollisionPlane/NearGround,
                 ~/ECollisionPlane/LowAltitude,
@@ -365,18 +365,8 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
             ]
         ),
         (
-            ~/ECollisionPlane/BoatOnWater,
-            [
-                ~/ECollisionPlane/BoatOnWater,
-                ~/ECollisionPlane/Ground,
-                ~/ECollisionPlane/NearGround,
-                ~/ECollisionPlane/ProjectileAltitude,
-            ]
-        ),
-        (
             ~/ECollisionPlane/Ground,
             [
-                ~/ECollisionPlane/BoatOnWater,
                 ~/ECollisionPlane/Ground,
                 ~/ECollisionPlane/NearGround,
                 ~/ECollisionPlane/ProjectileAltitude,
@@ -385,7 +375,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
         (
             ~/ECollisionPlane/NearGround,
             [
-                ~/ECollisionPlane/BoatOnWater,
                 ~/ECollisionPlane/Ground,
                 ~/ECollisionPlane/NearGround,
                 ~/ECollisionPlane/LowAltitude,
@@ -411,7 +400,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
         (
             ~/ECollisionPlane/ProjectileAltitude,
             [
-                ~/ECollisionPlane/BoatOnWater,
                 ~/ECollisionPlane/Ground,
                 ~/ECollisionPlane/NearGround,
                 ~/ECollisionPlane/ProjectileAltitude,

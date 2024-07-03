@@ -22,7 +22,7 @@
 //-------------------------------------------------------------------------
 // Budgets
 //-------------------------------------------------------------------------
-Budget_Defense_Objective_BKT is MAP [($/GFX/Resources/Resource_CommandPoints, 0) , ($/GFX/Resources/Resource_Tickets, 2000)]
+Budget_Defense_Objective_BKT is MAP [($/GFX/Resources/Resource_CommandPoints, 0) , ($/GFX/Resources/Resource_Tickets, 20)]
 
 //-------------------------------------------------------------------------
 // MAINTAINS
@@ -297,7 +297,7 @@ is TMacroActionDescriptor_CaptureCommandZone_Specific
 
                     (EDefensePointScoringFeature/DistanceBonus, 1.0),                       // | Entre 0 et DistanceMargin => Bonus de DistanceBonus
                     (EDefensePointScoringFeature/DistanceMargin, 0.0 * Metre),              // | Entre DistanceMargin et DistanceDecayLength => Diminution progressive du bonus jusqu'à 0
-                    (EDefensePointScoringFeature/DistanceDecayLength, 10000.0 * RangeCorr * Metre),     // | Après DistanceDecayLength => Malus progressif
+                    (EDefensePointScoringFeature/DistanceDecayLength, 10000.0 * Metre),     // | Après DistanceDecayLength => Malus progressif
                     (EDefensePointScoringFeature/DistanceDecayCoeff, -1.0),
 
                     (EDefensePointScoringFeature/DistrictCoeff, 1.0),                       // | Bonus appliqués en fonction de la présence d'un quartier ou d'un terrain

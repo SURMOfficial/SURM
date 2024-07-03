@@ -58,8 +58,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     //Delay maximum avant le demarrage de l'IA, pour placement du flare permettant au joueur de jouer là ou il veut (secondes)
     IAStartDelay = 10.0
 
-    MaxNbTickWithoutUpdateAcceptable = 3
-
     //Les coeffs sont calculé pour le modificateur de menace
     //La formule est la suivante : Coeff/Moyenne_Des_Stats_Resistances
     //Moyenne_Des_Stats_Resistances ayant pour arguments :
@@ -305,6 +303,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     IAStratPathCacheCostPathfindType = ~/IAStratPathCacheCostConstante/IAStratPathCacheCostPathfindType
 
     DeployOffRoadUnitsTags = ["Helo", "FOB"]
+    MinSpeedForSearchZone = 2000.0 //On cherche les unités se déplacant rapidement pour fouiller une zone
 )
 
 //--------------------------------------------------------------------------------------//
@@ -323,7 +322,7 @@ UnitPowerInformation is TUnitPowerInformationConstante
 RoEConstantes is TRoEConstantes
 (
     UnarmedVehiculeBehavior = EUnarmedVehiculeBehaviour/FireAtWill
-    MissilesBehavior = EMissilesBehaviour/NeverLooktAtTransport
+    MissilesBehavior = EMissilesBehaviour/LookAtAllTransport
     ShotReactionBehavior = EShotReactionBehaviour/Defensive
     ActivateAutoResale = true
 )

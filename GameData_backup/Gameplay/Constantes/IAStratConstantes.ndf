@@ -50,7 +50,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     CommandZoneWeight = ~/CommandZoneCustomWeighForIAStrat // Numero donné aux zones générées automatiquement autours des zones objectif.
 
     //--------------- Transport ----------------------------------------//
-    MinDistanceToRequireTransport = 750 * MeterCorr * Metre //un peu plus de 3.5KM in game (conversion MetreRTS)
+    MinDistanceToRequireTransport = 1500 * MeterCorr * Metre //un peu plus de 3.5KM in game (conversion MetreRTS)
     MaxDistanceToAcceptTransportRequest = 30000 * Metre //un peu plus de 10KM in game (conversion MetreRTS)
     ForbidToLoadNewUnits = false // Ce paramètre a true empêche de charger une unité qu'on ne transporte pas à la base (applicable aux transports qui spawnent préchargés)
 
@@ -80,10 +80,10 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     ArtilleryStrikeThreatLifeTime = 120
 
     //--------------- Mission de defense ! ----------------------------------------//
-    DistanceToSeekDistrictForUnitInDefense = 2000 * Metre
-    DistanceToSeekDefenseUnitForUnitInDefense = 2000 * Metre
-    DistanceToSeekForestForUnitInDefense = 2000 * Metre
-    DistanceToSeekPolygonCenterForUnitInDefense = 1000 * Metre
+    DistanceToSeekDistrictForUnitInDefense = 4000 * Metre
+    DistanceToSeekDefenseUnitForUnitInDefense = 4000 * Metre
+    DistanceToSeekForestForUnitInDefense = 4000 * Metre
+    DistanceToSeekPolygonCenterForUnitInDefense = 2000 * Metre
     //DistanceToRetreatForFlee = 500 * Metre
     //TimeToWaitAfterFleeToGoBackToOriginalPositionInSeconds = 15
     //UnitTagForHQ_UsedInDefenseMissionOnly contient une liste de tags permettant de trouver une liste d'unites ennemies. On cherchera l'unite ennemie la plus proche de la zone
@@ -93,9 +93,9 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     MaxNumberOfStackingUnits = 2
 
     // Objectif Attack
-    ObjectiveAttackOwnershipRatio = 0.01
+    ObjectiveAttackOwnershipRatio = 0.1
 
-    DefenseMacroActionFleePowerRatio = 0.03
+    DefenseMacroActionFleePowerRatio = 0.001
 
     //--------------- Points de défense -------------------------------------------//
 
@@ -199,8 +199,8 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     // Calcul de la validation du checkpoint en fonction de la vitesse du groupe
     AnticipationDelay = 4 // Le temps d'anticipation du calcul
     OffAnticipationDistanceCoef = 0.5 // L'offset ajouté au résultat (en taille de case)
-    MinAnticipationDistanceCoef = 2.7 // La distance d'anticipation minimale (en taille de case) : Une case minimum sinon on peut ne pas valider dans les cas limites
-    MaxAnticipationDistanceCoef = 7.5 // La distance d'anticipation maximale (en taille de case)
+    MinAnticipationDistanceCoef = 1.0 // La distance d'anticipation minimale (en taille de case) : Une case minimum sinon on peut ne pas valider dans les cas limites
+    MaxAnticipationDistanceCoef = 2.5 // La distance d'anticipation maximale (en taille de case)
     // Autre
     MergeGroupDistInPolygon = 2.0 // Les groupes de move sont mergés à X cases de distance
     AddToGroupDistInPolygon = 1.5 // On ajoute quelqu'un au groupe à X cases de distance
@@ -208,8 +208,8 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     /////////////////////////////
 
     //--------------- TacticalPath ----------------------------------------//
-    NumberOfDangerousIndiceAlwaysIgnoredForTacticalPathInCover = 3  // X | Dans le TacticalPathInCover, nombre de cases dangereuses à éviter :
-    SecondsToIgnoreDangerousIndiceForTacticalPathInCover = 40.0     // Y | (X + (1 toutes les Y secondes)) * (Z si on est en Blitzkireg)
+    NumberOfDangerousIndiceAlwaysIgnoredForTacticalPathInCover = 1  // X | Dans le TacticalPathInCover, nombre de cases dangereuses à éviter :
+    SecondsToIgnoreDangerousIndiceForTacticalPathInCover = 10.0     // Y | (X + (1 toutes les Y secondes)) * (Z si on est en Blitzkireg)
     BlitzkriegMultiplierForTacticalPathInCover = 4.0                // Z |
 
     //--------------- Regroup Point ---------------------------------------//
