@@ -19,20 +19,20 @@ export StandardSupply is TSupplyDescriptor
     // Point d'essence ravitaillés par seconde
     FuelSupplyBySecond = 1
     // Cout du ravitaillement d'essence par seconde
-    FuelSupplyCostBySecond =  74 // 1 correct so 1L of fuel weighs 850g (diesel)
+    FuelSupplyCostBySecond =  0.69 // 1 correct so 1L of fuel weighs 850g (diesel) divide by 100
 
     // Point de vie ravitaillés par seconde
     HealthSupplyBySecond = 0.0 //0.15 //0.00001
     // Cout du ravitaillement de point de vie par seconde
-    HealthSupplyCostBySecond = 0.0 //0.3 // 0.00001
+    HealthSupplyCostBySecond = 0 //0.3 // 0.00001
 // corrected by new higher supply amounts
     // Point de ravitaillement ravitaillés par seconde
-    SupplySupplyBySecond = 20*SupplyCorr //30
+    SupplySupplyBySecond = 3700  //30
     // Cout du ravitaillement de point de ravitaillement par seconde
-    SupplySupplyCostBySecond = 20*SupplyCorr //30
+    SupplySupplyCostBySecond = 3700  //30
 
     // Point de munition ravitaillés par seconde
-    AmmunitionSupplyBySecond = 174 //87 //60*SupplyCorr 1kg/s
+    AmmunitionSupplyBySecond = 84// ideal would now be 1.74 but can't dpo floats and that would crash anyway //8439 //174//174 //87 //60*SupplyCorr 1kg/s
 
     // Points de "critique" réparés par seconde
     CriticsSupplyBySecond = 10

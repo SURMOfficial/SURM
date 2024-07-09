@@ -104954,7 +104954,7 @@ export Descriptor_Unit_Groupe_AT_Wach_DDR is TEntityDescriptor  //RPG hunter gro
             (
                 Default        = TInfantrySquadModuleDescriptor
                 (
-                    NbSoldatInGroupeCombat = 6
+                    NbSoldatInGroupeCombat = 5
                     SquadDataDescriptor = ~/SoldierSquadDataDescriptor
                     InfantryMimeticName = 'Groupe_AT_Wach_DDR'
                     WeaponUnitFXKey     = 'Groupe_AT_Wach_DDR'
@@ -347724,6 +347724,19 @@ export Descriptor_Unit_Mirage_IV_FR is TEntityDescriptor
                 BonusTimeBetweenFlareByProjectile = ~/TempsBonusLancementFlareParArme_Avion
             ),
         ~/EffectApplierModuleDescriptor,
+		TModuleSelector
+            (
+                Default        = TCapaciteModuleDescriptor
+                (
+                    DefaultSkillList = [
+						$/GFX/EffectCapacity/Capacite_electronic_warfare_search_radar,
+						$/GFX/EffectCapacity/Capacite_electronic_warfare_gun,
+						$/GFX/EffectCapacity/Capacite_electronic_warfare_basic,
+						$/GFX/EffectCapacity/Capacite_disp_electronic_warfare_basic,
+                    ]
+                )
+                Selection      = [ ~/NilDescriptorIfCadavre ]
+            ),
         TProductionModuleDescriptor
                 (
                     Factory            = EDefaultFactories/Planes
@@ -347994,6 +348007,19 @@ export Descriptor_Unit_Mirage_IV_SEAD_FR is TEntityDescriptor
                 BonusTimeBetweenFlareByProjectile = ~/TempsBonusLancementFlareParArme_Avion
             ),
         ~/EffectApplierModuleDescriptor,
+		TModuleSelector
+            (
+                Default        = TCapaciteModuleDescriptor
+                (
+                    DefaultSkillList = [
+						$/GFX/EffectCapacity/Capacite_electronic_warfare_search_radar,
+						$/GFX/EffectCapacity/Capacite_electronic_warfare_gun,
+						$/GFX/EffectCapacity/Capacite_electronic_warfare_basic,
+						$/GFX/EffectCapacity/Capacite_disp_electronic_warfare_basic,
+                    ]
+                )
+                Selection      = [ ~/NilDescriptorIfCadavre ]
+            ),
         TProductionModuleDescriptor
                 (
                     Factory            = EDefaultFactories/Planes

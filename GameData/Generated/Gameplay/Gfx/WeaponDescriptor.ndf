@@ -29870,14 +29870,14 @@ export WeaponDescriptor_Groupe_AT_Wach_DDR is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnColor             = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness         = -0.1
                     EffectTag                           = 'FireEffect_RocketInf_RPG7VL'
-                    HandheldEquipmentKey                = 'MeshAlternative_3'
+                    HandheldEquipmentKey                = 'MeshAlternative_2'
                     NbWeapons                           = 1
                     SalvoStockIndex                     = 2
                     ShowDispersion                      = False
                     ShowInInterface                     = True
-                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
-                    WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
-                    WeaponShootDataPropertyName         = ["WeaponShootData_0_3", ]
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_2", ]
                 )
             ]
             YulBoneOrdinal              = 2
@@ -34119,7 +34119,7 @@ export WeaponDescriptor_Jaguar_1_RFA is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Jaguar_2_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 12, 1, ]
+    Salves           = [ 12, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -78079,7 +78079,7 @@ export WeaponDescriptor_UH60A_CO_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_A10_Thunderbolt_II_ATGM_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 16, 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -78198,7 +78198,7 @@ export WeaponDescriptor_A10_Thunderbolt_II_ATGM_US is TWeaponManagerModuleDescri
 export WeaponDescriptor_A10_Thunderbolt_II_Rkt_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 16, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -78317,7 +78317,7 @@ export WeaponDescriptor_A10_Thunderbolt_II_Rkt_US is TWeaponManagerModuleDescrip
 export WeaponDescriptor_A10_Thunderbolt_II_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 16, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -78435,7 +78435,7 @@ export WeaponDescriptor_A10_Thunderbolt_II_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Alpha_Jet_A_clu_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -78504,7 +78504,7 @@ export WeaponDescriptor_Alpha_Jet_A_clu_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Alpha_Jet_A_he_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -78573,7 +78573,7 @@ export WeaponDescriptor_Alpha_Jet_A_he_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Alpha_Jet_A_nplm_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -78670,8 +78670,7 @@ export WeaponDescriptor_Alpha_Jet_A_nplm_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Alpha_Jet_A_rkt_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True,
-        True, False, ]
+    SalvoIsMainSalvo = [ False, True, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -78770,7 +78769,7 @@ export WeaponDescriptor_Alpha_Jet_A_rkt_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Alpha_Jet_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -78842,7 +78841,7 @@ export WeaponDescriptor_Alpha_Jet_HE2_BEL is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Buccaneer_S2B_ATGM_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 2, ]
-    SalvoIsMainSalvo = [ True, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -78879,7 +78878,7 @@ export WeaponDescriptor_Buccaneer_S2B_ATGM_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Buccaneer_S2B_GBU_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 2, ]
-    SalvoIsMainSalvo = [ True, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -78916,7 +78915,7 @@ export WeaponDescriptor_Buccaneer_S2B_GBU_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Buccaneer_S2B_HE_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, 2, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -78981,7 +78980,7 @@ export WeaponDescriptor_Buccaneer_S2B_HE_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Buccaneer_S2B_SEAD_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 2, 1, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -79047,7 +79046,7 @@ export WeaponDescriptor_Buccaneer_S2B_SEAD_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F104G_Starfighter_AT_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -79117,7 +79116,7 @@ export WeaponDescriptor_F104G_Starfighter_AT_RFA is TWeaponManagerModuleDescript
 export WeaponDescriptor_F104G_Starfighter_HE_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -79186,7 +79185,7 @@ export WeaponDescriptor_F104G_Starfighter_HE_RFA is TWeaponManagerModuleDescript
 export WeaponDescriptor_F104G_Starfighter_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 4, ]
-    SalvoIsMainSalvo = [ False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -79256,7 +79255,7 @@ export WeaponDescriptor_F104G_Starfighter_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F111E_Aardvark_CBU_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -79292,7 +79291,7 @@ export WeaponDescriptor_F111E_Aardvark_CBU_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F111E_Aardvark_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -79328,7 +79327,7 @@ export WeaponDescriptor_F111E_Aardvark_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F111E_Aardvark_napalm_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -79364,7 +79363,7 @@ export WeaponDescriptor_F111E_Aardvark_napalm_US is TWeaponManagerModuleDescript
 export WeaponDescriptor_F111F_Aardvark_CBU_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -79400,7 +79399,7 @@ export WeaponDescriptor_F111F_Aardvark_CBU_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F111F_Aardvark_LGB2_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -79437,7 +79436,7 @@ export WeaponDescriptor_F111F_Aardvark_LGB2_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F111F_Aardvark_LGB_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -79474,7 +79473,7 @@ export WeaponDescriptor_F111F_Aardvark_LGB_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F111F_Aardvark_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -79510,7 +79509,7 @@ export WeaponDescriptor_F111F_Aardvark_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F111F_Aardvark_napalm_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -79546,7 +79545,7 @@ export WeaponDescriptor_F111F_Aardvark_napalm_US is TWeaponManagerModuleDescript
 export WeaponDescriptor_F117_Nighthawk_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 2, ]
-    SalvoIsMainSalvo = [ True, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -79583,7 +79582,7 @@ export WeaponDescriptor_F117_Nighthawk_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F15C_Eagle_AA2_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 23, 4, 4, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -79682,7 +79681,7 @@ export WeaponDescriptor_F15C_Eagle_AA2_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F15C_Eagle_AA_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 23, 4, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -79781,7 +79780,7 @@ export WeaponDescriptor_F15C_Eagle_AA_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F15E_StrikeEagle_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 23, 4, 4, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -79880,7 +79879,7 @@ export WeaponDescriptor_F15E_StrikeEagle_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16A_AA_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 3, 3, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -79979,7 +79978,7 @@ export WeaponDescriptor_F16A_AA_BEL is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16A_CBU_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80077,7 +80076,7 @@ export WeaponDescriptor_F16A_CBU_BEL is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16C_LGB_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80176,7 +80175,7 @@ export WeaponDescriptor_F16C_LGB_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16E_AA2_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 3, 3, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80275,7 +80274,7 @@ export WeaponDescriptor_F16E_AA2_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16E_AA_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 2, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80374,7 +80373,7 @@ export WeaponDescriptor_F16E_AA_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16E_AGM_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80473,7 +80472,7 @@ export WeaponDescriptor_F16E_AGM_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16E_CBU_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80669,7 +80668,7 @@ export WeaponDescriptor_F16E_HE_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16E_SEAD_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 2, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80768,7 +80767,7 @@ export WeaponDescriptor_F16E_SEAD_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F16E_napalm_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80866,7 +80865,7 @@ export WeaponDescriptor_F16E_napalm_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4E_Phantom_II_AA_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 16, 2, 5, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -80965,7 +80964,7 @@ export WeaponDescriptor_F4E_Phantom_II_AA_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4E_Phantom_II_CBU_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 16, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81063,7 +81062,7 @@ export WeaponDescriptor_F4E_Phantom_II_CBU_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4E_Phantom_II_HE_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 16, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81161,7 +81160,7 @@ export WeaponDescriptor_F4E_Phantom_II_HE_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4E_Phantom_II_napalm_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 16, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81358,7 +81357,7 @@ export WeaponDescriptor_F4F_Phantom_II_AA_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4F_Phantom_II_AT_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 6, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81428,7 +81427,7 @@ export WeaponDescriptor_F4F_Phantom_II_AT_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4F_Phantom_II_HE1_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81526,7 +81525,7 @@ export WeaponDescriptor_F4F_Phantom_II_HE1_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4F_Phantom_II_HE2_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 4, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81624,7 +81623,7 @@ export WeaponDescriptor_F4F_Phantom_II_HE2_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4F_Phantom_II_RKT1_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+	SalvoIsMainSalvo = [ False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81693,8 +81692,8 @@ export WeaponDescriptor_F4F_Phantom_II_RKT1_RFA is TWeaponManagerModuleDescripto
 )
 export WeaponDescriptor_F4F_Phantom_II_RKT2_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 4, 1, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    Salves           = [ 16, 1, 1, ]
+    SalvoIsMainSalvo = [ False, True, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81739,13 +81738,13 @@ export WeaponDescriptor_F4F_Phantom_II_RKT2_RFA is TWeaponManagerModuleDescripto
                 TMountedWeaponDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
-                    Ammunition                          = $/GFX/Weapon/Ammo_RocketAir_SNEB_68mm_x38
+                    Ammunition                          = $/GFX/Weapon/Ammo_RocketAir_Zuni_1272mm_x8
                     AnimateOnlyOneSoldier               = True
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
                     DispersionRadiusOnColor             = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness         = -0.1
-                    EffectTag                           = 'FireEffect_RocketAir_SNEB_68mm_x38'
+                    EffectTag                           = 'FireEffect_RocketAir_Zuni_1272mm_x8'
                     HandheldEquipmentKey                = 'MeshAlternative_2'
                     NbWeapons                           = 1
                     SalvoStockIndex                     = 1
@@ -81753,18 +81752,47 @@ export WeaponDescriptor_F4F_Phantom_II_RKT2_RFA is TWeaponManagerModuleDescripto
                     ShowInInterface                     = True
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
-                    WeaponShootDataPropertyName         = ["WeaponShootData_0_2", "WeaponShootData_1_2", ]
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_2", ]
                 )
             ]
             Tag                         = 'tourelle2'
             YulBoneOrdinal              = 2
+        ),
+        TTurretUnitDescriptor
+        (
+            AngleRotationMax            = 1.3962634015954636
+            AngleRotationMaxPitch       = 0.5235987755982988
+            AngleRotationMinPitch       = -0.5235987755982988
+            MountedWeaponDescriptorList = [
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_RocketAir_Zuni_1272mm_x8
+                    AnimateOnlyOneSoldier               = True
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_RocketAir_Zuni_1272mm_x8'
+                    HandheldEquipmentKey                = 'MeshAlternative_3'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 2
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_3", ]
+                )
+            ]
+            Tag                         = 'tourelle3'
+            YulBoneOrdinal              = 3
         )
     ]
 )
 export WeaponDescriptor_F4_Phantom_AA_F3_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 4, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -81830,7 +81858,7 @@ export WeaponDescriptor_F4_Phantom_AA_F3_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F4_Wild_Weasel_US is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -81896,7 +81924,7 @@ export WeaponDescriptor_F4_Wild_Weasel_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_G91_R3_Gina_HE_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -81965,7 +81993,7 @@ export WeaponDescriptor_G91_R3_Gina_HE_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_G91_R3_Gina_NPL_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82162,7 +82190,7 @@ export WeaponDescriptor_G91_R3_Gina_RKT_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Harrier_CLU_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82260,7 +82288,7 @@ export WeaponDescriptor_Harrier_CLU_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Harrier_GR5_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, 2, ]
-    SalvoIsMainSalvo = [ True, False, False, ]
+    SalvoIsMainSalvo = [ True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -82325,7 +82353,7 @@ export WeaponDescriptor_Harrier_GR5_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Harrier_HE1_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82423,7 +82451,7 @@ export WeaponDescriptor_Harrier_HE1_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Harrier_HE2_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82492,7 +82520,7 @@ export WeaponDescriptor_Harrier_HE2_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Harrier_RKT1_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82591,7 +82619,7 @@ export WeaponDescriptor_Harrier_RKT1_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Harrier_RKT2_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82690,7 +82718,7 @@ export WeaponDescriptor_Harrier_RKT2_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Harrier_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 4, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82760,7 +82788,7 @@ export WeaponDescriptor_Harrier_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_ATGM_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82830,7 +82858,7 @@ export WeaponDescriptor_Jaguar_ATGM_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_CLU_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -82928,7 +82956,7 @@ export WeaponDescriptor_Jaguar_CLU_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_HE1_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83026,7 +83054,7 @@ export WeaponDescriptor_Jaguar_HE1_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_HE2_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83124,7 +83152,7 @@ export WeaponDescriptor_Jaguar_HE2_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_HE_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83222,7 +83250,7 @@ export WeaponDescriptor_Jaguar_HE_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_RKT_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83321,7 +83349,7 @@ export WeaponDescriptor_Jaguar_RKT_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_RKT_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83420,7 +83448,7 @@ export WeaponDescriptor_Jaguar_RKT_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_SEAD2_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 4, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+	SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83519,7 +83547,7 @@ export WeaponDescriptor_Jaguar_SEAD2_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_SEAD_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83589,7 +83617,7 @@ export WeaponDescriptor_Jaguar_SEAD_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_clu_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83687,7 +83715,7 @@ export WeaponDescriptor_Jaguar_clu_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_nplm_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83785,8 +83813,7 @@ export WeaponDescriptor_Jaguar_nplm_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_L39ZO_CLU_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, 1, ]
-    SalvoIsMainSalvo = [ True,
-        True, False, False, False, ]
+    SalvoIsMainSalvo = [ True, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -83850,7 +83877,7 @@ export WeaponDescriptor_L39ZO_CLU_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_L39ZO_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+	SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -83949,7 +83976,7 @@ export WeaponDescriptor_L39ZO_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_L39ZO_HE1_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -83985,7 +84012,7 @@ export WeaponDescriptor_L39ZO_HE1_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_L39ZO_HE1_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -84021,7 +84048,7 @@ export WeaponDescriptor_L39ZO_HE1_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_L39ZO_NPLM_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -84057,6 +84084,7 @@ export WeaponDescriptor_L39ZO_NPLM_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_21PFM_AA_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 4, ]
+    SalvoIsMainSalvo = [ False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84126,7 +84154,7 @@ export WeaponDescriptor_MiG_21PFM_AA_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_21PFM_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, 1, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84225,7 +84253,7 @@ export WeaponDescriptor_MiG_21PFM_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_21bis_AA2_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 4, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84324,7 +84352,7 @@ export WeaponDescriptor_MiG_21bis_AA2_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_21bis_AA3_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 3, 3, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84423,7 +84451,7 @@ export WeaponDescriptor_MiG_21bis_AA3_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_21bis_CLU_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84520,7 +84548,7 @@ export WeaponDescriptor_MiG_21bis_CLU_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_21bis_HE_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84589,7 +84617,7 @@ export WeaponDescriptor_MiG_21bis_HE_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_21bis_NPLM_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84686,7 +84714,7 @@ export WeaponDescriptor_MiG_21bis_NPLM_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_21bis_RKT2_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84756,7 +84784,7 @@ export WeaponDescriptor_MiG_21bis_RKT2_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23BN_AT2_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 1, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84855,7 +84883,7 @@ export WeaponDescriptor_MiG_23BN_AT2_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23BN_AT_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84925,7 +84953,7 @@ export WeaponDescriptor_MiG_23BN_AT_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23BN_CLU_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -84994,7 +85022,7 @@ export WeaponDescriptor_MiG_23BN_CLU_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23BN_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85063,7 +85091,7 @@ export WeaponDescriptor_MiG_23BN_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23BN_RKT_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 1, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85162,7 +85190,7 @@ export WeaponDescriptor_MiG_23BN_RKT_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23BN_nplm_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85231,7 +85259,7 @@ export WeaponDescriptor_MiG_23BN_nplm_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23MF_AA_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 4, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85330,7 +85358,7 @@ export WeaponDescriptor_MiG_23MF_AA_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23MF_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85399,7 +85427,7 @@ export WeaponDescriptor_MiG_23MF_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23MF_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85468,7 +85496,7 @@ export WeaponDescriptor_MiG_23MF_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23MLD_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85567,7 +85595,7 @@ export WeaponDescriptor_MiG_23MLD_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23ML_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 4, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+	SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85666,7 +85694,7 @@ export WeaponDescriptor_MiG_23ML_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23ML_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 6, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+	SalvoIsMainSalvo = [ False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85736,7 +85764,7 @@ export WeaponDescriptor_MiG_23ML_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23ML_UPK_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 12, 1, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+	SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85856,7 +85884,7 @@ export WeaponDescriptor_MiG_23ML_UPK_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_23P_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 4, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -85955,7 +85983,7 @@ export WeaponDescriptor_MiG_23P_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_25BM_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -85992,7 +86020,7 @@ export WeaponDescriptor_MiG_25BM_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_25RBF_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -86266,7 +86294,7 @@ export WeaponDescriptor_MiG_27K_AT2_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_27K_LGB_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 4, ]
-    SalvoIsMainSalvo = [ True, False, False, False, ]
+    SalvoIsMainSalvo = [ True, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -86385,7 +86413,7 @@ export WeaponDescriptor_MiG_27K_LGB_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_27M_CLU_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -86474,7 +86502,7 @@ export WeaponDescriptor_MiG_27M_CLU_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_27M_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -86564,7 +86592,7 @@ export WeaponDescriptor_MiG_27M_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_27M_bombe_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -86653,7 +86681,7 @@ export WeaponDescriptor_MiG_27M_bombe_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_27M_napalm_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -86742,7 +86770,7 @@ export WeaponDescriptor_MiG_27M_napalm_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_27M_rkt_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+	SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -86861,7 +86889,7 @@ export WeaponDescriptor_MiG_27M_rkt_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_27M_sead_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -86951,7 +86979,7 @@ export WeaponDescriptor_MiG_27M_sead_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_29_AA2_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 4, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87050,7 +87078,7 @@ export WeaponDescriptor_MiG_29_AA2_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_29_AA3_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 4, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87149,7 +87177,7 @@ export WeaponDescriptor_MiG_29_AA3_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_29_AA_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 4, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87248,7 +87276,7 @@ export WeaponDescriptor_MiG_29_AA_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_29_AA_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 4, 2, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87347,7 +87375,7 @@ export WeaponDescriptor_MiG_29_AA_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_MiG_31M_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+	SalvoIsMainSalvo = [ False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -87384,7 +87412,7 @@ export WeaponDescriptor_MiG_31M_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_2000_C_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 2, ]
-    SalvoIsMainSalvo = [ False, False, True, False, ]
+    SalvoIsMainSalvo = [ False, False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87483,7 +87511,7 @@ export WeaponDescriptor_Mirage_2000_C_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_5_BA_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87581,7 +87609,7 @@ export WeaponDescriptor_Mirage_5_BA_BEL is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_5_BA_CLU_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87679,8 +87707,7 @@ export WeaponDescriptor_Mirage_5_BA_CLU_BEL is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_5_BA_MIRSIP_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True,
-        True, False, ]
+    SalvoIsMainSalvo = [ False, True, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87779,7 +87806,7 @@ export WeaponDescriptor_Mirage_5_BA_MIRSIP_BEL is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_5_BA_NPLM_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87877,7 +87904,7 @@ export WeaponDescriptor_Mirage_5_BA_NPLM_BEL is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_5_BA_RKT_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -87976,7 +88003,7 @@ export WeaponDescriptor_Mirage_5_BA_RKT_BEL is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_5_F_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88074,7 +88101,7 @@ export WeaponDescriptor_Mirage_5_F_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_5_F_clu_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88143,7 +88170,7 @@ export WeaponDescriptor_Mirage_5_F_clu_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_5_F_nplm_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88212,7 +88239,7 @@ export WeaponDescriptor_Mirage_5_F_nplm_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_F1_CT_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 9, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88311,7 +88338,7 @@ export WeaponDescriptor_Mirage_F1_CT_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_F1_C_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 9, 2, 2, ]
-    SalvoIsMainSalvo = [ False, False, True, False, ]
+    SalvoIsMainSalvo = [ False, False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88410,7 +88437,7 @@ export WeaponDescriptor_Mirage_F1_C_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_III_E_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 5, 2, 1, ]
-    SalvoIsMainSalvo = [ False, False, True, False, ]
+    SalvoIsMainSalvo = [ False, False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88509,7 +88536,7 @@ export WeaponDescriptor_Mirage_III_E_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Mirage_IV_FR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 1, ]
-    SalvoIsMainSalvo = [ True, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretBombardierDescriptor
@@ -88610,7 +88637,7 @@ export WeaponDescriptor_Mirage_IV_SEAD_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_17M4_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88709,7 +88736,7 @@ export WeaponDescriptor_Su_17M4_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_22_AT_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88768,7 +88795,7 @@ export WeaponDescriptor_Su_22_AT_DDR is TWeaponManagerModuleDescriptor
                     ShowInInterface                     = True
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
-                    WeaponShootDataPropertyName         = ["WeaponShootData_0_3", ]
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_3", "WeaponShootData_1_3", ]
                 )
             ]
             Tag                         = 'tourelle2'
@@ -88808,7 +88835,7 @@ export WeaponDescriptor_Su_22_AT_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_22_AT_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -88867,7 +88894,7 @@ export WeaponDescriptor_Su_22_AT_SOV is TWeaponManagerModuleDescriptor
                     ShowInInterface                     = True
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
-                    WeaponShootDataPropertyName         = ["WeaponShootData_0_3", ]
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_3", "WeaponShootData_1_3", ]
                 )
             ]
             Tag                         = 'tourelle2'
@@ -88907,7 +88934,7 @@ export WeaponDescriptor_Su_22_AT_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_22_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89005,7 +89032,7 @@ export WeaponDescriptor_Su_22_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_22_RKT_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89075,7 +89102,7 @@ export WeaponDescriptor_Su_22_RKT_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_22_SEAD_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89174,7 +89201,7 @@ export WeaponDescriptor_Su_22_SEAD_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_22_UPK_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 25, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89294,7 +89321,7 @@ export WeaponDescriptor_Su_22_UPK_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_22_clu_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89392,7 +89419,7 @@ export WeaponDescriptor_Su_22_clu_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_22_nplm_DDR is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89490,7 +89517,7 @@ export WeaponDescriptor_Su_22_nplm_DDR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_24MP_EW_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, ]
-    SalvoIsMainSalvo = [ True, False, False, False, ]
+    SalvoIsMainSalvo = [ True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89531,7 +89558,7 @@ export WeaponDescriptor_Su_24MP_EW_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_24MP_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89601,7 +89628,7 @@ export WeaponDescriptor_Su_24MP_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_24M_LGB_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89671,7 +89698,7 @@ export WeaponDescriptor_Su_24M_LGB_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_24M_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89740,7 +89767,7 @@ export WeaponDescriptor_Su_24M_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_24M_clu2_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89766,7 +89793,7 @@ export WeaponDescriptor_Su_24M_clu2_SOV is TWeaponManagerModuleDescriptor
                     SalvoStockIndex                     = 0
                     ShowDispersion                      = False
                     ShowInInterface                     = True
-                    TirContinu                          = False
+                    TirContinu                          = True
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
@@ -89809,7 +89836,7 @@ export WeaponDescriptor_Su_24M_clu2_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_24M_clu_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89878,7 +89905,7 @@ export WeaponDescriptor_Su_24M_clu_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_24M_nplm_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -89947,7 +89974,7 @@ export WeaponDescriptor_Su_24M_nplm_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_25T_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 16, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90066,7 +90093,7 @@ export WeaponDescriptor_Su_25T_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_25_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90185,7 +90212,7 @@ export WeaponDescriptor_Su_25_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_25_clu_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90303,7 +90330,7 @@ export WeaponDescriptor_Su_25_clu_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_25_he_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90421,7 +90448,7 @@ export WeaponDescriptor_Su_25_he_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_25_nplm_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90539,7 +90566,7 @@ export WeaponDescriptor_Su_25_nplm_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_25_rkt_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 1, 1, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90658,7 +90685,7 @@ export WeaponDescriptor_Su_25_rkt_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Su_27S_SOV is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 6, 6, 4, ]
-	SalvoIsMainSalvo = [ False, False, False, False, ]
+    SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90757,7 +90784,7 @@ export WeaponDescriptor_Su_27S_SOV is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Tornado_ADV_HE_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90855,7 +90882,7 @@ export WeaponDescriptor_Tornado_ADV_HE_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Tornado_ADV_SEAD_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 3, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -90954,7 +90981,7 @@ export WeaponDescriptor_Tornado_ADV_SEAD_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Tornado_ADV_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 4, 4, ]
-    SalvoIsMainSalvo = [ False, False, True, False, ]
+    SalvoIsMainSalvo = [ False, False, True, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -91053,7 +91080,7 @@ export WeaponDescriptor_Tornado_ADV_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Tornado_ADV_clu_UK is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -91151,7 +91178,7 @@ export WeaponDescriptor_Tornado_ADV_clu_UK is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Tornado_IDS_AT1_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 4, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -91250,7 +91277,7 @@ export WeaponDescriptor_Tornado_IDS_AT1_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Tornado_IDS_CLUS_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -91348,7 +91375,7 @@ export WeaponDescriptor_Tornado_IDS_CLUS_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Tornado_IDS_HE1_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -91446,7 +91473,7 @@ export WeaponDescriptor_Tornado_IDS_HE1_RFA is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Tornado_IDS_MW1_RFA is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 4, 1, 2, ]
-    SalvoIsMainSalvo = [ False, True, False, False, ]
+    SalvoIsMainSalvo = [ False, True, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
