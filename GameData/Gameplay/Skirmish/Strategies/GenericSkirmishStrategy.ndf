@@ -155,56 +155,42 @@ export Gen_Phase_Command is TSequenceGeneratorDescriptor
 
         ~/CaptureOneObjectif,
 
+        ~/FOB_Skirmish,
+        // Capture de zones
         ~/Attack_Objectives,
+
         ~/Airstrike_AA,
 
-        ~/Reco,
+        ~/Reco,            // 40 par reco
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
-
-        //~/Defense_Objectif,
-
-        //------------------------------
-        // Défenses prioritaires
-        //------------------------------
-        // Statiques pour tenir le terrain
-        //~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
-
-        //~/Defense_Dynamic_Adaptive,
-        //~/Defense_Dynamic_Adaptive,
+        // Grosse attaque
+        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200 => un cmd pas cher, une reco pas cher, et le reste de tanks pour fill le budget en random.
 
         //~/Defense_Static_AA,
         //~/Defense_Dynamic_AA,
 
         ~/Attack_Helo,
 
-        ~/CaptureHalfZoneObjectif_Ceil,
-
-        ~/Attack_Filler,
-
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
-        ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
-        ~/Attack_Adaptive,
+        // Reste du front
+        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Adaptive,          // ~100
 
-        //Cet mission lance les objectifs restant
-        ~/CaptureAllZoneObjectif,
 
-        ~/Airstrike_Offense,
-        ~/Airstrike_AA,
-
-        //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
-        ~/CaptureOneObjectifForAlliance,
+        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Filler,            // budget 40
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Supply_Skirmish_Allied,
+        ~/CaptureHalfZoneObjectif_Ceil,
 
-    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
+    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
 
     //------------------------------
     // Scaling
@@ -225,47 +211,51 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
         // prioritaires sur les attaques. L'idée est de lancer ses attaques dès
         // le début, mais de renforcer les backlines avant de récupérer de nos pertes
         // Capture de zones
-        ~/CaptureAllZoneObjectif,
-
-        ~/Attack_Objectives,
-
         //------------------------------
         // Support & Supply
         //------------------------------
         ~/Support_Transports,
+
         ~/Supply_Skirmish,
 
-        ~/Reco,
+        ~/CaptureOneObjectif,
 
-        //------------------------------
-        // Défenses prioritaires
-        //------------------------------
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
+        ~/FOB_Skirmish,
+        // Capture de zones
+        ~/Attack_Objectives,
 
-        ~/Attack_Filler,
+        ~/Airstrike_AA,
+
+        ~/Reco,            // 40 par reco
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        ~/Attack_Main,
-        ~/Attack_Main,
-        ~/Attack_Main,
+        // Grosse attaque
+        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200 => un cmd pas cher, une reco pas cher, et le reste de tanks pour fill le budget en random.
+
+        //~/Defense_Static_AA,
+        //~/Defense_Dynamic_AA,
+
         ~/Attack_Helo,
+
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
-        ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
-        ~/Attack_Adaptive,
+        // Reste du front
+        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Adaptive,          // ~100
 
-        ~/Airstrike_Offense,
-        ~/Airstrike_AA,
+
+        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Filler,            // budget 40
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Supply_Skirmish_Allied,
+        ~/CaptureHalfZoneObjectif_Ceil,
 
-    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
+    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
 
     //------------------------------
     // Scaling
@@ -273,7 +263,7 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
     // Dans les difficultés supérieures il faudra surement maintenir
     // ça avec des maintain à la phase d'après pour être sur qu'on
     // produise de nouvelles unités
-    ScalingGeneratorList = ~/Medium_Scaling_Attack
+    ScalingGeneratorList = ~/Medium_Scaling
 )
 
 // Le concept de ces blocs de missions

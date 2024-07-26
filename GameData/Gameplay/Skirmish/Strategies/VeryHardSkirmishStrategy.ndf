@@ -163,54 +163,39 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
 
         ~/CaptureOneObjectif,
 
+        ~/FOB_Skirmish,
+
         ~/Attack_Objectives,
 
         ~/Airstrike_AA,
 
-        ~/Reco,
+        ~/Reco,            // 40 par reco
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
+        // Grosse attaque
+        ~/Attack_Main,
         ~/Attack_Helo,
 
-        //------------------------------
-        // Défenses prioritaires
-        //------------------------------
-        // Statiques pour tenir le terrain
-        //~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
         //~/Defense_Static_AA,
         //~/Defense_Dynamic_AA,
 
-        //~/Defense_Dynamic_Adaptive,
-        //~/Defense_Dynamic_Adaptive,
-
-        //Cet mission lance les objectifs restant
-        //~/Defense_Objectif,
-
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
-        ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
-        ~/Attack_Adaptive,
-        ~/Attack_Filler,
+        // Reste du front
+        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Adaptive,          // ~100
+
+        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Filler,            // budget 40
 
         ~/CaptureHalfZoneObjectif_Ceil,
-
-        ~/Airstrike_Offense,
-
-        //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
-
-        ~/Attack_Helo,
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Airstrike_Assault,
-
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
-
         ~/Artillery_TriggerHappy_1for2Corridors,
 
         //~/Defense_Static_Adaptive,
@@ -223,10 +208,7 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
         ~/Artillery_Expensive,
 
         ~/CaptureAllZoneObjectif,
-        ~/CaptureOneObjectifForAlliance,
-        ~/Supply_Skirmish_Allied,
-
-    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
+    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
 
     //------------------------------
     // Scaling
@@ -244,58 +226,52 @@ export VHard_Phase_LastHope is TSequenceGeneratorDescriptor
         // prioritaires sur les attaques. L'idée est de lancer ses attaques dès
         // le début, mais de renforcer les backlines avant de récupérer de nos pertes
         // Capture de zones
-        ~/CaptureAllZoneObjectif,
-
-        ~/Attack_Objectives,
-
         //------------------------------
         // Support & Supply
         //------------------------------
         ~/Support_Transports,
 
         ~/Supply_Skirmish,
-        ~/Reco,
 
+        ~/CaptureOneObjectif,
 
-        ~/Attack_Filler,
-        //------------------------------
-        // Défenses prioritaires
-        //------------------------------
-        // Statiques pour tenir le terrain
-        //~/Defense_Static_AA,
+        ~/FOB_Skirmish,
 
-        //Cet mission lance les objectifs restant
-        //~/Defense_Objectif,
+        ~/Attack_Objectives,
+
+        ~/Airstrike_AA,
+
+        ~/Reco,            // 40 par reco
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
+        // Grosse attaque
+        ~/Attack_Main,
         ~/Attack_Helo,
+
+        //~/Defense_Static_AA,
+        //~/Defense_Dynamic_AA,
+
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
-        ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
-        ~/Attack_Adaptive,
+        // Reste du front
+        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Adaptive,          // ~100
 
-        ~/Attack_Adaptive,
+        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Filler,            // budget 40
 
-        ~/Airstrike_Offense,
-        ~/Airstrike_AA,
-
-        //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
-        ~/CaptureOneObjectifForAlliance,
-
-        ~/Attack_Helo,
+        ~/CaptureHalfZoneObjectif_Ceil,
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Airstrike_Assault,
-
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
-
         ~/Artillery_TriggerHappy_1for2Corridors,
+
+        //~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
@@ -303,14 +279,13 @@ export VHard_Phase_LastHope is TSequenceGeneratorDescriptor
         ~/Artillery_Sniper,
         ~/Artillery_Expensive,
 
-        ~/Supply_Skirmish_Allied,
-
-    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
+        ~/CaptureAllZoneObjectif,
+    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
 
     //------------------------------
     // Scaling
     //------------------------------
-    ScalingGeneratorList = ~/VeryHardScaling_Attack
+    ScalingGeneratorList = ~/VeryHardScaling
 )
 
 VeryHardScaling is

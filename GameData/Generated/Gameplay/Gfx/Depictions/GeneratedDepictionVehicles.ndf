@@ -25147,6 +25147,14 @@ DepictionOperator_T62MD_SOV_Weapon4 is DepictionOperator_WeaponMissileCarriageFi
     WeaponShootDataPropertyName = ["WeaponShootData_0_4", ]
     NbProj = 1
 )
+DepictionOperator_T62MD_SOV_Weapon5 is DepictionOperator_WeaponContinuousFire
+(
+    FireEffectTag = "weapon_effet_tag5"
+    Anchors = ["fx_tourelle4_tir_01"]
+    WeaponShootDataPropertyName = "WeaponShootData_0_5"
+    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_5"
+    NbFX = 1
+)
 DepictionOperator_T62MD_SOV_Weapon6 is DepictionOperator_WeaponInstantFire
 (
     FireEffectTag = "weapon_effet_tag6"
@@ -25177,6 +25185,7 @@ Gfx_T62MD_SOV_Autogen is TacticVehicleDepictionTemplate
         DepictionOperator_T62MD_SOV_Weapon2,
         DepictionOperator_T62MD_SOV_Weapon3,
         DepictionOperator_T62MD_SOV_Weapon4,
+		DepictionOperator_T62MD_SOV_Weapon5,
         DepictionOperator_T62MD_SOV_Weapon6,
         DepictionOperator_EjectableProps_Vehicle
         (
@@ -25198,6 +25207,7 @@ Gfx_T62MD_SOV_Autogen is TacticVehicleDepictionTemplate
                 ( [ "weapon_effet_tag2" ], Weapon_Canon_HE_115mm_U5TS_T62M ),
                 ( [ "weapon_effet_tag3" ], Weapon_HMG_12_7_mm_DShKM ),
                 ( [ "weapon_effet_tag4" ], Weapon_ATGM_9M117_Bastion ),
+                ( [ "weapon_effet_tag5" ], Weapon_MMG_PKT_7_62mm ),
                 ( [ "weapon_effet_tag6" ], Weapon_SMOKE_Vehicle_Grenadex8 ),
             ]
             + DepictionAction_Stress_And_Wrecked
@@ -25295,6 +25305,7 @@ Gfx_T62MV_SOV_Autogen is TacticVehicleDepictionTemplate
                 ( [ "weapon_effet_tag2" ], Weapon_Canon_HE_115mm_U5TS_T62M ),
                 ( [ "weapon_effet_tag3" ], Weapon_HMG_12_7_mm_DShKM ),
                 ( [ "weapon_effet_tag4" ], Weapon_ATGM_9M117_Bastion ),
+                ( [ "weapon_effet_tag5" ], Weapon_MMG_PKT_7_62mm ),
                 ( [ "weapon_effet_tag6" ], Weapon_SMOKE_Vehicle_Grenadex8 ),
             ]
             + DepictionAction_Stress_And_Wrecked
@@ -25481,6 +25492,7 @@ Gfx_T62M_SOV_Autogen is TacticVehicleDepictionTemplate
                 ( [ "weapon_effet_tag2" ], Weapon_Canon_HE_115mm_U5TS_T62M ),
                 ( [ "weapon_effet_tag3" ], Weapon_HMG_12_7_mm_DShKM ),
                 ( [ "weapon_effet_tag4" ], Weapon_ATGM_9M117_Bastion ),
+                ( [ "weapon_effet_tag5" ], Weapon_MMG_PKT_7_62mm ),
                 ( [ "weapon_effet_tag6" ], Weapon_SMOKE_Vehicle_Grenadex8 ),
             ]
             + DepictionAction_Stress_And_Wrecked

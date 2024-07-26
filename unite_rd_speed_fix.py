@@ -9,13 +9,13 @@ from tempfile import mkstemp
 from shutil import move, copymode
 from os import fdopen, remove
 
-filpath = r'C:\Program Files (x86)\Steam\steamapps\common\WARNO\Mods\SURM\GameData\Generated\Gameplay\Gfx\UniteDescriptor_transport_seats.txt'
+filpath = r'C:\Program Files (x86)\Steam\steamapps\common\WARNO\Mods\SURM\GameData\Generated\Gameplay\Gfx\UniteDescriptor_speed.txt'
 
 # f = open(filpath,"w")
 
-speed_str = "VitesseCombat ="
-rd_bonus_str = "SpeedBonusOnRoad ="
-real_rd = "RealRoadSpeed = "
+speed_str = "MaxSpeedInKmph ="
+rd_bonus_str = "SpeedBonusFactorOnRoad ="
+real_rd = "DisplayRoadSpeedInKmph = "
 def replace(file_path, speed_str, rd_bonus_str,real_rd):
     #Create temp file
     fh, abs_path = mkstemp()
@@ -36,7 +36,7 @@ def replace(file_path, speed_str, rd_bonus_str,real_rd):
                     rd_bonus = float(rd_bonus[0])
                 x = line.find(real_rd)
                 if x != -1:
-                    rd_spd = round(res_spd*(1+rd_bonus)/(1000*(2901/370)/(3600)))
+                    rd_spd = round(res_spd*rd_bonus)
                     subst = real_rd + str(rd_spd)
                     rd_str = re.findall('\d+',line)
                     rd_str = real_rd + rd_str[0]

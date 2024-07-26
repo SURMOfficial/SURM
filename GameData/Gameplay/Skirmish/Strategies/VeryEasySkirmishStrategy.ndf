@@ -114,7 +114,10 @@ export VEasy_Phase_Command is TSequenceGeneratorDescriptor
     [
         ~/CaptureOneObjectif,
 
+        ~/FOB_Skirmish,
+        // On garde quand même une attaque objective pour allez prendre les zones de commandement
         ~/Attack_Objectives,
+
         //------------------------------
         // Support & Supply
         //------------------------------
@@ -122,38 +125,23 @@ export VEasy_Phase_Command is TSequenceGeneratorDescriptor
 
         ~/Supply_Skirmish,
 
-        ~/Reco,
-
         ~/CaptureHalfZoneObjectif_Floor,
 
-        //------------------------------
-        // Défenses prioritaires
-        //------------------------------
-        // Statiques pour tenir le terrain
-        //~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
-        //~/Defense_Static_AA,
+        ~/Reco,            // 40 par reco
 
         //~/Defense_Objectif,
 
-        //------------------------------
-        // VEasy encore des defenses
-        //------------------------------
         ~/Artillery_Support,        // Artillerie pas chère                 //  80
 
-        //~/Defense_Static_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
-        //~/Defense_Static_Adaptive,
-
-        //~/Defense_Static_Adaptive,
-
-        ~/Airstrike_Offense,
-        ~/Airstrike_AA,
+        //~/Defense_Static_Adaptive,          // ~100
+        //~/Defense_Filler,            // budget 40
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Supply_Skirmish_Allied,
 
-    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
+    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
 
     //------------------------------
     // Pas de Scaling pour la VEasy

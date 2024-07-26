@@ -81,9 +81,9 @@ template CriticalEffect_CrewKilled
     Roll = <Roll>
     Descriptor = ~/CriticalEffect_CrewKilled_Desc
 )
-CriticalEffect_BailedOut_Desc is TCriticalEffectDescriptor
+CriticalEffect_BailedOut_Desc is TCriticalEffectDescriptor //custom labels are broken for now in critics but see the labels file when restored
 (
-    Token = 'KNOCKOUT'
+    Token = 'CRITIC5'
     HappeningKey = 'critical_crew_dead'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Bailed_Out
     TimeOut = -1
@@ -103,7 +103,7 @@ template CriticalEffect_BailedOut
 
 CriticalEffect_TransmissionDamaged_Desc is TCriticalEffectDescriptor
 (
-    Token = 'PWRDAMAGE'
+    Token = 'CRITIC6'
     HappeningKey = 'critical_engine_damaged'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Vitesse_50
     TimeOut = -1
@@ -123,7 +123,7 @@ template CriticalEffect_TransmissionDamaged
 
 CriticalEffect_TransmissionDestroyed_Desc is TCriticalEffectDescriptor
 (
-    Token = 'PWRDESTRY' //CRITIC7 is the right label but doesn't work
+    Token = 'CRITIC9' //CRITIC7 is the right label but doesn't work
     HappeningKey = 'critical_engine_destroyed'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Full_Stop
     TimeOut = -1
@@ -225,7 +225,7 @@ CriticalEffect_GunJammed_Desc is TCriticalEffectDescriptor
     Token = 'GUNDESTRY' //CRITIC14 was tag
     HappeningKey = 'critical_gun_turret_stuck'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Stop_Armes
-    TimeOut = 120
+    TimeOut = -1
     RepairCost = -1
     Unique = False
     DisplayOnDeath = False
@@ -238,6 +238,26 @@ template CriticalEffect_GunJammed
 (
     Roll = <Roll>
     Descriptor = ~/CriticalEffect_GunJammed_Desc
+)
+
+CriticalEffect_GunnerKilled_Desc is TCriticalEffectDescriptor
+(
+    Token = 'CRITIC15'
+    HappeningKey = 'critical_gun_turret_stuck'
+    EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Stop_Armes
+    TimeOut = -1
+    RepairCost = -1
+    Unique = False
+    DisplayOnDeath = False
+)
+// Gun Jammed -> plus de tir
+template CriticalEffect_GunnerKilled
+[
+    Roll
+] is TCriticalEffect
+(
+    Roll = <Roll>
+    Descriptor = ~/CriticalEffect_GunnerKilled_Desc
 )
 
 CriticalEffect_ShooterKilled_Desc is TCriticalEffectDescriptor
