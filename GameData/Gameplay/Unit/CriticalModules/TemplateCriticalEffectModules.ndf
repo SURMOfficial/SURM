@@ -456,6 +456,25 @@ template CriticalEffect_CrewPanicked
     Roll = <Roll>
     Descriptor = ~/CriticalEffect_CrewPanicked_Desc
 )
+
+CriticalEffect_ERA_hit_Desc is TCriticalEffectDescriptor
+(
+    Token = 'BOUNCE1'
+    EffectsPack = $/GFX/EffectCapacity/UnitEffect_ERA_hit
+    TimeOut = 0.01
+    RepairCost = -1
+    Unique = False
+    DisplayOnDeath = False
+)
+// Crew panicked -> Deroute
+template CriticalEffect_ERA_hit
+[
+    Roll
+] is TCriticalEffect
+(
+    Roll = <Roll>
+    Descriptor = ~/CriticalEffect_ERA_hit_Desc
+)
 CriticalEffect_Bounce_Desc is TCriticalEffectDescriptor
 (
     Token = 'BOUNCE1'

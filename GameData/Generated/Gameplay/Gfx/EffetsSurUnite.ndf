@@ -5270,6 +5270,348 @@ export UnitEffect_vehicle_stopped_hit_perc is TEffectsPackDescriptor //vehicles 
         ),*/
     ]
 )
+export UnitEffect_ERA_hit is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+        TUnitEffectAddCapacityDescriptor
+        (
+            CapacityToAdd = [ ~/Capacite_ERA_hit_tag ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_shock"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_tag is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{54f5d87c-a27b-4379-8161-3235e33924cd}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+		TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "ERA_hit",
+            ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_assault_half"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_tag2 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{6089b9ec-839c-4863-b61a-74c8be5eb13b}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+		TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "ERA_hit1",
+            ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_assault_half"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_tag3 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+		TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "ERA_hit1",
+            ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_howitzer"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_add is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{4cb8ea4d-6235-4288-95cd-1f50d9bd5c3e}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+        TUnitEffectAddCapacityDescriptor
+        (
+            CapacityToAdd = [ ~/Capacite_ERA_hit_tag ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_shock"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_1 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+        TUnitEffectAddCapacityDescriptor
+        (
+            CapacityToAdd = [ ~/Capacite_ERA_hit2 ]
+        ),
+		TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "ERA_hit1",
+            ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_shock"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_2 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{859eb42c-0920-4a55-96a8-c54ee9b8953a}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+        TUnitEffectAddCapacityDescriptor
+        (
+            CapacityToAdd = [ ~/Capacite_ERA_hit2 ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_shock"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_3 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{211e4a47-b442-4547-8e0e-9456c7e84078}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+		TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "ERA_hit3",
+            ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_shock"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_27 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{bf786e60-376b-452f-8089-99f6c29cfe4f}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=27)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_26 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{7437e071-8407-4609-9690-69ae4ae506c6}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=26)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_25 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{f5aadec4-ec41-4671-ba86-713eeb257417}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=25)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_24 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ce1c622e-6227-45ce-99f2-c39a1283c7fe}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=24)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_23 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{46cfbfad-be52-476c-b387-ca6c4c2fa5ca}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=23)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_22 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{5af18708-f880-484a-8171-728486b946e3}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=22)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_21 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{9636d129-fe79-4097-b323-cc504095e90d}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=21)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_20 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{55e26fc8-64ac-40df-ab54-ec9c6644e2de}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_19 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{6886027a-0f00-4538-954f-ae087b7ec1a8}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=19)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_15 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{1a5fba9e-3b31-4e11-ac52-7e1017275fca}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=15)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_14 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{2d3c11d0-7308-456c-83fa-1c32498b6b1b}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=14)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_8 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{25641f38-83c7-4fce-9fd7-16720d377cf7}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=8)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
+export UnitEffect_ERA_front_7 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{37c83b98-1281-425f-a440-cbb1115d2fe1}
+    NameForDebug       = 'ERA_front_27'
+    EffectsDescriptors = [
+        TUnitEffectReplaceArmorDescriptor
+        (
+            ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=7)
+            BlindageLocation    = ~/EArmorLocation/Front
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
 export UnitEffect_additional_XP_from_command is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{8f546392-1afc-45eb-bc43-80fb06b425f8}
