@@ -5093,7 +5093,7 @@ export UnitEffect_SF is TEffectsPackDescriptor
             ModifierType       = ~/ModifierType_Multiplicatif
             BonusConcealmentBonus  = 1.5 // corrects SF to scout level
         ),
-		TUnitEffectIncreaseOpticalStrengthDescriptor //raises SF with 84.9 to scout level
+		TUnitEffectIncreaseOpticalStrengthDescriptor //raises SF with 84.9 to scout level matches scout optic bonus
         (
             ModifierType         = ~/ModifierType_Multiplicatif
             BonusOpticalStrength = 1.7
@@ -5103,11 +5103,11 @@ export UnitEffect_SF is TEffectsPackDescriptor
             ModifierType     = ~/ModifierType_Multiplicatif
             ModifierValue = 0.6
         ),
-        TUnitEffectAlterWeaponTempsEntreDeuxTirsDescriptor
+        /*TUnitEffectAlterWeaponTempsEntreDeuxTirsDescriptor
         (
             ModifierType     = ~/ModifierType_Pourcentage
             ModifierValue   = -35
-        ),
+        ),*/
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_shock"

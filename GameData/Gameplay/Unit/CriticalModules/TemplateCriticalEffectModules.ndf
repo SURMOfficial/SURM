@@ -103,7 +103,7 @@ template CriticalEffect_BailedOut
 
 CriticalEffect_TransmissionDamaged_Desc is TCriticalEffectDescriptor
 (
-    Token = 'CRITIC6'
+    Token = 'PWRDAMAGE' //'CRITIC6'
     HappeningKey = 'critical_engine_damaged'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Vitesse_50
     TimeOut = -1
@@ -123,7 +123,7 @@ template CriticalEffect_TransmissionDamaged
 
 CriticalEffect_TransmissionDestroyed_Desc is TCriticalEffectDescriptor
 (
-    Token = 'CRITIC9' //CRITIC7 is the right label but doesn't work
+    Token = 'PWRDESTRY'//'CRITIC9' //CRITIC7 is the right label but doesn't work
     HappeningKey = 'critical_engine_destroyed'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Full_Stop
     TimeOut = -1

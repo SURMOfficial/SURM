@@ -18274,7 +18274,7 @@ export WeaponDescriptor_BTR_D_SOV is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_BTR_ZD_Skrezhet_SOV is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 15, 100, ]
+    Salves           = [ 12, 100, 24,]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -18298,6 +18298,46 @@ export WeaponDescriptor_BTR_ZD_Skrezhet_SOV is TWeaponManagerModuleDescriptor
                     HandheldEquipmentKey                = 'MeshAlternative_1'
                     NbWeapons                           = 1
                     SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_AP
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 2
                     ShowDispersion                      = False
                     ShowInInterface                     = True
                     TirContinu                          = False
@@ -18415,6 +18455,25 @@ export WeaponDescriptor_Bofors_40mm_RFA is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_40mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_Bofors_40mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -18442,6 +18501,25 @@ export WeaponDescriptor_Bofors_40mm_capture_DDR is TWeaponManagerModuleDescripto
                 (
                     AmmoConsumption_ForInterface        = 1
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_40mm
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_Bofors_40mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_40mm_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -19350,6 +19428,26 @@ export WeaponDescriptor_DCA_53T2_20mm_FR is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_53T2_20mm_TOWED_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_53T2_20mm_TOWED'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration  = 3.5
@@ -19376,6 +19474,26 @@ export WeaponDescriptor_DCA_53T2_20mm_Para_FR is TWeaponManagerModuleDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_53T2_20mm_TOWED
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_53T2_20mm_TOWED'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_53T2_20mm_TOWED_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -19432,6 +19550,26 @@ export WeaponDescriptor_DCA_FK20_2_20mm_RFA is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_FK20_20mm_TOWED_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_FK20_20mm_TOWED'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -19459,6 +19597,26 @@ export WeaponDescriptor_DCA_FK20_2_20mm_Zwillinge_RFA is TWeaponManagerModuleDes
                 (
                     AmmoConsumption_ForInterface        = 1
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_FK20_20mm
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_FK20_20mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_FK20_20mm_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -20054,6 +20212,26 @@ export WeaponDescriptor_DCA_ZPU4_DDR is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canon_ZPU4_towed_14_5mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canon_ZPU4_towed_14_5mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -20081,6 +20259,26 @@ export WeaponDescriptor_DCA_ZU_23_2_DDR is TWeaponManagerModuleDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm_TOWED'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -20138,6 +20336,26 @@ export WeaponDescriptor_DCA_ZU_23_2_SOV is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm_TOWED'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -20165,6 +20383,26 @@ export WeaponDescriptor_DCA_ZU_23_2_TTsko_SOV is TWeaponManagerModuleDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm_TOWED'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -28936,6 +29174,26 @@ export WeaponDescriptor_Faun_Kraka_20mm_RFA is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_FK20_20mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_FK20_20mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -29356,6 +29614,26 @@ export WeaponDescriptor_GAZ_66B_ZU_SOV is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -29469,7 +29747,7 @@ export WeaponDescriptor_GTMU_1D_SPG9_SOV is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_GTMU_1D_ZU_SOV is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 15, ]
+    Salves           = [ 12, 24,]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -29493,6 +29771,46 @@ export WeaponDescriptor_GTMU_1D_ZU_SOV is TWeaponManagerModuleDescriptor
                     HandheldEquipmentKey                = 'MeshAlternative_1'
                     NbWeapons                           = 1
                     SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_AP
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 1
                     ShowDispersion                      = False
                     ShowInInterface                     = True
                     TirContinu                          = True
@@ -69869,6 +70187,26 @@ export WeaponDescriptor_TRM_2000_20mm_FR is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_53T2_20mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_53T2_20mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -70988,6 +71326,26 @@ export WeaponDescriptor_Ural_4320_ZU_SOV is TWeaponManagerModuleDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -72416,6 +72774,26 @@ export WeaponDescriptor_VLRA_20mm_FR is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_53T2_20mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_53T2_20mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -73226,7 +73604,7 @@ export WeaponDescriptor_Wachregiment_SMG_DDR is TWeaponManagerModuleDescriptor /
 )
 export WeaponDescriptor_ZSU_23_Shilka_Afghan_SOV is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 100, ]
+    Salves           = [ 75, 100]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -73250,6 +73628,46 @@ export WeaponDescriptor_ZSU_23_Shilka_Afghan_SOV is TWeaponManagerModuleDescript
                     HandheldEquipmentKey                = 'MeshAlternative_1'
                     NbWeapons                           = 1
                     SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canons_AZP_23_Amur_23mm_Afghan_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canons_AZP_23_Amur_23mm_Afghan'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canons_AZP_23_Amur_23mm_Afghan_AP
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canons_AZP_23_Amur_23mm_Afghan'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 1
                     ShowDispersion                      = False
                     ShowInInterface                     = True
                     TirContinu                          = False
@@ -73352,7 +73770,7 @@ export WeaponDescriptor_ZSU_23_Shilka_SOV is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_ZSU_23_Shilka_reco_SOV is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 80, ]
+    Salves           = [ 60,80 ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -73382,6 +73800,46 @@ export WeaponDescriptor_ZSU_23_Shilka_reco_SOV is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canons_AZP_23_Amur_23mm_PSNR_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canons_AZP_23_Amur_23mm_PSNR'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canons_AZP_23_Amur_23mm_Afghan_AP
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canons_AZP_23_Amur_23mm_PSNR'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 1
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    TirContinu                          = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -73394,7 +73852,7 @@ export WeaponDescriptor_ZSU_23_Shilka_reco_SOV is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_ZSU_57_2_DDR is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 30, ]
+    Salves           = [ 10, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -73409,6 +73867,25 @@ export WeaponDescriptor_ZSU_57_2_DDR is TWeaponManagerModuleDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canons_S60_57mm
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canons_S60_57mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_1'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 0
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", "WeaponShootData_1_1", ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canons_S60_57mm_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -77738,7 +78215,7 @@ export WeaponDescriptor_Mi_8TV_DDR is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Mi_8TV_Gunship_SOV is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 2, 2, 2, ]
+    Salves           = [ 2, 2, 1, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -77808,7 +78285,7 @@ export WeaponDescriptor_Mi_8TV_Gunship_SOV is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
-                    Ammunition                          = $/GFX/Weapon/Ammo_FakeRoquette_S_24_helo
+                    Ammunition                          = $/GFX/Weapon/Ammo_RocketAir_S24_240mm_x2
                     AnimateOnlyOneSoldier               = True
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -86051,7 +86528,7 @@ export WeaponDescriptor_MiG_23BN_DDR is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_MiG_23BN_RKT_DDR is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 5, 2, 1, ]
+    Salves           = [ 5, 1, 1, ]
     SalvoIsMainSalvo = [ False, False, False, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
@@ -86097,7 +86574,7 @@ export WeaponDescriptor_MiG_23BN_RKT_DDR is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
-                    Ammunition                          = $/GFX/Weapon/Ammo_FakeRoquette_S_24
+                    Ammunition                          = $/GFX/Weapon/Ammo_RocketAir_S24_240mm_x2
                     AnimateOnlyOneSoldier               = True
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1

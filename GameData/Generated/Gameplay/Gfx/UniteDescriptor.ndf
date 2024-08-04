@@ -4778,7 +4778,7 @@ export Descriptor_Unit_AIFV_B_CMD_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -6561,7 +6561,7 @@ export Descriptor_Unit_AMX_10_PC_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -9535,7 +9535,7 @@ export Descriptor_Unit_AMX_13_mod56_CMD_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -11262,7 +11262,7 @@ export Descriptor_Unit_AMX_30_B2_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -11845,7 +11845,7 @@ export Descriptor_Unit_AMX_30_B_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -24404,7 +24404,7 @@ export Descriptor_Unit_AeroEngineer_CMD_US is TEntityDescriptor //now plt hq
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
         ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -25690,7 +25690,7 @@ export Descriptor_Unit_AeroRifles_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -26959,7 +26959,7 @@ export Descriptor_Unit_Aero_half_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
         ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -27609,7 +27609,7 @@ export Descriptor_Unit_Airborne_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -28293,7 +28293,7 @@ export Descriptor_Unit_Airborne_Engineer_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -28960,7 +28960,7 @@ export Descriptor_Unit_Airborne_Engineers_US is TEntityDescriptor //now airborne
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -29299,7 +29299,7 @@ export Descriptor_Unit_Light_Inf_Plt_HQ_US is TEntityDescriptor // platoon hq
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -31921,7 +31921,7 @@ export Descriptor_Unit_Airmobile_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -32559,7 +32559,7 @@ export Descriptor_Unit_Airmobile_Mot_CMD_UK is TEntityDescriptor //now the airmo
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -33445,18 +33445,18 @@ export Descriptor_Unit_Alfa_Group_SOV is TEntityDescriptor
                 Selection = [~/NilDescriptorIfCadavre]
             ),
         TScannerConfigurationDescriptor
-                (
-                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-                    PorteeVisionTBAGRU = 0
-                    PorteeVisionFOWGRU = 0
-                    DetectionTBAGRU = 12370
-                    PorteeVisionGRU = 6500
-                    PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
-                    OpticalStrengthAltitude = 40
-                    SpecializedDetectionsGRU = MAP [
-                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
-                    ]
+		(
+			OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+			PorteeVisionTBAGRU = 0
+			PorteeVisionFOWGRU = 0
+			DetectionTBAGRU = 12370
+			PorteeVisionGRU = 6500
+			PorteeIdentification = 0.0
+			OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
+			OpticalStrengthAltitude = 40
+			SpecializedDetectionsGRU = MAP [
+				( EVisionUnitType/AlwaysInHighAltitude, 5655),
+			]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
@@ -38325,7 +38325,7 @@ export Descriptor_Unit_BMD_1K_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -38938,7 +38938,7 @@ export Descriptor_Unit_BMD_1_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -39850,7 +39850,7 @@ export Descriptor_Unit_BMD_2_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -42060,7 +42060,7 @@ export Descriptor_Unit_BMP_1_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -42381,7 +42381,7 @@ export Descriptor_Unit_BMP_1_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -44243,7 +44243,7 @@ export Descriptor_Unit_BMP_2_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -45488,7 +45488,7 @@ export Descriptor_Unit_BRDM_2_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -45800,7 +45800,7 @@ export Descriptor_Unit_BRDM_2_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -49051,7 +49051,7 @@ export Descriptor_Unit_BTR_50_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -49649,7 +49649,7 @@ export Descriptor_Unit_BTR_60_CHAIKA_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
         ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -49933,7 +49933,7 @@ export Descriptor_Unit_BTR_60_CHAIKA_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
         ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -50234,7 +50234,7 @@ export Descriptor_Unit_BTR_60_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -50542,7 +50542,7 @@ export Descriptor_Unit_BTR_60_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -54157,7 +54157,7 @@ export Descriptor_Unit_BTR_80_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -57141,7 +57141,7 @@ export Descriptor_Unit_Challenger_1_Mk1_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -58056,7 +58056,7 @@ export Descriptor_Unit_Chasseurs_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -65144,7 +65144,7 @@ export Descriptor_Unit_DShV_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -67377,7 +67377,7 @@ export Descriptor_Unit_ERC_90_Sagaie_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -68297,7 +68297,7 @@ export Descriptor_Unit_Engineer_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -70529,7 +70529,7 @@ export Descriptor_Unit_Engineers_CMD_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -70864,7 +70864,7 @@ export Descriptor_Unit_Engineers_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -71195,7 +71195,7 @@ export Descriptor_Unit_Engineers_CMD_DShV_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
         ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -71864,7 +71864,7 @@ export Descriptor_Unit_Engineers_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -72189,7 +72189,7 @@ export Descriptor_Unit_Engineers_CMD_TTsko_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -72525,7 +72525,7 @@ export Descriptor_Unit_Engineers_CMD_UK is TEntityDescriptor //changed to a plat
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -72867,7 +72867,7 @@ export Descriptor_Unit_Engineers_CMD_VDV_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -85124,7 +85124,7 @@ export Descriptor_Unit_FV105_Sultan_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -85441,7 +85441,7 @@ export Descriptor_Unit_FV105_Sultan_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -85739,7 +85739,7 @@ export Descriptor_Unit_FV105_Sultan_para_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -87125,7 +87125,7 @@ export Descriptor_Unit_FV4201_Chieftain_CMD_UK is TEntityDescriptor
                     StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
                     BlindageProperties = TBlindageProperties
                     (
-                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=18)
                         ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=8)
                         ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
                         ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
@@ -87253,7 +87253,7 @@ export Descriptor_Unit_FV4201_Chieftain_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -87439,7 +87439,7 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_CMD_UK is TEntityDescriptor
                     StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
                     BlindageProperties = TBlindageProperties
                     (
-                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=18)
                         ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=8)
                         ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
                         ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
@@ -87567,7 +87567,7 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -87740,7 +87740,7 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_UK is TEntityDescriptor
                     StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
                     BlindageProperties = TBlindageProperties
                     (
-                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=18)
                         ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=8)
                         ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
                         ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
@@ -88033,7 +88033,7 @@ export Descriptor_Unit_FV4201_Chieftain_Mk9_UK is TEntityDescriptor
                     StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
                     BlindageProperties = TBlindageProperties
                     (
-                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=14)
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=13) //kinda a shot in the dark, couldbe anywherefrom 250 (11) to 350 (14)
                         ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=8)
                         ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
                         ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
@@ -88326,7 +88326,7 @@ export Descriptor_Unit_FV4201_Chieftain_UK is TEntityDescriptor
                     StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
                     BlindageProperties = TBlindageProperties
                     (
-                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=18)
                         ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=8)
                         ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
                         ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
@@ -88758,7 +88758,7 @@ export Descriptor_Unit_FV432_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -92715,7 +92715,7 @@ export Descriptor_Unit_Fallschirmjager_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -93065,7 +93065,7 @@ export Descriptor_Unit_Fallschirmjager_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -93726,7 +93726,7 @@ export Descriptor_Unit_Fallschirmjager_FalseFlag_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -102283,7 +102283,7 @@ export Descriptor_Unit_GreenBerets_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -103626,7 +103626,7 @@ export Descriptor_Unit_Grenzer_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -104928,7 +104928,7 @@ export Descriptor_Unit_Groupe_AT_FR is TEntityDescriptor //now includes the plat
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -105585,7 +105585,7 @@ export Descriptor_Unit_Groupe_AT_para_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -122691,7 +122691,7 @@ export Descriptor_Unit_Iltis_CMD_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -123865,7 +123865,7 @@ export Descriptor_Unit_Iltis_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -125431,7 +125431,7 @@ export Descriptor_Unit_Jager_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -127324,7 +127324,7 @@ export Descriptor_Unit_KSM_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -128240,7 +128240,7 @@ export Descriptor_Unit_KdA_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -132576,7 +132576,7 @@ export Descriptor_Unit_LandRover_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -134368,7 +134368,7 @@ export Descriptor_Unit_Leopard_1A1_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -135236,7 +135236,7 @@ export Descriptor_Unit_Leopard_1A5_CMD_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -135545,7 +135545,7 @@ export Descriptor_Unit_Leopard_1A5_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -136420,7 +136420,7 @@ export Descriptor_Unit_Leopard_1BE_CMD_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -136716,7 +136716,7 @@ export Descriptor_Unit_Leopard_2A1_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -137318,7 +137318,7 @@ export Descriptor_Unit_Leopard_2A3_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -138233,7 +138233,7 @@ export Descriptor_Unit_LightRifles_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -139512,7 +139512,7 @@ export Descriptor_Unit_Luftsturmjager_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -141419,7 +141419,7 @@ export Descriptor_Unit_M1025_Humvee_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -141728,7 +141728,7 @@ export Descriptor_Unit_M1025_Humvee_CMD_para_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -151794,7 +151794,7 @@ export Descriptor_Unit_M151_MUTT_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -153256,7 +153256,7 @@ export Descriptor_Unit_M1A1HA_Abrams_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -153856,7 +153856,7 @@ export Descriptor_Unit_M1A1_Abrams_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -154161,7 +154161,7 @@ export Descriptor_Unit_M1A1_Abrams_CMD_cav_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -155064,7 +155064,7 @@ export Descriptor_Unit_M1IP_Abrams_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -155664,7 +155664,7 @@ export Descriptor_Unit_M1_Abrams_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -159152,7 +159152,7 @@ export Descriptor_Unit_M2A1_Bradley_Leader_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -159781,7 +159781,7 @@ export Descriptor_Unit_M2A2_Bradley_Leader_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -162471,7 +162471,7 @@ export Descriptor_Unit_M48A2GA2_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -163944,7 +163944,7 @@ export Descriptor_Unit_M551A1_TTS_Sheridan_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -164558,7 +164558,7 @@ export Descriptor_Unit_M577_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -164866,7 +164866,7 @@ export Descriptor_Unit_M577_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -165169,7 +165169,7 @@ export Descriptor_Unit_M60A3_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -174617,7 +174617,7 @@ export Descriptor_Unit_MCV_80_Warrior_CMD_UK is TEntityDescriptor //needs work
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -176762,7 +176762,7 @@ export Descriptor_Unit_MP_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -178969,7 +178969,7 @@ export Descriptor_Unit_MTLB_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -184079,7 +184079,7 @@ export Descriptor_Unit_Mech_Rifles_CMD_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -191877,7 +191877,7 @@ export Descriptor_Unit_MotRifles_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -192219,7 +192219,7 @@ export Descriptor_Unit_MotRifles_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -192548,7 +192548,7 @@ export Descriptor_Unit_MotRifles_CMD_TTsko_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -195426,7 +195426,7 @@ export Descriptor_Unit_MotRifles_SOV is TEntityDescriptor // this is now the pla
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         TAutomaticBehaviorModuleDescriptor
                  (
                      CanAssist = False
@@ -196408,7 +196408,7 @@ export Descriptor_Unit_MotRifles_TTsko_SOV is TEntityDescriptor // this is now t
 			StrengthDecayPerSecond = 0.01
 			PreventsDecayInZone = True
 		 ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -196740,7 +196740,7 @@ export Descriptor_Unit_MotSchutzen_DDR is TEntityDescriptor //platoon command
 			StrengthDecayPerSecond = 0.01
 			PreventsDecayInZone = True
 			),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -198270,7 +198270,7 @@ export Descriptor_Unit_PT76B_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -199508,7 +199508,7 @@ export Descriptor_Unit_Panzergrenadier_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -200172,7 +200172,7 @@ export Descriptor_Unit_Para_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -201509,7 +201509,7 @@ export Descriptor_Unit_Para_Sapeurs_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -202505,7 +202505,7 @@ export Descriptor_Unit_Paratroopers_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -205713,7 +205713,7 @@ export Descriptor_Unit_Rangers_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -206361,7 +206361,7 @@ export Descriptor_Unit_Reserve_CMD_DDR is TEntityDescriptor //needs work
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -208952,7 +208952,7 @@ export Descriptor_Unit_Rifles_Aero_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -210247,7 +210247,7 @@ export Descriptor_Unit_Rifles_CMD_BEL is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -210571,7 +210571,7 @@ export Descriptor_Unit_Rifles_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -210903,7 +210903,7 @@ export Descriptor_Unit_Rifles_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -211238,7 +211238,7 @@ export Descriptor_Unit_Rifles_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -212540,7 +212540,7 @@ export Descriptor_Unit_Rifles_Gurkhas_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -215143,7 +215143,7 @@ export Descriptor_Unit_Rifles_half_CMD_NG_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -215467,7 +215467,7 @@ export Descriptor_Unit_Rifles_half_CMD_US is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -216764,7 +216764,7 @@ export Descriptor_Unit_Rifles_half_LAW_US is TEntityDescriptor //now a platoon H
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -218254,7 +218254,7 @@ export Descriptor_Unit_SAS_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -220231,7 +220231,7 @@ export Descriptor_Unit_Sapeurs_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -221199,7 +221199,7 @@ export Descriptor_Unit_Saxon_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -223460,7 +223460,7 @@ export Descriptor_Unit_Scout_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -223789,7 +223789,7 @@ export Descriptor_Unit_Scout_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -235616,6 +235616,8 @@ export Descriptor_Unit_Scout_SpetsnazGRU_Stinger_SOV is TEntityDescriptor
 					$/GFX/EffectCapacity/Capacite_Burn_Bailed_Tank,
 					$/GFX/EffectCapacity/Capacite_dig_in,
 					$/GFX/EffectCapacity/Capacite_dig_in_no_dig_in,
+					$/GFX/EffectCapacity/Capacite_GSR,
+					$/GFX/EffectCapacity/Capacite_GSR_no_GSR,
                 ]
             )
             Selection      = [ ~/NilDescriptorIfCadavre ]
@@ -235708,6 +235710,7 @@ export Descriptor_Unit_Scout_SpetsnazGRU_Stinger_SOV is TEntityDescriptor
                 '_reco',
                 '_sf',
                 '_para',
+                '_gsr',
             ]
             NameToken = 'IGNFMRWPHX'
             InfoPanelConfigurationToken = 'Infantry'
@@ -243708,7 +243711,7 @@ export Descriptor_Unit_Spetsnaz_CMD_SOV is TEntityDescriptor //needs work
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -244968,7 +244971,7 @@ export Descriptor_Unit_T54B_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -245850,7 +245853,7 @@ export Descriptor_Unit_T55AM2_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -246460,7 +246463,7 @@ export Descriptor_Unit_T55A_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -246765,7 +246768,7 @@ export Descriptor_Unit_T55A_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -248209,7 +248212,7 @@ export Descriptor_Unit_T62MD_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
         ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -249089,7 +249092,7 @@ export Descriptor_Unit_T62M_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -249700,7 +249703,7 @@ export Descriptor_Unit_T64BV_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -250611,7 +250614,7 @@ export Descriptor_Unit_T72M1_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -251226,7 +251229,7 @@ export Descriptor_Unit_T72M_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -252431,7 +252434,7 @@ export Descriptor_Unit_T80BV_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -253046,7 +253049,7 @@ export Descriptor_Unit_T80B_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -253515,7 +253518,7 @@ export Descriptor_Unit_T80UD_SOV is TEntityDescriptor
                     StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
                     BlindageProperties = TBlindageProperties
                     (
-                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=28)
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=27)
                         ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=10)
                         ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
                         ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
@@ -253953,7 +253956,7 @@ export Descriptor_Unit_T80U_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -256332,7 +256335,7 @@ export Descriptor_Unit_TPZ_Fuchs_CMD_RFA is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -258467,7 +258470,7 @@ export Descriptor_Unit_Territorial_CMD_UK is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -260821,7 +260824,7 @@ export Descriptor_Unit_UAZ_469_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -261134,7 +261137,7 @@ export Descriptor_Unit_UAZ_469_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -261442,7 +261445,7 @@ export Descriptor_Unit_UAZ_469_CMD_VDV_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -268808,7 +268811,7 @@ export Descriptor_Unit_VAB_CMD_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -271236,7 +271239,7 @@ export Descriptor_Unit_VBL_PC_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -272205,7 +272208,7 @@ export Descriptor_Unit_VDV_CMD_SOV is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -276827,7 +276830,7 @@ export Descriptor_Unit_VLTT_P4_PC_FR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -277162,7 +277165,7 @@ export Descriptor_Unit_Volkspolizei_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -278391,7 +278394,7 @@ export Descriptor_Unit_Wachregiment_CMD_DDR is TEntityDescriptor
             StrengthDecayPerSecond = 0.01
             PreventsDecayInZone = True
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -285173,7 +285176,7 @@ export Descriptor_Unit_Alouette_II_CMD_RFA is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -286256,7 +286259,7 @@ export Descriptor_Unit_Bo_105_CMD_RFA is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -290395,7 +290398,7 @@ export Descriptor_Unit_Gazelle_CMD_UK is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -302424,7 +302427,7 @@ export Descriptor_Unit_Mi_8K_CMD_SOV is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -308330,7 +308333,7 @@ export Descriptor_Unit_Mi_9_DDR is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -308629,7 +308632,7 @@ export Descriptor_Unit_OH58C_CMD_US is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -310551,7 +310554,7 @@ export Descriptor_Unit_Puma_PC_FR is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -311947,7 +311950,7 @@ export Descriptor_Unit_UH1A_US is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
         (
@@ -313650,7 +313653,7 @@ export Descriptor_Unit_UH60A_CO_US is TEntityDescriptor
             PreventsDecayInZone = True
                      IsEnabledByComportementAuto = true
              ),
-        TInfluenceScoutModuleDescriptor(),
+        //TInfluenceScoutModuleDescriptor(),
         ~/InfluenceDataModuleDescriptor,
         TAutomaticBehaviorModuleDescriptor
                  (
@@ -335670,12 +335673,12 @@ export Descriptor_Unit_MiG_21bis_AA3_DDR is TEntityDescriptor
         ),
         TBaseDamageModuleDescriptor
         (
-            MaxPhysicalDamages = 8
+            MaxPhysicalDamages = 10
             MaxSuppressionDamages = ~/Airplane_MaxSuppressionDamages
             MaxStunDamages = ~/Airplane_MaxStunDamages
             PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
             SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_Airplanes_packSupp
-            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun_Artillerie
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
         ),
         TDamageModuleDescriptor
         (
@@ -335692,7 +335695,7 @@ export Descriptor_Unit_MiG_21bis_AA3_DDR is TEntityDescriptor
             KillWhenDamagesReachMax = True 
             HitRollECM = -0.15
             AutoOrientation = True
-            UseTopArmorAgainstFire = False
+            UseTopArmorAgainstFire = True
         ),
         TRoutModuleDescriptor(MoralLevel = 60),
         GenericMovement is TModuleSelector
@@ -335718,8 +335721,8 @@ export Descriptor_Unit_MiG_21bis_AA3_DDR is TEntityDescriptor
             OrderedAttackStrategies =
             [
                 DogfightAttackStrategyDescriptor,
-                DiveBombAttackStrategyDescriptor,
                 DiveAttackStrategyDescriptor,
+                AirGroundMissileAttackStrategyDescriptor,
             ]
         ),
         TFuelModuleDescriptor
@@ -335786,7 +335789,7 @@ export Descriptor_Unit_MiG_21bis_AA3_DDR is TEntityDescriptor
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 140),
-                ($/GFX/Resources/Resource_Tickets, 4),
+                ($/GFX/Resources/Resource_Tickets, 140),
             ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -335799,7 +335802,7 @@ export Descriptor_Unit_MiG_21bis_AA3_DDR is TEntityDescriptor
             MaxDistanceForOffensiveReaction = 0.0 * Metre
             MaxDistanceForEngagement = 10000 * Metre
             SearchedTagsInEngagementTarget = [
-               "Air",
+               "AllUnits",
             ]
         ),
         TCubeActionModuleDescriptor
@@ -335875,10 +335878,6 @@ export Descriptor_Unit_MiG_21bis_AA3_DDR is TEntityDescriptor
             CountryTexture = 'CommonTexture_MotherCountryFlag_DDR'
             TypeStrategicCount = ETypeStrategicDetailedCount/Air_AA
         ),
-            TUnitUpkeepModuleDescriptor
-            (
-                UpkeepPercentage = 0.5
-            ),
     ]
 )
 export Descriptor_Unit_MiG_21bis_CLU_DDR is TEntityDescriptor
