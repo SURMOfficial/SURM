@@ -11674,7 +11674,8 @@ export WeaponDescriptor_Alfa_Group_SOV is TWeaponManagerModuleDescriptor
                 )
             ]
             YulBoneOrdinal              = 3
-        ), ]
+        )
+	]
 )
 export WeaponDescriptor_Atteam_Fagot_DShV_SOV is TWeaponManagerModuleDescriptor
 (
@@ -64211,7 +64212,7 @@ export WeaponDescriptor_Spetsnaz_FireSupport_SOV is TWeaponManagerModuleDescript
 )
 export WeaponDescriptor_Spetsnaz_SOV is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 210, 200, 4, ]
+    Salves           = [ 210, 300, 8, 8, ]
     AlwaysOrientArmorTowardsThreat = False
     TurretDescriptorList = [
         TTurretInfanterieDescriptor
@@ -64285,6 +64286,31 @@ export WeaponDescriptor_Spetsnaz_SOV is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
                     WeaponShootDataPropertyName         = ["WeaponShootData_0_3", ]
+                )
+            ]
+            YulBoneOrdinal              = 3
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = [
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_RocketInf_RPG26_72_5mm
+                    AnimateOnlyOneSoldier               = True
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_RocketInf_RPG26_72_5mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_4'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 3
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_4", ]
                 )
             ]
             YulBoneOrdinal              = 3

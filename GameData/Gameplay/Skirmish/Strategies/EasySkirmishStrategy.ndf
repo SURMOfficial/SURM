@@ -90,7 +90,7 @@ export Easy_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Reco,            // 40 par reco
 
 
-        //~/Defense_Objectif,
+        ~/Defense_Objectif,
 
         //------------------------------
         // Attaques principales
@@ -99,11 +99,11 @@ export Easy_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Artillery_Support,        // Artillerie pas chère                 //  80
 
         // Reste du front
-        //~/Defense_Static_Adaptive,          // ~100
+        ~/Defense_Static_Adaptive,          // ~100
 
 
-        //~/Defense_Static_Adaptive,          // ~100
-        //~/Defense_Filler,            // budget 40
+        ~/Defense_Static_Adaptive,          // ~100
+        ~/Defense_Filler,            // budget 40
 
         //------------------------------
         // Défenses Avions Arti
@@ -125,10 +125,7 @@ export Easy_Phase_Command is TSequenceGeneratorDescriptor
     [
         ~/CaptureOneObjectif,
 
-        ~/FOB_Skirmish,
-        // On garde quand même une attaque objective pour allez prendre les zones de commandement
         ~/Attack_Objectives,
-
         //------------------------------
         // Support & Supply
         //------------------------------
@@ -138,35 +135,43 @@ export Easy_Phase_Command is TSequenceGeneratorDescriptor
 
         ~/CaptureHalfZoneObjectif_Floor,
 
-        ~/Reco,            // 40 par reco
-
-
-        //~/Defense_Objectif,
+        ~/Reco,
 
         //------------------------------
-        // Attaques principales
+        // Défenses prioritaires
         //------------------------------
+        // Statiques pour tenir le terrain
+        ~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        ~/Defense_Static_AA,
+
+        ~/Defense_Objectif,
+
+        // On garde les fillers
+        ~/Defense_Filler,
+
+
         ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
         ~/Artillery_Support,        // Artillerie pas chère                 //  80
 
-        // Reste du front
-        //~/Defense_Static_Adaptive,          // ~100
+        ~/Defense_Static_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
+        ~/Defense_Static_Adaptive,
 
+        ~/Defense_Static_Adaptive,
 
-        //~/Defense_Static_Adaptive,          // ~100
-        //~/Defense_Filler,            // budget 40
+        ~/Airstrike_Offense,
+        ~/Airstrike_AA,
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Supply_Skirmish_Allied,
 
-    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
+    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
 
     //------------------------------
     // Scaling
     //------------------------------
-    ScalingGeneratorList = ~/Medium_Scaling
+    ScalingGeneratorList = ~/Easy_Scaling
 )
 
 //Proche du scaling medium mais en plus gentil
@@ -174,11 +179,11 @@ Easy_Scaling is
 [
     ~/Reco_Autogen,
     ~/Attack_Adaptive_Autogen,
-    //~/Defense_Dynamic_Adaptive_Autogen,
-    //~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
     ~/Airstrike_AA_Autogen,
-    //~/Defense_Dynamic_Adaptive_Autogen,
-    //~/Defense_Static_AA_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Static_AA_Autogen,
     ~/Airstrike_Offense_Autogen,
     ~/Artillery_Expensive_Autogen,
     ~/Airstrike_Assault_Autogen,

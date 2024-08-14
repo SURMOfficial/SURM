@@ -105,8 +105,8 @@ export Gen_Phase_Deploiement is TSequenceGeneratorDescriptor
         // Grosse attaque
         ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200 => un cmd pas cher, une reco pas cher, et le reste de tanks pour fill le budget en random.
 
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
+        ~/Defense_Static_AA,
+        ~/Defense_Dynamic_AA,
 
         ~/Attack_Helo,
 
@@ -155,42 +155,56 @@ export Gen_Phase_Command is TSequenceGeneratorDescriptor
 
         ~/CaptureOneObjectif,
 
-        ~/FOB_Skirmish,
-        // Capture de zones
         ~/Attack_Objectives,
-
         ~/Airstrike_AA,
 
-        ~/Reco,            // 40 par reco
+        ~/Reco,
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        // Grosse attaque
-        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200 => un cmd pas cher, une reco pas cher, et le reste de tanks pour fill le budget en random.
+        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
 
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
+        ~/Defense_Objectif,
+
+        //------------------------------
+        // Défenses prioritaires
+        //------------------------------
+        // Statiques pour tenir le terrain
+        ~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+
+        ~/Defense_Dynamic_Adaptive,
+        ~/Defense_Dynamic_Adaptive,
+
+        ~/Defense_Static_AA,
+        ~/Defense_Dynamic_AA,
 
         ~/Attack_Helo,
 
+        ~/CaptureHalfZoneObjectif_Ceil,
+
+        ~/Attack_Filler,
+
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
-        // Reste du front
-        ~/Attack_Adaptive,          // ~100
-        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
+        ~/Attack_Adaptive,
 
+        //Cet mission lance les objectifs restant
+        ~/CaptureAllZoneObjectif,
 
-        ~/Attack_Adaptive,          // ~100
-        ~/Attack_Filler,            // budget 40
+        ~/Airstrike_Offense,
+        ~/Airstrike_AA,
+
+        //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
+        ~/CaptureOneObjectifForAlliance,
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Supply_Skirmish_Allied,
-        ~/CaptureHalfZoneObjectif_Ceil,
 
-    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
+    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
 
     //------------------------------
     // Scaling
@@ -211,51 +225,47 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
         // prioritaires sur les attaques. L'idée est de lancer ses attaques dès
         // le début, mais de renforcer les backlines avant de récupérer de nos pertes
         // Capture de zones
+        ~/CaptureAllZoneObjectif,
+
+        ~/Attack_Objectives,
+
         //------------------------------
         // Support & Supply
         //------------------------------
         ~/Support_Transports,
-
         ~/Supply_Skirmish,
 
-        ~/CaptureOneObjectif,
+        ~/Reco,
 
-        ~/FOB_Skirmish,
-        // Capture de zones
-        ~/Attack_Objectives,
+        //------------------------------
+        // Défenses prioritaires
+        //------------------------------
+        ~/Defense_Static_AA,
+        ~/Defense_Dynamic_AA,
 
-        ~/Airstrike_AA,
-
-        ~/Reco,            // 40 par reco
+        ~/Attack_Filler,
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        // Grosse attaque
-        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200 => un cmd pas cher, une reco pas cher, et le reste de tanks pour fill le budget en random.
-
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
-
+        ~/Attack_Main,
+        ~/Attack_Main,
+        ~/Attack_Main,
         ~/Attack_Helo,
-
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
-        // Reste du front
-        ~/Attack_Adaptive,          // ~100
-        ~/Attack_Adaptive,          // ~100
+        ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
+        ~/Attack_Adaptive,
 
-
-        ~/Attack_Adaptive,          // ~100
-        ~/Attack_Filler,            // budget 40
+        ~/Airstrike_Offense,
+        ~/Airstrike_AA,
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Supply_Skirmish_Allied,
-        ~/CaptureHalfZoneObjectif_Ceil,
 
-    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
+    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
 
     //------------------------------
     // Scaling
@@ -263,7 +273,7 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
     // Dans les difficultés supérieures il faudra surement maintenir
     // ça avec des maintain à la phase d'après pour être sur qu'on
     // produise de nouvelles unités
-    ScalingGeneratorList = ~/Medium_Scaling
+    ScalingGeneratorList = ~/Medium_Scaling_Attack
 )
 
 // Le concept de ces blocs de missions
@@ -273,13 +283,13 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
 // les situations et appuyer le reste des missions
 Defenses_Airstrike_Arti_Shuffle_Deploy is
 [
-    //~/Defense_Static_Adaptive,
+    ~/Defense_Static_Adaptive,
     ~/Airstrike_Assault,
     ~/Artillery_Expensive,
-    //~/Defense_Static_Adaptive,
-    //~/Defense_Static_AA,
-    //~/Defense_Dynamic_AA,
-    //~/Defense_Static_Adaptive,
+    ~/Defense_Static_Adaptive,
+    ~/Defense_Static_AA,
+    ~/Defense_Dynamic_AA,
+    ~/Defense_Static_Adaptive,
     ~/Airstrike_Offense,
     ~/Airstrike_AA,
     ~/Artillery_TriggerHappy_1for4Corridors,
@@ -303,12 +313,12 @@ Medium_Scaling is
     ~/Attack_Helo_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
-    //~/Defense_Dynamic_Adaptive_Autogen,
-    //~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
     ~/Airstrike_AA_Autogen,
-    //~/Defense_Dynamic_Adaptive_Autogen,
-    //~/Defense_Static_AA_Autogen,
-    //~/Defense_Dynamic_AA_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Static_AA_Autogen,
+    ~/Defense_Dynamic_AA_Autogen,
     ~/Artillery_TriggerHappy_Autogen,
     ~/Airstrike_Offense_Autogen,
     ~/Artillery_TriggerHappy_Autogen,
@@ -326,7 +336,7 @@ Medium_Scaling_Attack is
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Airstrike_AA_Autogen,
-    //~/Defense_Dynamic_AA_Autogen,
+    ~/Defense_Dynamic_AA_Autogen,
     ~/Artillery_TriggerHappy_Autogen,
     ~/Airstrike_Offense_Autogen,
     ~/Artillery_TriggerHappy_Autogen,

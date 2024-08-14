@@ -88,12 +88,12 @@ export VEasy_Phase_Deploiement is TSequenceGeneratorDescriptor
 
         ~/Reco,            // 40 par reco
 
-        //~/Defense_Objectif,
+        ~/Defense_Objectif,
 
         ~/Artillery_Support,        // Artillerie pas chère                 //  80
 
-        //~/Defense_Static_Adaptive,          // ~100
-        //~/Defense_Filler,            // budget 40
+        ~/Defense_Static_Adaptive,          // ~100
+        ~/Defense_Filler,            // budget 40
 
         //------------------------------
         // Défenses Avions Arti
@@ -114,10 +114,7 @@ export VEasy_Phase_Command is TSequenceGeneratorDescriptor
     [
         ~/CaptureOneObjectif,
 
-        ~/FOB_Skirmish,
-        // On garde quand même une attaque objective pour allez prendre les zones de commandement
         ~/Attack_Objectives,
-
         //------------------------------
         // Support & Supply
         //------------------------------
@@ -125,23 +122,38 @@ export VEasy_Phase_Command is TSequenceGeneratorDescriptor
 
         ~/Supply_Skirmish,
 
+        ~/Reco,
+
         ~/CaptureHalfZoneObjectif_Floor,
 
-        ~/Reco,            // 40 par reco
+        //------------------------------
+        // Défenses prioritaires
+        //------------------------------
+        // Statiques pour tenir le terrain
+        ~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        ~/Defense_Static_AA,
 
-        //~/Defense_Objectif,
+        ~/Defense_Objectif,
 
+        //------------------------------
+        // VEasy encore des defenses
+        //------------------------------
         ~/Artillery_Support,        // Artillerie pas chère                 //  80
 
-        //~/Defense_Static_Adaptive,          // ~100
-        //~/Defense_Filler,            // budget 40
+        ~/Defense_Static_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
+        ~/Defense_Static_Adaptive,
+
+        ~/Defense_Static_Adaptive,
+
+        ~/Airstrike_Offense,
+        ~/Airstrike_AA,
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Supply_Skirmish_Allied,
 
-    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
+    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
 
     //------------------------------
     // Pas de Scaling pour la VEasy

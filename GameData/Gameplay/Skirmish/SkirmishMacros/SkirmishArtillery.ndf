@@ -39,7 +39,6 @@ is TMacroActionDescriptor_Artillery_Specific
                 (["Char"], 0.3),
                 (["Char_SuperCMD"], 0.5),
                 (["Helo"], 0.5),
-				(["Forward_Observer"], 0.0),
             ]),
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
     ]
@@ -82,7 +81,6 @@ export Artillery_Sniper is TMacroActionDescriptor_Artillery_Specific
                 (["Char"], 0.5),
                 (["Char_SuperCMD"], 1.0),
                 (["Helo"], 0.5),
-				(["Forward_Observer"], 0.0),
             ]
         ),
     ]
@@ -121,7 +119,6 @@ export Artillery_Support is TMacroActionDescriptor_Artillery_Specific
                 (["Vehicule"], 1.0),
                 (["Char"], 0.5),
                 (["Helo"], 0.5),
-				(["Forward_Observer"], 0.0),
             ]
         ),
 
@@ -159,7 +156,6 @@ is TMacroActionDescriptor_Artillery_Specific
                 (["Vehicule"], 0.5),
                 (["Char"], 0.5),
                 (["Helo"], 0.5),
-				(["Forward_Observer"], 0.0),
             ]
         ),
 
@@ -177,7 +173,6 @@ is TMacroActionDescriptor_Artillery_Specific
                 (["Vehicule"], 0.5),
                 (["Char"], 0.5),
                 (["Helo"], 0.5),
-				(["Forward_Observer"], 0.0),
             ]
         ),
     ]
@@ -206,7 +201,6 @@ export Pool_Artillery_TriggerHappy is TPoolModel
         TagsPriority = [
             "Artillerie_Longue_Portee",
             "Artillerie_Courte_Portee",
-			"Forward_Observer",
         ]
     ),
     ]
@@ -225,7 +219,6 @@ export Pool_Artillery_Support is TPoolModel
             "Artillerie_Courte_Portee",
             "Artillerie_Longue_Portee",
             "Artillerie_Observateur",
-			"Forward_Observer",
         ]
     ),
     ]
@@ -243,7 +236,6 @@ export Pool_Artillery_Expensive is TPoolModel
         TagsPriority = [
             "Artillerie_MLRS",
             "Artillerie_Observateur",
-			"Forward_Observer",
         ]
     ),
     ]
@@ -260,7 +252,6 @@ export Pool_Artillery_Sniper is TPoolModel
         TagsPriority = [
             "Artillerie_Longue_Portee",
             "Artillerie",
-			"Forward_Observer",
         ]
     ),
     ]

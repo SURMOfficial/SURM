@@ -106,8 +106,8 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
         // Grosse attaque
         ~/Attack_Main,
 
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
+        ~/Defense_Static_AA,
+        ~/Defense_Dynamic_AA,
 
         ~/Attack_Helo,
 
@@ -115,8 +115,8 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
 
         ~/CaptureHalfZoneObjectif_Ceil,
         // Reste du front
-        //~/Defense_Dynamic_Adaptive,
-        //~/Defense_Dynamic_Adaptive,
+        ~/Defense_Dynamic_Adaptive,
+        ~/Defense_Dynamic_Adaptive,
 
         ~/Attack_Filler,            // budget 40
 
@@ -126,8 +126,8 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        //~/Defense_Static_Adaptive,
-        //~/Defense_Static_Adaptive,
+        ~/Defense_Static_Adaptive,
+        ~/Defense_Static_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
@@ -159,36 +159,47 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
 
         ~/Supply_Skirmish,
 
-        ~/CaptureOneObjectif,
 
-        ~/FOB_Skirmish,
+        ~/CaptureOneObjectif,
 
         ~/Attack_Objectives,
 
-
         ~/Airstrike_AA,
 
-        ~/Reco,            // 40 par reco
+        ~/Reco,
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        // Grosse attaque
         ~/Attack_Main,
 
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
+        //------------------------------
+        // Défenses prioritaires
+        //------------------------------
+        // Statiques pour tenir le terrain
+        ~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        ~/Defense_Static_AA,
+        ~/Defense_Dynamic_AA,
+
+        ~/Defense_Dynamic_Adaptive,
+        ~/Defense_Dynamic_Adaptive,
+
+        //Cet mission lance les objectifs restant
+        ~/Defense_Objectif,
 
         ~/Attack_Helo,
-
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
         ~/CaptureHalfZoneObjectif_Ceil,
-        // Reste du front
-        //~/Defense_Dynamic_Adaptive,
-        //~/Defense_Dynamic_Adaptive,
 
-        ~/Attack_Filler,            // budget 40
+        ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
+        ~/Attack_Adaptive,
+        ~/Attack_Filler,
+
+        ~/Airstrike_Offense,
+        ~/Airstrike_AA,
+
+        ~/Attack_Helo,
 
         //------------------------------
         // Défenses Avions Arti
@@ -196,22 +207,24 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        //~/Defense_Static_Adaptive,
-        //~/Defense_Static_Adaptive,
+        ~/Defense_Static_Adaptive,
+        ~/Defense_Static_Adaptive,
 
-        ~/Airstrike_Offense,
-        ~/Airstrike_AA,
+        //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
+        ~/CaptureOneObjectifForAlliance,
 
         ~/Artillery_Sniper,
         ~/Artillery_Expensive,
+
+        ~/Supply_Skirmish_Allied,
         ~/CaptureAllZoneObjectif,
-    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
+
+    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
 
     //------------------------------
     // Scaling
     //------------------------------
     ScalingGeneratorList = ~/HardScaling
-
 )
 
 //-------------------------------------------------------------------------
@@ -224,65 +237,77 @@ export Hard_Phase_LastHope is TSequenceGeneratorDescriptor
         // prioritaires sur les attaques. L'idée est de lancer ses attaques dès
         // le début, mais de renforcer les backlines avant de récupérer de nos pertes
         // Capture de zones
+        ~/CaptureAllZoneObjectif,
+
+        ~/Attack_Objectives,
+
         //------------------------------
         // Support & Supply
         //------------------------------
         ~/Support_Transports,
 
         ~/Supply_Skirmish,
-
-        ~/CaptureOneObjectif,
-
-        ~/FOB_Skirmish,
-
-        ~/Attack_Objectives,
-
-
-        ~/Airstrike_AA,
-
-        ~/Reco,            // 40 par reco
+        ~/Reco,
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        // Grosse attaque
         ~/Attack_Main,
-
-        //~/Defense_Static_AA,
-        //~/Defense_Dynamic_AA,
-
+        ~/Attack_Main,
+        ~/Attack_Main,
         ~/Attack_Helo,
+
+        ~/Attack_Filler,
+        //------------------------------
+        // Défenses prioritaires
+        //------------------------------
+        // Statiques pour tenir le terrain
+        ~/Defense_Static_AA,
+        ~/Defense_Dynamic_AA,
+
+        //Cet mission lance les objectifs restant
+        ~/Defense_Objectif,
 
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
-        ~/CaptureHalfZoneObjectif_Ceil,
-        // Reste du front
-        //~/Defense_Dynamic_Adaptive,
-        //~/Defense_Dynamic_Adaptive,
+        ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
+        ~/Attack_Adaptive,
 
-        ~/Attack_Filler,            // budget 40
+        ~/Attack_Adaptive,
+
+        ~/Airstrike_Offense,
+        ~/Airstrike_AA,
+
+
+        //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
+        ~/CaptureOneObjectifForAlliance,
+
+        ~/Attack_Helo,
 
         //------------------------------
         // Défenses Avions Arti
         //------------------------------
         ~/Airstrike_Assault,
-        ~/Artillery_TriggerHappy_1for2Corridors,
 
-        //~/Defense_Static_Adaptive,
-        //~/Defense_Static_Adaptive,
+        ~/Defense_Static_AA,
+        ~/Defense_Dynamic_AA,
+
+        ~/Artillery_TriggerHappy_1for2Corridors,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
 
         ~/Artillery_Sniper,
         ~/Artillery_Expensive,
-        ~/CaptureAllZoneObjectif,
-    ] + ~/Defenses_Airstrike_Arti_Shuffle_Deploy
+
+        ~/Supply_Skirmish_Allied,
+
+    ] + ~/Airstrike_Arti_Shuffle // On sort les défenses d'ici pour les mettre plus haut dans la prio
 
     //------------------------------
     // Scaling
     //------------------------------
-    ScalingGeneratorList = ~/HardScaling
+    ScalingGeneratorList = ~/HardScaling_Attack
 )
 
 HardScaling is
@@ -297,9 +322,9 @@ HardScaling is
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
 
-    //~/Defense_Dynamic_Adaptive_Autogen,
-    //~/Defense_Dynamic_Adaptive_Autogen,
-    //~/Defense_Dynamic_AA_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Dynamic_Adaptive_Autogen,
+    ~/Defense_Dynamic_AA_Autogen,
 
     ~/Airstrike_Assault_Autogen,
     ~/Airstrike_Offense_Autogen,

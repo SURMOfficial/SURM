@@ -21,7 +21,7 @@ export colonelAttackDescriptor is TMacroActionDescriptor_Attack_Specific
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 2),
-        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 0.0001   MinimumCostForSelfPreservation = 0),
+        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 2.0   MinimumCostForSelfPreservation = 100),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.001),
         TMacroActionProductionSettingHolder(DisableReinforcement = true),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT

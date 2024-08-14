@@ -83282,8 +83282,8 @@ export Descriptor_Unit_FV102_Striker_UK is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 90),
-                        ($/GFX/Resources/Resource_Tickets, 90),
+                        ($/GFX/Resources/Resource_CommandPoints, 85),
+                        ($/GFX/Resources/Resource_Tickets, 85),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -126692,8 +126692,8 @@ export Descriptor_Unit_Jaguar_1_RFA is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 95),
-                        ($/GFX/Resources/Resource_Tickets, 95),
+                        ($/GFX/Resources/Resource_CommandPoints, 75),
+                        ($/GFX/Resources/Resource_Tickets, 75),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -126987,8 +126987,8 @@ export Descriptor_Unit_Jaguar_2_RFA is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 105),
-                        ($/GFX/Resources/Resource_Tickets, 105),
+                        ($/GFX/Resources/Resource_CommandPoints, 90),
+                        ($/GFX/Resources/Resource_Tickets, 90),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -244114,7 +244114,7 @@ export Descriptor_Unit_Spetsnaz_FireSupport_SOV is TEntityDescriptor
                     '_para',
                     '_reco',
                 ]
-                NameToken = 'QPOMCHJSUQ'
+                NameToken = 'RSYULRFSXS'
                 InfoPanelConfigurationToken = 'Infantry'
                 DisplayRoadSpeedInKmph = 12
                     UpgradeFromUnit = Descriptor_Unit_Spetsnaz_CMD_SOV
@@ -264820,7 +264820,7 @@ export Descriptor_Unit_UAZ_469_SPG9_VDV_SOV is TEntityDescriptor
                     'appui',
                     '_para',
                 ]
-                NameToken = 'ZKTAVNQDXG'
+                NameToken = 'QAOTEAHDKW'
                 InfoPanelConfigurationToken = 'Default'
                 DisplayRoadSpeedInKmph = 110
                 GenerateName = true
@@ -316492,7 +316492,7 @@ export Descriptor_Unit_Buccaneer_S2B_ATGM_UK is TEntityDescriptor
         ~/TargetCoordinatorModuleSelector,
         AirplanePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitude  = ((75) * Metre * MeterCorr)
         ),
         ~/PlayerMissionModuleDescriptor,
         ~/InflammableModuleDescriptorUnit,
@@ -316571,8 +316571,8 @@ export Descriptor_Unit_Buccaneer_S2B_ATGM_UK is TEntityDescriptor
         ),
         AirplaneMovement is AirplaneMovementDescriptor
         (
-            Altitude = ((2000) * Metre)
-            AltitudeMin = (300 * Metre)
+            Altitude = ((75) * Metre * MeterCorr)
+            AltitudeMin = (100 * Metre)
             SpeedInKmph = 882
             AgilityRadius = ((12505) * Metre)
             PitchAngle = 17
@@ -316764,7 +316764,7 @@ export Descriptor_Unit_Buccaneer_S2B_GBU_UK is TEntityDescriptor
         ~/TargetCoordinatorModuleSelector,
         AirplanePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitude  = ((75) * Metre * MeterCorr)
         ),
         ~/PlayerMissionModuleDescriptor,
         ~/InflammableModuleDescriptorUnit,
@@ -316843,8 +316843,8 @@ export Descriptor_Unit_Buccaneer_S2B_GBU_UK is TEntityDescriptor
         ),
         AirplaneMovement is AirplaneMovementDescriptor
         (
-            Altitude = ((4000) * Metre)
-            AltitudeMin = (300 * Metre)
+            Altitude = ((75) * Metre * MeterCorr)
+            AltitudeMin = (100 * Metre)
             SpeedInKmph = 882
             AgilityRadius = ((12505) * Metre)
             PitchAngle = 17
@@ -317099,7 +317099,7 @@ export Descriptor_Unit_Buccaneer_S2B_HE_UK is TEntityDescriptor
                 ExplosiveReactiveArmor = False
             )
             KillWhenDamagesReachMax = True 
-            HitRollECM = -0.2
+            HitRollECM = -0.15
             AutoOrientation = True
             UseTopArmorAgainstFire = False
         ),
@@ -317306,7 +317306,7 @@ export Descriptor_Unit_Buccaneer_S2B_SEAD_UK is TEntityDescriptor
         ~/TargetCoordinatorModuleSelector,
         AirplanePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitude  = ((75) * Metre * MeterCorr)
         ),
         ~/PlayerMissionModuleDescriptor,
         ~/InflammableModuleDescriptorUnit,
@@ -317385,8 +317385,8 @@ export Descriptor_Unit_Buccaneer_S2B_SEAD_UK is TEntityDescriptor
         ),
         AirplaneMovement is AirplaneMovementDescriptor
         (
-            Altitude = ((2000) * Metre)
-            AltitudeMin = (300 * Metre)
+            Altitude = ((75) * Metre * MeterCorr)
+            AltitudeMin = (100 * Metre)
             SpeedInKmph = 882
             AgilityRadius = ((12505) * Metre)
             PitchAngle = 17
@@ -333471,7 +333471,7 @@ export Descriptor_Unit_L39ZO_CLU_DDR is TEntityDescriptor
         ~/TargetCoordinatorModuleSelector,
         AirplanePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitude  = ((80) * Metre * MeterCorr)
         ),
         ~/PlayerMissionModuleDescriptor,
         ~/InflammableModuleDescriptorUnit,
@@ -333515,7 +333515,7 @@ export Descriptor_Unit_L39ZO_CLU_DDR is TEntityDescriptor
         ),
         TBaseDamageModuleDescriptor
         (
-            MaxPhysicalDamages = 6
+            MaxPhysicalDamages = 8
             MaxSuppressionDamages = ~/Airplane_MaxSuppressionDamages
             MaxStunDamages = ~/Airplane_MaxStunDamages
             PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
@@ -333544,16 +333544,16 @@ export Descriptor_Unit_L39ZO_CLU_DDR is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 589
+               MaxSpeedInKmph = 650
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         AirplaneMovement is AirplaneMovementDescriptor
         (
-            Altitude = ((1400) * Metre)
-            AltitudeMin = (300 * Metre)
-            SpeedInKmph = 589
+            Altitude = ((80) * Metre * MeterCorr)
+            AltitudeMin = (100 * Metre)
+            SpeedInKmph = 650
             AgilityRadius = ((4198) * Metre)
             PitchAngle = 17
             RollAngle = 70
@@ -333743,7 +333743,7 @@ export Descriptor_Unit_L39ZO_DDR is TEntityDescriptor //needs work
         ~/TargetCoordinatorModuleSelector,
         AirplanePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitude  = ((80) * Metre * MeterCorr)
         ),
         ~/PlayerMissionModuleDescriptor,
         ~/InflammableModuleDescriptorUnit,
@@ -333815,16 +333815,16 @@ export Descriptor_Unit_L39ZO_DDR is TEntityDescriptor //needs work
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 589
+               MaxSpeedInKmph = 650
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         AirplaneMovement is AirplaneMovementDescriptor
         (
-            Altitude = ((1400) * Metre)
-            AltitudeMin = (300 * Metre)
-            SpeedInKmph = 589
+            Altitude = ((80) * Metre * MeterCorr)
+            AltitudeMin = (100 * Metre)
+            SpeedInKmph = 650
             AgilityRadius = ((4198) * Metre)
             PitchAngle = 17
             RollAngle = 70
@@ -334009,7 +334009,7 @@ export Descriptor_Unit_L39ZO_HE1_DDR is TEntityDescriptor
         ~/TargetCoordinatorModuleSelector,
         AirplanePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitude  = ((80) * Metre * MeterCorr)
         ),
         ~/PlayerMissionModuleDescriptor,
         ~/InflammableModuleDescriptorUnit,
@@ -334053,7 +334053,7 @@ export Descriptor_Unit_L39ZO_HE1_DDR is TEntityDescriptor
         ),
         TBaseDamageModuleDescriptor
         (
-            MaxPhysicalDamages = 6
+            MaxPhysicalDamages = 8
             MaxSuppressionDamages = ~/Airplane_MaxSuppressionDamages
             MaxStunDamages = ~/Airplane_MaxStunDamages
             PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
@@ -334082,16 +334082,16 @@ export Descriptor_Unit_L39ZO_HE1_DDR is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 589
+               MaxSpeedInKmph = 650
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         AirplaneMovement is AirplaneMovementDescriptor
         (
-            Altitude = ((1400) * Metre)
-            AltitudeMin = (300 * Metre)
-            SpeedInKmph = 589
+            Altitude = ((80) * Metre * MeterCorr)
+            AltitudeMin = (100 * Metre)
+            SpeedInKmph = 650
             AgilityRadius = ((4198) * Metre)
             PitchAngle = 17
             RollAngle = 70
@@ -334282,7 +334282,7 @@ export Descriptor_Unit_L39ZO_HE1_SOV is TEntityDescriptor
         ~/TargetCoordinatorModuleSelector,
         AirplanePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitude  = ((80) * Metre * MeterCorr)
         ),
         ~/PlayerMissionModuleDescriptor,
         ~/InflammableModuleDescriptorUnit,
@@ -334326,7 +334326,7 @@ export Descriptor_Unit_L39ZO_HE1_SOV is TEntityDescriptor
         ),
         TBaseDamageModuleDescriptor
         (
-            MaxPhysicalDamages = 6
+            MaxPhysicalDamages = 8
             MaxSuppressionDamages = ~/Airplane_MaxSuppressionDamages
             MaxStunDamages = ~/Airplane_MaxStunDamages
             PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
@@ -334355,16 +334355,16 @@ export Descriptor_Unit_L39ZO_HE1_SOV is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 589
+               MaxSpeedInKmph = 650
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         AirplaneMovement is AirplaneMovementDescriptor
         (
-            Altitude = ((1400) * Metre)
-            AltitudeMin = (300 * Metre)
-            SpeedInKmph = 589
+            Altitude = ((80) * Metre * MeterCorr)
+            AltitudeMin = (100 * Metre)
+            SpeedInKmph = 650
             AgilityRadius = ((4198) * Metre)
             PitchAngle = 17
             RollAngle = 70
@@ -334555,7 +334555,7 @@ export Descriptor_Unit_L39ZO_NPLM_SOV is TEntityDescriptor
         ~/TargetCoordinatorModuleSelector,
         AirplanePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitude  = ((80) * Metre * MeterCorr)
         ),
         ~/PlayerMissionModuleDescriptor,
         ~/InflammableModuleDescriptorUnit,
@@ -334598,7 +334598,7 @@ export Descriptor_Unit_L39ZO_NPLM_SOV is TEntityDescriptor
         ),
         TBaseDamageModuleDescriptor
         (
-            MaxPhysicalDamages = 6
+            MaxPhysicalDamages = 8
             MaxSuppressionDamages = ~/Airplane_MaxSuppressionDamages
             MaxStunDamages = ~/Airplane_MaxStunDamages
             PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
@@ -334627,16 +334627,16 @@ export Descriptor_Unit_L39ZO_NPLM_SOV is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 589
+               MaxSpeedInKmph = 650
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         AirplaneMovement is AirplaneMovementDescriptor
         (
-            Altitude = ((1400) * Metre)
-            AltitudeMin = (300 * Metre)
-            SpeedInKmph = 589
+            Altitude = ((80) * Metre * MeterCorr)
+            AltitudeMin = (100 * Metre)
+            SpeedInKmph = 650
             AgilityRadius = ((4198) * Metre)
             PitchAngle = 17
             RollAngle = 70
