@@ -4,7 +4,7 @@
 //ammo explosiions now do more damage than fuel explosions
 CriticalEffect_AmmoExplosion_Desc is TCriticalEffectDescriptor
 (
-    Token = 'CRITIC1'
+    Token = 'AMMO'
     HappeningKey = 'critical_ammo'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Effet_Meurt
     TimeOut = 0
@@ -83,7 +83,7 @@ template CriticalEffect_CrewKilled
 )
 CriticalEffect_BailedOut_Desc is TCriticalEffectDescriptor //custom labels are broken for now in critics but see the labels file when restored
 (
-    Token = 'CRITIC5'
+    Token = 'KNOCKOUT'
     HappeningKey = 'critical_crew_dead'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Bailed_Out
     TimeOut = -1
@@ -103,7 +103,7 @@ template CriticalEffect_BailedOut
 
 CriticalEffect_TransmissionDamaged_Desc is TCriticalEffectDescriptor
 (
-    Token = 'PWRDAMAGE' //'CRITIC6'
+    Token = 'PWRDAMAG'
     HappeningKey = 'critical_engine_damaged'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Vitesse_50
     TimeOut = -1
@@ -123,7 +123,7 @@ template CriticalEffect_TransmissionDamaged
 
 CriticalEffect_TransmissionDestroyed_Desc is TCriticalEffectDescriptor
 (
-    Token = 'PWRDESTRY'//'CRITIC9' //CRITIC7 is the right label but doesn't work
+    Token = 'PWRDESTR' //CRITIC7 is the right label but doesn't work
     HappeningKey = 'critical_engine_destroyed'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Full_Stop
     TimeOut = -1
@@ -142,7 +142,7 @@ template CriticalEffect_TransmissionDestroyed
 )
 CriticalEffect_EngineDamaged_Desc is TCriticalEffectDescriptor
 (
-    Token = 'CRITIC8'
+    Token = 'PWRDAMAG'
     HappeningKey = 'critical_engine_damaged'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Vitesse_50
     TimeOut = -1
@@ -162,7 +162,7 @@ template CriticalEffect_EngineDamaged
 
 CriticalEffect_EngineDestroyed_Desc is TCriticalEffectDescriptor
 (
-    Token = 'CRITIC9'
+    Token = 'PWRDESTR'
     HappeningKey = 'critical_engine_destroyed'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Full_Stop
     TimeOut = -1
@@ -222,7 +222,7 @@ template CriticalEffect_TurretStuck
 
 CriticalEffect_GunJammed_Desc is TCriticalEffectDescriptor
 (
-    Token = 'GUNDESTRY' //CRITIC14 was tag
+    Token = 'GUNDESTR' //CRITIC14 was tag
     HappeningKey = 'critical_gun_turret_stuck'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Stop_Armes
     TimeOut = -1
@@ -242,9 +242,9 @@ template CriticalEffect_GunJammed
 
 CriticalEffect_GunnerKilled_Desc is TCriticalEffectDescriptor
 (
-    Token = 'CRITIC15'
-    HappeningKey = 'critical_gun_turret_stuck'
-    EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Stop_Armes
+    Token = 'GNRKILLD'
+    HappeningKey = 'critical_crew'
+    EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Slow_Armes
     TimeOut = -1
     RepairCost = -1
     Unique = False
@@ -262,7 +262,7 @@ template CriticalEffect_GunnerKilled
 
 CriticalEffect_ShooterKilled_Desc is TCriticalEffectDescriptor
 (
-    Token = 'GNRKILLED' // 'CRITIC15'
+    Token = 'GNRKILLD' // 'CRITIC15'
     HappeningKey = 'critical_crew'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Slow_Armes
     TimeOut = -1
@@ -282,7 +282,7 @@ template CriticalEffect_ShooterKilled
 
 CriticalEffect_LoaderKilled_Desc is TCriticalEffectDescriptor
 (
-    Token = 'LDRKILLED' //'CRITIC16'
+    Token = 'LDRKILLD' //'CRITIC16'
     HappeningKey = 'critical_crew'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Slow_Reload
     TimeOut = -1
@@ -302,7 +302,7 @@ template CriticalEffect_LoaderKilled
 
 CriticalEffect_DriverKilled_Desc is TCriticalEffectDescriptor
 (
-    Token = 'DRVKILLED' //'CRITIC17'
+    Token = 'DRVKILLD' //'CRITIC17'
     HappeningKey = 'critical_crew'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_nodriver
     TimeOut = -1
@@ -322,7 +322,7 @@ template CriticalEffect_DriverKilled
 
 CriticalEffect_CommanderKilled_Desc is TCriticalEffectDescriptor
 (
-    Token = 'CMDRKILLED' //'CRITIC4' //needs a new tag
+    Token = 'CMDRKILD' //'CRITIC4' //needs a new tag
     HappeningKey = 'critical_crew'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_nocommander
     TimeOut = -1
@@ -342,7 +342,7 @@ template CriticalEffect_CommanderKilled
 
 CriticalEffect_SightDamaged_Desc is TCriticalEffectDescriptor
 (
-    Token = 'SIGHTGONE'
+    Token = 'SIGHTGON'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_primary_sight_lost //UnitEffect_Critic_Visee_50 new more comprehensive effect
     TimeOut = -1
     RepairCost = -1
@@ -455,6 +455,25 @@ template CriticalEffect_CrewPanicked
 (
     Roll = <Roll>
     Descriptor = ~/CriticalEffect_CrewPanicked_Desc
+)
+
+CriticalEffect_ERA_hit_Desc is TCriticalEffectDescriptor
+(
+    Token = 'BOUNCE1'
+    EffectsPack = $/GFX/EffectCapacity/UnitEffect_ERA_hit_tag
+    TimeOut = 0.01
+    RepairCost = -1
+    Unique = False
+    DisplayOnDeath = False
+)
+// Crew panicked -> Deroute
+template CriticalEffect_ERA_hit
+[
+    Roll
+] is TCriticalEffect
+(
+    Roll = <Roll>
+    Descriptor = ~/CriticalEffect_ERA_hit_Desc
 )
 CriticalEffect_Bounce_Desc is TCriticalEffectDescriptor
 (
