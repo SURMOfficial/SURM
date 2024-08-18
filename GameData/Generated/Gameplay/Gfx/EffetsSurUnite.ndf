@@ -5302,9 +5302,39 @@ export UnitEffect_ERA_hit_tag is TEffectsPackDescriptor
         ),
     ]
 )
-export UnitEffect_ERA_hit_tag2 is TEffectsPackDescriptor
+export UnitEffect_ERA_add_hit1_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{6089b9ec-839c-4863-b61a-74c8be5eb13b}
+    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+        TUnitEffectAddCapacityDescriptor
+        (
+            CapacityToAdd = [ ~/Capacite_ERA_hit1_tag ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_shock"
+        ),
+    ]
+)
+export UnitEffect_ERA_add_hit2_cap is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+        TUnitEffectAddCapacityDescriptor
+        (
+            CapacityToAdd = [ ~/Capacite_ERA_hit2_tag ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_howitzer"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_tag1 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{6089c9ec-839c-4863-b61b-74c8be5eb13b}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5315,7 +5345,24 @@ export UnitEffect_ERA_hit_tag2 is TEffectsPackDescriptor
         ),
 		TUnitEffectShowLabelIconDescriptor
         (
-            TextureToken         = "Texture_Speciality_Icon_assault_half"
+            TextureToken         = "icone_sniper_off"
+        ),
+    ]
+)
+export UnitEffect_ERA_hit_tag2 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{6089b9ec-839c-4863-b61a-74c8be5eb13b}
+    NameForDebug       = 'ERA_hit'
+    EffectsDescriptors = [
+		TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "ERA_hit2",
+            ]
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_electronic_warfare"
         ),
     ]
 )
@@ -5327,7 +5374,7 @@ export UnitEffect_ERA_hit_tag3 is TEffectsPackDescriptor
 		TUnitEffectRaiseTagDescriptor
         (
             TagListToRaise = [
-                 "ERA_hit1",
+                 "ERA_hit3",
             ]
         ),
 		TUnitEffectShowLabelIconDescriptor

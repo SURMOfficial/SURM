@@ -18,7 +18,7 @@ Ammo_AA_AIM120A_AMRAAM is TAmmunitionDescriptor
     PorteeMinimaleTBAGRU                 = 1000
     PorteeMaximaleTBAGRU                 = 6600
     PorteeMinimaleHAGRU                  = 1000
-    PorteeMaximaleHAGRU                  = 27495
+    PorteeMaximaleHAGRU                  = 27500
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -123,7 +123,7 @@ Ammo_AA_AIM132_ASRAAM is TAmmunitionDescriptor //unused
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{91e178e5-b78e-4413-847a-297a311bba51}
-         BaseCriticModifier = 100
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -155,7 +155,7 @@ Ammo_AA_AIM132_ASRAAM is TAmmunitionDescriptor //unused
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_AA_AIM7F_Sparrow is TAmmunitionDescriptor
+Ammo_AA_AIM7F_Sparrow is TAmmunitionDescriptor //needs work unused
 (
     DescriptorId                      = GUID:{074646e8-4280-472a-911d-6a51f39c655b}
     Name                              = 'WBVQHPHGAE'
@@ -253,7 +253,7 @@ Ammo_AA_AIM7M_Sparrow is TAmmunitionDescriptor
     PorteeMinimaleTBAGRU                 = 1000
     PorteeMaximaleTBAGRU                 = 5500
     PorteeMinimaleHAGRU                  = 1000
-   PorteeMaximaleHAGRU                  = 53895
+   PorteeMaximaleHAGRU                  = 38500
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -357,13 +357,13 @@ Ammo_AA_AIM9J_Sidewinder is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{b26f565f-f6d8-441e-ac10-cad282063e99}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
              (EBaseHitValueModifier/Base, 0.0),
-             (EBaseHitValueModifier/Idling, 40),
-             (EBaseHitValueModifier/Moving, 40),
+             (EBaseHitValueModifier/Idling, 20),
+             (EBaseHitValueModifier/Moving, 20),
              (EBaseHitValueModifier/Targeted, 0.0),
          ]
     )
@@ -436,7 +436,7 @@ Ammo_AA_AIM9L_Sidewinder is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{9a948ea5-c1df-45a8-ae35-ff0554709514}
-         BaseCriticModifier = 100
+         BaseCriticModifier = 90
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -515,7 +515,7 @@ Ammo_AA_AIM9M_Sidewinder is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{90448957-1657-461c-9a95-c1b0129b0d1c}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 90
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -594,13 +594,13 @@ Ammo_AA_AIM9P_Sidewinder is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{4590c332-688b-42c5-8120-0605dc8a3022}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
              (EBaseHitValueModifier/Base, 0.0),
-             (EBaseHitValueModifier/Idling, 60),
-             (EBaseHitValueModifier/Moving, 60),
+             (EBaseHitValueModifier/Idling, 35),
+             (EBaseHitValueModifier/Moving, 35),
              (EBaseHitValueModifier/Targeted, 0.0),
          ]
     )
@@ -673,13 +673,13 @@ Ammo_AA_AIM9P_Sidewinder_x2 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{3a94eda5-7cc7-48cb-b953-7d49865a6d26}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
              (EBaseHitValueModifier/Base, 0.0),
-             (EBaseHitValueModifier/Idling, 60),
-             (EBaseHitValueModifier/Moving, 60),
+             (EBaseHitValueModifier/Idling, 35),
+             (EBaseHitValueModifier/Moving, 35),
              (EBaseHitValueModifier/Targeted, 0.0),
          ]
     )
@@ -751,7 +751,7 @@ Ammo_AA_Matra_R530 is TAmmunitionDescriptor //not going to use medium range AAMs
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{dae34b1d-322e-4517-b4e8-579cc8b8975d}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 90
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -986,13 +986,13 @@ Ammo_AA_R13M is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{1ded1579-00cb-45ac-a645-afb21d186eac}
-         BaseCriticModifier = 100
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
              (EBaseHitValueModifier/Base, 0.0),
-             (EBaseHitValueModifier/Idling, 40),
-             (EBaseHitValueModifier/Moving, 40),
+             (EBaseHitValueModifier/Idling, 35),
+             (EBaseHitValueModifier/Moving, 35),
              (EBaseHitValueModifier/Targeted, 0.0),
          ]
     )
@@ -1253,7 +1253,7 @@ Ammo_AA_R24R_Vympel is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_AA_R27ER_Vympel is TAmmunitionDescriptor
+Ammo_AA_R27ER_Vympel is TAmmunitionDescriptor //needs work unused
 (
     DescriptorId                      = GUID:{49f9c082-3739-45c0-a90b-90a0f2c79020}
     Name                              = 'PIVIKLFHZT'
@@ -1346,7 +1346,7 @@ Ammo_AA_R27R_Vympel is TAmmunitionDescriptor
     PorteeMinimaleTBAGRU                 = 1000
     PorteeMaximaleTBAGRU                 = 6600
     PorteeMinimaleHAGRU                  = 1000
-   PorteeMaximaleHAGRU                  = 40145
+   PorteeMaximaleHAGRU                  = 40000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -1404,10 +1404,10 @@ Ammo_AA_R27R_Vympel is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_AA_R27T_Vympel is TAmmunitionDescriptor
+Ammo_AA_R27T_Vympel is TAmmunitionDescriptor //upgrade to ET stats
 (
     DescriptorId                      = GUID:{7a3e2570-b418-45ef-a393-04bea6b3dc69}
-    Name                              = 'ZWXIJNGPWW'
+    Name                              = 'R27ET' //'ZWXIJNGPWW'
     TypeCategoryName                  = 'UYJALNLOYI'
     Caliber                           = 'CJARKUQLZY'
     WeaponDescriptionToken            = ''
@@ -1421,10 +1421,10 @@ Ammo_AA_R27T_Vympel is TAmmunitionDescriptor
     TempsEntreDeuxTirs                = 0.2
     TempsEntreDeuxFx                  = 0.2
     PorteeMaximaleGRU                    = 0
-    PorteeMinimaleTBAGRU                 = 0
-    PorteeMaximaleTBAGRU                 = 0
-    PorteeMinimaleHAGRU                  = 0
-    PorteeMaximaleHAGRU                  = 2290
+    PorteeMinimaleTBAGRU                 = 1500 //total guess
+    PorteeMaximaleTBAGRU                 = 8000
+    PorteeMinimaleHAGRU                  = 1500 //total guess
+    PorteeMaximaleHAGRU                  = 30000 //limited by head on seeker range, not kinematics
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
@@ -1455,8 +1455,8 @@ Ammo_AA_R27T_Vympel is TAmmunitionDescriptor
          BaseHitValueModifiers =
          [
              (EBaseHitValueModifier/Base, 0.0),
-             (EBaseHitValueModifier/Idling, 50),
-             (EBaseHitValueModifier/Moving, 50),
+             (EBaseHitValueModifier/Idling, 60),
+             (EBaseHitValueModifier/Moving, 60),
              (EBaseHitValueModifier/Targeted, 0.0),
          ]
     )
@@ -1503,7 +1503,7 @@ Ammo_AA_R33_Vympel is TAmmunitionDescriptor
     PorteeMinimaleTBAGRU                 = 1000
     PorteeMaximaleTBAGRU                 = 6600
     PorteeMinimaleHAGRU                  = 1000
-   PorteeMaximaleHAGRU                  = 65995
+   PorteeMaximaleHAGRU                  = 66000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -1581,7 +1581,7 @@ Ammo_AA_R37_Vympel is TAmmunitionDescriptor
     PorteeMinimaleTBAGRU                 = 1000
     PorteeMaximaleTBAGRU                 = 6600
     PorteeMinimaleHAGRU                  = 1000
-   PorteeMaximaleHAGRU                  = 82490
+   PorteeMaximaleHAGRU                  = 82500
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -1640,7 +1640,7 @@ Ammo_AA_R37_Vympel is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_AA_R3R is TAmmunitionDescriptor
+Ammo_AA_R3R is TAmmunitionDescriptor //needs work unused
 (
     DescriptorId                      = GUID:{dbbcca87-7e6a-4cba-b3ec-92f8401bd3e3}
     Name                              = 'UFDYZWLRWU'
@@ -1764,7 +1764,7 @@ Ammo_AA_R550_Magic is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{4c9d0e3d-eeb7-42b7-809f-53e71d9a26e5}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -1843,7 +1843,7 @@ Ammo_AA_R550_Magic_II is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{092d7e8c-c71f-4358-966c-6fab41eee538}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -1922,7 +1922,7 @@ Ammo_AA_R60_Vympel is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{e666238b-650f-4422-8dc6-eaa4d172455f}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -2001,7 +2001,7 @@ Ammo_AA_R60_Vympel_helo is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{9d6fd6c3-d135-4b7f-a3ee-06d884200a9a}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -2080,7 +2080,7 @@ Ammo_AA_R60M_Vympel is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{8f8c3cd2-c6f3-4fc5-a154-78bf3534ca94}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -2113,7 +2113,7 @@ Ammo_AA_R60M_Vympel is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_AA_R60M_Vympel_helo is TAmmunitionDescriptor
+Ammo_AA_R60M_Vympel_helo is TAmmunitionDescriptor //slight range penalty due to lack of launch platform speed
 (
     DescriptorId                      = GUID:{36eefcf9-0336-4903-b9df-574b1274aaeb}
     Name                              = 'QMLLWKYTIT'
@@ -2130,19 +2130,19 @@ Ammo_AA_R60M_Vympel_helo is TAmmunitionDescriptor
     TempsEntreDeuxTirs                = 2.0
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
-    PorteeMinimaleTBAGRU                 = 0
-    PorteeMaximaleTBAGRU                 = 765
-    PorteeMinimaleHAGRU                  = 0
-    PorteeMaximaleHAGRU                  = 1270
+    PorteeMinimaleTBAGRU                 = 200
+    PorteeMaximaleTBAGRU                 = 3850
+    PorteeMinimaleHAGRU                  = 200
+    PorteeMaximaleHAGRU                  = 4000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamages       = 297 * Metre
-    PhysicalDamages                   = 3.0
+    RadiusSplashPhysicalDamages       = ((280) * Metre)
+    PhysicalDamages                   = 6.0
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamages       = 364 * Metre
-    SuppressDamages                   = 540.0
+    RadiusSplashSuppressDamages       = ((160) * Metre)
+    SuppressDamages                   = 450.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -2159,7 +2159,7 @@ Ammo_AA_R60M_Vympel_helo is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{c60af3b6-77d8-426a-903a-b87b7707a029}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -2218,7 +2218,7 @@ Ammo_AA_R73_Vympel is TAmmunitionDescriptor
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamages       = ((350) * Metre)
-    PhysicalDamages                   = 6.0
+    PhysicalDamages                   = 7.0
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((200) * Metre)
     SuppressDamages                   = 450.0
@@ -2238,13 +2238,13 @@ Ammo_AA_R73_Vympel is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{942e5b30-8efc-437c-ad0b-ded2e3ae4a08}
-         BaseCriticModifier = 15
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
              (EBaseHitValueModifier/Base, 0.0),
-             (EBaseHitValueModifier/Idling, 60),
-             (EBaseHitValueModifier/Moving, 60),
+             (EBaseHitValueModifier/Idling, 75),
+             (EBaseHitValueModifier/Moving, 75),
              (EBaseHitValueModifier/Targeted, 0.0),
          ]
     )
@@ -2291,7 +2291,7 @@ Ammo_AA_R77_Vympel is TAmmunitionDescriptor
     PorteeMinimaleTBAGRU                 = 1000
     PorteeMaximaleTBAGRU                 = 6600
     PorteeMinimaleHAGRU                  = 1000
-   PorteeMaximaleHAGRU                  = 43995
+   PorteeMaximaleHAGRU                  = 44000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -2522,7 +2522,7 @@ Ammo_AGM_9K121_Vikhr is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 9985
+    PorteeMaximaleGRU                    = 10000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 5000
     PorteeMinimaleHAGRU                  = 0
@@ -3329,7 +3329,7 @@ Ammo_AGM_9M17P_FalangaP is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3495
+    PorteeMaximaleGRU                    = 3500
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -3409,7 +3409,7 @@ Ammo_AGM_9M17P_FalangaP_x4 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3495
+    PorteeMaximaleGRU                    = 3500
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -3490,7 +3490,7 @@ Ammo_AGM_9M17P_FalangaP_x6 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3495
+    PorteeMaximaleGRU                    = 3500
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -3736,7 +3736,7 @@ Ammo_AGM_AGM114A_x16_LOAL is TAmmunitionDescriptor
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
     PorteeMaximaleHAGRU                  = 0
-    PorteeMinimaleGRU                    = 1995
+    PorteeMinimaleGRU                    = 2000
     AngleDispersion                   = 0.02
     DispersionAtMaxRange              = ((500) * Metre)
     DispersionAtMinRange              = ((500) * Metre)
@@ -4054,7 +4054,7 @@ Ammo_AGM_AGM114A_x4_LOAL is TAmmunitionDescriptor
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
     PorteeMaximaleHAGRU                  = 0
-    PorteeMinimaleGRU                    = 1995
+    PorteeMinimaleGRU                    = 2000
     AngleDispersion                   = 0.02
     DispersionAtMaxRange              = ((500) * Metre)
     DispersionAtMinRange              = ((500) * Metre)
@@ -4212,7 +4212,7 @@ Ammo_AGM_AGM114A_x8_LOAL is TAmmunitionDescriptor
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
     PorteeMaximaleHAGRU                  = 0
-    PorteeMinimaleGRU                    = 1995
+    PorteeMinimaleGRU                    = 2000
     AngleDispersion                   = 0.02
     DispersionAtMaxRange              = ((500) * Metre)
     DispersionAtMinRange              = ((500) * Metre)
@@ -5687,7 +5687,7 @@ Ammo_AGM_HOT1 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -5768,7 +5768,7 @@ Ammo_AGM_HOT1_x4 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -5930,7 +5930,7 @@ Ammo_AGM_HOT2 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -6011,7 +6011,7 @@ Ammo_AGM_HOT2_x4 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -6173,12 +6173,12 @@ Ammo_AGM_Kh23M is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 9985
+    PorteeMaximaleGRU                    = 10000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
     PorteeMaximaleHAGRU                  = 0
-    PorteeMinimaleGRU                    = 1995
+    PorteeMinimaleGRU                    = 2000
     AngleDispersion                   = 0.02
     DispersionAtMaxRange              = ((700) * Metre)
     DispersionAtMinRange              = ((700) * Metre)
@@ -7156,7 +7156,7 @@ Ammo_ATGM_9K121_Vikhr is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 9985
+    PorteeMaximaleGRU                    = 10000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -7236,7 +7236,7 @@ Ammo_ATGM_9M112_1_Kobra is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -7317,7 +7317,7 @@ Ammo_ATGM_9M113_Konkurs_BMP2 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -7398,7 +7398,7 @@ Ammo_ATGM_9M113_KonkursM_BMP2_late is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -7479,7 +7479,7 @@ Ammo_ATGM_9M113_Konkurs_x5 is TAmmunitionDescriptor //unused
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -7559,7 +7559,7 @@ Ammo_ATGM_9M113_KonkursM is TAmmunitionDescriptor //konkurs M not in service unt
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -7640,7 +7640,7 @@ Ammo_ATGM_9M113_KonkursM_late is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -7721,7 +7721,7 @@ Ammo_ATGM_9M113_KonkursM_late_x5 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -8045,7 +8045,7 @@ Ammo_ATGM_9M117_Bastion is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -8126,7 +8126,7 @@ Ammo_ATGM_9M117M_Arkan is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 5990
+    PorteeMaximaleGRU                    = 6000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -8369,7 +8369,7 @@ Ammo_ATGM_9M128_Agona is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -9905,7 +9905,7 @@ Ammo_ATGM_HOT1 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -9986,7 +9986,7 @@ Ammo_ATGM_HOT1_x4 is TAmmunitionDescriptor //unused
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10067,7 +10067,7 @@ Ammo_ATGM_HOT1_x6 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10148,7 +10148,7 @@ Ammo_ATGM_HOT2 is TAmmunitionDescriptor //unused
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10229,7 +10229,7 @@ Ammo_ATGM_HOT2_x2 is TAmmunitionDescriptor //unused
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10310,7 +10310,7 @@ Ammo_ATGM_HOT2_x3 is TAmmunitionDescriptor //unused
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10391,7 +10391,7 @@ Ammo_ATGM_HOT2_x4 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10472,7 +10472,7 @@ Ammo_ATGM_HOT2_x6 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10634,7 +10634,7 @@ Ammo_ATGM_MILAN is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 1995
+    PorteeMaximaleGRU                    = 2000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10714,7 +10714,7 @@ Ammo_ATGM_MILAN_2 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 1995
+    PorteeMaximaleGRU                    = 2000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10794,7 +10794,7 @@ Ammo_ATGM_MILAN_2_x2 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 1995
+    PorteeMaximaleGRU                    = 2000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -10955,7 +10955,7 @@ Ammo_ATGM_Swingfire is TAmmunitionDescriptor //unused
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -11036,7 +11036,7 @@ Ammo_ATGM_Swingfire_x2 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -11117,7 +11117,7 @@ Ammo_ATGM_Swingfire_x5 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 3995
+    PorteeMaximaleGRU                    = 4000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0
@@ -12932,9 +12932,9 @@ Ammo_Javelin is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 300
-    PorteeMaximaleTBAGRU                 = 5495
+    PorteeMaximaleTBAGRU                 = 5500
     PorteeMinimaleHAGRU                  = 300
-    PorteeMaximaleHAGRU                  = 4495
+    PorteeMaximaleHAGRU                  = 4500
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -13014,7 +13014,7 @@ Ammo_Javelin_LML is TAmmunitionDescriptor
     PorteeMinimaleTBAGRU                 = 300
     PorteeMaximaleTBAGRU                 = 5495
     PorteeMinimaleHAGRU                  = 300
-    PorteeMaximaleHAGRU                  = 4495
+    PorteeMaximaleHAGRU                  = 3500
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -13253,9 +13253,9 @@ Ammo_MANPAD_Blowpipe is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 3495
+    PorteeMaximaleTBAGRU                 = 3500
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 3495
+    PorteeMaximaleHAGRU                  = 3500
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -13333,9 +13333,9 @@ Ammo_MANPAD_FIM43 is TAmmunitionDescriptor //wrong supply
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 4495
+    PorteeMaximaleTBAGRU                 = 3500
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 4495
+    PorteeMaximaleHAGRU                  = 3500
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -13578,7 +13578,7 @@ Ammo_MANPAD_Javelin is TAmmunitionDescriptor
     PorteeMinimaleTBAGRU                 = 300
     PorteeMaximaleTBAGRU                 = 5495
     PorteeMinimaleHAGRU                  = 300
-    PorteeMaximaleHAGRU                  = 4495
+    PorteeMaximaleHAGRU                  = 3500
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -13737,9 +13737,9 @@ Ammo_MANPAD_igla is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 5195
+    PorteeMaximaleTBAGRU                 = 5200
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 5195
+    PorteeMaximaleHAGRU                  = 5200
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -13818,9 +13818,9 @@ Ammo_Mistral is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 5990
+    PorteeMaximaleTBAGRU                 = 6000
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 5990
+    PorteeMaximaleHAGRU                  = 6000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -13846,7 +13846,7 @@ Ammo_Mistral is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{2b76e6e7-ef2c-4456-97a3-cf2efbe7a94c}
-         BaseCriticModifier = 20
+         BaseCriticModifier = 75
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -13899,9 +13899,9 @@ Ammo_Mistral_Celtic_x4 is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 12.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 5990
+    PorteeMaximaleTBAGRU                 = 6000
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 5990
+    PorteeMaximaleHAGRU                  = 6000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -13927,7 +13927,7 @@ Ammo_Mistral_Celtic_x4 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{68c55300-c6f7-4b69-92ef-bcb3f5967f54}
-         BaseCriticModifier = 20
+         BaseCriticModifier = 75
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14057,10 +14057,10 @@ Ammo_SAM_9M33 is TAmmunitionDescriptor //unused
     TempsEntreDeuxTirs                = 2.0
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
-    PorteeMinimaleTBAGRU                 = 1995
-    PorteeMaximaleTBAGRU                 = 8990
-    PorteeMinimaleHAGRU                  = 1995
-    PorteeMaximaleHAGRU                  = 8990
+    PorteeMinimaleTBAGRU                 = 2000
+    PorteeMaximaleTBAGRU                 = 9000
+    PorteeMinimaleHAGRU                  = 2000
+    PorteeMaximaleHAGRU                  = 9000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -14162,7 +14162,7 @@ Ammo_SAM_9M330_Tor_x8 is TAmmunitionDescriptor //needs work
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{b97acac8-22bf-461e-be80-320caf8a7cc8}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 90
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14213,10 +14213,10 @@ Ammo_SAM_9M336_x3 is TAmmunitionDescriptor //going to remove the kub
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
     PorteeMaximaleGRU                    = 0
-    PorteeMinimaleTBAGRU                 = 3995
-    PorteeMaximaleTBAGRU                 = 24965
-    PorteeMinimaleHAGRU                  = 3995
-    PorteeMaximaleHAGRU                  = 24965
+    PorteeMinimaleTBAGRU                 = 4000
+    PorteeMaximaleTBAGRU                 = 25000
+    PorteeMinimaleHAGRU                  = 4000
+    PorteeMaximaleHAGRU                  = 25000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -14293,9 +14293,9 @@ Ammo_SAM_9M33M2_x6 is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 1.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 1500
-    PorteeMaximaleTBAGRU                 = 9985
+    PorteeMaximaleTBAGRU                 = 10000
     PorteeMinimaleHAGRU                  = 1500
-    PorteeMaximaleHAGRU                  = 9985
+    PorteeMaximaleHAGRU                  = 10000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -14560,7 +14560,7 @@ Ammo_SAM_FIM92_Stinger_CS is TAmmunitionDescriptor //unused
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{1109b0df-592a-44e9-b823-b1eb891b8fff}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14641,7 +14641,7 @@ Ammo_SAM_FIM92_Stinger_CS_x4 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{188cba15-c60e-4bc0-9a8e-0a0cee584f1e}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14722,7 +14722,7 @@ Ammo_SAM_FIM92_Stinger_x4 is TAmmunitionDescriptor //changed to 8
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{24788627-5d16-49e5-a2e7-c275cd76a3a2}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14803,7 +14803,7 @@ Ammo_SAM_FIM92_Stinger_x8 is TAmmunitionDescriptor //needs work
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{7c83511c-2aa6-4d0f-abb7-7ba458236ea0}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14883,7 +14883,7 @@ Ammo_SAM_FIM92C is TAmmunitionDescriptor //unused
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{36c3fb97-3df3-4fdd-b665-cf995fa016de}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -15092,9 +15092,9 @@ Ammo_SAM_Igla is TAmmunitionDescriptor //unused
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 5195
+    PorteeMaximaleTBAGRU                 = 5200
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 5195
+    PorteeMaximaleHAGRU                  = 5200
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -15172,9 +15172,9 @@ Ammo_SAM_Igla1M is TAmmunitionDescriptor //unused
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 5195
+    PorteeMaximaleTBAGRU                 = 5200
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 5195
+    PorteeMaximaleHAGRU                  = 5200
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -15253,9 +15253,9 @@ Ammo_SAM_IglaV is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 12.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 5195
+    PorteeMaximaleTBAGRU                 = 5200
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 5195
+    PorteeMaximaleHAGRU                  = 5200
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -15334,9 +15334,9 @@ Ammo_SAM_IglaV_x4 is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 12.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 5195
+    PorteeMaximaleTBAGRU                 = 5200
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 5195
+    PorteeMaximaleHAGRU                  = 5200
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -15415,9 +15415,9 @@ Ammo_SAM_MIM72A is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 8.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 180
-    PorteeMaximaleTBAGRU                 = 8990
+    PorteeMaximaleTBAGRU                 = 9000
     PorteeMinimaleHAGRU                  = 180
-    PorteeMaximaleHAGRU                  = 8990
+    PorteeMaximaleHAGRU                  = 9000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -15443,7 +15443,7 @@ Ammo_SAM_MIM72A is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{fea794e7-4eb0-4605-be92-74858d10f8d9}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -15495,9 +15495,9 @@ Ammo_SAM_MIM72F is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 8.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 180
-    PorteeMaximaleTBAGRU                 = 8990
+    PorteeMaximaleTBAGRU                 = 9000
     PorteeMinimaleHAGRU                  = 180
-    PorteeMaximaleHAGRU                  = 8990
+    PorteeMaximaleHAGRU                  = 9000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -15523,7 +15523,7 @@ Ammo_SAM_MIM72F is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{b49bb53e-dc7e-49ef-94b2-fdd9be381320}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -15575,9 +15575,9 @@ Ammo_SAM_MIM72G is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 9.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 180
-    PorteeMaximaleTBAGRU                 = 8990
+    PorteeMaximaleTBAGRU                 = 9000
     PorteeMinimaleHAGRU                  = 180
-    PorteeMaximaleHAGRU                  = 8990
+    PorteeMaximaleHAGRU                  = 9000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -15603,7 +15603,7 @@ Ammo_SAM_MIM72G is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{f852ca92-3963-4704-b83a-37ab6e79686d}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -15655,9 +15655,9 @@ Ammo_SAM_Mistral is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 5990
+    PorteeMaximaleTBAGRU                 = 6000
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 5990
+    PorteeMaximaleHAGRU                  = 6000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -15683,7 +15683,7 @@ Ammo_SAM_Mistral is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{db3ba61c-49a8-4f43-a505-4257e5f19f0d}
-         BaseCriticModifier = 20
+         BaseCriticModifier = 75
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -15763,7 +15763,7 @@ Ammo_SAM_RAPIER is TAmmunitionDescriptor //unused
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{1acbc1bf-e81f-4093-a5b0-2fe3d2880e29}
-         BaseCriticModifier = 20
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -15842,7 +15842,7 @@ Ammo_SAM_RAPIER_DARKFIRE_x6 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{072f52ea-bfea-44ef-ba67-aea3c23f3dbd}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -15921,7 +15921,7 @@ Ammo_SAM_RAPIER_FSA_x4 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{671fde80-161a-4107-abe3-c9714d744383}
-         BaseCriticModifier = 20
+         BaseCriticModifier = 85
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16159,7 +16159,7 @@ Ammo_SAM_ROLAND is TAmmunitionDescriptor //unused
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{05a5af17-0dd6-445a-9d89-ffa4b225fdba}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16239,7 +16239,7 @@ Ammo_SAM_ROLAND_1 is TAmmunitionDescriptor //unused
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{bc1643da-66e5-4f31-84ef-ef146873ed99}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16319,7 +16319,7 @@ Ammo_SAM_ROLAND_1_x2 is TAmmunitionDescriptor //unused
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{d89d1784-462b-406d-8cfb-3597a874664f}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16398,7 +16398,7 @@ Ammo_SAM_ROLAND_2 is TAmmunitionDescriptor //unused
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{3809e57a-c112-4bf3-a216-71552572b9c2}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16450,9 +16450,9 @@ Ammo_SAM_ROLAND_2_x2 is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 1.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 500
-    PorteeMaximaleTBAGRU                 = 6290
+    PorteeMaximaleTBAGRU                 = 6300
     PorteeMinimaleHAGRU                  = 500
-    PorteeMaximaleHAGRU                  = 6290
+    PorteeMaximaleHAGRU                  = 6300
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -16477,7 +16477,7 @@ Ammo_SAM_ROLAND_2_x2 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{15faba46-8c6b-4ad5-b7ab-2ddb5190bc31}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16529,9 +16529,9 @@ Ammo_SAM_ROLAND_3 is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 1.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 500
-    PorteeMaximaleTBAGRU                 = 6290
+    PorteeMaximaleTBAGRU                 = 6300
     PorteeMinimaleHAGRU                  = 500
-    PorteeMaximaleHAGRU                  = 6290
+    PorteeMaximaleHAGRU                  = 6300
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -16556,7 +16556,7 @@ Ammo_SAM_ROLAND_3 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{535cda3c-618f-4a26-aea1-12e2bb103288}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16635,7 +16635,7 @@ Ammo_SAM_ROLAND_3_x2 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{72096f56-43f4-4bc8-8e1a-263c534d0943}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16792,7 +16792,7 @@ Ammo_SAM_Strela1_x4 is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{20e0b2dd-e9e0-4156-b321-f60189b8ed75}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16872,7 +16872,7 @@ Ammo_SAM_Strela10_x4 is TAmmunitionDescriptor //9K35M
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{3d784bbc-271d-43d5-b66f-f0c79c31d1ac}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -16952,7 +16952,7 @@ Ammo_SAM_Strela10_x4_FASTA is TAmmunitionDescriptor//needs work
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{8a5478c5-3f56-46db-8289-04abb7c598f8}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -17032,7 +17032,7 @@ Ammo_SAM_Strela10M3_x4 is TAmmunitionDescriptor //needs work now really an M4 wh
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{7668b012-9094-48e0-a72d-ebd9e37d15f1}
-         BaseCriticModifier = 10
+         BaseCriticModifier = 80
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -17146,7 +17146,7 @@ Ammo_SAM_Strela2_x12 is TAmmunitionDescriptor//needs work unused // (kinda wrong
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_SAM_Strela2_x2 is TAmmunitionDescriptor
+Ammo_SAM_Strela2_x2 is TAmmunitionDescriptor //needs work unused
 (
     DescriptorId                      = GUID:{252b0f14-ad34-4b50-8965-23ae21b1ac25}
     Name                              = 'EEDUALOYSR'
@@ -17226,7 +17226,7 @@ Ammo_SAM_Strela2_x2 is TAmmunitionDescriptor
     MissileTimeBetweenCorrections = 1.0
     MissileDescriptor             = ~/Descriptor_Missile_SAM_Strela2_x2
 )
-Ammo_SAM_Strela2_x4 is TAmmunitionDescriptor //needs work
+Ammo_SAM_Strela2_x4 is TAmmunitionDescriptor //needs work unused
 (
     DescriptorId                      = GUID:{e03e0d7b-82bd-492b-b3a0-e36368acfba5}
     Name                              = 'FUIINKXPMQ'
