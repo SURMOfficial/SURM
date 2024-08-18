@@ -179153,7 +179153,7 @@ export Descriptor_Unit_MTLB_Shturm_SOV is TEntityDescriptor
                     AutoOrientation = True
                     UseTopArmorAgainstFire = False
         ),
-        TDangerousnessModuleDescriptor(Dangerousness  = 63),
+        TDangerousnessModuleDescriptor(Dangerousness  = 4),
         TRoutModuleDescriptor(MoralLevel = 0),
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
@@ -179256,8 +179256,8 @@ export Descriptor_Unit_MTLB_Shturm_SOV is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 85),
-                        ($/GFX/Resources/Resource_Tickets, 85),
+                        ($/GFX/Resources/Resource_CommandPoints, 65),
+                        ($/GFX/Resources/Resource_Tickets, 65),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
