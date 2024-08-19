@@ -255,6 +255,7 @@ export Capacite_ERA_hit2_tag is TCapaciteDescriptor //18 hits takes you from 750
     TagsCiblePossible = [
     ]
     Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit3_1,
     ]
 )
 export Capacite_ERA_hit_tag1 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
@@ -344,12 +345,12 @@ export Capacite_ERA_hit_tag2 is TCapaciteDescriptor //18 hits takes you from 750
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+export Capacite_ERA_hit3_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
-    DescriptorId     = GUID:{d1d4077e-9959-44b4-8b2a-59b33e32cf8c}
+    DescriptorId     = GUID:{1e9cbc1f-23d4-4124-b884-ca2c0aa59f74}
     Name             = "ERAK5"
     NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
     Declenchement        = ~/CapaciteDeclenchementType_automatique
     TypeCible            = ~/CapaciteTypeCible_soi
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
@@ -361,7 +362,7 @@ export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750
     Radius              = 1.00 * Metre
     Range               = 1.00 * Metre
     AutomaticOrderRange = 0.00 * Metre
-    CastTime            = 0.10
+    CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
     AllowReflexDuringCast   = True
@@ -384,16 +385,59 @@ export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750
     TagsCiblePossible = [
     ]
     Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit4_1,
+    ]
+)
+export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{cbb7db50-ac68-4168-9fc6-3faae9f60a26}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit3_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit2_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-export Capacite_ERA_hit1 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+export Capacite_ERA_hit3_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
-    DescriptorId     = GUID:{e3142f56-3f93-454f-845e-8bf7fdd9971c}
+    DescriptorId     = GUID:{9e9cb442-df81-4fa3-b68a-8a8ebc4f36b0}
     Name             = "ERAK5"
     NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
     Declenchement        = ~/CapaciteDeclenchementType_automatique
     TypeCible            = ~/CapaciteTypeCible_soi
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
@@ -405,12 +449,12 @@ export Capacite_ERA_hit1 is TCapaciteDescriptor //18 hits takes you from 750mm v
     Radius              = 1.00 * Metre
     Range               = 1.00 * Metre
     AutomaticOrderRange = 0.00 * Metre
-    CastTime            = 1.00
+    CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
     AllowReflexDuringCast   = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit_1
+    TargetEffect         = ~/UnitEffect_ERA_hit3_remove_armor
     TargetEffectDuration = -1.00
     SelfEffectDuration   = 0.00
     MinVirtualUnits         = 1
@@ -428,15 +472,15 @@ export Capacite_ERA_hit1 is TCapaciteDescriptor //18 hits takes you from 750mm v
     TagsCiblePossible = [
     ]
     Conditions = [
-        ~/ConditionTagRaisedInUnit_ERA_hit_1,
+	//~/ConditionTagNotRaisedInUnit_ERA_hit6_1,
     ]
 )
-export Capacite_ERA_hit2 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+export Capacite_ERA_hit4_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
-    DescriptorId     = GUID:{e3142f56-3f93-454f-845e-8bf7fdd9971c}
+    DescriptorId     = GUID:{cddce0f8-2eec-4629-a7eb-cef9c854af89}
     Name             = "ERAK5"
     NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
     Declenchement        = ~/CapaciteDeclenchementType_automatique
     TypeCible            = ~/CapaciteTypeCible_soi
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
@@ -448,12 +492,12 @@ export Capacite_ERA_hit2 is TCapaciteDescriptor //18 hits takes you from 750mm v
     Radius              = 1.00 * Metre
     Range               = 1.00 * Metre
     AutomaticOrderRange = 0.00 * Metre
-    CastTime            = 1.00
+    CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
     AllowReflexDuringCast   = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit_2
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag4
     TargetEffectDuration = -1.00
     SelfEffectDuration   = 0.00
     MinVirtualUnits         = 1
@@ -471,7 +515,1495 @@ export Capacite_ERA_hit2 is TCapaciteDescriptor //18 hits takes you from 750mm v
     TagsCiblePossible = [
     ]
     Conditions = [
-        ~/ConditionTagRaisedInUnit_ERA_hit1_1,
+	//~/ConditionTagNotRaisedInUnit_ERA_hit5_1,
+    ]
+)
+export Capacite_ERA_hit_tag4 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{bbe12fc0-f769-419f-993b-bf05f4bed9f0}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit4_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit3_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit5_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{5908668b-2028-4ec2-a80d-563c817e78e4}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag5
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit6_1,
+    ]
+)
+export Capacite_ERA_hit_tag5 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{2db64dfa-0a55-45ca-b89f-65163227cb64}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit5_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit4_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit6_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{7341afe5-3e67-4e40-a79d-b22967923a12}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag6
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit7_1,
+    ]
+)
+export Capacite_ERA_hit_tag6 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{2d873c6c-8490-4e7c-9fa1-c11445618b3b}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit6_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit5_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+export Capacite_ERA_hit6_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{2f23c0f6-8a89-426c-a527-c36ce2e0ecb1}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit6_remove_armor
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit9_1,
+    ]
+)
+
+export Capacite_ERA_hit7_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{8f2de3bf-dd17-48fd-88f3-08a77a3849de}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag7
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit8_1,
+    ]
+)
+export Capacite_ERA_hit_tag7 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{8cfe87a9-6b32-44d6-800c-558d43ad4477}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit7_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit6_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit8_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{70d537c1-1898-4624-b770-d0d36a035d28}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag8
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit9_1,
+    ]
+)
+export Capacite_ERA_hit_tag8 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{5bf8376a-09c4-474e-88d0-ed8836f70619}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit8_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit7_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit9_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{4ffc678e-215c-4d0f-91ad-411730ba236c}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag9
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit10_1,
+    ]
+)
+export Capacite_ERA_hit_tag9 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{60142ac9-e467-4b99-91c4-a65ec749a087}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit9_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit8_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+export Capacite_ERA_hit9_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{b276510f-7436-4b5a-84e6-2f03b660d021}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit9_remove_armor
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit12_1,
+    ]
+)
+
+export Capacite_ERA_hit10_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{789c2562-5826-47bf-8eac-cbb71f936416}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag10
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit11_1,
+    ]
+)
+export Capacite_ERA_hit_tag10 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{16b1ba54-ab64-4bee-84f7-2207f747902c}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit10_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit9_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+export Capacite_ERA_hit11_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{047b3a52-e503-40ca-8a32-5c184a9b2a28}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag11
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit12_1,
+    ]
+)
+export Capacite_ERA_hit_tag11 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{3561565d-a840-441d-bd78-a8b2397d0cdd}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit11_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit10_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit12_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{58109324-9d89-4e74-9e02-aa10b1b02447}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag12
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit13_1,
+    ]
+)
+export Capacite_ERA_hit_tag12 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{be880d6a-26ef-4490-883e-0fa57daa8650}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit12_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit11_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+export Capacite_ERA_hit12_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{db9749b2-0800-4518-9152-4dc4e148a81c}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit12_remove_armor
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit15_1,
+    ]
+)
+
+export Capacite_ERA_hit13_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{551b9551-6e90-4795-abf0-fb04ee019366}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag13
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit14_1,
+    ]
+)
+export Capacite_ERA_hit_tag13 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{2f25ad22-1ebb-468d-bc60-07fedfa6f876}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit13_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit12_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit14_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{d4b52ff8-0db6-48db-8ad7-8fcd6a4087dc}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag14
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit15_1,
+    ]
+)
+export Capacite_ERA_hit_tag14 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{372f79ac-6bf9-4b63-b740-4553e0834cae}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit14_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit13_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit15_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{a708e49c-77ac-489e-bf01-7cd7e9b6d04c}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag15
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit16_1,
+    ]
+)
+export Capacite_ERA_hit_tag15 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{debbb25b-a59b-4354-8b45-6b0e8b66316f}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit15_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit14_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+export Capacite_ERA_hit15_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{667662be-c2c4-43fe-a592-e3d6974e45ea}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit15_remove_armor
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit18_1,
+    ]
+)
+
+export Capacite_ERA_hit16_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{3a141879-fb91-43ec-8e52-bd9e67515f85}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag16
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit17_1,
+    ]
+)
+export Capacite_ERA_hit_tag16 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{82dbc55f-08f3-4356-b864-a3b4e6429c3d}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit16_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit15_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit17_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{3c5d0b14-fd7a-48cc-9144-2926fe19ded8}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag17
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	//~/ConditionTagNotRaisedInUnit_ERA_hit18_1,
+    ]
+)
+export Capacite_ERA_hit_tag17 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{378b38da-fcc7-46c0-a36c-737bb12bc9cd}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit17_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit16_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+
+export Capacite_ERA_hit18_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{7af03767-6b52-4b57-8a67-3516b8c8bb40}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit_tag18
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_ERA_hit_tag18 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{069f4635-00b3-486c-852b-b7d0afd16fe7}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.02
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit18_cap
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit17_1,
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+)
+export Capacite_ERA_hit18_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{200ea07e-d854-4be3-8fa1-ebbf32e4f61f}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    Radius              = 1.00 * Metre
+    Range               = 1.00 * Metre
+    AutomaticOrderRange = 0.00 * Metre
+    CastTime            = 0.0
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_hit18_remove_armor
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    Conditions = [
     ]
 )
 export Capacite_Aura_Commandement_2 is TCapaciteDescriptor

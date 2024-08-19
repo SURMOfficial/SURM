@@ -100,6 +100,25 @@ template CriticalEffect_BailedOut
     Roll = <Roll>
     Descriptor = ~/CriticalEffect_BailedOut_Desc
 )
+CriticalEffect_Weakpoint_Desc is TCriticalEffectDescriptor //custom labels are broken for now in critics but see the labels file when restored
+(
+    Token = 'KNOCKOUT'
+    HappeningKey = 'critical_crew_dead'
+    EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Weakpoint
+    TimeOut = -1
+    RepairCost = -1
+    Unique = False
+    DisplayOnDeath = False
+)
+// Bailed out
+template CriticalEffect_Weakpoint
+[
+    Roll
+] is TCriticalEffect
+(
+    Roll = <Roll>
+    Descriptor = ~/CriticalEffect_Weakpoint_Desc
+)
 
 CriticalEffect_TransmissionDamaged_Desc is TCriticalEffectDescriptor
 (
