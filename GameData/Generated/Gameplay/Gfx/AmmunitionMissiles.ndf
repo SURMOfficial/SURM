@@ -4964,7 +4964,7 @@ Ammo_AGM_AS30 is TAmmunitionDescriptor
     PhysicalDamages                   = 11.8
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((325) * Metre * MeterCorr)
-    SuppressDamages                   = 1400.0
+    SuppressDamages                   = 800
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -5047,7 +5047,7 @@ Ammo_AGM_AS30L is TAmmunitionDescriptor
     PhysicalDamages                   = 10.7
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((325) * Metre * MeterCorr)
-    SuppressDamages                   = 1400.0
+    SuppressDamages                   = 800
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -6520,7 +6520,7 @@ Ammo_AGM_Kh28_X28 is TAmmunitionDescriptor //will remove SEAD missiles
     PhysicalDamages                   = 11.8
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((325) * Metre * MeterCorr)
-    SuppressDamages                   = 1400.0
+    SuppressDamages                   = 800
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -6604,7 +6604,7 @@ Ammo_AGM_Kh29D is TAmmunitionDescriptor
     PhysicalDamages                   = 13.1
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((400) * Metre * MeterCorr)
-    SuppressDamages                   = 1500.0
+    SuppressDamages                   = 850.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -6762,7 +6762,7 @@ Ammo_AGM_Kh29T is TAmmunitionDescriptor
     PhysicalDamages                   = 13.1
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((400) * Metre * MeterCorr)
-    SuppressDamages                   = 1500.0
+    SuppressDamages                   = 850.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -8196,7 +8196,7 @@ Ammo_ATGM_9M119M_Refleks is TAmmunitionDescriptor //reduce to 19 AP if it's not 
     DescriptorId                      = GUID:{63e4474e-5264-4921-b769-6be2bb7e06f5}
     Name                              = 'JNADZCJSNX'
     TypeCategoryName                  = 'JTOYRAARTS'
-    Caliber                           = 'NXXHARPQHU'
+    Caliber                           = 'XKUTMAUMJH'
     WeaponDescriptionToken            = ''
     TraitsToken                       = [ 'MOTION', 'manual', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
@@ -11450,7 +11450,7 @@ Ammo_Bomb_BGL_400_x1 is TAmmunitionDescriptor
     PhysicalDamages                   = 13.7
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((400) * Metre * MeterCorr)
-    SuppressDamages                   = 1594.0
+    SuppressDamages                   = 1100.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -11534,7 +11534,7 @@ Ammo_Bomb_BGL_400_x2 is TAmmunitionDescriptor
     PhysicalDamages                   = 13.7
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((400) * Metre * MeterCorr)
-    SuppressDamages                   = 1594.0
+    SuppressDamages                   = 1100.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -11599,7 +11599,7 @@ Ammo_Bomb_CPU_123_x1 is TAmmunitionDescriptor //now labeled GBU-16 (correct?)
     MinMaxCategory                    = MinMax_Bombe
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz_bombe Index=1)
     ProjectileType                    = EProjectileType/GuidedMissile
-    ImpactHappening                   = [ 'MissileBombeGBU1500Kg' ]
+    ImpactHappening                   = [ 'MissileBombeGBU1000Kg' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 0.1
     TempsEntreDeuxFx                  = 0.1
@@ -11682,7 +11682,7 @@ Ammo_Bomb_CPU_123_x2 is TAmmunitionDescriptor //now GBU-16
     MinMaxCategory                    = MinMax_Bombe
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz_bombe Index=1)
     ProjectileType                    = EProjectileType/GuidedMissile
-    ImpactHappening                   = [ 'MissileBombeGBU1500Kg' ]
+    ImpactHappening                   = [ 'MissileBombeGBU1000Kg' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 0.1
     TempsEntreDeuxFx                  = 0.1
@@ -11701,7 +11701,7 @@ Ammo_Bomb_CPU_123_x2 is TAmmunitionDescriptor //now GBU-16
     PhysicalDamages                   = 14.2
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((420) * Metre * MeterCorr)
-    SuppressDamages                   = 1594.0
+    SuppressDamages                   = 1100.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -11785,7 +11785,7 @@ Ammo_Bomb_GBU_10_x1 is TAmmunitionDescriptor
     PhysicalDamages                   = 19.4
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((480) * Metre * MeterCorr)
-    SuppressDamages                   = 2520.0
+    SuppressDamages                   = 1500.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -11850,7 +11850,7 @@ Ammo_Bomb_GBU_10_x2 is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_Bombe
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz_bombe Index=1)
     ProjectileType                    = EProjectileType/GuidedMissile
-    ImpactHappening                   = [ 'MissileBombeGBU1000Kg' ]
+    ImpactHappening                   = [ 'MissileBombeGBU1500Kg' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 0.1
     TempsEntreDeuxFx                  = 0.1
@@ -11869,7 +11869,7 @@ Ammo_Bomb_GBU_10_x2 is TAmmunitionDescriptor
     PhysicalDamages                   = 19.4
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((480) * Metre * MeterCorr)
-    SuppressDamages                   = 2520.0
+    SuppressDamages                   = 1500.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -11953,7 +11953,7 @@ Ammo_Bomb_GBU_12_x1 is TAmmunitionDescriptor
     PhysicalDamages                   = 11.2
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((300) * Metre * MeterCorr)
-    SuppressDamages                   = 1400.0
+    SuppressDamages                   = 850.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
@@ -12037,7 +12037,7 @@ Ammo_Bomb_GBU_12_x2 is TAmmunitionDescriptor
     PhysicalDamages                   = 11.2
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((300) * Metre * MeterCorr)
-    SuppressDamages                   = 1400.0
+    SuppressDamages                   = 800
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -12102,7 +12102,7 @@ Ammo_Bomb_GBU_27_x1 is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_Bombe
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz_bombe Index=1)
     ProjectileType                    = EProjectileType/GuidedMissile
-    ImpactHappening                   = [ 'MissileBombeGBU1000Kg' ]
+    ImpactHappening                   = [ 'MissileBombeGBU1500Kg' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 0.1
     TempsEntreDeuxFx                  = 0.1
@@ -12121,7 +12121,7 @@ Ammo_Bomb_GBU_27_x1 is TAmmunitionDescriptor
     PhysicalDamages                   = 19.4
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((480) * Metre * MeterCorr)
-    SuppressDamages                   = 2520.0
+    SuppressDamages                   = 1500.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -12186,7 +12186,7 @@ Ammo_Bomb_GBU_27_x2 is TAmmunitionDescriptor
     MinMaxCategory                    = MinMax_Bombe
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz_bombe Index=1)
     ProjectileType                    = EProjectileType/GuidedMissile
-    ImpactHappening                   = [ 'MissileBombeGBU1000Kg' ]
+    ImpactHappening                   = [ 'MissileBombeGBU1500Kg' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 0.1
     TempsEntreDeuxFx                  = 0.1
@@ -12205,7 +12205,7 @@ Ammo_Bomb_GBU_27_x2 is TAmmunitionDescriptor
     PhysicalDamages                   = 19.4
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((480) * Metre * MeterCorr)
-    SuppressDamages                   = 2520.0
+    SuppressDamages                   = 850.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -12289,7 +12289,7 @@ Ammo_Bomb_KAB_1500Kr_x1 is TAmmunitionDescriptor
     PhysicalDamages                   = 23.6
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((550) * Metre * MeterCorr)
-    SuppressDamages                   = 5020.0
+    SuppressDamages                   = 1800.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -12373,7 +12373,7 @@ Ammo_Bomb_KAB_1500Kr_x2 is TAmmunitionDescriptor
     PhysicalDamages                   = 23.6
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamages       = ((550) * Metre * MeterCorr)
-    SuppressDamages                   = 5020.0
+    SuppressDamages                   = 1800.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
@@ -12426,7 +12426,7 @@ Ammo_Bomb_KAB_1500Kr_x2 is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_Bomb_KAB_1500L_x1 is TAmmunitionDescriptor
+Ammo_Bomb_KAB_1500L_x1 is TAmmunitionDescriptor //unused needs work
 (
     DescriptorId                      = GUID:{4a77b583-34db-491a-bb31-641175ef35f1}
     Name                              = 'XGNYFLUPVZ'

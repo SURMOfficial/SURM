@@ -4,7 +4,7 @@
 //ammo explosiions now do more damage than fuel explosions
 CriticalEffect_AmmoExplosion_Desc is TCriticalEffectDescriptor
 (
-    Token = 'AMMO'
+    Token = 'CRITIC1'
     HappeningKey = 'critical_ammo'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Effet_Meurt
     TimeOut = 0
@@ -83,7 +83,7 @@ template CriticalEffect_CrewKilled
 )
 CriticalEffect_BailedOut_Desc is TCriticalEffectDescriptor //custom labels are broken for now in critics but see the labels file when restored
 (
-    Token = 'KNOCKOUT'
+    Token = 'CRITIC5'
     HappeningKey = 'critical_crew_dead'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Bailed_Out
     TimeOut = -1
@@ -102,7 +102,7 @@ template CriticalEffect_BailedOut
 )
 CriticalEffect_Weakpoint_Desc is TCriticalEffectDescriptor //custom labels are broken for now in critics but see the labels file when restored
 (
-    Token = 'KNOCKOUT'
+    Token = 'CRITIC5'
     HappeningKey = 'critical_crew_dead'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Weakpoint
     TimeOut = -1
@@ -122,7 +122,7 @@ template CriticalEffect_Weakpoint
 
 CriticalEffect_TransmissionDamaged_Desc is TCriticalEffectDescriptor
 (
-    Token = 'PWRDAMAG'
+    Token = 'CRITIC6'//'PWRDAMAG'
     HappeningKey = 'critical_engine_damaged'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Vitesse_50
     TimeOut = -1
@@ -142,7 +142,7 @@ template CriticalEffect_TransmissionDamaged
 
 CriticalEffect_TransmissionDestroyed_Desc is TCriticalEffectDescriptor
 (
-    Token = 'PWRDESTR' //CRITIC7 is the right label but doesn't work
+    Token = 'CRITIC9'//'PWRDESTR' //CRITIC7 is the right label but doesn't work
     HappeningKey = 'critical_engine_destroyed'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Full_Stop
     TimeOut = -1
@@ -161,12 +161,12 @@ template CriticalEffect_TransmissionDestroyed
 )
 CriticalEffect_EngineDamaged_Desc is TCriticalEffectDescriptor
 (
-    Token = 'PWRDAMAG'
+    Token = 'CRITIC8'//'PWRDAMAG'
     HappeningKey = 'critical_engine_damaged'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Vitesse_50
     TimeOut = -1
     RepairCost = 50
-    Unique = True
+    Unique = False
     DisplayOnDeath = False
 )
 // Moteur endommagée -> 50% vitesse
@@ -181,12 +181,12 @@ template CriticalEffect_EngineDamaged
 
 CriticalEffect_EngineDestroyed_Desc is TCriticalEffectDescriptor
 (
-    Token = 'PWRDESTR'
+    Token = 'CRITIC9'//'PWRDESTR'
     HappeningKey = 'critical_engine_destroyed'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Full_Stop
     TimeOut = -1
     RepairCost = 100
-    Unique = True
+    Unique = False
     DisplayOnDeath = False
 )
 // Moteur pété -> Full stop

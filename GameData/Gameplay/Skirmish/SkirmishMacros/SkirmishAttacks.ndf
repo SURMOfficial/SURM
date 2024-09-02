@@ -36,7 +36,7 @@ Default_Support_Request_Attack_Settings is
 //-------------------------------------------------------------------------
 Blitzkrieg_Attack_Settings is
 [
-    TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 2.0   MinimumCostForSelfPreservation = 100),
+    TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 20.0   MinimumCostForSelfPreservation = 100),
 ]
 //-------------------------------------------------------------------------
 AvoidFillerCorridors_Attack_Settings is
@@ -61,7 +61,7 @@ is TMacroActionDescriptor_ObjectiveAttack_Specific
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [Pool_Objective_Attack] LaunchASAP_RatioMin = 0.01),
-        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.825),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.001),
         TAttackRatioSettingHolder(DifficultyList = [IADifficulty/TresFacile] RatioMinimumPourAttaquer = 100.0),
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
     ]
@@ -99,7 +99,7 @@ private template Template_Main_Attack
     SupportingStatus = ESupportingStatus/NeedSupport,
     PoolModel_Generic = ~/Pool_Main_Attack,
     PoolModel_Easy = ~/Pool_Main_Attack_Easy,
-    RatioMinimumPourAttaquer = 0.875,
+    RatioMinimumPourAttaquer = 0.001,
 ]
 is TMacroActionDescriptor_CorridorAttack_Specific
 (
@@ -155,7 +155,7 @@ export Attack_Filler is TMacroActionDescriptor_CorridorAttack_Specific
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfCorridors NumberLaunchBasedOnGenerationType = 1 ConsiderOnlyAssignedCorridors = true),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [~/Pool_Attack_Filler] LaunchASAP_RatioMin = 0.01),
-        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 1.75),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.001),
         TCorridorPlacementSettingHolder(StayInCorridorIfp = true MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
     ]
 )
@@ -165,7 +165,7 @@ export Attack_Filler is TMacroActionDescriptor_CorridorAttack_Specific
 private template Template_Attack_Corridor
 [
     MinimumResourceForLaunch = MAP[],
-    RatioMinimumPourAttaquer:float = 0.875,
+    RatioMinimumPourAttaquer:float = 0.001,
     AdditionnalParameter = [],
 ]
 is TMacroActionDescriptor_CorridorAttack_Specific
@@ -189,7 +189,7 @@ is TMacroActionDescriptor_CorridorAttack_Specific
         [
             (["AttackInfantry"], [ Pool_Infantry_Attack_1, Pool_Infantry_Attack_2, Pool_Infantry_Attack_3 ]),
             (["AttackCombined"], [ Pool_Combined_Attack_1, Pool_Combined_Attack_2, Pool_Combined_Attack_3 ]),
-            (["AttackTank"], [ Pool_Tank_Attack_1, Pool_Tank_Attack_2, Pool_Tank_Attack_3 ]),
+            (["AttackTank"], [ Pool_Combined_Attack_1, Pool_Combined_Attack_2, Pool_Combined_Attack_3 ]), //[ Pool_Tank_Attack_1, Pool_Tank_Attack_2, Pool_Tank_Attack_3 ]), //experiment to use more infantry
         ]
         LaunchASAP_RatioMin = 0.01),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.001),
@@ -210,7 +210,7 @@ export Attack_Adaptive is Template_Attack_Corridor
 private template Template_Attack_Helo
 [
     MinimumResourceForLaunch = MAP[],
-    RatioMinimumPourAttaquer:float = 0.875,
+    RatioMinimumPourAttaquer:float = 0.001,
     AdditionnalParameter = [],
 ]
 is TMacroActionDescriptor_CorridorAttack_Specific
@@ -249,7 +249,7 @@ export Attack_Helo_Autogen is Template_Attack_Helo
 export Attack_Adaptive_Autogen is Template_Attack_Corridor
 (
     MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
-    RatioMinimumPourAttaquer = 0.875
+    RatioMinimumPourAttaquer = 0.001
 )
 //-------------------------------------------------------------------------
 // Budgets

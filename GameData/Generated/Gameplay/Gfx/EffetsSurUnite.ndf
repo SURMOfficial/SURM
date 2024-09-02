@@ -2655,7 +2655,7 @@ export UnitEffect_Infanterie_Cowering is TEffectsPackDescriptor
 		TUnitEffectIncreaseDamageTakenDescriptor
         (
             ModifierType        = ~/ModifierType_Multiplicatif
-            BonusDamage         = 0.03
+            BonusDamage         = 0.05
             DamageType          = EDamageType/Suppress
         ),
     ]
@@ -5378,10 +5378,6 @@ export UnitEffect_ERA_hit is TEffectsPackDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit_tag ]
         ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_shock"
-        ),
     ]
 )
 export UnitEffect_ERA_hit_tag is TEffectsPackDescriptor
@@ -5395,10 +5391,6 @@ export UnitEffect_ERA_hit_tag is TEffectsPackDescriptor
                  "ERA_hit",
             ]
         ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_assault_half"
-        ),
     ]
 )
 export UnitEffect_ERA_add_hit1_cap is TEffectsPackDescriptor
@@ -5409,10 +5401,6 @@ export UnitEffect_ERA_add_hit1_cap is TEffectsPackDescriptor
         TUnitEffectAddCapacityDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit1_tag ]
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_shock"
         ),
     ]
 )
@@ -5427,10 +5415,6 @@ export UnitEffect_ERA_hit_tag1 is TEffectsPackDescriptor
                  "ERA_hit1",
             ]
         ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_sniper_off"
-        ),
     ]
 )
 export UnitEffect_ERA_add_hit2_cap is TEffectsPackDescriptor
@@ -5441,10 +5425,6 @@ export UnitEffect_ERA_add_hit2_cap is TEffectsPackDescriptor
         TUnitEffectAddCapacityDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit2_tag ]
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_howitzer"
         ),
     ]
 )
@@ -5459,10 +5439,6 @@ export UnitEffect_ERA_hit_tag2 is TEffectsPackDescriptor
                  "ERA_hit2",
             ]
         ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_electronic_warfare"
-        ),
     ]
 )
 export UnitEffect_ERA_add_hit3_cap is TEffectsPackDescriptor
@@ -5473,10 +5449,6 @@ export UnitEffect_ERA_add_hit3_cap is TEffectsPackDescriptor
         TUnitEffectAddCapacityDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit3_tag ]
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_security"
         ),
     ]
 )
@@ -5495,6 +5467,10 @@ export UnitEffect_ERA_hit_tag3 is TEffectsPackDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit3_armor ]
         ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_era"
+        ),
     ]
 )
 export UnitEffect_ERA_hit3_remove_armor is TEffectsPackDescriptor
@@ -5507,10 +5483,6 @@ export UnitEffect_ERA_hit3_remove_armor is TEffectsPackDescriptor
             ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=27)
             BlindageLocation    = ~/EArmorLocation/Front
         ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_era"
-        ),
     ]
 )
 export UnitEffect_ERA_add_hit4_cap is TEffectsPackDescriptor
@@ -5521,10 +5493,6 @@ export UnitEffect_ERA_add_hit4_cap is TEffectsPackDescriptor
         TUnitEffectAddCapacityDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit4_tag ]
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_reserviste"
         ),
     ]
 )
@@ -5539,10 +5507,6 @@ export UnitEffect_ERA_hit_tag4 is TEffectsPackDescriptor
                  "ERA_hit4",
             ]
         ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_falseflag"
-        ),
     ]
 )
 export UnitEffect_ERA_add_hit5_cap is TEffectsPackDescriptor
@@ -5553,10 +5517,6 @@ export UnitEffect_ERA_add_hit5_cap is TEffectsPackDescriptor
         TUnitEffectAddCapacityDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit5_tag ]
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_gsr"
         ),
     ]
 )
@@ -5571,10 +5531,6 @@ export UnitEffect_ERA_hit_tag5 is TEffectsPackDescriptor
                  "ERA_hit5",
             ]
         ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_ifv_2"
-        ),
     ]
 )
 export UnitEffect_ERA_add_hit6_cap is TEffectsPackDescriptor
@@ -5585,10 +5541,6 @@ export UnitEffect_ERA_add_hit6_cap is TEffectsPackDescriptor
         TUnitEffectAddCapacityDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit6_tag ]
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_jammer"
         ),
     ]
 )
@@ -5607,6 +5559,10 @@ export UnitEffect_ERA_hit_tag6 is TEffectsPackDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit6_armor ]
         ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_era2"
+        ),
     ]
 )
 export UnitEffect_ERA_hit6_remove_armor is TEffectsPackDescriptor
@@ -5618,10 +5574,6 @@ export UnitEffect_ERA_hit6_remove_armor is TEffectsPackDescriptor
         (
             ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=26)
             BlindageLocation    = ~/EArmorLocation/Front
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_era"
         ),
     ]
 )
@@ -5699,6 +5651,10 @@ export UnitEffect_ERA_hit_tag9 is TEffectsPackDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit9_armor ]
         ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_era3"
+        ),
     ]
 )
 export UnitEffect_ERA_hit9_remove_armor is TEffectsPackDescriptor
@@ -5710,10 +5666,6 @@ export UnitEffect_ERA_hit9_remove_armor is TEffectsPackDescriptor
         (
             ReplacementBlindage = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=25)
             BlindageLocation    = ~/EArmorLocation/Front
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_era"
         ),
     ]
 )
@@ -5791,6 +5743,10 @@ export UnitEffect_ERA_hit_tag12 is TEffectsPackDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit12_armor ]
         ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_era4"
+        ),
     ]
 )
 export UnitEffect_ERA_hit12_remove_armor is TEffectsPackDescriptor
@@ -5805,7 +5761,7 @@ export UnitEffect_ERA_hit12_remove_armor is TEffectsPackDescriptor
         ),
 		TUnitEffectShowLabelIconDescriptor
         (
-            TextureToken         = "Texture_Speciality_Icon_era"
+            TextureToken         = "Texture_Speciality_Icon_infantry_half"
         ),
     ]
 )
@@ -5883,6 +5839,10 @@ export UnitEffect_ERA_hit_tag15 is TEffectsPackDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit15_armor ]
         ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_era5"
+        ),
     ]
 )
 export UnitEffect_ERA_hit15_remove_armor is TEffectsPackDescriptor
@@ -5897,7 +5857,7 @@ export UnitEffect_ERA_hit15_remove_armor is TEffectsPackDescriptor
         ),
 		TUnitEffectShowLabelIconDescriptor
         (
-            TextureToken         = "Texture_Speciality_Icon_era"
+            TextureToken         = "Texture_Speciality_Icon_amphibie"
         ),
     ]
 )
@@ -5975,6 +5935,10 @@ export UnitEffect_ERA_hit_tag18 is TEffectsPackDescriptor
         (
             CapacityToAdd = [ ~/Capacite_ERA_hit18_armor ]
         ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_era6"
+        ),
     ]
 )
 export UnitEffect_ERA_hit18_remove_armor is TEffectsPackDescriptor
@@ -5989,7 +5953,7 @@ export UnitEffect_ERA_hit18_remove_armor is TEffectsPackDescriptor
         ),
 		TUnitEffectShowLabelIconDescriptor
         (
-            TextureToken         = "Texture_Speciality_Icon_era"
+            TextureToken         = "Texture_Speciality_Icon_shock"
         ),
     ]
 )

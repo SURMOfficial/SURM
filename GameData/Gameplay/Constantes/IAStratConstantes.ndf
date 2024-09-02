@@ -75,7 +75,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
 
     //--------------- Gun Threat ----------------------------------------------//
     //Cette variable sert a definir le nombre de tick que reste la menace ajoute par les tirs d'une artillerie
-    ArtilleryStrikeThreatLifeTime = 120
+    ArtilleryStrikeThreatLifeTime = 480
 
     //--------------- Mission de defense ! ----------------------------------------//
     DistanceToSeekDistrictForUnitInDefense = 4000 * Metre
@@ -468,7 +468,7 @@ export DefaultWargameTransport is
 //                                                                                      //
 //                                                                                      //
 //--------------------------------------------------------------------------------------//
-FakeGunThreatDescriptor is TFakeGunThreatDescriptor
+FakeGunThreatDescriptor is TFakeGunThreatDescriptor //unclear what this does, testing setting it to 0 seemed to stop some of the fall back then advance stuff
 (
     FakeThreatLifeTime = 90
     DistanceFromStart = 2000.0 * Metre
@@ -479,21 +479,21 @@ FakeGunThreatDescriptor is TFakeGunThreatDescriptor
     GunList = [
         TFakeGunDescriptor(
 
-            CurrentRange = 5000.0 * Metre
+            CurrentRange = 0000.0 * Metre
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family=DamageFamily_balle Index=1)
             ColPlan = ~/ECollisionPlane/Ground
             ),
         TFakeGunDescriptor(
 
-            CurrentRange = 5000.0 * Metre
+            CurrentRange = 0000.0 * Metre
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
             ColPlan = ~/ECollisionPlane/Ground
             ),
         TFakeGunDescriptor(
 
-            CurrentRange = 5000.0 * Metre
+            CurrentRange = 0000.0 * Metre
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family=DamageFamily_ap Index=10)
             ColPlan = ~/ECollisionPlane/Ground
