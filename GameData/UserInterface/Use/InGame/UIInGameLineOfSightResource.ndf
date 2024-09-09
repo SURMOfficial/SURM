@@ -46,34 +46,39 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
 
     CirclesDescriptors =
     [
-        Template_CircleDescriptor(
+        Template_CircleDescriptor
+        (
             RadiusGRU = 100
             Thickness = 1000
             ShowDistanceText = true
             TextSize = 3500
             Color = [216, 201, 181, 80]
-         ),
-        Template_CircleDescriptor(
+        ),
+        Template_CircleDescriptor
+        (
             RadiusGRU = 500
             Thickness = 1000
             ShowDistanceText = true
             TextSize = 3500
             Color = [216, 201, 181, 80]
-         ),
-        Template_CircleDescriptor(
+        ),
+        Template_CircleDescriptor
+        (
             RadiusGRU = 1000
             Thickness = 1000
             TextSize = 5000
             ShowDistanceText = true
-         ),
-        Template_CircleDescriptor(
+        ),
+        Template_CircleDescriptor
+        (
             RadiusGRU = 1500
             Thickness = 1000
             ShowDistanceText = true
             TextSize = 3500
             Color = [216, 201, 181, 80]
-         ),
-        Template_CircleDescriptor(
+        ),
+        Template_CircleDescriptor
+        (
             RadiusGRU = 2000
             Thickness = 1000
             TextSize = 5000
@@ -107,9 +112,16 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
         Template_CircleDescriptor(
             RadiusGRU = 4500
             Thickness = 1200
+            TextSize = 5000
+            ShowDistanceText = true
+        ),
+        Template_CircleDescriptor
+        (
+            RadiusGRU = 2500
+            Thickness = 1000
             ShowDistanceText = true
             TextSize = 3500
-        ),
+		)
     ]
 
     CircleOverrideDescriptor = TFeedbackLineOfSightCircleDescriptor

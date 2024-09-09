@@ -34,8 +34,7 @@ export WeaponConstantes is TWeaponConstantsDescriptor
         ),
     ]
 
-    //Types de blindage qui doivent être percées pour subir des dégâts
-    ResistanceWithBlindageFamilies =
+    ResistanceFamiliesNeedPiercing =
     [
         ResistanceFamily_blindage,
     ]
@@ -66,7 +65,7 @@ export WeaponConstantes is TWeaponConstantsDescriptor
     [
         (DamageFamily_he, [ResistanceFamily_blindage,]),
         (DamageFamily_balle, [ResistanceFamily_blindage,]),
-        (DamageFamily_balledca, [ResistanceFamily_blindage,]),
+        //(DamageFamily_balledca, [ResistanceFamily_blindage,]),
     ]
 
     //-----------------------------------------

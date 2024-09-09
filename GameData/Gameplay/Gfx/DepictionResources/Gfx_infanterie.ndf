@@ -1040,9 +1040,9 @@ export Modele_AeroRifles_US_05 is ModelDescriptor( FileName = US_GI_1 )
 export Modele_AeroRifles_US_LOW is ModelDescriptor( FileName = US_GI_1_LOW )
 
 //LightRifles_CMD_US
-export Modele_LightRifles_CMD_US is ModelDescriptor( FileName = US_GI_1 )
-export Modele_LightRifles_CMD_US_02 is ModelDescriptor( FileName = US_GI_1 )
-export Modele_LightRifles_CMD_US_03 is ModelDescriptor( FileName = US_GI_2 )
+export Modele_LightRifles_CMD_US is ModelDescriptor( FileName = US_GI_Officer )
+export Modele_LightRifles_CMD_US_02 is ModelDescriptor( FileName = US_GI_NCO )
+export Modele_LightRifles_CMD_US_03 is ModelDescriptor( FileName = US_GI_1 )
 export Modele_LightRifles_CMD_US_04 is ModelDescriptor( FileName = US_GI_2 )
 export Modele_LightRifles_CMD_US_05 is ModelDescriptor( FileName = US_GI_NCO )
 export Modele_LightRifles_CMD_US_06 is ModelDescriptor( FileName = US_GI_NCO )
@@ -1051,6 +1051,14 @@ export Modele_LightRifles_CMD_US_08 is ModelDescriptor( FileName = US_GI_spe )
 export Modele_LightRifles_CMD_US_09 is ModelDescriptor( FileName = US_GI_Sniper )
 export Modele_LightRifles_CMD_US_10 is ModelDescriptor( FileName = US_GI_Officer )
 export Modele_LightRifles_CMD_US_LOW is ModelDescriptor( FileName = US_GI_1_LOW )
+
+//LightRifles_Dragon_US
+export Modele_LightRifles_Dragon_US is ModelDescriptor( FileName = US_GI_NCO )
+export Modele_LightRifles_Dragon_US_02 is ModelDescriptor( FileName = US_GI_Sniper )
+export Modele_LightRifles_Dragon_US_03 is ModelDescriptor( FileName = US_GI_spe )
+export Modele_LightRifles_Dragon_US_04 is ModelDescriptor( FileName = US_GI_1 )
+export Modele_LightRifles_Dragon_US_05 is ModelDescriptor( FileName = US_GI_2 )
+export Modele_LightRifles_Dragon_US_LOW is ModelDescriptor( FileName = US_GI_1_LOW )
 
 //LightRifles_LAW_US
 export Modele_LightRifles_LAW_US is ModelDescriptor( FileName = US_GI_1 )
@@ -1943,7 +1951,12 @@ Militarstreifen_1 is 'GameData:/Assets/3D/Units/DDR/Infanterie/Militarstreifen/M
 Militarstreifen_2 is 'GameData:/Assets/3D/Units/DDR/Infanterie/Militarstreifen/Militarstreifen_2.fbx'
 Militarstreifen_1_LOW is 'GameData:/Assets/3D/Units/DDR/Infanterie/Militarstreifen/Militarstreifen_1_LOW.fbx'
 
+DDR_KSK_1 is 'GameData:/Assets/3D/Units/DDR/Infanterie/FJB/KSK_1.fbx'
+DDR_KSK_2 is 'GameData:/Assets/3D/Units/DDR/Infanterie/FJB/KSK_2.fbx'
+DDR_KSK_NCO is 'GameData:/Assets/3D/Units/DDR/Infanterie/FJB/KSK_NCO.fbx'
+
 //------------------------------------------------------------------------------
+
 //Reserve_HMG_DDR
 export Modele_Reserve_HMG_DDR is ModelDescriptor( FileName = DDR_MotSchutzen_NCO )
 export Modele_Reserve_HMG_DDR_02 is ModelDescriptor( FileName = DDR_MotSchutzen_Sniper )
@@ -2014,6 +2027,14 @@ export Modele_FJB_DDR_02 is  ModelDescriptor( FileName = 'GameData:/Assets/3D/Un
 export Modele_FJB_DDR_03 is  ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/DDR/Infanterie/FJB/FJB_NCO.fbx' )
 export Modele_FJB_DDR_04 is  ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/DDR/Infanterie/FJB/FJB_Officer.fbx' )
 export Modele_FJB_DDR_LOW is ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/DDR/Infanterie/FJB/FJB_1.fbx' )
+
+//KSK18_DDR
+export Modele_KSK18_DDR is ModelDescriptor( FileName = DDR_KSK_NCO )
+export Modele_KSK18_DDR_02 is ModelDescriptor( FileName = DDR_KSK_2 )
+export Modele_KSK18_DDR_03 is ModelDescriptor( FileName = DDR_KSK_1 )
+export Modele_KSK18_DDR_04 is     ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/DDR/Infanterie/FJB/FJB_1.fbx' )
+export Modele_KSK18_DDR_05 is  ModelDescriptor( FileName = 'GameData:/Assets/3D/Units/DDR/Infanterie/FJB/FJB_2.fbx' )
+export Modele_KSK18_DDR_LOW is ModelDescriptor( FileName = DDR_FJB_LOW )
 
 //ATGM_Fagot_DDR
 export Modele_ATGM_Fagot_DDR is ModelDescriptor( FileName = DDR_MotSchutzen_1 )
@@ -2256,7 +2277,7 @@ export Modele_Fallschirmjager_DDR_06 is ModelDescriptor( FileName = DDR_FJB_2 )
 export Modele_Fallschirmjager_DDR_LOW is ModelDescriptor( FileName = DDR_FJB_LOW )
 
 //Fallschirmjager_Metys_DDR
-export Modele_Fallschirmjager_Metys_DDR is ModelDescriptor( FileName = DDR_FJB_1 )
+export Modele_Fallschirmjager_Metys_DDR is ModelDescriptor( FileName = DDR_FJB_NCO )
 export Modele_Fallschirmjager_Metys_DDR_02 is ModelDescriptor( FileName = DDR_FJB_2 )
 export Modele_Fallschirmjager_Metys_DDR_03 is ModelDescriptor( FileName = DDR_FJB_NCO )
 export Modele_Fallschirmjager_Metys_DDR_04 is ModelDescriptor( FileName = DDR_FJB_Officer )
@@ -2377,6 +2398,10 @@ export Modele_MotRifles_Metis_DDR_04 is ModelDescriptor( FileName = DDR_MotSchut
 export Modele_MotRifles_Metis_DDR_05 is ModelDescriptor( FileName = DDR_MotSchutzen_Sniper )
 export Modele_MotRifles_Metis_DDR_06 is ModelDescriptor( FileName = DDR_MotSchutzen_spe )
 export Modele_MotRifles_Metis_DDR_LOW is ModelDescriptor( FileName = DDR_MotSchutzen_LOW )
+
+//Scout_Reserve_DDR
+export Modele_Scout_Reserve_DDR is ModelDescriptor( FileName = DDR_MotSchutzen_1 )
+export Modele_Scout_Reserve_DDR_LOW is ModelDescriptor( FileName = DDR_MotSchutzen_LOW )
 
 //Scout_DDR
 export Modele_Scout_DDR is ModelDescriptor( FileName = DDR_MotSchutzen_1 )
@@ -2504,9 +2529,9 @@ export Modele_BGS_RFA_LOW is ModelDescriptor( FileName = RFA_BGS_1_LOW )
 
 //------------------------------------------------------------------------------
 //Fallschirm_B1_RFA
-export Modele_Fallschirm_B1_RFA is ModelDescriptor( FileName = RFA_Fallschirm_1 )
-export Modele_Fallschirm_B1_RFA_02 is ModelDescriptor( FileName = RFA_Fallschirm_1 )
-export Modele_Fallschirm_B1_RFA_03 is ModelDescriptor( FileName = RFA_Fallschirm_2 )
+export Modele_Fallschirm_B1_RFA is ModelDescriptor( FileName = RFA_Fallschirm_NCO )
+export Modele_Fallschirm_B1_RFA_02 is ModelDescriptor( FileName = RFA_Fallschirm_spe )
+export Modele_Fallschirm_B1_RFA_03 is ModelDescriptor( FileName = RFA_Fallschirm_1 )
 export Modele_Fallschirm_B1_RFA_04 is ModelDescriptor( FileName = RFA_Fallschirm_2 )
 export Modele_Fallschirm_B1_RFA_05 is ModelDescriptor( FileName = RFA_Fallschirm_NCO )
 export Modele_Fallschirm_B1_RFA_06 is ModelDescriptor( FileName = RFA_Fallschirm_spe )
@@ -2520,9 +2545,9 @@ export Modele_Fallschirm_Engineers_RFA_04 is ModelDescriptor( FileName = RFA_Fal
 export Modele_Fallschirm_Engineers_RFA_LOW is ModelDescriptor( FileName = RFA_Fallschirm_LOW )
 
 //Fallschirm_RFA
-export Modele_Fallschirm_RFA is ModelDescriptor( FileName = RFA_Fallschirm_1 )
-export Modele_Fallschirm_RFA_02 is ModelDescriptor( FileName = RFA_Fallschirm_1 )
-export Modele_Fallschirm_RFA_03 is ModelDescriptor( FileName = RFA_Fallschirm_2 )
+export Modele_Fallschirm_RFA is ModelDescriptor( FileName = RFA_Fallschirm_NCO )
+export Modele_Fallschirm_RFA_02 is ModelDescriptor( FileName = RFA_Fallschirm_spe )
+export Modele_Fallschirm_RFA_03 is ModelDescriptor( FileName = RFA_Fallschirm_1 )
 export Modele_Fallschirm_RFA_04 is ModelDescriptor( FileName = RFA_Fallschirm_2 )
 export Modele_Fallschirm_RFA_05 is ModelDescriptor( FileName = RFA_Fallschirm_NCO )
 export Modele_Fallschirm_RFA_06 is ModelDescriptor( FileName = RFA_Fallschirm_spe )
@@ -4287,6 +4312,10 @@ export Modele_Sniper_paras_POL is ModelDescriptor( FileName = POL_Komandosi_1 )
 export Modele_Sniper_paras_POL_02 is ModelDescriptor( FileName = POL_Komandosi_spe )
 export Modele_Sniper_paras_POL_LOW is ModelDescriptor( FileName = POL_Komandosi_1_LOW )
 
+//Scout_SF_POL
+export Modele_Scout_SF_POL is ModelDescriptor( FileName = POL_Piechota_NCO )
+export Modele_Scout_SF_POL_LOW is ModelDescriptor( FileName = POL_Niebieskie_1_LOW )
+
 //Scout_LRRP_POL
 export Modele_Scout_LRRP_POL is ModelDescriptor( FileName = POL_Piechota_NCO )
 export Modele_Scout_LRRP_POL_02 is ModelDescriptor( FileName = POL_Piechota_2 )
@@ -4307,7 +4336,4 @@ Civil7_Pastel_Male is 'GameData:/Assets/3D/Units/URSS/Infanterie/Civil7_Pastel_M
 Civil8_Princess is    'GameData:/Assets/3D/Units/URSS/Infanterie/Civil8_Princess/Civil8_Princess.fbx'
 Civil9_Punk_Female is 'GameData:/Assets/3D/Units/URSS/Infanterie/Civil9_Punk_Female/Civil9_Punk_Female.fbx'
 Civil10_Punk_Male is  'GameData:/Assets/3D/Units/URSS/Infanterie/Civil10_Punk_Male/Civil10_Punk_Male.fbx'
-//KSK18_DDR
-export Modele_KSK18_DDR is ModelDescriptor( FileName = DDR_FJB_1 )
-export Modele_KSK18_DDR_LOW is ModelDescriptor( FileName = DDR_FJB_LOW )
 

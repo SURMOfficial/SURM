@@ -68,7 +68,7 @@ Constantes is TTunableConstante
     TimerRechercheDeCibleRiposte = -1
     TagRadioArtillerie = "Radio"
     TagRadioJammed = "RadioJammed"
-    PorteeRadioArtillerie = 1500 * MeterCorr * Metre //7500
+    PorteeRadioArtillerie = 2500 * MeterCorr * Metre //7500
     EfficiencyShotSearchDistanceTolerance = 100.0
 
     PerteDeSuppressParPointDeVieEntierPerdu = 150.0
@@ -290,7 +290,7 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
 
 //---------------------------- Constantes TandemCharge / ExplosiveReactiveArmor ---------------------------------------//
     // Bonus des charges tandem contre les armures réactives
-    TandemModifierValue = 2.0
+    TandemModifierValue = 0.0// 2.0 we aren't doing the bonus HP anymore
     TandemModifierType = ModifierType_Additionnel
 
 //--------------------------- Constantes SpreadOrder --------------------------------------//
@@ -307,8 +307,8 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
     MergeAllWeaponOnSameTurretInUI = false // permet d'indiquer dans l'interface si on merge les armes sur une même tourelle
                                            // même si elles ont des munitions différentes (boites de munitions différentes).
 
-    MaxWeaponsOnUI = 6 // Nombre d'armes affichées sur les panneaux d'interface qui affiche les armes
-
+    //MaxWeaponsOnUI = 6 // Nombre d'armes affichées sur les panneaux d'interface qui affiche les armes
+	//angry noises, god knows why they removed that
 
     AdditionalSuppressDamagePerLostPhysicalDamage = 200 // 75 // c'est un multiplicateur des degats physiques qu'on va appliquer en stress.
 
@@ -348,6 +348,7 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
 	SplashRatioDamage = [0.0] //crappy solution but nothing seems to work anymore
 	SplashRatioDistance = [0.0]
     TagAllowedForMissileRoE = "AllowedForMissileRoE"
+    TagNonRadarTargetable = "Non_Radar_Targetable"
 
     // Lorsqu'un projectile explose sur un plan et fait des dégats de splash, on définit quels plans sont affectés
     SplashCollisionPlanes = MAP
@@ -356,7 +357,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
             ~/ECollisionPlane/NoCollision,
             [
                 ~/ECollisionPlane/NoCollision,
-                ~/ECollisionPlane/BoatOnWater,
                 ~/ECollisionPlane/Ground,
                 ~/ECollisionPlane/NearGround,
                 ~/ECollisionPlane/LowAltitude,
@@ -365,18 +365,8 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
             ]
         ),
         (
-            ~/ECollisionPlane/BoatOnWater,
-            [
-                ~/ECollisionPlane/BoatOnWater,
-                ~/ECollisionPlane/Ground,
-                ~/ECollisionPlane/NearGround,
-                ~/ECollisionPlane/ProjectileAltitude,
-            ]
-        ),
-        (
             ~/ECollisionPlane/Ground,
             [
-                ~/ECollisionPlane/BoatOnWater,
                 ~/ECollisionPlane/Ground,
                 ~/ECollisionPlane/NearGround,
                 ~/ECollisionPlane/ProjectileAltitude,
@@ -385,7 +375,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
         (
             ~/ECollisionPlane/NearGround,
             [
-                ~/ECollisionPlane/BoatOnWater,
                 ~/ECollisionPlane/Ground,
                 ~/ECollisionPlane/NearGround,
                 ~/ECollisionPlane/LowAltitude,
@@ -411,7 +400,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
         (
             ~/ECollisionPlane/ProjectileAltitude,
             [
-                ~/ECollisionPlane/BoatOnWater,
                 ~/ECollisionPlane/Ground,
                 ~/ECollisionPlane/NearGround,
                 ~/ECollisionPlane/ProjectileAltitude,
@@ -629,6 +617,9 @@ WargameConstantes is TWargameTunableConstante
         2000,
         2500,
         3000,
+        5000,
+        15000,
+        30000,
     ]
 
     DestructionScoreToReachSetting =
@@ -654,6 +645,9 @@ WargameConstantes is TWargameTunableConstante
         (2000, [3000, 4000, 5000, 6000, 8000, 0]),
         (2500, [3000, 4000, 5000, 6000, 8000, 0]),
         (3000, [3000, 4000, 5000, 6000, 8000, 0]),
+        (10000, [3000, 4000, 5000, 6000, 8000, 0]),
+        (20000, [3000, 4000, 5000, 6000, 8000, 0]),
+        (30000, [3000, 4000, 5000, 6000, 8000, 0]),
         //(6000, [5000, 5500, 6000, 6500, 7000, 0]),
     ]
 
@@ -687,8 +681,8 @@ WargameConstantes is TWargameTunableConstante
     [
         (~/DissimulationValue/VEHICLE, 1.0),
         (~/DissimulationValue/VEHICLE_RECO, 2.0),
-        (~/DissimulationValue/INFANTRY, 9.2),
-        (~/DissimulationValue/INFANTRY_RECO, 15.7),
+        (~/DissimulationValue/INFANTRY, 5.2),
+        (~/DissimulationValue/INFANTRY_RECO, 7.8),
     ]
 
 //------------------------------ Constantes WargameBuilding --------------------------------------//

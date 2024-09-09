@@ -23,9 +23,9 @@ export Tactic_TeamUnitDescriptor is TEntityDescriptor
             // Point d'essence par tick
             FuelSupplyAmountBySecond = 10
             // Cout du ravitaillement de point de vie par tick
-            HealthSupplyAmountBySecond = 0//0.018 // 0.034
+            HealthSupplyAmountBySecond = 0.0
             // Cout du ravitaillement de munition par tick
-            AmmunitionSupplyAmountBySecond = 158 // reloads a F-111 with napalm (8160kg ) in 70 minutes (200 miles in the air from to/from rammestein in 20 minutes + 50 minutes hot reload)
+            AmmunitionSupplyAmountBySecond = 1 // want to correct 178 by 0.00068587105 but can't since it's stuck as an int
         ),
         TTeamCurrencyManagerModuleDescriptor
         (
@@ -103,9 +103,9 @@ export Tactic_TeamUnitDescriptor is TEntityDescriptor
         (
             SoundAcknowUnitPriority = 1
             SoundAcknowUnitDuration = 5
-            DamageFeedbackTriggerLevel = 0.3        // niveau de santé restante pour trigger le feedback "damage received"
-            HeavyDamageFeedbackTriggerLevel = 0.41  // niveau de santé restante pour trigger le feedback "heavy damage received"
-            EnemyContactZoneRadius = 5000 * OneMeterInGameUnits // 10000 * RangeCorr * Metre   // 2000 * OneMeterInGameUnits
+            DamageFeedbackTriggerLevel = 0.5        // niveau de santé restante pour trigger le feedback "damage received"
+            HeavyDamageFeedbackTriggerLevel = 0.25  // niveau de santé restante pour trigger le feedback "heavy damage received"
+            EnemyContactZoneRadius = 10000 * Metre
         ),
         TTeamDescriptionModuleDescriptor
         (

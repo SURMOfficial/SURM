@@ -41,6 +41,13 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
         (EMacroActionMissionType/ProduceBuilding, ['Avion', 'InfmapCommander']),
     ]
 
+    MinUnitWeightToReserveCorridor = 15.0
+    UnitTagAndWeightToReserveCorridor = MAP
+    [
+        ( "Infanterie", 1.0 ),
+        ( "Char", 0.5 ),
+    ]
+
     //--------------- Connaissance des zones ----------------------------------------//
 
     // Si on utilise le contrôle des zones par ratios de force, c'est la valeur minimale à dépasser pour contrôler la zone
@@ -240,8 +247,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     //Smart Order Custom Zone Filler
     ZoneFillerType = TCircleZoneFiller(Radius = 3)
 
-    MaxCustomZoneDistanceForSimilar = 830.0 * Metre
-
     DefaultInMapArtilleryAmount = 1
     DefaultOutMapArtilleryAmount = 1
 
@@ -269,11 +274,11 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
         (EDeploymentMode/NotSpecified, MAP[
             (IADifficulty/AnyDifficulty, (1.0, 1.5)),
             (IADifficulty/TresFacile, (1.0, 1.5)),         // On ne prend pas de risque, mais on perd aussi en réactivitée
-            (IADifficulty/Facile, (1.0, 1.5)),
-            (IADifficulty/Normal, (0.8, 1.25)),
-            (IADifficulty/Difficile, (0.65, 1.5)),
-            (IADifficulty/TresDifficile, (0.35, 1.75)),     // On prend plus de risque a partir de very hard
-            (IADifficulty/PlusDifficile, (0.0, 2.0)),
+            (IADifficulty/Facile, (1.0, 1.25)),
+            (IADifficulty/Normal, (0.8, 1.0)),
+            (IADifficulty/Difficile, (0.65, 0.9)),
+            (IADifficulty/TresDifficile, (0.35, 0.75)),     // On prend plus de risque a partir de very hard
+            (IADifficulty/PlusDifficile, (0.0, 0.5)),
         ]),
 
         (EDeploymentMode/Breakthrough, MAP[

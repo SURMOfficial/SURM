@@ -145,6 +145,51 @@ export Descriptor_Deck_WP_Unternehmen_Zentrum_multi is TDeckDescriptor
     ]
 )
 
+export Descriptor_Deck_RDA_Rugen_Gruppierung is TDeckDescriptor
+(
+    DeckName = 'LADKNTTNZK'
+    DeckDivision = ~/Descriptor_Deck_Division_RDA_Rugen_Gruppierung
+    DeckPackList =
+    [
+        ~/Descriptor_Deck_Pack_Reserve_CMD_DDR_W50_LA_A_DDR_1,
+        ~/Descriptor_Deck_Pack_Reserve_DDR_W50_LA_A_DDR_0,
+        ~/Descriptor_Deck_Pack_HMGteam_AGS17_DDR_UAZ_469_trans_DDR_1,
+        ~/Descriptor_Deck_Pack_MotRifles_CMD_POL_Star_266_POL_1,
+        ~/Descriptor_Deck_Pack_MotRifles_POL_OT_62_TOPAS_POL_1,
+        ~/Descriptor_Deck_Pack_MotRifles_SVD_POL_OT_62_TOPAS_POL_1,
+        ~/Descriptor_Deck_Pack_Engineers_Naval_Flam_DDR_W50_LA_A_DDR_0,
+        ~/Descriptor_Deck_Pack_ATteam_Konkurs_DDR_UAZ_469_trans_DDR_1,
+        ~/Descriptor_Deck_Pack_Howz_M46_130mm_DDR_MTLB_trans_DDR_0,
+        ~/Descriptor_Deck_Pack_Howz_D30_122mm_DDR_MTLB_trans_DDR_1,
+        ~/Descriptor_Deck_Pack_BTR_50_MRF_DDR_0,
+        ~/Descriptor_Deck_Pack_BTR_50_MRF_DDR_0,
+        ~/Descriptor_Deck_Pack_T55A_CMD_DDR_1,
+        ~/Descriptor_Deck_Pack_T55A_DDR_1,
+        ~/Descriptor_Deck_Pack_T55AM_Merida_POL_1,
+        ~/Descriptor_Deck_Pack_T72_DDR_1,
+        ~/Descriptor_Deck_Pack_KSK18_DDR_W50_LA_A_DDR_2,
+        ~/Descriptor_Deck_Pack_Scout_DDR_UAZ_469_trans_DDR_1,
+        ~/Descriptor_Deck_Pack_Mi_8TB_reco_Marine_DDR_1,
+        ~/Descriptor_Deck_Pack_PT76B_DDR_1,
+        ~/Descriptor_Deck_Pack_MANPAD_Strela_2M_DDR_BTR_152A_DDR_1,
+        ~/Descriptor_Deck_Pack_DCA_KS19_100mm_DDR_T813_trans_DDR_1,
+        ~/Descriptor_Deck_Pack_LO_1800_FASTA_4_DDR_1,
+        ~/Descriptor_Deck_Pack_ZSU_23_Shilka_DDR_1,
+        ~/Descriptor_Deck_Pack_2K11_KRUG_DDR_1,
+        ~/Descriptor_Deck_Pack_2K11_KRUG_DDR_1,
+        ~/Descriptor_Deck_Pack_Mi_8TB_DDR_1,
+        ~/Descriptor_Deck_Pack_Mi_14PL_AT_DDR_1,
+        ~/Descriptor_Deck_Pack_MiG_23ML_DDR_2,
+        ~/Descriptor_Deck_Pack_MiG_23BN_KMGU_DDR_1,
+        ~/Descriptor_Deck_Pack_L39ZO_CLU_DDR_2,
+        ~/Descriptor_Deck_Pack_L39ZO_HE1_DDR_2,
+        ~/Descriptor_Deck_Pack_FOB_DDR_1,
+        ~/Descriptor_Deck_Pack_PTS_M_supply_DDR_0,
+        ~/Descriptor_Deck_Pack_Ural_4320_DDR_0,
+        ~/Descriptor_Deck_Pack_Ural_4320_DDR_0,
+    ]
+)
+
 export Descriptor_Deck_FR_11e_Para_multi is TDeckDescriptor
 (
     DeckName = 'YSPZTECEMB'
@@ -999,6 +1044,50 @@ export Descriptor_Deck_US_24th_Inf_multi is TDeckDescriptor
         ~/Descriptor_Deck_Pack_FO_US_M151_MUTT_trans_US_0,
         ~/Descriptor_Deck_Pack_FO_US_M151_MUTT_trans_US_0,
         ~/Descriptor_Deck_Pack_Bco_FO_US_M151_MUTT_trans_US_0
+    ]
+)
+
+export Descriptor_Deck_US_35th_Inf_multi is TDeckDescriptor
+(
+    DeckName = 'IQBGXZCRGB'
+    DeckDivision = ~/Descriptor_Deck_Division_US_35th_Inf_multi
+    DeckPackList =
+    [
+        ~/Descriptor_Deck_Pack_NatGuard_CMD_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_NatGuard_M67_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_NatGuard_Dragon_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_NatGuard_Dragon_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_NatGuard_Engineers_Flam_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_ATteam_TOW_US_M151_MUTT_trans_US_1,
+        ~/Descriptor_Deck_Pack_ATteam_RCL_M40A1_NG_US_M151_MUTT_trans_US_1,
+        ~/Descriptor_Deck_Pack_M106A2_Howz_NG_US_1,
+        ~/Descriptor_Deck_Pack_M106A2_Howz_NG_US_1,
+        ~/Descriptor_Deck_Pack_M109A2_NG_US_0,
+        ~/Descriptor_Deck_Pack_M109A2_NG_US_0,
+        ~/Descriptor_Deck_Pack_M60A1_RISE_Passive_CMD_US_1,
+        ~/Descriptor_Deck_Pack_M60A1_RISE_Passive_US_1,
+        ~/Descriptor_Deck_Pack_M60A3_Patton_NG_US_1,
+        ~/Descriptor_Deck_Pack_M60A3_ERA_Patton_US_1,
+        ~/Descriptor_Deck_Pack_M113A2_TOW_US_1,
+        ~/Descriptor_Deck_Pack_M113A2_TOW_US_1,
+        ~/Descriptor_Deck_Pack_HvyScout_NG_Dragon_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_HvyScout_NG_Dragon_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_LRRP_CEWI_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_A37B_Dragonfly_US_2,
+        ~/Descriptor_Deck_Pack_M60A1_RISE_Passive_reco_US_1,
+        ~/Descriptor_Deck_Pack_MANPAD_Stinger_NG_US_M151_MUTT_trans_US_1,
+        ~/Descriptor_Deck_Pack_M42_Duster_US_1,
+        ~/Descriptor_Deck_Pack_DCA_XMIM_115A_Roland_US_1,
+        ~/Descriptor_Deck_Pack_DCA_I_Hawk_US_M35_trans_US_1,
+        ~/Descriptor_Deck_Pack_UH1M_gunship_US_1,
+        ~/Descriptor_Deck_Pack_AH1F_Cobra_NG_US_0,
+        ~/Descriptor_Deck_Pack_AH1F_Cobra_NG_US_0,
+        ~/Descriptor_Deck_Pack_M151_MUTT_CMD_US_1,
+        ~/Descriptor_Deck_Pack_Gama_Goat_supply_US_1,
+        ~/Descriptor_Deck_Pack_M812_supply_US_0,
+        ~/Descriptor_Deck_Pack_A37B_Dragonfly_HE_US_1,
+        ~/Descriptor_Deck_Pack_A37B_Dragonfly_NPLM_US_1,
+        ~/Descriptor_Deck_Pack_F4E_Phantom_II_AT_US_1,
     ]
 )
 

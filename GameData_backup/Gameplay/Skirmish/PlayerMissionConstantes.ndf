@@ -19,9 +19,9 @@ export colonelAttackDescriptor is TMacroActionDescriptor_Attack_Specific
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
-        TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
+        TSupportSettingHolder(SettingList = []), //used to have Renfort_TransportsAbandonnes but seems like removing this or setting the ration in that to very low havesimilar effects of causing agressive movement. I can't figure out how to get them to advance to contact before unloading though
         TArtilleryAmountSettingHolder(ArtilleryAmount = 2),
-        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 0.0001   MinimumCostForSelfPreservation = 0),
+        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 20.0   MinimumCostForSelfPreservation = 100),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.001),
         TMacroActionProductionSettingHolder(DisableReinforcement = true),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
