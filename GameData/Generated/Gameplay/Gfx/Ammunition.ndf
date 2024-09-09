@@ -56718,6 +56718,158 @@ Ammo_Mortier_81mm_61C_SMOKE is TAmmunitionDescriptor
     DistanceForSpeed                      = (MortarSpeedCorr * (8761) * RangeCorr * Metre)
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
+Ammo_Mortier_81mm_MO81_61C_towed is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{2611ac8d-627b-4e81-a9fe-c096b26d5562}
+    Name                              = 'HHUGAYSCFV'
+    TypeCategoryName                  = 'HYUWZSIKYW'
+    Caliber                           = 'VTYBQBGFPC'
+    WeaponDescriptionToken            = 'YWFMBNSXOW'
+    TraitsToken                       = [ 'STAT', 'HE', 'IND', ]
+    WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
+    MinMaxCategory                    = MinMax_Mortier
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz Index=1)
+    ProjectileType                    = EProjectileType/Artillerie
+    ImpactHappening                   = [ 'MortierM30107Mm' ]
+    FxPower                           = EFXPower/Moyen
+    TempsEntreDeuxTirs                = 3.0
+    TempsEntreDeuxFx                  = 3.0
+    PorteeMaximaleGRU                 = 4925
+    PorteeMinimaleGRU                 = 1202
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRange              = ((1000) * Metre)
+    DispersionAtMinRange              = ((200) * Metre)
+    DispersionWithoutSorting          = True
+    CorrectedShotAimtimeMultiplier    = 1.0
+    RadiusSplashPhysicalDamages       = 146 * Metre
+    PhysicalDamages                   = 0.9963000000000001
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamages       = 219 * Metre
+    SuppressDamages                   = 103.0
+    AllowSuppressDamageWhenNoImpact                = True
+    DisplaySalveAccuracy              = True
+    TirIndirect                       = True
+    TirReflexe                        = False
+    InterdireTirReflexe               = False
+    MaximalSpeed                      = 0.0
+    ShotWithoutPhysics                = False
+    FluidFriction                     = 0.0
+    NoiseDissimulationMalus           = 2.0
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        DescriptorId          = GUID:{331e200d-3e9f-4de0-afa6-4dc52569ced7}
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, 0),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0.0),
+        ]
+        DistanceToTarget = True
+    )
+    TempsDeVisee                      = 9.2
+    TempsEntreDeuxSalves              = 8.0
+    TempsEntreDeuxSalves_Min           = -1.0
+    TempsEntreDeuxSalves_Max           = -1.0
+    NbTirParSalves                    = 5
+    SupplyCost                        = 40.0
+    NbSalvosShootOnPosition           = 2
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    NbrProjectilesSimultanes          = 1
+    AffichageMunitionParSalve         = 5
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_81mm_mortar"
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
+    FireTriggeringProbability         = 0.2
+    TargetUnitCenter                  = True
+    CanHarmAirplanes                  = True
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    FlightTimeForSpeed                    = 15.0
+    DistanceForSpeed                      = 13938.0 * Metre
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Mortier_81mm_MO81_61C_towed_SMOKE is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{264b0d67-5518-4895-a419-f9fc56818388}
+    Name                              = 'EMDMBCMHDJ'
+    TypeCategoryName                  = 'HYUWZSIKYW'
+    Caliber                           = 'VTYBQBGFPC'
+    WeaponDescriptionToken            = 'YWFMBNSXOW'
+    TraitsToken                       = [ 'STAT', 'HE', 'IND', ]
+    WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
+    MinMaxCategory                    = MinMax_Mortier
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Artillerie
+    ImpactHappening                   = [ 'MortierM30107MmSmoke' ]
+    FxPower                           = EFXPower/Moyen
+    TempsEntreDeuxTirs                = 3.0
+    TempsEntreDeuxFx                  = 3.0
+    PorteeMaximaleGRU                 = 4925
+    PorteeMinimaleGRU                 = 1202
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRange              = ((1000) * Metre)
+    DispersionAtMinRange              = ((200) * Metre)
+    DispersionWithoutSorting          = True
+    CorrectedShotAimtimeMultiplier    = 1.0
+    RadiusSplashPhysicalDamages       = 5 * Metre
+    PhysicalDamages                   = 0.12
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamages       = 1 * Metre
+    SuppressDamages                   = 7.0
+    AllowSuppressDamageWhenNoImpact                = True
+    DisplaySalveAccuracy              = True
+    TirIndirect                       = True
+    TirReflexe                        = False
+    InterdireTirReflexe               = False
+    MaximalSpeed                      = 0.0
+    ShotWithoutPhysics                = False
+    FluidFriction                     = 0.0
+    NoiseDissimulationMalus           = 2.0
+    ShotsBeforeMaxNoise               = 2
+    TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        DescriptorId          = GUID:{56e13108-7f72-4223-83a3-2d502b75cd98}
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, 0),
+            (EBaseHitValueModifier/Moving, 0),
+            (EBaseHitValueModifier/Targeted, 0.0),
+        ]
+        DistanceToTarget = True
+    )
+    TempsDeVisee                      = 4.0
+    TempsEntreDeuxSalves              = 5.0
+    TempsEntreDeuxSalves_Min           = -1.0
+    TempsEntreDeuxSalves_Max           = -1.0
+    NbTirParSalves                    = 5
+    SupplyCost                        = 5.0
+    NbSalvosShootOnPosition           = 2
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    NbrProjectilesSimultanes          = 1
+    AffichageMunitionParSalve         = 5
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_81mm_mortar"
+    SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi81mm
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
+    FireTriggeringProbability         = 0.05
+    TargetUnitCenter                  = True
+    CanHarmAirplanes                  = True
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    FlightTimeForSpeed                    = 15.0
+    DistanceForSpeed                      = 13938.0 * Metre
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
 Ammo_Mortier_81mm_SMOKE is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{c9165d39-f49a-4ee4-a0f1-91fc53ecdd34}

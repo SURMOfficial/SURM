@@ -7571,7 +7571,8 @@ Gfx_LRRP_BEL is TemplateInfantryDepictionSquad
 AllWeaponAlternatives_LRRP_BEL is [
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_FNC ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_M249 ),
-  TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_M72A4 ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_FN_Model_30_11 ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_4'] MeshDescriptor = $/GFX/DepictionResources/Modele_M72A4 ),
   TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_M72A4 ),
 ]
 AllWeaponSubDepiction_LRRP_BEL is TemplateAllSubWeaponDepiction
@@ -7590,8 +7591,13 @@ AllWeaponSubDepiction_LRRP_BEL is TemplateAllSubWeaponDepiction
     ),
     DepictionOperator_WeaponInstantFireInfantry
     (
-      FireEffectTag = ["FireEffect_RocketInf_M72_LAW_66mm"]
+      FireEffectTag = ["FireEffect_Sniper_FN_Model_3011"]
       WeaponShootDataPropertyName = "WeaponShootData_0_3"
+    ),
+    DepictionOperator_WeaponInstantFireInfantry
+    (
+      FireEffectTag = ["FireEffect_RocketInf_M72A1_LAW_66mm"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_4"
     ),
   ]
 )
@@ -7616,7 +7622,7 @@ TacticDepiction_LRRP_BEL_Soldier is TemplateInfantryDepictionFactoryTactic
   Selector = InfantrySelectorTactic_00_08
   Alternatives = TacticDepiction_LRRP_BEL_Alternatives
   SubDepictions = [AllWeaponSubDepiction_LRRP_BEL, AllWeaponSubDepictionBackpack_LRRP_BEL]
-  Operators = [DepictionOperator_SkeletalAnimation2_Default( ConditionalTags = [ ('bazooka', 'MeshAlternative_3') ] )]
+  Operators = [DepictionOperator_SkeletalAnimation2_Default( ConditionalTags = [ ('bazooka', 'MeshAlternative_4') ] )]
 )
 TacticDepiction_LRRP_BEL_Ghost is TemplateInfantryDepictionFactoryGhost
 (
@@ -9674,7 +9680,8 @@ Gfx_Mech_Rifles_CMD_BEL is TemplateInfantryDepictionSquad
 AllWeaponAlternatives_Mech_Rifles_CMD_BEL is [
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_FNC ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_M72A4 ),
-  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_M72A4 ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_MainNue ),
+  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_MainNue ),
 ]
 AllWeaponSubDepiction_Mech_Rifles_CMD_BEL is TemplateAllSubWeaponDepiction
 (
@@ -9687,8 +9694,13 @@ AllWeaponSubDepiction_Mech_Rifles_CMD_BEL is TemplateAllSubWeaponDepiction
     ),
     DepictionOperator_WeaponInstantFireInfantry
     (
-      FireEffectTag = ["FireEffect_RocketInf_M72_LAW_66mm"]
+      FireEffectTag = ["FireEffect_RocketInf_M72A1_LAW_66mm"]
       WeaponShootDataPropertyName = "WeaponShootData_0_2"
+    ),
+    DepictionOperator_WeaponInstantFireInfantry
+    (
+      FireEffectTag = ["FireEffect_Grenade_SMOKE"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_3"
     ),
   ]
 )
@@ -9710,7 +9722,7 @@ TacticDepiction_Mech_Rifles_CMD_BEL_Soldier is TemplateInfantryDepictionFactoryT
   Selector = InfantrySelectorTactic_02_05
   Alternatives = TacticDepiction_Mech_Rifles_CMD_BEL_Alternatives
   SubDepictions = [AllWeaponSubDepiction_Mech_Rifles_CMD_BEL, AllWeaponSubDepictionBackpack_Mech_Rifles_CMD_BEL]
-  Operators = [DepictionOperator_SkeletalAnimation2_Default( ConditionalTags = [ ('bazooka', 'MeshAlternative_2') ] )]
+  Operators = [DepictionOperator_SkeletalAnimation2_Default( ConditionalTags = [ ('bazooka', 'MeshAlternative_2'), ('grenade', 'MeshAlternative_3') ] )]
 )
 TacticDepiction_Mech_Rifles_CMD_BEL_Ghost is TemplateInfantryDepictionFactoryGhost
 (

@@ -37051,7 +37051,7 @@ export WeaponDescriptor_LRRP_Aero_US is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_LRRP_BEL is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 210, 100, 4, ]
+    Salves           = [ 168, 100, 14, 4, ]
     AlwaysOrientArmorTowardsThreat = False
     TurretDescriptorList = [
         TTurretInfanterieDescriptor
@@ -37068,7 +37068,7 @@ export WeaponDescriptor_LRRP_BEL is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness         = -0.1
                     EffectTag                           = 'FireEffect_FM_FNC'
                     HandheldEquipmentKey                = 'MeshAlternative_1'
-                    NbWeapons                           = 5
+                    NbWeapons                           = 4
                     SalvoStockIndex                     = 0
                     ShowDispersion                      = False
                     ShowInInterface                     = True
@@ -37110,13 +37110,13 @@ export WeaponDescriptor_LRRP_BEL is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
-                    Ammunition                          = $/GFX/Weapon/Ammo_RocketInf_M72_LAW_66mm
+                    Ammunition                          = $/GFX/Weapon/Ammo_Sniper_FN_Model_3011
                     AnimateOnlyOneSoldier               = True
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
                     DispersionRadiusOnColor             = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness         = -0.1
-                    EffectTag                           = 'FireEffect_RocketInf_M72_LAW_66mm'
+                    EffectTag                           = 'FireEffect_Sniper_FN_Model_3011'
                     HandheldEquipmentKey                = 'MeshAlternative_3'
                     NbWeapons                           = 1
                     SalvoStockIndex                     = 2
@@ -37128,6 +37128,31 @@ export WeaponDescriptor_LRRP_BEL is TWeaponManagerModuleDescriptor
                 )
             ]
             YulBoneOrdinal              = 3
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = [
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_RocketInf_M72A1_LAW_66mm
+                    AnimateOnlyOneSoldier               = True
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_RocketInf_M72A1_LAW_66mm'
+                    HandheldEquipmentKey                = 'MeshAlternative_4'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 3
+                    ShowDispersion                      = False
+                    ShowInInterface                     = True
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_4", ]
+                )
+            ]
+            YulBoneOrdinal              = 4
         )
     ]
 )
@@ -42497,7 +42522,7 @@ export WeaponDescriptor_M113A1_NG_US is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_M113A1_TOW_US is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 400, 8, ]
+    Salves           = [ 100, 8, 1, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -42563,6 +42588,35 @@ export WeaponDescriptor_M113A1_TOW_US is TWeaponManagerModuleDescriptor
             ]
             Tag                         = 'tourelle2'
             YulBoneOrdinal              = 2
+        ),
+        TTurretUnitDescriptor
+        (
+            AngleRotationMax            = 2.0943951023931953
+            AngleRotationMaxPitch       = 1.5707963267948966
+            AngleRotationMinPitch       = -1.5707963267948966
+            MountedWeaponDescriptorList = [
+                TMountedWeaponDescriptor
+                (
+                    AmmoConsumption_ForInterface        = 1
+                    Ammunition                          = $/GFX/Weapon/Ammo_SMOKE_Vehicle_Grenadex8
+                    AnimateOnlyOneSoldier               = True
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_SMOKE_Vehicle_Grenadex8'
+                    HandheldEquipmentKey                = 'MeshAlternative_6'
+                    NbWeapons                           = 1
+                    SalvoStockIndex                     = 2
+                    ShowDispersion                      = False
+                    ShowInInterface                     = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_6'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_6'
+                    WeaponShootDataPropertyName         = ["WeaponShootData_0_6", "WeaponShootData_1_6", "WeaponShootData_2_6", "WeaponShootData_3_6", ]
+                )
+            ]
+            Tag                         = 'tourelle5'
+            YulBoneOrdinal              = 5
         )
     ]
 )
