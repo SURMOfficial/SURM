@@ -1301,7 +1301,7 @@ Ammo_AA_R27ER_Vympel is TAmmunitionDescriptor //needs work unused
             (EBaseHitValueModifier/Moving, 60),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     TempsDeVisee                      = 0.0
     TempsEntreDeuxSalves              = 2.0
@@ -2797,7 +2797,7 @@ Ammo_AGM_9K121_Vikhr_x16_avion is TAmmunitionDescriptor
             (EBaseHitValueModifier/Moving, 50),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     TempsDeVisee                      = 1.0
     TempsEntreDeuxSalves              = 5.0
@@ -3359,7 +3359,7 @@ Ammo_AGM_9M14_MalyutkaP_x4 is TAmmunitionDescriptor
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 2.2
@@ -5511,7 +5511,7 @@ Ammo_AGM_BGM71C_FITOW_x8 is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'manual', 'cluster', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_ATGM
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_clu_sol_ap Index=7)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=8)
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileAGMGen2' ]
     FxPower                           = EFXPower/UltraLourd
@@ -5535,6 +5535,7 @@ Ammo_AGM_BGM71C_FITOW_x8 is TAmmunitionDescriptor
     SuppressDamages                   = 198.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
+    ForceHitTopArmor                  = True
     TirIndirect                       = False
     TirReflexe                        = True
     InterdireTirReflexe               = True
@@ -5628,11 +5629,11 @@ Ammo_AGM_BGM71C_ITOW_x8 is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 60),
+            (EBaseHitValueModifier/Idling, AccCorrATGM * 60),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 2.2
@@ -6479,55 +6480,58 @@ Ammo_AGM_Kh23M_helo is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'semiAuto', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_GroundMissile
     MinMaxCategory                    = MinMax_AGM
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=30)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz_bombe Index=1)
     ProjectileType                    = EProjectileType/GuidedMissile
-    ImpactHappening                   = [ 'MissileAGMGros' ]
+    ImpactHappening                   = [ 'BombeMk82' ]
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 3000
-    PorteeMinimaleGRU                 = 353
-    AngleDispersion                   = 0.020001473227855015
+    PorteeMaximaleGRU                    = 10000
+    PorteeMinimaleTBAGRU                 = 0
+    PorteeMaximaleTBAGRU                 = 0
+    PorteeMinimaleHAGRU                  = 0
+    PorteeMaximaleHAGRU                  = 0
+    PorteeMinimaleGRU                    = 2000
+    AngleDispersion                   = 0.02
     DispersionAtMaxRange              = ((700) * Metre)
     DispersionAtMinRange              = ((700) * Metre)
-    DispersionWithoutSorting          = False
+    DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamages       = 12 * Metre
-    PhysicalDamages                   = 1.0
-    ShowDamageInUI                    = True
-    RadiusSplashSuppressDamages       = 143 * Metre
-    SuppressDamages                   = 409.0
+    RadiusSplashPhysicalDamages       = ( (78) * Metre * MeterCorr)
+    PhysicalDamages                   = 9.2
+    RadiusSplashSuppressDamages       = ((250) * Metre * MeterCorr)
+    SuppressDamages                   = 900.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
-    TirReflexe                        = True
-    InterdireTirReflexe               = True
-    MaximalSpeed                      = 4000 * Metre
-    MaxAcceleration                   = 1000 * Metre
+    TirReflexe                        = False
+    InterdireTirReflexe               = False
+    MaximalSpeed              		  = 4000 * Metre
+    MaxAcceleration               	  = 1000 * Metre
     ShotWithoutPhysics                = True
     FluidFriction                     = 0.0
-    NoiseDissimulationMalus           = 2.0
-    ShotsBeforeMaxNoise               = 2
+    NoiseDissimulationMalus           = 12.0
+    ShotsBeforeMaxNoise               = 4
     TargetOnlyOneUnitInDistrict       = False
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
-        DescriptorId          = GUID:{0b9b9e19-e18c-416c-8881-bf8c17322760}
-        BaseCriticModifier = 0
-        BaseHitValueModifiers =
-        [
-            (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 35),
-            (EBaseHitValueModifier/Moving, 35),
-            (EBaseHitValueModifier/Targeted, 0.0),
-        ]
-        DistanceToTarget = True
+         DescriptorId          = GUID:{ae362211-acf2-46df-b389-99d3a7c89117}
+         BaseCriticModifier = 50
+         //BaseEffectModifier = 0
+         BaseHitValueModifiers =
+         [
+             (EBaseHitValueModifier/Base, 0.0),
+             (EBaseHitValueModifier/Idling, AccCorrATGM * 50),
+             (EBaseHitValueModifier/Moving, AccCorrATGM * 50),
+             (EBaseHitValueModifier/Targeted, 0.0),
+         ]
     )
     TempsDeVisee                      = 1.0
     TempsEntreDeuxSalves              = 1.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 1
-    SupplyCost                        = 30
+    SupplyCost                        = 84.0
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
@@ -6535,7 +6539,9 @@ Ammo_AGM_Kh23M_helo is TAmmunitionDescriptor
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_Kh_23M"
     WeaponForceNote                   = 2
     SmokeDescriptor                   = nil
-    FireDescriptor                    = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Direct_hit_500lb
+    FireTriggeringProbability         = 1.0
     TargetUnitCenter                  = False
     CanHarmAirplanes                  = True
     IsHarmlessForAllies               = False
@@ -7012,7 +7018,7 @@ Ammo_AGM_Kh29L is TAmmunitionDescriptor
             (EBaseHitValueModifier/Moving, 50),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     TempsDeVisee                      = 0.0
     TempsEntreDeuxSalves              = 1.0
@@ -7339,7 +7345,7 @@ Ammo_AGM_SS11_x4 is TAmmunitionDescriptor
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 2.2
@@ -7496,7 +7502,7 @@ Ammo_ATGM_9K111M_Fagot_M is TAmmunitionDescriptor
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 2.2
@@ -11292,7 +11298,7 @@ Ammo_ATGM_SS11_x4 is TAmmunitionDescriptor //needs work unused
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 2.2
@@ -11768,11 +11774,11 @@ Ammo_ATGM_Eryx is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 60),
+            (EBaseHitValueModifier/Idling, AccCorrATGM * 60),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 2.2
@@ -13966,7 +13972,7 @@ Ammo_MANPAD_Blowpipe is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{7e06ed56-7a59-498e-a86e-c8bf3d653b95}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14047,7 +14053,7 @@ Ammo_MANPAD_FIM43 is TAmmunitionDescriptor //wrong supply
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{df260a8d-92b3-4b5a-862c-06826e9d3209}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14128,7 +14134,7 @@ Ammo_MANPAD_FIM92 is TAmmunitionDescriptor //stinger C
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{0b67695c-eb52-4173-bc7f-2104f64581a6}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14209,7 +14215,7 @@ Ammo_MANPAD_FIM92_A is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{3695cfcf-889b-43bf-9e88-73532d96e079}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14262,7 +14268,7 @@ Ammo_MANPAD_Javelin is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 300
-    PorteeMaximaleTBAGRU                 = 5495
+    PorteeMaximaleTBAGRU                 = 5500
     PorteeMinimaleHAGRU                  = 300
     PorteeMaximaleHAGRU                  = 3500
     PorteeMinimaleGRU                    = 0
@@ -14289,7 +14295,7 @@ Ammo_MANPAD_Javelin is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{eaf63376-cfa5-4a76-874b-960bae8d3d08}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14342,9 +14348,9 @@ Ammo_MANPAD_Strela2M is TAmmunitionDescriptor
     TempsEntreDeuxFx                  = 2.0
     PorteeMaximaleGRU                    = 0
     PorteeMinimaleTBAGRU                 = 200
-    PorteeMaximaleTBAGRU                 = 4195
+    PorteeMaximaleTBAGRU                 = 4200
     PorteeMinimaleHAGRU                  = 200
-    PorteeMaximaleHAGRU                  = 4195
+    PorteeMaximaleHAGRU                  = 4200
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
@@ -14370,7 +14376,7 @@ Ammo_MANPAD_Strela2M is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{043fe523-1673-4e5a-bf79-ea3ef361d494}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -14451,7 +14457,7 @@ Ammo_MANPAD_igla is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
          DescriptorId          = GUID:{59c87566-f0f2-43b0-a1e6-0d9e6af9ee06}
-         BaseCriticModifier = 25
+         BaseCriticModifier = 70
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
          [
@@ -15135,14 +15141,15 @@ Ammo_SAM_9M8M3_x2 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 6.0
     TempsEntreDeuxFx                  = 6.0
-    PorteeMaximaleHAGRU               = 6000
+    PorteeMaximaleHAGRU               = 55000
+    PorteeMinimaleHAGRU               = 7000 //kinda  guess, 9M8 is 9km but 9m8M3 is supposed to be "less"
     AngleDispersion                   = 0.0020001473227855013
     DispersionWithoutSorting          = False
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamages       = 660 * Metre
+    RadiusSplashPhysicalDamages       = (BombRadiusCorr * (112) * Metre * MeterCorr)
     PhysicalDamages                   = 13.0
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamages       = 810 * Metre
+    RadiusSplashSuppressDamages       = ((300) * Metre * MeterCorr)
     SuppressDamages                   = 1200.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
@@ -15153,13 +15160,13 @@ Ammo_SAM_9M8M3_x2 is TAmmunitionDescriptor
     MaxAcceleration                   = 8000 * Metre
     ShotWithoutPhysics                = True
     FluidFriction                     = 0.0
-    NoiseDissimulationMalus           = 2.0
+    NoiseDissimulationMalus           = 12.0
     ShotsBeforeMaxNoise               = 2
     TargetOnlyOneUnitInDistrict       = False
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
         DescriptorId          = GUID:{d6ddf20e-22a2-47e5-a02a-eb9f89aaa339}
-        BaseCriticModifier = 25
+        BaseCriticModifier = 100
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
@@ -15167,12 +15174,12 @@ Ammo_SAM_9M8M3_x2 is TAmmunitionDescriptor
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
-        DistanceToTarget = True
+        DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
     Guidance                          = Guidance_Radar
-    TempsDeVisee                      = 1.0
-    TempsEntreDeuxSalves              = 30.0
+    TempsDeVisee                      = 60.0
+    TempsEntreDeuxSalves              = 240.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 2
@@ -15248,7 +15255,7 @@ Ammo_SAM_Aspide_1A_x4 is TAmmunitionDescriptor
              (EBaseHitValueModifier/Moving, 0),
              (EBaseHitValueModifier/Targeted, 0.0),
          ]
-		 DistanceToTarget = True
+		 DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
     Guidance                          = Guidance_Radar
@@ -15289,18 +15296,20 @@ Ammo_SAM_FASTA_Strela2M_x4 is TAmmunitionDescriptor
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileAA9K38Igla' ]
     FxPower                           = EFXPower/UltraLourd
-    TempsEntreDeuxTirs                = 2.0
-    TempsEntreDeuxFx                  = 2.0
-    PorteeMaximaleTBAGRU              = 2475
-    PorteeMaximaleHAGRU               = 2125
-    AngleDispersion                   = 0.0020001473227855013
-    DispersionWithoutSorting          = False
+    TempsEntreDeuxTirs                = 1.0
+    TempsEntreDeuxFx                  = 1.0
+    PorteeMinimaleTBAGRU                 = 200
+    PorteeMaximaleTBAGRU                 = 4195
+    PorteeMinimaleHAGRU                  = 200
+    PorteeMaximaleHAGRU                  = 4195
+    AngleDispersion                   = 0.02
+    DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamages       = 84 * Metre
-    PhysicalDamages                   = 4.0
+    RadiusSplashPhysicalDamages       = ((280) * Metre)
+    PhysicalDamages                   = 6.0
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamages       = 103 * Metre
-    SuppressDamages                   = 152.0
+    RadiusSplashSuppressDamages       = ((160) * Metre)
+    SuppressDamages                   = 450.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -15316,24 +15325,24 @@ Ammo_SAM_FASTA_Strela2M_x4 is TAmmunitionDescriptor
     TargetOnlyOneUnitInDistrict       = False
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
-        DescriptorId          = GUID:{d4ae30bf-78b8-43f9-b53f-570c6a1d809d}
-        BaseCriticModifier = 25
+        DescriptorId          = GUID:{795ee370-db3f-4f05-a1f1-80e5d9df9f62}
+        BaseCriticModifier = 70
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 35),
-            (EBaseHitValueModifier/Moving, 35),
+            (EBaseHitValueModifier/Idling, AccCorrMANPAD * 8),
+            (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 2.5
-    TempsEntreDeuxSalves              = 20.0
+    TempsDeVisee                      = 10.5
+    TempsEntreDeuxSalves              = 48.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 4
-    SupplyCost                        = 80
+    SupplyCost                        = 48.0
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
@@ -15365,18 +15374,20 @@ Ammo_SAM_FASTA_Strela2M_x4_TOWED is TAmmunitionDescriptor
     ProjectileType                    = EProjectileType/GuidedMissile
     ImpactHappening                   = [ 'MissileAA9K38Igla' ]
     FxPower                           = EFXPower/UltraLourd
-    TempsEntreDeuxTirs                = 2.0
-    TempsEntreDeuxFx                  = 2.0
-    PorteeMaximaleTBAGRU              = 2475
-    PorteeMaximaleHAGRU               = 2125
-    AngleDispersion                   = 0.0020001473227855013
-    DispersionWithoutSorting          = False
+    TempsEntreDeuxTirs                = 1.0
+    TempsEntreDeuxFx                  = 1.0
+    PorteeMinimaleTBAGRU                 = 200
+    PorteeMaximaleTBAGRU                 = 4195
+    PorteeMinimaleHAGRU                  = 200
+    PorteeMaximaleHAGRU                  = 4195
+    AngleDispersion                   = 0.02
+    DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamages       = 84 * Metre
-    PhysicalDamages                   = 4.0
+    RadiusSplashPhysicalDamages       = ((280) * Metre)
+    PhysicalDamages                   = 6.0
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamages       = 103 * Metre
-    SuppressDamages                   = 152.0
+    RadiusSplashSuppressDamages       = ((160) * Metre)
+    SuppressDamages                   = 450.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
@@ -15393,23 +15404,23 @@ Ammo_SAM_FASTA_Strela2M_x4_TOWED is TAmmunitionDescriptor
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
         DescriptorId          = GUID:{795ee370-db3f-4f05-a1f1-80e5d9df9f62}
-        BaseCriticModifier = 25
+        BaseCriticModifier = 70
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 35),
+            (EBaseHitValueModifier/Idling, AccCorrMANPAD * 8),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 2.5
-    TempsEntreDeuxSalves              = 20.0
+    TempsDeVisee                      = 10.5
+    TempsEntreDeuxSalves              = 48.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 4
-    SupplyCost                        = 80
+    SupplyCost                        = 48.0
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     NbrProjectilesSimultanes          = 1
@@ -15925,25 +15936,25 @@ Ammo_SAM_I_Hawk_x3 is TAmmunitionDescriptor //will be removed
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
     PorteeMaximaleGRU                    = 0
-    PorteeMinimaleTBAGRU                 = 0
-    PorteeMaximaleTBAGRU                 = 955
-    PorteeMinimaleHAGRU                  = 0
-    PorteeMaximaleHAGRU                  = 1785
+    PorteeMinimaleTBAGRU                 = 2500
+    PorteeMaximaleTBAGRU                 = 15000
+    PorteeMinimaleHAGRU                  = 2500
+    PorteeMaximaleHAGRU                  = 20000
     PorteeMinimaleGRU                    = 0
     AngleDispersion                   = 0.02
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamages       = ((630) * Metre)
-    PhysicalDamages                   = 9.0
+    RadiusSplashPhysicalDamages       = (BombRadiusCorr * (80) * Metre * MeterCorr)
+    PhysicalDamages                   = 10.0
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamages       = ((360) * Metre)
-    SuppressDamages                   = 270.0
+    RadiusSplashSuppressDamages       = ((230) * Metre * MeterCorr)
+    SuppressDamages                   = 900.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
     TirReflexe                        = True
     InterdireTirReflexe               = True
-    MaximalSpeed              		  = 14000 * Metre
+    MaximalSpeed              		  = 750 * MeterCorr * Metre
     MaxAcceleration               	  = 8000 * Metre
     ShotWithoutPhysics                = True
     FluidFriction                     = 0.0
@@ -15958,13 +15969,13 @@ Ammo_SAM_I_Hawk_x3 is TAmmunitionDescriptor //will be removed
          BaseHitValueModifiers =
          [
              (EBaseHitValueModifier/Base, 0.0),
-             (EBaseHitValueModifier/Idling, 50),
+             (EBaseHitValueModifier/Idling, 65),
              (EBaseHitValueModifier/Moving, 0),
              (EBaseHitValueModifier/Targeted, 0.0),
          ]
     )
     Guidance                          = Guidance_Radar
-    TempsDeVisee                      = 1.0
+    TempsDeVisee                      = 22.0 //guess, just copied from the Kub
     TempsEntreDeuxSalves              = 20.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0

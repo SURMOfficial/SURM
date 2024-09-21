@@ -98,6 +98,9 @@ SDMask_SquashOrDestroy      is SDMask_Squash+SDMask_Destroy
 
 
 //-----------------------------------------------------------------------------
+MapCellSize                 is 655360
+
+//-----------------------------------------------------------------------------
 // primitive type (Synchronisé avec Core3D/Primitives.h)
 
 PrimitiveType_POINTLIST     is 1
@@ -174,14 +177,7 @@ WindowMode is TBaseClass
 )
 
 //-----------------------------------------------------------------------------
-// doit matcher avec l'enum TPixelFormatSupportFlag de Core3D/PixelFormatInfo.h
-PixelFormatSupportFlag is TBaseClass
-(
-    Texture is 1
-)
-
-//-----------------------------------------------------------------------------
-// doit matcher avec Core3D/RenderState.h
+// doit matcher avec Core3D/SamplerState.h
 WrapMode is TBaseClass
 (
     Clamp  is 0
@@ -190,7 +186,7 @@ WrapMode is TBaseClass
 )
 
 //-----------------------------------------------------------------------------
-// doit matcher avec Core3D/RenderState.h
+// doit matcher avec Core3D/SamplerState.h
 FilterMode is TBaseClass
 (
     Point       is 0
@@ -199,19 +195,11 @@ FilterMode is TBaseClass
 )
 
 //-----------------------------------------------------------------------------
-// doit matcher avec Core3D/RenderState.h
+// doit matcher avec Core3D/SamplerState.h
 ComparisonFunc is TBaseClass
 (
     None       is 0
     LessEqual  is 1
-)
-
-//-----------------------------------------------------------------------------
-// doit matcher avec Core3D/RenderState.h
-StencilPass is TBaseClass
-(
-    Keep    is 0
-    Replace is 1
 )
 
 //-----------------------------------------------------------------------------
@@ -300,15 +288,17 @@ ShaderVertexFetchMode is TBaseClass
 //-----------------------------------------------------------------------------
 //  RenderType
 //-----------------------------------------------------------------------------
-RenderType_Undefined                 is 0
-RenderType_Forward                   is 1
-RenderType_GBuffer                   is 2
-RenderType_DepthShadow               is 3
-RenderType_ScreenSpeed               is 4
-RenderType_ImposterWorld             is 5
-RenderType_ImposterWorld_DepthShadow is 6
-RenderType_BakingHeightmap           is 7
-
+// doit matcher avec l'enum TShaderVertexFetchMode de Core3D/RenderType.h
+RenderType is TBaseClass
+(
+    Forward                   is 0
+    GBuffer                   is 1
+    DepthShadow               is 2
+    ScreenSpeed               is 3
+    ImposterWorld             is 4
+    ImposterWorld_DepthShadow is 5
+    BakingHeightmap           is 6
+)
 //-----------------------------------------------------------------------------
 // Commande name
 
@@ -399,28 +389,6 @@ CommandName is TBaseClass
 RSP_DecompressedBufferResourceThreshold is 5000*42
 
 //-----------------------------------------------------------------------------
-ResourceLoadType is TBaseClass // doit matcher avec TResourceLoadType
-(
-    Synchrone is 0
-    Asynchrone is 1
-    Skeleton is 2
-)
-
-TypeMask is TBaseClass // namespace
-(
-    Common           is  0x1
-
-    // flags juste pour les pack de Texture
-    BuildMenu        is 0x2
-    EndGameScreen    is 0x4
-    DebugScreen      is 0x8
-    FX               is 0x10
-    PCInterface      is 0x40
-    InGameInterface  is 0x80
-    OutGameInterface is 0x100
-    LoadingScreen    is 0x400
-)
-
 OneMeterInGameUnits is 215 //Francis (21/12/21) A virer ASAP
 
 CaseSplitCount is TBaseClass

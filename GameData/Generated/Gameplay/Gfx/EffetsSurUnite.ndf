@@ -44,6 +44,15 @@ export UnitEffect_AirUnit_Cohesion_Normal is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_Reddition_Effet_kill is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{912fc19b-4989-4640-9c31-f676cbb3fa89}
+    NameForDebug       = 'Reddition_Effet_kill'
+    EffectsDescriptors = [
+        // EffectSurrender
+        TKillUnitEffectDescriptor(),
+    ]
+)
 export UnitEffect_Ajoute_Tag_Allie_Proche is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{9b68e42d-f937-40d0-9f67-00531506780f}
@@ -78,8 +87,22 @@ export UnitEffect_Ajoute_Tag_Ennemi_Proche is TEffectsPackDescriptor
     EffectsDescriptors = [
         TUnitEffectRaiseTagDescriptor
         (
+		
             TagListToRaise = [
                  "Ennemi_Proche",
+            ]
+		)
+    ]
+)
+export UnitEffect_Ajoute_Tag_Ennemi_Proche_tank is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ec47905f-5d82-4e43-bc75-32f13c3fa3e6}
+    NameForDebug       = 'Ajoute_Tag_Ennemi_Proche_tank'
+    EffectsDescriptors = [
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "Ennemi_Proche_Tank",
             ]
         ),
     ]
@@ -268,6 +291,7 @@ export UnitEffect_ArtInf_Cowering is TEffectsPackDescriptor
                  "Infanterie_Suppressed",
                  "Infanterie_Pinned",
                  "Infanterie_Cowering",
+                 "Panique",
                  "Bloque_MoveAndAttack",
             ]
         ),
@@ -834,6 +858,7 @@ export UnitEffect_CanonAT_Cowering is TEffectsPackDescriptor
                  "Infanterie_Suppressed",
                  "Infanterie_Pinned",
                  "Infanterie_Cowering",
+                 "Panique",
                  "Bloque_MoveAndAttack",
             ]
         ),
@@ -2641,6 +2666,7 @@ export UnitEffect_Infanterie_Cowering is TEffectsPackDescriptor
                  "Infanterie_Suppressed",
                  "Infanterie_Pinned",
                  "Infanterie_Cowering",
+                 "Panique",
                  "Bloque_MoveAndAttack",
             ]
         ),

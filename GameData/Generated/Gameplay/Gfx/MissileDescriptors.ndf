@@ -15566,8 +15566,8 @@ export Descriptor_Missile_SAM_9M8M3_x2 is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 15000 * Metre
-                MaxAcceleration = 8000 * Metre
+                MaxSpeed        = 1100 * MeterCorr * Metre
+                MaxAcceleration = 100 * MeterCorr * Metre
                 AutoGyr         = 1.7453292519943295
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
@@ -16458,14 +16458,14 @@ export Descriptor_Missile_SAM_I_Hawk_x3 is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
-                    MaxAcceleration = 8000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
+                    MaxAcceleration = 100 * MeterCorr * Metre
                     AutoGyr         = 1.7453292519943295
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
-                    MaxAcceleration = 8000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
+                    MaxAcceleration = 100 * MeterCorr * Metre
                     AutoGyr         = 0.4363323129985824
                 )
                 AscendantPhaseConfig = nil

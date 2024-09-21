@@ -6,10 +6,10 @@ template TemplateClusterLoadNDF
     Files     = [] ,
     BaseName  : string       = '',
     NameSpace : string       = '',
-    ModName   : string       = '',
+    Optional  : bool = false,
+    Moddable  : bool = false,
     FillResourceList : bool    = false,
     UsingNamespaces = [],
-    Patchable = true,
 ] is TClusterNdfTransaction
 (
     NdfTransaction = TNDFTransaction
@@ -22,9 +22,10 @@ template TemplateClusterLoadNDF
         )
         ]
         FillResourceListOutputFileName = <FillResourceList> ? (<BaseName> + '.ndfbin') : ''
-        BaseName = <Patchable> ? ("Patchable/" + <BaseName> ) : <BaseName>
+        BaseName = <BaseName>
         NameSpace =<NameSpace>
-        ModName = <ModName>
+        Optional = <Optional>
+        Moddable = <Moddable>
         UsingNamespaces = <UsingNamespaces>
     )
 )
@@ -37,14 +38,13 @@ template TemplateClusterWithNDFLoadedSubCluster
     NameSpace : string       = '',
     FillResourceList : bool    = false,
     UsingNamespaces = [],
-    Patchable = true,
     GenerateCRC   = false
 ] is TClusterWithNDFLoadedSubCluster
 (
     SubClusterName = <SubClusterName>
     NdfTransaction = TNDFTransaction
     (
-        BaseName        = <Patchable> ? ("Patchable/" + <BaseName> ) : <BaseName>
+        BaseName        = <BaseName>
         NameSpace       = <NameSpace>
         FillResourceListOutputFileName  = <FillResourceList>?(<BaseName> + '.ndfbin'):''
         FileList         = [TNDFTransactionFileList(Files = <Files>)]
@@ -53,25 +53,22 @@ template TemplateClusterWithNDFLoadedSubCluster
     )
 )
 //-----------------------------------------------------------------------------
-template TemplateClusterWithNDFLoadedSubCluster_FileList_ReloadableForUI
+template TemplateClusterNDFTransaction_FileList_ReloadableForUI
 [
-    SubClusterName : string,
     FileList     = [] ,
     BaseName  : string       = '',
     NameSpace : string       = '',
-    ModName   : string       = '',
+    Moddable  : bool         = false,
     FillResourceList : bool    = false,
     UsingNamespaces = [],
-    Patchable = true,
     GenerateCRC   = false
-] is TClusterWithNDFLoadedSubCluster_Reloadable
+] is TClusterNDFTransaction_Reloadable
 (
-    SubClusterName = <SubClusterName>
     NdfTransaction = TNDFTransaction
     (
-        BaseName        = <Patchable> ? ("Patchable/" + <BaseName> ) : <BaseName>
+        BaseName        = <BaseName>
         NameSpace       = <NameSpace>
-        ModName         = <ModName>
+        Moddable        = <Moddable>
         FillResourceListOutputFileName  = <FillResourceList>?(<BaseName> + '.ndfbin'):''
         FileList         = <FileList>
         UsingNamespaces  = <UsingNamespaces>
@@ -86,19 +83,18 @@ template TemplateClusterWithNDFLoadedSubCluster_ReloadableForGameplay
     Files     = [] ,
     BaseName  : string       = '',
     NameSpace : string       = '',
-    ModName   : string       = '',
+    Moddable  : bool         = false,
     FillResourceList : bool    = false,
     UsingNamespaces = [],
-    Patchable = true,
     GenerateCRC   = false
 ] is TClusterWithNDFLoadedSubCluster_Reloadable
 (
     SubClusterName = <SubClusterName>
     NdfTransaction = TNDFTransaction
     (
-        BaseName        = <Patchable> ? ("Patchable/" + <BaseName> ) : <BaseName>
+        BaseName        = <BaseName>
         NameSpace       = <NameSpace>
-        ModName         = <ModName>
+        Moddable        = <Moddable>
         FillResourceListOutputFileName  = <FillResourceList>?(<BaseName> + '.ndfbin'):''
         FileList        = [TNDFTransactionFileList(Files = <Files>)]
         UsingNamespaces  = <UsingNamespaces>
@@ -115,7 +111,6 @@ template TemplateClusterLoadDirectoryNDF
     Recursive : bool           = true,
     FillResourceList : bool    = false,
     UsingNamespaces = [],
-    Patchable = true,
     GenerateCRC   = false
 ] is TClusterNdfTransaction
 (
@@ -129,7 +124,7 @@ template TemplateClusterLoadDirectoryNDF
             Recursive = <Recursive>
         )
         ]
-        BaseName = ((<BaseName> != '') ? (<Patchable> ? ("Patchable/" + <BaseName> ) : <BaseName>) : <BaseName>)
+        BaseName = <BaseName>
         NameSpace =<NameSpace>
         UsingNamespaces = <UsingNamespaces>
         FillResourceListOutputFileName = <FillResourceList>?(<BaseName> + '.ndfbin'):''
@@ -143,12 +138,10 @@ template TemplateClusterLoadDirectoryNDF_And_Files
     Files     : list<string>   = [] ,
     BaseName  : string         = '',
     NameSpace : string         = '',
-    ModName   : string         = '',
-    Recursive : bool           = true,
+    Moddable  : bool           = false,
     FillResourceList : bool    = false,
     UsingNamespaces = [],
-    Patchable = true,
-    GeneratesInDataPackMode = false,
+    Optional = false,
     DebugInfo = false,
     GenerateCRC   = false
 ] is TClusterNdfTransaction
@@ -160,19 +153,19 @@ template TemplateClusterLoadDirectoryNDF_And_Files
         TNDFTransactionDirectory
         (
             Directory = <Directory>
-            Recursive = <Recursive>
+            Recursive = false
         ),
         TNDFTransactionFileList
         (
             Files = <Files>
-        )
+        ),
         ]
         FillResourceListOutputFileName = <FillResourceList> ? (<BaseName> + '.ndfbin') : ''
-        BaseName = <Patchable> ? ("Patchable/" + <BaseName> ) : <BaseName>
-        GeneratesInDataPackMode = <GeneratesInDataPackMode>
+        BaseName = <BaseName>
         NameSpace =<NameSpace>
-        ModName = <ModName>
+        Moddable = <Moddable>
         UsingNamespaces = <UsingNamespaces>
+        Optional = <Optional>
         DebugInfo = <DebugInfo>
         GenerateCRC   = <GenerateCRC>
     )
@@ -183,19 +176,18 @@ template TemplateClusterLoadNDF_FileList
     FileList    : list<TNDFAbstractTransactionFileList>  = [] ,
     BaseName    : string         = '',
     NameSpace   : string         = '',
-    ModName   : string           = '',
+    Moddable    : bool           = false,
     FillResourceList : bool      = false,
     UsingNamespaces              = [],
-    Patchable                    = true,
 ] is TClusterNdfTransaction
 (
     NdfTransaction = TNDFTransaction
     (
         FileList = <FileList>
         FillResourceListOutputFileName = <FillResourceList>?(<BaseName> + '.ndfbin'):''
-        BaseName = <Patchable> ? ("Patchable/" + <BaseName> ) : <BaseName>
+        BaseName = <BaseName>
         NameSpace =<NameSpace>
-        ModName = <ModName>
+        Moddable = <Moddable>
         UsingNamespaces = <UsingNamespaces>
     )
 )
@@ -203,7 +195,7 @@ template TemplateClusterLoadNDF_FileList
 template TemplateClusterLoadNDFForIA
 [
     NameSpace                  : string = '',
-    ModName                    : string = '',
+    Moddable                   : bool   = false,
     FillResourceList           : bool   = false,
     UsingNamespaces                     = [],
     FileList                            = [],
@@ -213,8 +205,8 @@ template TemplateClusterLoadNDFForIA
     NdfTransaction = TNDFTransaction
     (
         NameSpace                  = <NameSpace>
-        BaseName                   = 'Patchable/' + <NameSpace>
-        ModName                    = <ModName>
+        BaseName                   = <NameSpace>
+        Moddable                   = <Moddable>
         UsingNamespaces            = <UsingNamespaces>
         FileList                   = <FileList>
         FillResourceListOutputFileName = <FillResourceList> ? ( <NameSpace> + '.ndfbin') : ''
@@ -284,8 +276,6 @@ template TemplateClusterLoadForNoEditor
     BaseName  : string       = '',
     NameSpace : string       = '',
     FillResourceList : bool    = false,
-    GeneratesInDataPackMode : bool   = false,
-    Patchable = true,
 ] is TClusterInitialisation_EditorDependent
 (
     SubClusterModeNoEditor = TClusterNdfTransaction
@@ -300,8 +290,7 @@ template TemplateClusterLoadForNoEditor
             )
             ]
             FillResourceListOutputFileName = <FillResourceList> ? (<BaseName> + '.ndfbin') : ''
-            GeneratesInDataPackMode = <GeneratesInDataPackMode>
-            BaseName = <Patchable> ? ("Patchable/" + <BaseName>) : <BaseName>
+            BaseName = <BaseName>
             NameSpace =<NameSpace>
         )
     )
