@@ -388,6 +388,25 @@ export Descriptor_Smoke_Fumi_burning_tank is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_Smoke_Fumi_tank_wreck is TEntityDescriptor
+(
+    World        = WorldIndices_Smokes
+    DescriptorId       = GUID:{8322fda3-bc18-40c8-a8a1-9429db489a5b}
+    ClassNameForDebug  = 'Smoke_FumiIncendie_small'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ~/SmokePositionModuleDescriptor,
+		TSmokeModuleDescriptor
+        (
+            Altitude       = ((1.5) * MeterCorr * Metre)
+            TimeToLive     = 14400
+            Radius         = ((1.5) * MeterCorr * Metre)
+            Terrain        = $/GFX/Terrains/VehicleWreck
+        ),
+    ]
+)
 export Descriptor_Smoke_FumiDust is TEntityDescriptor
 (
     World        = WorldIndices_Smokes

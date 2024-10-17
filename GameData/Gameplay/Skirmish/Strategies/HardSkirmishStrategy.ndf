@@ -94,7 +94,7 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/FOB_Skirmish,
 
         ~/Attack_Objectives,
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
 
 
         ~/Airstrike_AA,
@@ -107,18 +107,18 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
         // Grosse attaque
         ~/Attack_Main,
 
-        ~/Defense_Static_AA,
-        ~/Defense_Dynamic_AA,
+        //~/Defense_Static_AA,
+        //~/Defense_Dynamic_AA,
 
         ~/Attack_Helo,
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
 
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
         ~/CaptureHalfZoneObjectif_Ceil,
         // Reste du front
-        ~/Defense_Dynamic_Adaptive,
-        ~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
 
         ~/Attack_Filler,            // budget 40
 
@@ -128,8 +128,8 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/Defense_Static_Adaptive,
-        ~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
@@ -165,7 +165,7 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
         ~/CaptureOneObjectif,
 
         ~/Attack_Objectives,
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
 
         ~/Airstrike_AA,
 
@@ -180,18 +180,18 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
         // Défenses prioritaires
         //------------------------------
         // Statiques pour tenir le terrain
-        ~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
-        ~/Defense_Static_AA,
-        ~/Defense_Dynamic_AA,
+        //~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        //~/Defense_Static_AA,
+        //~/Defense_Dynamic_AA,
 
-        ~/Defense_Dynamic_Adaptive,
-        ~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
 
         //Cet mission lance les objectifs restant
-        ~/Defense_Objectif,
+        //~/Defense_Objectif,
 
         ~/Attack_Helo,
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
 
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
@@ -212,8 +212,8 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/Defense_Static_Adaptive,
-        ~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
 
         //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
         ~/CaptureOneObjectifForAlliance,
@@ -267,11 +267,11 @@ export Hard_Phase_LastHope is TSequenceGeneratorDescriptor
         // Défenses prioritaires
         //------------------------------
         // Statiques pour tenir le terrain
-        ~/Defense_Dynamic_AA,
-        ~/Defense_Dynamic_AA,
+        //~/Defense_Dynamic_AA,
+        //~/Defense_Dynamic_AA,
 
         //Cet mission lance les objectifs restant
-        ~/Defense_Objectif,
+        //~/Defense_Objectif,
 
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
@@ -294,8 +294,8 @@ export Hard_Phase_LastHope is TSequenceGeneratorDescriptor
         //------------------------------
         ~/Airstrike_Assault,
 
-        ~/Defense_Static_AA,
-        ~/Defense_Dynamic_AA,
+        //~/Defense_Static_AA,
+        //~/Defense_Dynamic_AA,
 
         ~/Artillery_TriggerHappy_1for2Corridors,
 
@@ -327,9 +327,9 @@ HardScaling is
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
 
-    ~/Defense_Dynamic_Adaptive_Autogen,
-    ~/Defense_Dynamic_Adaptive_Autogen,
-    ~/Defense_Dynamic_AA_Autogen,
+    //~/Defense_Dynamic_Adaptive_Autogen,
+    //~/Defense_Dynamic_Adaptive_Autogen,
+    //~/Defense_Dynamic_AA_Autogen,
 
     ~/Airstrike_Assault_Autogen,
     ~/Airstrike_Offense_Autogen,

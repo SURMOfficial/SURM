@@ -750,7 +750,7 @@ Gfx_Airborne_Dragon_US is TemplateInfantryDepictionSquad
 )
 AllWeaponAlternatives_Airborne_Dragon_US is [
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_M16A2 ),
-  TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_M249 ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_M240B ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_M47_DRAGON_II ),
   TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_M47_DRAGON_II ),
 ]
@@ -770,23 +770,13 @@ AllWeaponSubDepiction_Airborne_Dragon_US is TemplateAllSubWeaponDepiction
     ),
     DepictionOperator_WeaponInstantFireInfantry
     (
-      FireEffectTag = ["FireEffect_SAW_M249_5_56mm"]
+      FireEffectTag = ["FireEffect_MMG_inf_M240B_7_62mm"]
       WeaponShootDataPropertyName = "WeaponShootData_0_2"
     ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_M47_DRAGON_II"]
       WeaponShootDataPropertyName = "WeaponShootData_0_3"
-    ),
-	DepictionOperator_WeaponInstantFireInfantry
-	(
-      FireEffectTag = ["FireEffect_MMG_M60_7_62mm"]
-      WeaponShootDataPropertyName = "WeaponShootData_0_4"
-    ),
-	DepictionOperator_WeaponInstantFireInfantry
-	(
-     FireEffectTag = ["FireEffect_RocketInf_AT4_83mm"]
-      WeaponShootDataPropertyName = "WeaponShootData_0_5"
     ),
   ]
 )
@@ -2257,7 +2247,6 @@ Gfx_DShV_HMG_SOV is TemplateInfantryDepictionSquad
   SoundOperator = $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_SOVIET
 )
 AllWeaponAlternatives_DShV_HMG_SOV is [
-
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_AKs74 ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_PKM ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_RPG7VR ),

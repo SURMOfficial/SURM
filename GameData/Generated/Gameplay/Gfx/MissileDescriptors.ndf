@@ -41,15 +41,15 @@ export Descriptor_Missile_AA_AIM120A_AMRAAM is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.9198621771937625
+                    AutoGyr         = 0.658
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.658
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -213,15 +213,15 @@ export Descriptor_Missile_AA_AIM7F_Sparrow is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 0.409
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.409
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -296,15 +296,15 @@ export Descriptor_Missile_AA_AIM7M_Sparrow is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 0.409
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.409
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -385,15 +385,15 @@ export Descriptor_Missile_AA_AIM9J_Sidewinder is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.52304
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.52304
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -428,6 +428,16 @@ export Descriptor_Missile_AA_AIM9J_Sidewinder is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_15_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -474,15 +484,15 @@ export Descriptor_Missile_AA_AIM9L_Sidewinder is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 1.0461
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 1.0461
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -517,6 +527,16 @@ export Descriptor_Missile_AA_AIM9L_Sidewinder is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_15_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -563,15 +583,15 @@ export Descriptor_Missile_AA_AIM9M_Sidewinder is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.9198621771937625
+                    AutoGyr         = 1.0461
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 1.0461
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -606,6 +626,16 @@ export Descriptor_Missile_AA_AIM9M_Sidewinder is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_24_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -652,15 +682,15 @@ export Descriptor_Missile_AA_AIM9P_Sidewinder is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.9198621771937625
+                    AutoGyr         = 0.52304
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.52304
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -695,6 +725,16 @@ export Descriptor_Missile_AA_AIM9P_Sidewinder is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_15_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -741,15 +781,15 @@ export Descriptor_Missile_AA_AIM9P_Sidewinder_x2 is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.9198621771937625
+                    AutoGyr         = 0.52304
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.52304
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -784,6 +824,16 @@ export Descriptor_Missile_AA_AIM9P_Sidewinder_x2 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_15_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -824,15 +874,15 @@ export Descriptor_Missile_AA_Matra_R530 is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 810* MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.3632
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 810* MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.3632
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -907,15 +957,15 @@ export Descriptor_Missile_AA_Matra_Super_530D is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 810* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.9198621771937625
+                    AutoGyr         = 0.7264
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 810* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.7264
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -990,15 +1040,15 @@ export Descriptor_Missile_AA_Matra_Super_530F is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 810* MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 0.7264
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 810* MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.7264
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -1079,15 +1129,15 @@ export Descriptor_Missile_AA_R13M is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.39228
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750* MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.39228
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -1122,6 +1172,16 @@ export Descriptor_Missile_AA_R13M is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_4_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -1162,15 +1222,15 @@ export Descriptor_Missile_AA_R23R_Vympel is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 900 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 0.4358666667
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 900 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.4358666667
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -1245,15 +1305,15 @@ export Descriptor_Missile_AA_R24MR_Vympel is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 12000 * Metre
+                MaxSpeed        = 1050 * MeterCorr * Metre
                 MaxAcceleration = 6000 * Metre
-                AutoGyr         = 1.5707963267948966
+                AutoGyr         = 0.44832
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 12000 * Metre
+                MaxSpeed        = 1050 * MeterCorr * Metre
                 MaxAcceleration = 6000 * Metre
-                AutoGyr         = 1.3962634015954636
+                AutoGyr         = 0.44832
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -1328,15 +1388,15 @@ export Descriptor_Missile_AA_R24R_Vympel is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 12000 * Metre
+                MaxSpeed        = 1050 * MeterCorr * Metre
                 MaxAcceleration = 6000 * Metre
-                AutoGyr         = 1.5707963267948966
+                AutoGyr         = 0.44832
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 12000 * Metre
+                MaxSpeed        = 1050 * MeterCorr * Metre
                 MaxAcceleration = 6000 * Metre
-                AutoGyr         = 1.3962634015954636
+                AutoGyr         = 0.44832
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -1411,15 +1471,15 @@ export Descriptor_Missile_AA_R27ER_Vympel is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 12000 * Metre
+                MaxSpeed        = 1350 * MeterCorr * Metre
                 MaxAcceleration = 6000 * Metre
-                AutoGyr         = 1.5707963267948966
+                AutoGyr         = 0.5085111111
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 12000 * Metre
+                MaxSpeed        = 1350 * MeterCorr * Metre
                 MaxAcceleration = 6000 * Metre
-                AutoGyr         = 1.3962634015954636
+                AutoGyr         = 0.5085111111
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -1494,15 +1554,15 @@ export Descriptor_Missile_AA_R27R_Vympel is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1350 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 0.5085111111
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1350 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.5085111111
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -1577,15 +1637,15 @@ export Descriptor_Missile_AA_R27T_Vympel is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 12000 * Metre
+                MaxSpeed        = 1350 * MeterCorr * Metre
                 MaxAcceleration = 6000 * Metre
-                AutoGyr         = 1.5707963267948966
+                AutoGyr         = 0.5085111111
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 12000 * Metre
+                MaxSpeed        = 1350 * MeterCorr * Metre
                 MaxAcceleration = 6000 * Metre
-                AutoGyr         = 1.3962634015954636
+                AutoGyr         = 0.5085111111
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -1660,15 +1720,15 @@ export Descriptor_Missile_AA_R33_Vympel is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1350 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 0.3632222222
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1350 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.3632222222
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -1743,15 +1803,15 @@ export Descriptor_Missile_AA_R37_Vympel is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 1500 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.9198621771937625
+                    AutoGyr         = 0.3269 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 1500 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.3269
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -1832,15 +1892,15 @@ export Descriptor_Missile_AA_R3R is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 14000 * Metre
+                MaxSpeed        = 510 * MeterCorr * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 1.9198621771937625
+                AutoGyr         = 0.4615058824
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 14000 * Metre
+                MaxSpeed        = 510 * MeterCorr * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 1.3962634015954636
+                AutoGyr         = 0.4615058824
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -1921,15 +1981,15 @@ export Descriptor_Missile_AA_R550_Magic is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 900 * MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.7627666667
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 900 * MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.7627666667
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -1964,6 +2024,16 @@ export Descriptor_Missile_AA_R550_Magic is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -2010,15 +2080,15 @@ export Descriptor_Missile_AA_R550_Magic_II is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 900 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 0.7627666667
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 900 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.7627666667
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -2053,6 +2123,16 @@ export Descriptor_Missile_AA_R550_Magic_II is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_11_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -2099,15 +2179,15 @@ export Descriptor_Missile_AA_R60_Vympel is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.78456
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.78456
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -2142,6 +2222,16 @@ export Descriptor_Missile_AA_R60_Vympel is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_6_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -2188,15 +2278,15 @@ export Descriptor_Missile_AA_R60_Vympel_helo is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.78456
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.78456
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -2231,6 +2321,16 @@ export Descriptor_Missile_AA_R60_Vympel_helo is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_6_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -2277,15 +2377,15 @@ export Descriptor_Missile_AA_R60M_Vympel is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.78456
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 10000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
                     MaxAcceleration = 4000 * Metre
-                    AutoGyr         = 1.0471975511965976
+                    AutoGyr         = 0.78456
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -2320,6 +2420,16 @@ export Descriptor_Missile_AA_R60M_Vympel is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_6_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -2366,15 +2476,15 @@ export Descriptor_Missile_AA_R60M_Vympel_helo is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 10000 * Metre
+                MaxSpeed        = 750 * MeterCorr * Metre
                 MaxAcceleration = 4000 * Metre
-                AutoGyr         = 1.0471975511965976
+                AutoGyr         = 0.78456
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 10000 * Metre
+                MaxSpeed        = 750 * MeterCorr * Metre
                 MaxAcceleration = 4000 * Metre
-                AutoGyr         = 1.0471975511965976
+                AutoGyr         = 0.78456
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -2409,6 +2519,16 @@ export Descriptor_Missile_AA_R60M_Vympel_helo is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_6_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -2456,15 +2576,15 @@ export Descriptor_Missile_AA_R73_Vympel is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.9198621771937625
+                    AutoGyr         = 1.3076
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 750 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 1.3076
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -2499,6 +2619,16 @@ export Descriptor_Missile_AA_R73_Vympel is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_13_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -2635,15 +2765,15 @@ export Descriptor_Missile_AA_Skyflash is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.5707963267948966
+                    AutoGyr         = 0.408625
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 12000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 6000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.408625
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -2725,15 +2855,15 @@ export Descriptor_Missile_AA_Skyflash_SuperTEMP is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.9198621771937625
+                    AutoGyr         = 0.408625
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 14000 * Metre
+                    MaxSpeed        = 1200 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.3962634015954636
+                    AutoGyr         = 0.408625
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -3974,6 +4104,88 @@ export Descriptor_Missile_AGM_9M17P_FalangaP_x6 is TEntityDescriptor
                 RangeChaos = 2000
                 AngleMaxForRandomMouvUncontrollable = 6.0
                 RotationSpeedWhenUncontrollable = 30
+            ),
+        TBaseDamageModuleDescriptor
+                (
+                    MaxPhysicalDamages = 2
+                    MaxSuppressionDamages = ~/Missile_MaxSuppressionDamages
+                    MaxStunDamages = ~/Missile_MaxStunDamages
+        ),
+        TDamageModuleDescriptor
+                (
+                    SuppressDamagesRegenRatio = ~/Missile_SuppressDamagesRegenRatioList
+                    StunDamagesRegen = ~/Missile_StunDamagesRegen
+                    BlindageProperties = TBlindageProperties
+                    (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_vehicule Index=1)
+                ExplosiveReactiveArmor = False
+				)
+				KillWhenDamagesReachMax = True
+                    HitRollECM = 0.0
+                    AutoOrientation = False
+                    UseTopArmorAgainstFire = False
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 200),
+        ~/PackSignauxModuleDescriptor,
+        ~/TargetDataModuleDescriptor,
+    ]
+)
+export Descriptor_Missile_Guided_Arty is TEntityDescriptor
+(
+    DescriptorId       = GUID:{7d9fc92e-f5ce-4bcb-af7a-aa6b3b57e235}
+    ClassNameForDebug  = 'Missile_Guided_Art'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "MISSILE",
+                "MISSILE_AGM_AGM114A",
+            ]
+        ),
+        ~/MissileFlagsModuleDescriptor,
+        ~/MissilePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TApparenceModelModuleDescriptor
+            (
+                ReferenceMesh = $/GFX/DepictionResources/Modele_Missile_Tow
+				Depiction    = Template_DescriptorMissileBase
+                (
+                    ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Tow
+                    Actions = MAP[
+                       // ( ["fx_propulsion_on"], template_PropulsionActionHappening( Action = $/GFX/GameFx/fx_propulsion_missile_generation4 )),
+                    ]
+                )
+            ),
+        TGuidedMissileModuleDescriptor
+        (
+        ),
+            TGuidedMissileMovementModuleDescriptor
+            (
+                DefaultConfig = TGuidedMissileMovementConfigDescriptor
+                (
+                    MaxSpeed        = ((3098) * Metre)
+                    MaxAcceleration = 1000 * Metre
+                    AutoGyr         = 4.3490658503988659
+                )
+                UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
+                (
+                    MaxSpeed        = ((3098) * Metre)
+                    MaxAcceleration = 1000 * Metre
+                    AutoGyr         = 0.0//17453292519943295
+                )
+                AscendantPhaseConfig = nil
+                TerminalPhaseConfig = nil
+                CruiseAltitude = 0.0 * Metre
+				TimeMaxBetweenRandomMoveWhenUncontrollable = 30
+				TimeMinBetweenRandomMoveWhenUncontrollable = 20.0
+				TimeBetweenChaosUpdates = 1.0
+				RangeChaos = 1
+				AngleMaxForRandomMouvUncontrollable = 0.001
+				RotationSpeedWhenUncontrollable = 1
             ),
         TBaseDamageModuleDescriptor
                 (
@@ -13897,7 +14109,7 @@ export Descriptor_Missile_Javelin is TEntityDescriptor
                 (
                     MaxSpeed        = 561.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6992513369 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -13938,6 +14150,16 @@ export Descriptor_Missile_Javelin is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_10_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -13987,7 +14209,7 @@ export Descriptor_Missile_Javelin_LML is TEntityDescriptor
                 (
                     MaxSpeed        = 561.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6992513369 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -14028,6 +14250,16 @@ export Descriptor_Missile_Javelin_LML is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_10_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -14239,13 +14471,13 @@ export Descriptor_Missile_MANPAD_Blowpipe is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 495.0 * MeterCorr * Metre
+                    MaxSpeed        = 500.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.39228 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeed        = 495.0 * MeterCorr * Metre
+                    MaxSpeed        = 500.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
                     AutoGyr         = 0.4363323129985824
                 )
@@ -14282,6 +14514,16 @@ export Descriptor_Missile_MANPAD_Blowpipe is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -14331,7 +14573,7 @@ export Descriptor_Missile_MANPAD_FIM43 is TEntityDescriptor
                 (
                     MaxSpeed        = 580.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.1014517241 // wikipedia says 3g so probably should cut some of the old missiles too if that's right
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -14372,6 +14614,16 @@ export Descriptor_Missile_MANPAD_FIM43 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_8_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -14421,7 +14673,7 @@ export Descriptor_Missile_MANPAD_FIM92 is TEntityDescriptor
                 (
                     MaxSpeed        = 750.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.5301081081
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -14462,6 +14714,16 @@ export Descriptor_Missile_MANPAD_FIM92 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -14510,7 +14772,7 @@ export Descriptor_Missile_MANPAD_FIM92_A is TEntityDescriptor
             (
                 MaxSpeed        = 15000 * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 1.7453292519943295
+                AutoGyr         = 0.5301081081
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
@@ -14551,6 +14813,16 @@ export Descriptor_Missile_MANPAD_FIM92_A is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -14600,7 +14872,7 @@ export Descriptor_Missile_MANPAD_Javelin is TEntityDescriptor
                 (
                     MaxSpeed        = 561.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6992513369 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -14690,7 +14962,7 @@ export Descriptor_Missile_MANPAD_Strela2M is TEntityDescriptor
                 (
                     MaxSpeed        = 430.0  * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6842093023
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -14731,6 +15003,16 @@ export Descriptor_Missile_MANPAD_Strela2M is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_11_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -14772,7 +15054,7 @@ export Descriptor_Missile_MANPAD_igla is TEntityDescriptor
                 (
                     MaxSpeed        = 570.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6882105263 //kinda guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -14813,6 +15095,16 @@ export Descriptor_Missile_MANPAD_igla is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -14862,7 +15154,7 @@ export Descriptor_Missile_Mistral is TEntityDescriptor
                 (
                     MaxSpeed        = 930.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.5272580645
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -14903,6 +15195,16 @@ export Descriptor_Missile_Mistral is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -14952,7 +15254,7 @@ export Descriptor_Missile_Mistral_Celtic_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 930.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.5272580645
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -14993,6 +15295,16 @@ export Descriptor_Missile_Mistral_Celtic_x4 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -15042,13 +15354,13 @@ export Descriptor_Missile_SAM_9M311_Tunguska_x8 is TEntityDescriptor
                 (
                     MaxSpeed        = 900.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6973866667
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 900.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.6973866667
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -15132,13 +15444,13 @@ export Descriptor_Missile_SAM_9M33 is TEntityDescriptor
                 (
                     MaxSpeed        = 1020.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.3845882353 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 1020.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.3845882353
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -15215,13 +15527,13 @@ export Descriptor_Missile_SAM_9M330_Tor_x8 is TEntityDescriptor
             (
                 MaxSpeed        = 950 * MeterCorr * Metre
                 MaxAcceleration = 4000 * Metre
-                AutoGyr         = 1.7453292519943295
+                AutoGyr         = 0.6193894737
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
                 MaxSpeed        = 950 * MeterCorr * Metre
                 MaxAcceleration = 4000 * Metre
-                AutoGyr         = 0.17453292519943295
+                AutoGyr         = 0.6193894737
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -15395,13 +15707,13 @@ export Descriptor_Missile_SAM_9M33M2_x6 is TEntityDescriptor
                 (
                     MaxSpeed        = 1020.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.3845882353
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 1020.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.3845882353
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -15568,13 +15880,13 @@ export Descriptor_Missile_SAM_9M8M3_x2 is TEntityDescriptor
             (
                 MaxSpeed        = 1100 * MeterCorr * Metre
                 MaxAcceleration = 100 * MeterCorr * Metre
-                AutoGyr         = 1.7453292519943295
+                AutoGyr         = 0.1783090909 //guess
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
                 MaxSpeed        = 15000 * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 0.17453292519943295
+                AutoGyr         = 0.1783090909
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -15745,15 +16057,15 @@ export Descriptor_Missile_SAM_FASTA_Strela2M_x4 is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 15000 * Metre
+                MaxSpeed        = 430.0  * MeterCorr * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 1.7453292519943295
+                AutoGyr         = 0.6842093023 //guess
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 15000 * Metre
+                MaxSpeed        = 430.0  * MeterCorr * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 0.17453292519943295
+                AutoGyr         = 0.6842093023
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -15788,6 +16100,16 @@ export Descriptor_Missile_SAM_FASTA_Strela2M_x4 is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_11_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -15835,15 +16157,15 @@ export Descriptor_Missile_SAM_FASTA_Strela2M_x4_TOWED is TEntityDescriptor
         (
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 15000 * Metre
+                MaxSpeed        = 430.0  * MeterCorr * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 1.7453292519943295
+                AutoGyr         = 0.6842093023 //guess
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
-                MaxSpeed        = 15000 * Metre
+                MaxSpeed        = 430.0  * MeterCorr * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 0.17453292519943295
+                AutoGyr         = 0.6842093023
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -15878,6 +16200,16 @@ export Descriptor_Missile_SAM_FASTA_Strela2M_x4_TOWED is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_11_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -15927,13 +16259,13 @@ export Descriptor_Missile_SAM_FIM92_Stinger_CS is TEntityDescriptor
                 (
                     MaxSpeed        = 750.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.5301081081
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 750.0 * MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.5301081081
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -15968,6 +16300,16 @@ export Descriptor_Missile_SAM_FIM92_Stinger_CS is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16017,13 +16359,13 @@ export Descriptor_Missile_SAM_FIM92_Stinger_CS_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 750.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.5301081081
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 750.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.5301081081
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -16058,6 +16400,16 @@ export Descriptor_Missile_SAM_FIM92_Stinger_CS_x4 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16107,13 +16459,13 @@ export Descriptor_Missile_SAM_FIM92_Stinger_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 750.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.5301081081
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 750.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.5301081081
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -16148,6 +16500,16 @@ export Descriptor_Missile_SAM_FIM92_Stinger_x4 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16190,13 +16552,13 @@ export Descriptor_Missile_SAM_FIM92_Stinger_x8 is TEntityDescriptor
             (
                 MaxSpeed        = 15000 * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 1.7453292519943295
+                AutoGyr         = 0.5301081081
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
                 MaxSpeed        = 15000 * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 0.4363323129985824
+                AutoGyr         = 0.5301081081
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -16231,6 +16593,16 @@ export Descriptor_Missile_SAM_FIM92_Stinger_x8 is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16280,13 +16652,13 @@ export Descriptor_Missile_SAM_FIM92C is TEntityDescriptor
                 (
                     MaxSpeed        = 750.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.5301081081
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 750.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.5301081081
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -16321,6 +16693,16 @@ export Descriptor_Missile_SAM_FIM92C is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16550,13 +16932,13 @@ export Descriptor_Missile_SAM_Igla is TEntityDescriptor
                 (
                     MaxSpeed        = 570.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6882105263 //kinda guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 570.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.6882105263
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -16591,6 +16973,16 @@ export Descriptor_Missile_SAM_Igla is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16640,13 +17032,13 @@ export Descriptor_Missile_SAM_Igla1M is TEntityDescriptor
                 (
                     MaxSpeed        = 570.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6882105263 //kinda guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 570.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.6882105263
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -16681,6 +17073,16 @@ export Descriptor_Missile_SAM_Igla1M is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16730,13 +17132,13 @@ export Descriptor_Missile_SAM_IglaV is TEntityDescriptor
                 (
                     MaxSpeed        = 570.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6882105263
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 570.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.6882105263
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -16771,6 +17173,16 @@ export Descriptor_Missile_SAM_IglaV is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16820,13 +17232,13 @@ export Descriptor_Missile_SAM_IglaV_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 570.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6882105263
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
                     MaxSpeed        = 570.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 0.4363323129985824
+                    AutoGyr         = 0.6882105263
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
@@ -16861,6 +17273,16 @@ export Descriptor_Missile_SAM_IglaV_x4 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -16910,7 +17332,7 @@ export Descriptor_Missile_SAM_MIM72A is TEntityDescriptor
                 (
                     MaxSpeed        = 514.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 1.144785992 // from AIM-9M (guess)
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -16951,6 +17373,16 @@ export Descriptor_Missile_SAM_MIM72A is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_18_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -17000,7 +17432,7 @@ export Descriptor_Missile_SAM_MIM72F is TEntityDescriptor
                 (
                     MaxSpeed        = 514.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 1.144785992
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17041,6 +17473,16 @@ export Descriptor_Missile_SAM_MIM72F is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_18_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -17090,7 +17532,7 @@ export Descriptor_Missile_SAM_MIM72G is TEntityDescriptor
                 (
                     MaxSpeed        = 514.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 1.144785992
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17131,6 +17573,16 @@ export Descriptor_Missile_SAM_MIM72G is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_18_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -17180,7 +17632,7 @@ export Descriptor_Missile_SAM_Mistral is TEntityDescriptor
                 (
                     MaxSpeed        = 930.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.5272580645
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17221,6 +17673,16 @@ export Descriptor_Missile_SAM_Mistral is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -17270,7 +17732,7 @@ export Descriptor_Missile_SAM_RAPIER is TEntityDescriptor
                 (
                     MaxSpeed        = 1029.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.4765306122 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17360,7 +17822,7 @@ export Descriptor_Missile_SAM_RAPIER_DARKFIRE_x6 is TEntityDescriptor
                 (
                     MaxSpeed        = 1029.0* MeterCorr * Metre												   
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.4765306122
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17450,7 +17912,7 @@ export Descriptor_Missile_SAM_RAPIER_FSA_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 1029.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.4765306122
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17540,7 +18002,7 @@ export Descriptor_Missile_SAM_RAPIER_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 1029.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.4765306122
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17630,7 +18092,7 @@ export Descriptor_Missile_SAM_RAPIER_x8 is TEntityDescriptor
                 (
                     MaxSpeed        = 1029.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.4765306122
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17720,7 +18182,7 @@ export Descriptor_Missile_SAM_ROLAND is TEntityDescriptor
                 (
                     MaxSpeed        = 550.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.8915454545
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17810,7 +18272,7 @@ export Descriptor_Missile_SAM_ROLAND_1 is TEntityDescriptor
                 (
                     MaxSpeed        = 550.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.8915454545
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17900,7 +18362,7 @@ export Descriptor_Missile_SAM_ROLAND_1_x2 is TEntityDescriptor
                 (
                     MaxSpeed        = 550.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.8915454545
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -17990,7 +18452,7 @@ export Descriptor_Missile_SAM_ROLAND_2 is TEntityDescriptor
                 (
                     MaxSpeed        = 550.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.8915454545
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18080,7 +18542,7 @@ export Descriptor_Missile_SAM_ROLAND_2_x2 is TEntityDescriptor
                 (
                     MaxSpeed        = 550.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.8915454545
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18170,7 +18632,7 @@ export Descriptor_Missile_SAM_ROLAND_3 is TEntityDescriptor
                 (
                     MaxSpeed        = 550.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 1.069854545
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18260,7 +18722,7 @@ export Descriptor_Missile_SAM_ROLAND_3_x2 is TEntityDescriptor
                 (
                     MaxSpeed        = 550.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 1.069854545 //guess (as all rolands)
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18350,7 +18812,7 @@ export Descriptor_Missile_SAM_Strela1_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 617.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.4768395462 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18391,6 +18853,16 @@ export Descriptor_Missile_SAM_Strela1_x4 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_7_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -18440,7 +18912,7 @@ export Descriptor_Missile_SAM_Strela10_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 550.0* MeterCorr * Metre
                     MaxAcceleration = 3000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.8915454545 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18481,6 +18953,16 @@ export Descriptor_Missile_SAM_Strela10_x4 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -18530,7 +19012,7 @@ export Descriptor_Missile_SAM_Strela10_x4_FASTA is TEntityDescriptor
                 (
                     MaxSpeed        = 14000 * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.8915454545
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18571,6 +19053,16 @@ export Descriptor_Missile_SAM_Strela10_x4_FASTA is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -18620,7 +19112,7 @@ export Descriptor_Missile_SAM_Strela10M3_x4 is TEntityDescriptor
             (
                 MaxSpeed        = 550.0* MeterCorr * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 1.7453292519943295
+                AutoGyr         = 0.8915454545
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
@@ -18661,6 +19153,16 @@ export Descriptor_Missile_SAM_Strela10M3_x4 is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -18710,7 +19212,7 @@ export Descriptor_Missile_SAM_Strela2_x12 is TEntityDescriptor
                 (
                     MaxSpeed        = 430.0* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6842093023 //guess
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18751,6 +19253,16 @@ export Descriptor_Missile_SAM_Strela2_x12 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_11_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -18793,7 +19305,7 @@ export Descriptor_Missile_SAM_Strela2_x2 is TEntityDescriptor
             (
                 MaxSpeed        = 430.0* MeterCorr * Metre
                 MaxAcceleration = 8000 * Metre
-                AutoGyr         = 1.7453292519943295
+                AutoGyr         = 0.6842093023
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
@@ -18834,6 +19346,16 @@ export Descriptor_Missile_SAM_Strela2_x2 is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_11_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -18883,7 +19405,7 @@ export Descriptor_Missile_SAM_Strela2_x4 is TEntityDescriptor
                 (
                     MaxSpeed        = 430.0* MeterCorr * Metre
                     MaxAcceleration = 8000 * Metre
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.6842093023
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
@@ -18924,6 +19446,16 @@ export Descriptor_Missile_SAM_Strela2_x4 is TEntityDescriptor
                     AutoOrientation = False
                     UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_11_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,

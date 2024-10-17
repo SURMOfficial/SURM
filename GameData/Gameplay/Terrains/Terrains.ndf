@@ -107,7 +107,6 @@ export PetitBatiment is TGameplayTerrain
             (DamageFamily_balledca, MAP [(ResistanceFamily_infanterie,0.4)]),
             (DamageFamily_howz, MAP [(ResistanceFamily_infanterie,0.6)]),
             (DamageFamily_howz_bombe, MAP [(ResistanceFamily_infanterie,0.6)]),
-			(DamageFamily_bombe, MAP [(ResistanceFamily_infanterie,1.0)]),
             (DamageFamily_fmballe, MAP [(ResistanceFamily_infanterie,0.2)]),
 			(DamageFamily_pmballe, MAP [(ResistanceFamily_infanterie,0.2)]),
             // (DamageFamily_cac, MAP [(ResistanceFamily_infanterie,0.85)]),
@@ -150,7 +149,6 @@ export Batiment is TGameplayTerrain
             (DamageFamily_balledca, MAP [(ResistanceFamily_infanterie,0.25)]),
             (DamageFamily_howz, MAP [(ResistanceFamily_infanterie,0.45)]),
             (DamageFamily_howz_bombe, MAP [(ResistanceFamily_infanterie,0.45)]),
-			(DamageFamily_bombe, MAP [(ResistanceFamily_infanterie,1.0)]),
             (DamageFamily_fmballe, MAP [(ResistanceFamily_infanterie,0.13)]),
 			(DamageFamily_pmballe, MAP [(ResistanceFamily_infanterie,0.13)]),
             // (DamageFamily_cac, MAP [(ResistanceFamily_infanterie,0.85)]),
@@ -205,7 +203,7 @@ export Ruin is TGameplayTerrain
     DebugColor = rgba[0, 6, 200, 255]
     DissimulationModifierGroundAir = 60
     DissimulationModifierGroundGround = 55
-    HeightInMeters = 2
+    HeightInMeters = 4
     InflammabilityProbability = 0.2
     Name = 'Ruin'
     SpeedModifierAllTerrainWheel = 0
@@ -415,6 +413,47 @@ export SmokeHeavy is TGameplayTerrain
     SpeedModifierTrack = 1
     ConcealmentBonus = 5
     TerrainType = ~/ETerrainType/HeavySmoke
+    WorldLayerActiveMask = 255
+    AuthorizeNearGroundFlying = true
+)
+export VehicleWreck is TGameplayTerrain //wrecks provide some cover 
+(
+    BloqueAmphibie = false
+    BloqueAtterrissage = false
+    BloqueInfanterie = false
+    BloqueVehicule = false
+    BloqueVision = true
+    CriticalEffectProbability = 0
+	DamageModifierPerFamilyAndResistance =
+    MAP [
+            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.25)]),
+            (DamageFamily_he_autocanon, MAP [(ResistanceFamily_infanterie,0.1)]),
+            (DamageFamily_superhe, MAP [(ResistanceFamily_infanterie,0.25)]),
+            (DamageFamily_balle, MAP [(ResistanceFamily_infanterie,0.2)]),
+            (DamageFamily_balledca, MAP [(ResistanceFamily_infanterie,0.4)]),
+            (DamageFamily_howz, MAP [(ResistanceFamily_infanterie,0.5)]),
+            (DamageFamily_howz_bombe, MAP [(ResistanceFamily_infanterie,0.5)]),
+			(DamageFamily_bombe, MAP [(ResistanceFamily_infanterie,1.0)]),
+            (DamageFamily_fmballe, MAP [(ResistanceFamily_infanterie,0.1)]),
+			(DamageFamily_pmballe, MAP [(ResistanceFamily_infanterie,0.1)]),
+            // (DamageFamily_cac, MAP [(ResistanceFamily_infanterie,0.85)]),
+            (DamageFamily_roquette_ap, MAP [(ResistanceFamily_infanterie,0.25)]),
+			(DamageFamily_roquette, MAP [(ResistanceFamily_infanterie,1.0)]),
+			(DamageFamily_flamme, MAP [(ResistanceFamily_infanterie,1.0)]),
+			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.8)]),
+			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
+        ]
+    DebugColor = rgba[128, 128, 128, 255]
+    DissimulationModifierGroundAir = 60
+    DissimulationModifierGroundGround = 55
+    HeightInMeters = 3
+    InflammabilityProbability = 0.2
+    Name = 'Wreck'
+    SpeedModifierAllTerrainWheel = 1.0
+    SpeedModifierInfantry = 1.0
+    SpeedModifierTrack = 1.0
+    ConcealmentBonus = 4.75
+    TerrainType = ~/ETerrainType/Wreck
     WorldLayerActiveMask = 255
     AuthorizeNearGroundFlying = true
 )

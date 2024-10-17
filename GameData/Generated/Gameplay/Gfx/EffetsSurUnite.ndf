@@ -189,6 +189,19 @@ export UnitEffect_Ajoute_Tag_dig_in_ok is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_Ajoute_Tag_tripod_ok is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ded40f82-d0ae-4c99-aadd-b6c3c18a6c80}
+    NameForDebug       = 'Ajoute_Tag_tripod_ok'
+    EffectsDescriptors = [
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "tripod_ok",
+            ]
+        ),
+    ]
+)
 export UnitEffect_Ajoute_Tag_xp_elite is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{81a303b4-7674-4df9-9a01-86488425b3ea}
@@ -239,6 +252,64 @@ export UnitEffect_AntiBouclier_Suppression_33 is TEffectsPackDescriptor
             BonusDamage         = 33
             DamageType          = EDamageType/Suppress
         ),
+    ]
+)
+export UnitEffect_tripod is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ebd216d6-56eb-495d-90af-b22631402ecd}
+    NameForDebug       = 'Tripod'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 1.7
+        ),
+        TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.6
+        ),
+		TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_sniper" //for now
+        ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "tripod_ok",
+            ]
+        ),
+    ]
+)
+export UnitEffect_no_tripod is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{5d4ae00f-d7c7-432d-82ad-4f37aa552a94}
+    NameForDebug       = 'Tripod'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPorteeMaxDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = -100
+        ),
+        TUnitEffectIncreaseWeaponPorteeMaxHADescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = -100
+        ),
+        TUnitEffectIncreaseWeaponPorteeMaxProjectileDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = -100
+        ),
+        TUnitEffectIncreaseWeaponPorteeMaxTBADescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = -100
+        ),
+		/*TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "Texture_Speciality_Icon_eo_dazzler"
+        ),*/
     ]
 )
 export UnitEffect_ArmyGen_No_regen_PA is TEffectsPackDescriptor
@@ -1234,8 +1305,58 @@ export UnitEffect_Critic_Deroute_Infantry is TEffectsPackDescriptor
         ),
 		TUnitEffectIncreaseSpeedDescriptor //sprint for life
         (
-            ModifierType             = ~/ModifierType_Multiplicatif
-            BonusSpeedBaseInPercent  = 2.0
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = 100
+        ),
+		TUnitEffectIncreaseDamageTakenDescriptor //may remove
+        (
+            ModifierType        = ~/ModifierType_Multiplicatif
+            BonusDamage         = 0.6
+            DamageType          = EDamageType/Physical
+        ),
+		//TDerouteUnitEffectDescriptor(),
+		TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "Retraite",
+            ]
+        ),
+        TUnitEffectSetSelectableDescriptor
+        (
+            Selectable = False
+        ),
+		TDerouteUnitEffectDescriptor(),
+    ]
+)
+export UnitEffect_Critic_Deroute_Infantry_Flee is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{baac34e2-e375-49ef-bc21-2a44877423c9}
+    NameForDebug       = 'Critic_Deroute_Infantry'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPorteeMaxDescriptor
+        (
+            ModifierType         = ~/ModifierType_Pourcentage
+            ModifierValue = -100
+        ),
+        TUnitEffectIncreaseWeaponPorteeMaxHADescriptor
+        (
+            ModifierType           = ~/ModifierType_Pourcentage
+            ModifierValue = -100
+        ),
+        TUnitEffectIncreaseWeaponPorteeMaxProjectileDescriptor
+        (
+            ModifierType   = ~/ModifierType_Pourcentage
+            ModifierValue = -100
+        ),
+        TUnitEffectIncreaseWeaponPorteeMaxTBADescriptor
+        (
+            ModifierType            = ~/ModifierType_Pourcentage
+            ModifierValue = -100
+        ),
+		TUnitEffectIncreaseSpeedDescriptor //sprint for life
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = 200
         ),
 		TUnitEffectIncreaseDamageTakenDescriptor //may remove
         (

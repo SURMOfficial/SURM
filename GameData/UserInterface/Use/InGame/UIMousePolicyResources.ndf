@@ -611,6 +611,15 @@ TerrainTypeToText is MAP
             //ExtendedToken = "terr_roue"
         )
     ),
+    (
+        ~/ETerrainType/Wreck,
+        THintContentHolder
+        (
+            TitleToken = "wreck"
+            BodyToken = "wreckB"
+            //ExtendedToken = "terr_roue"
+        )
+    ),
 
 ]
 
@@ -699,7 +708,8 @@ MouseWidget_SelectNeutralLand is Template_HardwareMouseWidgetResource_WithTerrai
         (ETerrainType/LightSmoke,       ~/MouseCurseur_couvert_leger),
         (ETerrainType/MediumSmoke,      ~/MouseCurseur_couvert_leger),
         (ETerrainType/HeavySmoke,       ~/MouseCurseur_couvert_lourd),
-        (ETerrainType/Rocher,           ~/MouseCurseur_couvert_rocher),
+        (ETerrainType/HeavySmoke,       ~/MouseCurseur_couvert_lourd),
+        (ETerrainType/Wreck,            ~/MouseCurseur_couvert_leger),
         (ETerrainType/PetitBatiment,    ~/MouseCurseur_couvert_lourd),
         (ETerrainType/Batiment,         ~/MouseCurseur_couvert_lourd),
         (ETerrainType/Ruin,             ~/MouseCurseur_couvert_lourd),
@@ -747,6 +757,7 @@ MouseWidget_OrderMoveFast_WithTerrainFeedback is Template_HardwareMouseWidgetRes
         (ETerrainType/LightSmoke,       ~/Mousecurseur_mouvement_rapide_coverl),
         (ETerrainType/MediumSmoke,      ~/Mousecurseur_mouvement_rapide_coverl),
         (ETerrainType/HeavySmoke,       ~/Mousecurseur_mouvement_rapide_coverh),
+        (ETerrainType/Wreck,       		~/Mousecurseur_mouvement_rapide_coverl),
         (ETerrainType/PetitBatiment,    ~/Mousecurseur_mouvement_rapide_coverh),
         (ETerrainType/Batiment,         ~/Mousecurseur_mouvement_rapide_coverh),
         (ETerrainType/Ruin,             ~/Mousecurseur_mouvement_rapide_coverh),
@@ -780,6 +791,7 @@ MouseWidget_OrderReverse_WithTerrainFeedback is Template_HardwareMouseWidgetReso
         (ETerrainType/LightSmoke,       ~/Mousecurseur_curseur_retour_coverl),
         (ETerrainType/MediumSmoke,      ~/Mousecurseur_curseur_retour_coverl),
         (ETerrainType/HeavySmoke,       ~/Mousecurseur_curseur_retour_coverh),
+        (ETerrainType/Wreck,       		~/Mousecurseur_curseur_retour_coverl),
         (ETerrainType/PetitBatiment,    ~/Mousecurseur_curseur_retour_coverh),
         (ETerrainType/Batiment,         ~/Mousecurseur_curseur_retour_coverh),
         (ETerrainType/Ruin,             ~/Mousecurseur_curseur_retour_coverh),
@@ -813,6 +825,7 @@ MouseWidget_OrderMoveAndAttack_WithTerrainFeedback is Template_HardwareMouseWidg
         (ETerrainType/LightSmoke,       ~/Mousecurseur_mouvement_attaque_coverl),
         (ETerrainType/MediumSmoke,      ~/Mousecurseur_mouvement_attaque_coverl),
         (ETerrainType/HeavySmoke,       ~/Mousecurseur_mouvement_attaque_coverh),
+        (ETerrainType/Wreck,       		~/Mousecurseur_mouvement_attaque_coverl),
         (ETerrainType/PetitBatiment,    ~/Mousecurseur_mouvement_attaque_coverh),
         (ETerrainType/Batiment,         ~/Mousecurseur_mouvement_attaque_coverh),
         (ETerrainType/Ruin,             ~/Mousecurseur_mouvement_attaque_coverh),
@@ -846,6 +859,7 @@ MouseWidget_OrderUnloadAtPosition_WithTerrainFeedback is Template_HardwareMouseW
         (ETerrainType/LightSmoke,       ~/Mousecurseur_UnloadAtPosition_coverl),
         (ETerrainType/MediumSmoke,      ~/Mousecurseur_UnloadAtPosition_coverl),
         (ETerrainType/HeavySmoke,       ~/Mousecurseur_UnloadAtPosition_coverh),
+        (ETerrainType/Wreck,       		~/Mousecurseur_UnloadAtPosition_coverl),
         (ETerrainType/PetitBatiment,    ~/Mousecurseur_UnloadAtPosition_coverh),
         (ETerrainType/Batiment,         ~/Mousecurseur_UnloadAtPosition_coverh),
         (ETerrainType/Ruin,             ~/Mousecurseur_UnloadAtPosition_coverh),
@@ -996,6 +1010,7 @@ is TUIMouseWidgetResource
                     (ETerrainType/LightSmoke,       ~/Mousecurseur_mouvement_attaque_coverl),
                     (ETerrainType/MediumSmoke,      ~/Mousecurseur_mouvement_attaque_coverl),
                     (ETerrainType/HeavySmoke,       ~/Mousecurseur_mouvement_attaque_coverh),
+					(ETerrainType/Wreck,       		~/Mousecurseur_mouvement_attaque_coverl),
                     (ETerrainType/PetitBatiment,    ~/Mousecurseur_mouvement_attaque_coverh),
                     (ETerrainType/Batiment,         ~/Mousecurseur_mouvement_attaque_coverh),
                     (ETerrainType/Ruin,             ~/Mousecurseur_mouvement_attaque_coverh),

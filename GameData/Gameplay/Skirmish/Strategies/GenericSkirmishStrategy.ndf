@@ -95,7 +95,7 @@ export Gen_Phase_Deploiement is TSequenceGeneratorDescriptor
         // Capture de zones
         ~/Attack_Objectives,
 
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
         ~/Airstrike_AA,
 
         ~/Reco,            // 40 par reco
@@ -106,11 +106,11 @@ export Gen_Phase_Deploiement is TSequenceGeneratorDescriptor
         // Grosse attaque
         ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200 => un cmd pas cher, une reco pas cher, et le reste de tanks pour fill le budget en random.
 
-        ~/Defense_Static_AA,
-        ~/Defense_Dynamic_AA,
+        //~/Defense_Static_AA,
+        //~/Defense_Dynamic_AA,
 
         ~/Attack_Helo,
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
 
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
@@ -159,7 +159,7 @@ export Gen_Phase_Command is TSequenceGeneratorDescriptor
 
         ~/Attack_Objectives,
 
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
         ~/Airstrike_AA,
 
         ~/Reco,
@@ -169,22 +169,22 @@ export Gen_Phase_Command is TSequenceGeneratorDescriptor
         //------------------------------
         ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
 
-        ~/Defense_Objectif,
+        //~/Defense_Objectif,
 
         //------------------------------
         // Défenses prioritaires
         //------------------------------
         // Statiques pour tenir le terrain
-        ~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        //~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
 
-        ~/Defense_Dynamic_Adaptive,
-        ~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
 
-        ~/Defense_Static_AA,
-        ~/Defense_Dynamic_AA,
+        //~/Defense_Static_AA,
+        //~/Defense_Dynamic_AA,
 
         ~/Attack_Helo,
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
 
         ~/CaptureHalfZoneObjectif_Ceil,
 
@@ -245,8 +245,8 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
         //------------------------------
         // Défenses prioritaires
         //------------------------------
-        ~/Defense_Dynamic_AA,
-        ~/Defense_Dynamic_AA,
+        //~/Defense_Dynamic_AA,
+        //~/Defense_Dynamic_AA,
 
         ~/Attack_Filler,
 
@@ -288,13 +288,13 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
 // les situations et appuyer le reste des missions
 Defenses_Airstrike_Arti_Shuffle_Deploy is
 [
-    ~/Defense_Static_Adaptive,
+    //~/Defense_Static_Adaptive,
     ~/Airstrike_Assault,
     ~/Artillery_Expensive,
-    ~/Defense_Static_Adaptive,
-    ~/Defense_Static_AA,
-    ~/Defense_Dynamic_AA,
-    ~/Defense_Static_Adaptive,
+    //~/Defense_Static_Adaptive,
+    //~/Defense_Static_AA,
+    //~/Defense_Dynamic_AA,
+    //~/Defense_Static_Adaptive,
     ~/Airstrike_Offense,
     ~/Airstrike_AA,
     ~/Artillery_TriggerHappy_1for4Corridors,
@@ -318,12 +318,12 @@ Medium_Scaling is
     ~/Attack_Helo_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
-    ~/Defense_Dynamic_Adaptive_Autogen,
-    ~/Defense_Static_AA_Autogen,
-    ~/Defense_Dynamic_Adaptive_Autogen,
+    //~/Defense_Dynamic_Adaptive_Autogen,
+    //~/Defense_Static_AA_Autogen,
+    //~/Defense_Dynamic_Adaptive_Autogen,
     ~/Airstrike_AA_Autogen,
-    ~/Defense_Dynamic_Adaptive_Autogen,
-    ~/Defense_Dynamic_AA_Autogen,
+    //~/Defense_Dynamic_Adaptive_Autogen,
+    //~/Defense_Dynamic_AA_Autogen,
     ~/Artillery_TriggerHappy_Autogen,
     ~/Airstrike_Offense_Autogen,
     ~/Artillery_TriggerHappy_Autogen,
@@ -341,7 +341,7 @@ Medium_Scaling_Attack is
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Airstrike_AA_Autogen,
-    ~/Defense_Dynamic_AA_Autogen,
+    //~/Defense_Dynamic_AA_Autogen,
     ~/Artillery_TriggerHappy_Autogen,
     ~/Airstrike_Offense_Autogen,
     ~/Artillery_TriggerHappy_Autogen,
