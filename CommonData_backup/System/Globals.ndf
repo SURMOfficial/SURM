@@ -748,13 +748,13 @@ ELevelLaunch is TBaseClass
 Seconde                           is 1.0
 Metre                             is 26.0
 MultiplicateurMetreRTSVersDistanceFeedbackTactique is 1 div 7.85
-MortarTimeCorr				      is 0.76 // 1.27
-MortarSpeedCorr					  is 1.0
+MortarTimeCorr				      is 1.0 // 0.93 //0.76 // 1.27
+MortarSpeedCorr					  is 0.6
 RangeCorr                         is 2.7742749056
 RangeCorrRkt					  is 1.629372515
 RangeCorrFix				      is 0.88
 RangeCorrVis					  is 2.5
-AC_AP_corr						  is 2.0
+AC_AP_corr						  is 1.0 //reduced since I can't stop the crits anymore
 Accnostab						  is 0.0
 AccCorr							  is 0.26 // 0.57 //this reduces the hit roll to compensate for the range corr increase
 AccCorrSov						  is 0.38 // 0.68 //for 3.3 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
@@ -780,7 +780,7 @@ ProjSpeedCorrHeavy				  is 2.0
 ArtySuppressRadCorr				  is 1.8
 ArtySuppressCorr				  is 1.7
 BulletSuppressCorr				  is 0.1
-ACSuppressCorr				      is 0.5
+ACSuppressCorr				      is 0.3
 BulletSuppressRadCorr			  is 0.33
 FuelCorr						  is 75
 SupplyCorr						  is 1.85 //was 185 divide by 100

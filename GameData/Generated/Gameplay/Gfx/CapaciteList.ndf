@@ -14,9 +14,8 @@ export Capacite_Aura_Commandement_1 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1000.00 * Metre
-    Range               = 1273.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1000 * 0.35333333333 
+    RangeGRU               = 1273 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -40,6 +39,8 @@ export Capacite_Aura_Commandement_1 is TCapaciteDescriptor
     TagsCiblePossible = [
         "GagneXP",
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
         ~/ConditionTagRaisedInUnit_Hors_Transport_1,
@@ -59,9 +60,8 @@ export Capacite_ERA_front_27 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -84,6 +84,8 @@ export Capacite_ERA_front_27 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagRaisedInUnit_ERA_hit_3,
     ]
@@ -102,9 +104,8 @@ export Capacite_ERA_hit_add is TCapaciteDescriptor //18 hits takes you from 750m
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -127,6 +128,8 @@ export Capacite_ERA_hit_add is TCapaciteDescriptor //18 hits takes you from 750m
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
@@ -145,9 +148,8 @@ export Capacite_ERA_hit_tag is TCapaciteDescriptor //18 hits takes you from 750m
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -170,6 +172,8 @@ export Capacite_ERA_hit_tag is TCapaciteDescriptor //18 hits takes you from 750m
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -187,9 +191,8 @@ export Capacite_ERA_hit1_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -212,6 +215,8 @@ export Capacite_ERA_hit1_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -229,9 +234,8 @@ export Capacite_ERA_hit2_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -254,6 +258,8 @@ export Capacite_ERA_hit2_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit3_1,
     ]
@@ -272,9 +278,8 @@ export Capacite_ERA_hit_tag1 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -297,6 +302,8 @@ export Capacite_ERA_hit_tag1 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
@@ -315,9 +322,8 @@ export Capacite_ERA_hit_tag2 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -340,6 +346,8 @@ export Capacite_ERA_hit_tag2 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit1_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -359,9 +367,8 @@ export Capacite_ERA_hit3_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -384,6 +391,8 @@ export Capacite_ERA_hit3_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit4_1,
     ]
@@ -402,9 +411,8 @@ export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -427,6 +435,8 @@ export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit2_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -446,9 +456,8 @@ export Capacite_ERA_hit3_armor is TCapaciteDescriptor //18 hits takes you from 7
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -471,6 +480,8 @@ export Capacite_ERA_hit3_armor is TCapaciteDescriptor //18 hits takes you from 7
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagNotRaisedInUnit_ERA_hit6_1,
     ]
@@ -489,9 +500,8 @@ export Capacite_ERA_hit4_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -514,6 +524,8 @@ export Capacite_ERA_hit4_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit5_1,
     ]
@@ -532,9 +544,8 @@ export Capacite_ERA_hit_tag4 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -557,6 +568,8 @@ export Capacite_ERA_hit_tag4 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit3_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -577,9 +590,8 @@ export Capacite_ERA_hit5_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -602,6 +614,8 @@ export Capacite_ERA_hit5_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit6_1,
     ]
@@ -620,9 +634,8 @@ export Capacite_ERA_hit_tag5 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -645,6 +658,8 @@ export Capacite_ERA_hit_tag5 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit4_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -665,9 +680,8 @@ export Capacite_ERA_hit6_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -690,6 +704,8 @@ export Capacite_ERA_hit6_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit7_1,
     ]
@@ -708,9 +724,8 @@ export Capacite_ERA_hit_tag6 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -733,6 +748,8 @@ export Capacite_ERA_hit_tag6 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit5_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -752,9 +769,8 @@ export Capacite_ERA_hit6_armor is TCapaciteDescriptor //18 hits takes you from 7
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -777,6 +793,8 @@ export Capacite_ERA_hit6_armor is TCapaciteDescriptor //18 hits takes you from 7
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagNotRaisedInUnit_ERA_hit9_1,
     ]
@@ -796,9 +814,8 @@ export Capacite_ERA_hit7_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -821,6 +838,8 @@ export Capacite_ERA_hit7_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit8_1,
     ]
@@ -839,9 +858,8 @@ export Capacite_ERA_hit_tag7 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -864,6 +882,8 @@ export Capacite_ERA_hit_tag7 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit6_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -884,9 +904,8 @@ export Capacite_ERA_hit8_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -909,6 +928,8 @@ export Capacite_ERA_hit8_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit9_1,
     ]
@@ -927,9 +948,8 @@ export Capacite_ERA_hit_tag8 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -952,6 +972,8 @@ export Capacite_ERA_hit_tag8 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit7_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -972,9 +994,8 @@ export Capacite_ERA_hit9_tag is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -997,6 +1018,8 @@ export Capacite_ERA_hit9_tag is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit10_1,
     ]
@@ -1015,9 +1038,8 @@ export Capacite_ERA_hit_tag9 is TCapaciteDescriptor //18 hits takes you from 750
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1040,6 +1062,8 @@ export Capacite_ERA_hit_tag9 is TCapaciteDescriptor //18 hits takes you from 750
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit8_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1059,9 +1083,8 @@ export Capacite_ERA_hit9_armor is TCapaciteDescriptor //18 hits takes you from 7
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1084,6 +1107,8 @@ export Capacite_ERA_hit9_armor is TCapaciteDescriptor //18 hits takes you from 7
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagNotRaisedInUnit_ERA_hit12_1,
     ]
@@ -1103,9 +1128,8 @@ export Capacite_ERA_hit10_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1128,6 +1152,8 @@ export Capacite_ERA_hit10_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit11_1,
     ]
@@ -1146,9 +1172,8 @@ export Capacite_ERA_hit_tag10 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1171,6 +1196,8 @@ export Capacite_ERA_hit_tag10 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit9_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1190,9 +1217,8 @@ export Capacite_ERA_hit11_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1215,6 +1241,8 @@ export Capacite_ERA_hit11_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit12_1,
     ]
@@ -1233,9 +1261,8 @@ export Capacite_ERA_hit_tag11 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1258,6 +1285,8 @@ export Capacite_ERA_hit_tag11 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit10_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1278,9 +1307,8 @@ export Capacite_ERA_hit12_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1303,6 +1331,8 @@ export Capacite_ERA_hit12_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit13_1,
     ]
@@ -1321,9 +1351,8 @@ export Capacite_ERA_hit_tag12 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1346,6 +1375,8 @@ export Capacite_ERA_hit_tag12 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit11_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1365,9 +1396,8 @@ export Capacite_ERA_hit12_armor is TCapaciteDescriptor //18 hits takes you from 
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1390,6 +1420,8 @@ export Capacite_ERA_hit12_armor is TCapaciteDescriptor //18 hits takes you from 
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagNotRaisedInUnit_ERA_hit15_1,
     ]
@@ -1409,9 +1441,8 @@ export Capacite_ERA_hit13_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1434,6 +1465,8 @@ export Capacite_ERA_hit13_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit14_1,
     ]
@@ -1452,9 +1485,8 @@ export Capacite_ERA_hit_tag13 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1477,6 +1509,8 @@ export Capacite_ERA_hit_tag13 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit12_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1497,9 +1531,8 @@ export Capacite_ERA_hit14_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1522,6 +1555,8 @@ export Capacite_ERA_hit14_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit15_1,
     ]
@@ -1540,9 +1575,8 @@ export Capacite_ERA_hit_tag14 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1565,6 +1599,8 @@ export Capacite_ERA_hit_tag14 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit13_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1585,9 +1621,8 @@ export Capacite_ERA_hit15_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1610,6 +1645,8 @@ export Capacite_ERA_hit15_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit16_1,
     ]
@@ -1628,9 +1665,8 @@ export Capacite_ERA_hit_tag15 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1653,6 +1689,8 @@ export Capacite_ERA_hit_tag15 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit14_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1672,9 +1710,8 @@ export Capacite_ERA_hit15_armor is TCapaciteDescriptor //18 hits takes you from 
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1697,6 +1734,8 @@ export Capacite_ERA_hit15_armor is TCapaciteDescriptor //18 hits takes you from 
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagNotRaisedInUnit_ERA_hit18_1,
     ]
@@ -1716,9 +1755,8 @@ export Capacite_ERA_hit16_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1741,6 +1779,8 @@ export Capacite_ERA_hit16_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit17_1,
     ]
@@ -1759,9 +1799,8 @@ export Capacite_ERA_hit_tag16 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1784,6 +1823,8 @@ export Capacite_ERA_hit_tag16 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit15_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1804,9 +1845,8 @@ export Capacite_ERA_hit17_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1829,6 +1869,8 @@ export Capacite_ERA_hit17_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	//~/ConditionTagNotRaisedInUnit_ERA_hit18_1,
     ]
@@ -1847,9 +1889,8 @@ export Capacite_ERA_hit_tag17 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1872,6 +1913,8 @@ export Capacite_ERA_hit_tag17 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit16_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1892,9 +1935,8 @@ export Capacite_ERA_hit18_tag is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1917,6 +1959,8 @@ export Capacite_ERA_hit18_tag is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -1934,9 +1978,8 @@ export Capacite_ERA_hit_tag18 is TCapaciteDescriptor //18 hits takes you from 75
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.02
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -1959,6 +2002,8 @@ export Capacite_ERA_hit_tag18 is TCapaciteDescriptor //18 hits takes you from 75
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit17_1,
 	~/ConditionTagRaisedInUnit_ERA_hit_1,
@@ -1978,9 +2023,8 @@ export Capacite_ERA_hit18_armor is TCapaciteDescriptor //18 hits takes you from 
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.0
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -2003,6 +2047,8 @@ export Capacite_ERA_hit18_armor is TCapaciteDescriptor //18 hits takes you from 
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -2020,9 +2066,8 @@ export Capacite_Aura_Commandement_2 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1000.00 * Metre
-    Range               = 1700.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1000 * 0.35333333333 
+    RangeGRU               = 1700 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2045,6 +2090,8 @@ export Capacite_Aura_Commandement_2 is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
         "GagneXP",
+    ]
+    TagsCibleExcluded = [
     ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
@@ -2065,9 +2112,8 @@ export Capacite_Aura_Commandement_3 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1500.00 * Metre
-    Range               = 2122.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1500 * 0.35333333333 
+    RangeGRU               = 2122 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2091,6 +2137,8 @@ export Capacite_Aura_Commandement_3 is TCapaciteDescriptor
     TagsCiblePossible = [
         "GagneXP",
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
         ~/ConditionTagRaisedInUnit_Hors_Transport_1,
@@ -2110,9 +2158,8 @@ export Capacite_Aura_capture_allie_solo is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 200.00 * Metre
-    Range               = 350.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 200 * 0.35333333333 
+    RangeGRU               = 350 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2136,6 +2183,8 @@ export Capacite_Aura_capture_allie_solo is TCapaciteDescriptor
     TagsCiblePossible = [
         "GroundUnits",
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_Bouclier_Anti_Suppression_50 is TCapaciteDescriptor
@@ -2152,9 +2201,8 @@ export Capacite_Bouclier_Anti_Suppression_50 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1000.00 * Metre
-    Range               = 1000.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1000 * 0.35333333333 
+    RangeGRU               = 1000 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2177,6 +2225,8 @@ export Capacite_Bouclier_Anti_Suppression_50 is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_Bouclier_Anti_Suppression_99 is TCapaciteDescriptor
@@ -2193,9 +2243,8 @@ export Capacite_Bouclier_Anti_Suppression_99 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 250.00 * Metre
-    Range               = 250.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 250 * 0.35333333333 
+    RangeGRU               = 250 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2218,6 +2267,8 @@ export Capacite_Bouclier_Anti_Suppression_99 is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_Choc is TCapaciteDescriptor
@@ -2234,9 +2285,8 @@ export Capacite_Choc is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 150.00 * Metre
-    Range               = 495.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 150 * 0.35333333333 
+    RangeGRU               = 495 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2277,9 +2327,8 @@ export Capacite_SF is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 150.00 * Metre
-    Range               = 400.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 150 * 0.35333333333 
+    RangeGRU               = 400 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2319,9 +2368,8 @@ export Capacite_Cowering_Rampe_Capacite is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2344,6 +2392,8 @@ export Capacite_Cowering_Rampe_Capacite is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Retraite_1,
         ~/ConditionTagRaisedInUnit_Infanterie_Cowering_1,
@@ -2363,9 +2413,8 @@ export Capacite_Cowering_Stop_Capacite is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2388,6 +2437,8 @@ export Capacite_Cowering_Stop_Capacite is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Retraite_1,
         ~/ConditionTagRaisedInUnit_Infanterie_Cowering_1,
@@ -2407,9 +2458,8 @@ export Capacite_Debarque_camion is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 2.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2432,6 +2482,8 @@ export Capacite_Debarque_camion is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagRaisedInUnit_GroundUnit_Engaged_1,
     ]
@@ -2450,9 +2502,8 @@ export Capacite_Declare_hors_transport is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2475,6 +2526,8 @@ export Capacite_Declare_hors_transport is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_Surrender is TCapaciteDescriptor
@@ -2491,9 +2544,8 @@ export Capacite_Surrender is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2516,6 +2568,8 @@ export Capacite_Surrender is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Allie_Proche_1,
 		//~/ConditionTagRaisedInUnit_Allie_Proche_1,
@@ -2537,9 +2591,8 @@ export Capacite_Flee is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2561,6 +2614,8 @@ export Capacite_Flee is TCapaciteDescriptor
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
     ]
     Conditions = [
         ~/ConditionTagRaisedInUnit_Allie_Proche_1,
@@ -2582,9 +2637,8 @@ export Capacite_Flee_from_tank is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2607,6 +2661,8 @@ export Capacite_Flee_from_tank is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Allie_Proche_1,
         ~/ConditionTagRaisedInUnit_Infanterie_Cowering_1,
@@ -2627,9 +2683,8 @@ export Capacite_Discipline is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1000.00 * Metre
-    Range               = 1000.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1000 * 0.35333333333 
+    RangeGRU               = 1000 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2652,6 +2707,8 @@ export Capacite_Discipline is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
     ]
@@ -2670,9 +2727,8 @@ export Capacite_GSR is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -2695,6 +2751,8 @@ export Capacite_GSR is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_RadioJammed_1,
         ~/ConditionTagRaisedInUnit_GSR_ok_1,
@@ -2715,9 +2773,8 @@ export Capacite_GSR_no_GSR is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 8.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -2740,6 +2797,8 @@ export Capacite_GSR_no_GSR is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -2758,9 +2817,8 @@ export Capacite_cover is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -2783,6 +2841,8 @@ export Capacite_cover is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -2801,9 +2861,8 @@ export Capacite_vehicle_cover is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -2845,9 +2904,8 @@ export Capacite_vehicle_stop is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -2870,6 +2928,8 @@ export Capacite_vehicle_stop is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -2888,9 +2948,8 @@ export Capacite_dig_in is TCapaciteDescriptor //hasty position
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -2932,9 +2991,8 @@ export Capacite_IFV is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 500.00 * RangeCorr* Metre
-    Range               = 1250.00 * RangeCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 500.00 * RangeCorr * 0.35333333333 
+    RangeGRU               = 1250.00 * RangeCorr  * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -2962,7 +3020,7 @@ export Capacite_IFV is TCapaciteDescriptor
 export Capacite_Observer_ring is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9945a787-8bd6-4561-9d6f-d630e01fdfe1}
-    Name             = "Observer Range Ring"
+    Name             = "Observer RangeGRU Ring"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
     Declenchement        = ~/CapaciteDeclenchementType_automatique
@@ -2973,9 +3031,8 @@ export Capacite_Observer_ring is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 500.00 * RangeCorr* Metre
-    Range               = 1500 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 500.00 * RangeCorr * 0.35333333333 
+    RangeGRU               = 1500
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3002,7 +3059,7 @@ export Capacite_Observer_ring is TCapaciteDescriptor
 export Capacite_Observer_ring_batt is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9955a737-8cd6-4462-9d6f-d630e01fdfe1}
-    Name             = "Range Ring Battallion"
+    Name             = "RangeGRU Ring Battallion"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
     Declenchement        = ~/CapaciteDeclenchementType_automatique
@@ -3013,9 +3070,8 @@ export Capacite_Observer_ring_batt is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 500.00 * RangeCorr* Metre
-    Range               = 1500 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 500.00 * RangeCorr * 0.35333333333 
+    RangeGRU               = 1500
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3053,9 +3109,8 @@ export Capacite_BattComm is TCapaciteDescriptor //experimental battalion command
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 20000.00 * MeterCorr * Metre
-    Range               = 20000.00 *MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 20000
+    RangeGRU               = 20000
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3095,9 +3150,8 @@ export Capacite_Burn_Bailed_Tank is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 15 * MeterCorr * Metre
-    Range               = 15 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 15
+    RangeGRU               = 15
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3137,9 +3191,8 @@ export Capacite_Provide_extra_XP is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1600 * RangeCorr * Metre
-    Range               = 1600 * RangeCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1600 * RangeCorr  * 0.35333333333 
+    RangeGRU               = 1600 * RangeCorr  * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3178,9 +3231,8 @@ export Capacite_Infanterie_Dissimulee is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 0.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 0 * 0.35333333333 
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3205,6 +3257,8 @@ export Capacite_Infanterie_Dissimulee is TCapaciteDescriptor
         "Infanterie",
         "Unite_transportable",
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -3223,9 +3277,8 @@ export Capacite_Infanterie_Retranchee is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 0.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 0 * 0.35333333333 
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3249,6 +3302,8 @@ export Capacite_Infanterie_Retranchee is TCapaciteDescriptor
     TagsCiblePossible = [
         "Infanterie",
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -3267,9 +3322,8 @@ export Capacite_Malus_Suppress_AllTime is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 30.00
     CheckVisibility     = True
@@ -3292,6 +3346,8 @@ export Capacite_Malus_Suppress_AllTime is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 // now the BattComm since I think this is unused // for a while I was able to use BattComm directly but not after the hotfix so we're back to this
@@ -3309,9 +3365,8 @@ export Capacite_Malus_Suppress_Zone_Influence_Ennemie is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 0.60
     CheckVisibility     = True
@@ -3334,6 +3389,8 @@ export Capacite_Malus_Suppress_Zone_Influence_Ennemie is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
@@ -3350,9 +3407,8 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 35.00 * MeterCorr * Metre
-    Range               = 35.00 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 35.00
+    RangeGRU               = 35.00
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3375,6 +3431,8 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
     ]
@@ -3393,9 +3451,8 @@ export Capacite_Menace_Ennemi_Proche_tank is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 20.00 * MeterCorr * Metre
-    Range               = 20.00 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 20.00
+    RangeGRU               = 20.00
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3418,6 +3475,8 @@ export Capacite_Menace_Ennemi_Proche_tank is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
     ]
@@ -3436,9 +3495,8 @@ export Capacite_MilitaryPolice is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1415.00 * Metre
-    Range               = 1415.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1415 * 0.35333333333 
+    RangeGRU               = 1415 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3478,9 +3536,8 @@ export Capacite_Ordre_Unload_NonArmes is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3503,6 +3560,8 @@ export Capacite_Ordre_Unload_NonArmes is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_Regen_suppress_xp_1 is TCapaciteDescriptor
@@ -3519,9 +3578,8 @@ export Capacite_Regen_suppress_xp_1 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 0.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 0 * 0.35333333333 
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3544,6 +3602,8 @@ export Capacite_Regen_suppress_xp_1 is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagRaisedInUnit_xp_regular_1,
         ~/ConditionNotInMovement,
@@ -3563,9 +3623,8 @@ export Capacite_Regen_suppress_xp_2 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 0.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 0 * 0.35333333333 
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3588,6 +3647,8 @@ export Capacite_Regen_suppress_xp_2 is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagRaisedInUnit_xp_veteran_1,
         ~/ConditionNotInMovement,
@@ -3607,9 +3668,8 @@ export Capacite_Regen_suppress_xp_3 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 0.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 0 * 0.35333333333 
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3632,6 +3692,8 @@ export Capacite_Regen_suppress_xp_3 is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagRaisedInUnit_xp_elite_1,
         ~/ConditionNotInMovement,
@@ -3651,9 +3713,8 @@ export Capacite_Soutien_Allie_Proche is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 50.00 * MeterCorr * Metre
-    Range               = 50.00 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 50.00
+    RangeGRU               = 50.00
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3675,6 +3736,8 @@ export Capacite_Soutien_Allie_Proche is TCapaciteDescriptor
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
     ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
@@ -3694,9 +3757,8 @@ export Capacite_Soutien_Allie_Proche_Commandant is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1000.00 * Metre
-    Range               = 1000.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1000 * 0.35333333333 
+    RangeGRU               = 1000 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3718,6 +3780,8 @@ export Capacite_Soutien_Allie_Proche_Commandant is TCapaciteDescriptor
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
     ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
@@ -3737,9 +3801,8 @@ export Capacite_Soutien_Allie_Proche_Commandant_2 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1250.00 * Metre
-    Range               = 1250.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1250 * 0.35333333333 
+    RangeGRU               = 1250 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3761,6 +3824,8 @@ export Capacite_Soutien_Allie_Proche_Commandant_2 is TCapaciteDescriptor
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
     ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
@@ -3780,9 +3845,8 @@ export Capacite_Soutien_Allie_Proche_Commandant_3 is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1500.00 * Metre
-    Range               = 1500.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1500 * 0.35333333333 
+    RangeGRU               = 1500 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3805,6 +3869,8 @@ export Capacite_Soutien_Allie_Proche_Commandant_3 is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
     ]
@@ -3823,9 +3889,8 @@ export Capacite_Suicide_SurCetteCibleEnnemie is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = True
-    Radius              = 100.00 * Metre
-    Range               = 100.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 100 * 0.35333333333 
+    RangeGRU               = 100 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 2.00
     CheckVisibility     = True
@@ -3849,6 +3914,8 @@ export Capacite_Suicide_SurCetteCibleEnnemie is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -3867,9 +3934,8 @@ export Capacite_Suicide_SurCettePosition is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = True
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 2.00
     CheckVisibility     = True
@@ -3894,6 +3960,8 @@ export Capacite_Suicide_SurCettePosition is TCapaciteDescriptor
     TagsCiblePossible = [
         "GroundUnits",
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -3912,9 +3980,8 @@ export Capacite_Tank_Dissimule is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 0.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 0 * 0.35333333333 
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3937,6 +4004,8 @@ export Capacite_Tank_Dissimule is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -3955,9 +4024,8 @@ export Capacite_UAV is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -3980,6 +4048,8 @@ export Capacite_UAV is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_electronic_warfare is TCapaciteDescriptor
@@ -3996,9 +4066,8 @@ export Capacite_electronic_warfare is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 20000.00 * MeterCorr * Metre
-    Range               = 20000.00 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 20000.00
+    RangeGRU               = 20000.00
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4039,9 +4108,8 @@ export Capacite_disp_electronic_warfare is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4079,9 +4147,8 @@ export Capacite_disp_electronic_warfare_basic is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4119,9 +4186,8 @@ export Capacite_electronic_warfare_basic is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 20000.00 * MeterCorr * Metre
-    Range               = 20000.00 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 20000.00
+    RangeGRU               = 20000.00
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4160,9 +4226,8 @@ export Capacite_electronic_warfare_gun is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 20000.00 * MeterCorr * Metre
-    Range               = 20000.00 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 20000.00
+    RangeGRU               = 20000.00
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4201,9 +4266,8 @@ export Capacite_electronic_warfare_search_radar is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 20000.00 * MeterCorr * Metre
-    Range               = 20000.00 * MeterCorr * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 20000.00
+    RangeGRU               = 20000.00
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4242,9 +4306,8 @@ export Capacite_IRCM is TCapaciteDescriptor //haven't figured out how to make th
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 10000.00 * Metre
-    Range               = 10000.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 10000 * 0.35333333333 
+    RangeGRU               = 10000 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4285,9 +4348,8 @@ export Capacite_eo_dazzler is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -4310,6 +4372,8 @@ export Capacite_eo_dazzler is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -4328,9 +4392,8 @@ export Capacite_fireDirection is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1415.00 * Metre
-    Range               = 1415.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1415 * 0.35333333333 
+    RangeGRU               = 1415 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -4354,6 +4417,8 @@ export Capacite_fireDirection is TCapaciteDescriptor
     TagsCiblePossible = [
         "Artillerie",
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_jammer is TCapaciteDescriptor
@@ -4370,9 +4435,8 @@ export Capacite_jammer is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 10000.00 * Metre
-    Range               = 10000.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 10000 * 0.35333333333 
+    RangeGRU               = 10000 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4396,6 +4460,8 @@ export Capacite_jammer is TCapaciteDescriptor
     TagsCiblePossible = [
         "reco_radar",
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_jammer_arty is TCapaciteDescriptor
@@ -4412,9 +4478,8 @@ export Capacite_jammer_arty is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 10000.00 * Metre
-    Range               = 10000.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 10000 * 0.35333333333 
+    RangeGRU               = 10000 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4438,6 +4503,8 @@ export Capacite_jammer_arty is TCapaciteDescriptor
     TagsCiblePossible = [
         "Artillerie",
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_poorly_trained is TCapaciteDescriptor
@@ -4454,9 +4521,8 @@ export Capacite_poorly_trained is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -4479,6 +4545,8 @@ export Capacite_poorly_trained is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_reserviste_immune_1,
         ~/ConditionNotInMovement,
@@ -4498,9 +4566,8 @@ export Capacite_reserviste is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -4523,6 +4590,8 @@ export Capacite_reserviste is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_reserviste_immune_1,
     ]
@@ -4541,9 +4610,8 @@ export Capacite_resolute is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = True
@@ -4566,6 +4634,8 @@ export Capacite_resolute is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -4584,9 +4654,8 @@ export Capacite_security is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4610,6 +4679,8 @@ export Capacite_security is TCapaciteDescriptor
     TagsCiblePossible = [
         "GroundUnits",
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -4628,9 +4699,8 @@ export Capacite_sigint_close is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 5000.00 * Metre
-    Range               = 5000.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 5000 * 0.35333333333 
+    RangeGRU               = 5000 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4656,6 +4726,9 @@ export Capacite_sigint_close is TCapaciteDescriptor
         "GroundUnits",
         "Helo",
     ]
+    TagsCibleExcluded = [
+        "noSIGINT",
+    ]
 
 )
 export Capacite_sigint_far is TCapaciteDescriptor
@@ -4672,9 +4745,8 @@ export Capacite_sigint_far is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_circulaire
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 10000.00 * Metre
-    Range               = 10000.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 10000 * 0.35333333333 
+    RangeGRU               = 10000 * 0.35333333333 
     CastTime            = 0.00
     Cooldown            = 1.00
     CheckVisibility     = False
@@ -4700,6 +4772,9 @@ export Capacite_sigint_far is TCapaciteDescriptor
         "GroundUnits",
         "Helo",
     ]
+    TagsCibleExcluded = [
+        "noSIGINT",
+    ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_sigint_close_1,
     ]
@@ -4718,9 +4793,8 @@ export Capacite_sniper is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4743,6 +4817,8 @@ export Capacite_sniper is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionTagRaisedInUnit_snipe_ok_1,
         ~/ConditionNotInMovement,
@@ -4762,9 +4838,8 @@ export Capacite_sniper_no_snipe is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 10.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4787,6 +4862,8 @@ export Capacite_sniper_no_snipe is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -4805,9 +4882,8 @@ export Capacite_kill_missile_4_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 4.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4830,6 +4906,8 @@ export Capacite_kill_missile_4_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -4847,9 +4925,8 @@ export Capacite_kill_missile_5_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 5.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4872,6 +4949,8 @@ export Capacite_kill_missile_5_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -4889,9 +4968,8 @@ export Capacite_kill_missile_6_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 6.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4914,6 +4992,8 @@ export Capacite_kill_missile_6_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -4931,9 +5011,8 @@ export Capacite_kill_missile_7_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 7.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4956,6 +5035,8 @@ export Capacite_kill_missile_7_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -4973,9 +5054,8 @@ export Capacite_kill_missile_8_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 8.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -4998,6 +5078,8 @@ export Capacite_kill_missile_8_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -5015,9 +5097,8 @@ export Capacite_kill_missile_9_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 9.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5040,6 +5121,8 @@ export Capacite_kill_missile_9_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -5057,9 +5140,8 @@ export Capacite_kill_missile_10_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 10.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5082,6 +5164,8 @@ export Capacite_kill_missile_10_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -5099,9 +5183,8 @@ export Capacite_kill_missile_11_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 11.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5124,6 +5207,8 @@ export Capacite_kill_missile_11_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -5141,9 +5226,8 @@ export Capacite_kill_missile_13_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 13.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5166,6 +5250,8 @@ export Capacite_kill_missile_13_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -5183,9 +5269,8 @@ export Capacite_kill_missile_15_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 15.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5208,6 +5293,8 @@ export Capacite_kill_missile_15_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -5225,9 +5312,8 @@ export Capacite_kill_missile_18_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 18.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5250,6 +5336,8 @@ export Capacite_kill_missile_18_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -5267,9 +5355,8 @@ export Capacite_kill_missile_24_seconds is TCapaciteDescriptor
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 24.10
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5292,6 +5379,8 @@ export Capacite_kill_missile_24_seconds is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
     ]
 )
@@ -5309,9 +5398,8 @@ export Capacite_cover_no_cover is TCapaciteDescriptor //want a delay so vehicles
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 15.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5334,6 +5422,8 @@ export Capacite_cover_no_cover is TCapaciteDescriptor //want a delay so vehicles
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -5353,9 +5443,8 @@ export Capacite_dig_in_no_dig_in is TCapaciteDescriptor //want a delay so vehicl
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 720.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5378,6 +5467,8 @@ export Capacite_dig_in_no_dig_in is TCapaciteDescriptor //want a delay so vehicl
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -5397,9 +5488,8 @@ export Capacite_no_tripod is TCapaciteDescriptor //HMGs and AGLs need to be moun
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5440,9 +5530,8 @@ export Capacite_tripod is TCapaciteDescriptor //set up tripod
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 1.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5484,9 +5573,8 @@ export Capacite_tripod_no_tripod is TCapaciteDescriptor //want a delay so vehicl
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 40.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5509,6 +5597,8 @@ export Capacite_tripod_no_tripod is TCapaciteDescriptor //want a delay so vehicl
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
     Conditions = [
         ~/ConditionNotInMovement,
     ]
@@ -5527,9 +5617,8 @@ export Capacite_tripod_no_tripod_fast is TCapaciteDescriptor //want a delay so v
     AreaShape            = ~/CapaciteAreaShape_soi
     InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
     ActionRadiusWithBoundingBox = False
-    Radius              = 1.00 * Metre
-    Range               = 1.00 * Metre
-    AutomaticOrderRange = 0.00 * Metre
+    RadiusGRU              = 1
+    RangeGRU               = 1
     CastTime            = 20.00
     Cooldown            = 0.00
     CheckVisibility     = True
@@ -5551,6 +5640,8 @@ export Capacite_tripod_no_tripod_fast is TCapaciteDescriptor //want a delay so v
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
     ]
     Conditions = [
         ~/ConditionNotInMovement,

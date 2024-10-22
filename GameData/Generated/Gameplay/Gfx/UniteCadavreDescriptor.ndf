@@ -16596,6 +16596,43 @@ Descriptor_UnitCadavre_LandRover_UK is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
+Descriptor_UnitCadavre_LandRover_WOMBAT_Gurkhas_UK is TEntityDescriptor
+(
+    DescriptorId       = GUID:{f65e4542-6de4-4676-a3ba-b5bf5219ae88}
+    ClassNameForDebug  = 'Unit_CadavreLandRover_WOMBAT_Gurkhas_UK'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'UK'
+            AcknowUnitType                   = ~/TAcknowUnitType_Vehicle
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillAsVehicule = True
+            CadavreDuration = ~/CadavreDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_faible
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_Unit_LandRover_WOMBAT_Gurkhas_UK/WeaponManager,
+                ~/Descriptor_Unit_LandRover_WOMBAT_Gurkhas_UK/ApparenceModel,
+                ~/Descriptor_Unit_LandRover_WOMBAT_Gurkhas_UK/LandMovement,
+                ~/Descriptor_Unit_LandRover_WOMBAT_Gurkhas_UK/GenericMovement,
+            ]
+        ),
+        ~/Descriptor_Unit_LandRover_WOMBAT_Gurkhas_UK/WeaponManager,
+        ~/Descriptor_Unit_LandRover_WOMBAT_Gurkhas_UK/ApparenceModel,
+        ~/Descriptor_Unit_LandRover_WOMBAT_Gurkhas_UK/LandMovement,
+        ~/Descriptor_Unit_LandRover_WOMBAT_Gurkhas_UK/GenericMovement,
+        ~/PackSignauxModuleDescriptor,
+        ~/DebugModuleDescriptor,
+    ]
+)
 Descriptor_UnitCadavre_LandRover_WOMBAT_UK is TEntityDescriptor
 (
     DescriptorId       = GUID:{0cadc342-3815-4d05-820e-93ff8db77706}
@@ -26611,6 +26648,41 @@ Descriptor_UnitCadavre_Reserve_Polizei_RFA is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
+Descriptor_UnitCadavre_Reserviste_FAMAS_FR is TEntityDescriptor
+(
+    DescriptorId       = GUID:{f07c628a-999a-4c79-bd08-9fa29c650ce6}
+    ClassNameForDebug  = 'Unit_CadavreReserviste_FAMAS_FR'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillAsInfanterie = True
+            CadavreDuration = ~/CadavreDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_Unit_Reserviste_FAMAS_FR/GroupeCombat,
+                ~/Descriptor_Unit_Reserviste_FAMAS_FR/LandMovement,
+                ~/Descriptor_Unit_Reserviste_FAMAS_FR/GenericMovement,
+            ]
+        ),
+        ~/Descriptor_Unit_Reserviste_FAMAS_FR/GroupeCombat,
+        ~/Descriptor_Unit_Reserviste_FAMAS_FR/LandMovement,
+        ~/Descriptor_Unit_Reserviste_FAMAS_FR/GenericMovement,
+        ~/PackSignauxModuleDescriptor,
+        ~/DebugModuleDescriptor,
+    ]
+)
 Descriptor_UnitCadavre_Reserviste_FR is TEntityDescriptor
 (
     DescriptorId       = GUID:{612080db-b117-42f9-bd16-db6fec3cfa9d}
@@ -28904,6 +28976,41 @@ Descriptor_UnitCadavre_Scout_Spetsnaz_SOV is TEntityDescriptor
         ~/Descriptor_Unit_Scout_Spetsnaz_SOV/GroupeCombat,
         ~/Descriptor_Unit_Scout_Spetsnaz_SOV/LandMovement,
         ~/Descriptor_Unit_Scout_Spetsnaz_SOV/GenericMovement,
+        ~/PackSignauxModuleDescriptor,
+        ~/DebugModuleDescriptor,
+    ]
+)
+Descriptor_UnitCadavre_Scout_Spetsnaz_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId       = GUID:{dbc6ecf1-b917-4ffc-8e0d-01eea73e7c23}
+    ClassNameForDebug  = 'Unit_CadavreScout_Spetsnaz_VDV_SOV'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillAsInfanterie = True
+            CadavreDuration = ~/CadavreDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_Unit_Scout_Spetsnaz_VDV_SOV/GroupeCombat,
+                ~/Descriptor_Unit_Scout_Spetsnaz_VDV_SOV/LandMovement,
+                ~/Descriptor_Unit_Scout_Spetsnaz_VDV_SOV/GenericMovement,
+            ]
+        ),
+        ~/Descriptor_Unit_Scout_Spetsnaz_VDV_SOV/GroupeCombat,
+        ~/Descriptor_Unit_Scout_Spetsnaz_VDV_SOV/LandMovement,
+        ~/Descriptor_Unit_Scout_Spetsnaz_VDV_SOV/GenericMovement,
         ~/PackSignauxModuleDescriptor,
         ~/DebugModuleDescriptor,
     ]
@@ -34194,8 +34301,8 @@ Descriptor_UnitCadavre_A109BA_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34237,8 +34344,8 @@ Descriptor_UnitCadavre_AH1E_Cobra_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34282,8 +34389,8 @@ Descriptor_UnitCadavre_AH1F_ATAS_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34327,8 +34434,8 @@ Descriptor_UnitCadavre_AH1F_CNITE_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34372,8 +34479,8 @@ Descriptor_UnitCadavre_AH1F_Cobra_NG_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34417,8 +34524,8 @@ Descriptor_UnitCadavre_AH1F_Cobra_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34462,8 +34569,8 @@ Descriptor_UnitCadavre_AH1F_HeavyHog_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34507,8 +34614,8 @@ Descriptor_UnitCadavre_AH1S_Cobra_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34552,8 +34659,8 @@ Descriptor_UnitCadavre_AH64_Apache_ATAS_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((70) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 24
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34597,8 +34704,8 @@ Descriptor_UnitCadavre_AH64_Apache_NG_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((70) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 24
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34642,8 +34749,8 @@ Descriptor_UnitCadavre_AH64_Apache_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((70) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 24
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34687,8 +34794,8 @@ Descriptor_UnitCadavre_AH64_Apache_emp1_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((70) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 24
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34732,8 +34839,8 @@ Descriptor_UnitCadavre_AH64_Apache_emp2_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((70) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 24
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34777,8 +34884,8 @@ Descriptor_UnitCadavre_AH6C_Little_Bird_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((40) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 14
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34822,8 +34929,8 @@ Descriptor_UnitCadavre_AH6G_Little_Bird_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((40) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 14
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34867,8 +34974,8 @@ Descriptor_UnitCadavre_Alouette_III_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34910,8 +35017,8 @@ Descriptor_UnitCadavre_Alouette_III_reco_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34951,8 +35058,8 @@ Descriptor_UnitCadavre_Alouette_II_CMD_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -34992,8 +35099,8 @@ Descriptor_UnitCadavre_Alouette_II_reco_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35033,8 +35140,8 @@ Descriptor_UnitCadavre_Alouette_II_reco_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35074,8 +35181,8 @@ Descriptor_UnitCadavre_Bo_105_CMD_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35115,8 +35222,8 @@ Descriptor_UnitCadavre_Bo_105_PAH_1A1_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35160,8 +35267,8 @@ Descriptor_UnitCadavre_Bo_105_PAH_1_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35205,8 +35312,8 @@ Descriptor_UnitCadavre_Bo_105_reco_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35246,8 +35353,8 @@ Descriptor_UnitCadavre_Bo_105_trans_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35289,8 +35396,8 @@ Descriptor_UnitCadavre_CH47D_Chinook_supply_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35330,8 +35437,8 @@ Descriptor_UnitCadavre_CH47_Chinook_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35373,8 +35480,8 @@ Descriptor_UnitCadavre_CH47_Chinook_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35416,8 +35523,8 @@ Descriptor_UnitCadavre_CH47_Super_Chinook_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35457,8 +35564,8 @@ Descriptor_UnitCadavre_CH53G_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35498,8 +35605,8 @@ Descriptor_UnitCadavre_CH53G_trans_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35541,8 +35648,8 @@ Descriptor_UnitCadavre_EH60A_EW_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35582,8 +35689,8 @@ Descriptor_UnitCadavre_Gazelle_20mm_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35625,8 +35732,8 @@ Descriptor_UnitCadavre_Gazelle_20mm_reco_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35668,8 +35775,8 @@ Descriptor_UnitCadavre_Gazelle_CMD_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35709,8 +35816,8 @@ Descriptor_UnitCadavre_Gazelle_HOT_2_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35754,8 +35861,8 @@ Descriptor_UnitCadavre_Gazelle_HOT_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35799,8 +35906,8 @@ Descriptor_UnitCadavre_Gazelle_Mistral_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35844,8 +35951,8 @@ Descriptor_UnitCadavre_Gazelle_SNEB_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35889,8 +35996,8 @@ Descriptor_UnitCadavre_Gazelle_SNEB_reco_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35934,8 +36041,8 @@ Descriptor_UnitCadavre_Gazelle_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -35975,8 +36082,8 @@ Descriptor_UnitCadavre_Gazelle_reco_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36016,8 +36123,8 @@ Descriptor_UnitCadavre_Gazelle_trans_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36059,8 +36166,8 @@ Descriptor_UnitCadavre_Ka_50_AA_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36104,8 +36211,8 @@ Descriptor_UnitCadavre_Ka_50_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((55) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 19
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36149,8 +36256,8 @@ Descriptor_UnitCadavre_Lynx_AH_Mk1_LBH_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36196,8 +36303,8 @@ Descriptor_UnitCadavre_Lynx_AH_Mk1_TOW_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36241,8 +36348,8 @@ Descriptor_UnitCadavre_Lynx_AH_Mk1_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36286,8 +36393,8 @@ Descriptor_UnitCadavre_Lynx_AH_Mk7_I_TOW2_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36331,8 +36438,8 @@ Descriptor_UnitCadavre_Lynx_AH_Mk7_I_TOW_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36376,8 +36483,8 @@ Descriptor_UnitCadavre_Lynx_AH_Mk7_SNEB_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36423,8 +36530,8 @@ Descriptor_UnitCadavre_MH47D_Super_Chinook_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36468,8 +36575,8 @@ Descriptor_UnitCadavre_MH_60A_DAP_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((70) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 24
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36513,8 +36620,8 @@ Descriptor_UnitCadavre_Mi_14PL_AT_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36558,8 +36665,8 @@ Descriptor_UnitCadavre_Mi_14PL_recon_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36599,8 +36706,8 @@ Descriptor_UnitCadavre_Mi_24D_AA_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36644,8 +36751,8 @@ Descriptor_UnitCadavre_Mi_24D_Desant_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36691,8 +36798,8 @@ Descriptor_UnitCadavre_Mi_24D_s5_AT_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36736,8 +36843,8 @@ Descriptor_UnitCadavre_Mi_24D_s8_AT_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36781,8 +36888,8 @@ Descriptor_UnitCadavre_Mi_24K_reco_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36826,8 +36933,8 @@ Descriptor_UnitCadavre_Mi_24P_AA_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36871,8 +36978,8 @@ Descriptor_UnitCadavre_Mi_24P_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -36900,51 +37007,6 @@ Descriptor_UnitCadavre_Mi_24P_SOV is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
-Descriptor_UnitCadavre_Mi_24P_TCH is TEntityDescriptor
-(
-    DescriptorId       = GUID:{237b9ae7-ae66-44c0-af0a-e75ffab43293}
-    ClassNameForDebug  = 'Unit_CadavreMi_24P_TCH'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Nationalite                      = ENationalite/Axis
-            MotherCountry                    = 'TCH'
-            AcknowUnitType                   = ~/TAcknowUnitType_HeliAttack
-            TypeUnitFormation                = 'None'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        HelicopterCadavrePositionModuleDescriptor
-        (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
-        ),
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsHelico = True
-            CadavreDuration = ~/CadavreDurationApresFeu
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Helico_Leger
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_Mi_24P_TCH/WeaponManager,
-                ~/Descriptor_Unit_Mi_24P_TCH/ApparenceModel,
-                ~/Descriptor_Unit_Mi_24P_TCH/HelicopterMovement,
-                ~/Descriptor_Unit_Mi_24P_TCH/HeliApparence,
-                ~/Descriptor_Unit_Mi_24P_TCH/GenericMovement,
-                ~/Descriptor_Unit_Mi_24P_TCH/MissileCarriage,
-            ]
-        ),
-        ~/Descriptor_Unit_Mi_24P_TCH/WeaponManager,
-        ~/Descriptor_Unit_Mi_24P_TCH/ApparenceModel,
-        ~/Descriptor_Unit_Mi_24P_TCH/HelicopterMovement,
-        ~/Descriptor_Unit_Mi_24P_TCH/HeliApparence,
-        ~/Descriptor_Unit_Mi_24P_TCH/GenericMovement,
-        ~/Descriptor_Unit_Mi_24P_TCH/MissileCarriage,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
 Descriptor_UnitCadavre_Mi_24P_s8_AT2_DDR is TEntityDescriptor
 (
     DescriptorId       = GUID:{7c30e598-6989-47c8-aec5-d167b7259511}
@@ -36961,8 +37023,8 @@ Descriptor_UnitCadavre_Mi_24P_s8_AT2_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37006,8 +37068,8 @@ Descriptor_UnitCadavre_Mi_24P_s8_AT_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37051,8 +37113,8 @@ Descriptor_UnitCadavre_Mi_24VP_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37096,8 +37158,8 @@ Descriptor_UnitCadavre_Mi_24V_AA_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37141,8 +37203,8 @@ Descriptor_UnitCadavre_Mi_24V_AT_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37186,8 +37248,8 @@ Descriptor_UnitCadavre_Mi_24V_RKT_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37231,8 +37293,8 @@ Descriptor_UnitCadavre_Mi_24V_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37276,8 +37338,8 @@ Descriptor_UnitCadavre_Mi_26_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37317,8 +37379,8 @@ Descriptor_UnitCadavre_Mi_2_CMD_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37358,8 +37420,8 @@ Descriptor_UnitCadavre_Mi_2_gunship_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37401,8 +37463,8 @@ Descriptor_UnitCadavre_Mi_2_reco_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37442,8 +37504,8 @@ Descriptor_UnitCadavre_Mi_2_reco_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37483,8 +37545,8 @@ Descriptor_UnitCadavre_Mi_2_rocket_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37528,8 +37590,8 @@ Descriptor_UnitCadavre_Mi_2_trans_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37571,8 +37633,8 @@ Descriptor_UnitCadavre_Mi_2_trans_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37614,8 +37676,8 @@ Descriptor_UnitCadavre_Mi_6_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37655,8 +37717,8 @@ Descriptor_UnitCadavre_Mi_8K_CMD_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37696,8 +37758,8 @@ Descriptor_UnitCadavre_Mi_8MTPI_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37737,8 +37799,8 @@ Descriptor_UnitCadavre_Mi_8MTV_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37784,8 +37846,8 @@ Descriptor_UnitCadavre_Mi_8PPA_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37825,8 +37887,8 @@ Descriptor_UnitCadavre_Mi_8R_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37866,8 +37928,8 @@ Descriptor_UnitCadavre_Mi_8TB_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37911,8 +37973,8 @@ Descriptor_UnitCadavre_Mi_8TB_reco_Marine_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -37956,8 +38018,8 @@ Descriptor_UnitCadavre_Mi_8TV_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38001,8 +38063,8 @@ Descriptor_UnitCadavre_Mi_8TV_Gunship_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38046,8 +38108,8 @@ Descriptor_UnitCadavre_Mi_8TV_PodGatling_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38091,8 +38153,8 @@ Descriptor_UnitCadavre_Mi_8TV_PodGatling_PodAGL_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38136,8 +38198,8 @@ Descriptor_UnitCadavre_Mi_8TV_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38183,8 +38245,8 @@ Descriptor_UnitCadavre_Mi_8TV_UPK_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38228,8 +38290,8 @@ Descriptor_UnitCadavre_Mi_8TV_non_arme_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38271,8 +38333,8 @@ Descriptor_UnitCadavre_Mi_8TV_s57_16_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38316,8 +38378,8 @@ Descriptor_UnitCadavre_Mi_8TV_s57_32_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38361,8 +38423,8 @@ Descriptor_UnitCadavre_Mi_8TV_s57_32_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38406,8 +38468,8 @@ Descriptor_UnitCadavre_Mi_8TV_s80_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38451,8 +38513,8 @@ Descriptor_UnitCadavre_Mi_8TZ_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38492,8 +38554,8 @@ Descriptor_UnitCadavre_Mi_8T_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38539,8 +38601,8 @@ Descriptor_UnitCadavre_Mi_8T_non_arme_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38582,8 +38644,8 @@ Descriptor_UnitCadavre_Mi_8_supply_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38623,8 +38685,8 @@ Descriptor_UnitCadavre_Mi_9_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38664,8 +38726,8 @@ Descriptor_UnitCadavre_OH58A_reco_NG_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38705,8 +38767,8 @@ Descriptor_UnitCadavre_OH58C_CMD_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38746,8 +38808,8 @@ Descriptor_UnitCadavre_OH58C_Scout_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38789,8 +38851,8 @@ Descriptor_UnitCadavre_OH58D_Combat_Scout_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38834,8 +38896,8 @@ Descriptor_UnitCadavre_OH58D_Kiowa_Warrior_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38879,8 +38941,8 @@ Descriptor_UnitCadavre_OH58_CS_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38924,8 +38986,8 @@ Descriptor_UnitCadavre_Puma_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -38965,8 +39027,8 @@ Descriptor_UnitCadavre_Puma_HET_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39006,8 +39068,8 @@ Descriptor_UnitCadavre_Puma_PC_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39047,8 +39109,8 @@ Descriptor_UnitCadavre_Puma_Pirate_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39092,8 +39154,8 @@ Descriptor_UnitCadavre_Puma_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39133,8 +39195,8 @@ Descriptor_UnitCadavre_Super_Puma_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((75) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 26
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39176,8 +39238,8 @@ Descriptor_UnitCadavre_UH1A_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((50) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 17
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39217,8 +39279,8 @@ Descriptor_UnitCadavre_UH1D_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39262,8 +39324,8 @@ Descriptor_UnitCadavre_UH1D_Supply_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39303,8 +39365,8 @@ Descriptor_UnitCadavre_UH1H_Huey_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39348,8 +39410,8 @@ Descriptor_UnitCadavre_UH1H_supply_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39389,8 +39451,8 @@ Descriptor_UnitCadavre_UH1M_gunship_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39434,8 +39496,8 @@ Descriptor_UnitCadavre_UH60A_Black_Hawk_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39479,8 +39541,8 @@ Descriptor_UnitCadavre_UH60A_CO_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39522,8 +39584,8 @@ Descriptor_UnitCadavre_UH60A_Supply_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         HelicopterCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((300) * Metre)
-            NearGroundFlyingAltitude   = ((65) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 106
+            NearGroundFlyingAltitudeGRU   = 22
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39564,7 +39626,7 @@ Descriptor_UnitCadavre_A10_Thunderbolt_II_ATGM_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39606,7 +39668,7 @@ Descriptor_UnitCadavre_A10_Thunderbolt_II_Rkt_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39648,7 +39710,7 @@ Descriptor_UnitCadavre_A10_Thunderbolt_II_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39690,7 +39752,7 @@ Descriptor_UnitCadavre_A37B_Dragonfly_HE_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39732,7 +39794,7 @@ Descriptor_UnitCadavre_A37B_Dragonfly_NPLM_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39774,7 +39836,7 @@ Descriptor_UnitCadavre_A37B_Dragonfly_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39816,7 +39878,7 @@ Descriptor_UnitCadavre_Alpha_Jet_A_clu_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39858,7 +39920,7 @@ Descriptor_UnitCadavre_Alpha_Jet_A_he_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39900,7 +39962,7 @@ Descriptor_UnitCadavre_Alpha_Jet_A_nplm_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39942,7 +40004,7 @@ Descriptor_UnitCadavre_Alpha_Jet_A_rkt_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -39984,7 +40046,7 @@ Descriptor_UnitCadavre_Alpha_Jet_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40026,7 +40088,7 @@ Descriptor_UnitCadavre_Alpha_Jet_HE2_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40068,7 +40130,7 @@ Descriptor_UnitCadavre_Buccaneer_S2B_ATGM_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40110,7 +40172,7 @@ Descriptor_UnitCadavre_Buccaneer_S2B_GBU_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40152,7 +40214,7 @@ Descriptor_UnitCadavre_Buccaneer_S2B_HE_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40194,7 +40256,7 @@ Descriptor_UnitCadavre_Buccaneer_S2B_SEAD_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40236,7 +40298,7 @@ Descriptor_UnitCadavre_EF111_Raven_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40274,7 +40336,7 @@ Descriptor_UnitCadavre_F104G_Starfighter_AT_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40316,7 +40378,7 @@ Descriptor_UnitCadavre_F104G_Starfighter_HE_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40358,7 +40420,7 @@ Descriptor_UnitCadavre_F104G_Starfighter_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40400,7 +40462,7 @@ Descriptor_UnitCadavre_F111E_Aardvark_CBU_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40442,7 +40504,7 @@ Descriptor_UnitCadavre_F111E_Aardvark_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40484,7 +40546,7 @@ Descriptor_UnitCadavre_F111E_Aardvark_napalm_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40526,7 +40588,7 @@ Descriptor_UnitCadavre_F111F_Aardvark_CBU_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40568,7 +40630,7 @@ Descriptor_UnitCadavre_F111F_Aardvark_LGB2_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40610,7 +40672,7 @@ Descriptor_UnitCadavre_F111F_Aardvark_LGB_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40652,7 +40714,7 @@ Descriptor_UnitCadavre_F111F_Aardvark_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40694,7 +40756,7 @@ Descriptor_UnitCadavre_F111F_Aardvark_napalm_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40736,7 +40798,7 @@ Descriptor_UnitCadavre_F117_Nighthawk_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40778,7 +40840,7 @@ Descriptor_UnitCadavre_F15C_Eagle_AA2_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40820,7 +40882,7 @@ Descriptor_UnitCadavre_F15C_Eagle_AA_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40862,7 +40924,7 @@ Descriptor_UnitCadavre_F15E_StrikeEagle_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40904,7 +40966,7 @@ Descriptor_UnitCadavre_F16A_AA_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40946,7 +41008,7 @@ Descriptor_UnitCadavre_F16A_CBU_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -40988,7 +41050,7 @@ Descriptor_UnitCadavre_F16C_LGB_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41030,7 +41092,7 @@ Descriptor_UnitCadavre_F16E_AA2_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41072,7 +41134,7 @@ Descriptor_UnitCadavre_F16E_AA_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41114,7 +41176,7 @@ Descriptor_UnitCadavre_F16E_AGM_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41156,7 +41218,7 @@ Descriptor_UnitCadavre_F16E_CBU_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41198,7 +41260,7 @@ Descriptor_UnitCadavre_F16E_HE_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41240,7 +41302,7 @@ Descriptor_UnitCadavre_F16E_SEAD_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41282,7 +41344,7 @@ Descriptor_UnitCadavre_F16E_TER_HE_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41324,7 +41386,7 @@ Descriptor_UnitCadavre_F16E_napalm_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41366,7 +41428,7 @@ Descriptor_UnitCadavre_F4E_Phantom_II_AA_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41408,7 +41470,7 @@ Descriptor_UnitCadavre_F4E_Phantom_II_AT_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41450,7 +41512,7 @@ Descriptor_UnitCadavre_F4E_Phantom_II_CBU_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41492,7 +41554,7 @@ Descriptor_UnitCadavre_F4E_Phantom_II_HE_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41534,7 +41596,7 @@ Descriptor_UnitCadavre_F4E_Phantom_II_napalm_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41576,7 +41638,7 @@ Descriptor_UnitCadavre_F4F_Phantom_II_AA_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41618,7 +41680,7 @@ Descriptor_UnitCadavre_F4F_Phantom_II_AT_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41660,7 +41722,7 @@ Descriptor_UnitCadavre_F4F_Phantom_II_HE1_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41702,7 +41764,7 @@ Descriptor_UnitCadavre_F4F_Phantom_II_HE2_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41744,7 +41806,7 @@ Descriptor_UnitCadavre_F4F_Phantom_II_RKT2_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41786,7 +41848,7 @@ Descriptor_UnitCadavre_F4_Phantom_AA_F3_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41828,7 +41890,7 @@ Descriptor_UnitCadavre_F4_Wild_Weasel_US is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41870,7 +41932,7 @@ Descriptor_UnitCadavre_G91_R3_Gina_HE_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41912,7 +41974,7 @@ Descriptor_UnitCadavre_G91_R3_Gina_NPL_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41954,7 +42016,7 @@ Descriptor_UnitCadavre_G91_R3_Gina_RKT_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -41996,7 +42058,7 @@ Descriptor_UnitCadavre_Harrier_CLU_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42038,7 +42100,7 @@ Descriptor_UnitCadavre_Harrier_GR5_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42080,7 +42142,7 @@ Descriptor_UnitCadavre_Harrier_HE1_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42122,7 +42184,7 @@ Descriptor_UnitCadavre_Harrier_HE2_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42164,7 +42226,7 @@ Descriptor_UnitCadavre_Harrier_RKT1_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42206,7 +42268,7 @@ Descriptor_UnitCadavre_Harrier_RKT2_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42248,7 +42310,7 @@ Descriptor_UnitCadavre_Harrier_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42290,7 +42352,7 @@ Descriptor_UnitCadavre_Jaguar_ATGM_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42332,7 +42394,7 @@ Descriptor_UnitCadavre_Jaguar_CLU_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42374,7 +42436,7 @@ Descriptor_UnitCadavre_Jaguar_HE1_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42416,7 +42478,7 @@ Descriptor_UnitCadavre_Jaguar_HE2_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42458,7 +42520,7 @@ Descriptor_UnitCadavre_Jaguar_HE_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42500,7 +42562,7 @@ Descriptor_UnitCadavre_Jaguar_RKT_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42542,7 +42604,7 @@ Descriptor_UnitCadavre_Jaguar_RKT_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42584,7 +42646,7 @@ Descriptor_UnitCadavre_Jaguar_SEAD2_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42626,7 +42688,7 @@ Descriptor_UnitCadavre_Jaguar_SEAD_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42668,7 +42730,7 @@ Descriptor_UnitCadavre_Jaguar_clu_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42710,7 +42772,7 @@ Descriptor_UnitCadavre_Jaguar_nplm_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42752,7 +42814,7 @@ Descriptor_UnitCadavre_L39ZO_CLU_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42794,7 +42856,7 @@ Descriptor_UnitCadavre_L39ZO_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42836,7 +42898,7 @@ Descriptor_UnitCadavre_L39ZO_HE1_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42878,7 +42940,7 @@ Descriptor_UnitCadavre_L39ZO_HE1_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42920,7 +42982,7 @@ Descriptor_UnitCadavre_L39ZO_NPLM_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -42962,7 +43024,7 @@ Descriptor_UnitCadavre_MiG_17PF_POL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43004,7 +43066,7 @@ Descriptor_UnitCadavre_MiG_21PFM_AA_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43046,7 +43108,7 @@ Descriptor_UnitCadavre_MiG_21PFM_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43088,7 +43150,7 @@ Descriptor_UnitCadavre_MiG_21bis_AA2_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43130,7 +43192,7 @@ Descriptor_UnitCadavre_MiG_21bis_AA3_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43172,7 +43234,7 @@ Descriptor_UnitCadavre_MiG_21bis_CLU_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43214,7 +43276,7 @@ Descriptor_UnitCadavre_MiG_21bis_HE_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43256,7 +43318,7 @@ Descriptor_UnitCadavre_MiG_21bis_NPLM_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43298,7 +43360,7 @@ Descriptor_UnitCadavre_MiG_21bis_RKT2_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43338,7 +43400,7 @@ Descriptor_UnitCadavre_MiG_23BN_AT2_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43380,7 +43442,7 @@ Descriptor_UnitCadavre_MiG_23BN_AT_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43422,7 +43484,7 @@ Descriptor_UnitCadavre_MiG_23BN_CLU_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43464,7 +43526,7 @@ Descriptor_UnitCadavre_MiG_23BN_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43506,7 +43568,7 @@ Descriptor_UnitCadavre_MiG_23BN_KMGU_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43548,7 +43610,7 @@ Descriptor_UnitCadavre_MiG_23BN_RKT_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43590,7 +43652,7 @@ Descriptor_UnitCadavre_MiG_23BN_nplm_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43632,7 +43694,7 @@ Descriptor_UnitCadavre_MiG_23MF_AA_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43674,7 +43736,7 @@ Descriptor_UnitCadavre_MiG_23MF_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43700,48 +43762,6 @@ Descriptor_UnitCadavre_MiG_23MF_DDR is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
-Descriptor_UnitCadavre_MiG_23MF_SOV is TEntityDescriptor
-(
-    DescriptorId       = GUID:{208c5555-f5e4-474d-9272-1c2baf6e7949}
-    ClassNameForDebug  = 'Unit_CadavreMiG_23MF_SOV'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Nationalite                      = ENationalite/Axis
-            MotherCountry                    = 'SOV'
-            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
-            TypeUnitFormation                = 'None'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        AirplaneCadavrePositionModuleDescriptor
-        (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
-        ),
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsAirplane = True
-            CadavreDuration = ~/CadavreDurationApresFeu
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Avion_UltraLourd
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_MiG_23MF_SOV/WeaponManager,
-                ~/Descriptor_Unit_MiG_23MF_SOV/ApparenceModel,
-                ~/Descriptor_Unit_MiG_23MF_SOV/AirplaneMovement,
-                ~/Descriptor_Unit_MiG_23MF_SOV/GenericMovement,
-                ~/Descriptor_Unit_MiG_23MF_SOV/MissileCarriage,
-            ]
-        ),
-        ~/Descriptor_Unit_MiG_23MF_SOV/WeaponManager,
-        ~/Descriptor_Unit_MiG_23MF_SOV/ApparenceModel,
-        ~/Descriptor_Unit_MiG_23MF_SOV/AirplaneMovement,
-        ~/Descriptor_Unit_MiG_23MF_SOV/GenericMovement,
-        ~/Descriptor_Unit_MiG_23MF_SOV/MissileCarriage,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
 Descriptor_UnitCadavre_MiG_23MLD_SOV is TEntityDescriptor
 (
     DescriptorId       = GUID:{16e506c8-d40c-4931-8d91-0004f92e057c}
@@ -43758,7 +43778,7 @@ Descriptor_UnitCadavre_MiG_23MLD_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43800,7 +43820,7 @@ Descriptor_UnitCadavre_MiG_23ML_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43842,7 +43862,7 @@ Descriptor_UnitCadavre_MiG_23ML_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43884,7 +43904,7 @@ Descriptor_UnitCadavre_MiG_23P_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43926,7 +43946,7 @@ Descriptor_UnitCadavre_MiG_25BM_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -43968,7 +43988,7 @@ Descriptor_UnitCadavre_MiG_25RBF_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44010,7 +44030,7 @@ Descriptor_UnitCadavre_MiG_27K_AT1_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44052,7 +44072,7 @@ Descriptor_UnitCadavre_MiG_27K_AT2_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44094,7 +44114,7 @@ Descriptor_UnitCadavre_MiG_27K_LGB_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44136,7 +44156,7 @@ Descriptor_UnitCadavre_MiG_27M_CLU_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44178,7 +44198,7 @@ Descriptor_UnitCadavre_MiG_27M_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44220,7 +44240,7 @@ Descriptor_UnitCadavre_MiG_27M_bombe_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44262,7 +44282,7 @@ Descriptor_UnitCadavre_MiG_27M_napalm_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44304,7 +44324,7 @@ Descriptor_UnitCadavre_MiG_27M_rkt_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44346,7 +44366,7 @@ Descriptor_UnitCadavre_MiG_27M_sead_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44388,7 +44408,7 @@ Descriptor_UnitCadavre_MiG_29_AA2_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 883
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44430,7 +44450,7 @@ Descriptor_UnitCadavre_MiG_29_AA3_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 883
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44472,7 +44492,7 @@ Descriptor_UnitCadavre_MiG_29_AA_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 883
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44514,7 +44534,7 @@ Descriptor_UnitCadavre_MiG_29_AA_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 883
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44556,7 +44576,7 @@ Descriptor_UnitCadavre_MiG_31M_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44598,7 +44618,7 @@ Descriptor_UnitCadavre_Mirage_2000_C_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44640,7 +44660,7 @@ Descriptor_UnitCadavre_Mirage_5_BA_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44682,7 +44702,7 @@ Descriptor_UnitCadavre_Mirage_5_BA_CLU_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44717,14 +44737,14 @@ Descriptor_UnitCadavre_Mirage_5_BA_MIRSIP_BEL is TEntityDescriptor
         (
             Nationalite                      = ENationalite/Allied
             MotherCountry                    = 'BEL'
-            AcknowUnitType                   = ~/TAcknowUnitType_AirSup
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
             TypeUnitFormation                = 'None'
         ),
         ~/EmptyTagsModuleDescriptor,
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44766,7 +44786,7 @@ Descriptor_UnitCadavre_Mirage_5_BA_NPLM_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44808,7 +44828,7 @@ Descriptor_UnitCadavre_Mirage_5_BA_RKT_BEL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44850,7 +44870,7 @@ Descriptor_UnitCadavre_Mirage_5_F_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44892,7 +44912,7 @@ Descriptor_UnitCadavre_Mirage_5_F_clu_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44934,7 +44954,7 @@ Descriptor_UnitCadavre_Mirage_5_F_nplm_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -44976,7 +44996,7 @@ Descriptor_UnitCadavre_Mirage_F1_CT_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45018,7 +45038,7 @@ Descriptor_UnitCadavre_Mirage_F1_C_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1060
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45060,7 +45080,7 @@ Descriptor_UnitCadavre_Mirage_III_E_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45102,7 +45122,7 @@ Descriptor_UnitCadavre_Mirage_IV_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45144,7 +45164,7 @@ Descriptor_UnitCadavre_Mirage_IV_SEAD_FR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45186,7 +45206,7 @@ Descriptor_UnitCadavre_Su_17M4_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45228,7 +45248,7 @@ Descriptor_UnitCadavre_Su_17_cluster_POL is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45270,7 +45290,7 @@ Descriptor_UnitCadavre_Su_22_AT2_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45312,7 +45332,7 @@ Descriptor_UnitCadavre_Su_22_AT_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45354,7 +45374,7 @@ Descriptor_UnitCadavre_Su_22_AT_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45396,7 +45416,7 @@ Descriptor_UnitCadavre_Su_22_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45438,7 +45458,7 @@ Descriptor_UnitCadavre_Su_22_HE2_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45480,7 +45500,7 @@ Descriptor_UnitCadavre_Su_22_RKT_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45520,7 +45540,7 @@ Descriptor_UnitCadavre_Su_22_SEAD_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45562,7 +45582,7 @@ Descriptor_UnitCadavre_Su_22_UPK_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45604,7 +45624,7 @@ Descriptor_UnitCadavre_Su_22_clu_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45646,7 +45666,7 @@ Descriptor_UnitCadavre_Su_22_nplm_DDR is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45688,7 +45708,7 @@ Descriptor_UnitCadavre_Su_24MP_EW_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45698,13 +45718,11 @@ Descriptor_UnitCadavre_Su_24MP_EW_SOV is TEntityDescriptor
             DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Avion_UltraLourd
             ModuleDescriptorsToSteal =
             [
-                ~/Descriptor_Unit_Su_24MP_EW_SOV/WeaponManager,
                 ~/Descriptor_Unit_Su_24MP_EW_SOV/ApparenceModel,
                 ~/Descriptor_Unit_Su_24MP_EW_SOV/AirplaneMovement,
                 ~/Descriptor_Unit_Su_24MP_EW_SOV/GenericMovement,
             ]
         ),
-        ~/Descriptor_Unit_Su_24MP_EW_SOV/WeaponManager,
         ~/Descriptor_Unit_Su_24MP_EW_SOV/ApparenceModel,
         ~/Descriptor_Unit_Su_24MP_EW_SOV/AirplaneMovement,
         ~/Descriptor_Unit_Su_24MP_EW_SOV/GenericMovement,
@@ -45728,7 +45746,7 @@ Descriptor_UnitCadavre_Su_24MP_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45770,7 +45788,7 @@ Descriptor_UnitCadavre_Su_24M_LGB_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45812,7 +45830,7 @@ Descriptor_UnitCadavre_Su_24M_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45854,7 +45872,7 @@ Descriptor_UnitCadavre_Su_24M_clu2_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45896,7 +45914,7 @@ Descriptor_UnitCadavre_Su_24M_clu_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45938,7 +45956,7 @@ Descriptor_UnitCadavre_Su_24M_nplm_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -45980,7 +45998,7 @@ Descriptor_UnitCadavre_Su_25T_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46022,7 +46040,7 @@ Descriptor_UnitCadavre_Su_25_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46064,7 +46082,7 @@ Descriptor_UnitCadavre_Su_25_clu_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46106,7 +46124,7 @@ Descriptor_UnitCadavre_Su_25_he_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46148,7 +46166,7 @@ Descriptor_UnitCadavre_Su_25_nplm_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46190,7 +46208,7 @@ Descriptor_UnitCadavre_Su_25_rkt_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((1400) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 494
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46232,7 +46250,7 @@ Descriptor_UnitCadavre_Su_27S_SOV is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((3500) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 1236
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46274,7 +46292,7 @@ Descriptor_UnitCadavre_Tornado_ADV_HE_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46316,7 +46334,7 @@ Descriptor_UnitCadavre_Tornado_ADV_SEAD_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46358,7 +46376,7 @@ Descriptor_UnitCadavre_Tornado_ADV_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46400,7 +46418,7 @@ Descriptor_UnitCadavre_Tornado_ADV_clu_UK is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46442,7 +46460,7 @@ Descriptor_UnitCadavre_Tornado_IDS_AT1_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46484,7 +46502,7 @@ Descriptor_UnitCadavre_Tornado_IDS_CLUS_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46526,7 +46544,7 @@ Descriptor_UnitCadavre_Tornado_IDS_HE1_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor
@@ -46568,7 +46586,7 @@ Descriptor_UnitCadavre_Tornado_IDS_MW1_RFA is TEntityDescriptor
         ~/CadavreFlagsModuleDescriptor,
         AirplaneCadavrePositionModuleDescriptor
         (
-            LowAltitudeFlyingAltitude  = ((2000) * Metre)
+            LowAltitudeFlyingAltitudeGRU  = 706
         ),
         ~/LinkTeamModuleDescriptor,
         UnitCadavreModuleDescriptor

@@ -1105,7 +1105,7 @@ export UnitEffect_Critic_Bailed_Out is TEffectsPackDescriptor
         (
             ModifierType       = ~/ModifierType_Remplacement
             VisionType         = ~/EVisionUnitType/AlwaysInHighAltitude
-            BonusValue         = ((0) * Metre)
+            BonusValueGRU      = 0
         ),
         TUnitEffectIncreaseInfluenceValueDescriptor
         (
@@ -1125,22 +1125,22 @@ export UnitEffect_Critic_Bailed_Out is TEffectsPackDescriptor
         TUnitEffectIncreaseWeaponPorteeMaxDescriptor
         (
             ModifierType  = ~/ModifierType_Remplacement
-            ModifierValue = ((0) * Metre)
+            ModifierValueGRU = 0
         ),
         TUnitEffectIncreaseWeaponPorteeMaxHADescriptor
         (
             ModifierType  = ~/ModifierType_Remplacement
-            ModifierValue = ((0) * Metre)
+            ModifierValueGRU = 0
         ),
         TUnitEffectIncreaseWeaponPorteeMaxProjectileDescriptor
         (
             ModifierType  = ~/ModifierType_Remplacement
-            ModifierValue = ((0) * Metre)
+            ModifierValueGRU = 0
         ),
         TUnitEffectIncreaseWeaponPorteeMaxTBADescriptor
         (
             ModifierType  = ~/ModifierType_Remplacement
-            ModifierValue = ((0) * Metre)
+            ModifierValueGRU = 0
         ),
         TUnitEffectRaiseTagDescriptor
         (
@@ -1612,22 +1612,22 @@ export UnitEffect_Critic_Stop_Armes is TEffectsPackDescriptor
         TUnitEffectIncreaseWeaponPorteeMaxDescriptor
         (
             ModifierType  = ~/ModifierType_Remplacement
-            ModifierValue = ((0) * Metre)
+            ModifierValueGRU = 0
         ),
         TUnitEffectIncreaseWeaponPorteeMaxHADescriptor
         (
             ModifierType  = ~/ModifierType_Remplacement
-            ModifierValue = ((0) * Metre)
+            ModifierValueGRU = 0
         ),
         TUnitEffectIncreaseWeaponPorteeMaxProjectileDescriptor
         (
             ModifierType  = ~/ModifierType_Remplacement
-            ModifierValue = ((0) * Metre)
+            ModifierValueGRU = 0
         ),
         TUnitEffectIncreaseWeaponPorteeMaxTBADescriptor
         (
             ModifierType  = ~/ModifierType_Remplacement
-            ModifierValue = ((0) * Metre)
+            ModifierValueGRU = 0
         ),
         TUnitEffectRaiseTagDescriptor
         (
@@ -4633,6 +4633,11 @@ export UnitEffect_xp_elite_SF is TEffectsPackDescriptor
             BonusDamage         = -40
             DamageType          = EDamageType/Suppress
         ),
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = 30
+        ),
         TBonusWeaponAimtimeEffectDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
@@ -5043,6 +5048,11 @@ export UnitEffect_xp_trained_SF is TEffectsPackDescriptor
             BonusDamage         = -20
             DamageType          = EDamageType/Suppress
         ),
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = 10
+        ),
         TBonusWeaponAimtimeEffectDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
@@ -5215,6 +5225,11 @@ export UnitEffect_xp_veteran_SF is TEffectsPackDescriptor
             ModifierType        = ~/ModifierType_Pourcentage
             BonusDamage         = -30
             DamageType          = EDamageType/Suppress
+        ),
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = 20
         ),
         TBonusWeaponAimtimeEffectDescriptor
         (

@@ -32,7 +32,7 @@ export Descriptor_Fire_Smoke_Test is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 1
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((5) * Metre)
+                RadiusGRU                         = ((5) * Metre)
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Howz_Canon_D20_Howitzer_152mm_SMOKE // Ammo_Degats_smoke
                 TimeBetweenBurns               = 80
                 OverridenSpreadDescriptor      = nil
@@ -72,7 +72,7 @@ export Descriptor_Fire_Frag_HEAT_VerySmall is TEntityDescriptor //Copperhead, AG
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((12) * MeterCorr * Metre)
+                RadiusGRU                         = 12
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_verysmall //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -112,7 +112,7 @@ export Descriptor_Fire_Frag_HEAT_Small is TEntityDescriptor //Copperhead, AGM-11
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((12) * MeterCorr * Metre)
+                RadiusGRU                         = 12
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_small //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -152,7 +152,7 @@ export Descriptor_Fire_Frag_HEAT_Medium is TEntityDescriptor //Copperhead, AGM-1
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((12) * MeterCorr * Metre)
+                RadiusGRU                         = 12
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_med //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -192,7 +192,7 @@ export Descriptor_Fire_tank_wreck is TEntityDescriptor //wrecks block LOS and pr
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((12) * MeterCorr * Metre)
+                RadiusGRU                         = 12
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_wreck //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -232,7 +232,7 @@ export Descriptor_Fire_Frag_HEAT_Large is TEntityDescriptor //Maverick
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((12) * MeterCorr * Metre)
+                RadiusGRU                         = 12
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_large //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -272,7 +272,7 @@ export Descriptor_Fire_Direct_hit_Arty is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((12) * MeterCorr * Metre)
+                RadiusGRU                         = 12
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_Arty //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -312,7 +312,7 @@ export Descriptor_Fire_Direct_hit_HeavyMortar is TEntityDescriptor //only using 
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((8) * MeterCorr * Metre)
+                RadiusGRU                         = 8
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_HeavyMortar //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -352,7 +352,7 @@ export Descriptor_Fire_Direct_hit_AerialRocket_127 is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((8) * MeterCorr * Metre)
+                RadiusGRU                         = 8
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_AerialRocket_127 //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -392,7 +392,7 @@ export Descriptor_Fire_Direct_hit_AerialRocket_80 is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((2) * MeterCorr * Metre)
+                RadiusGRU                         = 2
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_AerialRocket_80 //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -432,7 +432,7 @@ export Descriptor_Fire_Direct_hit_AerialRocket_70 is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((2) * MeterCorr * Metre)
+                RadiusGRU                         = 2
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_AerialRocket_70 //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -472,7 +472,7 @@ export Descriptor_Fire_Direct_hit_500lb is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((20) * MeterCorr * Metre)
+                RadiusGRU                         = 20
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_500lb//Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -512,7 +512,7 @@ export Descriptor_Fire_Direct_hit_1000lb is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((28) * MeterCorr * Metre)
+                RadiusGRU                         = 28
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_1000lb//Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -552,7 +552,7 @@ export Descriptor_Fire_Direct_hit_2000lb is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((26) * MeterCorr * Metre)
+                RadiusGRU                         = 26
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_2000lb//Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -592,7 +592,7 @@ export Descriptor_Fire_Direct_hit_MICLIC is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((26) * MeterCorr * Metre)
+                RadiusGRU                         = 26
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_MICLIC//Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -632,7 +632,7 @@ export Descriptor_Fire_Direct_hit_3000lb is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                Radius                         = ((38) * MeterCorr * Metre)
+                RadiusGRU                         = 38
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_3000lb//Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -672,7 +672,7 @@ export Descriptor_Fire_Cluster_Test is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.1
                 SpreadProbability              = 100.0
                 IsNewFireProbability           = 1.0
-                Radius                         = ((212) * RangeCorr * Metre)
+                RadiusGRU                         = 212 * RangeCorr
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Canon_HE_120mm_L44_late//Ammo_Degats_cluster
                 TimeBetweenBurns               = 5
                 OverridenSpreadDescriptor      = nil
@@ -696,7 +696,7 @@ export Descriptor_Fire_Incendie is TEntityDescriptor
             ReferenceMesh  = $/GFX/DepictionResources/Rien
             Depiction  = Template_DescriptorFire_Depiction
             (
-                 Radius               = 75 * Metre
+                 Radius               = 27 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
             )
@@ -709,9 +709,10 @@ export Descriptor_Fire_Incendie is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 10
             SpreadProbability              = 0.5
             IsNewFireProbability           = 0.5
-            Radius                         = ((75) * Metre)
+            RadiusGRU                      = 27
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_incendie
             TimeBetweenBurns               = 5
+            IgniteDistricts                = False
             OverridenSpreadDescriptor      = nil
             SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiIncendie_small
         ),
@@ -744,7 +745,7 @@ export Descriptor_Fire_Dust is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 10
             SpreadProbability              = 0.0
             IsNewFireProbability           = 0.0
-            Radius                         = ((75) * Metre)
+            RadiusGRU                         = 10
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_dust
             TimeBetweenBurns               = 5
             OverridenSpreadDescriptor      = nil
@@ -779,7 +780,7 @@ export Descriptor_Fire_Bomb_Dust is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 10
             SpreadProbability              = 0.0
             IsNewFireProbability           = 0.0
-            Radius                         = ((75) * Metre)
+            RadiusGRU                         = 10
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_dust
             TimeBetweenBurns               = 5
             OverridenSpreadDescriptor      = nil
@@ -802,7 +803,7 @@ export Descriptor_Fire_Napalm is TEntityDescriptor
             ReferenceMesh  = $/GFX/DepictionResources/Rien
             Depiction  = Template_DescriptorFire_Depiction
             (
-                 Radius               = 500 * Metre
+                 Radius               = 177 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
             )
@@ -815,9 +816,10 @@ export Descriptor_Fire_Napalm is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 1
             SpreadProbability              = 1.0
             IsNewFireProbability           = 0.5
-            Radius                         = ((500) * Metre)
+            RadiusGRU                      = 177
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_napalm
             TimeBetweenBurns               = 5
+            IgniteDistricts                = False
             OverridenSpreadDescriptor      = Descriptor_Fire_Incendie
             SmokeDescriptor                = Descriptor_Smoke_FumiNapalm
         ),
@@ -838,7 +840,7 @@ export Descriptor_Fire_NapalmCluster is TEntityDescriptor
             ReferenceMesh  = $/GFX/DepictionResources/Rien
             Depiction  = Template_DescriptorFire_Depiction
             (
-                 Radius               = 75 * Metre
+                 Radius               = 75 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
             )
@@ -851,7 +853,7 @@ export Descriptor_Fire_NapalmCluster is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 1
             SpreadProbability              = 1.0
             IsNewFireProbability           = 0.5
-            Radius                         = ((75) * Metre)
+            RadiusGRU                         = 9
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_napalm_leger_Cluster
             TimeBetweenBurns               = 5
             OverridenSpreadDescriptor      = Descriptor_Fire_Incendie
@@ -874,7 +876,7 @@ export Descriptor_Fire_NapalmCluster_petit is TEntityDescriptor
             ReferenceMesh  = $/GFX/DepictionResources/Rien
             Depiction  = Template_DescriptorFire_Depiction
             (
-                 Radius               = 50 * Metre
+                 Radius               = 50 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
             )
@@ -887,7 +889,7 @@ export Descriptor_Fire_NapalmCluster_petit is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 1
             SpreadProbability              = 1.0
             IsNewFireProbability           = 0.5
-            Radius                         = ((50) * Metre)
+            RadiusGRU                         = ((6) * Metre)
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_napalm_leger_Cluster_petit
             TimeBetweenBurns               = 5
             OverridenSpreadDescriptor      = Descriptor_Fire_Incendie
@@ -910,7 +912,7 @@ export Descriptor_Fire_NapalmLeger is TEntityDescriptor
             ReferenceMesh  = $/GFX/DepictionResources/Rien
             Depiction  = Template_DescriptorFire_Depiction
             (
-                 Radius               = 150 * Metre
+                 Radius               = 53 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire_Napalm_Leger
                  Density              = 1
             )
@@ -923,9 +925,10 @@ export Descriptor_Fire_NapalmLeger is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 1
             SpreadProbability              = 1.0
             IsNewFireProbability           = 0.5
-            Radius                         = ((150) * Metre)
+            RadiusGRU                      = 53
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_napalm_leger
             TimeBetweenBurns               = 5
+            IgniteDistricts                = False
             OverridenSpreadDescriptor      = Descriptor_Fire_Incendie
             SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiNapalmleger
         ),
@@ -959,9 +962,10 @@ export Descriptor_Fire_NapalmLourd is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 1
             SpreadProbability              = 1.0
             IsNewFireProbability           = 0.5
-            Radius                         = ((64) * MeterCorr * Metre)
+            RadiusGRU                      = 64
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_napalm_lourd
             TimeBetweenBurns               = 1
+            IgniteDistricts                = False
             OverridenSpreadDescriptor      = Descriptor_Fire_Incendie
             SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiNapalmlourd
         ),
@@ -995,9 +999,10 @@ export Descriptor_Fire_NapalmMoyen is TEntityDescriptor
             TimeBeforeSpreadAttempt        = 1
             SpreadProbability              = 1.0
             IsNewFireProbability           = 0.5
-            Radius                         = ((55) * MeterCorr * Metre)
+            RadiusGRU                      = 55
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_napalm_buratino
             TimeBetweenBurns               = 1
+            IgniteDistricts                = False
             OverridenSpreadDescriptor      = Descriptor_Fire_Incendie
             SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiNapalmlourd
         ),
