@@ -89,7 +89,7 @@ export ForetLegere is TGameplayTerrain
     WorldLayerActiveMask = 255
     AuthorizeNearGroundFlying = false
 )
-export PetitBatiment is TGameplayTerrain
+export PetitBatiment is TGameplayTerrain //light buildings
 (
     BloqueAmphibie = true
     BloqueAtterrissage = true
@@ -131,7 +131,7 @@ export PetitBatiment is TGameplayTerrain
     WorldLayerActiveMask = 255
     AuthorizeNearGroundFlying = true
 )
-export Batiment is TGameplayTerrain
+export Batiment is TGameplayTerrain //heavy buildings
 (
     BloqueAmphibie = true
     BloqueAtterrissage = true
@@ -153,10 +153,11 @@ export Batiment is TGameplayTerrain
 			(DamageFamily_pmballe, MAP [(ResistanceFamily_infanterie,0.13)]),
             // (DamageFamily_cac, MAP [(ResistanceFamily_infanterie,0.85)]),
             (DamageFamily_roquette_ap, MAP [(ResistanceFamily_infanterie,0.2)]),
-			(DamageFamily_roquette, MAP [(ResistanceFamily_infanterie,1.8)]),
+			(DamageFamily_roquette, MAP [(ResistanceFamily_infanterie,1.4)]),
 			(DamageFamily_flamme, MAP [(ResistanceFamily_infanterie,1.1)]),
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.05)]),
 			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.1)]),
+			(DamageFamily_suppress, MAP [(ResistanceFamily_infanterie,4.0)]), //experiment to make infantry in buildings easier to suppress
         ]
     DebugColor = rgba[0, 0, 0, 255]
     DissimulationModifierGroundAir = 60
@@ -199,6 +200,7 @@ export Ruin is TGameplayTerrain
 			(DamageFamily_flamme, MAP [(ResistanceFamily_infanterie,0.8)]),
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.5)]),
 			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
+			(DamageFamily_suppress, MAP [(ResistanceFamily_infanterie,4.0)]), //experiment to make infantry in buildings easier to suppress
         ]
     DebugColor = rgba[0, 6, 200, 255]
     DissimulationModifierGroundAir = 60

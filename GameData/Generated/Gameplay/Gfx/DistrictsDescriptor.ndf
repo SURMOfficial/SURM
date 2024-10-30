@@ -157,7 +157,7 @@ export Descriptor_District_Mid_District is TEntityDescriptor(
         ),
         TDynamicTerrainModuleDescriptor
         (
-            TerrainToApplyOnInit  = ETerrainType/Batiment
+            TerrainToApplyOnInit  = ETerrainType/PetitBatiment
             TerrainToApplyOnDeath = ETerrainType/Ruin
         ),
         ~/InflammableModuleDescriptorDistrict,
@@ -174,10 +174,10 @@ export Descriptor_District_Mid_District is TEntityDescriptor(
             StunDamagesRegen = ~/Building_StunDamagesRegen
             BlindageProperties = TBlindageProperties
             (
-                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=2)
-                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=2)
-                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=2)
-                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=2)
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=1)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=1)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=1)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_batiment Index=1)
                 ExplosiveReactiveArmor = False
             )
             KillWhenDamagesReachMax = True
@@ -225,14 +225,14 @@ export Descriptor_District_Small_District is TEntityDescriptor(
         ),
         TDynamicTerrainModuleDescriptor
         (
-            TerrainToApplyOnInit  = ETerrainType/Batiment
+            TerrainToApplyOnInit  = ETerrainType/PetitBatiment
             TerrainToApplyOnDeath = ETerrainType/Ruin
         ),
         ~/InflammableModuleDescriptorDistrict,
         ~/DistrictPositionModuleDescriptor,
         TBaseDamageModuleDescriptor
         (
-            MaxPhysicalDamages = BuildingHealthMult * 60
+            MaxPhysicalDamages = BuildingHealthMult * 15
             MaxSuppressionDamages = ~/Building_MaxSuppressionDamages
             MaxStunDamages = ~/Building_MaxStunDamages
         ),
