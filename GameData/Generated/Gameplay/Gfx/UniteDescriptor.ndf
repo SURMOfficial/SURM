@@ -60606,17 +60606,6 @@ export Descriptor_Unit_Challenger_1_Mk1_CMD_UK is TEntityDescriptor
         ~/PlayerMissionModuleDescriptor,
 
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -60680,10 +60669,10 @@ export Descriptor_Unit_Challenger_1_Mk1_CMD_UK is TEntityDescriptor
                     StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
                     BlindageProperties = TBlindageProperties
                     (
-                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=27)
-                        ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=11)
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=26)
+                        ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=12)
                         ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=5)
-                        ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
+                        ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=5)
 						ExplosiveReactiveArmor = False
                     )
                     KillWhenDamagesReachMax = True
@@ -60734,7 +60723,7 @@ export Descriptor_Unit_Challenger_1_Mk1_CMD_UK is TEntityDescriptor
                     DetectionTBAGRU = 0
                     PorteeVisionGRU = 6000
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*154.5
+                    OpticalStrength = OpticalStrengthReducer*181.5
                     OpticalStrengthAltitude = 20
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 3500),
@@ -60800,8 +60789,8 @@ export Descriptor_Unit_Challenger_1_Mk1_CMD_UK is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 320),
-                        ($/GFX/Resources/Resource_Tickets, 320),
+                        ($/GFX/Resources/Resource_CommandPoints, 300),
+                        ($/GFX/Resources/Resource_Tickets, 300),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -60985,10 +60974,10 @@ export Descriptor_Unit_Challenger_1_Mk1_UK is TEntityDescriptor
                     StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
                     BlindageProperties = TBlindageProperties
                     (
-                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=27)
-                        ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=11)
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=26)
+                        ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=12)
                         ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=5)
-                        ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
+                        ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=5)
 						ExplosiveReactiveArmor = False
                     )
                     KillWhenDamagesReachMax = True
@@ -61039,7 +61028,7 @@ export Descriptor_Unit_Challenger_1_Mk1_UK is TEntityDescriptor
                     DetectionTBAGRU = 0
                     PorteeVisionGRU = 6000
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*154.5
+                    OpticalStrength = OpticalStrengthReducer*181.5
                     OpticalStrengthAltitude = 20
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 3500),
@@ -61105,8 +61094,8 @@ export Descriptor_Unit_Challenger_1_Mk1_UK is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 280),
-                        ($/GFX/Resources/Resource_Tickets, 280),
+                        ($/GFX/Resources/Resource_CommandPoints, 270),
+                        ($/GFX/Resources/Resource_Tickets, 270),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -61202,6 +61191,298 @@ export Descriptor_Unit_Challenger_1_Mk1_UK is TEntityDescriptor
 		TVisualShootPositionsModuleDescriptor(),
     ]
 )
+export Descriptor_Unit_Challenger_1_Mk3_CMD_UK is TEntityDescriptor
+(
+    DescriptorId       = GUID:{0992de49-b4eb-432d-ad1a-27d437d65a72}
+    ClassNameForDebug  = 'Unit_Challenger_1_Mk3_UK'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'UK'
+            AcknowUnitType                   = ~/TAcknowUnitType_Command
+            TypeUnitFormation                = 'Char'
+        ),
+        TankFlagsModuleDescriptor,
+        ~/TargetManagerModuleSelector,
+        TemplateUnitCriticalModule(Module=$/GFX/UnitConstantes/CriticalEffectModule_WestArmor_Challenger_mk3), //weak area corrected by applique/ERA (maybe)
+        ~/TargetCoordinatorModuleSelector,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+        TCommanderModuleDescriptor(),
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "Unite",
+                "UNITE_Challenger_1_Mk3_CMD_UK",
+                "Char_CMD",
+                "Char",
+                "Commandant",
+                "InfmapCommander",
+                "AllowedForMissileRoE",
+                "GroundUnits",
+                "SM_charLourd",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.0
+            VisionUnitType       = EVisionUnitType/AlwaysOnGround
+        ),
+        ApparenceModel is VehicleApparenceModelModuleDescriptor
+        (
+            Depiction = ~/Gfx_Challenger_1_Mk3_UK_Autogen
+            BlackHoleIdentifier = "Challenger_1_Mk3_UK"
+            GameplayBBoxBoneName = "chassis"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_Challenger_1_Mk3_UK
+        ),
+        TAutoCoverModuleDescriptor
+        (
+            AutoCoverRangeGRU          = 42
+            OccupationRadiusGRU        = 12
+            TerrainListMask            = ~/ETerrainType/None | ~/ETerrainType/ForetLegere | ~/ETerrainType/ForetDense
+            TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+            UseTerrainsForEscape       = False
+        ),
+        WeaponManager is TModuleSelector
+        (
+            Default        = $/GFX/Weapon/WeaponDescriptor_Challenger_1_Mk3_UK
+            Selection      = [~/NilDescriptorIfCadavre]
+        ),
+        TBaseDamageModuleDescriptor
+        (
+            MaxPhysicalDamages = 10
+            MaxSuppressionDamages = ~/GroundUnit_MaxSuppressionDamages
+            MaxStunDamages = ~/GroundUnit_MaxStunDamages
+            PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+            SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+            StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+        (
+            SuppressDamagesRegenRatio = ~/GroundUnit_SuppressDamagesRegenRatioList
+            StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
+            BlindageProperties = TBlindageProperties
+            (
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=26)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=14)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=5)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=5)
+				ExplosiveReactiveArmor = False
+            )
+            KillWhenDamagesReachMax = True
+            HitRollECM = -0.4
+            AutoOrientation = True
+            UseTopArmorAgainstFire = False
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 134),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        FacingInfos is ~/FacingInfosModuleDescriptor,
+        GenericMovement is TModuleSelector
+        (
+            Default = TGenericMovementModuleDescriptor
+            (
+               MaxSpeedInKmph = 40
+               PathfindType = $/Pathfind/PathfindTypes/Vehicle
+            )
+            Selection = [~/NilDescriptorIfCadavre]
+        ),
+        LandMovement is TModuleSelector
+            (
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Track
+                    //PathfindType = $/Pathfind/PathfindTypes/Vehicle
+                    //VitesseCombat = ((90) * 0.12485276796)
+                    SpeedBonusFactorOnRoad = 1.6
+                    MaxAccelerationGRU = (AccelCorr * 18)
+                    MaxDecelerationGRU = 35
+                    TempsDemiTour = 7.0
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
+        TFuelModuleDescriptor
+        (
+           FuelCapacity = 1950
+            FuelMoveDuration = FuelCorr * 550.0
+        ),
+        TScannerConfigurationDescriptor
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 6000
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*181.5
+                    OpticalStrengthAltitude = 20
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 3500),
+                    ]
+					SpecializedOpticalStrengths = MAP [
+                        //( EVisionUnitType/Infantry, OpticalStrengthReducer*74.4 ),
+                    ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            VisibilityRollRule = TModernWarfareVisibilityRollRule
+            (
+                IdentifyBaseProbability     = IdentProbMult * 0.2
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 10.0
+                VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+                DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
+                (
+                    MultiplicateurAPorteeMaximale            = DefaultMultiplicateurAPorteeMaximale
+                    MultiplicateurAPorteeMinimale            = DefaultMultiplicateurAPorteeMinimale
+                    Exposant                                 = DefaultExposant
+                    MultiplicateurAPorteeMaximaleEnMouvement = DefaultMultiplicateurAPorteeMaximaleEnMouvement
+                    MultiplicateurAPorteeMinimaleEnMouvement = DefaultMultiplicateurAPorteeMinimaleEnMouvement
+                    ExposantEnMouvement                      = DefaultExposantEnMouvement
+                )
+            )
+        ),
+        TCadavreGeneratorModuleDescriptor( CadavreDescriptor = ~/Descriptor_UnitCadavre_Challenger_1_Mk3_UK ),
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 0
+            GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/RetreatOnOutOfAmmo
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineCompanyModuleDescriptor,
+        ~/UnitStateEngineModuleDescriptor,
+        ~/DebugModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_vehicle_cover,
+						$/GFX/EffectCapacity/Capacite_cover_no_cover,
+						$/GFX/EffectCapacity/Capacite_vehicle_stop,
+                        $/GFX/EffectCapacity/Capacite_Menace_Ennemi_Proche_tank,
+                        $/GFX/EffectCapacity/Capacite_Soutien_Allie_Proche,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
+        TProductionModuleDescriptor
+        (
+            Factory            = EDefaultFactories/Tanks
+            ProductionTime     = 5
+            ProductionRessourcesNeeded = MAP [
+                ($/GFX/Resources/Resource_CommandPoints, 325),
+                        ($/GFX/Resources/Resource_Tickets, 325),
+            ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+             TZoneInfluenceMapModuleDescriptor
+             (
+            InfluenceStrength = 1.0
+            MinimumInfluenceStrength = 1.0
+            StrengthDecayPerSecond = 0.01
+            PreventsDecayInZone = True
+             ),
+        ~/InfluenceDataModuleDescriptor,
+        TAutomaticBehaviorModuleDescriptor
+                 (
+                     CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 0.0
+            MaxDistanceForOffensiveReactionGRU = 0.0
+            MaxDistanceForEngagementGRU = 0.0
+                     SearchedTagsInEngagementTarget = [
+                        "AllUnits",
+                     ]
+        ),
+        TCubeActionModuleDescriptor
+        (
+            CubeActionDescriptor = $/GFX/UI/CubeAction_Menu_Ordres_unites
+        ),
+        TMinimapDisplayModuleDescriptor
+        (
+            Texture = "Texture_Minimap_Unit_unit"
+            FollowUnitOrientation = False
+        ),
+        TOrderConfigModuleDescriptor
+        (
+            ValidOrders = ~/Descriptor_OrderAvailability_Challenger_1_Mk3_UK
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_Challenger_1_Mk3_UK
+        ),
+        ~/OrderDisplayModuleDescriptor,
+        ~/GroupableUnitModuleSelector,
+        TTacticalLabelModuleDescriptor
+        (
+            MultiSelectionSortingOrder = 15280
+            //UnitName                   = 'EODYKHOORX'
+            IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_Armor",
+                    "Texture_Armor"
+                ]
+            )
+            UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+            (
+                CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                Alterator = $/GUIOption/IconType
+                Values =
+                [
+                    "Texture_RTS_H_veh_nonIdentifie",
+                    "Texture_veh_nonIdentifie"
+                ]
+            )
+            PositionHeightOffset = 1000.0
+            NbSoldiers = 0
+        ),
+        ~/TargetDataModuleDescriptor,
+        ~/PackSignauxModuleDescriptor,
+        TStrategicDataModuleDescriptor
+        (
+            UnitAttackValue = 561
+            UnitDefenseValue = 281
+            UnitBonusXpPerLevelValue = 1
+        ),
+        TUnitUIModuleDescriptor
+        (
+            UnitRole = 'tank_A'
+            SpecialtiesList = [
+                'armor',
+                '_era',
+            ]
+            NameToken = 'CHLLCMDT'
+            InfoPanelConfigurationToken = 'Default'
+           DisplayRoadSpeedInKmph = 64
+            UpgradeFromUnit = Descriptor_Unit_Challenger_1_Mk1_UK
+            GenerateName = true
+            MenuIconTexture = 'Texture_RTS_H_Armor'
+            ButtonTexture = 'Texture_Button_Unit_Challenger_1_Mk3_UK'
+            CountryTexture = 'CommonTexture_MotherCountryFlag_UK'
+            TypeStrategicCount = ETypeStrategicDetailedCount/Armor
+        ),
+		TVisualShootPositionsModuleDescriptor(),
+    ]
+)
 export Descriptor_Unit_Challenger_1_Mk3_UK is TEntityDescriptor
 (
     DescriptorId       = GUID:{f0280e8a-133d-4c51-aced-7fbc282bb2a7}
@@ -61268,7 +61549,7 @@ export Descriptor_Unit_Challenger_1_Mk3_UK is TEntityDescriptor
         ),
         TBaseDamageModuleDescriptor
         (
-            MaxPhysicalDamages = 12
+            MaxPhysicalDamages = 10
             MaxSuppressionDamages = ~/GroundUnit_MaxSuppressionDamages
             MaxStunDamages = ~/GroundUnit_MaxStunDamages
             PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
@@ -61281,10 +61562,10 @@ export Descriptor_Unit_Challenger_1_Mk3_UK is TEntityDescriptor
             StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
             BlindageProperties = TBlindageProperties
             (
-                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=27)
-                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=13)
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=26)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=14)
                 ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=5)
-                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=5)
 				ExplosiveReactiveArmor = False
             )
             KillWhenDamagesReachMax = True
@@ -61335,7 +61616,7 @@ export Descriptor_Unit_Challenger_1_Mk3_UK is TEntityDescriptor
                     DetectionTBAGRU = 0
                     PorteeVisionGRU = 6000
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*154.5
+                    OpticalStrength = OpticalStrengthReducer*181.5
                     OpticalStrengthAltitude = 20
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 3500),
@@ -61393,8 +61674,8 @@ export Descriptor_Unit_Challenger_1_Mk3_UK is TEntityDescriptor
             Factory            = EDefaultFactories/Tanks
             ProductionTime     = 5
             ProductionRessourcesNeeded = MAP [
-                ($/GFX/Resources/Resource_CommandPoints, 290),
-                        ($/GFX/Resources/Resource_Tickets, 290),
+                ($/GFX/Resources/Resource_CommandPoints, 295),
+                        ($/GFX/Resources/Resource_Tickets, 295),
             ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -61474,7 +61755,7 @@ export Descriptor_Unit_Challenger_1_Mk3_UK is TEntityDescriptor
             NameToken = 'EODYKHOORX'
             InfoPanelConfigurationToken = 'Default'
            DisplayRoadSpeedInKmph = 64
-            UpgradeFromUnit = Descriptor_Unit_Challenger_1_Mk1_UK
+            UpgradeFromUnit = Descriptor_Unit_Challenger_1_Mk3_CMD_UK
             GenerateName = true
             MenuIconTexture = 'Texture_RTS_H_Armor'
             ButtonTexture = 'Texture_Button_Unit_Challenger_1_Mk3_UK'
@@ -73190,17 +73471,6 @@ export Descriptor_Unit_Engineer_CMD_US is TEntityDescriptor
         ~/UnitPositionModuleDescriptor,
         ~/PlayerMissionModuleDescriptor,
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -77499,17 +77769,6 @@ export Descriptor_Unit_Engineers_CMD_UK is TEntityDescriptor //changed to a plat
         ~/UnitPositionModuleDescriptor,
         ~/PlayerMissionModuleDescriptor,
         //TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -93898,7 +94157,7 @@ export Descriptor_Unit_FV4201_Chieftain_CMD_UK is TEntityDescriptor
                     DetectionTBAGRU = 0
                     PorteeVisionGRU = 6000
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*154.5
+                    OpticalStrength = OpticalStrengthReducer*181.5
                     OpticalStrengthAltitude = 20
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 3500),
@@ -93964,8 +94223,8 @@ export Descriptor_Unit_FV4201_Chieftain_CMD_UK is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 230),
-                        ($/GFX/Resources/Resource_Tickets, 230),
+                        ($/GFX/Resources/Resource_CommandPoints, 200),
+                        ($/GFX/Resources/Resource_Tickets, 200),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -94088,17 +94347,6 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_CMD_UK is TEntityDescriptor
         ~/UnitPositionModuleDescriptor,
         ~/PlayerMissionModuleDescriptor,
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -94214,7 +94462,7 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_CMD_UK is TEntityDescriptor
                     DetectionTBAGRU = 0
                     PorteeVisionGRU = 6000
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*154.5
+                    OpticalStrength = OpticalStrengthReducer*181.5
                     OpticalStrengthAltitude = 20
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 3500),
@@ -94280,8 +94528,8 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_CMD_UK is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 230),
-                        ($/GFX/Resources/Resource_Tickets, 230),
+                        ($/GFX/Resources/Resource_CommandPoints, 200),
+                        ($/GFX/Resources/Resource_Tickets, 200),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -94368,6 +94616,7 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_CMD_UK is TEntityDescriptor
                 ]
                 NameToken = 'QRHLEMQMUA'
                 InfoPanelConfigurationToken = 'Default'
+				UpgradeFromUnit = Descriptor_Unit_FV4201_Chieftain_Mk9_UK
                 DisplayRoadSpeedInKmph = 51
                 GenerateName = true
                 MenuIconTexture = 'Texture_RTS_H_CMD_tank'
@@ -94517,7 +94766,7 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_UK is TEntityDescriptor
                     DetectionTBAGRU = 0
                     PorteeVisionGRU = 6000
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*154.5
+                    OpticalStrength = OpticalStrengthReducer*181.5
                     OpticalStrengthAltitude = 20
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 3500),
@@ -94583,8 +94832,8 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_UK is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 200),
-                        ($/GFX/Resources/Resource_Tickets, 200),
+                        ($/GFX/Resources/Resource_CommandPoints, 170),
+                        ($/GFX/Resources/Resource_Tickets, 170),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -94663,10 +94912,314 @@ export Descriptor_Unit_FV4201_Chieftain_Mk11_UK is TEntityDescriptor
                 NameToken = 'FJFDPOBXCY'
                 InfoPanelConfigurationToken = 'Default'
                 DisplayRoadSpeedInKmph = 51
-                    UpgradeFromUnit = Descriptor_Unit_FV4201_Chieftain_Mk9_UK
+                    UpgradeFromUnit = Descriptor_Unit_FV4201_Chieftain_Mk11_CMD_UK
                 GenerateName = true
                 MenuIconTexture = 'Texture_RTS_H_Armor'
                 ButtonTexture = 'Texture_Button_Unit_FV4201_Chieftain_Mk11_UK'
+                CountryTexture = 'CommonTexture_MotherCountryFlag_UK'
+                TypeStrategicCount = ETypeStrategicDetailedCount/Armor
+            ),
+			TModuleSelector
+            (
+                Default = TSellModuleDescriptor
+                (
+                )
+                Selection = [ ~/NilDescriptorIfCadavre ]
+            ),
+		TVisualShootPositionsModuleDescriptor(),
+    ]
+)
+export Descriptor_Unit_FV4201_Chieftain_Mk9_CMD_UK is TEntityDescriptor
+(
+    DescriptorId       = GUID:{43450c0a-1d63-422c-a576-9378c110c592}
+    ClassNameForDebug  = 'Unit_FV4201_Chieftain_Mk9_CMD_UK'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'UK'
+            AcknowUnitType                   = ~/TAcknowUnitType_Tank
+            TypeUnitFormation                = 'Char'
+        ),
+        TankFlagsModuleDescriptor,
+        ~/TargetManagerModuleSelector,
+        TemplateUnitCriticalModule(Module=$/GFX/UnitConstantes/CriticalEffectModule_OldArmor_headout),
+        ~/TargetCoordinatorModuleSelector,
+        ~/UnitPositionModuleDescriptor,
+        ~/PlayerMissionModuleDescriptor,
+		TCommanderModuleDescriptor(),
+        ~/LinkTeamModuleDescriptor,
+        TTagsModuleDescriptor
+        (
+            TagSet = [
+                "AllUnits",
+                "Unite",
+                "UNITE_FV4201_Chieftain_Mk9_UK",
+                "Char_CMD",
+                "Char",
+                "Commandant",
+                "InfmapCommander",
+                "AllowedForMissileRoE",
+                "GroundUnits",
+                "SM_charLourd",
+            ]
+        ),
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TVisibilityModuleDescriptor
+        (
+            UnitConcealmentBonus = 1.0
+            VisionUnitType       = EVisionUnitType/AlwaysOnGround
+        ),
+        ApparenceModel is VehicleApparenceModelModuleDescriptor
+        (
+            Depiction = ~/Gfx_FV4201_Chieftain_Mk9_UK_Autogen
+                    //GhostDepiction                     = ~///GhostDepiction_FV4201_Chieftain_Mk9_UK
+            BlackHoleIdentifier = "FV4201_Chieftain_Mk9_UK"
+            GameplayBBoxBoneName = "chassis"
+            ReferenceMesh = $/GFX/DepictionResources/Modele_FV4201_Chieftain_Mk9_UK
+        ),
+        TAutoCoverModuleDescriptor
+                (
+					AutoCoverRangeGRU          = 42
+					OccupationRadiusGRU        = 12
+                    TerrainListMask            = ~/ETerrainType/None | ~/ETerrainType/ForetLegere | ~/ETerrainType/ForetDense
+                    TerrainList                = [~/ETerrainType/ForetLegere, ~/ETerrainType/ForetDense, ]
+                    UseTerrainsForEscape       = False
+        ),
+        WeaponManager is TModuleSelector
+        (
+            Default        = $/GFX/Weapon/WeaponDescriptor_FV4201_Chieftain_Mk9_UK
+            Selection      = [~/NilDescriptorIfCadavre]
+        ),
+        TBaseDamageModuleDescriptor
+        (
+                    MaxPhysicalDamages = 10
+                    MaxSuppressionDamages = ~/GroundUnit_MaxSuppressionDamages
+                    MaxStunDamages = ~/GroundUnit_MaxStunDamages
+                    PhysicalDamageLevelsPack = ~/DamageLevelsPackDescriptor_Default_pack_paliers_degats_phy
+                    SuppressDamageLevelsPack = ~/DamageLevelsPackDescriptor_GroundUnits_packSupp
+                    StunDamageLevelsPack = ~/DamageLevelsPackDescriptor_Unit_packStun
+        ),
+        TDamageModuleDescriptor
+                (
+                    SuppressDamagesRegenRatio = ~/GroundUnit_SuppressDamagesRegenRatioList
+                    StunDamagesRegen = ~/GroundUnit_StunDamagesRegen
+                    BlindageProperties = TBlindageProperties
+                    (
+                        ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=13) //kinda a shot in the dark, couldbe anywherefrom 250 (11) to 350 (14)
+                        ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=8)
+                        ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
+                        ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=3)
+						ExplosiveReactiveArmor = False
+                    )
+                    KillWhenDamagesReachMax = True
+                    HitRollECM = -0.4
+                    AutoOrientation = True
+                    UseTopArmorAgainstFire = False
+        ),
+        TDangerousnessModuleDescriptor(Dangerousness  = 76),
+        TRoutModuleDescriptor(MoralLevel = 0),
+        FacingInfos is ~/FacingInfosModuleDescriptor,
+        GenericMovement is TModuleSelector
+        (
+            Default        = TGenericMovementModuleDescriptor
+            (
+               MaxSpeedInKmph = 29
+               PathfindType = $/Pathfind/PathfindTypes/Vehicle
+            )
+            Selection = [~/NilDescriptorIfCadavre]
+        ),
+        LandMovement is TModuleSelector
+            (
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Track
+                    SpeedBonusFactorOnRoad = 1.76666666
+                    MaxAccelerationGRU = (AccelCorr * 14)
+                    MaxDecelerationGRU = 35
+                    TempsDemiTour = 8.0
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
+        TFuelModuleDescriptor
+        (
+           FuelCapacity = 890
+            FuelMoveDuration = FuelCorr * 480.0
+        ),
+        TScannerConfigurationDescriptor
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 6000
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*118.9
+                    OpticalStrengthAltitude = 20
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 3500),
+                    ]
+					SpecializedOpticalStrengths = MAP [
+                        //( EVisionUnitType/Infantry, OpticalStrengthReducer*50.9 ),
+                    ]
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            VisibilityRollRule = TModernWarfareVisibilityRollRule
+            (
+                IdentifyBaseProbability     = IdentProbMult * 0.2
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 10.0
+                VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+                DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
+                (
+                    MultiplicateurAPorteeMaximale            = DefaultMultiplicateurAPorteeMaximale
+                    MultiplicateurAPorteeMinimale            = DefaultMultiplicateurAPorteeMinimale
+                    Exposant                                 = DefaultExposant
+                    MultiplicateurAPorteeMaximaleEnMouvement = DefaultMultiplicateurAPorteeMaximaleEnMouvement
+                    MultiplicateurAPorteeMinimaleEnMouvement = DefaultMultiplicateurAPorteeMinimaleEnMouvement
+                    ExposantEnMouvement                      = DefaultExposantEnMouvement
+                )
+            )
+        ),
+            TTransportableModuleDescriptor
+            (
+                TransportedTexture                     = "UseInGame_Transport"
+                TransportedSoldier                     = 'FV4201_Chieftain_Mk9_UK'
+                NbSeatsOccupied                        = 99
+                TimeToLoad                             = 0
+                IsTowable                              = False
+            ),
+        TCadavreGeneratorModuleDescriptor( CadavreDescriptor = ~/Descriptor_UnitCadavre_FV4201_Chieftain_Mk9_UK ),
+        TIAStratModuleDescriptor
+                (
+                    DatabaseId = 0
+                    GameplayBehavior = EGameplayBehavior/Nothing | EGameplayBehavior/RetreatOnOutOfAmmo
+        ),
+        ~/IAStratZoneIndexModuleDescriptor,
+        ~/UnitStateEngineCompanyModuleDescriptor,
+        ~/UnitStateEngineModuleDescriptor,
+        ~/DebugModuleDescriptor,
+        ~/SelectionModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+			TModuleSelector
+            (
+                Default        = TCapaciteModuleDescriptor
+                (
+                    DefaultSkillList = [
+						$/GFX/EffectCapacity/Capacite_vehicle_cover,
+						$/GFX/EffectCapacity/Capacite_cover_no_cover,
+						$/GFX/EffectCapacity/Capacite_vehicle_stop,
+                        $/GFX/EffectCapacity/Capacite_Menace_Ennemi_Proche_tank,
+                        $/GFX/EffectCapacity/Capacite_Soutien_Allie_Proche,
+                    ]
+                )
+                Selection      = [ ~/NilDescriptorIfCadavre ]
+            ),
+        TProductionModuleDescriptor
+                (
+                    Factory            = EDefaultFactories/Tanks
+                    ProductionTime     = 5
+                    ProductionRessourcesNeeded = MAP [
+                        ($/GFX/Resources/Resource_CommandPoints, 165),
+                        ($/GFX/Resources/Resource_Tickets, 165),
+                    ]
+        ),
+        ~/InfluencePositionModuleDescriptor,
+             TZoneInfluenceMapModuleDescriptor
+             (
+            InfluenceStrength = 1.0
+            MinimumInfluenceStrength = 1.0
+            StrengthDecayPerSecond = 0.01
+            PreventsDecayInZone = True
+             ),
+        ~/InfluenceDataModuleDescriptor,
+        TAutomaticBehaviorModuleDescriptor
+                 (
+                     CanAssist = False
+            AssistRequestBroadcastRadiusGRU = 0.0
+            DistanceToFleeGRU = 0.0
+            MaxDistanceForOffensiveReactionGRU = 0.0
+            MaxDistanceForEngagementGRU = 0.0
+                     SearchedTagsInEngagementTarget = [
+                        "AllUnits",
+                     ]
+        ),
+        TCubeActionModuleDescriptor
+        (
+            CubeActionDescriptor = $/GFX/UI/CubeAction_Menu_Ordres_unites
+        ),
+            TMinimapDisplayModuleDescriptor
+            (
+                Texture = "Texture_Minimap_Unit_unit"
+                FollowUnitOrientation = False
+            ),
+        TOrderConfigModuleDescriptor
+        (
+                ValidOrders = ~/Descriptor_OrderAvailability_FV4201_Chieftain_Mk9_UK
+        ),
+        TOrderableModuleDescriptor
+        (
+            UnlockableOrders = ~/Descriptor_OrderAvailability_FV4201_Chieftain_Mk9_UK
+        ),
+        ~/OrderDisplayModuleDescriptor,
+            ~/GroupableUnitModuleSelector,
+            TTacticalLabelModuleDescriptor
+            (
+                MultiSelectionSortingOrder = 15170
+                //UnitName                   = 'HGYVSAUCIQ'
+                IdentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+                (
+                    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                    Alterator = $/GUIOption/IconType
+                    Values =
+                    [
+                        "Texture_RTS_H_Armor",
+                        "Texture_Armor"
+                    ]
+                )
+                UnidentifiedTexture = TBUCKToolAlternativeValues_TUIValueTextureNameFromTEugBMutableInteger
+                (
+                    CommandNameTrigger = ~/SpecificCommandName/UpdateGUIFromIconType
+                    Alterator = $/GUIOption/IconType
+                    Values =
+                    [
+                        "Texture_RTS_H_veh_nonIdentifie",
+                        "Texture_veh_nonIdentifie"
+                    ]
+                )
+                PositionHeightOffset = 1000.0
+                NbSoldiers                 = 0
+            ),
+        ~/TargetDataModuleDescriptor,
+        ~/PackSignauxModuleDescriptor,
+            TStrategicDataModuleDescriptor
+                (
+                    UnitAttackValue = 341
+                    UnitDefenseValue = 1
+                    UnitBonusXpPerLevelValue = 1
+             ),
+            TUnitUIModuleDescriptor
+            (
+                UnitRole = 'tank_C'
+                SpecialtiesList = [
+                    'armor',
+                ]
+                NameToken = 'CHFCMDN'
+                InfoPanelConfigurationToken = 'Default'
+                DisplayRoadSpeedInKmph = 51
+                GenerateName = true
+                MenuIconTexture = 'Texture_RTS_H_Armor'
+                ButtonTexture = 'Texture_Button_Unit_FV4201_Chieftain_Mk9_UK'
                 CountryTexture = 'CommonTexture_MotherCountryFlag_UK'
                 TypeStrategicCount = ETypeStrategicDetailedCount/Armor
             ),
@@ -94878,8 +95431,8 @@ export Descriptor_Unit_FV4201_Chieftain_Mk9_UK is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 150),
-                        ($/GFX/Resources/Resource_Tickets, 150),
+                        ($/GFX/Resources/Resource_CommandPoints, 135),
+                        ($/GFX/Resources/Resource_Tickets, 135),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -94958,7 +95511,7 @@ export Descriptor_Unit_FV4201_Chieftain_Mk9_UK is TEntityDescriptor
                 NameToken = 'HGYVSAUCIQ'
                 InfoPanelConfigurationToken = 'Default'
                 DisplayRoadSpeedInKmph = 51
-                    UpgradeFromUnit = Descriptor_Unit_FV4201_Chieftain_Mk11_CMD_UK
+                    UpgradeFromUnit = Descriptor_Unit_FV4201_Chieftain_Mk9_CMD_UK
                 GenerateName = true
                 MenuIconTexture = 'Texture_RTS_H_Armor'
                 ButtonTexture = 'Texture_Button_Unit_FV4201_Chieftain_Mk9_UK'
@@ -95107,7 +95660,7 @@ export Descriptor_Unit_FV4201_Chieftain_UK is TEntityDescriptor
                     DetectionTBAGRU = 0
                     PorteeVisionGRU = 6000
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*154.5
+                    OpticalStrength = OpticalStrengthReducer*181.5
                     OpticalStrengthAltitude = 20
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 3500),
@@ -95173,8 +95726,8 @@ export Descriptor_Unit_FV4201_Chieftain_UK is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 200),
-                        ($/GFX/Resources/Resource_Tickets, 200),
+                        ($/GFX/Resources/Resource_CommandPoints, 170),
+                        ($/GFX/Resources/Resource_Tickets, 170),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -99661,17 +100214,6 @@ export Descriptor_Unit_Fallschirmjager_CMD_RFA is TEntityDescriptor
         ~/UnitPositionModuleDescriptor,
         ~/PlayerMissionModuleDescriptor,
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -117021,7 +117563,7 @@ export Descriptor_Unit_HMGteam_M2HB_NG_US is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 20
+               MaxSpeedInKmph = 5
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
@@ -117031,37 +117573,38 @@ export Descriptor_Unit_HMGteam_M2HB_NG_US is TEntityDescriptor
             Default = TLandMovementModuleDescriptor
             (
                 UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
+                //VitesseCombat = ((15) * 0.12485276796)
+                SpeedBonusFactorOnRoad = 1.0
+                MaxAccelerationGRU = (AccelCorr * 10)
                 MaxDecelerationGRU = 54
                 TempsDemiTour = 0.1
-                StartTime = 1.5
-                StopTime = 1.5
-                RotationStartTime = 1.5
-                RotationStopTime = 1.5
+                StartTime = (1.5 * Seconde)
+                StopTime = (1.5 * Seconde)
+                RotationStartTime = (1.5 * Seconde)
+                RotationStopTime = (1.5 * Seconde)
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 90.9
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+					PorteeVisionGRU = 8800
+					PorteeIdentification = 0.0
+					OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 40
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.26
-                TimeBetweenEachIdentifyRoll = 8.0
+                IdentifyBaseProbability     = IdentProbMult * 0.26
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 8.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -117318,7 +117861,7 @@ export Descriptor_Unit_HMGteam_M2HB_UK is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 20
+               MaxSpeedInKmph = 5
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
@@ -117328,37 +117871,38 @@ export Descriptor_Unit_HMGteam_M2HB_UK is TEntityDescriptor
             Default = TLandMovementModuleDescriptor
             (
                 UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
+                //VitesseCombat = ((15) * 0.12485276796)
+                SpeedBonusFactorOnRoad = 1.0
+                MaxAccelerationGRU = (AccelCorr * 10)
                 MaxDecelerationGRU = 54
                 TempsDemiTour = 0.1
-                StartTime = 1.5
-                StopTime = 1.5
-                RotationStartTime = 1.5
-                RotationStopTime = 1.5
+                StartTime = (1.5 * Seconde)
+                StopTime = (1.5 * Seconde)
+                RotationStartTime = (1.5 * Seconde)
+                RotationStopTime = (1.5 * Seconde)
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-			PorteeVisionTBAGRU = 12370
-			PorteeVisionFOWGRU = 0
-			DetectionTBAGRU = 0
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 90.9
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+					PorteeVisionGRU = 8800
+					PorteeIdentification = 0.0
+					OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 40
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.26
-                TimeBetweenEachIdentifyRoll = 8.0
+                IdentifyBaseProbability     = IdentProbMult * 0.26
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 8.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -129641,49 +130185,49 @@ export Descriptor_Unit_HvyScout_NG_Dragon_US is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 193.02
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 8800
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
+                    OpticalStrengthAltitude = 40
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.56
-                TimeBetweenEachIdentifyRoll = 4.0
+                IdentifyBaseProbability     = IdentProbMult * 0.56
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 4.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -129972,49 +130516,49 @@ export Descriptor_Unit_HvyScout_NG_US is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 193.02
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 8800
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
+                    OpticalStrengthAltitude = 40
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.56
-                TimeBetweenEachIdentifyRoll = 4.0
+                IdentifyBaseProbability     = IdentProbMult * 0.56
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 4.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -133545,17 +134089,6 @@ export Descriptor_Unit_Jager_CMD_RFA is TEntityDescriptor
         ~/UnitPositionModuleDescriptor,
         ~/PlayerMissionModuleDescriptor,
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -135574,49 +136107,49 @@ export Descriptor_Unit_KSK18_DDR is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 193.02
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 8800
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 40
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.56
-                TimeBetweenEachIdentifyRoll = 4.0
+                IdentifyBaseProbability     = IdentProbMult * 0.56
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 4.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -139357,49 +139890,49 @@ export Descriptor_Unit_LRRP_CEWI_US is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 193.02
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 8800
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
+                    OpticalStrengthAltitude = 40
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.56
-                TimeBetweenEachIdentifyRoll = 4.0
+                IdentifyBaseProbability     = IdentProbMult * 0.56
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 4.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -143885,17 +144418,6 @@ export Descriptor_Unit_Leopard_1A1_CMD_RFA is TEntityDescriptor
         ~/UnitPositionModuleDescriptor,
         ~/PlayerMissionModuleDescriptor,
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -145070,17 +145592,6 @@ export Descriptor_Unit_Leopard_1A5_CMD_RFA is TEntityDescriptor
         ~/UnitPositionModuleDescriptor,
         ~/PlayerMissionModuleDescriptor,
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -146855,17 +147366,6 @@ export Descriptor_Unit_Leopard_2A3_CMD_RFA is TEntityDescriptor
         ~/UnitPositionModuleDescriptor,
         ~/PlayerMissionModuleDescriptor,
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -151707,54 +152207,54 @@ export Descriptor_Unit_M1025_Humvee_MP_US is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 81
+               MaxSpeedInKmph = 35
                PathfindType = $/Pathfind/PathfindTypes/Vehicle
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/AllTerrainWheel
-                SpeedBonusFactorOnRoad = 1.67
-                MaxAccelerationGRU = (26)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 3.0
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/AllTerrainWheel
+                    SpeedBonusFactorOnRoad = 3.15
+                    MaxAccelerationGRU = (AccelCorr * 26)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 3.0
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TFuelModuleDescriptor
         (
-            FuelCapacity = 100
-            FuelMoveDuration = 863.0
+           FuelCapacity = 100
+            FuelMoveDuration = FuelCorr * 750.0
         ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 42.45
-            OpticalStrengthAltitude = 10
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 2000
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*18
+                    OpticalStrengthAltitude = 20
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.13
-                TimeBetweenEachIdentifyRoll = 15.0
+                IdentifyBaseProbability     = IdentProbMult * 0.26
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 8.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -151775,7 +152275,7 @@ export Descriptor_Unit_M1025_Humvee_MP_US is TEntityDescriptor
                    TransportableTagSet            = [
                                         "Crew",
                                                     ]
-                   NbSeatsAvailable               = 1
+                   NbSeatsAvailable               = 5
                    WreckUnloadPhysicalDamageBonus = WreckUnloadDamageBonus_Default_Physical
                    WreckUnloadSuppressDamageBonus = WreckUnloadDamageBonus_Default_Suppress
                    WreckUnloadStunDamageBonus     = WreckUnloadDamageBonus_Default_Stun
@@ -153830,54 +154330,56 @@ export Descriptor_Unit_M106A2_Howz_NG_US is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 59
+               MaxSpeedInKmph = 40
                PathfindType = $/Pathfind/PathfindTypes/Vehicle
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Track
-                SpeedBonusFactorOnRoad = 1.67
-                MaxAccelerationGRU = (18)
-                MaxDecelerationGRU = 35
-                TempsDemiTour = 8.0
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Track
+                    //PathfindType = $/Pathfind/PathfindTypes/Vehicle
+                    //VitesseCombat = ((90) * 0.12485276796)
+                    SpeedBonusFactorOnRoad = 1.6
+                    MaxAccelerationGRU = (AccelCorr * 18)
+                    MaxDecelerationGRU = 35
+                    TempsDemiTour = 7.0
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TFuelModuleDescriptor
         (
-            FuelCapacity = 360
-            FuelMoveDuration = 575.0
+           FuelCapacity = 360
+            FuelMoveDuration = FuelCorr * 500.0
         ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 42.45
-            OpticalStrengthAltitude = 10
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 2000
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*18
+                    OpticalStrengthAltitude = 10
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.13
-                TimeBetweenEachIdentifyRoll = 15.0
+                IdentifyBaseProbability     = IdentProbMult * 0.13
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 15.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -156410,54 +156912,56 @@ export Descriptor_Unit_M110A2_Howz_NG_US is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 45
+               MaxSpeedInKmph = 29
                PathfindType = $/Pathfind/PathfindTypes/Vehicle
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Track
-                SpeedBonusFactorOnRoad = 2.00
-                MaxAccelerationGRU = (14)
-                MaxDecelerationGRU = 35
-                TempsDemiTour = 9.0
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Track
+                    //PathfindType = $/Pathfind/PathfindTypes/Vehicle
+                    //VitesseCombat = ((98) * 0.12485276796)
+                    SpeedBonusFactorOnRoad = 1.4
+                    MaxAccelerationGRU = (AccelCorr * 14)
+                    MaxDecelerationGRU = 35
+                    TempsDemiTour = 8.0
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TFuelModuleDescriptor
         (
-            FuelCapacity = 1000
-            FuelMoveDuration = 575.0
+           FuelCapacity = 1000
+            FuelMoveDuration = FuelCorr * 500.0
         ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 42.45
-            OpticalStrengthAltitude = 10
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 2000
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*18
+                    OpticalStrengthAltitude = 10
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.13
-                TimeBetweenEachIdentifyRoll = 15.0
+                IdentifyBaseProbability     = IdentProbMult * 0.13
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 15.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -201482,49 +201986,50 @@ export Descriptor_Unit_Mortier_240mm_M240_Cluster_SOV is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 9
+               MaxSpeedInKmph = 2
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 2.22
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 3
-                TempsDemiTour = 5.0
-                StartTime = 1.5
-                StopTime = 1.5
-                RotationStartTime = 1.5
-                RotationStopTime = 1.5
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 2.25
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 3
+                    TempsDemiTour = 5.0
+                    VehicleSizeInMeter = [5.0, 4.0]
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-			PorteeVisionTBAGRU = 12370
-			PorteeVisionFOWGRU = 0
-			DetectionTBAGRU = 0
-            PorteeVisionGRU = 6000
-            PorteeIdentification = 0.0
-            OpticalStrength = 42.45
-            OpticalStrengthAltitude = 10
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+					PorteeVisionGRU = 8800
+					PorteeIdentification = 0.0
+					OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 10
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.13
-                TimeBetweenEachIdentifyRoll = 15.0
+                IdentifyBaseProbability     = IdentProbMult * 0.13
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 15.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -208050,49 +208555,49 @@ export Descriptor_Unit_MotRifles_CMD_POL is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 90.9
-            OpticalStrengthAltitude = 20
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+					PorteeVisionGRU = 8800
+					PorteeIdentification = 0.0
+					OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 20
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.26
-                TimeBetweenEachIdentifyRoll = 8.0
+                IdentifyBaseProbability     = IdentProbMult * 0.26
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 8.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -214002,49 +214507,49 @@ export Descriptor_Unit_NatGuard_CMD_US is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 90.9
-            OpticalStrengthAltitude = 20
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+					PorteeVisionGRU = 8800
+					PorteeIdentification = 0.0
+					OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 20
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.26
-                TimeBetweenEachIdentifyRoll = 8.0
+                IdentifyBaseProbability     = IdentProbMult * 0.26
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 8.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -223737,49 +224242,49 @@ export Descriptor_Unit_Pioneer_UK is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-			PorteeVisionTBAGRU = 12370
-			PorteeVisionFOWGRU = 0
-			DetectionTBAGRU = 0
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 90.9
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+					PorteeVisionGRU = 8800
+					PorteeIdentification = 0.0
+					OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 20
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.26
-                TimeBetweenEachIdentifyRoll = 8.0
+                IdentifyBaseProbability     = IdentProbMult * 0.26
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 8.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -228223,7 +228728,7 @@ export Descriptor_Unit_Reserviste_FAMAS_FR is TEntityDescriptor
         ),
         TVisibilityModuleDescriptor
         (
-            UnitConcealmentBonus = 2.0
+            UnitConcealmentBonus = 5.2
             VisionUnitType       = EVisionUnitType/AlwaysOnGround
         ),
         ApparenceModel is InfantryApparenceModelModuleDescriptor
@@ -228307,49 +228812,49 @@ export Descriptor_Unit_Reserviste_FAMAS_FR is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 24
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = 11.0
-                MaxDecelerationGRU = 155.0
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 90.9
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+					PorteeVisionGRU = 8800
+					PorteeIdentification = 0.0
+					OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 20
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.26
-                TimeBetweenEachIdentifyRoll = 8.0
+                IdentifyBaseProbability     = IdentProbMult * 0.26
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 8.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -247173,7 +247678,7 @@ export Descriptor_Unit_Scout_DShV_SOV is TEntityDescriptor
         ),
         TVisibilityModuleDescriptor
         (
-            UnitConcealmentBonus = 2.5
+            UnitConcealmentBonus = 7.8
             VisionUnitType       = EVisionUnitType/AlwaysOnGround
         ),
         ApparenceModel is InfantryApparenceModelModuleDescriptor
@@ -247252,49 +247757,49 @@ export Descriptor_Unit_Scout_DShV_SOV is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-			PorteeVisionTBAGRU = 12370
-			PorteeVisionFOWGRU = 0
-			DetectionTBAGRU = 0
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 193.02
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 8800
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
+                    OpticalStrengthAltitude = 40
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.56
-                TimeBetweenEachIdentifyRoll = 4.0
+                IdentifyBaseProbability     = IdentProbMult * 0.56
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 4.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -251426,7 +251931,7 @@ export Descriptor_Unit_Scout_Reserve_DDR is TEntityDescriptor
         ),
         TVisibilityModuleDescriptor
         (
-            UnitConcealmentBonus = 2.5
+            UnitConcealmentBonus = 7.8
             VisionUnitType       = EVisionUnitType/AlwaysOnGround
         ),
         ApparenceModel is InfantryApparenceModelModuleDescriptor
@@ -251504,49 +252009,49 @@ export Descriptor_Unit_Scout_Reserve_DDR is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 25
+               MaxSpeedInKmph = 12
                PathfindType = $/Pathfind/PathfindTypes/Infantry
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/Infantry
-                SpeedBonusFactorOnRoad = 1.00
-                MaxAccelerationGRU = (10)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 0.1
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/Infantry
+                    SpeedBonusFactorOnRoad = 1.0
+                    MaxAccelerationGRU = (AccelCorr * 10)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 0.1
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 0.0
-            PorteeVisionFOWGRU = 0.0
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 193.02
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 8800
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
+                    OpticalStrengthAltitude = 40
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 5655),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.56
-                TimeBetweenEachIdentifyRoll = 4.0
+                IdentifyBaseProbability     = IdentProbMult * 0.56
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 4.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -251584,6 +252089,7 @@ export Descriptor_Unit_Scout_Reserve_DDR is TEntityDescriptor
 			Default        = TCapaciteModuleDescriptor
 			(
 				DefaultSkillList = [
+					//$/GFX/EffectCapacity/Capacite_reserviste,//needs work
 					$/GFX/EffectCapacity/Capacite_cover,
 					$/GFX/EffectCapacity/Capacite_Burn_Bailed_Tank,
 						$/GFX/EffectCapacity/Capacite_dig_in,
@@ -269498,9 +270004,11 @@ export Descriptor_Unit_T55AM_Merida_CMD_POL is TEntityDescriptor
         (
             TagSet = [
                 "AllUnits",
-                "AllowedForMissileRoE",
+                "Char_CMD",
                 "Char",
-                "Char_Standard",
+                "Commandant",
+                "InfmapCommander",
+                "AllowedForMissileRoE",
                 "GroundUnits",
                 "UNITE_T55AM_Merida_CMD_POL",
                 "Unite",
@@ -269663,8 +270171,8 @@ export Descriptor_Unit_T55AM_Merida_CMD_POL is TEntityDescriptor
             Factory            = EDefaultFactories/Tanks
             ProductionTime     = 5
             ProductionRessourcesNeeded = MAP [
-                ($/GFX/Resources/Resource_CommandPoints, 110),
-                        ($/GFX/Resources/Resource_Tickets, 110),
+                ($/GFX/Resources/Resource_CommandPoints, 80),
+                        ($/GFX/Resources/Resource_Tickets, 80),
             ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -275511,8 +276019,10 @@ export Descriptor_Unit_T72_CMD_DDR is TEntityDescriptor
                 "AllUnits",
                 "Unite",
                 "UNITE_T72_CMD_DDR",
-                "Char_Standard",
+                "Char_CMD",
                 "Char",
+                "Commandant",
+                "InfmapCommander",
                 "AllowedForMissileRoE",
                 "GroundUnits",
             ]
@@ -275686,8 +276196,8 @@ export Descriptor_Unit_T72_CMD_DDR is TEntityDescriptor
                     Factory            = EDefaultFactories/Tanks
                     ProductionTime     = 5
                     ProductionRessourcesNeeded = MAP [
-                        ($/GFX/Resources/Resource_CommandPoints, 115),
-                        ($/GFX/Resources/Resource_Tickets, 115),
+                        ($/GFX/Resources/Resource_CommandPoints, 85),
+                        ($/GFX/Resources/Resource_Tickets, 85),
                     ]
         ),
         ~/InfluencePositionModuleDescriptor,
@@ -282468,17 +282978,6 @@ export Descriptor_Unit_Territorial_CMD_UK is TEntityDescriptor
         ~/PlayerMissionModuleDescriptor,
 	  
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -284083,54 +284582,57 @@ export Descriptor_Unit_UAZ_469_AGL_Grenzer_DDR is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 63
+               MaxSpeedInKmph = 35
                PathfindType = $/Pathfind/PathfindTypes/Vehicle
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         LandMovement is TModuleSelector
-        (
-            Default = TLandMovementModuleDescriptor
             (
-                UnitMovingType = EUnitMovingType/AllTerrainWheel
-                SpeedBonusFactorOnRoad = 3.14
-                MaxAccelerationGRU = (26)
-                MaxDecelerationGRU = 54
-                TempsDemiTour = 4.0
-                StartTime = 0
-                StopTime = 0
-                RotationStartTime = 0
-                RotationStopTime = 0
-            )
-            Selection = [~/NilDescriptorIfCadavre]
-        ),
+                Default        = TLandMovementModuleDescriptor
+                (
+                    UnitMovingType = EUnitMovingType/AllTerrainWheel
+                    SpeedBonusFactorOnRoad = 3.15
+                    MaxAccelerationGRU = (AccelCorr * 26)
+                    MaxDecelerationGRU = 54
+                    TempsDemiTour = 3.0
+                    StartTime = (0 * Seconde)
+                    StopTime = (0 * Seconde)
+                    RotationStartTime = (0 * Seconde)
+                    RotationStopTime = (0 * Seconde)
+                )
+                Selection = [~/NilDescriptorIfCadavre]
+            ),
         TFuelModuleDescriptor
         (
-            FuelCapacity = 80
-            FuelMoveDuration = 863.0
+           FuelCapacity = 80
+            FuelMoveDuration = FuelCorr * 750.0
         ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-			PorteeVisionTBAGRU = 12370
-			PorteeVisionFOWGRU = 0
-			DetectionTBAGRU = 0
-            PorteeVisionGRU = 6000
-            PorteeIdentification = 0.0
-            OpticalStrength = 90.9
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
-            ]
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 0
+                    DetectionTBAGRU = 0
+                    PorteeVisionGRU = 6000
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*118.9*ScoutOpticBonus
+                    OpticalStrengthAltitude = 20
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 3500),
+                    ]
+					SpecializedOpticalStrengths = MAP [
+                        //( EVisionUnitType/Infantry, OpticalStrengthReducer*50.9 ),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.26
-                TimeBetweenEachIdentifyRoll = 8.0
+                IdentifyBaseProbability     = IdentProbMult * 0.26
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 8.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -284151,7 +284653,7 @@ export Descriptor_Unit_UAZ_469_AGL_Grenzer_DDR is TEntityDescriptor
                    TransportableTagSet            = [
                                         "Crew",
                                                     ]
-                   NbSeatsAvailable               = 1
+                   NbSeatsAvailable               = 4
                    WreckUnloadPhysicalDamageBonus = WreckUnloadDamageBonus_Default_Physical
                    WreckUnloadSuppressDamageBonus = WreckUnloadDamageBonus_Default_Suppress
                    WreckUnloadStunDamageBonus     = WreckUnloadDamageBonus_Default_Stun
@@ -301315,17 +301817,6 @@ export Descriptor_Unit_Volkspolizei_CMD_DDR is TEntityDescriptor
         ~/PlayerMissionModuleDescriptor,
 					  
         TCommanderModuleDescriptor(),
-		/*// Observer  
-		TModuleSelector
-		(
-			Default            = TObserverModuleDescriptor
-			(
-				Radius              = 4239 * 1.5 * 0.12485276796 * RangeCorr
-				ArtilleryToSpawn    = ~/Descriptor_Unit_CCo_USUKFRG
-			)
-			Selection          = [ ~/NilDescriptorIfCadavre]
-		),
-		*///end Observer
         ~/LinkTeamModuleDescriptor,
         TTagsModuleDescriptor
         (
@@ -305757,7 +306248,7 @@ export Descriptor_Unit_A109BA_BEL is TEntityDescriptor
 			DetectionTBAGRU = 12370
 			PorteeVisionGRU = 8835
 			PorteeIdentification = 0.0
-			OpticalStrength = OpticalStrengthReducer*63.675
+			OpticalStrength = OpticalStrengthReducer*114.9
 			OpticalStrengthAltitude = 40
 			SpecializedDetectionsGRU = MAP [
 				( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -306005,9 +306496,9 @@ export Descriptor_Unit_AH1E_Cobra_US is TEntityDescriptor
         FacingInfos is ~/FacingInfosModuleDescriptor,
         GenericMovement is TModuleSelector
         (
-            Default = TGenericMovementModuleDescriptor
+            Default        = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 227
+               MaxSpeedInKmph = 252
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
@@ -306016,49 +306507,49 @@ export Descriptor_Unit_AH1E_Cobra_US is TEntityDescriptor
         (
             Default        = THelicopterMovementModuleDescriptor
             (
-                MaxSpeedInKmph   = 227
+                MaxSpeedInKmph = 252
                 WorldFloorProxy  = $/M3D/Scene/WorldFloorForHelicoProxy
-                UpwardSpeedInKmph = 90
-                TorqueManoeuvrability = 220
-                CyclicManoeuvrability = 260
+                UpwardSpeedInKmph = 45
+                TorqueManoeuvrability = 110
+                CyclicManoeuvrability = 130
                 MaxInclination   = 89
                 GFactorLimit     = 3.5
                 RotorArea        = 140
-                Mass             = 1419
+                Mass             = 4300
             )
             Selection = [~/NilDescriptorIfCadavre]
         ),
         TFuelModuleDescriptor
         (
-            FuelCapacity = 1000
-            FuelMoveDuration = 500.0
+           FuelCapacity = 1000
+            FuelMoveDuration = FuelCorr * 500.0
         ),
         TScannerConfigurationDescriptor
-        (
-            OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
-            PorteeVisionTBAGRU = 4947
-            PorteeVisionFOWGRU = 565.371024735
-            DetectionTBAGRU = 4947
-            PorteeVisionGRU = 3534
-            PorteeIdentification = 0.0
-            OpticalStrength = 90.9
-            OpticalStrengthAltitude = 40
-            SpecializedDetectionsGRU = MAP [
-                ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
+                (
+                    OpticsAltitudeConfig = ~/EVisionOpticsAltitudeConfig/DontUse
+                    PorteeVisionTBAGRU = 12370
+                    PorteeVisionFOWGRU = 205
+                    DetectionTBAGRU = 12370
+                    PorteeVisionGRU = 8835
+                    PorteeIdentification = 0.0
+                    OpticalStrength = OpticalStrengthReducer*114.9
+                    OpticalStrengthAltitude = 120
+                    SpecializedDetectionsGRU = MAP [
+                        ( EVisionUnitType/AlwaysInHighAltitude, 10600),
                 ( EVisionUnitType/Building, 565.371024735 ),
                 ( EVisionUnitType/Deposit, 353.356890459 ),
-            ]
-            SpecializedOpticalStrengths = MAP [
-                ( EVisionUnitType/Building, 20.0 ),
-                ( EVisionUnitType/Deposit, 20.0 ),
-            ]
+                    ]
+                    SpecializedOpticalStrengths = MAP [
+                        ( EVisionUnitType/Building, 20.0 ),
+                        ( EVisionUnitType/Deposit, 20.0 ),
+                    ]
         ),
         TReverseScannerWithIdentificationDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 0.26
-                TimeBetweenEachIdentifyRoll = 8.0
+                IdentifyBaseProbability     = IdentProbMult * 0.2
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 10.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (
@@ -306315,7 +306806,7 @@ export Descriptor_Unit_AH1F_ATAS_US is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 120
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 10600),
@@ -309795,7 +310286,7 @@ export Descriptor_Unit_Alouette_III_FR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -311127,7 +311618,7 @@ export Descriptor_Unit_Alouette_II_trans_BEL is TEntityDescriptor
 			DetectionTBAGRU = 12370
 			PorteeVisionGRU = 8835
 			PorteeIdentification = 0.0
-			OpticalStrength = OpticalStrengthReducer*63.675
+			OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
 			OpticalStrengthAltitude = 40
 			SpecializedDetectionsGRU = MAP [
 				( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -312466,7 +312957,7 @@ export Descriptor_Unit_Bo_105_trans_RFA is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -313304,7 +313795,7 @@ export Descriptor_Unit_CH47_Chinook_US is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -314132,7 +314623,7 @@ export Descriptor_Unit_CH53G_trans_RFA is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -314691,7 +315182,7 @@ export Descriptor_Unit_EH60A_EW_US is TEntityDescriptor
             DetectionTBAGRU = 1785
             PorteeVisionGRU = 1275
             PorteeIdentification = 0.0
-            OpticalStrength = 90.9
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 120
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 10600),
@@ -316306,7 +316797,7 @@ export Descriptor_Unit_Gazelle_Mistral_FR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 120
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 10600),
@@ -317615,7 +318106,7 @@ export Descriptor_Unit_Gazelle_trans_UK is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -318984,7 +319475,7 @@ export Descriptor_Unit_Lynx_AH_Mk1_UK is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -320663,7 +321154,7 @@ export Descriptor_Unit_Mi_14PL_AT_DDR is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 90.9
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 40
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
@@ -320919,7 +321410,7 @@ export Descriptor_Unit_Mi_14PL_recon_DDR is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 233.475
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 120
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 10601.0 ),
@@ -321445,7 +321936,7 @@ export Descriptor_Unit_Mi_24D_Desant_SOV is TEntityDescriptor
 			DetectionTBAGRU = 12370
 			PorteeVisionGRU = 8835
 			PorteeIdentification = 0.0
-			OpticalStrength = OpticalStrengthReducer*63.675
+			OpticalStrength = OpticalStrengthReducer*114.9
 			OpticalStrengthAltitude = 40
 			SpecializedDetectionsGRU = MAP [
 				( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -322518,7 +323009,7 @@ export Descriptor_Unit_Mi_24P_AA_SOV is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 90.9
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 40
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
@@ -325188,7 +325679,7 @@ export Descriptor_Unit_Mi_2_CMD_DDR is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 90.9
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 120
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 10601.0 ),
@@ -325452,7 +325943,7 @@ export Descriptor_Unit_Mi_26_trans_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -325748,7 +326239,7 @@ export Descriptor_Unit_Mi_2_gunship_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 120
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 10600),
@@ -326540,7 +327031,7 @@ export Descriptor_Unit_Mi_2_rocket_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 120
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 10600),
@@ -326799,7 +327290,7 @@ export Descriptor_Unit_Mi_2_trans_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -327077,7 +327568,7 @@ export Descriptor_Unit_Mi_2_trans_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -327356,7 +327847,7 @@ export Descriptor_Unit_Mi_6_SOV is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 42.45
+            OpticalStrength = OpticalStrengthReducer*42.45
             OpticalStrengthAltitude = 10
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
@@ -327621,7 +328112,7 @@ export Descriptor_Unit_Mi_6_trans_SOV is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 42.45
+            OpticalStrength = OpticalStrengthReducer*42.45
             OpticalStrengthAltitude = 10
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
@@ -328191,7 +328682,7 @@ export Descriptor_Unit_Mi_8MTPI_SOV is TEntityDescriptor
             DetectionTBAGRU = 1785
             PorteeVisionGRU = 1275
             PorteeIdentification = 0.0
-            OpticalStrength = 90.9
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 120
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 10600),
@@ -328477,7 +328968,7 @@ export Descriptor_Unit_Mi_8MTV_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -328761,7 +329252,7 @@ export Descriptor_Unit_Mi_8PPA_SOV is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 193.02
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 120
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 10601.0 ),
@@ -329309,7 +329800,7 @@ export Descriptor_Unit_Mi_8TB_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -329592,7 +330083,7 @@ export Descriptor_Unit_Mi_8TB_reco_Marine_DDR is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 193.02
+            OpticalStrength = OpticalStrengthReducer*114.9*ScoutOpticBonus
             OpticalStrengthAltitude = 120
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 10601.0 ),
@@ -329859,7 +330350,7 @@ export Descriptor_Unit_Mi_8TV_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -330139,7 +330630,7 @@ export Descriptor_Unit_Mi_8TV_Gunship_SOV is TEntityDescriptor //needs work
 			DetectionTBAGRU = 12370
 			PorteeVisionGRU = 8835
 			PorteeIdentification = 0.0
-			OpticalStrength = OpticalStrengthReducer*63.675
+			OpticalStrength = OpticalStrengthReducer*114.9
 			OpticalStrengthAltitude = 40
 			SpecializedDetectionsGRU = MAP [
 				( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -330421,7 +330912,7 @@ export Descriptor_Unit_Mi_8TV_PodGatling_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -330703,7 +331194,7 @@ export Descriptor_Unit_Mi_8TV_PodGatling_PodAGL_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -330984,7 +331475,7 @@ export Descriptor_Unit_Mi_8TV_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -331266,7 +331757,7 @@ export Descriptor_Unit_Mi_8TV_UPK_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -331539,7 +332030,7 @@ export Descriptor_Unit_Mi_8TV_non_arme_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -331827,7 +332318,7 @@ export Descriptor_Unit_Mi_8TV_s57_16_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -332108,7 +332599,7 @@ export Descriptor_Unit_Mi_8TV_s57_32_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -332390,7 +332881,7 @@ export Descriptor_Unit_Mi_8TV_s57_32_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -332672,7 +333163,7 @@ export Descriptor_Unit_Mi_8TV_s80_SOV is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -333217,7 +333708,7 @@ export Descriptor_Unit_Mi_8T_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -333491,7 +333982,7 @@ export Descriptor_Unit_Mi_8T_non_arme_DDR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -334317,7 +334808,7 @@ export Descriptor_Unit_OH58A_reco_NG_US is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 193.02
+            OpticalStrength = OpticalStrengthReducer*191.025*ScoutOpticBonus
             OpticalStrengthAltitude = 120
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 10601.0 ),
@@ -335704,7 +336195,7 @@ export Descriptor_Unit_OH58_CS_US is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 120
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 10600),
@@ -336223,7 +336714,7 @@ export Descriptor_Unit_Puma_HET_FR is TEntityDescriptor
             DetectionTBAGRU = 1785
             PorteeVisionGRU = 1275
             PorteeIdentification = 0.0
-            OpticalStrength = 90.9
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 120
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 10600),
@@ -336790,7 +337281,7 @@ export Descriptor_Unit_Puma_Pirate_FR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -337076,7 +337567,7 @@ export Descriptor_Unit_Puma_UK is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -337342,7 +337833,7 @@ export Descriptor_Unit_Puma_UK is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -337610,7 +338101,7 @@ export Descriptor_Unit_Super_Puma_FR is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -337892,7 +338383,7 @@ export Descriptor_Unit_UH1A_US is TEntityDescriptor
 			DetectionTBAGRU = 12370
 			PorteeVisionGRU = 8835
 			PorteeIdentification = 0.0
-			OpticalStrength = OpticalStrengthReducer*63.675
+			OpticalStrength = OpticalStrengthReducer*114.9
 			OpticalStrengthAltitude = 40
 			SpecializedDetectionsGRU = MAP [
 				( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -338163,7 +338654,7 @@ export Descriptor_Unit_UH1D_RFA is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -338712,7 +339203,7 @@ export Descriptor_Unit_UH1H_Huey_US is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -338992,7 +339483,7 @@ export Descriptor_Unit_UH1H_supply_US is TEntityDescriptor
 			DetectionTBAGRU = 12370
 			PorteeVisionGRU = 8835
 			PorteeIdentification = 0.0
-			OpticalStrength = OpticalStrengthReducer*63.675
+			OpticalStrength = OpticalStrengthReducer*114.9
 			OpticalStrengthAltitude = 40
 			SpecializedDetectionsGRU = MAP [
 				( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -339259,7 +339750,7 @@ export Descriptor_Unit_UH1M_gunship_US is TEntityDescriptor
             DetectionTBAGRU = 4947
             PorteeVisionGRU = 3534
             PorteeIdentification = 0.0
-            OpticalStrength = 90.9
+            OpticalStrength = OpticalStrengthReducer*114.9
             OpticalStrengthAltitude = 40
             SpecializedDetectionsGRU = MAP [
                 ( EVisionUnitType/AlwaysInHighAltitude, 5654.0 ),
@@ -339531,7 +340022,7 @@ export Descriptor_Unit_UH60A_Black_Hawk_US is TEntityDescriptor
                     DetectionTBAGRU = 12370
                     PorteeVisionGRU = 8835
                     PorteeIdentification = 0.0
-                    OpticalStrength = OpticalStrengthReducer*63.675
+                    OpticalStrength = OpticalStrengthReducer*114.9
                     OpticalStrengthAltitude = 40
                     SpecializedDetectionsGRU = MAP [
                         ( EVisionUnitType/AlwaysInHighAltitude, 5655),
@@ -341204,7 +341695,7 @@ export Descriptor_Unit_A37B_Dragonfly_HE_US is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 660
+               MaxSpeedInKmph = 720
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
@@ -341213,8 +341704,8 @@ export Descriptor_Unit_A37B_Dragonfly_HE_US is TEntityDescriptor
         (
             AltitudeGRU = ((1400) * 0.12485276796)
             AltitudeMinGRU = (300 * 0.12485276796)
-            SpeedInKmph = 660
-            AgilityRadiusGRU = ((2952) * 0.12485276796)
+            SpeedInKmph = 720
+            AgilityRadiusGRU = 906
             PitchAngle = 17
             RollAngle = 70
             RollSpeed = 105
@@ -341471,7 +341962,7 @@ export Descriptor_Unit_A37B_Dragonfly_NPLM_US is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 660
+               MaxSpeedInKmph = 720
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
@@ -341480,8 +341971,8 @@ export Descriptor_Unit_A37B_Dragonfly_NPLM_US is TEntityDescriptor
         (
             AltitudeGRU = ((1400) * 0.12485276796)
             AltitudeMinGRU = (300 * 0.12485276796)
-            SpeedInKmph = 660
-            AgilityRadiusGRU = ((2952) * 0.12485276796)
+            SpeedInKmph = 720
+            AgilityRadiusGRU = 906
             PitchAngle = 17
             RollAngle = 70
             RollSpeed = 105
@@ -341739,7 +342230,7 @@ export Descriptor_Unit_A37B_Dragonfly_US is TEntityDescriptor
         (
             Default = TGenericMovementModuleDescriptor
             (
-               MaxSpeedInKmph = 660
+               MaxSpeedInKmph = 720
                PathfindType = $/Pathfind/PathfindTypes/Flying
             )
             Selection = [~/NilDescriptorIfCadavre]
@@ -341749,7 +342240,7 @@ export Descriptor_Unit_A37B_Dragonfly_US is TEntityDescriptor
             AltitudeGRU = ((1400) * 0.12485276796)
             AltitudeMinGRU = (300 * 0.12485276796)
             SpeedInKmph = 660
-            AgilityRadiusGRU = ((2952) * 0.12485276796)
+            AgilityRadiusGRU = 906
             PitchAngle = 17
             RollAngle = 70
             RollSpeed = 105
@@ -341764,7 +342255,7 @@ export Descriptor_Unit_A37B_Dragonfly_US is TEntityDescriptor
         TFuelModuleDescriptor
         (
             FuelCapacity = 1400
-            FuelMoveDuration = 140.0
+            FuelMoveDuration = FuelCorr*140.0
         ),
         TScannerConfigurationDescriptor
         (
@@ -341784,8 +342275,8 @@ export Descriptor_Unit_A37B_Dragonfly_US is TEntityDescriptor
         (
             VisibilityRollRule = TModernWarfareVisibilityRollRule
             (
-                IdentifyBaseProbability     = 1.0
-                TimeBetweenEachIdentifyRoll = 2.0
+                IdentifyBaseProbability     = IdentProbMult * 0.3
+                TimeBetweenEachIdentifyRoll = IdentTimeMult * 4.0
                 VisibilityRuleDescriptor    = $/GFX/VisionRules/StandardWargameVisibilityRollRule
                 DistanceMultiplierRule      = TModernWarfareDistanceMultiplierRollRuleDescriptor
                 (

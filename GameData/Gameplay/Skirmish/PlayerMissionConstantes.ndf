@@ -19,9 +19,9 @@ export colonelAttackDescriptor is TMacroActionDescriptor_Attack_Specific
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
-        TSupportSettingHolder(SettingList = []), //used to have Renfort_TransportsAbandonnes but seems like removing this or setting the ration in that to very low havesimilar effects of causing agressive movement. I can't figure out how to get them to advance to contact before unloading though
+        TSupportSettingHolder(SettingList = []),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 2),
-        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 20.0   MinimumCostForSelfPreservation = 100),
+        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 200.0   MinimumCostForSelfPreservation = 0), //seems to make them more agressive
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.001),
         TMacroActionProductionSettingHolder(DisableReinforcement = true),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
@@ -48,8 +48,8 @@ export colonelArtilleryCounterBatteryDescriptor is TMacroActionDescriptor_Artill
     ParametresDeMission =
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
-        TArtilleryPositionningSettingHolder(ArtilleryPositionOffsetGRU = 3534),
-        TMacroActionProductionSettingHolder(PoolModelList = [] DistanceToOptimumStartDuringDeploymentGRU = 1060),
+        TArtilleryPositionningSettingHolder(ArtilleryPositionOffsetGRU = 1200),
+        TMacroActionProductionSettingHolder(PoolModelList = [] DistanceToOptimumStartDuringDeploymentGRU = 400),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TArtilleryPlayerMissionSettingHolder(
             AuthorizedTargetTags = ["Artillerie_MLRS", "Artillerie_Longue_Portee", "Artillerie_Courte_Portee"] TargetFilter = ETargetFilter_HasShot MaxDurationForTargetValidity = 60 MinDurationForTargetValidity = 2),
@@ -63,8 +63,8 @@ export colonelArtilleryDescriptor is TMacroActionDescriptor_Artillery_PlayerMiss
     ParametresDeMission =
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
-        TArtilleryPositionningSettingHolder(ArtilleryPositionOffsetGRU = 3534),
-        TMacroActionProductionSettingHolder(PoolModelList = [] DistanceToOptimumStartDuringDeploymentGRU = 1060),
+        TArtilleryPositionningSettingHolder(ArtilleryPositionOffsetGRU = 1200),
+        TMacroActionProductionSettingHolder(PoolModelList = [] DistanceToOptimumStartDuringDeploymentGRU = 400),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TArtilleryPlayerMissionSettingHolder(AuthorizedTargetTags = ["AllUnits"] TargetFilter = ETargetFilter_UnitSeen MinDurationForTargetValidity = 5),
         TArtilleryStrikeSettingHolder(SupportStrikeRatio = 0.3 DelaytBetweenTargetDeathAndNewStrike = 3),

@@ -20364,9 +20364,9 @@ export WeaponDescriptor_Buk_9K37M_SOV is TWeaponManagerModuleDescriptor
         )
     ]
 )
-export WeaponDescriptor_Challenger_1_Mk1_CMD_UK is TWeaponManagerModuleDescriptor
+export WeaponDescriptor_Challenger_1_Mk1_CMD_UK is TWeaponManagerModuleDescriptor //commander's MG not modeled
 (
-    Salves           = [ 64, 50, 160, 2, ]
+    Salves           = [ 64, 160, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -20422,7 +20422,7 @@ export WeaponDescriptor_Challenger_1_Mk1_CMD_UK is TWeaponManagerModuleDescripto
             VitesseRotation                 = 0.52080624879
             YulBoneOrdinal                  = 1
         ),
-        TTurretTwoAxisDescriptor
+        /*TTurretTwoAxisDescriptor
         (
             AngleRotationBase               = 0.0
             AngleRotationBasePitch          = 0.17453292519943275
@@ -20456,7 +20456,7 @@ export WeaponDescriptor_Challenger_1_Mk1_CMD_UK is TWeaponManagerModuleDescripto
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardMG
             VitesseRotation                 = 1.1 //  2.0943951023931953
             YulBoneOrdinal                  = 2
-        ),
+        ),*/
         TTurretTwoAxisDescriptor
         (
             AimingPriority              = 3
@@ -20479,7 +20479,7 @@ export WeaponDescriptor_Challenger_1_Mk1_CMD_UK is TWeaponManagerModuleDescripto
                     EffectTag                           = 'FireEffect_MMG_L8A2_7_62mm'
                     HandheldEquipmentKey                = 'MeshAlternative_4'
                     NbWeapons                           = 1
-                    SalvoStockIndex                     = 2
+                    SalvoStockIndex                     = 1
                     ShowDispersion                      = False
                     ShowInInterface                     = True
                     TirContinu                          = True
@@ -20511,7 +20511,7 @@ export WeaponDescriptor_Challenger_1_Mk1_CMD_UK is TWeaponManagerModuleDescripto
                     EffectTag                           = 'FireEffect_SMOKE_Vehicle_Grenadex8'
                     HandheldEquipmentKey                = 'MeshAlternative_5'
                     NbWeapons                           = 1
-                    SalvoStockIndex                     = 3
+                    SalvoStockIndex                     = 2
                     ShowDispersion                      = False
                     ShowInInterface                     = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_5'
@@ -20524,9 +20524,9 @@ export WeaponDescriptor_Challenger_1_Mk1_CMD_UK is TWeaponManagerModuleDescripto
         )
     ]
 )
-export WeaponDescriptor_Challenger_1_Mk1_UK is TWeaponManagerModuleDescriptor
+export WeaponDescriptor_Challenger_1_Mk1_UK is TWeaponManagerModuleDescriptor //commander's MG not modeled
 (
-    Salves           = [ 64, 50, 160, 2, ]
+    Salves           = [ 64, 160, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -20582,7 +20582,7 @@ export WeaponDescriptor_Challenger_1_Mk1_UK is TWeaponManagerModuleDescriptor
             VitesseRotation                 = 0.52080624879
             YulBoneOrdinal                  = 1
         ),
-        TTurretTwoAxisDescriptor
+        /*TTurretTwoAxisDescriptor
         (
             AngleRotationBase               = 0.0
             AngleRotationBasePitch          = 0.17453292519943275
@@ -20616,7 +20616,7 @@ export WeaponDescriptor_Challenger_1_Mk1_UK is TWeaponManagerModuleDescriptor
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardMG
             VitesseRotation                 = 1.1 //  2.0943951023931953
             YulBoneOrdinal                  = 2
-        ),
+        ),*/
         TTurretTwoAxisDescriptor
         (
             AimingPriority              = 3
@@ -20639,7 +20639,7 @@ export WeaponDescriptor_Challenger_1_Mk1_UK is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_MMG_L8A2_7_62mm'
                     HandheldEquipmentKey                = 'MeshAlternative_4'
                     NbWeapons                           = 1
-                    SalvoStockIndex                     = 2
+                    SalvoStockIndex                     = 1
                     ShowDispersion                      = False
                     ShowInInterface                     = True
                     TirContinu                          = True
@@ -20671,7 +20671,7 @@ export WeaponDescriptor_Challenger_1_Mk1_UK is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_SMOKE_Vehicle_Grenadex8'
                     HandheldEquipmentKey                = 'MeshAlternative_5'
                     NbWeapons                           = 1
-                    SalvoStockIndex                     = 3
+                    SalvoStockIndex                     = 2
                     ShowDispersion                      = False
                     ShowInInterface                     = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_5'
@@ -20700,7 +20700,7 @@ export WeaponDescriptor_Challenger_1_Mk3_UK is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     AmmoConsumption_ForInterface        = 1
-                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_AP_120_mm_L11A5_Challenger
+                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_AP_120_mm_L11A5_Challenger_DU
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -29598,7 +29598,7 @@ export WeaponDescriptor_FV4201_Chieftain_CMD_UK is TWeaponManagerModuleDescripto
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.57595865315
+            VitesseRotation                 = 0.23387412
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -29758,7 +29758,7 @@ export WeaponDescriptor_FV4201_Chieftain_Mk11_CMD_UK is TWeaponManagerModuleDesc
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.57595865315
+            VitesseRotation                 = 0.23387412
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -29918,7 +29918,7 @@ export WeaponDescriptor_FV4201_Chieftain_Mk11_UK is TWeaponManagerModuleDescript
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.57595865315
+            VitesseRotation                 = 0.23387412
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -30078,7 +30078,7 @@ export WeaponDescriptor_FV4201_Chieftain_Mk9_UK is TWeaponManagerModuleDescripto
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.57595865315
+            VitesseRotation                 = 0.23387412
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -30238,7 +30238,7 @@ export WeaponDescriptor_FV4201_Chieftain_UK is TWeaponManagerModuleDescriptor
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.57595865315
+            VitesseRotation                 = 0.23387412
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -76967,7 +76967,7 @@ export WeaponDescriptor_T62M1_SOV is TWeaponManagerModuleDescriptor
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.27925268031
+            VitesseRotation                 = 0.31415926535 
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -77127,7 +77127,7 @@ export WeaponDescriptor_T62MD1_SOV is TWeaponManagerModuleDescriptor
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.27925268031
+            VitesseRotation                 = 0.31415926535 
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -77287,7 +77287,7 @@ export WeaponDescriptor_T62MD_CMD_SOV is TWeaponManagerModuleDescriptor
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.27925268031
+            VitesseRotation                 = 0.31415926535 
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -77466,7 +77466,7 @@ export WeaponDescriptor_T62MD_SOV is TWeaponManagerModuleDescriptor
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.27925268031
+            VitesseRotation                 = 0.31415926535 
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -77645,7 +77645,7 @@ export WeaponDescriptor_T62MV_SOV is TWeaponManagerModuleDescriptor
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.27925268031
+            VitesseRotation                 = 0.31415926535 
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -77824,7 +77824,7 @@ export WeaponDescriptor_T62M_CMD_SOV is TWeaponManagerModuleDescriptor
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.27925268031
+            VitesseRotation                 = 0.31415926535 
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor
@@ -78003,7 +78003,7 @@ export WeaponDescriptor_T62M_SOV is TWeaponManagerModuleDescriptor
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
             TurretIdleBehaviourDescriptor   = ~/TurretIdle_WatchForwardNormal
-            VitesseRotation                 = 0.27925268031
+            VitesseRotation                 = 0.31415926535 
             YulBoneOrdinal                  = 1
         ),
         TTurretTwoAxisDescriptor

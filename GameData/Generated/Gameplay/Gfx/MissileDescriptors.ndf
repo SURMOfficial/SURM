@@ -17649,6 +17649,16 @@ export Descriptor_Missile_SAM_IglaN is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,
@@ -17739,6 +17749,16 @@ export Descriptor_Missile_SAM_IglaN_1M is TEntityDescriptor
             AutoOrientation = False
             UseTopArmorAgainstFire = False
         ),
+		TModuleSelector
+		(
+			Default        = TCapaciteModuleDescriptor
+			(
+				DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_9_seconds,
+				]
+			)
+			Selection      = [ ~/NilDescriptorIfCadavre ]
+		),
         TDangerousnessModuleDescriptor(Dangerousness  = 200),
         ~/PackSignauxModuleDescriptor,
         ~/TargetDataModuleDescriptor,

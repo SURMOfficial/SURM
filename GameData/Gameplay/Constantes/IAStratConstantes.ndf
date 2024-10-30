@@ -57,10 +57,8 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     CommandZoneWeight = ~/CommandZoneCustomWeighForIAStrat // Numero donné aux zones générées automatiquement autours des zones objectif.
 
     //--------------- Transport ----------------------------------------//
-
-    MinDistanceToRequireTransportGRU = 1500 //un peu plus de 3.5KM in game
+    MinDistanceToRequireTransportGRU = 3534 //un peu plus de 3.5KM in game
     MaxDistanceToAcceptTransportRequestGRU = 10601 //un peu plus de 10KM in game
-
     ForbidToLoadNewUnits = false // Ce paramètre a true empêche de charger une unité qu'on ne transporte pas à la base (applicable aux transports qui spawnent préchargés)
 
     //--------------- Lancement de l'IA et choix de couloir ----------------------------------//
@@ -79,12 +77,12 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
 
     //--------------- Calcul de la dangerosité ------------------------------------//
     ShouldConsiderAPBounceAsDangerous = false // Détermine si on considère une unité dangereuse même si elle ne peut pas pénétrer le blindage
-    ShouldConsiderPierceAsDangerous = false // true // Permet d'ajouter un bonus en fonction de la probabilité de pénétration
+    ShouldConsiderPierceAsDangerous = true // Permet d'ajouter un bonus en fonction de la probabilité de pénétration
     APPierceDangerousness = 5.0
 
     //--------------- Gun Threat ----------------------------------------------//
     //Cette variable sert a definir le nombre de tick que reste la menace ajoute par les tirs d'une artillerie
-    ArtilleryStrikeThreatLifeTime = 480
+    ArtilleryStrikeThreatLifeTime = 240
 
     //--------------- Mission de defense ! ----------------------------------------//
     DistanceToSeekDistrictForUnitInDefenseGRU = 1413
@@ -102,7 +100,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     // Objectif Attack
     ObjectiveAttackOwnershipRatio = 0.1
 
-    DefenseMacroActionFleePowerRatio = 0.001
+    DefenseMacroActionFleePowerRatio = 0.3
 
     //--------------- Points de défense -------------------------------------------//
 
@@ -229,10 +227,9 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     //---------------------------------------------------------------------------------//
     //---------------------------------------------------------------------------------//
 
-    DistanceToRetreatForFleeGRU = 0 //707
-    TimeToWaitAfterFleeToGoBackToOriginalPositionInSeconds = 0.1 //7.5
-    TimeSinceLastShotReceivedForFlee = 1//5
-
+    DistanceToRetreatForFleeGRU = 707
+    TimeToWaitAfterFleeToGoBackToOriginalPositionInSeconds = 7.5
+    TimeSinceLastShotReceivedForFlee = 5
 
     //---------------------------------------------------------------------------------//
     //---------------------------------------------------------------------------------//
@@ -275,13 +272,13 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     [
         //Fallback AnyDifficulty doit toujours être présent
         (EDeploymentMode/NotSpecified, MAP[
-            (IADifficulty/AnyDifficulty, (1.0, 1.5)),
-            (IADifficulty/TresFacile, (1.0, 1.5)),         // On ne prend pas de risque, mais on perd aussi en réactivitée
-            (IADifficulty/Facile, (1.0, 1.25)),
-            (IADifficulty/Normal, (0.8, 1.0)),
+            (IADifficulty/AnyDifficulty, (0.9, 1.25)),
+            (IADifficulty/TresFacile, (0.9, 1.25)),         // On ne prend pas de risque, mais on perd aussi en réactivitée
+            (IADifficulty/Facile, (0.9, 1.25)),
+            (IADifficulty/Normal, (0.7, 1.0)),
             (IADifficulty/Difficile, (0.65, 0.9)),
-            (IADifficulty/TresDifficile, (0.35, 0.75)),     // On prend plus de risque a partir de very hard
-            (IADifficulty/PlusDifficile, (0.0, 0.5)),
+            (IADifficulty/TresDifficile, (0.65, 0.9)),     // On prend plus de risque a partir de very hard
+            (IADifficulty/PlusDifficile, (0.65, 0.9)),
         ]),
 
         (EDeploymentMode/Breakthrough, MAP[
@@ -293,10 +290,10 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     [
         (EDeploymentMode/NotSpecified, MAP[
                 (IADifficulty/AnyDifficulty, 1.0),
-                (IADifficulty/Normal, 0.6),
-                (IADifficulty/Difficile, 0.5),     // On prend plus de risque a partir de hard
-                (IADifficulty/TresDifficile, 0.35),
-                (IADifficulty/PlusDifficile, 0.2),
+                (IADifficulty/Normal, 0.8),
+                (IADifficulty/Difficile, 0.7),     // On prend plus de risque a partir de hard
+                (IADifficulty/TresDifficile, 0.7),
+                (IADifficulty/PlusDifficile, 0.7),
         ]),
 
         (EDeploymentMode/Breakthrough, MAP[
@@ -479,26 +476,26 @@ export DefaultWargameTransport is
 FakeGunThreatDescriptor is TFakeGunThreatDescriptor //unclear what this does, testing setting it to 0 seemed to stop some of the fall back then advance stuff
 (
     FakeThreatLifeTime = 90
-    DistanceFromStartGRU = 707
+    DistanceFromStartGRU = 220
     StepSize = 1000.0
     DecalageAltitude = 300.0
-    VisionRangeGRU = 3534
+    VisionRangeGRU = 1200
     OwnerRatioForFakeGunThreat = 0.9
     GunList = [
         TFakeGunDescriptor(
-            CurrentRangeGRU = 1767
+            CurrentRangeGRU = 600
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family=DamageFamily_balle Index=1)
             ColPlan = ~/ECollisionPlane/Ground
             ),
         TFakeGunDescriptor(
-            CurrentRangeGRU = 1767
+            CurrentRangeGRU = 600
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
             ColPlan = ~/ECollisionPlane/Ground
             ),
         TFakeGunDescriptor(
-            CurrentRangeGRU = 1767
+            CurrentRangeGRU = 600
             TirIndirect = false
             TypeArme = TDamageTypeRTTI(Family=DamageFamily_ap Index=10)
             ColPlan = ~/ECollisionPlane/Ground

@@ -7947,7 +7947,7 @@ Ammo_Bomb_FAB_500kg_x10 is TAmmunitionDescriptor //I think SU-24 carries 10 of t
     TargetOnlyOneUnitInDistrict       = False
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
-         DescriptorId          = GUID:{52f66212-c786-471c-845a-150e16e610cb}
+         DescriptorId          = GUID:{2e3628b4-52bf-4605-9585-87fc7ebe84a2}
          BaseCriticModifier = 20
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
@@ -12575,7 +12575,7 @@ Ammo_Bomb_ZB500_500kg_Napalm_x7 is TAmmunitionDescriptor
     TargetOnlyOneUnitInDistrict       = False
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
-         DescriptorId          = GUID:{8e45b5bb-0761-4be1-b8ed-6a468d16d1e0}
+         DescriptorId          = GUID:{a3f301df-d1e9-4e86-8e93-706e0a516e66}
          BaseCriticModifier = 0
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
@@ -15442,7 +15442,7 @@ Ammo_Canon_AP_120_mm_L11A5 is TAmmunitionDescriptor //unused initially, now for 
 	TandemCharge                      = False
     FlightTimeForSpeed                    = 1.1
     DistanceForSpeedGRU                      = ProjSpeedCorrHeavy * 6500.0 * 0.1209058738 
-    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP22
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_M833
 )
 Ammo_Canon_AP_120_mm_L11A5_Challenger is TAmmunitionDescriptor
 (
@@ -15521,7 +15521,7 @@ Ammo_Canon_AP_120_mm_L11A5_Challenger is TAmmunitionDescriptor
     TandemCharge                      = False
     FlightTimeForSpeed                    = 1.1
     DistanceForSpeedGRU                      = ProjSpeedCorrHeavy * 6500.0 * 0.1209058738 
-    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP22
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_M833
 )
 Ammo_Canon_AP_120_mm_L11A5_Challenger_DU is TAmmunitionDescriptor //L26A1 CHARM 1  (might be in time frame? Mk3 only for now) 15% better pen per wiki (25% in the L30 of the chally 2, but might also be 25% better with the L14 charge which was used in he L11 in Granby
 (
@@ -15599,7 +15599,7 @@ Ammo_Canon_AP_120_mm_L11A5_Challenger_DU is TAmmunitionDescriptor //L26A1 CHARM 
     PiercingWeapon                    = True
     TandemCharge                      = False
     FlightTimeForSpeed                    = 1.1
-    DistanceForSpeedGRU                      = 6500.0 * 0.1209058738 
+    DistanceForSpeedGRU                      = ProjSpeedCorrHeavy * 6500.0 * 0.1209058738 
     DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP24
 )
 Ammo_Canon_AP_120_mm_L11A5_Mk10 is TAmmunitionDescriptor //really  mk 11
@@ -15612,7 +15612,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk10 is TAmmunitionDescriptor //really  mk 11
     TraitsToken                       = [ 'MOTION', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=22)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=21)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDSM1Abrams' ]
     FxPower                           = EFXPower/Moyen
@@ -15679,7 +15679,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk10 is TAmmunitionDescriptor //really  mk 11
     TandemCharge                      = False
     FlightTimeForSpeed                    = 1.1
     DistanceForSpeedGRU                      = ProjSpeedCorrHeavy * 6500.0 * 0.1209058738 
-    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP22
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_M833
 )
 Ammo_Canon_AP_120_mm_L11A5_Mk6 is TAmmunitionDescriptor  //needs work
 (
@@ -15691,7 +15691,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk6 is TAmmunitionDescriptor  //needs work
     TraitsToken                       = [ 'MOTION', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=22)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=21)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDSM1Abrams' ]
     FxPower                           = EFXPower/Moyen
@@ -15755,7 +15755,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk6 is TAmmunitionDescriptor  //needs work
     TandemCharge                      = False
     FlightTimeForSpeed                    = 1.1
     DistanceForSpeedGRU                      = 6500.0 * 0.1209058738 
-    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP22
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_M833
 )
 Ammo_Canon_AP_120_mm_L11A5_Mk8 is TAmmunitionDescriptor //needs work
 (
@@ -15767,7 +15767,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk8 is TAmmunitionDescriptor //needs work
     TraitsToken                       = [ 'MOTION', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=22)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=21)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDSM1Abrams' ]
     FxPower                           = EFXPower/Moyen
@@ -15831,7 +15831,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk8 is TAmmunitionDescriptor //needs work
     TandemCharge                      = False
     FlightTimeForSpeed                    = 1.1
     DistanceForSpeedGRU                      = 6500.0 * 0.1209058738 
-    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP22
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_M833
 )
 Ammo_Canon_AP_120_mm_L11A5_Mk9 is TAmmunitionDescriptor
 (
@@ -15843,7 +15843,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk9 is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=22)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=21)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDSM1Abrams' ]
     FxPower                           = EFXPower/Moyen
@@ -15910,7 +15910,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk9 is TAmmunitionDescriptor
     TandemCharge                      = False
     FlightTimeForSpeed                    = 1.1
     DistanceForSpeedGRU                      = ProjSpeedCorrHeavy * 6500.0 * 0.1209058738 
-    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP22
+    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_M833
 )
 Ammo_Canon_AP_120_mm_L44_late87 is TAmmunitionDescriptor //unused probably
 (
@@ -70467,7 +70467,7 @@ Ammo_RocketArt_thermobaric_220mm_x30 is TAmmunitionDescriptor
     DispersionAtMinRangeGRU              = ((1000) * 0.1209058738 )
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU       = ((65))
+    RadiusSplashPhysicalDamagesGRU       = 95//65
     PhysicalDamages                   = 18.28 // not sure what the warhead yield really should be, this is pretty much a pure guess (more HE than a 220mm rocket over a smaller area)
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU       = ((100) )

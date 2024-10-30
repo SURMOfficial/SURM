@@ -16457,10 +16457,17 @@ private DivisionRules is TDeckDivisionRules
                     ),
 					TDeckUniteRule
                     (
+                        UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Challenger_1_Mk3_CMD_UK
+                        AvailableWithoutTransport = True
+                        NumberOfUnitInPack = 1
+                        NumberOfUnitInPackXPMultiplier = [0.0, 1.0, 0.0, 0.0]
+                    ),
+					TDeckUniteRule
+                    (
                         UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Challenger_1_Mk3_UK
                         AvailableWithoutTransport = True
                         NumberOfUnitInPack = 12
-                        NumberOfUnitInPackXPMultiplier = [1.0, 0.5, 0.25, 0.0]
+                        NumberOfUnitInPackXPMultiplier = [1.0, 0.66, 0.33, 0.0]
                     ),
                     TDeckUniteRule
                     (
@@ -16577,6 +16584,13 @@ private DivisionRules is TDeckDivisionRules
                     ),
                     TDeckUniteRule
                     (
+                        UnitDescriptor = $/GFX/Unit/Descriptor_Unit_FV4201_Chieftain_Mk9_CMD_UK
+                        AvailableWithoutTransport = True
+                        NumberOfUnitInPack = 1
+                        NumberOfUnitInPackXPMultiplier = [0.0, 1.0, 0.0, 0.0]
+                    ),
+                    TDeckUniteRule
+                    (
                         UnitDescriptor = $/GFX/Unit/Descriptor_Unit_FV4201_Chieftain_Mk9_UK
                         AvailableWithoutTransport = True
                         NumberOfUnitInPack = 12
@@ -16644,7 +16658,7 @@ private DivisionRules is TDeckDivisionRules
                     (
                         UnitDescriptor = $/GFX/Unit/Descriptor_Unit_Gun_Group_UK
                         AvailableWithoutTransport = False
-                        AvailableTransportList = [$/GFX/Unit/Descriptor_Unit_LandRover_UK, $/GFX/Unit/Descriptor_Unit_FV432_UK, $/GFX/Unit/Descriptor_Unit_MCV_80_Warrior_UK, $/GFX/Unit/Descriptor_Unit_MCV_80_Warrior_MILAN_UK]
+                        AvailableTransportList = [$/GFX/Unit/Descriptor_Unit_LandRover_UK, $/GFX/Unit/Descriptor_Unit_FV432_UK, $/GFX/Unit/Descriptor_Unit_MCV_80_Warrior_UK, $/GFX/Unit/Descriptor_Unit_MCV_80_Warrior_MILAN_UK, $/GFX/Unit/Descriptor_Unit_MCV_80_Warrior_MILAN_ERA_UK]
                         NumberOfUnitInPack = 9
                         NumberOfUnitInPackXPMultiplier = [1.0, 0.66, 0.3, 0.0]
                     ),
