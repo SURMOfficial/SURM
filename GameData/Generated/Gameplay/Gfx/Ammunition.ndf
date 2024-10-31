@@ -12747,7 +12747,7 @@ Ammo_Canon_AP_100mm_D10T_Merida is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.0
+    TempsDeVisee                      = 7.5 //total guess
     TempsEntreDeuxSalves              = 8.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -12926,7 +12926,7 @@ Ammo_Canon_AP_100mm_D10T_early_HEAT is TAmmunitionDescriptor
     PiercingWeapon                    = True
     TandemCharge                      = False
     FlightTimeForSpeed                    = 1.3
-    DistanceForSpeedGRU                      = 6500.0 * 0.1209058738 
+    DistanceForSpeedGRU                      = ProjSpeedCorrHeavy * 6500.0 * 0.1209058738 
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
 Ammo_Canon_AP_100mm_D10T_late is TAmmunitionDescriptor
@@ -12985,7 +12985,7 @@ Ammo_Canon_AP_100mm_D10T_late is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.5
+    TempsDeVisee                      = 8.5
     TempsEntreDeuxSalves              = 8.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -13219,7 +13219,7 @@ Ammo_Canon_AP_105mm_CN_105_F1 is TAmmunitionDescriptor
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 12.0
+    TempsDeVisee                      = 9.5 //may be optimistic
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -13300,7 +13300,7 @@ Ammo_Canon_AP_105mm_CN_105_F1_BRENNUS is TAmmunitionDescriptor //bookmark
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.5 //I don't think there's any FCS upgrade from the B2
+    TempsDeVisee                      = 6.5 //I don't think there's any FCS upgrade from the B2
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -13379,7 +13379,7 @@ Ammo_Canon_AP_105mm_CN_105_F1_late is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.5
+    TempsDeVisee                      = 6.5
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -14012,7 +14012,7 @@ Ammo_Canon_AP_105mm_L7A3 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 12.0
+    TempsDeVisee                      = 11.0
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -14168,7 +14168,7 @@ Ammo_Canon_AP_105mm_L7A3_BE is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 9.5 //has some kind of fire direction upgrade
+    TempsDeVisee                      = 10.0 //has some kind of fire direction upgrade
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -14247,7 +14247,7 @@ Ammo_Canon_AP_105mm_L7A3_Leo1A5 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 6.5
+    TempsDeVisee                      = 6.0
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -14481,7 +14481,7 @@ Ammo_Canon_AP_105mm_M68 is TAmmunitionDescriptor //M774 since these are all NG t
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 12.0
+    TempsDeVisee                      = 9.5 //still feels optimistic
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -15343,7 +15343,7 @@ Ammo_Canon_AP_115mm_U5TS_T62M is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 8.0
+    TempsDeVisee                      = 8.5
     TempsEntreDeuxSalves              = 15.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -15500,7 +15500,7 @@ Ammo_Canon_AP_120_mm_L11A5_Challenger is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.0 //not as good as US/Ger thermals supposedly
+    TempsDeVisee                      = 6.0 //not as good as US/Ger thermals supposedly but reports from crews say TOGS > M1A1 system
     TempsEntreDeuxSalves              = 10.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -15579,12 +15579,12 @@ Ammo_Canon_AP_120_mm_L11A5_Challenger_DU is TAmmunitionDescriptor //L26A1 CHARM 
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 3.0
-    TempsEntreDeuxSalves              = 7.5
+    TempsDeVisee                      = 6.0 //not as good as US/Ger thermals supposedly but reports from crews say TOGS > M1A1 system
+    TempsEntreDeuxSalves              = 10.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 1
-    SupplyCost                        = 0.12
+    SupplyCost                        = 16.26
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
@@ -15658,7 +15658,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk10 is TAmmunitionDescriptor //really  mk 11
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.5
+    TempsDeVisee                      = 6.5
     TempsEntreDeuxSalves              = 10.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -15889,7 +15889,7 @@ Ammo_Canon_AP_120_mm_L11A5_Mk9 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.5
+    TempsDeVisee                      = 6.5
     TempsEntreDeuxSalves              = 10.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -16205,7 +16205,7 @@ Ammo_Canon_AP_120mm_L44_late is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 5.0
+    TempsDeVisee                      = 3.5
     TempsEntreDeuxSalves              = 8.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -16284,7 +16284,7 @@ Ammo_Canon_AP_120mm_L44_late_2A4 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 4.0
+    TempsDeVisee                      = 3.0
     TempsEntreDeuxSalves              = 8.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -16518,8 +16518,8 @@ Ammo_Canon_AP_125_mm_2A26 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 12.0
-    TempsEntreDeuxSalves              = 720.0 //takes around 12-15 minutes to reload so giving 12 minutes for 22 round T-72s and 15 for 28 round T-64/80
+    TempsDeVisee                      = 11.0
+    TempsEntreDeuxSalves              = 308.0 //takes around 12-15 minutes to reload so giving 12 minutes for 22 round T-72s and 15 for 28 round T-64/80
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 22
@@ -16597,7 +16597,7 @@ Ammo_Canon_AP_125_mm_2A26_T72A is TAmmunitionDescriptor //soviet firing BM-42 ne
     )
     MaxSuccessiveHitCount             = 5
     TempsDeVisee                      = 9.5
-    TempsEntreDeuxSalves              = 720.0
+    TempsEntreDeuxSalves              = 308.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 22
@@ -16674,8 +16674,8 @@ Ammo_Canon_AP_125_mm_2A26_T72M is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 9.5
-    TempsEntreDeuxSalves              = 720.0
+    TempsDeVisee                      = 9.0
+    TempsEntreDeuxSalves              = 308.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 22
@@ -16754,7 +16754,7 @@ Ammo_Canon_AP_125_mm_2A26_Wilk is TAmmunitionDescriptor //keep working on is thi
     )
     MaxSuccessiveHitCount             = 5
     TempsDeVisee                      = 8.0
-    TempsEntreDeuxSalves              = 720.0
+    TempsEntreDeuxSalves              = 308.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 22
@@ -16912,11 +16912,11 @@ Ammo_Canon_AP_125_mm_2A46_T64A is TAmmunitionDescriptor //was unused Ammo_Canon_
     )
     MaxSuccessiveHitCount             = 5
     TempsDeVisee                      = 7.5
-    TempsEntreDeuxSalves              = 900.0
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
@@ -16991,11 +16991,11 @@ Ammo_Canon_AP_125_mm_2A46_T64B_very_late is TAmmunitionDescriptor //not sure if 
     )
     MaxSuccessiveHitCount             = 5
     TempsDeVisee                      = 7.5
-    TempsEntreDeuxSalves              = 900.0
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
@@ -17306,17 +17306,17 @@ Ammo_Canon_AP_125_mm_2A46M_T80B is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.5
-    TempsEntreDeuxSalves              = 900.0
+    TempsDeVisee                      = 6.5
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
-    NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    NbTirParSalves                    = 22
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
-    AffichageMunitionParSalve         = 28
+    AffichageMunitionParSalve         = 22
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_2A46_T80"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -17329,7 +17329,7 @@ Ammo_Canon_AP_125_mm_2A46M_T80B is TAmmunitionDescriptor
     DistanceForSpeedGRU                      = ProjSpeedCorrHeavy * 6500.0 * 0.1209058738 
     DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_DM33_BM42
 )
-Ammo_Canon_AP_125_mm_2A46M_late is TAmmunitionDescriptor
+Ammo_Canon_AP_125_mm_2A46M_late is TAmmunitionDescriptor \\only for the unused T-80UK
 (
     DescriptorId                      = GUID:{b21476dc-17ba-4df0-a212-db6b741ce676}
     Name                              = 'LGYLAFMITB'
@@ -17386,16 +17386,16 @@ Ammo_Canon_AP_125_mm_2A46M_late is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 5
     TempsDeVisee                      = 7.0
-    TempsEntreDeuxSalves              = 900.0
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
-    NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    NbTirParSalves                    = 22
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
-    AffichageMunitionParSalve         = 28
+    AffichageMunitionParSalve         = 22
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_2A46_T80"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -17464,7 +17464,7 @@ Ammo_Canon_AP_125_mm_2A46M_late_NSWP_T72S1 is TAmmunitionDescriptor //probably u
     )
     MaxSuccessiveHitCount             = 5
     TempsDeVisee                      = 9.0
-    TempsEntreDeuxSalves              = 720.0
+    TempsEntreDeuxSalves              = 308.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 22
@@ -17542,17 +17542,17 @@ Ammo_Canon_AP_125_mm_2A46M_late_T80UD is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 7.0
-    TempsEntreDeuxSalves              = 900.0
+    TempsDeVisee                      = 6.5
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
-    NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    NbTirParSalves                    = 22
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
-    AffichageMunitionParSalve         = 28
+    AffichageMunitionParSalve         = 22
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_2A46_64BV"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -20791,7 +20791,7 @@ Ammo_Canon_HE_100mm_D10T_Merida is TAmmunitionDescriptor //needs work
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 6.0
+    TempsDeVisee                      = 6.5 //guess
     TempsEntreDeuxSalves              = 8.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -20953,7 +20953,7 @@ Ammo_Canon_HE_100mm_D10T_late is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 7.0
+    TempsDeVisee                      = 7.5
     TempsEntreDeuxSalves              = 8.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -21194,7 +21194,7 @@ Ammo_Canon_HE_105mm_CN_105_F1 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 11.0
+    TempsDeVisee                      = 8.5//may be optimistic
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -21275,7 +21275,7 @@ Ammo_Canon_HE_105mm_CN_105_F1_BRENNUS is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 5.0
+    TempsDeVisee                      = 5.5
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -21757,7 +21757,7 @@ Ammo_Canon_HE_105mm_L7A3 is TAmmunitionDescriptor
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 11.0
+    TempsDeVisee                      = 10.0
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -22000,7 +22000,7 @@ Ammo_Canon_HE_105mm_L7A3_BE is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 8.5
+    TempsDeVisee                      = 9.0
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -22080,7 +22080,7 @@ Ammo_Canon_HE_105mm_L7A3_Leo1A5 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 4.5
+    TempsDeVisee                      = 5.0
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -22321,7 +22321,7 @@ Ammo_Canon_HE_105mm_M68 is TAmmunitionDescriptor
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 10.5
+    TempsDeVisee                      = 8.5
     TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -22880,8 +22880,8 @@ Ammo_Canon_HE_105mmCN_105_F1_late is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 6.5
-    TempsEntreDeuxSalves              = 10.0
+    TempsDeVisee                      = 5.5
+    TempsEntreDeuxSalves              = 7.5
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 1
@@ -23047,7 +23047,7 @@ Ammo_Canon_HE_115mm_2A21 is TAmmunitionDescriptor //needs work unused
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
@@ -23285,7 +23285,7 @@ Ammo_Canon_HE_120_mm_L11A5_Challenger is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 6.5
+    TempsDeVisee                      = 5.0
     TempsEntreDeuxSalves              = 8.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -23446,7 +23446,7 @@ Ammo_Canon_HE_120_mm_L11A5_Mk10 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 6.5
+    TempsDeVisee                      = 5.5
     TempsEntreDeuxSalves              = 8.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -23678,7 +23678,7 @@ Ammo_Canon_HE_120_mm_L11A5_Mk9 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 6.5
+    TempsDeVisee                      = 5.5
     TempsEntreDeuxSalves              = 8.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -23702,7 +23702,7 @@ Ammo_Canon_HE_120_mm_L11A5_Mk9 is TAmmunitionDescriptor
     DistanceForSpeedGRU                      = ProjSpeedCorrHeavy * 6500.0 * 0.1209058738 
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_Canon_HE_120_mm_L44 is TAmmunitionDescriptor //probably unused
+Ammo_Canon_HE_120_mm_L44 is TAmmunitionDescriptor 
 (
     DescriptorId                      = GUID:{3315940b-d538-4169-b393-65708e0a49c2}
     Name                              = 'MTFMIXTJID'
@@ -23920,7 +23920,7 @@ Ammo_Canon_HE_120mm_L44_late is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 4.5
+    TempsDeVisee                      = 3.0
     TempsEntreDeuxSalves              = 8.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -24001,7 +24001,7 @@ Ammo_Canon_HE_120mm_L44_late_2A4 is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 3.5
+    TempsDeVisee                      = 2.5
     TempsEntreDeuxSalves              = 8.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -24238,8 +24238,8 @@ Ammo_Canon_HE_125_mm_2A26 is TAmmunitionDescriptor
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 8.0
-    TempsEntreDeuxSalves              = 720.0
+    TempsDeVisee                      = 10.0
+    TempsEntreDeuxSalves              = 308.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 22
@@ -24396,7 +24396,7 @@ Ammo_Canon_HE_125_mm_2A26_T72M is TAmmunitionDescriptor
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 9.0
+    TempsDeVisee                      = 8.0
     TempsEntreDeuxSalves              = 720.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -24640,7 +24640,7 @@ Ammo_Canon_HE_125_mm_2A46_T64A is TAmmunitionDescriptor //was for T-64B
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 5.5
-    TempsEntreDeuxSalves              = 900.0
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 24
@@ -24721,11 +24721,11 @@ Ammo_Canon_HE_125_mm_2A46_T64B_very_late is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 6.5
-    TempsEntreDeuxSalves              = 900.0
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
@@ -24968,7 +24968,7 @@ Ammo_Canon_HE_125_mm_2A46M is TAmmunitionDescriptor
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
@@ -25043,11 +25043,11 @@ Ammo_Canon_HE_125_mm_2A46M_T80B is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 3
     TempsDeVisee                      = 5.5
-    TempsEntreDeuxSalves              = 900.0
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
@@ -25123,12 +25123,12 @@ Ammo_Canon_HE_125_mm_2A46M_late is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 5.0
-    TempsEntreDeuxSalves              = 900.0
+    TempsDeVisee                      = 5.5
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
@@ -25283,12 +25283,12 @@ Ammo_Canon_HE_125_mm_2A46M_late_T80UD is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 5.0
-    TempsEntreDeuxSalves              = 900.0
+    TempsDeVisee                      = 6.5
+    TempsEntreDeuxSalves              = 616.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
@@ -25369,7 +25369,7 @@ Ammo_Canon_HE_125_mm_2A46M1 is TAmmunitionDescriptor
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
@@ -25450,7 +25450,7 @@ Ammo_Canon_HE_125_mm_2A46_2 is TAmmunitionDescriptor
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 28
-    SupplyCost                        = 455.28
+    SupplyCost                        = 357.72
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True

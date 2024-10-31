@@ -4585,33 +4585,33 @@ export UnitEffect_xp_elite is TEffectsPackDescriptor
         TUnitEffectIncreaseDamageTakenDescriptor
         (
             ModifierType        = ~/ModifierType_Pourcentage
-            BonusDamage         = -32
+            BonusDamage         = -42
             DamageType          = EDamageType/Suppress
         ),
         TBonusWeaponAimtimeEffectDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.88
+            ModifierValue = 0.6
         ),
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 15
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 70
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 15
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 70
         ),
         TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.80
+            ModifierValue = 0.55
         ),
         TUnitEffectHealOverTimeDescriptor
         (
             NbUpdatePerSecond  = 1
-            HealUnitsPerSecond = 2.7
+            HealUnitsPerSecond = 2.4
             DamageType = EDamageType/Suppress
         ),
         TUnitEffectRaiseTagDescriptor
@@ -4645,13 +4645,13 @@ export UnitEffect_xp_elite_SF is TEffectsPackDescriptor
         ),
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 16
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 60
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 16
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 60
         ),
         TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
         (
@@ -4841,23 +4841,28 @@ export UnitEffect_xp_elite_avion is TEffectsPackDescriptor
         TUnitEffectIncreaseDamageTakenDescriptor
         (
             ModifierType        = ~/ModifierType_Pourcentage
-            BonusDamage         = -40
+            BonusDamage         = -45
             DamageType          = EDamageType/Suppress
         ),
         TUnitEffectBonusPrecisionWhenTargetedDescriptor
         (
-            ModifierType       = ~/ModifierType_Additionnel
-            BonusPrecisionWhenTargeted = -16
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusPrecisionWhenTargeted = -38
         ),
         TBonusWeaponAimtimeEffectDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.80
+            ModifierValue = 0.70
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 12
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 45
+        ),
+        TUnitEffectIncreaseDispersionDescriptor
+        (
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusDispersion  = -45
         ),
         TUnitEffectHealOverTimeDescriptor
         (
@@ -4891,13 +4896,13 @@ export UnitEffect_xp_elite_helo is TEffectsPackDescriptor
         ),
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 16
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 30
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 16
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 30
         ),
         TUnitEffectHealOverTimeDescriptor
         (
@@ -4951,12 +4956,6 @@ export UnitEffect_xp_rookie is TEffectsPackDescriptor
     DescriptorId       = GUID:{320e6c09-c78a-4afb-910e-5616f69b0444}
     NameForDebug       = 'xp_rookie'
     EffectsDescriptors = [
-        TUnitEffectHealOverTimeDescriptor
-        (
-            NbUpdatePerSecond  = 1
-            HealUnitsPerSecond = 0.6
-            DamageType = EDamageType/Suppress
-        ),
     ]
 )
 export UnitEffect_xp_rookie_arty is TEffectsPackDescriptor
@@ -4984,12 +4983,6 @@ export UnitEffect_xp_rookie_helo is TEffectsPackDescriptor
     DescriptorId       = GUID:{9cc64b1b-bdd9-4901-90e9-b822bca6dc67}
     NameForDebug       = 'xp_rookie_helo'
     EffectsDescriptors = [
-        TUnitEffectHealOverTimeDescriptor
-        (
-            NbUpdatePerSecond  = 1
-            HealUnitsPerSecond = 0.6
-            DamageType = EDamageType/Suppress
-        ),
     ]
 )
 export UnitEffect_xp_trained is TEffectsPackDescriptor
@@ -5006,27 +4999,27 @@ export UnitEffect_xp_trained is TEffectsPackDescriptor
         TBonusWeaponAimtimeEffectDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.96
+            ModifierValue = 0.85
         ),
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 5
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 22
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 5
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 22
         ),
         TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.90
+            ModifierValue = 0.85
         ),
         TUnitEffectHealOverTimeDescriptor
         (
             NbUpdatePerSecond  = 1
-            HealUnitsPerSecond = 1.9
+            HealUnitsPerSecond = 0.8
             DamageType = EDamageType/Suppress
         ),
         TUnitEffectRaiseTagDescriptor
@@ -5060,18 +5053,18 @@ export UnitEffect_xp_trained_SF is TEffectsPackDescriptor
         ),
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 8
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 18
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 8
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 18
         ),
         TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.9
+            ModifierValue = 0.8
         ),
         TUnitEffectHealOverTimeDescriptor
         (
@@ -5131,7 +5124,33 @@ export UnitEffect_xp_trained_avion is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{02cd7a2d-d05a-4c03-b71d-6f70734d5ba2}
     NameForDebug       = 'xp_trained_avion'
-    EffectsDescriptors = [
+    EffectsDescriptors = [        
+		TUnitEffectIncreaseDamageTakenDescriptor
+        (
+            ModifierType        = ~/ModifierType_Pourcentage
+            BonusDamage         = -15
+            DamageType          = EDamageType/Suppress
+        ),
+        TUnitEffectBonusPrecisionWhenTargetedDescriptor
+        (
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusPrecisionWhenTargeted = -12
+        ),
+        TBonusWeaponAimtimeEffectDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.90
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 15
+        ),
+        TUnitEffectIncreaseDispersionDescriptor
+        (
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusDispersion  = -20
+        ),
         TUnitEffectHealOverTimeDescriptor
         (
             NbUpdatePerSecond  = 1
@@ -5156,6 +5175,16 @@ export UnitEffect_xp_trained_helo is TEffectsPackDescriptor
             ModifierType  = ~/ModifierType_Multiplicatif
             ModifierValue = 0.8
         ),
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 10
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 10
+        ),
         TUnitEffectHealOverTimeDescriptor
         (
             NbUpdatePerSecond  = 1
@@ -5178,33 +5207,33 @@ export UnitEffect_xp_veteran is TEffectsPackDescriptor
         TUnitEffectIncreaseDamageTakenDescriptor
         (
             ModifierType        = ~/ModifierType_Pourcentage
-            BonusDamage         = -22
+            BonusDamage         = -28
             DamageType          = EDamageType/Suppress
         ),
         TBonusWeaponAimtimeEffectDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.92
+            ModifierValue = 0.7
         ),
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 10
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 46
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 10
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 46
         ),
         TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.85
+            ModifierValue = 0.70
         ),
         TUnitEffectHealOverTimeDescriptor
         (
             NbUpdatePerSecond  = 1
-            HealUnitsPerSecond = 2.3
+            HealUnitsPerSecond = 1.6
             DamageType = EDamageType/Suppress
         ),
         TUnitEffectRaiseTagDescriptor
@@ -5238,13 +5267,13 @@ export UnitEffect_xp_veteran_SF is TEffectsPackDescriptor
         ),
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 12
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 38
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
             ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 12
+            ModifierValue = 38
         ),
         TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
         (
@@ -5313,23 +5342,28 @@ export UnitEffect_xp_veteran_avion is TEffectsPackDescriptor
         TUnitEffectIncreaseDamageTakenDescriptor
         (
             ModifierType        = ~/ModifierType_Pourcentage
-            BonusDamage         = -20
+            BonusDamage         = -30
             DamageType          = EDamageType/Suppress
         ),
         TUnitEffectBonusPrecisionWhenTargetedDescriptor
         (
-            ModifierType       = ~/ModifierType_Additionnel
-            BonusPrecisionWhenTargeted = -8
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusPrecisionWhenTargeted = -25
         ),
         TBonusWeaponAimtimeEffectDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.90
+            ModifierValue = 0.80
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 6
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 30
+        ),
+        TUnitEffectIncreaseDispersionDescriptor
+        (
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusDispersion  = -35
         ),
         TUnitEffectHealOverTimeDescriptor
         (
@@ -5363,13 +5397,13 @@ export UnitEffect_xp_veteran_helo is TEffectsPackDescriptor
         ),
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 8
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 20
         ),
         TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
         (
-            ModifierType  = ~/ModifierType_Additionnel
-            ModifierValue = 8
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 20
         ),
         TUnitEffectHealOverTimeDescriptor
         (
@@ -5408,7 +5442,7 @@ export UnitEffect_SF is TEffectsPackDescriptor
 		TUnitEffectIncreaseConcealmentBonusDescriptor
         (
             ModifierType       = ~/ModifierType_Multiplicatif
-            BonusConcealmentBonus  = 1.5 // corrects SF to scout level
+            BonusConcealmentBonus  = 1.43 // corrects SF to scout level
         ),
 		TUnitEffectIncreaseOpticalStrengthDescriptor //raises SF with 84.9 to scout level matches scout optic bonus
         (
@@ -5451,7 +5485,7 @@ export UnitEffect_infantry_cover is TEffectsPackDescriptor //infantry who are st
         TUnitEffectIncreaseConcealmentBonusDescriptor
         (
             ModifierType       = ~/ModifierType_Multiplicatif
-            BonusConcealmentBonus  = 2.0 //doubles stealth may even need to be higher
+            BonusConcealmentBonus  = 2.5 //doubles stealth may even need to be higher
         ),
         TUnitEffectIncreaseDamageTakenDescriptor
         (
