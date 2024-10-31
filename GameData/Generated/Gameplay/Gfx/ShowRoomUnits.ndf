@@ -771,6 +771,41 @@ export Descriptor_ShowRoomUnit_AML_60_Gendarmerie_FR is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_AML_90_CMD_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{44dbb820-e0e2-4645-a462-789af1a2bfcd}
+    ClassNameForDebug   = "ShowRoomUnit_AML_90_CMD_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Command
+            TypeUnitFormation                = 'Supply'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_AML_90_CMD_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_AML_90_CMD_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_AML_90_CMD_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_AML_90_FR is TEntityDescriptor
 (
     DescriptorId        = GUID:{2003d380-4201-4780-a029-53d45c9acf15}
@@ -796,6 +831,41 @@ export Descriptor_ShowRoomUnit_AML_90_FR is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_AML_90_Reserve_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{f6b56fe2-ad93-4656-b035-2ca315248913}
+    ClassNameForDebug   = "ShowRoomUnit_AML_90_Reserve_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Tank
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_AML_90_Reserve_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_AML_90_Reserve_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_AML_90_Reserve_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -2730,6 +2800,41 @@ export Descriptor_ShowRoomUnit_ATteam_Milan_2_para_UK is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_ATteam_RCL_M40A1_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{8bf35d30-cf2c-410b-9850-1d663ab3454b}
+    ClassNameForDebug   = "ShowRoomUnit_ATteam_RCL_M40A1_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf2
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_ATteam_RCL_M40A1_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_ATteam_RCL_M40A1_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_ATteam_RCL_M40A1_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -5684,6 +5789,76 @@ export Descriptor_ShowRoomUnit_BMD_2_SOV is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_BMD_3_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{c448334a-92ef-4afb-8889-6387fdd03ac4}
+    ClassNameForDebug   = "ShowRoomUnit_BMD_3_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Tank
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_BMD_3_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_BMD_3_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_BMD_3_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_BMD_3_reco_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{8bae037c-615d-48c6-a14e-611f38cce03f}
+    ClassNameForDebug   = "ShowRoomUnit_BMD_3_reco_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_BMD_3_reco_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_BMD_3_reco_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_BMD_3_reco_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_BMP_1PG_SOV is TEntityDescriptor
 (
     DescriptorId        = GUID:{59f7c6a5-37db-4b97-abb7-39f35288d4b8}
@@ -7499,6 +7674,41 @@ export Descriptor_ShowRoomUnit_BTR_D_SOV is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_BTR_D_reco_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{6009655b-4550-4e5c-95bb-8b9bdf041139}
+    ClassNameForDebug   = "ShowRoomUnit_BTR_D_reco_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_BTR_D_reco_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_BTR_D_reco_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_BTR_D_reco_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_BTR_ZD_Skrezhet_SOV is TEntityDescriptor
 (
     DescriptorId        = GUID:{e0b0b73a-83ad-4bf4-98b6-baaa1dca77bf}
@@ -7934,6 +8144,68 @@ export Descriptor_ShowRoomUnit_Chasseurs_FR is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Commandos_Air_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{84dfd1a1-a989-43d5-9710-6d8ac17d854d}
+    ClassNameForDebug   = "ShowRoomUnit_Commandos_Air_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Commandos_Air_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 9
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Commandos_Air_FR'
+            WeaponUnitFXKey     = 'Commandos_Air_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{7c4e1a54-5ea1-421f-94a7-dc357777f945}
+                MimeticName = 'Commandos_Air_FR'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[2,]),
+                (1,[1,]),
+                (2,[0,]),
+                (3,[0,]),
+                (4,[0,]),
+                (5,[0,]),
+                (6,[0,]),
+                (7,[0,]),
+                (8,[0,3,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Commandos_FR is TEntityDescriptor
 (
     DescriptorId        = GUID:{9294a45d-b8ff-4601-a7fe-ef9328c4cf6d}
@@ -7994,6 +8266,41 @@ export Descriptor_ShowRoomUnit_Commandos_FR is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Crotale_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{747708fa-95eb-4c23-b3da-cf547514eaa1}
+    ClassNameForDebug   = "ShowRoomUnit_Crotale_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_CanonAA
+            TypeUnitFormation                = 'Artillerie'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Crotale_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Crotale_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Crotale_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
         ),
     ]
 )
@@ -8067,6 +8374,41 @@ export Descriptor_ShowRoomUnit_DCA_53T2_20mm_Para_FR is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_DCA_76T2_20mm_CPA_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{0aea259e-1dee-445f-aeac-eac503f286ad}
+    ClassNameForDebug   = "ShowRoomUnit_DCA_76T2_20mm_CPA_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_CanonAA
+            TypeUnitFormation                = 'Artillerie'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_DCA_76T2_20mm_CPA_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_DCA_76T2_20mm_CPA_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_DCA_76T2_20mm_CPA_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_SF_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_DCA_AZP_S60_DDR is TEntityDescriptor
 (
     DescriptorId        = GUID:{fb833d25-192b-4be0-9d3a-c8dc55bae72e}
@@ -8092,6 +8434,41 @@ export Descriptor_ShowRoomUnit_DCA_AZP_S60_DDR is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_DCA_Bofors_L60_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{b3876c65-ea16-48c5-b8ad-14a06ab6a63f}
+    ClassNameForDebug   = "ShowRoomUnit_DCA_Bofors_L60_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_CanonAA
+            TypeUnitFormation                = 'Artillerie'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_DCA_Bofors_L60_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_DCA_Bofors_L60_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_DCA_Bofors_L60_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -9348,6 +9725,41 @@ export Descriptor_ShowRoomUnit_DeltaForce_US is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_EBR_90mm_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{229cce64-c859-47dd-9357-8b3c386d0982}
+    ClassNameForDebug   = "ShowRoomUnit_EBR_90mm_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_EBR_90mm_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_EBR_90mm_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_EBR_90mm_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
         ),
     ]
 )
@@ -14540,6 +14952,67 @@ export Descriptor_ShowRoomUnit_Gama_Goat_trans_US is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Gendarmerie_Air_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{3b1ee080-e8f6-4891-bedf-6cc011d0d168}
+    ClassNameForDebug   = "ShowRoomUnit_Gendarmerie_Air_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Gendarmerie_Air_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 8
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Gendarmerie_Air_FR'
+            WeaponUnitFXKey     = 'Gendarmerie_Air_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{e999079d-1cd6-42f7-9a87-165a9569d871}
+                MimeticName = 'Gendarmerie_Air_FR'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[2,]),
+                (1,[1,]),
+                (2,[1,]),
+                (3,[1,]),
+                (4,[1,]),
+                (5,[0,]),
+                (6,[0,]),
+                (7,[0,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Gendarmerie_FR is TEntityDescriptor
 (
     DescriptorId        = GUID:{d4c871a2-2345-437f-af81-29bc6f0dab38}
@@ -15519,6 +15992,41 @@ export Descriptor_ShowRoomUnit_HMGteam_AANF1_FR is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_HMGteam_AANF1_Reserve_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{9d553582-45a7-4f91-8a25-5a67b03f257a}
+    ClassNameForDebug   = "ShowRoomUnit_HMGteam_AANF1_Reserve_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_HMGteam_AANF1_Reserve_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_HMGteam_AANF1_Reserve_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_HMGteam_AANF1_Reserve_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_HMGteam_AANF1_para_FR is TEntityDescriptor
 (
     DescriptorId        = GUID:{d18939e6-4438-4237-8915-1ee81503a49b}
@@ -15894,6 +16402,41 @@ export Descriptor_ShowRoomUnit_HMGteam_M2HB_NG_US is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_HMGteam_M2HB_RIMa_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{3652f8b2-59f1-4b96-aa67-822c1b3f50b2}
+    ClassNameForDebug   = "ShowRoomUnit_HMGteam_M2HB_RIMa_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_HMGteam_M2HB_RIMa_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_HMGteam_M2HB_RIMa_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_HMGteam_M2HB_RIMa_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -16314,6 +16857,41 @@ export Descriptor_ShowRoomUnit_HMGteam_Mk19_AB_US is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_HMGteam_NSV_6U6_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{4d642768-2fc2-45e8-a7d0-2a7252689f9b}
+    ClassNameForDebug   = "ShowRoomUnit_HMGteam_NSV_6U6_VDV_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf2
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_HMGteam_NSV_6U6_VDV_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_HMGteam_NSV_6U6_VDV_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_HMGteam_NSV_6U6_VDV_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -19204,6 +19782,109 @@ export Descriptor_ShowRoomUnit_LUAZ_967M_AGL_SOV is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_LUAZ_967M_AGL_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{fa9255c8-ee26-4367-b73f-13469dc0ac2d}
+    ClassNameForDebug   = "ShowRoomUnit_LUAZ_967M_AGL_VDV_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_LUAZ_967M_AGL_VDV_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_LUAZ_967M_AGL_VDV_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_LUAZ_967M_AGL_VDV_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_LUAZ_967M_CMD_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{cdfb1c37-bcc2-473e-83a0-faa6e7b789f1}
+    ClassNameForDebug   = "ShowRoomUnit_LUAZ_967M_CMD_VDV_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Command
+            TypeUnitFormation                = 'Supply'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_LUAZ_967M_CMD_VDV_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_LUAZ_967M_CMD_VDV_SOV
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_LUAZ_967M_FAO_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{c9c491ab-17b3-4118-93b6-a8b57e9d5f02}
+    ClassNameForDebug   = "ShowRoomUnit_LUAZ_967M_FAO_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Command
+            TypeUnitFormation                = 'Supply'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_LUAZ_967M_FAO_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_LUAZ_967M_FAO_SOV
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_LUAZ_967M_Fagot_SOV is TEntityDescriptor
 (
     DescriptorId        = GUID:{1910b805-d068-450c-b0c7-116896a8531c}
@@ -19229,6 +19910,41 @@ export Descriptor_ShowRoomUnit_LUAZ_967M_Fagot_SOV is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_LUAZ_967M_Fagot_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{0051e80c-7e35-49c3-a89d-006e24864b02}
+    ClassNameForDebug   = "ShowRoomUnit_LUAZ_967M_Fagot_VDV_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_TankDestroyer
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_LUAZ_967M_Fagot_VDV_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_LUAZ_967M_Fagot_VDV_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_LUAZ_967M_Fagot_VDV_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -19299,6 +20015,109 @@ export Descriptor_ShowRoomUnit_LUAZ_967M_SPG9_SOV is TEntityDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
             CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_LUAZ_967M_SPG9_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{ad2a21d9-afdd-43d0-aa8d-35116d164eb8}
+    ClassNameForDebug   = "ShowRoomUnit_LUAZ_967M_SPG9_VDV_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Vehicle
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_LUAZ_967M_SPG9_VDV_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_LUAZ_967M_SPG9_VDV_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_LUAZ_967M_SPG9_VDV_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_LUAZ_967M_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{f6b3d494-fd9f-443f-acd1-8d8a3b807614}
+    ClassNameForDebug   = "ShowRoomUnit_LUAZ_967M_VDV_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Transport
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_LUAZ_967M_VDV_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_LUAZ_967M_VDV_SOV
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_LUAZ_967M_supply_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{a0742eb3-9059-4ba9-a69c-7c8b00da4fe6}
+    ClassNameForDebug   = "ShowRoomUnit_LUAZ_967M_supply_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Logistic
+            TypeUnitFormation                = 'Supply'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_LUAZ_967M_supply_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_LUAZ_967M_supply_SOV
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = False
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
         ),
@@ -20188,6 +21007,41 @@ export Descriptor_ShowRoomUnit_LightRifles_RCL_US is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_LuAZ_967M_AA_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{a8bb4024-65a8-4e9c-9cbe-e415064d4385}
+    ClassNameForDebug   = "ShowRoomUnit_LuAZ_967M_AA_VDV_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Tank
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_LuAZ_967M_AA_VDV_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_LuAZ_967M_AA_VDV_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_LuAZ_967M_AA_VDV_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
         ),
     ]
 )
@@ -22512,6 +23366,144 @@ export Descriptor_ShowRoomUnit_M1_Abrams_US is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_M201_CMD_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{df8a81cb-6f73-41f8-8e9a-9d5c6b747dad}
+    ClassNameForDebug   = "ShowRoomUnit_M201_CMD_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Command
+            TypeUnitFormation                = 'Supply'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_M201_CMD_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_M201_CMD_FR
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_M201_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{031a29b4-df01-4f2f-9235-7ce4f5cee2b0}
+    ClassNameForDebug   = "ShowRoomUnit_M201_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Transport
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_M201_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_M201_FR
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_M201_MG_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{bfef5608-0e72-4b87-80aa-61392b5b1356}
+    ClassNameForDebug   = "ShowRoomUnit_M201_MG_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_M201_MG_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_M201_MG_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_M201_MG_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_M201_MILAN_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{82a18053-f38a-4388-9eff-c53344183b97}
+    ClassNameForDebug   = "ShowRoomUnit_M201_MILAN_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_TankDestroyer
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_M201_MILAN_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_M201_MILAN_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_M201_MILAN_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -27076,6 +28068,41 @@ export Descriptor_ShowRoomUnit_Mortier_2B14_82mm_SOV is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Mortier_2B14_82mm_VDV_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{7cea1ca1-1790-4ed8-b106-4ab798b40559}
+    ClassNameForDebug   = "ShowRoomUnit_Mortier_2B14_82mm_VDV_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_ArtShell
+            TypeUnitFormation                = 'Artillerie'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Mortier_2B14_82mm_VDV_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Mortier_2B14_82mm_VDV_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Mortier_2B14_82mm_VDV_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_artillery
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Mortier_2B9_Vasilek_SOV is TEntityDescriptor
 (
     DescriptorId        = GUID:{0f2d5b06-8d9a-4496-a6e5-fdeedf0152a9}
@@ -27306,6 +28333,41 @@ export Descriptor_ShowRoomUnit_Mortier_81mm_BEL is TEntityDescriptor
             ReferenceMesh        = $/GFX/DepictionResources/Modele_Mortier_81mm_BEL
         ),
         $/GFX/Weapon/WeaponDescriptor_Mortier_81mm_BEL,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_artillery
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Mortier_81mm_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{a09f9d00-c2f8-46c4-a8a5-da237812d8c6}
+    ClassNameForDebug   = "ShowRoomUnit_Mortier_81mm_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_ArtShell
+            TypeUnitFormation                = 'Artillerie'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Mortier_81mm_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Mortier_81mm_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Mortier_81mm_FR,
         ~/LinkTeamModuleDescriptor,
         ~/EffectApplierModuleDescriptor,
         TExperienceModuleDescriptor
@@ -29456,6 +30518,41 @@ export Descriptor_ShowRoomUnit_OT_65_DDR is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Obusier_155mm_mle1950_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{a57429ac-b67d-4c14-9621-87fd7677f82a}
+    ClassNameForDebug   = "ShowRoomUnit_Obusier_155mm_mle1950_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_ArtShell
+            TypeUnitFormation                = 'Artillerie'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Obusier_155mm_mle1950_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Obusier_155mm_mle1950_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Obusier_155mm_mle1950_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_artillery
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Osa_9K33M3_DDR is TEntityDescriptor
 (
     DescriptorId        = GUID:{dcbd8ef4-8e98-40a2-bd8d-1eced675d07a}
@@ -31255,6 +32352,65 @@ export Descriptor_ShowRoomUnit_Reserve_Polizei_RFA is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Reserviste_CMD_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{e82e9a02-732c-4eae-a0b9-b5068f0fca21}
+    ClassNameForDebug   = "ShowRoomUnit_Reserviste_CMD_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Command
+            TypeUnitFormation                = 'Supply'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Reserviste_CMD_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 6
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Reserviste_CMD_FR'
+            WeaponUnitFXKey     = 'Reserviste_CMD_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{42bfbe4a-6c04-4345-a0a7-8f3578ccf000}
+                MimeticName = 'Reserviste_CMD_FR'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[1,]),
+                (1,[0,]),
+                (2,[0,]),
+                (3,[0,]),
+                (4,[0,]),
+                (5,[0,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Reserviste_FAMAS_FR is TEntityDescriptor
 (
     DescriptorId        = GUID:{44bf654a-9bea-4f28-857e-6f755fd05db5}
@@ -32542,6 +33698,189 @@ export Descriptor_ShowRoomUnit_Rifles_RAF_UK is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Rifles_RIMa_APILAS_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{00f63696-220f-42ca-8c32-48c9e75391e5}
+    ClassNameForDebug   = "ShowRoomUnit_Rifles_RIMa_APILAS_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Rifles_RIMa_APILAS_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 10
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Rifles_RIMa_APILAS_FR'
+            WeaponUnitFXKey     = 'Rifles_RIMa_APILAS_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{175f4208-f81a-4b46-87ee-f64a6352e21c}
+                MimeticName = 'Rifles_RIMa_APILAS_FR'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[1,]),
+                (1,[0,]),
+                (2,[0,]),
+                (3,[0,]),
+                (4,[0,]),
+                (5,[0,]),
+                (6,[0,]),
+                (7,[0,]),
+                (8,[0,]),
+                (9,[0,2,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Rifles_RIMa_CMD_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{ef1a85ea-16c3-4579-93d5-fa1e2b30088f}
+    ClassNameForDebug   = "ShowRoomUnit_Rifles_RIMa_CMD_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Command
+            TypeUnitFormation                = 'Supply'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Rifles_RIMa_CMD_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 4
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Rifles_RIMa_CMD_FR'
+            WeaponUnitFXKey     = 'Rifles_RIMa_CMD_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{3dfa8ca8-62aa-4ab0-a33c-b1e55c20cd5e}
+                MimeticName = 'Rifles_RIMa_CMD_FR'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[0,]),
+                (1,[0,]),
+                (2,[0,]),
+                (3,[0,1,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Rifles_RIMa_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{029ebed6-9660-4c5c-881e-9c99044ae4af}
+    ClassNameForDebug   = "ShowRoomUnit_Rifles_RIMa_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Rifles_RIMa_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 10
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Rifles_RIMa_FR'
+            WeaponUnitFXKey     = 'Rifles_RIMa_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{7b9ef051-fdb3-44ec-a4c5-525e0c73f0c2}
+                MimeticName = 'Rifles_RIMa_FR'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[2,]),
+                (1,[1,]),
+                (2,[0,]),
+                (3,[0,]),
+                (4,[0,]),
+                (5,[0,]),
+                (6,[0,]),
+                (7,[0,]),
+                (8,[0,]),
+                (9,[0,3,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -34775,6 +36114,67 @@ export Descriptor_ShowRoomUnit_Scout_RFA is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Scout_RIMa_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{bd64d6ca-d08d-4534-8181-5ce9b38a205f}
+    ClassNameForDebug   = "ShowRoomUnit_Scout_RIMa_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Scout_RIMa_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 8
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Scout_RIMa_FR'
+            WeaponUnitFXKey     = 'Scout_RIMa_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{7155df25-d4ac-49b6-8891-8641f25ba724}
+                MimeticName = 'Scout_RIMa_FR'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[1,]),
+                (1,[1,]),
+                (2,[0,]),
+                (3,[0,]),
+                (4,[0,]),
+                (5,[0,]),
+                (6,[0,3,]),
+                (7,[0,2,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Scout_Reserve_DDR is TEntityDescriptor
 (
     DescriptorId        = GUID:{494c6a6a-80b0-4bde-8dbf-6327f952e75b}
@@ -34821,6 +36221,119 @@ export Descriptor_ShowRoomUnit_Scout_Reserve_DDR is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Scout_Reserviste_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{686c77c9-c506-4602-8cfc-3934d2e61933}
+    ClassNameForDebug   = "ShowRoomUnit_Scout_Reserviste_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Scout_Reserviste_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 4
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Scout_Reserviste_FR'
+            WeaponUnitFXKey     = 'Scout_Reserviste_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{84740fbc-d97d-4ffa-8b91-e2006c512391}
+                MimeticName = 'Scout_Reserviste_FR'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[1,]),
+                (1,[0,]),
+                (2,[0,]),
+                (3,[0,2,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Scout_SIGINT_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{5e2cf7a4-6f4c-4932-bd08-564d36a8ddf4}
+    ClassNameForDebug   = "ShowRoomUnit_Scout_SIGINT_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Scout_SIGINT_SOV,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 3
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Scout_SIGINT_SOV'
+            WeaponUnitFXKey     = 'Scout_SIGINT_SOV'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{91ce589d-d2ad-4926-a37b-2d612942bfa8}
+                MimeticName = 'Scout_SIGINT_SOV'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[0,]),
+                (1,[0,]),
+                (2,[0,1,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -35885,6 +37398,61 @@ export Descriptor_ShowRoomUnit_Sniper_Fern_RFA is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Sniper_RIMa_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{348e26bc-d979-4c51-a20f-8dbe87b3ad00}
+    ClassNameForDebug   = "ShowRoomUnit_Sniper_RIMa_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'Reconnaissance'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Sniper_RIMa_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 2
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Sniper_RIMa_FR'
+            WeaponUnitFXKey     = 'Sniper_RIMa_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{a38177d8-17e3-459f-8c57-5d258a4e0f39}
+                MimeticName = 'Sniper_RIMa_FR'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[1,]),
+                (1,[0,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Sniper_Spetsnaz_SOV is TEntityDescriptor
 (
     DescriptorId        = GUID:{27b92c85-ec4a-4fdb-baef-69005176b27b}
@@ -36291,6 +37859,69 @@ export Descriptor_ShowRoomUnit_Spetsnaz_SOV is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_SF
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Spetsnaz_Vympel_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{ba9074d1-7f7e-4055-9ce2-08bca92c096e}
+    ClassNameForDebug   = "ShowRoomUnit_Spetsnaz_Vympel_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Engineer
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Spetsnaz_Vympel_SOV,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 10
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Spetsnaz_Vympel_SOV'
+            WeaponUnitFXKey     = 'Spetsnaz_Vympel_SOV'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{4d896d04-e86a-4de3-8581-0a5ff5f1801a}
+                MimeticName = 'Spetsnaz_Vympel_SOV'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[1,]),
+                (1,[1,]),
+                (2,[0,]),
+                (3,[0,]),
+                (4,[0,]),
+                (5,[0,]),
+                (6,[0,]),
+                (7,[0,]),
+                (8,[0,3,]),
+                (9,[0,2,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_SF_v2
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -37829,6 +39460,74 @@ export Descriptor_ShowRoomUnit_TPZ_Fuchs_RASIT_RFA is TEntityDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
             CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_TRM_10000_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{1fe2eb03-5e45-424b-a41e-88818469e613}
+    ClassNameForDebug   = "ShowRoomUnit_TRM_10000_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Transport
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_TRM_10000_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_TRM_10000_FR
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_TRM_10000_supply_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{736f8f6a-2a36-431d-919c-81ef2b106b50}
+    ClassNameForDebug   = "ShowRoomUnit_TRM_10000_supply_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Logistic
+            TypeUnitFormation                = 'Supply'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_TRM_10000_supply_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_TRM_10000_supply_FR
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = False
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
         ),
@@ -39445,6 +41144,41 @@ export Descriptor_ShowRoomUnit_VAB_RASIT_FR is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_VAB_Reserve_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{0404cc3b-d01b-46b1-a1c2-0b63a354f717}
+    ClassNameForDebug   = "ShowRoomUnit_VAB_Reserve_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Transport
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_VAB_Reserve_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_VAB_Reserve_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_VAB_Reserve_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_VAB_T20_FR is TEntityDescriptor
 (
     DescriptorId        = GUID:{4f0effa5-e26a-44a7-bb4a-52b3829d1a2b}
@@ -39703,6 +41437,68 @@ export Descriptor_ShowRoomUnit_VDV_CMD_SOV is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_VDV_Combine_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{4e958bd4-8201-482a-ab78-b529c1d87638}
+    ClassNameForDebug   = "ShowRoomUnit_VDV_Combine_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_VDV_Combine_SOV,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 9
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'VDV_Combine_SOV'
+            WeaponUnitFXKey     = 'VDV_Combine_SOV'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{2b5a5f0a-87ed-468c-84a0-fbbbb0da01b3}
+                MimeticName = 'VDV_Combine_SOV'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+                (0,[1,]),
+                (1,[1,]),
+                (2,[0,]),
+                (3,[0,]),
+                (4,[0,]),
+                (5,[0,]),
+                (6,[0,]),
+                (7,[0,3,]),
+                (8,[0,2,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_VDV_HMG_SOV is TEntityDescriptor
 (
     DescriptorId        = GUID:{5b9faf26-1cc6-4009-938f-9ed5f4c34406}
@@ -39941,6 +41737,41 @@ export Descriptor_ShowRoomUnit_VDV_SOV is TEntityDescriptor
         TCameraShowroomModuleDescriptor
         (
             SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_VIB_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{d5d3abe3-adaa-479e-9cee-d604ef3ba9e4}
+    ClassNameForDebug   = "ShowRoomUnit_VIB_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Tank
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_VIB_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_VIB_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_VIB_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v3
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Vehicle
         ),
     ]
 )
@@ -41541,6 +43372,42 @@ export Descriptor_ShowRoomUnit_Alouette_III_FR is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Alouette_III_SS11_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{93ebe3ca-7efd-409b-9742-6d290817996d}
+    ClassNameForDebug   = "ShowRoomUnit_Alouette_III_SS11_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_HeliAttack
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Alouette_III_SS11_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Alouette_III_SS11_FR
+            GameplayBBoxBoneName = 'chassis'
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Alouette_III_SS11_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_helico
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Helico
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Alouette_III_reco_FR is TEntityDescriptor
 (
     DescriptorId        = GUID:{ebfa79e1-8548-4674-a13e-9adef6e55087}
@@ -41566,6 +43433,41 @@ export Descriptor_ShowRoomUnit_Alouette_III_reco_FR is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Helico
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Alouette_II_CMD_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{e2ac6497-9d16-43cc-90f0-517006b5e204}
+    ClassNameForDebug   = "ShowRoomUnit_Alouette_II_CMD_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_HeliAttack
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Alouette_II_CMD_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Alouette_II_CMD_FR
+            GameplayBBoxBoneName = 'chassis'
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_helico
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -41671,6 +43573,41 @@ export Descriptor_ShowRoomUnit_Alouette_II_reco_RFA is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Helico
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Alouette_II_trans_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{87c3cf25-050e-46c7-b5be-1c8a7e8ef6aa}
+    ClassNameForDebug   = "ShowRoomUnit_Alouette_II_trans_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_HeliAttack
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Alouette_II_trans_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Alouette_II_trans_FR
+            GameplayBBoxBoneName = 'chassis'
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_helico
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -42163,6 +44100,77 @@ export Descriptor_ShowRoomUnit_EH60A_EW_US is TEntityDescriptor
         TExperienceModuleDescriptor
         (
             ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Helico
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Ecureuil_20mm_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{de763bcb-6618-43d5-b8e4-c9ff7bfe3777}
+    ClassNameForDebug   = "ShowRoomUnit_Ecureuil_20mm_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_HeliAttack
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Ecureuil_20mm_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Ecureuil_20mm_FR
+            GameplayBBoxBoneName = 'chassis'
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Ecureuil_20mm_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_helico
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Helico
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Ecureuil_reco_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{d9aeb61e-f79b-4a19-956d-0b13b9509333}
+    ClassNameForDebug   = "ShowRoomUnit_Ecureuil_reco_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Ecureuil_reco_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Ecureuil_reco_FR
+            GameplayBBoxBoneName = 'chassis'
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_helico
             CanWinExperience = True
             ExperienceGainBySecond = ~/ExperienceGainBySecond
             ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
@@ -45802,6 +47810,76 @@ export Descriptor_ShowRoomUnit_Alpha_Jet_BEL is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Alpha_Jet_E_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{b00046ee-9d89-442e-9dc0-2334551b94fa}
+    ClassNameForDebug   = "ShowRoomUnit_Alpha_Jet_E_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Alpha_Jet_E_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Alpha_Jet_E_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Alpha_Jet_E_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Alpha_Jet_E_NPLM_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{5fd950c2-a5a1-468d-987a-1752c08a138e}
+    ClassNameForDebug   = "ShowRoomUnit_Alpha_Jet_E_NPLM_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Alpha_Jet_E_NPLM_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Alpha_Jet_E_NPLM_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Alpha_Jet_E_NPLM_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Alpha_Jet_HE2_BEL is TEntityDescriptor
 (
     DescriptorId        = GUID:{29840197-4707-4a80-853c-95befba2eb38}
@@ -45962,6 +48040,76 @@ export Descriptor_ShowRoomUnit_Buccaneer_S2B_SEAD_UK is TEntityDescriptor
             ReferenceMesh        = $/GFX/DepictionResources/Modele_Buccaneer_S2B_SEAD_UK
         ),
         $/GFX/Weapon/WeaponDescriptor_Buccaneer_S2B_SEAD_UK,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_CM170_Magister_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{76b2477a-430d-455f-9645-142f86e1aab3}
+    ClassNameForDebug   = "ShowRoomUnit_CM170_Magister_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_CM170_Magister_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_CM170_Magister_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_CM170_Magister_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_CM170_Magister_SS11_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{235dfccb-0103-4293-bf50-accb96192817}
+    ClassNameForDebug   = "ShowRoomUnit_CM170_Magister_SS11_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_CM170_Magister_SS11_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_CM170_Magister_SS11_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_CM170_Magister_SS11_FR,
         ~/LinkTeamModuleDescriptor,
         ~/EffectApplierModuleDescriptor,
         TExperienceModuleDescriptor
@@ -47326,6 +49474,76 @@ export Descriptor_ShowRoomUnit_F4_Wild_Weasel_US is TEntityDescriptor
             ReferenceMesh        = $/GFX/DepictionResources/Modele_F4_Wild_Weasel_US
         ),
         $/GFX/Weapon/WeaponDescriptor_F4_Wild_Weasel_US,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_F8P_Crusader_AA2_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{8182ab6d-ad45-4631-a79b-ce5d0c43454b}
+    ClassNameForDebug   = "ShowRoomUnit_F8P_Crusader_AA2_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_F8P_Crusader_AA2_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_F8P_Crusader_AA2_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_F8P_Crusader_AA2_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_F8P_Crusader_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{da464e21-b10f-4944-a971-66db8c9581b9}
+    ClassNameForDebug   = "ShowRoomUnit_F8P_Crusader_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_F8P_Crusader_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_F8P_Crusader_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_F8P_Crusader_FR,
         ~/LinkTeamModuleDescriptor,
         ~/EffectApplierModuleDescriptor,
         TExperienceModuleDescriptor
@@ -49581,6 +51799,76 @@ export Descriptor_ShowRoomUnit_MiG_31M_SOV is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_MiG_31_AA1_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{09dc6e88-b787-4fc8-83e0-388df420dffc}
+    ClassNameForDebug   = "ShowRoomUnit_MiG_31_AA1_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_AirSup
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_MiG_31_AA1_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_MiG_31_AA1_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_MiG_31_AA1_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_MiG_31_AA2_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{774037c0-3b23-47c0-a66b-916c4360d89c}
+    ClassNameForDebug   = "ShowRoomUnit_MiG_31_AA2_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_AirSup
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_MiG_31_AA2_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_MiG_31_AA2_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_MiG_31_AA2_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Mirage_2000_C_FR is TEntityDescriptor
 (
     DescriptorId        = GUID:{a81f0b46-f6bd-48a5-891a-9f27d17fdd34}
@@ -50071,6 +52359,40 @@ export Descriptor_ShowRoomUnit_Mirage_IV_SEAD_FR is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Pchela_1T_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{603de28b-238a-4370-a359-99ec2edd7af7}
+    ClassNameForDebug   = "ShowRoomUnit_Pchela_1T_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Pchela_1T_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Pchela_1T_SOV
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Su_17M4_SOV is TEntityDescriptor
 (
     DescriptorId        = GUID:{83a6a663-8d58-4387-8377-2f96f821a275}
@@ -50526,6 +52848,41 @@ export Descriptor_ShowRoomUnit_Su_24MP_EW_SOV is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_ShowRoomUnit_Su_24MP_SEAD2_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{520999dc-aee8-4fa3-afbf-5ab50ff2ffcb}
+    ClassNameForDebug   = "ShowRoomUnit_Su_24MP_SEAD2_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Su_24MP_SEAD2_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Su_24MP_SEAD2_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Su_24MP_SEAD2_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
 export Descriptor_ShowRoomUnit_Su_24MP_SOV is TEntityDescriptor
 (
     DescriptorId        = GUID:{9be46e71-d65c-4893-a7c1-c4e9df0cbf39}
@@ -50546,6 +52903,111 @@ export Descriptor_ShowRoomUnit_Su_24MP_SOV is TEntityDescriptor
             ReferenceMesh        = $/GFX/DepictionResources/Modele_Su_24MP_SOV
         ),
         $/GFX/Weapon/WeaponDescriptor_Su_24MP_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Su_24M_AT1_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{2fe01200-41cb-43c4-8864-80b92b20694a}
+    ClassNameForDebug   = "ShowRoomUnit_Su_24M_AT1_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Su_24M_AT1_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Su_24M_AT1_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Su_24M_AT1_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Su_24M_AT2_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{4c22c90c-564c-43c2-b474-850b5c2b67a4}
+    ClassNameForDebug   = "ShowRoomUnit_Su_24M_AT2_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Su_24M_AT2_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Su_24M_AT2_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Su_24M_AT2_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Su_24M_LGB2_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{fc7ab1d7-c353-4524-afab-8e3144c7f19a}
+    ClassNameForDebug   = "ShowRoomUnit_Su_24M_LGB2_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Su_24M_LGB2_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Su_24M_LGB2_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Su_24M_LGB2_SOV,
         ~/LinkTeamModuleDescriptor,
         ~/EffectApplierModuleDescriptor,
         TExperienceModuleDescriptor
@@ -50721,6 +53183,41 @@ export Descriptor_ShowRoomUnit_Su_24M_nplm_SOV is TEntityDescriptor
             ReferenceMesh        = $/GFX/DepictionResources/Modele_Su_24M_nplm_SOV
         ),
         $/GFX/Weapon/WeaponDescriptor_Su_24M_nplm_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Su_24M_thermo_SOV is TEntityDescriptor
+(
+    DescriptorId        = GUID:{72d645cd-9008-4e9a-9301-37e13478f471}
+    ClassNameForDebug   = "ShowRoomUnit_Su_24M_thermo_SOV"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Axis
+            MotherCountry                    = 'SOV'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Su_24M_thermo_SOV_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Su_24M_thermo_SOV
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Su_24M_thermo_SOV,
         ~/LinkTeamModuleDescriptor,
         ~/EffectApplierModuleDescriptor,
         TExperienceModuleDescriptor
@@ -50966,6 +53463,146 @@ export Descriptor_ShowRoomUnit_Su_27S_SOV is TEntityDescriptor
             ReferenceMesh        = $/GFX/DepictionResources/Modele_Su_27S_SOV
         ),
         $/GFX/Weapon/WeaponDescriptor_Su_27S_SOV,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Super_Etendard_AT_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{82fdb139-70d7-4d18-ae38-4d1e5dd3b8ca}
+    ClassNameForDebug   = "ShowRoomUnit_Super_Etendard_AT_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Super_Etendard_AT_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Super_Etendard_AT_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Super_Etendard_AT_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Super_Etendard_CLU_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{da45c6fe-c7e0-42d3-8151-f1e50b4e981e}
+    ClassNameForDebug   = "ShowRoomUnit_Super_Etendard_CLU_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Super_Etendard_CLU_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Super_Etendard_CLU_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Super_Etendard_CLU_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Super_Etendard_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{a6a1d55e-c1b9-48cf-8aed-1879f5da641e}
+    ClassNameForDebug   = "ShowRoomUnit_Super_Etendard_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Super_Etendard_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Super_Etendard_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Super_Etendard_FR,
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_avion
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Airplane
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Super_Etendard_HE_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{0e5bb93f-e311-4e4e-8d48-8ee60ae8ddbc}
+    ClassNameForDebug   = "ShowRoomUnit_Super_Etendard_HE_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_GroundAtk
+            TypeUnitFormation                = 'None'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = True
+            Depiction            = ~/Gfx_Super_Etendard_HE_FR_Showroom_Autogen
+            ReferenceMesh        = $/GFX/DepictionResources/Modele_Super_Etendard_HE_FR
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Super_Etendard_HE_FR,
         ~/LinkTeamModuleDescriptor,
         ~/EffectApplierModuleDescriptor,
         TExperienceModuleDescriptor
