@@ -734,8 +734,7 @@ ELevelLaunch is TBaseClass
     Scripted is 2
     Skirmish is 3
     Load    is 4
-    Replay  is 5
-    TestSuite  is 6
+    TestSuite  is 5
 )
 
 //-----------------------------------------------------------------------------
@@ -777,14 +776,14 @@ ProjSpeedCorr					  is 2.47
 ProjSpeedCorrBullet				  is 2.62
 ProjSpeedCorrAC					  is 2.0 // rough estimate from external ballistics calculator in spreadsheet
 ProjSpeedCorrHeavy				  is 2.0
-ArtySuppressRadCorr				  is 1.8
-ArtySuppressCorr				  is 1.7
+ArtySuppressRadCorr				  is 2.3
+ArtySuppressCorr				  is 3.5
 BulletSuppressCorr				  is 0.1
 ACSuppressCorr				      is 0.3
 BulletSuppressRadCorr			  is 0.33
 FuelCorr						  is 75
 SupplyCorr						  is 1.85 //was 185 divide by 100
-OpticalStrengthReducer			  is 1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
+OpticalStrengthReducer			  is 4.088 // new value so inf see tanks at 2km in the open 3.212  //1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
 Degre                             is 0.017453292
 SniperSuppress				      is 175.0 //suppression from sniper fire
 pinneddamagereducer				  is 0.101 //can't use these in  the table, so  they are for reference

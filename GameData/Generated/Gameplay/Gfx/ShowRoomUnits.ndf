@@ -4830,15 +4830,15 @@ export Descriptor_ShowRoomUnit_Airmobile_UK is TEntityDescriptor
         TInfantrySquadWeaponAssignmentModuleDescriptor
         (
             InitialSoldiersToTurretIndexMap = MAP[
-                (0,[1,]),
-                (1,[1,]),
-                (2,[1,]),
-                (3,[0,]),
-                (4,[0,]),
-                (5,[0,]),
-                (6,[0,]),
-                (7,[0,]),
-                (8,[0,]),
+				(0,[1,]),
+				(1,[1,]),
+				(2,[1,]),
+				(3,[0,2,]),
+				(4,[0,2,]),
+				(5,[0,]),
+				(6,[0,]),
+				(7,[0,]),
+				//(8,[0,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -6085,7 +6085,7 @@ export Descriptor_ShowRoomUnit_BMP_1_CMD_SOV is TEntityDescriptor
         TApparenceModelModuleDescriptor
         (
             PickableObject       = True
-            Depiction            = ~/Gfx_BMP_1P_SOV_Showroom_Autogen
+            Depiction            = ~/Gfx_BMP_1_CMD_SOV_Showroom_Autogen
             ReferenceMesh        = $/GFX/DepictionResources/Modele_BMP_1_CMD_SOV
         ),
         $/GFX/Weapon/WeaponDescriptor_BMP_1_CMD_SOV,
@@ -8105,7 +8105,7 @@ export Descriptor_ShowRoomUnit_Chasseurs_FR is TEntityDescriptor
         $/GFX/Weapon/WeaponDescriptor_Chasseurs_FR,
         TInfantrySquadModuleDescriptor
         (
-            NbSoldatInGroupeCombat = 7
+            NbSoldatInGroupeCombat = 8
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
             InfantryMimeticName = 'Chasseurs_FR'
             WeaponUnitFXKey     = 'Chasseurs_FR'
@@ -8120,13 +8120,71 @@ export Descriptor_ShowRoomUnit_Chasseurs_FR is TEntityDescriptor
         (
             InitialSoldiersToTurretIndexMap = MAP[
 				(0,[1,]),
-				(1,[0,]),
-				(2,[0,]),
-				(3,[0,]),
+				(1,[2,]),
+				(2,[0,4,]),
+				(3,[0,4,]),
 				(4,[0,]),
 				(5,[0,]),
-				(6,[0,2]),
-				//(7,[0,2,]),
+				(6,[0,]),
+				(7,[0,3,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Chasseurs_Appui_FR is TEntityDescriptor
+(
+    DescriptorId        = GUID:{6573d588-83bc-49e1-8db4-6819ce8f31ce}
+    ClassNameForDebug   = "ShowRoomUnit_Chasseurs_FR"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'FR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        $/GFX/Weapon/WeaponDescriptor_Chasseurs_Appui_FR,
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 5
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Chasseurs_FR'
+            WeaponUnitFXKey     = 'Chasseurs_FR'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{e7ea9e08-3cec-4b0d-8125-d03c67f6fb52}
+                MimeticName = 'Chasseurs_FR'
+            )
+        ),
+        ~/ColumnInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+				(0,[1,]),
+				(1,[0,3]),
+				(2,[0,]),
+				(3,[0,]),
+				(4,[0,2,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -8186,8 +8244,8 @@ export Descriptor_ShowRoomUnit_Commandos_Air_FR is TEntityDescriptor
                 (3,[0,]),
                 (4,[0,]),
                 (5,[0,]),
-                (6,[0,]),
-                (7,[0,]),
+                (6,[0,4,]),
+                (7,[0,4,]),
                 (8,[0,3,]),
             ]
         ),
@@ -11082,7 +11140,7 @@ export Descriptor_ShowRoomUnit_Engineers_Flam_DShV_SOV is TEntityDescriptor
         $/GFX/Weapon/WeaponDescriptor_Engineers_Flam_DShV_SOV,
         TInfantrySquadModuleDescriptor
         (
-            NbSoldatInGroupeCombat = 5
+            NbSoldatInGroupeCombat = 7
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
             InfantryMimeticName = 'Engineers_Flam_DShV_SOV'
             WeaponUnitFXKey     = 'Engineers_Flam_DShV_SOV'
@@ -11100,7 +11158,9 @@ export Descriptor_ShowRoomUnit_Engineers_Flam_DShV_SOV is TEntityDescriptor
                 (1,[0,]),
                 (2,[0,]),
                 (3,[0,]),
-                (4,[0,2,]),
+                (4,[0,]),
+                (5,[0,3,]),
+                (6,[0,2,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -13810,7 +13870,7 @@ export Descriptor_ShowRoomUnit_Fallschirmjager_DDR is TEntityDescriptor
         $/GFX/Weapon/WeaponDescriptor_Fallschirmjager_DDR,
         TInfantrySquadModuleDescriptor
         (
-            NbSoldatInGroupeCombat = 8
+            NbSoldatInGroupeCombat = 7
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
             InfantryMimeticName = 'Fallschirmjager_DDR'
             WeaponUnitFXKey     = 'Fallschirmjager_DDR'
@@ -13824,14 +13884,14 @@ export Descriptor_ShowRoomUnit_Fallschirmjager_DDR is TEntityDescriptor
         TInfantrySquadWeaponAssignmentModuleDescriptor
         (
             InitialSoldiersToTurretIndexMap = MAP[
-                (0,[1,]),
-                (1,[0,]),
-                (2,[0,]),
-                (3,[0,]),
-                (4,[0,]),
-                (5,[0,]),
-                (6,[0,]),
-                (7,[0,2,]),
+				(0,[1,]),
+				(1,[1,]),
+				(2,[2,]),
+				(3,[0,]),
+				(4,[0,]),
+				(5,[0,]),
+				(6,[0,3]),
+				//(7,[0,2,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -14109,7 +14169,7 @@ export Descriptor_ShowRoomUnit_Fallschirmjager_Metys_DDR is TEntityDescriptor
         $/GFX/Weapon/WeaponDescriptor_Fallschirmjager_Metys_DDR,
         TInfantrySquadModuleDescriptor
         (
-            NbSoldatInGroupeCombat = 8
+            NbSoldatInGroupeCombat = 7
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
             InfantryMimeticName = 'Fallschirmjager_Metys_DDR'
             WeaponUnitFXKey     = 'Fallschirmjager_Metys_DDR'
@@ -14123,14 +14183,14 @@ export Descriptor_ShowRoomUnit_Fallschirmjager_Metys_DDR is TEntityDescriptor
         TInfantrySquadWeaponAssignmentModuleDescriptor
         (
             InitialSoldiersToTurretIndexMap = MAP[
-                (0,[1,]),
-                (1,[0,]),
-                (2,[0,]),
-                (3,[0,]),
-                (4,[0,]),
-                (5,[0,]),
-                (6,[0,]),
-                (7,[0,2,]),
+				(0,[1,]),
+				(1,[1,]),
+				(2,[0,]),
+				(3,[0,]),
+				(4,[0,2]),
+				(5,[0,]),
+				(6,[0,3]),
+				//(7,[0,2,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -29913,7 +29973,7 @@ export Descriptor_ShowRoomUnit_MotSchutzen_DDR is TEntityDescriptor
         $/GFX/Weapon/WeaponDescriptor_MotSchutzen_DDR,
         TInfantrySquadModuleDescriptor
         (
-            NbSoldatInGroupeCombat = 7
+            NbSoldatInGroupeCombat = 8
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
             InfantryMimeticName = 'MotSchutzen_DDR'
             WeaponUnitFXKey     = 'MotSchutzen_DDR'
@@ -29932,8 +29992,9 @@ export Descriptor_ShowRoomUnit_MotSchutzen_DDR is TEntityDescriptor
 				(2,[2,]),
 				(3,[0,]),
 				(4,[0,]),
-				(5,[1,]),
-				(6,[0,3,]),
+				(5,[0,]),
+				(6,[1,]),
+				(7,[0,3,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -30347,7 +30408,7 @@ export Descriptor_ShowRoomUnit_NatGuard_LAW_US is TEntityDescriptor
         $/GFX/Weapon/WeaponDescriptor_NatGuard_LAW_US,
         TInfantrySquadModuleDescriptor
         (
-            NbSoldatInGroupeCombat = 9
+            NbSoldatInGroupeCombat = 7
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
             InfantryMimeticName = 'NatGuard_LAW_US'
             WeaponUnitFXKey     = 'NatGuard_LAW_US'
@@ -30362,14 +30423,14 @@ export Descriptor_ShowRoomUnit_NatGuard_LAW_US is TEntityDescriptor
         (
             InitialSoldiersToTurretIndexMap = MAP[
                 (0,[1,]),
-                (1,[1,]),
+                (1,[0,]),
                 (2,[0,]),
-                (3,[0,]),
-                (4,[0,]),
+                (3,[0,3,]),
+                (4,[0,3,]),
                 (5,[0,]),
-                (6,[0,]),
-                (7,[0,]),
-                (8,[0,2,]),
+                (6,[0,2,]),
+                //(7,[0,]),
+                //(8,[0,2,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -33307,14 +33368,14 @@ export Descriptor_ShowRoomUnit_Rifles_DMR_FR is TEntityDescriptor
             InitialSoldiersToTurretIndexMap = MAP[
                 (0,[2,]),
                 (1,[1,]),
-                (2,[0,]),
-                (3,[0,]),
+                (2,[0,4,]),
+                (3,[0,4,]),
                 (4,[0,]),
                 (5,[0,]),
                 (6,[0,]),
                 (7,[0,]),
                 (8,[0,]),
-                (9,[0,]),
+                (9,[0,3,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -33745,15 +33806,15 @@ export Descriptor_ShowRoomUnit_Rifles_RIMa_APILAS_FR is TEntityDescriptor
         (
             InitialSoldiersToTurretIndexMap = MAP[
                 (0,[1,]),
-                (1,[0,]),
+                (1,[2,]),
                 (2,[0,]),
                 (3,[0,]),
                 (4,[0,]),
                 (5,[0,]),
                 (6,[0,]),
-                (7,[0,]),
-                (8,[0,]),
-                (9,[0,2,]),
+                (7,[0,4,]),
+                (8,[0,4,]),
+                (9,[0,3,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -33871,8 +33932,8 @@ export Descriptor_ShowRoomUnit_Rifles_RIMa_FR is TEntityDescriptor
                 (4,[0,]),
                 (5,[0,]),
                 (6,[0,]),
-                (7,[0,]),
-                (8,[0,]),
+                (7,[0,4,]),
+                (8,[0,4,]),
                 (9,[0,3,]),
             ]
         ),
@@ -33913,7 +33974,7 @@ export Descriptor_ShowRoomUnit_Rifles_UK is TEntityDescriptor
         $/GFX/Weapon/WeaponDescriptor_Rifles_UK,
         TInfantrySquadModuleDescriptor
         (
-            NbSoldatInGroupeCombat = 7
+            NbSoldatInGroupeCombat = 8
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
             InfantryMimeticName = 'Rifles_UK'
             WeaponUnitFXKey     = 'Rifles_UK'
@@ -33933,7 +33994,8 @@ export Descriptor_ShowRoomUnit_Rifles_UK is TEntityDescriptor
 				(3,[0,3]),
 				(4,[0,]),
 				(5,[0,]),
-				(6,[0,2,]),
+				(6,[0,]),
+				(7,[0,2,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -34170,8 +34232,8 @@ export Descriptor_ShowRoomUnit_Rifles_half_CMD_US is TEntityDescriptor
         (
             InitialSoldiersToTurretIndexMap = MAP[
                 (0,[1,]),
-                (1,[1,]),
-                (2,[0,2,]),
+                (1,[1,2,]),
+                (2,[0,3,]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -34408,6 +34470,64 @@ export Descriptor_ShowRoomUnit_Rifles_half_LAW_US is TEntityDescriptor
                 //(3,[0,]),
                 //(4,[0,]),
                 //(5,[0,2,]),
+            ]
+        ),
+        ~/LinkTeamModuleDescriptor,
+        ~/EffectApplierModuleDescriptor,
+        TExperienceModuleDescriptor
+        (
+            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_simple_v2
+            CanWinExperience = True
+            ExperienceGainBySecond = ~/ExperienceGainBySecond
+            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
+        ),
+        TCameraShowroomModuleDescriptor
+        (
+            SpawnType = EShowroomSpawnType/Infantry
+        ),
+    ]
+)
+export Descriptor_ShowRoomUnit_Light_Inf_Plt_HQ_US is TEntityDescriptor
+(
+    DescriptorId        = GUID:{fa1bc171-f895-48c8-9953-aaca5d1f652e}
+    ClassNameForDebug   = "ShowRoomUnit_Rifles_half_LAW_US"
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Nationalite                      = ENationalite/Allied
+            MotherCountry                    = 'US'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/ShowroomPositionModuleDescriptor,
+        TApparenceModelModuleDescriptor
+        (
+            PickableObject       = False
+            Depiction            = ~/InfantryDepictionSquadShowroom
+            ReferenceMesh        = $/GFX/DepictionResources/Rien
+        ),
+        //$/GFX/Everything/WeaponDescriptor_Plt_HQ_US, //might cause a problem
+        TInfantrySquadModuleDescriptor
+        (
+            NbSoldatInGroupeCombat = 5
+            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
+            InfantryMimeticName = 'Rifles_half_LAW_US'
+            WeaponUnitFXKey     = 'Rifles_half_LAW_US'
+            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
+            (
+                DescriptorId = GUID:{31b2e06e-15f9-48fd-a882-8af5287f0e12}
+                MimeticName = 'Rifles_half_LAW_US'
+            )
+        ),
+        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
+        TInfantrySquadWeaponAssignmentModuleDescriptor
+        (
+            InitialSoldiersToTurretIndexMap = MAP[
+				(0,[0,]),
+				(1,[0,]),
+				(2,[0,]),
+				(3,[0,]),
+				(4,[0,1]),
             ]
         ),
         ~/LinkTeamModuleDescriptor,
@@ -41702,7 +41822,7 @@ export Descriptor_ShowRoomUnit_VDV_SOV is TEntityDescriptor
         $/GFX/Weapon/WeaponDescriptor_VDV_SOV,
         TInfantrySquadModuleDescriptor
         (
-            NbSoldatInGroupeCombat = 6
+            NbSoldatInGroupeCombat = 5
             SquadDataDescriptor = ~/SoldierSquadDataDescriptor
             InfantryMimeticName = 'VDV_SOV'
             WeaponUnitFXKey     = 'VDV_SOV'
@@ -41719,9 +41839,9 @@ export Descriptor_ShowRoomUnit_VDV_SOV is TEntityDescriptor
 				(0,[1,]),
 				(1,[0,4]),
 				(2,[0,]),
-				(3,[0,4]),
+				(3,[0,3]),
 				(4,[2,]),
-				(5,[0,3]),
+				//(5,[0,3]),
 				//(6,[2,]),
             ]
         ),

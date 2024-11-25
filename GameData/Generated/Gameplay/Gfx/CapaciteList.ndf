@@ -5214,6 +5214,49 @@ export Capacite_kill_missile_11_seconds is TCapaciteDescriptor
     Conditions = [
     ]
 )
+export Capacite_kill_missile_12_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{0bf1a14e-45d8-4f3c-b96c-380686408b35}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    InfluenceMapType     = ~/CapaciteInfluenceMapType_zones
+    ActionRadiusWithBoundingBox = False
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 12.10
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Effet_Meurt
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MinVirtualUnits         = 1
+    OrderMustSpreadTargets = False
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
 export Capacite_kill_missile_13_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{00c87951-98db-4637-ae9f-87d61cbeafca}

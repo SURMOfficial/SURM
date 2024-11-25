@@ -35,8 +35,8 @@ export ForetDense is TGameplayTerrain
             (DamageFamily_balledca, MAP [(ResistanceFamily_infanterie,0.5)]),
         ]
     DebugColor = rgba[2, 106, 2, 255]
-    DissimulationModifierGroundAir = 20
-    DissimulationModifierGroundGround = 24
+    DissimulationModifierGroundAir = 2.92 * 20
+    DissimulationModifierGroundGround = 2.92 * 24
     HeightInMeters = 11
     InflammabilityProbability = 0.8
     Name = 'ForetDense'
@@ -117,15 +117,15 @@ export PetitBatiment is TGameplayTerrain //light buildings
 			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
         ]
     DebugColor = rgba[0, 0, 0, 255]
-    DissimulationModifierGroundAir = 60
-    DissimulationModifierGroundGround = 55
+    DissimulationModifierGroundAir = 2.92 * 1000
+    DissimulationModifierGroundGround = 2.92 * 1000
     HeightInMeters = 8
     InflammabilityProbability = 0.2
     Name = 'PetitBatiment'
     SpeedModifierAllTerrainWheel = 0
     SpeedModifierInfantry = 0.35
     SpeedModifierTrack = 0
-    ConcealmentBonus = 6.0
+    ConcealmentBonus = 9.0
     //~~~~~~~~
     TerrainType = ~/ETerrainType/PetitBatiment
     WorldLayerActiveMask = 255
@@ -160,8 +160,8 @@ export Batiment is TGameplayTerrain //heavy buildings
 			(DamageFamily_suppress, MAP [(ResistanceFamily_infanterie,4.0)]), //experiment to make infantry in buildings easier to suppress
         ]
     DebugColor = rgba[0, 0, 0, 255]
-    DissimulationModifierGroundAir = 60
-    DissimulationModifierGroundGround = 55
+    DissimulationModifierGroundAir = 2.92 * 1000
+    DissimulationModifierGroundGround = 2.92 * 1000
     HeightInMeters = 8
     InflammabilityProbability = 0.2
     Name = 'Batiment'
@@ -203,8 +203,8 @@ export Ruin is TGameplayTerrain
 			(DamageFamily_suppress, MAP [(ResistanceFamily_infanterie,4.0)]), //experiment to make infantry in buildings easier to suppress
         ]
     DebugColor = rgba[0, 6, 200, 255]
-    DissimulationModifierGroundAir = 60
-    DissimulationModifierGroundGround = 55
+    DissimulationModifierGroundAir = 2.92 * 300
+    DissimulationModifierGroundGround = 2.92 * 300
     HeightInMeters = 4
     InflammabilityProbability = 0.2
     Name = 'Ruin'
