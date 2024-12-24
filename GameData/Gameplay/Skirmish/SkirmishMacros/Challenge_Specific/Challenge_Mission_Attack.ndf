@@ -25,7 +25,7 @@ is TMacroActionDescriptor_CorridorAttack_Specific
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = <NumberLaunchBasedOnGenerationType>),
         TCoordinationSettingHolder(CoordinationType = ESupportingStatus/NeedSupport),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = <MainAttackPoolModelList>
-            TaggedPoolModelList = [(["AttackMain"], <MainAttackPoolModelList>)] PrioritizeCorridorsForTaggedPoolModels = true LaunchASAP_RatioMin = 0.01),
+            TaggedPoolModelList = [(["AttackMain"], <MainAttackPoolModelList>)] PrioritizeCorridorsForTaggedPoolModels = true),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.00084), // Perte de 0.1 de ratio toutes les 2 minutes
         TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
     ]
@@ -113,26 +113,25 @@ export Blackhorse_Side_Attack is TMacroActionDescriptor_CorridorAttack_Specific
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible]
-        PoolModelList = [ Pool_BlackHorse_Attack, ] LaunchASAP_RatioMin = 0.01),
+        PoolModelList = [ Pool_BlackHorse_Attack, ]),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 1.0 RatioPourAttaquerPerduAChaqueTick = 0.001),
-        TAntiStackingSettingHolder(),
         TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
     ]
 )
 
 //-------------------------------------------------------------------------
-export Challenge_Alamo_Main_Attack is Template_Main_Attack
+export Challenge_Marauders_Main_Attack is Template_Main_Attack
 (
-    PoolModel_Generic = ~/Pool_Alamo_Main_Attack
-    PoolModel_Easy = ~/Pool_Alamo_Main_Attack
+    PoolModel_Generic = ~/Pool_Marauders_Main_Attack
+    PoolModel_Easy = ~/Pool_Marauders_Main_Attack
     RatioMinimumPourAttaquer = 0.75
 )
 
 //-------------------------------------------------------------------------
-export Challenge_Alamo_Main_Attack_Phase2 is Template_Main_Attack
+export Challenge_Marauders_Main_Attack_Phase2 is Template_Main_Attack
 (
-    PoolModel_Generic = ~/Pool_Alamo_Main_Attack_Phase2
-    PoolModel_Easy = ~/Pool_Alamo_Main_Attack_Phase2
+    PoolModel_Generic = ~/Pool_Marauders_Main_Attack_Phase2
+    PoolModel_Easy = ~/Pool_Marauders_Main_Attack_Phase2
     RatioMinimumPourAttaquer = 0.75
 )
 
@@ -147,30 +146,30 @@ is TMacroActionDescriptor_CorridorAttack_Specific
         ParametresDeMission =
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1 ConsiderOnlyAssignedCorridors = true),
-        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = <PoolModelList> LaunchASAP_RatioMin = 0.01),
+        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = <PoolModelList>),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer>),
         TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
     ]
 )
 
 //-------------------------------------------------------------------------
-export Challenge_Alamo_Aux_Attack is Template_Challenge_Simple_Corridor_Attack
+export Challenge_Marauders_Aux_Attack is Template_Challenge_Simple_Corridor_Attack
 (
     RatioMinimumPourAttaquer = 0.75
-    PoolModelList = [~/Pool_Alamo_Aux_Attack]
+    PoolModelList = [~/Pool_Marauders_Aux_Attack]
 )
 
 //-------------------------------------------------------------------------
-export Challenge_Alamo_Aux_Attack_Phase2 is Template_Challenge_Simple_Corridor_Attack
+export Challenge_Marauders_Aux_Attack_Phase2 is Template_Challenge_Simple_Corridor_Attack
 (
     RatioMinimumPourAttaquer = 0.75
-    PoolModelList = [~/Pool_Alamo_Aux_Attack_Phase2]
+    PoolModelList = [~/Pool_Marauders_Aux_Attack_Phase2]
 )
 
 //-------------------------------------------------------------------------
-export Challenge_Alamo_Artillery is Template_Artillery_TriggerHappy
+export Challenge_Marauders_Artillery is Template_Artillery_TriggerHappy
 (
-    PoolModelList= [~/Pool_Alamo_Arty]
+    PoolModelList= [~/Pool_Marauders_Arty]
 )
 
 //-------------------------------------------------------------------------
@@ -300,7 +299,7 @@ export Pool_BlackHorse_Attack is TPoolModel
 
 
 //-------------------------------------------------------------------------
-export Pool_Alamo_Main_Attack is TPoolModel
+export Pool_Marauders_Main_Attack is TPoolModel
 (
     ModelList = [
         TPoolElement(
@@ -439,7 +438,7 @@ export Pool_Alamo_Main_Attack is TPoolModel
 )
 
 //-------------------------------------------------------------------------
-export Pool_Alamo_Main_Attack_Phase2 is TPoolModel
+export Pool_Marauders_Main_Attack_Phase2 is TPoolModel
 (
     ModelList = [
         TPoolElement(
@@ -600,7 +599,7 @@ export Pool_Alamo_Main_Attack_Phase2 is TPoolModel
 )
 
 //-------------------------------------------------------------------------
-export Pool_Alamo_Aux_Attack is TPoolModel
+export Pool_Marauders_Aux_Attack is TPoolModel
 (
     ModelList = [
         TPoolElement(
@@ -694,7 +693,7 @@ export Pool_Alamo_Aux_Attack is TPoolModel
 )
 
 //-------------------------------------------------------------------------
-export Pool_Alamo_Aux_Attack_Phase2 is TPoolModel
+export Pool_Marauders_Aux_Attack_Phase2 is TPoolModel
 (
     ModelList = [
         TPoolElement(
@@ -853,7 +852,7 @@ export Pool_Alamo_Aux_Attack_Phase2 is TPoolModel
 )
 
 //-------------------------------------------------------------------------
-export Pool_Alamo_Arty is TPoolModel
+export Pool_Marauders_Arty is TPoolModel
 (
     ModelList = [
         TPoolElement(
@@ -871,7 +870,7 @@ export Pool_Alamo_Arty is TPoolModel
 )
 
 //-------------------------------------------------------------------------
-export Pool_Alamo_Side_Main_Attack is TPoolModel
+export Pool_Marauders_Side_Main_Attack is TPoolModel
 (
     ModelList = [
         TPoolElement(
@@ -944,7 +943,7 @@ export Pool_Alamo_Side_Main_Attack is TPoolModel
 )
 
 //-------------------------------------------------------------------------
-export Pool_Alamo_Side_Aux_Attack is TPoolModel
+export Pool_Marauders_Side_Aux_Attack is TPoolModel
 (
     ModelList = [
         TPoolElement(

@@ -1,18 +1,10 @@
-TemplateTargetCoordinator is TModuleSelector
-(
-    Default        = TTargetCoordinatorModuleDescriptor
-    (
-    )
-    Selection      = [ ~/NilDescriptorIfCadavre ]
-)
-
 template TemplateUnitCriticalModule
 [
    Module
 ] is TModuleSelector
 (
     Default        = <Module>
-    Selection      = [ ~/NilDescriptorIfCadavre ]
+    Condition      = ~/IfNotCadavreCondition
 )
 
 template TemplateUnitMissileCarriage
@@ -24,5 +16,5 @@ template TemplateUnitMissileCarriage
     (
         Connoisseur    = <Connoisseur>
     )
-    Selection      = [~/NilDescriptorIfCadavre]
+    Condition      = ~/IfNotCadavreCondition
 )

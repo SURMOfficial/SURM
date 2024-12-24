@@ -99,7 +99,6 @@ SDMask_SquashOrDestroy      is SDMask_Squash+SDMask_Destroy
 
 //-----------------------------------------------------------------------------
 MapCellSize                 is 655360
-
 //-----------------------------------------------------------------------------
 // primitive type (Synchronisé avec Core3D/Primitives.h)
 
@@ -389,7 +388,7 @@ CommandName is TBaseClass
 RSP_DecompressedBufferResourceThreshold is 5000*42
 
 //-----------------------------------------------------------------------------
-OneMeterInGameUnits is 215 //Francis (21/12/21) A virer ASAP
+GameUnitsPerLBU is 215 //Francis (21/12/21) A virer ASAP
 
 CaseSplitCount is TBaseClass
 (
@@ -411,14 +410,12 @@ CaseQueryExtent is TBaseClass // extent des cases de TDecorsHabilleurCase
 )
 
 LayerSettings_Visible                   is 0x01
-LayerSettings_Editable                  is 0x02
 LayerSettings_VisibilityLocked          is 0x04
-LayerSettings_EditabilityLocked         is 0x08
 
-MaskedEditorFeedbackLayerSettings   is LayerSettings_EditabilityLocked
-EditorFeedbackLayerSettings         is LayerSettings_Visible | LayerSettings_Editable | LayerSettings_EditabilityLocked
-EditableEditorFeedbackLayerSettings is LayerSettings_Visible | LayerSettings_Editable
-RenderLayerSettings                 is LayerSettings_Visible | LayerSettings_EditabilityLocked
+MaskedEditorFeedbackLayerSettings   is 0
+EditorFeedbackLayerSettings         is LayerSettings_Visible
+EditableEditorFeedbackLayerSettings is LayerSettings_Visible
+RenderLayerSettings                 is LayerSettings_Visible
 
 // /!\ Doit rester synchronisé avec l'enum dans UserInputKeyCode.h
 UserInputKeyboard is TBaseClass // namespace
@@ -758,7 +755,7 @@ Accnostab						  is 0.0
 AccCorr							  is 0.26 // 0.57 //this reduces the hit roll to compensate for the range corr increase
 AccCorrSov						  is 0.38 // 0.68 //for 3.3 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
 AccCorr25						  is 0.55 // 0.68 //for 2.5 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
-AccCorrAC						  is 0.5 // 0.35 //autocannons
+AccCorrAC						  is 0.3 // 0.35 //autocannons
 AccCorrHE						  is 0.4 // for direct fire HE apply on top of standard acc corr
 AccCorrRifle				      is 0.2 // 0.04 
 AccCorrCarb				      	  is 0.15 // 0.05
@@ -779,7 +776,7 @@ ProjSpeedCorrHeavy				  is 2.0
 ArtySuppressRadCorr				  is 2.3
 ArtySuppressCorr				  is 3.5
 BulletSuppressCorr				  is 0.1
-ACSuppressCorr				      is 0.3
+ACSuppressCorr				      is 0.8
 BulletSuppressRadCorr			  is 0.33
 FuelCorr						  is 75
 SupplyCorr						  is 1.85 //was 185 divide by 100
@@ -789,7 +786,7 @@ SniperSuppress				      is 175.0 //suppression from sniper fire
 pinneddamagereducer				  is 0.101 //can't use these in  the table, so  they are for reference
 engageddmagereducer				  is 0.299
 infdamageadjust					  is 0.51
-BuildingHealthMult				  is 3.0
+BuildingHealthMult				  is 3
 ScoutOpticBonus					  is 1.7
 TripodBonus						  is 1.8
 ClusterRadiusCorr				  is 1.4 //clusters experience the same radius fall off as HE so we have to widen their area of effect to compensate (not a great solution)

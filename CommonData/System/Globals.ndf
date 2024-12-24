@@ -1,6 +1,6 @@
 // A incrémenter quand on veut provoquer une recompilation des glads chez tout le monde sans gêner personne
 
-// Version : 00559
+// Version : 00564
 
 //-----------------------------------------------------------------------------
 // differentes constantes utilisees un peu partout.
@@ -99,7 +99,6 @@ SDMask_SquashOrDestroy      is SDMask_Squash+SDMask_Destroy
 
 //-----------------------------------------------------------------------------
 MapCellSize                 is 655360
-
 //-----------------------------------------------------------------------------
 // primitive type (Synchronisé avec Core3D/Primitives.h)
 
@@ -349,27 +348,6 @@ CommandName is TBaseClass
     ActivateTestObjective is "ObjectiveTest::ActivateDeactivate"
     ActivateDeactivateLabelTest is "LabelTest::ActivateDeactivate"
 
-    PythonLib25PackLoad is "Lib25PythonPack::Load"
-    PythonLib25PackUnload is "Lib25PythonPack::Unload"
-
-    PatchablePythonPackLoad is "PatchableResourcePythonPack::Load"
-    PatchablePythonPackUnload is "PatchableResourcePythonPack::Unload"
-
-    PythonPackLoad is "ResourcePythonPack::Load"
-    PythonPackUnload is "ResourcePythonPack::Unload"
-
-    EugenPythonPackLoad is "EugenResourcePythonPack::Load"
-    EugenPythonPackUnload is "EugenResourcePythonPack::Unload"
-
-    EugenSoloPythonPackLoad is "EugenSoloResourcePythonPack::Load"
-    EugenSoloPythonPackUnload is "EugenSoloResourcePythonPack::Unload"
-
-    EugenTestPythonPackLoad is "EugenTestResourcePythonPack::Load"
-    EugenTestPythonPackUnload is "EugenTestResourcePythonPack::Unload"
-
-    EugenScriptTestAutoPythonPackLoad is "EugenScriptTestAutoResourcePythonPack::Load"
-    EugenScriptTestAutoPythonPackUnload is "EugenScriptTestAutoResourcePythonPack::Unload"
-
     SituationAwarenessNextEvent is "TInstancePositionEvents::Trigg"
 
     UpdateStaticFXsQuality is "StaticLevelBuildManager::UpdateFXQuality"                                // ceci correspond au nom donné dans StaticLevelBuildManager.cpp
@@ -389,7 +367,7 @@ CommandName is TBaseClass
 RSP_DecompressedBufferResourceThreshold is 5000*42
 
 //-----------------------------------------------------------------------------
-OneMeterInGameUnits is 215 //Francis (21/12/21) A virer ASAP
+GameUnitsPerLBU is 215 //Francis (21/12/21) A virer ASAP
 
 CaseSplitCount is TBaseClass
 (
@@ -787,7 +765,7 @@ SniperSuppress				      is 175.0 //suppression from sniper fire
 pinneddamagereducer				  is 0.101 //can't use these in  the table, so  they are for reference
 engageddmagereducer				  is 0.299
 infdamageadjust					  is 0.51
-BuildingHealthMult				  is 3.0
+BuildingHealthMult				  is 3
 ScoutOpticBonus					  is 1.7
 TripodBonus						  is 1.8
 ClusterRadiusCorr				  is 1.4 //clusters experience the same radius fall off as HE so we have to widen their area of effect to compensate (not a great solution)

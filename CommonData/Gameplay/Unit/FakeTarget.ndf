@@ -20,8 +20,16 @@ Tactic_Descriptor_Unit_FakeTarget is TEntityDescriptor
         (
             UnitConcealmentBonus = 1.0
         ),
-        $/GFX/VisionRules/ScannerConfigurationDescriptor,
-        $/GFX/VisionRules/ScannerModuleDescriptor,
+        TScannerConfigurationDescriptor
+        (
+        ),
+        TReverseScannerWithIdentificationDescriptor
+        (
+            VisibilityRollRule = TModernWarfareVisibilityRollRule
+            (
+                VisibilityRuleDescriptor = $/GFX/VisionRules/StandardWargameVisibilityRollRule
+            )
+        ),
         TLinkTeamModuleDescriptor
         (
         ),
@@ -36,10 +44,6 @@ Tactic_Descriptor_Unit_FakeTarget is TEntityDescriptor
         ),
         TTargetDataModuleDescriptor
         (
-        ),
-        TCameraShowroomModuleDescriptor
-        (
-            SpawnType = EShowroomSpawnType/Vehicle
         ),
     ]
 )

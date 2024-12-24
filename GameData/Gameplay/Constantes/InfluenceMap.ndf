@@ -2,7 +2,7 @@ export influenceMapsTactic is TInfluenceMapDescriptors
 (
     ZoneInfluenceMapDescriptor = TInfluenceMapConstantesDescriptor
     (
-        TailleDeCaseGRU = 177 // Attention impacte lourdement sur les performances
+        TailleDeCaseGRU = 61//177 // Attention impacte lourdement sur les performances
 
         DefaultDecay = 0.001
         DefaultMomentum = 0.3
@@ -16,7 +16,7 @@ export influenceMapsStrategic is TInfluenceMapDescriptors
 (
     InfluenceMapDescriptor = TInfluenceMapConstantesDescriptor
     (
-        TailleDeCaseGRU = 71
+        TailleDeCaseGRU = 24//71
 
         // pour plus d'info --> https://confluence.eugennet.com/pages/viewpage.action?pageId=29364229
         DefaultDecay = 0.2

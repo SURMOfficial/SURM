@@ -6,7 +6,7 @@ export DefaultTerrain is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[0, 0, 0, 255]
+    DebugColor = RGBA[0, 0, 0, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -34,7 +34,7 @@ export ForetDense is TGameplayTerrain
             (DamageFamily_fmballe, MAP [(ResistanceFamily_infanterie,0.5)]),
             (DamageFamily_balledca, MAP [(ResistanceFamily_infanterie,0.5)]),
         ]
-    DebugColor = rgba[2, 106, 2, 255]
+    DebugColor = RGBA[2, 106, 2, 255]
     DissimulationModifierGroundAir = 2.92 * 20
     DissimulationModifierGroundGround = 2.92 * 24
     HeightInMeters = 11
@@ -74,9 +74,9 @@ export ForetLegere is TGameplayTerrain
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.5)]),
 			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.9)]),
         ]
-    DebugColor = rgba[70, 252, 70, 255]
-    DissimulationModifierGroundAir = 160
-    DissimulationModifierGroundGround = 160
+    DebugColor = RGBA[70, 252, 70, 255]
+    DissimulationModifierGroundAir = 90
+    DissimulationModifierGroundGround = 90
     HeightInMeters = 12
     InflammabilityProbability = 0.6
     Name = 'ForetLegere'
@@ -116,7 +116,7 @@ export PetitBatiment is TGameplayTerrain //light buildings
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.2)]),
 			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
         ]
-    DebugColor = rgba[0, 0, 0, 255]
+    DebugColor = RGBA[0, 0, 0, 255]
     DissimulationModifierGroundAir = 2.92 * 1000
     DissimulationModifierGroundGround = 2.92 * 1000
     HeightInMeters = 8
@@ -159,7 +159,7 @@ export Batiment is TGameplayTerrain //heavy buildings
 			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.1)]),
 			(DamageFamily_suppress, MAP [(ResistanceFamily_infanterie,4.0)]), //experiment to make infantry in buildings easier to suppress
         ]
-    DebugColor = rgba[0, 0, 0, 255]
+    DebugColor = RGBA[0, 0, 0, 255]
     DissimulationModifierGroundAir = 2.92 * 1000
     DissimulationModifierGroundGround = 2.92 * 1000
     HeightInMeters = 8
@@ -202,7 +202,7 @@ export Ruin is TGameplayTerrain
 			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
 			(DamageFamily_suppress, MAP [(ResistanceFamily_infanterie,4.0)]), //experiment to make infantry in buildings easier to suppress
         ]
-    DebugColor = rgba[0, 6, 200, 255]
+    DebugColor = RGBA[0, 6, 200, 255]
     DissimulationModifierGroundAir = 2.92 * 300
     DissimulationModifierGroundGround = 2.92 * 300
     HeightInMeters = 4
@@ -226,7 +226,7 @@ export Bloqueur is TGameplayTerrain
     BloqueVehicule = true
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[0, 0, 0, 255]
+    DebugColor = RGBA[0, 0, 0, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -248,7 +248,7 @@ export StrategicForest is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[255, 255, 25, 255]
+    DebugColor = RGBA[255, 255, 25, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -270,7 +270,7 @@ export StrategicPlain is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[255, 255, 25, 255]
+    DebugColor = RGBA[255, 255, 25, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -292,7 +292,7 @@ export StrategicSemiUrban is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[255, 255, 25, 255]
+    DebugColor = RGBA[255, 255, 25, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -314,7 +314,7 @@ export StrategicUrban is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[128, 128, 25, 255]
+    DebugColor = RGBA[128, 128, 25, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -336,7 +336,7 @@ export StrategicRiver is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[25, 25, 255, 255]
+    DebugColor = RGBA[25, 25, 255, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -359,7 +359,7 @@ export EauPeuProfonde is TGameplayTerrain
     BloqueVehicule = true
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[16, 228, 228, 255]
+    DebugColor = RGBA[16, 228, 228, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -382,7 +382,7 @@ export Rocher is TGameplayTerrain
     BloqueVehicule = true
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[186, 247, 200, 255]
+    DebugColor = RGBA[186, 247, 200, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -404,7 +404,7 @@ export SmokeHeavy is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[128, 128, 128, 255]
+    DebugColor = RGBA[128, 128, 128, 255]
     DissimulationModifierGroundAir = 1000
     DissimulationModifierGroundGround = 1000
     HeightInMeters = 25
@@ -445,7 +445,7 @@ export VehicleWreck is TGameplayTerrain //wrecks provide some cover
 			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,0.8)]),
 			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
         ]
-    DebugColor = rgba[128, 128, 128, 255]
+    DebugColor = RGBA[128, 128, 128, 255]
     DissimulationModifierGroundAir = 60
     DissimulationModifierGroundGround = 55
     HeightInMeters = 3
@@ -467,7 +467,7 @@ export SmokeLight is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[187, 187, 187, 255]
+    DebugColor = RGBA[187, 187, 187, 255]
     DissimulationModifierGroundAir = 1000
     DissimulationModifierGroundGround = 1000
     HeightInMeters = 25
@@ -489,7 +489,7 @@ export SmokeMedium is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[156, 156, 156, 255]
+    DebugColor = RGBA[156, 156, 156, 255]
     DissimulationModifierGroundAir = 1000
     DissimulationModifierGroundGround = 1000
     HeightInMeters = 25
@@ -511,7 +511,7 @@ export EauProfonde is TGameplayTerrain
     BloqueVehicule = true
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[16, 187, 187, 255]
+    DebugColor = RGBA[16, 187, 187, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0
@@ -534,7 +534,7 @@ export BloqueConstruction is TGameplayTerrain
     BloqueVehicule = false
     BloqueVision = false
     CriticalEffectProbability = 0
-    DebugColor = rgba[100, 100, 100, 100]
+    DebugColor = RGBA[100, 100, 100, 100]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
     HeightInMeters = 0

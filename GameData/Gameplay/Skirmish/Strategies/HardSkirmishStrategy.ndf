@@ -117,8 +117,8 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
 
         ~/CaptureHalfZoneObjectif_Ceil,
         // Reste du front
-        ~/Defense_Dynamic_Adaptive,
-        ~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
 
         ~/Attack_Filler,            // budget 40
 
@@ -128,8 +128,8 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/Defense_Static_Adaptive,
-        ~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
@@ -175,20 +175,25 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
         // Attaques principales
         //------------------------------
         ~/Attack_Main,
+        ~/Attack_Main,
+        ~/Attack_Main,
+        ~/Attack_Main,
+        ~/Attack_Helo,
+        ~/CaptureOneObjectif,
 
         //------------------------------
         // Défenses prioritaires
         //------------------------------
         // Statiques pour tenir le terrain
-        ~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        //~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
         ~/Defense_Static_AA,
         ~/Defense_Dynamic_AA,
 
-        ~/Defense_Dynamic_Adaptive,
-        ~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
 
         //Cet mission lance les objectifs restant
-        ~/Defense_Objectif,
+        //~/Defense_Objectif,
 
         ~/Attack_Helo,
         ~/Defense_Static_AA,
@@ -212,8 +217,8 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/Defense_Static_Adaptive,
-        ~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
 
         //Low prio mais peut servir si on n'a pas de zone dans nos couloirs
         ~/CaptureOneObjectifForAlliance,
@@ -260,6 +265,8 @@ export Hard_Phase_LastHope is TSequenceGeneratorDescriptor
         ~/Attack_Main,
         ~/Attack_Main,
         ~/Attack_Main,
+        ~/Attack_Main,
+        ~/Attack_Main,
         ~/Attack_Helo,
 
         ~/Attack_Filler,
@@ -271,7 +278,7 @@ export Hard_Phase_LastHope is TSequenceGeneratorDescriptor
         ~/Defense_Dynamic_AA,
 
         //Cet mission lance les objectifs restant
-        ~/Defense_Objectif,
+        //~/Defense_Objectif,
 
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
@@ -322,12 +329,13 @@ HardScaling is
     ~/Attack_Objectives_Autogen,
 
     ~/Attack_Main_Autogen,
+    ~/Attack_Main_Autogen,
     ~/Attack_Helo_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
 
-    ~/Defense_Dynamic_Adaptive_Autogen,
+    //~/Defense_Dynamic_Adaptive_Autogen,
     ~/Defense_Dynamic_Adaptive_Autogen,
     ~/Defense_Dynamic_AA_Autogen,
 

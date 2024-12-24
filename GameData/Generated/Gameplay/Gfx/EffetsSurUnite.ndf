@@ -885,6 +885,12 @@ export UnitEffect_Bouclier_Suppression_IFV is TEffectsPackDescriptor
             BonusDamage         = -33
             DamageType          = EDamageType/Suppress
         ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "IFV_ok",
+            ]
+        ),
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_ifv"
@@ -1035,7 +1041,7 @@ export UnitEffect_CanonAT_Suppressed is TEffectsPackDescriptor
 )
 export UnitEffect_Choc is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{e10be162-60bd-4113-8f44-e67daee0191f}
+    DescriptorId       = GUID:{a13be162-63bd-4223-8b44-e67daee0191f}
     NameForDebug       = 'Choc'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -1066,6 +1072,17 @@ export UnitEffect_Choc is TEffectsPackDescriptor
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_shock"
+        ),
+    ]
+)
+export UnitEffect_Choc_feedback is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{3f1521d2-d3c1-4ee5-95a5-1860daf2e023}
+    NameForDebug       = 'Choc_feedback'
+    EffectsDescriptors = [
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_shock_off"
         ),
     ]
 )
@@ -1330,7 +1347,7 @@ export UnitEffect_Critic_Deroute_Infantry is TEffectsPackDescriptor
 )
 export UnitEffect_Critic_Deroute_Infantry_Flee is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{baac34e2-e375-49ef-bc21-2a44877423c9}
+    DescriptorId       = GUID:{babc34e3-f375-59bf-bd21-2c44875424d9}
     NameForDebug       = 'Critic_Deroute_Infantry'
     EffectsDescriptors = [
         TUnitEffectIncreaseWeaponPorteeMaxDescriptor
@@ -2700,6 +2717,17 @@ export UnitEffect_GroundUnit_Cowering is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_IFV_feedback is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{e63f8a3b-1ee2-48e7-abfc-b082850c267d}
+    NameForDebug       = 'IFV_feedback'
+    EffectsDescriptors = [
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_ifv_off"
+        ),
+    ]
+)
 export UnitEffect_Infanterie_Courage_Effet is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{c06041c4-2c91-4c3b-88df-42b21063aa4e}
@@ -3174,6 +3202,12 @@ export UnitEffect_Malus_ciblage_UAV is TEffectsPackDescriptor
         (
             ModifierType       = ~/ModifierType_Pourcentage
             BonusPrecisionWhenTargeted = -50
+        ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "UAV",
+            ]
         ),
         TUnitEffectShowLabelIconDescriptor
         (
@@ -3883,6 +3917,17 @@ export UnitEffect_RoF_plus_75pourcent is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_SF_feedback is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{af8bc966-6022-4ecb-8d6c-038ee402df9d}
+    NameForDebug       = 'SF_feedback'
+    EffectsDescriptors = [
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_sf"
+        ),
+    ]
+)
 export UnitEffect_Steelman_supprimer_PA is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{f345ea94-ced6-4961-a8ac-d90597b4fddb}
@@ -4441,6 +4486,17 @@ export UnitEffect_military_police is TEffectsPackDescriptor
         ),
         TUnitEffectShowLabelIconDescriptor
         (
+            TextureToken         = "icone_mp_given"
+        ),
+    ]
+)
+export UnitEffect_military_police_feedback is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{09071ac9-8900-4e88-b230-54abbdf1b774}
+    NameForDebug       = 'military_police_feedback'
+    EffectsDescriptors = [
+        TUnitEffectShowLabelIconDescriptor
+        (
             TextureToken         = "icone_mp"
         ),
     ]
@@ -4545,6 +4601,17 @@ export UnitEffect_sigint_far is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_sigint_feedback is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{8dd93fa6-2b20-4386-9741-e83b1909b42a}
+    NameForDebug       = 'sigint_feedback'
+    EffectsDescriptors = [
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_sigint_off"
+        ),
+    ]
+)
 export UnitEffect_sniper is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{e0bdcad9-2b57-415b-bcd0-9f2ba391e1d6}
@@ -4574,6 +4641,98 @@ export UnitEffect_sniper is TEffectsPackDescriptor
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_sniper"
+        ),
+    ]
+)
+export UnitEffect_sniper_feedback is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{78a076bd-4203-4785-b780-c5531b0b2a87}
+    NameForDebug       = 'sniper_feedback'
+    EffectsDescriptors = [
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_sniper_off"
+        ),
+    ]
+)
+export UnitEffect_stressOnMiss_high is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{d9885cc3-77f6-4736-b3f0-8f446512f82f}
+    NameForDebug       = 'stressOnMiss_high'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseOpticalStrengthDescriptor
+        (
+            ModifierType         = ~/ModifierType_Additionnel
+            BonusOpticalStrength = -43
+        ),
+        TEffectInflictSuppressDamageDescriptor
+        (
+            ModifierType             = ~/ModifierType_Additionnel
+            SuppressDamageValue      = 250
+        ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "RadioJammed",
+            ]
+        ),
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_effet_stressOnMiss"
+        ),
+    ]
+)
+export UnitEffect_stressOnMiss_low is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{534b7c38-117f-4704-bd48-119646d21ef1}
+    NameForDebug       = 'stressOnMiss_low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseOpticalStrengthDescriptor
+        (
+            ModifierType         = ~/ModifierType_Additionnel
+            BonusOpticalStrength = -43
+        ),
+        TEffectInflictSuppressDamageDescriptor
+        (
+            ModifierType             = ~/ModifierType_Additionnel
+            SuppressDamageValue      = 75
+        ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "RadioJammed",
+            ]
+        ),
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_effet_stressOnMiss"
+        ),
+    ]
+)
+export UnitEffect_stressOnMiss_mid is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{6bd1c672-b306-40f3-b5cb-f4f8c2fcce6f}
+    NameForDebug       = 'stressOnMiss_mid'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseOpticalStrengthDescriptor
+        (
+            ModifierType         = ~/ModifierType_Additionnel
+            BonusOpticalStrength = -43
+        ),
+        TEffectInflictSuppressDamageDescriptor
+        (
+            ModifierType             = ~/ModifierType_Additionnel
+            SuppressDamageValue      = 150
+        ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "RadioJammed",
+            ]
+        ),
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_effet_stressOnMiss"
         ),
     ]
 )
@@ -5647,7 +5806,7 @@ export UnitEffect_ERA_hit_tag is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit1_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{e08008c6-9454-478e-8eb7-0f2e01f675d0}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5671,7 +5830,7 @@ export UnitEffect_ERA_hit_tag1 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit2_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{f1946b66-580f-4969-b0a6-813c5a992a44}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5695,7 +5854,7 @@ export UnitEffect_ERA_hit_tag2 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit3_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{2d70384b-574f-4a53-bd17-bd5cad041712}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5739,7 +5898,7 @@ export UnitEffect_ERA_hit3_remove_armor is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit4_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{9e3c3c9b-9cd0-463d-801c-6071908b48ab}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5750,7 +5909,7 @@ export UnitEffect_ERA_add_hit4_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag4 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{e47cd755-1968-4a68-a5cd-b41cc4ba89ae}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5763,7 +5922,7 @@ export UnitEffect_ERA_hit_tag4 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit5_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{b828e77d-e3a3-4310-9a39-32ee1fb1416c}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5774,7 +5933,7 @@ export UnitEffect_ERA_add_hit5_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag5 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{6c9e474b-9dcf-4936-93e8-fa0eb50aebfd}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5787,7 +5946,7 @@ export UnitEffect_ERA_hit_tag5 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit6_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{f8502d22-8bc4-4920-8802-999813448b15}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5798,7 +5957,7 @@ export UnitEffect_ERA_add_hit6_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag6 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{ffdfb40e-a31e-4682-8bf3-e5afb60f366e}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5831,7 +5990,7 @@ export UnitEffect_ERA_hit6_remove_armor is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit7_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{e2f24d2c-aafe-47a6-ba31-c9db3c0bb756}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5842,7 +6001,7 @@ export UnitEffect_ERA_add_hit7_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag7 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{488504a2-787f-47ad-bd02-a3658eb8fb91}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5855,7 +6014,7 @@ export UnitEffect_ERA_hit_tag7 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit8_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{0a737e85-dc2c-4322-80e3-216390813ad6}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5866,7 +6025,7 @@ export UnitEffect_ERA_add_hit8_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag8 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{6748f635-bebd-4ec0-9a31-22812b997bb8}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5879,7 +6038,7 @@ export UnitEffect_ERA_hit_tag8 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit9_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{d4bb0a06-fcce-41f3-b173-10a5bb008bbd}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5890,7 +6049,7 @@ export UnitEffect_ERA_add_hit9_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag9 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{0e1c5876-4878-495f-b8b2-7f025759ad6d}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5923,7 +6082,7 @@ export UnitEffect_ERA_hit9_remove_armor is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit10_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{384f761d-453e-4fc4-97ca-6442c6581a01}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5934,7 +6093,7 @@ export UnitEffect_ERA_add_hit10_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag10 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{84d85c1b-6f35-459f-be1c-8ce77de5cba9}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5947,7 +6106,7 @@ export UnitEffect_ERA_hit_tag10 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit11_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{ec4bc041-5a52-4520-a285-9b9acad301a0}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5958,7 +6117,7 @@ export UnitEffect_ERA_add_hit11_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag11 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{e3c6c141-c030-4cd0-8b9c-d1481da2bb70}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -5971,7 +6130,7 @@ export UnitEffect_ERA_hit_tag11 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit12_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{62f1aa8d-8a29-4e65-9c98-29a13b2df316}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -5982,7 +6141,7 @@ export UnitEffect_ERA_add_hit12_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag12 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{c4cdae10-34c9-4920-8438-da4ba0437bae}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -6019,7 +6178,7 @@ export UnitEffect_ERA_hit12_remove_armor is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit13_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{a8df4c47-ade2-4f87-b745-a1dafa13a010}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -6030,7 +6189,7 @@ export UnitEffect_ERA_add_hit13_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag13 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{162e5a82-0d68-48af-b1a3-46002e296f59}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -6043,7 +6202,7 @@ export UnitEffect_ERA_hit_tag13 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit14_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{6da43c8f-bc29-45ef-98cb-f619f9563deb}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -6054,7 +6213,7 @@ export UnitEffect_ERA_add_hit14_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag14 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{03088bac-5de2-4ccf-a160-3326ae8542cf}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -6067,7 +6226,7 @@ export UnitEffect_ERA_hit_tag14 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit15_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{cdc6c9c7-f7df-481a-b552-19f9c5c07f5b}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -6078,7 +6237,7 @@ export UnitEffect_ERA_add_hit15_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag15 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{3cc12392-6cd6-414c-9fa4-4e9d12ae5e14}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -6115,7 +6274,7 @@ export UnitEffect_ERA_hit15_remove_armor is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit16_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{c6d1a8c4-46b7-4050-9b64-33f7f36fbb71}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -6126,7 +6285,7 @@ export UnitEffect_ERA_add_hit16_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag16 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{547ae940-04cb-4e37-a2ac-4a11687ff963}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -6139,7 +6298,7 @@ export UnitEffect_ERA_hit_tag16 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit17_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{13722bfd-0ba6-4ee1-9ae8-560933b3c786}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -6150,7 +6309,7 @@ export UnitEffect_ERA_add_hit17_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag17 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{c7e4282d-02a1-4a4a-9ef3-da696a2a3955}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -6163,7 +6322,7 @@ export UnitEffect_ERA_hit_tag17 is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_add_hit18_cap is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{2a3ab0e6-cdbe-45d3-9298-0ba811790548}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor
@@ -6174,7 +6333,7 @@ export UnitEffect_ERA_add_hit18_cap is TEffectsPackDescriptor
 )
 export UnitEffect_ERA_hit_tag18 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{9037772b-a2ec-4d2f-82de-c2b8bdae32c1}
+    DescriptorId       = GUID:{235d59f6-28db-4281-bc66-05c96016a95d}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
 		TUnitEffectRaiseTagDescriptor
@@ -6226,7 +6385,7 @@ export UnitEffect_ERA_hit_add is TEffectsPackDescriptor
 )
 /*export UnitEffect_ERA_hit_1 is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{05fffcd8-d8ea-4eee-a486-af6514f3b079}
+    DescriptorId       = GUID:{b78cc4d6-90f7-4770-8c88-d44b387eb86c}
     NameForDebug       = 'ERA_hit'
     EffectsDescriptors = [
         TUnitEffectAddCapacityDescriptor

@@ -128,8 +128,8 @@ export VHard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/Defense_Static_Adaptive,
-        ~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
@@ -176,25 +176,30 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
         // Attaques principales
         //------------------------------
         ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
+        ~/Attack_Main,
+        ~/Attack_Main,
+        ~/Attack_Main,
         ~/Attack_Helo,
+        ~/CaptureOneObjectif,
 
         //------------------------------
         // Défenses prioritaires
         //------------------------------
         // Statiques pour tenir le terrain
-        ~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
-        ~/Defense_Static_AA,
+        //~/Defense_Static_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        //~/Defense_Static_AA,
         ~/Defense_Dynamic_AA,
 
-        ~/Defense_Dynamic_Adaptive,
-        ~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
+        //~/Defense_Dynamic_Adaptive,
 
         //Cet mission lance les objectifs restant
-        ~/Defense_Objectif,
+        //~/Defense_Objectif,
 
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
         ~/Attack_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
+        ~/Attack_Adaptive,
         ~/Attack_Adaptive,
         ~/Attack_Filler,
 
@@ -212,13 +217,13 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
         //------------------------------
         ~/Airstrike_Assault,
 
-        ~/Defense_Static_AA,
+        //~/Defense_Static_AA,
         ~/Defense_Dynamic_AA,
 
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/Defense_Static_Adaptive,
-        ~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
+        //~/Defense_Static_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
@@ -269,12 +274,16 @@ export VHard_Phase_LastHope is TSequenceGeneratorDescriptor
         ~/Defense_Dynamic_AA,
 
         //Cet mission lance les objectifs restant
-        ~/Defense_Objectif,
+        //~/Defense_Objectif,
 
         //------------------------------
         // Attaques principales
         //------------------------------
-        ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
+        ~/Attack_Main,
+        ~/Attack_Main,
+        ~/Attack_Main,
+        ~/Attack_Main,   
+        ~/Attack_Main,           // Plusieurs tanks pour un budget donné // 200
         ~/Attack_Helo,
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
@@ -324,13 +333,14 @@ VeryHardScaling is
     ~/Attack_Objectives_Autogen,
 
     ~/Attack_Main_Autogen,
+    ~/Attack_Main_Autogen,
     ~/Attack_Helo_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
     ~/Attack_Adaptive_Autogen,
 
     ~/Defense_Dynamic_Adaptive_Autogen,
-    ~/Defense_Dynamic_Adaptive_Autogen,
+    //~/Defense_Dynamic_Adaptive_Autogen,
     ~/Defense_Dynamic_AA_Autogen,
 
     ~/Airstrike_Assault_Autogen,
