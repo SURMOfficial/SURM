@@ -9252,43 +9252,6 @@ SubGenerators_Showroom_MiG_21bis_HE_POL is TStaticMissileCarriageSubDepictionGen
     Pylons = ~/DepictionPylonSet_Airplane_SOV_Showroom
     ReferenceMesh = $/GFX/DepictionResources/Modele_MiG_21bis_HE_POL
 )
-SubGenerators_MiG_21bis_RKT2_DDR is TStaticMissileCarriageSubDepictionGenerator
-(
-    MissileCarriageConnoisseur = MissileCarriage_MiG_21bis_RKT2_DDR
-    Missiles = 
-    [
-        TStaticMissileCarriageSubDepictionMissileInfo
-        (
-            Depiction = TemplateDepictionStaticMissiles
-            (
-                PhysicalProperty = "Tourelle2_MissileCount"
-                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S_24_240mm
-            )
-            MissileCount = 4
-            WeaponIndex = 2
-        ),
-    ]
-    Pylons = ~/DepictionPylonSet_Airplane_SOV
-    ReferenceMesh = $/GFX/DepictionResources/Modele_MiG_21bis_RKT2_DDR
-)
-SubGenerators_Showroom_MiG_21bis_RKT2_DDR is TStaticMissileCarriageSubDepictionGenerator
-(
-    MissileCarriageConnoisseur = MissileCarriage_MiG_21bis_RKT2_DDR_Showroom
-    Missiles = 
-    [
-        TStaticMissileCarriageSubDepictionMissileInfo
-        (
-            Depiction = TemplateDepictionMissileShowroom
-            (
-                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S_24_240mm
-            )
-            MissileCount = 4
-            WeaponIndex = 2
-        ),
-    ]
-    Pylons = ~/DepictionPylonSet_Airplane_SOV_Showroom
-    ReferenceMesh = $/GFX/DepictionResources/Modele_MiG_21bis_RKT2_DDR
-)
 SubGenerators_MiG_21bis_NPLM_DDR is TStaticMissileCarriageSubDepictionGenerator
 (
     MissileCarriageConnoisseur = MissileCarriage_MiG_21bis_NPLM_DDR

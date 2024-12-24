@@ -25414,62 +25414,6 @@ export Descriptor_ShowRoomUnit_KSK18_DDR is TEntityDescriptor
         ),
     ]
 )
-export Descriptor_ShowRoomUnit_KSM_CMD_RFA is TEntityDescriptor
-(
-    DescriptorId        = GUID:{f001b5f7-519e-4024-95f9-0ed7c9b0b6fa}
-    ClassNameForDebug   = "ShowRoomUnit_KSM_CMD_RFA"
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                      = ECoalition/Allied
-            MotherCountry                    = 'RFA'
-            AcknowUnitType                   = ~/TAcknowUnitType_Command_Infantry
-            TypeUnitFormation                = 'Supply'
-        ),
-        ~/ShowroomPositionModuleDescriptor,
-        TApparenceModuleDescriptor
-        (
-            PickableObject       = False
-            Depiction            = $/GFX/Depiction/InfantryDepictionSquadShowroom
-            ReferenceMesh        = $/GFX/DepictionResources/Rien
-        ),
-        $/GFX/Weapon/WeaponDescriptor_KSM_CMD_RFA,
-        TInfantrySquadModuleDescriptor
-        (
-            NbSoldatInGroupeCombat = 2
-            SquadDataDescriptor = ~/SoldierSquadDataDescriptor
-            InfantryMimeticName = 'KSM_CMD_RFA'
-            WeaponUnitFXKey     = 'KSM_CMD_RFA'
-            MimeticDescriptor   = Descriptor_Unit_MimeticUnit
-            (
-                DescriptorId = GUID:{aafc1ec8-06d4-4ebe-a90f-f9c8739174bd}
-                MimeticName = 'KSM_CMD_RFA'
-            )
-        ),
-        ~/LineInfantrySquadSlotPositionsModuleDescriptor,
-        TInfantrySquadWeaponAssignmentModuleDescriptor
-        (
-            InitialSoldiersToTurretIndexMap = MAP[
-                (0,[0,]),
-                (1,[0,]),
-            ]
-        ),
-        ~/LinkTeamModuleDescriptor,
-        ~/EffectApplierModuleDescriptor,
-        TExperienceModuleDescriptor
-        (
-            ExperienceLevelsPackDescriptor = ~/ExperienceLevelsPackDescriptor_XP_pack_SF
-            CanWinExperience = True
-            ExperienceGainBySecond = ~/ExperienceGainBySecond
-            ExperienceMultiplierBonusOnKill = ~/ExperienceMultiplierBonusOnKill
-        ),
-        TCameraShowroomModuleDescriptor
-        (
-            SpawnType = EShowroomSpawnType/Infantry
-            HasServants = False
-        ),
-    ]
-)
 export Descriptor_ShowRoomUnit_KanJagdPanzer_BEL is TEntityDescriptor
 (
     DescriptorId        = GUID:{e417ae7f-7fd6-4486-bcfb-cf652d1e580c}

@@ -9088,47 +9088,6 @@ TacticDepiction_KSK18_DDR_Ghost is TemplateInfantryDepictionFactoryGhost
   Selector = InfantrySelectorTactic_01_05
   Alternatives = TacticDepiction_KSK18_DDR_Alternatives
 )
-// *****************************[ KSM_CMD_RFA ]*********************************
-export Gfx_KSM_CMD_RFA is TemplateInfantryDepictionSquad
-(
-  SoundOperator = $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_GER
-)
-AllWeaponAlternatives_KSM_CMD_RFA is [
-  TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_MP5A3 ),
-  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_MP5A3 ),
-]
-AllWeaponSubDepiction_KSM_CMD_RFA is TemplateAllSubWeaponDepiction
-(
-  Alternatives = AllWeaponAlternatives_KSM_CMD_RFA
-  Operators = [
-    DepictionOperator_WeaponInstantFireInfantry
-    (
-      FireEffectTag = ["FireEffect_PM_MP_5A3"]
-      WeaponShootDataPropertyName = "WeaponShootData_0_1"
-    ),
-  ]
-)
-AllWeaponSubDepictionBackpack_KSM_CMD_RFA is TemplateAllSubBackpackWeaponDepiction
-(
-  Alternatives = AllWeaponAlternatives_KSM_CMD_RFA
-)
-TacticDepiction_KSM_CMD_RFA_Alternatives is [
-  TDepictionDescriptor( SelectorId = [LOD_High, '01'] MeshDescriptor = $/GFX/DepictionResources/Modele_KSM_CMD_RFA ),
-  TDepictionDescriptor( SelectorId = [LOD_Low]  MeshDescriptor = $/GFX/DepictionResources/Modele_KSM_CMD_RFA_LOW ),
-  TMeshlessDepictionDescriptor( SelectorId = ['none']  ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_KSM_CMD_RFA ),
-]
-TacticDepiction_KSM_CMD_RFA_Soldier is TemplateInfantryDepictionFactoryTactic
-(
-  Selector = InfantrySelectorTactic_00_01
-  Alternatives = TacticDepiction_KSM_CMD_RFA_Alternatives
-  SubDepictions = [AllWeaponSubDepiction_KSM_CMD_RFA, AllWeaponSubDepictionBackpack_KSM_CMD_RFA]
-  Operators = [DepictionOperator_SkeletalAnimation2_Default( ConditionalTags = [ ('smg', 'MeshAlternative_1') ] )]
-)
-TacticDepiction_KSM_CMD_RFA_Ghost is TemplateInfantryDepictionFactoryGhost
-(
-  Selector = InfantrySelectorTactic_00_01
-  Alternatives = TacticDepiction_KSM_CMD_RFA_Alternatives
-)
 // *****************************[ KdA_CMD_DDR ]*********************************
 export Gfx_KdA_CMD_DDR is TemplateInfantryDepictionSquad
 (

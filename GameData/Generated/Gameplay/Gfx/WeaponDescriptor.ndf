@@ -48859,37 +48859,6 @@ export WeaponDescriptor_KSK18_DDR is TWeaponManagerModuleDescriptor
         )
     ]
 )
-export WeaponDescriptor_KSM_CMD_RFA is TWeaponManagerModuleDescriptor
-(
-    Salves           = [ 30, ]
-    AlwaysOrientArmorTowardsThreat = False
-    TurretDescriptorList = [
-        TTurretInfanterieDescriptor
-        (
-            MountedWeaponDescriptorList = [
-                TMountedWeaponDescriptor
-                (
-                    Ammunition                          = $/GFX/Weapon/Ammo_PM_MP_5A3
-                    AnimateOnlyOneSoldier               = False
-                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
-                    DispersionRadiusOffThickness        = -0.1
-                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
-                    DispersionRadiusOnThickness         = -0.1
-                    EffectTag                           = 'FireEffect_PM_MP_5A3'
-                    HandheldEquipmentKey                = 'MeshAlternative_1'
-                    NbWeapons                           = 2
-                    SalvoStockIndex                     = 0
-                    ShowDispersion                      = False
-                    ShowInInterface                     = True
-                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
-                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
-                    WeaponShootDataPropertyName         = ["WeaponShootData_0_1", ]
-                )
-            ]
-            YulBoneOrdinal              = 1
-        )
-    ]
-)
 export WeaponDescriptor_KanJagdPanzer_BEL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 51, 100, 1, ]

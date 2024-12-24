@@ -22052,41 +22052,6 @@ Descriptor_UnitCadavre_KSK18_DDR is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
-Descriptor_UnitCadavre_KSM_CMD_RFA is TEntityDescriptor
-(
-    DescriptorId       = GUID:{14eca85a-c449-4a81-9f30-68056eac140e}
-    ClassNameForDebug  = 'Unit_CadavreKSM_CMD_RFA'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                      = ECoalition/Allied
-            MotherCountry                    = 'RFA'
-            AcknowUnitType                   = ~/TAcknowUnitType_Command_Infantry
-            TypeUnitFormation                = 'Supply'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        ~/UnitCadavrePositionModuleDescriptor,
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsInfanterie = True
-            CadavreDuration = ~/CadavreDuration_Infanterie
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_KSM_CMD_RFA/GroupeCombat,
-                ~/Descriptor_Unit_KSM_CMD_RFA/LandMovement,
-                ~/Descriptor_Unit_KSM_CMD_RFA/GenericMovement,
-            ]
-        ),
-        ~/Descriptor_Unit_KSM_CMD_RFA/GroupeCombat,
-        ~/Descriptor_Unit_KSM_CMD_RFA/LandMovement,
-        ~/Descriptor_Unit_KSM_CMD_RFA/GenericMovement,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
 Descriptor_UnitCadavre_KanJagdPanzer_BEL is TEntityDescriptor
 (
     DescriptorId       = GUID:{34586c7e-2ba9-4479-912a-46f28beb9d1d}
