@@ -2653,7 +2653,7 @@ export Capacite_vehicle_cover is TCapaciteDescriptor
     AllowReflexDuringCast   = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_infantry_cover2
-    TargetEffectDuration = 1.00
+    TargetEffectDuration = -1.00
     SelfEffectDuration   = 0.00
     MaxTargetNb            = 1
     MultiplyCost           = False
@@ -2692,7 +2692,7 @@ export Capacite_vehicle_stop is TCapaciteDescriptor
     AllowReflexDuringCast   = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_vehicle_stopped_hit_perc //immediately easier to hit (needs test)
-    TargetEffectDuration = 1.00
+    TargetEffectDuration = -1.00
     SelfEffectDuration   = 0.00
     MaxTargetNb            = 1
     MultiplyCost           = False
@@ -2746,6 +2746,8 @@ export Capacite_dig_in is TCapaciteDescriptor //hasty position
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 	Conditions = [
         ~/ConditionTagRaisedInUnit_dig_in_ok_1,
 		~/ConditionNotInMovement,
@@ -2786,6 +2788,9 @@ export Capacite_IFV is TCapaciteDescriptor
     TagsCiblePossible = [
         "Infanterie_IFV",
     ]
+    TagsCibleExcluded = [
+    ]
+
 )
 export Capacite_IFV_feedback is TCapaciteDescriptor
 (
@@ -2861,6 +2866,8 @@ export Capacite_Observer_ring is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 )
 export Capacite_Observer_ring_batt is TCapaciteDescriptor
 (
@@ -2895,6 +2902,8 @@ export Capacite_Observer_ring_batt is TCapaciteDescriptor
     DisplayRangeThickness  = 0.80
     Price = MAP[]
     TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
     ]
 )
 export Capacite_BattComm is TCapaciteDescriptor //experimental battalion command capability added export and it compiled
@@ -2932,6 +2941,8 @@ export Capacite_BattComm is TCapaciteDescriptor //experimental battalion command
     TagsCiblePossible = [
         "Commandant",
     ]
+    TagsCibleExcluded = [
+    ]
 
 )
 export Capacite_Burn_Bailed_Tank is TCapaciteDescriptor
@@ -2968,7 +2979,11 @@ export Capacite_Burn_Bailed_Tank is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
 	"Bailed_Out",
-	"Infanterie_Cowering",
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+        ~/ConditionTagNotRaisedInUnit_Panique_1,
     ]
 )
 export Capacite_Provide_extra_XP is TCapaciteDescriptor
@@ -3005,6 +3020,8 @@ export Capacite_Provide_extra_XP is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
 	"AllUnits",
+    ]
+    TagsCibleExcluded = [
     ]
 )
 export Capacite_Infanterie_Dissimulee is TCapaciteDescriptor
@@ -3171,34 +3188,77 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
     DescriptorId     = GUID:{f7541be5-1442-46ea-8f96-8128dd7ea358}
     Name             = "Menace_Ennemi_Proche"
     NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TypeCible            = ~/CapaciteTypeCible_unite
-    TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
-    AreaShape            = ~/CapaciteAreaShape_circulaire
-    RadiusGRU              = 35.00
-    RangeGRU               = 35.00
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TypeCible               = ~/CapaciteTypeCible_unite
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    TargetWoundedFilter     = ~/CapaciteWoundedFilterType_tout
+    AreaShape               = ~/CapaciteAreaShape_circulaire
+    RadiusGRU              = 0
+    RangeGRU               = 30
     CastTime            = 0.00
-    Cooldown            = 1.00
-    CheckVisibility     = True
+    Cooldown            = 0.10
+    CheckVisibility     = False
     AllowReflexDuringCast   = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_Ajoute_Tag_Ennemi_Proche
-    TargetEffectDuration = 2.00
-    SelfEffectDuration   = 0.00
-    MaxTargetNb            = -1
+    TargetEffect         = ~/UnitEffect_Reddition_Effet_kill
+    TargetEffectDuration    = -1.00
+    SelfEffectDuration      = -1.00
+    MaxTargetNb            = 1
     MultiplyCost           = False
     TargetInBuilding       = True
     TargetInTransport      = True
     TargetInSelf           = True
-    TargetMySelf           = False
+    TargetMySelf           = True
     FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+	"Infanterie_Cowering",
+    ]
+    TagsCibleExcluded = [
+	"Allie_Proche",
+    ]
+    Conditions = [
+        ~/ConditionTagNotRaisedInUnit_Panique_1,
+    ]
+)
+export Capacite_Menace_Ennemi_Proche_flee is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{d2d8d211-c923-4823-a0b3-b2b0e269fa2a}
+    Name             = "Menace_Ennemi_Proche"
+    NameToken        = "None"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TypeCible               = ~/CapaciteTypeCible_unite
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    TargetWoundedFilter     = ~/CapaciteWoundedFilterType_tout
+    AreaShape               = ~/CapaciteAreaShape_circulaire
+    RadiusGRU              = 0
+    RangeGRU               = 30
+    CastTime            = 0.00
+    Cooldown            = 0.10
+    CheckVisibility     = False
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Critic_Deroute_Infantry_Flee
+    TargetEffectDuration    = -1.00
+    SelfEffectDuration      = -1.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+	"Infanterie_Cowering",
     ]
     TagsCibleExcluded = [
     ]
@@ -3211,36 +3271,38 @@ export Capacite_Menace_Ennemi_Proche_tank is TCapaciteDescriptor
     DescriptorId     = GUID:{0b62b7aa-189f-4505-88c2-46ef96891d47}
     Name             = "Menace_Ennemi_Proche"
     NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TypeCible            = ~/CapaciteTypeCible_unite
-    TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
-    AreaShape            = ~/CapaciteAreaShape_circulaire
-    RadiusGRU              = 20.00
-    RangeGRU               = 20.00
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TypeCible               = ~/CapaciteTypeCible_unite
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    TargetWoundedFilter     = ~/CapaciteWoundedFilterType_tout
+    AreaShape               = ~/CapaciteAreaShape_circulaire
+    RadiusGRU              = 0
+    RangeGRU               = 20
     CastTime            = 0.00
-    Cooldown            = 1.00
-    CheckVisibility     = True
+    Cooldown            = 0.10
+    CheckVisibility     = False
     AllowReflexDuringCast   = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_Ajoute_Tag_Ennemi_Proche_tank
-    TargetEffectDuration = 2.00
-    SelfEffectDuration   = 0.00
-    MaxTargetNb            = -1
+    TargetEffect         = ~/UnitEffect_Critic_Deroute_Infantry_Flee
+    TargetEffectDuration    = -1.00
+    SelfEffectDuration      = -1.00
+    MaxTargetNb            = 1
     MultiplyCost           = False
     TargetInBuilding       = True
     TargetInTransport      = True
     TargetInSelf           = True
-    TargetMySelf           = False
+    TargetMySelf           = True
     FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+	"Infanterie_Cowering",
     ]
     TagsCibleExcluded = [
+	"Allie_Proche",
     ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
@@ -3660,16 +3722,16 @@ export Capacite_Soutien_Allie_Proche is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
     AreaShape            = ~/CapaciteAreaShape_circulaire
-    RadiusGRU              = 50.00
-    RangeGRU               = 50.00
+    RadiusGRU              = 50
+    RangeGRU               = 50
     CastTime            = 0.00
-    Cooldown            = 1.00
+    Cooldown                = 0.10
     CheckVisibility     = True
     AllowReflexDuringCast   = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_Allie_Proche
-    TargetEffectDuration = 2.00
-    SelfEffectDuration   = 0.00
+    TargetEffectDuration    = -1.00
+    SelfEffectDuration      = -1.00
     MaxTargetNb            = -1
     MultiplyCost           = False
     TargetInBuilding       = True
@@ -4041,6 +4103,8 @@ export Capacite_disp_electronic_warfare is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 )
 export Capacite_disp_electronic_warfare_basic is TCapaciteDescriptor
 (
@@ -4075,6 +4139,8 @@ export Capacite_disp_electronic_warfare_basic is TCapaciteDescriptor
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
     ]
 )
 export Capacite_electronic_warfare_basic is TCapaciteDescriptor
@@ -5354,7 +5420,7 @@ export Capacite_cover_no_cover is TCapaciteDescriptor //want a delay so vehicles
     AllowReflexDuringCast   = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_cover_ok
-    TargetEffectDuration = 1.00
+    TargetEffectDuration = -1.00
     SelfEffectDuration   = 15.00
     MaxTargetNb            = 1
     MultiplyCost           = False
@@ -5373,7 +5439,6 @@ export Capacite_cover_no_cover is TCapaciteDescriptor //want a delay so vehicles
     Conditions = [
         ~/ConditionNotInMovement,
     ]
-
 )
 export Capacite_dig_in_no_dig_in is TCapaciteDescriptor //want a delay so vehicles can't just vanish out of sight for a ATGM for example after moving
 (
@@ -5450,6 +5515,8 @@ export Capacite_no_tripod is TCapaciteDescriptor //HMGs and AGLs need to be moun
     Price = MAP[]
     TagsCiblePossible = [
     ]
+    TagsCibleExcluded = [
+    ]
 	Conditions = [
         ~/ConditionNotTagRaisedInUnit_tripod_ok_1,
     ]
@@ -5487,6 +5554,8 @@ export Capacite_tripod is TCapaciteDescriptor //set up tripod
     DisplayRangeThickness  = 0.00
     Price = MAP[]
     TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
     ]
 	Conditions = [
         ~/ConditionTagRaisedInUnit_tripod_ok_1,

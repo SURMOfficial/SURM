@@ -24756,41 +24756,6 @@ Descriptor_UnitCadavre_Luftsturmjager_DDR is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
-Descriptor_UnitCadavre_Luftsturmjager_HMG_DDR is TEntityDescriptor
-(
-    DescriptorId       = GUID:{d1d334b3-4005-427f-b5b2-282c3aaaf975}
-    ClassNameForDebug  = 'Unit_CadavreLuftsturmjager_HMG_DDR'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                      = ECoalition/Axis
-            MotherCountry                    = 'DDR'
-            AcknowUnitType                   = ~/TAcknowUnitType_Inf
-            TypeUnitFormation                = 'Char'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        ~/UnitCadavrePositionModuleDescriptor,
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsInfanterie = True
-            CadavreDuration = ~/CadavreDuration_Infanterie
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_Luftsturmjager_HMG_DDR/GroupeCombat,
-                ~/Descriptor_Unit_Luftsturmjager_HMG_DDR/LandMovement,
-                ~/Descriptor_Unit_Luftsturmjager_HMG_DDR/GenericMovement,
-            ]
-        ),
-        ~/Descriptor_Unit_Luftsturmjager_HMG_DDR/GroupeCombat,
-        ~/Descriptor_Unit_Luftsturmjager_HMG_DDR/LandMovement,
-        ~/Descriptor_Unit_Luftsturmjager_HMG_DDR/GenericMovement,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
 Descriptor_UnitCadavre_Luftsturmjager_Metis_DDR is TEntityDescriptor
 (
     DescriptorId       = GUID:{9f36307e-d5ee-4ee5-a4a3-22196f586bc0}
@@ -39950,41 +39915,6 @@ Descriptor_UnitCadavre_Rover_101FC_supply_UK is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
-Descriptor_UnitCadavre_SAS_CMD_FR is TEntityDescriptor
-(
-    DescriptorId       = GUID:{822ec6e2-a30f-44af-a90d-441b9fd9d88e}
-    ClassNameForDebug  = 'Unit_CadavreSAS_CMD_FR'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                      = ECoalition/Allied
-            MotherCountry                    = 'FR'
-            AcknowUnitType                   = ~/TAcknowUnitType_Command
-            TypeUnitFormation                = 'Supply'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        ~/UnitCadavrePositionModuleDescriptor,
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsInfanterie = True
-            CadavreDuration = ~/CadavreDuration_Infanterie
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_SAS_CMD_FR/GroupeCombat,
-                ~/Descriptor_Unit_SAS_CMD_FR/LandMovement,
-                ~/Descriptor_Unit_SAS_CMD_FR/GenericMovement,
-            ]
-        ),
-        ~/Descriptor_Unit_SAS_CMD_FR/GroupeCombat,
-        ~/Descriptor_Unit_SAS_CMD_FR/LandMovement,
-        ~/Descriptor_Unit_SAS_CMD_FR/GenericMovement,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
 Descriptor_UnitCadavre_SAS_FR is TEntityDescriptor
 (
     DescriptorId       = GUID:{fe678b26-7ac2-4817-a833-412d1f74bf3f}
@@ -40551,76 +40481,6 @@ Descriptor_UnitCadavre_Scout_BEL is TEntityDescriptor
         ~/Descriptor_Unit_Scout_BEL/GroupeCombat,
         ~/Descriptor_Unit_Scout_BEL/LandMovement,
         ~/Descriptor_Unit_Scout_BEL/GenericMovement,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
-Descriptor_UnitCadavre_Scout_CMD_DDR is TEntityDescriptor
-(
-    DescriptorId       = GUID:{1eb6149f-9ce0-4db9-94fd-d416b5d54097}
-    ClassNameForDebug  = 'Unit_CadavreScout_CMD_DDR'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                      = ECoalition/Axis
-            MotherCountry                    = 'DDR'
-            AcknowUnitType                   = ~/TAcknowUnitType_Command_Infantry
-            TypeUnitFormation                = 'Supply'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        ~/UnitCadavrePositionModuleDescriptor,
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsInfanterie = True
-            CadavreDuration = ~/CadavreDuration_Infanterie
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_Scout_CMD_DDR/GroupeCombat,
-                ~/Descriptor_Unit_Scout_CMD_DDR/LandMovement,
-                ~/Descriptor_Unit_Scout_CMD_DDR/GenericMovement,
-            ]
-        ),
-        ~/Descriptor_Unit_Scout_CMD_DDR/GroupeCombat,
-        ~/Descriptor_Unit_Scout_CMD_DDR/LandMovement,
-        ~/Descriptor_Unit_Scout_CMD_DDR/GenericMovement,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
-Descriptor_UnitCadavre_Scout_CMD_RFA is TEntityDescriptor
-(
-    DescriptorId       = GUID:{d5f2513a-1d5b-4c57-ad77-cdff3a8b2049}
-    ClassNameForDebug  = 'Unit_CadavreScout_CMD_RFA'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                      = ECoalition/Allied
-            MotherCountry                    = 'RFA'
-            AcknowUnitType                   = ~/TAcknowUnitType_Command_Infantry
-            TypeUnitFormation                = 'Supply'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        ~/UnitCadavrePositionModuleDescriptor,
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsInfanterie = True
-            CadavreDuration = ~/CadavreDuration_Infanterie
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_Scout_CMD_RFA/GroupeCombat,
-                ~/Descriptor_Unit_Scout_CMD_RFA/LandMovement,
-                ~/Descriptor_Unit_Scout_CMD_RFA/GenericMovement,
-            ]
-        ),
-        ~/Descriptor_Unit_Scout_CMD_RFA/GroupeCombat,
-        ~/Descriptor_Unit_Scout_CMD_RFA/LandMovement,
-        ~/Descriptor_Unit_Scout_CMD_RFA/GenericMovement,
         ~/PackSignauxModuleDescriptor,
         ~/DebugModuleDescriptor,
     ]

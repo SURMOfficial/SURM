@@ -9,7 +9,7 @@ from tempfile import mkstemp
 from shutil import move, copymode
 from os import fdopen, remove
 
-filpath = r'C:\Program Files (x86)\Steam\steamapps\common\WARNO\Mods\SURM\GameData\Generated\Gameplay\Gfx\UniteDescriptor_upgrade.txt'
+filpath = r'C:\Program Files (x86)\Steam\steamapps\common\WARNO\Mods\SURM\GameData\Generated\Gameplay\Gfx\UniteDescriptor.ndf'
 
 # f = open(filpath,"w")
 
