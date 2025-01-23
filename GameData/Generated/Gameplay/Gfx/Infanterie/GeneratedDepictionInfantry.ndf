@@ -7,7 +7,7 @@ export Gfx_AT_Group_Gurkhas_UK is TemplateInfantryDepictionSquad
   SoundOperator = $/GFX/Sound/DepictionOperator_MovementSound_SM_Infanterie_UK
 )
 AllWeaponAlternatives_AT_Group_Gurkhas_UK is [
-  TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_L2A3 ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_L85A1 ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_LAW_80 ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_LAW_80 ),
   TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_LAW_80 ),
@@ -16,9 +16,14 @@ AllWeaponSubDepiction_AT_Group_Gurkhas_UK is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_AT_Group_Gurkhas_UK
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
-      FireEffectTag = ["FireEffect_PM_Sterling"]
+      FireEffectTag = ["FireEffect_FM_L85A1"]
       WeaponShootDataPropertyName = "WeaponShootData_0_1"
     ),
     DepictionOperator_WeaponInstantFireInfantry
@@ -2522,6 +2527,11 @@ AllWeaponSubDepiction_Commandos_POL is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Commandos_POL
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_Tantal"]
@@ -2584,6 +2594,11 @@ AllWeaponSubDepiction_Commandos_Para_CMD_POL is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Commandos_Para_CMD_POL
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_Tantal"]
@@ -2646,6 +2661,11 @@ AllWeaponSubDepiction_Commandos_Para_POL is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Commandos_Para_POL
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_Tantal"]
@@ -4568,7 +4588,8 @@ AllWeaponAlternatives_Engineers_Flam_POL is [
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_AK74 ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_PKM ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_M72_LAW ),
-  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_M72_LAW ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_4'] MeshDescriptor = $/GFX/DepictionResources/Modele_RPG76Komar ),
+  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_RPG76Komar ),
 ]
 AllWeaponSubDepiction_Engineers_Flam_POL is TemplateAllSubWeaponDepiction
 (
@@ -4588,6 +4609,11 @@ AllWeaponSubDepiction_Engineers_Flam_POL is TemplateAllSubWeaponDepiction
     (
       FireEffectTag = ["FireEffect_RocketInf_RPO_RYS"]
       WeaponShootDataPropertyName = "WeaponShootData_0_3"
+    ),
+    DepictionOperator_WeaponInstantFireInfantry
+    (
+      FireEffectTag = ["FireEffect_RocketInf_RPG76_Komar"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_4"
     ),
   ]
 )
@@ -14686,7 +14712,8 @@ export Gfx_Naval_Engineers_Flam_POL is TemplateInfantryDepictionSquad
 AllWeaponAlternatives_Naval_Engineers_Flam_POL is [
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_AK74 ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_LPO50 ),
-  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_LPO50 ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_RPG76Komar ),
+  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_RPG76Komar ),
 ]
 AllWeaponSubDepiction_Naval_Engineers_Flam_POL is TemplateAllSubWeaponDepiction
 (
@@ -14701,6 +14728,11 @@ AllWeaponSubDepiction_Naval_Engineers_Flam_POL is TemplateAllSubWeaponDepiction
     (
       FireEffectTag = ["FireEffect_flamethrower_LPO"]
       WeaponShootDataPropertyName = "WeaponShootData_0_2"
+    ),
+    DepictionOperator_WeaponInstantFireInfantry
+    (
+      FireEffectTag = ["FireEffect_RocketInf_RPG76_Komar"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_3"
     ),
   ]
 )
@@ -14861,12 +14893,18 @@ AllWeaponAlternatives_Naval_Rifle_POL is [
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_AK74 ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_PKM ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_RPG7V ),
-  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_RPG7V ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_4'] MeshDescriptor = $/GFX/DepictionResources/Modele_Dragunov ),
+  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_Dragunov ),
 ]
 AllWeaponSubDepiction_Naval_Rifle_POL is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Naval_Rifle_POL
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_kbk_AK"]
@@ -14881,6 +14919,11 @@ AllWeaponSubDepiction_Naval_Rifle_POL is TemplateAllSubWeaponDepiction
     (
       FireEffectTag = ["FireEffect_RocketInf_RPG7"]
       WeaponShootDataPropertyName = "WeaponShootData_0_3"
+    ),
+    DepictionOperator_WeaponInstantFireInfantry
+    (
+      FireEffectTag = ["FireEffect_Sniper_SVD_Dragunov"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_4"
     ),
   ]
 )
@@ -15708,12 +15751,18 @@ AllWeaponAlternatives_Para_Metis_POL is [
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_AKM ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_RPK ),
   TDepictionDescriptor( SelectorId = ['MeshAlternative_3'] MeshDescriptor = $/GFX/DepictionResources/Modele_ATGM_9K115_Metis_M ),
-  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_ATGM_9K115_Metis_M ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_4'] MeshDescriptor = $/GFX/DepictionResources/Modele_Dragunov ),
+  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_Dragunov ),
 ]
 AllWeaponSubDepiction_Para_Metis_POL is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Para_Metis_POL
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_kbk_AKM"]
@@ -15728,6 +15777,11 @@ AllWeaponSubDepiction_Para_Metis_POL is TemplateAllSubWeaponDepiction
     (
       FireEffectTag = ["FireEffect_ATGM_9K115_Metis_M"]
       WeaponShootDataPropertyName = "WeaponShootData_0_3"
+    ),
+    DepictionOperator_WeaponInstantFireInfantry
+    (
+      FireEffectTag = ["FireEffect_Sniper_SVD_Dragunov"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_4"
     ),
   ]
 )
@@ -15771,6 +15825,11 @@ AllWeaponSubDepiction_Para_POL is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Para_POL
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_kbk_AKM"]
@@ -16129,6 +16188,11 @@ AllWeaponSubDepiction_Paratroopers_Engineers_CMD_UK is TemplateAllSubWeaponDepic
 (
   Alternatives = AllWeaponAlternatives_Paratroopers_Engineers_CMD_UK
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_L85A1"]
@@ -16181,6 +16245,11 @@ AllWeaponSubDepiction_Paratroopers_Engineers_CarlG_UK is TemplateAllSubWeaponDep
 (
   Alternatives = AllWeaponAlternatives_Paratroopers_Engineers_CarlG_UK
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_L85A1"]
@@ -16237,6 +16306,11 @@ AllWeaponSubDepiction_Paratroopers_Engineers_UK is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Paratroopers_Engineers_UK
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_L85A1"]
@@ -16422,6 +16496,11 @@ AllWeaponSubDepiction_Paratroopers_UK is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Paratroopers_UK
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_L85A1"]
@@ -18776,6 +18855,11 @@ AllWeaponSubDepiction_Rifles_HMG_POL is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Rifles_HMG_POL
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_kbk_AK"]
@@ -19077,6 +19161,11 @@ AllWeaponSubDepiction_Rifles_POL is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_Rifles_POL
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_kbk_AK"]
