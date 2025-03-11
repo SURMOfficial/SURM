@@ -9,10 +9,11 @@ from tempfile import mkstemp
 from shutil import move, copymode
 from os import fdopen, remove
 
-filpath_origin = r'C:\Program Files (x86)\Steam\steamapps\common\WARNO\Mods\basedat\GameData\Generated\Gameplay\Gfx\UniteDescriptor_danger.txt'
-filpath_dest = r'C:\Program Files (x86)\Steam\steamapps\common\WARNO\Mods\SURM\GameData\Generated\Gameplay\Gfx\UniteDescriptor_danger.txt'
-entries = ['TDangerousnessModuleDescriptor',] #next test starts here
+filpath_origin = r'C:\Program Files (x86)\Steam\steamapps\common\WARNO\Mods\basedatnew\GameData\Generated\Gameplay\Gfx\Depictions\DepictionVehicles.ndf'
+filpath_dest = r'C:\Program Files (x86)\Steam\steamapps\common\WARNO\Mods\SURM\GameData\Generated\Gameplay\Gfx\Depictions\DepictionVehicles.ndf'
+entries = ['Selector',] #next test starts here
             #   'IdentifyBaseProbability ',
+            # 'TDangerousnessModuleDescriptor'
             #   'TimeBetweenEachIdentifyRoll '
             # '($/GFX/Resources/Resource_CommandPoints, ',
             # 'NbSeatsAvailable ',
@@ -66,7 +67,7 @@ entries = ['TDangerousnessModuleDescriptor',] #next test starts here
 # mesh_str = "ReferenceMesh = "
 # bhole = "ProjectileModelResource = "
 #  Descriptor_Unit_2K12_KUB_DDR
-def copyover(filpath_dest,filpath_origin, entries, find_unit = 'export'):
+def copyover(filpath_dest,filpath_origin, entries, find_unit = '// Dépiction de'):
     #Create temp file
     for entry in entries:
         fh, abs_path = mkstemp()

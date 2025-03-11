@@ -61,7 +61,7 @@ is TMacroActionDescriptor_ObjectiveAttack_Specific
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [Pool_Objective_Attack]),
-        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.825),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.0025),
         TAttackRatioSettingHolder(DifficultyList = [IADifficulty/TresFacile] RatioMinimumPourAttaquer = 100.0),
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
     ]
@@ -99,7 +99,8 @@ private template Template_Main_Attack
     SupportingStatus = ESupportingStatus/NeedSupport,
     PoolModel_Generic = ~/Pool_Main_Attack,
     PoolModel_Easy = ~/Pool_Main_Attack_Easy,
-    RatioMinimumPourAttaquer = 0.875,
+    RatioMinimumPourAttaquer = 0.0175,
+    ProdProperties = [TProdProperty_LaunchAsSoonAsPossible],
 ]
 is TMacroActionDescriptor_CorridorAttack_Specific
 (
@@ -114,9 +115,9 @@ is TMacroActionDescriptor_CorridorAttack_Specific
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TCoordinationSettingHolder(CoordinationType = <SupportingStatus>),
 
-        TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [<PoolModel_Generic>]
+        TMacroActionProductionSettingHolder(ProdProperties = <ProdProperties> PoolModelList = [<PoolModel_Generic>]
             TaggedPoolModelList = [(["AttackMain"], [<PoolModel_Generic>]),] PrioritizeCorridorsForTaggedPoolModels = true),
-        TMacroActionProductionSettingHolder(DifficultyList = [IADifficulty/Facile] ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [<PoolModel_Easy>] TaggedPoolModelList = [(["AttackMain"], [<PoolModel_Easy>]),] PrioritizeCorridorsForTaggedPoolModels = true),
+        TMacroActionProductionSettingHolder(DifficultyList = [IADifficulty/Facile] ProdProperties = <ProdProperties> PoolModelList = [<PoolModel_Easy>] TaggedPoolModelList = [(["AttackMain"], [<PoolModel_Easy>]),] PrioritizeCorridorsForTaggedPoolModels = true),
 
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.00084), // Perte de 0.1 de ratio toutes les 2 minutes
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
@@ -165,7 +166,7 @@ export Attack_Filler is TMacroActionDescriptor_CorridorAttack_Specific
 private template Template_Attack_Corridor
 [
     MinimumResourceForLaunch = MAP[],
-    RatioMinimumPourAttaquer:float = 0.875,
+    RatioMinimumPourAttaquer:float = 0.0175,
     AdditionnalParameter = [],
 ]
 is TMacroActionDescriptor_CorridorAttack_Specific
@@ -189,12 +190,11 @@ is TMacroActionDescriptor_CorridorAttack_Specific
         [
             (["AttackInfantry"], [ Pool_Infantry_Attack_1, Pool_Infantry_Attack_2, Pool_Infantry_Attack_3 ]),
             (["AttackCombined"], [ Pool_Combined_Attack_1, Pool_Combined_Attack_2, Pool_Combined_Attack_3 ]),
-            (["AttackTank"], [ Pool_Tank_Attack_1, Pool_Tank_Attack_2, Pool_Tank_Attack_3 ]), //[ Pool_Tank_Attack_1, Pool_Tank_Attack_2, Pool_Tank_Attack_3 ]), //experiment to use more infantry
+            (["AttackTank"], [ Pool_Combined_Attack_1, Pool_Combined_Attack_2, Pool_Combined_Attack_3 ]), //[ Pool_Tank_Attack_1, Pool_Tank_Attack_2, Pool_Tank_Attack_3 ]), //experiment to use more infantry
         ]
         ),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.001),
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
-        //TAntiStackingSettingHolder(),
         TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
     ]
     +
@@ -210,7 +210,7 @@ export Attack_Adaptive is Template_Attack_Corridor
 private template Template_Attack_Helo
 [
     MinimumResourceForLaunch = MAP[],
-    RatioMinimumPourAttaquer:float = 0.875,
+    RatioMinimumPourAttaquer:float = 0.0175,
     AdditionnalParameter = [],
 ]
 is TMacroActionDescriptor_CorridorAttack_Specific
@@ -249,7 +249,7 @@ export Attack_Helo_Autogen is Template_Attack_Helo
 export Attack_Adaptive_Autogen is Template_Attack_Corridor
 (
     MinimumResourceForLaunch = ~/MinimumResourceForLaunch_Stage_1
-    RatioMinimumPourAttaquer = 0.875
+    RatioMinimumPourAttaquer = 0.0175
 )
 //-------------------------------------------------------------------------
 // Budgets

@@ -166,8 +166,6 @@ Constantes is TTunableConstante
     LargeurRouteGRU                        = 7 //21 // les trajectoires des véhicules sont décalées de 0.5 * LargeurRoute d'un côté ou de l'autre
     ToleranceLargeurRoutePourMouvementsRapidesShiftes = 2 // multiplicateur de LargeurRoute pour vérifier si la destination d'un movefast est sur la route
     DecalageDepuisLeCentreDansCouloirGRU   = 1 //3 // décalage des waypoints des unités par rapport au milieu du couloir quand une unité en traverse un
-    RapprocherFormationsSelonObstacles  = false
-    RotationLignesDInfanterie           = false // définit si les soldats d'une unité d'infanterie s'orientent comme des véhicules (pour les lignes d'infanterie)
     TagDecrochage                       = "Retraite"  // tag utilisé pour determiner si on affiche l'etiquette decrochage pendant la retraite
 
 //----------------------------- Constantes Resale -----------------------------------------//
@@ -257,8 +255,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
     MargePourLesTestsDeSortieDeDistrictLBU = 2
     DurationForLeavingDistrict = 9.0        // Durée de l'action de sortie de district.
 
-    RefreshBestPlaceEveryNbSeconds = 5 // Les unites dans les quartiers peuvent changer de points de tir tous les x secondes.
-
 //---------------------------- Constantes Gameplay ----------------------------------------//
 
     TransformerAttackEnMoveSiPasDArmeAdaptee = true
@@ -313,7 +309,6 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
     ArtilleryDispersionTargetNotVisible = 1 // 2 Dispersion du tireur (artillerie) quand la cible n'est pas visible (attaque sur position ou unité)
 
     // http://dl.uncw.edu/digilib/mathematics/algebra/mat111hb/functions/equations/equations.html
-
     DistanceFriendlyFireGRU = 1  // distance entre un ennemi et un allié en dessous de laquelle une tourelle ne tire pas (1000)
     DistanceMinFleeFireGRU = 17 // Distance minimal d'éloignement d'une unité dans les flammes (en plus du radius de l'unité)
 
@@ -327,6 +322,8 @@ ModernWarfareConstantes is TModernWarfareTunableConstante
 
     ShootingAdjustmentAngleMax = 0.4 //20°
     SplashSurTirRate = true // Est-ce que les tirs ratés font des dégâts de splash ?
+																																					   
+																																																							
 
 	//adjusted to increase splash damage in close and reduce further away (every indication is that this is bonus damage above baseline (and that creates weird consequences, hence the negative numbers used here)
     //SplashRatioDamage = [-0.25, -0.5, -0.8, -0.93] // Stress, Suppress, Physical damages (entre 0 et 1). ratio des dégâts en périphérie du cercle de splash
@@ -443,7 +440,7 @@ WargameConstantes is TWargameTunableConstante
     CoeffMoneyMaxIfUsingUpkeep = 1.5
 
 //-------------------------- Constantes Economy -----------------------------------------//
-//new system means you start with effectively your forward security before your heavier echelons arrive
+
     BaseIncome = MAP
     [
         (CombatRule/NotSpecified,   0),
@@ -535,15 +532,15 @@ WargameConstantes is TWargameTunableConstante
 
     // Facteur utilisé pour la transformation des Plating et APValue pour l'affichage en mm dans l'UI
     PlatingAndApDisplayFactor = 1 //10 pour du mm
-		// need work
+
     PaliersDAgiliteGRU = MAP
     [
-        (706,   'Value_6'), //Exceptional
-        (1413,  'Value_5'), //Very good
-        (2120,  'Value_4'), //Good
-        (2473,  'Value_3'), //Normal
-        (3180, 'Value_2'), //Mediocre
-        (3533,  'Value_1'), //Bad
+        (500,   'Value_6'), //Exceptional
+        (850,  'Value_5'), //Very good
+        (1000,  'Value_4'), //Good
+        (1500,  'Value_3'), //Normal
+        (2000, 'Value_2'), //Mediocre
+        (4700,  'Value_1'), //Bad
     ]
 
     PaliersDeDissimulation = MAP
@@ -558,6 +555,7 @@ WargameConstantes is TWargameTunableConstante
     [
         (150, 'Value_3'),
         (300, 'Value_4'),
+		(375, 'Value_5'),
         (450, 'Value_6'),
 
     ]
@@ -616,9 +614,9 @@ WargameConstantes is TWargameTunableConstante
         2000,
         2500,
         3000,
-        5000,
-        15000,
-        30000,
+        //5000,
+        //15000,
+        //30000,
     ]
 
     DestructionScoreToReachSetting =
@@ -644,8 +642,8 @@ WargameConstantes is TWargameTunableConstante
         (2000, [3000, 4000, 5000, 6000, 8000, 0]),
         (2500, [3000, 4000, 5000, 6000, 8000, 0]),
         (3000, [3000, 4000, 5000, 6000, 8000, 0]),
-        (10000, [3000, 4000, 5000, 6000, 8000, 0]),
-        (20000, [3000, 4000, 5000, 6000, 8000, 0]),
+        (5000, [3000, 4000, 5000, 6000, 8000, 0]),
+        (15000, [3000, 4000, 5000, 6000, 8000, 0]),
         (30000, [3000, 4000, 5000, 6000, 8000, 0]),
         //(6000, [5000, 5500, 6000, 6500, 7000, 0]),
     ]

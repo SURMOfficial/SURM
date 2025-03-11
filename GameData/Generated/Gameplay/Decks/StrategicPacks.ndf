@@ -1036,11 +1036,25 @@ Descriptor_StrategicPack_UAZ_DDR_Company_FO_152_DDR_1 is DeckPackDescriptor
     Unit = $/GFX/Unit/Descriptor_Unit_FO_152_DDR
 )
 
+Descriptor_StrategicPack_UAZ_DDR_Company_FO_152_DDR_2 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_trans_DDR
+    Unit = $/GFX/Unit/Descriptor_Unit_FO_152_DDR
+)
+
 Descriptor_StrategicPack_UAZ_DDR_Company_FO_RM70_DDR_1 is DeckPackDescriptor
 (
     Xp = 1
     Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_trans_DDR
     Unit = $/GFX/Unit/Descriptor_Unit_FO_BM21_DDR
+)
+
+Descriptor_StrategicPack_UAZ_DDR_FO_122_DDR_2 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_UAZ_469_SOV
+    Unit = $/GFX/Unit/Descriptor_Unit_FO_122_DDR
 )
 
 Descriptor_StrategicPack_UAZ_DDR_FO_122_DDR_1 is DeckPackDescriptor
@@ -2895,6 +2909,27 @@ Descriptor_StrategicPack_Marder_1A3_MILAN_RFA_Panzergrenadier_IFV_RFA_1 is DeckP
     Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A3_RFA
     Unit = $/GFX/Unit/Descriptor_Unit_PzGrenadier_RFA
 )
+//changing this up so the MILAN Marder goes with the standard squad and the non-milan is the plt HQ Descriptor_Unit_Engineers_CMD_RFA is the old plt HQ and crashes the game
+Descriptor_StrategicPack_Marder_1A3_RFA_Panzergrenadier_RFA_2 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A3_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_PzGrenadier_RFA
+)
+//changing this up so the MILAN Marder goes with the standard squad and the non-milan is the plt HQ Descriptor_Unit_Engineers_CMD_RFA is the old plt HQ and crashes the game
+Descriptor_StrategicPack_Marder_1A2_RFA_Panzergrenadier_RFA_1 is DeckPackDescriptor
+(
+    Xp = 1
+    Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A2_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_PzGrenadier_RFA
+)
+//changing this up so the MILAN Marder goes with the standard squad and the non-milan is the plt HQ Descriptor_Unit_Engineers_CMD_RFA is the old plt HQ and crashes the game
+Descriptor_StrategicPack_Marder_1A2_RFA_Panzergrenadier_RFA_2 is DeckPackDescriptor
+(
+    Xp = 2
+    Transport = $/GFX/Unit/Descriptor_Unit_Marder_1A2_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_PzGrenadier_RFA
+)
 
 Descriptor_StrategicPack_Iltis_trans_RFA_ATteam_Milan_2_RFA_1 is DeckPackDescriptor
 (
@@ -3180,7 +3215,7 @@ Descriptor_StrategicPack_TPZ_Fuchs_1_RFA_Engineers_RFA_2 is DeckPackDescriptor
 (
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_TPZ_Fuchs_1_RFA
-    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Flam_RFA //Descriptor_Unit_Engineers_RFA hacky fix
 )
 
 Descriptor_StrategicPack_TPZ_Fuchs_MILAN_RFA_ATteam_Milan_2_RFA_2 is DeckPackDescriptor
@@ -3478,7 +3513,7 @@ Descriptor_StrategicPack_Unimog_trans_RFA_Engineers_RFA_2 is DeckPackDescriptor
 (
     Xp = 2
     Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
-    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Flam_RFA //Descriptor_Unit_Engineers_Flam_RFA //Descriptor_Unit_Engineers_RFA hacky fix hacky fix
 )
 
 Descriptor_StrategicPack_Unimog_trans_RFA_Engineers_Flam_RFA_2 is DeckPackDescriptor
@@ -3862,7 +3897,7 @@ Descriptor_StrategicPack_Unimog_trans_RFA_Mortier_Tampella_120mm_RFA_0 is DeckPa
 Descriptor_StrategicPack_Unimog_trans_RFA_Engineers_RFA_0 is DeckPackDescriptor
 (
     Transport = $/GFX/Unit/Descriptor_Unit_Unimog_trans_RFA
-    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_RFA
+    Unit = $/GFX/Unit/Descriptor_Unit_Engineers_Flam_RFA //Descriptor_Unit_Engineers_RFA hacky fix
 )
 
 Descriptor_StrategicPack_Unimog_trans_RFA_Engineers_Flam_RFA_0 is DeckPackDescriptor

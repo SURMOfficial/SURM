@@ -1,9 +1,13 @@
 export CriticalEffectModule_apc is TCriticalEffectModuleDescriptor
 (
     Bounds = (1,100)
-    TerrainCriticalEffectTimer = 5.0
+    TerrainCriticalEffectTimer = 15.0
 
-    EffectsFromTerrain = []
+    EffectsFromTerrain = 
+    [
+        CriticalEffect_RoughGround(Roll=(1,34)),// Shooter KO -> Armes stop 10sec
+		CriticalEffect_BoggedDown(Roll=(35,38)), // Transmission endommagée -> 50% vitesse
+    ]
 
     EffectsOnFront =
     [
@@ -29,14 +33,16 @@ export CriticalEffectModule_apc is TCriticalEffectModuleDescriptor
 	[
         CriticalEffect_TracksBroken(Roll=(1,30)),// Shooter KO -> Armes stop 10sec
 		CriticalEffect_GunnerKilled(Roll=(31,75)), // Shooter KO -> Armes stop 10sec
-		CriticalEffect_TransmissionDamaged(Roll=(76,9)), // Transmission endommagée -> 50% vitesse
+		CriticalEffect_TransmissionDamaged(Roll=(76,90)), // Transmission endommagée -> 50% vitesse
 		]
 
     PierceEffectsOnFront =
     [
         CriticalEffect_AmmoExplosion(Roll=(1,10)),
-        CriticalEffect_BailedOut(Roll=(11,70)), 
-		CriticalEffect_TurretStuck(Roll=(71,81)), // Turret stuck -> no rotation tourelle
+        CriticalEffect_BailedOut(Roll=(11,54)), 
+        CriticalEffect_TransmissionDestroyed(Roll=(55,62)), // Transmission pétée -> Full stop
+        CriticalEffect_TransmissionDamaged(Roll=(63,70)), // Transmission endommagée -> 50% vitesse
+		//CriticalEffect_TurretStuck(Roll=(71,81)), // Turret stuck -> no rotation tourelle
         CriticalEffect_GunJammed(Roll=(82,85)), 
 		CriticalEffect_DriverKilled(Roll=(86,90)),
 		CriticalEffect_CommanderKilled(Roll=(91,95)) , // Loader wounded -> reload *0.5
@@ -59,8 +65,6 @@ export CriticalEffectModule_apc is TCriticalEffectModuleDescriptor
         CriticalEffect_AmmoExplosion(Roll=(1,10)),
         CriticalEffect_BailedOut(Roll=(11,54)), 
 		CriticalEffect_GunJammed(Roll=(55,64)), // Turret stuck -> no rotation tourelle
-        CriticalEffect_TransmissionDestroyed(Roll=(65,82)), // Transmission pétée -> Full stop
-        CriticalEffect_TransmissionDamaged(Roll=(83,90)), // Transmission endommagée -> 50% vitesse
         CriticalEffect_ShooterKilled(Roll=(91,100)), 
     ]
 

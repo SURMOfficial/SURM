@@ -30665,6 +30665,41 @@ Descriptor_UnitCadavre_MANPAD_Strela_2M_FJ_DDR is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
+Descriptor_UnitCadavre_MANPAD_Strela_2M_Naval_POL is TEntityDescriptor
+(
+    DescriptorId       = GUID:{de8f0f06-5c91-4c31-abc9-b1b5fe2d0f23}
+    ClassNameForDebug  = 'Unit_CadavreMANPAD_Strela_2M_Naval_POL'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = ECoalition/Axis
+            MotherCountry                    = 'POL'
+            AcknowUnitType                   = ~/TAcknowUnitType_Inf
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillAsInfanterie = True
+            CadavreDuration = ~/CadavreDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_Unit_MANPAD_Strela_2M_Naval_POL/GroupeCombat,
+                ~/Descriptor_Unit_MANPAD_Strela_2M_Naval_POL/LandMovement,
+                ~/Descriptor_Unit_MANPAD_Strela_2M_Naval_POL/GenericMovement,
+            ]
+        ),
+        ~/Descriptor_Unit_MANPAD_Strela_2M_Naval_POL/GroupeCombat,
+        ~/Descriptor_Unit_MANPAD_Strela_2M_Naval_POL/LandMovement,
+        ~/Descriptor_Unit_MANPAD_Strela_2M_Naval_POL/GenericMovement,
+        ~/PackSignauxModuleDescriptor,
+        ~/DebugModuleDescriptor,
+    ]
+)
 Descriptor_UnitCadavre_MANPAD_Strela_2M_POL is TEntityDescriptor
 (
     DescriptorId       = GUID:{837cd5f6-25bc-4719-a8a2-42b9f3944dea}
@@ -32102,6 +32137,47 @@ Descriptor_UnitCadavre_MTLB_transp_SOV is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
+Descriptor_UnitCadavre_Marder_1A1_MILAN_RFA is TEntityDescriptor
+(
+    DescriptorId       = GUID:{47058c8f-9d6b-45e8-9bda-7ea96fe34cd0}
+    ClassNameForDebug  = 'Unit_CadavreMarder_1A1_MILAN_RFA'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = ECoalition/Allied
+            MotherCountry                    = 'RFA'
+            AcknowUnitType                   = ~/TAcknowUnitType_Tank
+            TypeUnitFormation                = 'Char'
+        ),
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillAsVehicule = True
+            CadavreDuration = ~/CadavreDurationApresFeu
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_forte
+            ModuleDescriptorsToSteal =
+            [
+                ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/WeaponManager,
+                ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/ApparenceModel,
+                ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/LandMovement,
+                ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/GenericMovement,
+                ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/Transporter,
+                ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/MissileCarriage,
+            ]
+        ),
+        ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/WeaponManager,
+        ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/ApparenceModel,
+        ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/LandMovement,
+        ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/GenericMovement,
+        ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/Transporter,
+        ~/Descriptor_Unit_Marder_1A1_MILAN_RFA/MissileCarriage,
+        ~/PackSignauxModuleDescriptor,
+        ~/DebugModuleDescriptor,
+    ]
+)
 Descriptor_UnitCadavre_Marder_1A1_RFA is TEntityDescriptor
 (
     DescriptorId       = GUID:{5fd4588b-8797-49f3-8069-8f522dcf1a3e}
@@ -32297,47 +32373,6 @@ Descriptor_UnitCadavre_Marder_1A3_RFA is TEntityDescriptor
         ~/Descriptor_Unit_Marder_1A3_RFA/LandMovement,
         ~/Descriptor_Unit_Marder_1A3_RFA/GenericMovement,
         ~/Descriptor_Unit_Marder_1A3_RFA/Transporter,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
-Descriptor_UnitCadavre_Marder_1A_MILAN_RFA is TEntityDescriptor
-(
-    DescriptorId       = GUID:{9e5aceb7-5565-4379-8480-d7f699571154}
-    ClassNameForDebug  = 'Unit_CadavreMarder_1A_MILAN_RFA'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                        = ECoalition/Allied
-            MotherCountry                    = 'RFA'
-            AcknowUnitType                   = ~/TAcknowUnitType_Tank
-            TypeUnitFormation                = 'Char'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        ~/UnitCadavrePositionModuleDescriptor,
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsVehicule = True
-            CadavreDuration = ~/CadavreDurationApresFeu
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_forte
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_Marder_1A_MILAN_RFA/WeaponManager,
-                ~/Descriptor_Unit_Marder_1A_MILAN_RFA/ApparenceModel,
-                ~/Descriptor_Unit_Marder_1A_MILAN_RFA/LandMovement,
-                ~/Descriptor_Unit_Marder_1A_MILAN_RFA/GenericMovement,
-                ~/Descriptor_Unit_Marder_1A_MILAN_RFA/Transporter,
-                ~/Descriptor_Unit_Marder_1A_MILAN_RFA/MissileCarriage,
-            ]
-        ),
-        ~/Descriptor_Unit_Marder_1A_MILAN_RFA/WeaponManager,
-        ~/Descriptor_Unit_Marder_1A_MILAN_RFA/ApparenceModel,
-        ~/Descriptor_Unit_Marder_1A_MILAN_RFA/LandMovement,
-        ~/Descriptor_Unit_Marder_1A_MILAN_RFA/GenericMovement,
-        ~/Descriptor_Unit_Marder_1A_MILAN_RFA/Transporter,
-        ~/Descriptor_Unit_Marder_1A_MILAN_RFA/MissileCarriage,
         ~/PackSignauxModuleDescriptor,
         ~/DebugModuleDescriptor,
     ]
@@ -53444,51 +53479,6 @@ Descriptor_UnitCadavre_Mi_2_trans_SOV is TEntityDescriptor
         ~/Descriptor_Unit_Mi_2_trans_SOV/HeliApparence,
         ~/Descriptor_Unit_Mi_2_trans_SOV/GenericMovement,
         ~/Descriptor_Unit_Mi_2_trans_SOV/Transporter,
-        ~/PackSignauxModuleDescriptor,
-        ~/DebugModuleDescriptor,
-    ]
-)
-Descriptor_UnitCadavre_Mi_4AV_130mm_TCH is TEntityDescriptor
-(
-    DescriptorId       = GUID:{696d989d-c977-436c-a08c-56648693a2ca}
-    ClassNameForDebug  = 'Unit_CadavreMi_4AV_130mm_TCH'
-    ModulesDescriptors = [
-        TTypeUnitModuleDescriptor
-        (
-            Coalition                        = ECoalition/Axis
-            MotherCountry                    = 'TCH'
-            AcknowUnitType                   = ~/TAcknowUnitType_HeliAttack
-            TypeUnitFormation                = 'None'
-        ),
-        ~/EmptyTagsModuleDescriptor,
-        ~/CadavreFlagsModuleDescriptor,
-        HelicopterCadavrePositionModuleDescriptor
-        (
-            LowAltitudeFlyingAltitudeGRU  = 106
-            NearGroundFlyingAltitudeGRU   = 17
-        ),
-        ~/LinkTeamModuleDescriptor,
-        UnitCadavreModuleDescriptor
-        (
-            KillAsHelico = True
-            CadavreDuration = ~/CadavreDurationApresFeu
-            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Helico_Ultra_Leger
-            ModuleDescriptorsToSteal =
-            [
-                ~/Descriptor_Unit_Mi_4AV_130mm_TCH/WeaponManager,
-                ~/Descriptor_Unit_Mi_4AV_130mm_TCH/ApparenceModel,
-                ~/Descriptor_Unit_Mi_4AV_130mm_TCH/HelicopterMovement,
-                ~/Descriptor_Unit_Mi_4AV_130mm_TCH/HeliApparence,
-                ~/Descriptor_Unit_Mi_4AV_130mm_TCH/GenericMovement,
-                ~/Descriptor_Unit_Mi_4AV_130mm_TCH/MissileCarriage,
-            ]
-        ),
-        ~/Descriptor_Unit_Mi_4AV_130mm_TCH/WeaponManager,
-        ~/Descriptor_Unit_Mi_4AV_130mm_TCH/ApparenceModel,
-        ~/Descriptor_Unit_Mi_4AV_130mm_TCH/HelicopterMovement,
-        ~/Descriptor_Unit_Mi_4AV_130mm_TCH/HeliApparence,
-        ~/Descriptor_Unit_Mi_4AV_130mm_TCH/GenericMovement,
-        ~/Descriptor_Unit_Mi_4AV_130mm_TCH/MissileCarriage,
         ~/PackSignauxModuleDescriptor,
         ~/DebugModuleDescriptor,
     ]

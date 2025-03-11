@@ -32,7 +32,7 @@ export Descriptor_Fire_Smoke_Test is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 1
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                RadiusGRU                         = ((5) * Metre)
+                RadiusGRU                         = 5
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Howz_Canon_D20_Howitzer_152mm_SMOKE // Ammo_Degats_smoke
                 TimeBetweenBurns               = 80
                 OverridenSpreadDescriptor      = nil
@@ -112,7 +112,7 @@ export Descriptor_Fire_Frag_HEAT_Small is TEntityDescriptor //Copperhead, AGM-11
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                RadiusGRU                         = 12
+                RadiusGRU                         = 13
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_small //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -152,7 +152,7 @@ export Descriptor_Fire_Frag_HEAT_Medium is TEntityDescriptor //Copperhead, AGM-1
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                RadiusGRU                         = 12
+                RadiusGRU                         = 30
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_med //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -232,7 +232,7 @@ export Descriptor_Fire_Frag_HEAT_Large is TEntityDescriptor //Maverick
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                RadiusGRU                         = 12
+                RadiusGRU                         = BombRadiusCorr * 60
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_large //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -432,7 +432,7 @@ export Descriptor_Fire_Direct_hit_AerialRocket_70 is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                RadiusGRU                         = 2
+                RadiusGRU                         = 3
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_AerialRocket_70 //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -632,7 +632,7 @@ export Descriptor_Fire_Direct_hit_3000lb is TEntityDescriptor
                 TimeBeforeSpreadAttempt        = 0.2
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
-                RadiusGRU                         = 38
+                RadiusGRU                         = 60
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_3000lb//Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
@@ -670,7 +670,7 @@ export Descriptor_Fire_Cluster_Test is TEntityDescriptor
                 TimeToLive                     = 1.5
                 TimeBeforeSpreading            = 1.5
                 TimeBeforeSpreadAttempt        = 0.1
-                SpreadProbability              = 100.0
+                SpreadProbability              = 1.0
                 IsNewFireProbability           = 1.0
                 RadiusGRU                         = 212 * RangeCorr
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Canon_HE_120mm_L44_late//Ammo_Degats_cluster

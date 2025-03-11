@@ -4826,6 +4826,35 @@ export MissileCarriage_MTLB_Strela10_SOV_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
+// Marder_1A1_MILAN_RFA : ['ATGM MILAN']
+export MissileCarriage_Marder_1A1_MILAN_RFA is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Marder_1A2_MILAN_RFA
+    PylonSet = ~/DepictionPylonSet_ATGM
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo
+        (
+            Count = 5
+            MissileType = eAGM
+            WeaponIndex = 2
+        ),
+    ]
+)
+export MissileCarriage_Marder_1A1_MILAN_RFA_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Marder_1A2_MILAN_RFA
+    PylonSet = ~/DepictionPylonSet_ATGM_Showroom
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo
+        (
+            Count = 5
+            MissileType = eAGM
+            WeaponIndex = 2
+        ),
+    ]
+)
 // Marder_1A2_MILAN_RFA : ['ATGM MILAN']
 export MissileCarriage_Marder_1A2_MILAN_RFA is TMissileCarriageConnoisseur
 (
@@ -4873,35 +4902,6 @@ export MissileCarriage_Marder_1A3_MILAN_RFA is TMissileCarriageConnoisseur
 export MissileCarriage_Marder_1A3_MILAN_RFA_Showroom is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Marder_1A3_MILAN_RFA
-    PylonSet = ~/DepictionPylonSet_ATGM_Showroom
-    WeaponInfos = 
-    [
-        TMissileCarriageWeaponInfo
-        (
-            Count = 5
-            MissileType = eAGM
-            WeaponIndex = 2
-        ),
-    ]
-)
-// Marder_1A_MILAN_RFA : ['ATGM MILAN']
-export MissileCarriage_Marder_1A_MILAN_RFA is TMissileCarriageConnoisseur
-(
-    MeshDescriptor = $/GFX/DepictionResources/Modele_Marder_1A2_MILAN_RFA
-    PylonSet = ~/DepictionPylonSet_ATGM
-    WeaponInfos = 
-    [
-        TMissileCarriageWeaponInfo
-        (
-            Count = 5
-            MissileType = eAGM
-            WeaponIndex = 2
-        ),
-    ]
-)
-export MissileCarriage_Marder_1A_MILAN_RFA_Showroom is TMissileCarriageConnoisseur
-(
-    MeshDescriptor = $/GFX/DepictionResources/Modele_Marder_1A2_MILAN_RFA
     PylonSet = ~/DepictionPylonSet_ATGM_Showroom
     WeaponInfos = 
     [
@@ -6474,7 +6474,7 @@ export MissileCarriage_AH1F_Cobra_US_Showroom is TMissileCarriageConnoisseur
 // AH1F_HeavyHog_US : ['RocketAir Zuni 1272mm x8'] ['RocketAir Zuni 1272mm x8']
 export MissileCarriage_AH1F_HeavyHog_US is TMissileCarriageConnoisseur
 (
-    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Hog_US
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_HeavyHog_US
     PylonSet = ~/DepictionPylonSet_Helico_Default
     WeaponInfos = 
     [
@@ -6496,7 +6496,7 @@ export MissileCarriage_AH1F_HeavyHog_US is TMissileCarriageConnoisseur
 )
 export MissileCarriage_AH1F_HeavyHog_US_Showroom is TMissileCarriageConnoisseur
 (
-    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_Hog_US
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_HeavyHog_US
     PylonSet = ~/DepictionPylonSet_Helico_Default_Showroom
     WeaponInfos = 
     [
@@ -8295,37 +8295,6 @@ export MissileCarriage_Mi_2_rocket_POL is TMissileCarriageConnoisseur
 export MissileCarriage_Mi_2_rocket_POL_Showroom is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_2_rocket_POL
-    PylonSet = ~/DepictionPylonSet_Helico_Default_Showroom
-    WeaponInfos = 
-    [
-        TMissileCarriageWeaponInfo
-        (
-            Count = 32
-            MissileType = eAGM
-            MountingType = eMountingPod
-            WeaponIndex = 2
-        ),
-    ]
-)
-// Mi_4AV_130mm_TCH : ['RocketAir S5 57mm x32']
-export MissileCarriage_Mi_4AV_130mm_TCH is TMissileCarriageConnoisseur
-(
-    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_4AV_130mm_TCH
-    PylonSet = ~/DepictionPylonSet_Helico_Default
-    WeaponInfos = 
-    [
-        TMissileCarriageWeaponInfo
-        (
-            Count = 32
-            MissileType = eAGM
-            MountingType = eMountingPod
-            WeaponIndex = 2
-        ),
-    ]
-)
-export MissileCarriage_Mi_4AV_130mm_TCH_Showroom is TMissileCarriageConnoisseur
-(
-    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_4AV_130mm_TCH
     PylonSet = ~/DepictionPylonSet_Helico_Default_Showroom
     WeaponInfos = 
     [
@@ -10524,16 +10493,16 @@ export MissileCarriage_F16A_AA2_NL is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 3
+            Count = 6
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+        /*TMissileCarriageWeaponInfo
         (
             Count = 3
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ),*/
     ]
 )
 export MissileCarriage_F16A_AA2_NL_Showroom is TMissileCarriageConnoisseur
@@ -10544,16 +10513,16 @@ export MissileCarriage_F16A_AA2_NL_Showroom is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 3
+            Count = 6
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+        /*TMissileCarriageWeaponInfo
         (
             Count = 3
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ),*/
     ]
 )
 // F16A_AA_BEL : ['AA AIM9P Sidewinder'] ['AA AIM9P Sidewinder']
@@ -10606,16 +10575,16 @@ export MissileCarriage_F16A_AA_NL is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 2
+            Count = 4
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+        /*TMissileCarriageWeaponInfo
         (
             Count = 2
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ),*/
     ]
 )
 export MissileCarriage_F16A_AA_NL_Showroom is TMissileCarriageConnoisseur
@@ -10626,16 +10595,16 @@ export MissileCarriage_F16A_AA_NL_Showroom is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 2
+            Count = 4
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+        /*TMissileCarriageWeaponInfo
         (
             Count = 2
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ),*/
     ]
 )
 // F16A_CBU_BEL : ['Bomb CBU Mk20 Rockeye II 250kg x2'] ['Bomb Mk82 250kg x6']
@@ -11155,7 +11124,7 @@ export MissileCarriage_F16E_napalm_US is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 2
+            Count = 4
             MissileType = eAGM
             MountingType = eMountingBomb
             WeaponIndex = 2
@@ -11176,7 +11145,7 @@ export MissileCarriage_F16E_napalm_US_Showroom is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 2
+            Count = 4
             MissileType = eAGM
             MountingType = eMountingBomb
             WeaponIndex = 2
@@ -11438,7 +11407,7 @@ export MissileCarriage_F4F_Phantom_II_AT_RFA is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 4
+            Count = 6
             MissileType = eAGM
             WeaponIndex = 2
         ),
@@ -11452,7 +11421,7 @@ export MissileCarriage_F4F_Phantom_II_AT_RFA_Showroom is TMissileCarriageConnois
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 4
+            Count = 6
             MissileType = eAGM
             WeaponIndex = 2
         ),
@@ -13352,16 +13321,16 @@ export MissileCarriage_MiG_21bis_AA3_DDR is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 3
+            Count = 6
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+        /*TMissileCarriageWeaponInfo
         (
             Count = 3
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ),*/
     ]
 )
 export MissileCarriage_MiG_21bis_AA3_DDR_Showroom is TMissileCarriageConnoisseur
@@ -13372,16 +13341,16 @@ export MissileCarriage_MiG_21bis_AA3_DDR_Showroom is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 3
+            Count = 6
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+        /*TMissileCarriageWeaponInfo
         (
             Count = 3
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ),*/
     ]
 )
 // MiG_21bis_AA_POL : ['AA R60M Vympel'] ['AA R3R']
@@ -14570,16 +14539,16 @@ export MissileCarriage_MiG_29_AA2_POL is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 3
+            Count = 6
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+        /*TMissileCarriageWeaponInfo
         (
             Count = 3
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ),*/
     ]
 )
 export MissileCarriage_MiG_29_AA2_POL_Showroom is TMissileCarriageConnoisseur
@@ -14590,16 +14559,16 @@ export MissileCarriage_MiG_29_AA2_POL_Showroom is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 3
+            Count = 6
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+        /*TMissileCarriageWeaponInfo
         (
             Count = 3
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ),*/
     ]
 )
 // MiG_29_AA2_SOV : ['AA R60M Vympel'] ['AA R27R Vympel']

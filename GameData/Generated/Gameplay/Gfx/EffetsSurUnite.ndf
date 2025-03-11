@@ -133,6 +133,19 @@ export UnitEffect_Ajoute_Tag_Hors_Transport is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_Ajoute_Tag_Trepied_ok is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{1148ca27-f929-4324-bf78-9d121f03ee56}
+    NameForDebug       = 'Ajoute_Tag_Trepied_ok'
+    EffectsDescriptors = [
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "Trepied_ok",
+            ]
+        ),
+    ]
+)
 export UnitEffect_Ajoute_Tag_no_snipe is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{0993037f-694f-418c-99f7-6c9c9549c6fb}
@@ -4057,6 +4070,38 @@ export UnitEffect_Tps_entre_salve_85pourcent is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_Trepied is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{9e70af7d-fbc6-499b-bf12-de171c4e5c3b}
+    NameForDebug       = 'Trepied'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseConcealmentBonusDescriptor
+        (
+            ModifierType       = ~/ModifierType_Additionnel
+            BonusConcealmentBonus  = 0.5
+        ),
+        TUnitEffectIncreaseWeaponPorteeMaxDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 1.25
+        ),
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 10
+        ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "Trepied_ok",
+            ]
+        ),
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_sniper"
+        ),
+    ]
+)
 export UnitEffect_Tutorial_MG42_RangeModification is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{eeb70764-984c-4cc7-a70d-4c33240f3b2e}
@@ -6656,6 +6701,306 @@ export UnitEffect_additional_XP_from_command is TEffectsPackDescriptor
 		TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_commander"
+        ),
+    ]
+)
+export UnitEffect_slow_missile_1s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -15
+        ),
+    ]
+)
+export UnitEffect_slow_missile_2s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -23
+        ),
+    ]
+)
+export UnitEffect_slow_missile_3s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -30
+        ),
+    ]
+)
+export UnitEffect_slow_missile_4s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -35
+        ),
+    ]
+)
+export UnitEffect_slow_missile_5s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -40
+        ),
+    ]
+)
+export UnitEffect_slow_missile_6s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -44
+        ),
+    ]
+)
+export UnitEffect_slow_missile_7s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -47
+        ),
+    ]
+)
+export UnitEffect_slow_missile_8s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -50
+        ),
+    ]
+)
+export UnitEffect_slow_missile_9s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -53
+        ),
+    ]
+)
+export UnitEffect_slow_missile_10s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -56
+        ),
+    ]
+)
+export UnitEffect_slow_missile_11s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -58
+        ),
+    ]
+)
+export UnitEffect_slow_missile_12s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -60
+        ),
+    ]
+)
+export UnitEffect_slow_missile_13s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -62
+        ),
+    ]
+)
+export UnitEffect_slow_missile_14s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -63
+        ),
+    ]
+)
+export UnitEffect_slow_missile_15s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -65
+        ),
+    ]
+)
+export UnitEffect_slow_missile_16s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -66
+        ),
+    ]
+)
+export UnitEffect_slow_missile_17s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -68
+        ),
+    ]
+)
+export UnitEffect_slow_missile_18s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -69
+        ),
+    ]
+)
+export UnitEffect_slow_missile_19s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -70
+        ),
+    ]
+)
+export UnitEffect_slow_missile_20s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -71
+        ),
+    ]
+)
+export UnitEffect_slow_missile_21s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -72
+        ),
+    ]
+)
+export UnitEffect_slow_missile_22s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -73
+        ),
+    ]
+)
+export UnitEffect_slow_missile_23s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -74
+        ),
+    ]
+)
+export UnitEffect_slow_missile_24s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -75
+        ),
+    ]
+)
+export UnitEffect_slow_missile_25s is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    NameForDebug       = 'ArtyUnit_Cohesion_Low'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = -75
         ),
     ]
 )

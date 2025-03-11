@@ -3710,6 +3710,127 @@ export Capacite_StressOnMiss_mid is TCapaciteDescriptor
     ]
 
 )
+export Capacite_Tank_Dissimule is TCapaciteDescriptor
+(
+    DescriptorId            = GUID:{db9adea3-7f78-4360-b9cd-62e078ee81ce}
+    Name                    = "Tank_Dissimule"
+    NameToken               = "None"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TypeCible               = ~/CapaciteTypeCible_soi
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    TargetWoundedFilter     = ~/CapaciteWoundedFilterType_tout
+    AreaShape               = ~/CapaciteAreaShape_soi
+    RadiusGRU               = 0
+    RangeGRU                = 1
+    CastTime                = 1.00
+    Cooldown                = 1.00
+    CheckVisibility         = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect            = ~/UnitEffect_Tank_bonus_discretion
+    TargetEffectDuration    = 2.00
+    SelfEffectDuration      = 0.00
+    MaxTargetNb             = 1
+    MultiplyCost            = False
+    TargetInBuilding        = False
+    TargetInTransport       = False
+    TargetInSelf            = False
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor       = RGBA[0,0,0,0]
+    DisplayRangeThickness   = 0.00
+    Price                   = MAP[]
+    TagsCiblePossible       = [
+    ]
+    TagsCibleExcluded       = [
+    ]
+    Conditions              = [
+        ~/ConditionNotInMovement,
+    ]
+)
+export Capacite_Trepied is TCapaciteDescriptor
+(
+    DescriptorId            = GUID:{dc4f6df4-271c-4cf6-b2cc-cfc4cb6704f9}
+    Name                    = "Trepied"
+    NameToken               = "None"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TypeCible               = ~/CapaciteTypeCible_soi
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    TargetWoundedFilter     = ~/CapaciteWoundedFilterType_tout
+    AreaShape               = ~/CapaciteAreaShape_soi
+    RadiusGRU               = 1
+    RangeGRU                = 1
+    CastTime                = 1.00
+    Cooldown                = 0.00
+    CheckVisibility         = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect            = ~/UnitEffect_Trepied
+    TargetEffectDuration    = -1.00
+    SelfEffectDuration      = 0.00
+    MaxTargetNb             = 1
+    MultiplyCost            = False
+    TargetInBuilding        = True
+    TargetInTransport       = True
+    TargetInSelf            = True
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor       = RGBA[0,0,0,0]
+    DisplayRangeThickness   = 0.00
+    Price                   = MAP[]
+    TagsCiblePossible       = [
+    ]
+    TagsCibleExcluded       = [
+    ]
+    Conditions              = [
+        ~/ConditionTagRaisedInUnit_Trepied_ok_1,
+        ~/ConditionNotInMovement,
+    ]
+)
+export Capacite_Trepied_no_Trepied is TCapaciteDescriptor
+(
+    DescriptorId            = GUID:{80fcb3ad-eb26-4d3e-b01d-523d53602d2b}
+    Name                    = "Trepied_no_Trepied"
+    NameToken               = "None"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TypeCible               = ~/CapaciteTypeCible_soi
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    TargetWoundedFilter     = ~/CapaciteWoundedFilterType_tout
+    AreaShape               = ~/CapaciteAreaShape_soi
+    RadiusGRU               = 1
+    RangeGRU                = 1
+    CastTime                = 10.00
+    Cooldown                = 0.00
+    CheckVisibility         = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect            = ~/UnitEffect_Ajoute_Tag_Trepied_ok
+    TargetEffectDuration    = -1.00
+    SelfEffectDuration      = 0.00
+    MaxTargetNb             = 1
+    MultiplyCost            = False
+    TargetInBuilding        = True
+    TargetInTransport       = True
+    TargetInSelf            = True
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor       = RGBA[0,0,0,0]
+    DisplayRangeThickness   = 0.00
+    Price                   = MAP[]
+    TagsCiblePossible       = [
+    ]
+    TagsCibleExcluded       = [
+    ]
+    Conditions              = [
+        ~/ConditionNotInMovement,
+    ]
+)
 export Capacite_Soutien_Allie_Proche is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{36a751a7-90b7-483b-acb1-0e4e4a453e2d}
@@ -3946,46 +4067,6 @@ export Capacite_Suicide_SurCettePosition is TCapaciteDescriptor
     Price = MAP[]
     TagsCiblePossible = [
         "GroundUnits",
-    ]
-    TagsCibleExcluded = [
-    ]
-    Conditions = [
-        ~/ConditionNotInMovement,
-    ]
-)
-export Capacite_Tank_Dissimule is TCapaciteDescriptor
-(
-    DescriptorId     = GUID:{db9adea3-7f78-4360-b9cd-62e078ee81ce}
-    Name             = "Tank_Dissimule"
-    NameToken        = "None"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
-    TypeCible               = ~/CapaciteTypeCible_soi
-    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance    = ~/AllianceRelation/vide
-    TargetWoundedFilter     = ~/CapaciteWoundedFilterType_tout
-    AreaShape               = ~/CapaciteAreaShape_soi
-    RadiusGRU               = 0
-    RangeGRU                = 1
-    CastTime                = 1.00
-    Cooldown                = 1.00
-    CheckVisibility         = True
-    AllowReflexDuringCast   = True
-    CanBeCastFromTransport  = True
-    TargetEffect            = ~/UnitEffect_Tank_bonus_discretion
-    TargetEffectDuration    = 2.00
-    SelfEffectDuration      = 0.00
-    MaxTargetNb            = 1
-    MultiplyCost           = False
-    TargetInBuilding       = False
-    TargetInTransport      = False
-    TargetInSelf           = False
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    Price = MAP[]
-    TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
     ]
@@ -5283,6 +5364,45 @@ export Capacite_kill_missile_13_seconds is TCapaciteDescriptor
     Conditions = [
     ]
 )
+export Capacite_kill_missile_14_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{00c87951-98db-4637-ae9f-87d61cbeafca}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 14.10
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Effet_Meurt
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
 export Capacite_kill_missile_15_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{619ec50f-fed1-4321-b61c-4ff9602215c7}
@@ -5361,6 +5481,45 @@ export Capacite_kill_missile_16_seconds is TCapaciteDescriptor
     Conditions = [
     ]
 )
+export Capacite_kill_missile_17_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{720788e7-6a6d-43ce-ac80-73df3766b922}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 17.10
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Effet_Meurt
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
 export Capacite_kill_missile_18_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9ac420f2-8830-4f4e-9f57-0fb16df97095}
@@ -5400,6 +5559,45 @@ export Capacite_kill_missile_18_seconds is TCapaciteDescriptor
     Conditions = [
     ]
 )
+export Capacite_kill_missile_19_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{9ac420f2-8830-4f4e-9f57-0fb16df97095}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 19.10
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Effet_Meurt
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
 export Capacite_kill_missile_20_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{a549b250-e245-400f-b8aa-46642f4e5af7}
@@ -5415,6 +5613,123 @@ export Capacite_kill_missile_20_seconds is TCapaciteDescriptor
     RadiusGRU              = 1
     RangeGRU               = 1
     CastTime            = 20.10
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Effet_Meurt
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_kill_missile_21_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{a549b250-e245-400f-b8aa-46642f4e5af7}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 21.10
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Effet_Meurt
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_kill_missile_22_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{a549b250-e245-400f-b8aa-46642f4e5af7}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 22.10
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Effet_Meurt
+    TargetEffectDuration = -1.00
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_kill_missile_23_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{a549b250-e245-400f-b8aa-46642f4e5af7}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 23.10
     Cooldown            = 0.00
     CheckVisibility     = True
     AllowReflexDuringCast   = True
@@ -5718,5 +6033,902 @@ export Capacite_tripod_no_tripod_fast is TCapaciteDescriptor //want a delay so v
     ]
     Conditions = [
         ~/ConditionNotInMovement,
+    ]
+)
+export Capacite_slow_missile_1_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 3.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_1s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_2_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 4.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_2s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_3_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 5.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_3s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_4_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 6.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_4s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_5_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 7.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_5s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_6_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 8.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_6s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_7_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 9.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_7s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_8_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 10.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_8s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_9_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 11.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_9s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_10_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 12.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_10s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_11_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 13.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_11s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_12_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 14.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_12s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_13_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 15.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_13s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_14_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 16.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_14s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_15_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 17.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_15s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_16_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 18.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_16s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_17_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 19.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_17s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_18_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 20.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_18s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_19_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 21.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_19s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_20_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 22.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_20s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_21_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 23.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_21s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_22_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 24.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_22s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_slow_missile_23_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TypeCible            = ~/CapaciteTypeCible_soi
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    TargetWoundedFilter  = ~/CapaciteWoundedFilterType_tout
+    AreaShape            = ~/CapaciteAreaShape_soi
+    RadiusGRU              = 1
+    RangeGRU               = 1
+    CastTime            = 25.01
+    Cooldown            = 0.00
+    CheckVisibility     = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_slow_missile_23s
+    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
+    SelfEffectDuration   = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
     ]
 )

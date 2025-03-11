@@ -21,8 +21,8 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
 (
     AnimationDuration = 0.30
 
-    RenderRangeGRU = 5000
-    DefaultVisionRangeGRU = 5500//3534
+    RenderRangeGRU = 5500
+    DefaultVisionRangeGRU = 5000//3534
 
     BorderColor = [255, 255, 255, 255]
     BorderThickness = 2500
@@ -93,8 +93,8 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
         Template_CircleDescriptor(
             RadiusGRU = 3000
             Thickness = 1000
-            TextSize = 5000
             ShowDistanceText = true
+            TextSize = 5000
          ),
         Template_CircleDescriptor(
             RadiusGRU = 3500
@@ -117,11 +117,11 @@ FeedbackLineOfSightDescriptor is TFeedbackLineOfSightDescriptor
         ),
         Template_CircleDescriptor
         (
-            RadiusGRU = 2500
+            RadiusGRU = 5000
             Thickness = 1000
             ShowDistanceText = true
             TextSize = 3500
-		)
+        ),
     ]
 
     CircleOverrideDescriptor = TFeedbackLineOfSightCircleDescriptor

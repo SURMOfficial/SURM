@@ -21,7 +21,7 @@ export colonelAttackDescriptor is TMacroActionDescriptor_Attack_Specific
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 2),
-        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 200.0   MinimumCostForSelfPreservation = 0),
+        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 0.01  MinimumCostForSelfPreservation = 0),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.00001),
         TMacroActionProductionSettingHolder(DisableReinforcement = true),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
@@ -116,7 +116,7 @@ export colonelSupplyDescriptor is TMacroActionDescriptor_Supply_Specific
         TSupplySettingHolder(SupplyableMinimumRatio = MAP[
             (ESupplyableType_Fuel, 0.3),
             (ESupplyableType_Weapons, 0.3),
-            (ESupplyableType_Life, 0.5),
+            (ESupplyableType_Life, 0.0),
         ]),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TDisableUnitToReleaseSettingHolder(),

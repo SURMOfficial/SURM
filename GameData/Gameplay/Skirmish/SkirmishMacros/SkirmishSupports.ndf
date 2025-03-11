@@ -21,7 +21,8 @@ export Pool_Support_Transports is TPoolModel
             Required = false
             Nb = -1 // Infinite
             TagsPriority = [
-                "Vehicule_Transport_Arme"
+                "Vehicule_Transport_Arme",
+                "Infanterie",
             ]
         ),
     ]
@@ -34,6 +35,6 @@ export Renfort_TransportsAbandonnes is TSupportSetting
 (
     TagDeContre = "AllUnits"
     TagAContrer = "AllUnits"
-    Ratio = 0.99 // on veut utiliser le plus de transports possible
+    Ratio = 5.0 // on veut utiliser le plus de transports possible
 )
 

@@ -1383,7 +1383,8 @@ InfantryWeapon_Grenade_Launcher is TIntroduceMobileHappening
             (
                 Alternatives = 
                 [
-                    fx_tir_Grenade_Launcher,
+                    fx_tir_Grenade_Launcher_1,
+                    fx_tir_Grenade_Launcher_2,
                 ]
             ),
             TRandomHappening
@@ -1391,6 +1392,7 @@ InfantryWeapon_Grenade_Launcher is TIntroduceMobileHappening
                 Alternatives = 
                 [
                     fx_traine_Fusil_Grenade_Launcher_False_00_00,
+					fx_traine_Fusil_Grenade_Launcher_False_00_01
                 ]
             ),
             $/GFX/Sound/SFXWeapon_Lance_grenade_AGS17,
@@ -3359,7 +3361,13 @@ fx_tir_Fusil_Mitrailleur_M16_tres_petit_douilles_1_2 is InfantryFiringHappening
     Power           = 2.
     WaitBetweenShot = 0.5
 )
-fx_tir_Grenade_Launcher is InfantryFiringHappening
+fx_tir_Grenade_Launcher_1 is InfantryFiringHappening
+(
+    Action          = $/GFX/GameFx/fx_tir_Grenade_MG17_petit_douille
+    Power           = 2.
+    WaitBetweenShot = 0.5
+)
+fx_tir_Grenade_Launcher_2 is InfantryFiringHappening
 (
     Action          = $/GFX/GameFx/fx_tir_Grenade_MG17_petit_douille
     Power           = 2.
@@ -3666,6 +3674,15 @@ fx_traine_Fusil_Mitrailleur_M16_tres_petite_9_2_False_00_00 is InfantryProjectil
     WaitBetweenShot = 0.5
 )
 fx_traine_Fusil_Grenade_Launcher_False_00_00 is InfantryProjectileHappening
+(
+    Action          = $/GFX/GameFx/fx_traine_grenade_AGS17
+    Power           = 2.
+    WithoutPhysics  = False
+    FluidFriction   = 0.0
+    InitialSpeed    = 0.0
+    WaitBetweenShot = 0.5
+)
+fx_traine_Fusil_Grenade_Launcher_False_00_01 is InfantryProjectileHappening
 (
     Action          = $/GFX/GameFx/fx_traine_grenade_AGS17
     Power           = 2.
@@ -3991,7 +4008,7 @@ InfantryHappenings is MAP[
   ( ['FireEffect_FM_Tantal'], InfantryWeapon_FM_Tantal ),
   ( ['FireEffect_FM_kbk_AK'], InfantryWeapon_FM_kbk_AK ),
   ( ['FireEffect_FM_kbk_AKM'], InfantryWeapon_FM_kbk_AKM ),
-  ( ['FireEffect_Grenade_Launcher'], InfantryWeapon_Grenade_Launcher ),
+  ( ['FireEffect_Grenade_Launcher'], InfantryWeapon_Grenade_SMOKE ),
   ( ['FireEffect_Grenade_SMOKE'], InfantryWeapon_Grenade_SMOKE ),
   ( ['FireEffect_Grenade_Satchel_Charge'], InfantryWeapon_Grenade_Satchel_Charge ),
   ( ['FireEffect_Javelin'], InfantryWeapon_Javelin ),
@@ -4029,7 +4046,7 @@ InfantryHappenings is MAP[
   ( ['FireEffect_RocketInf_AGI_3X40_40mm'], InfantryWeapon_RocketInf_AGI_3X40_40mm ),
   ( ['FireEffect_RocketInf_APILAS'], InfantryWeapon_RocketInf_APILAS ),
   ( ['FireEffect_RocketInf_AT4_83mm'], InfantryWeapon_RocketInf_AT4_83mm ),
-  ( ['FireEffect_RocketInf_Armbrust'], InfantryWeapon_RocketInf_Armbrust ), 
+  ( ['FireEffect_RocketInf_Armbrust'], InfantryWeapon_RocketInf_Blindicide_RL_100 ), 
   ( ['FireEffect_RocketInf_Blindicide_RL_100'], InfantryWeapon_RocketInf_Blindicide_RL_100 ),
   ( ['FireEffect_RocketInf_Blindicide_RL_83'], InfantryWeapon_RocketInf_Blindicide_RL_83 ),
   ( ['FireEffect_RocketInf_Carl_Gustav'], InfantryWeapon_RocketInf_Carl_Gustav ),

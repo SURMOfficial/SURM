@@ -250,15 +250,15 @@ MatrixCostName_SOV_119IndTkBrig_multi is MAP
 
 MatrixCostName_SOV_25_Tank_multi is MAP
 [
-    (EDefaultFactories/Art, [1, 1, 1, 2, 2, 3, 3]),
+    (EDefaultFactories/Art, [1, 1, 1, 1, 1, 1, 2, 2, 3, 3,]),
     (EDefaultFactories/DCA, [1, 1, 2, 3, 3, 3]),
     (EDefaultFactories/Defense, []),
     (EDefaultFactories/Helis, [1, 1, 2, 2, 3, 3]),
-    (EDefaultFactories/Infantry, [1, 2, 2, 2, 3]),
+    (EDefaultFactories/Infantry, [1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3,]),
     (EDefaultFactories/Logistic, [1, 1, 2, 3, 3, 3]),
     (EDefaultFactories/Planes, [1, 1, 2, 2, 2, 3, 3]),
     (EDefaultFactories/Recons, [1, 1, 1, 2, 3, 3, 3]),
-    (EDefaultFactories/Tanks, [1, 1, 1, 1, 1, 1, 1, 1, 1, 2]),
+    (EDefaultFactories/Tanks, [1, 1, 1, 1, 1, 1, 1, 1, 2, 2]),
 ]
 
 MatrixCostName_SOV_27_Gds_Rifle_multi is MAP
@@ -297,6 +297,19 @@ MatrixCostName_SOV_39_Gds_Rifle_multi is MAP
     (EDefaultFactories/DCA,          [1, 1, 2, 3, 3, 3] ),//6;13   =AA
     (EDefaultFactories/Helis,       [1, 1, 2, 3, 3, 3] ),//6;13
     (EDefaultFactories/Planes,         [1, 1, 2, 3, 3, 3] ),//6;13
+    (EDefaultFactories/Defense,     [0,] ),//55 cases 107 pts...Coef 1,95
+]
+
+MatrixCostName_SOV_4_Gds_Tank_multi is MAP
+[
+    (EDefaultFactories/Logistic,    [1, 1, 2, 2] ),//4;9
+    (EDefaultFactories/Recons,        [1, 1, 1, 2, 3, 3, 3] ),//7;14
+    (EDefaultFactories/Infantry,  [1, 1, 1, 2, 2, 2, 3, 3, 3] ),//7;14
+    (EDefaultFactories/Tanks,        [1, 1, 1, 1, 1, 1, 2, 3, 3] ),//9;14
+    (EDefaultFactories/Art,     [1, 1, 1, 1, 1, 1, 2, 2] ),//8;15    =ART
+    (EDefaultFactories/DCA,          [1, 1, 1, 2, 2, 3, 3, 3] ),//8;15   =AA
+    (EDefaultFactories/Helis,       [1, 1, 2, 3, 3, 3] ),//6;13
+    (EDefaultFactories/Planes,         [1, 1, 2, 2, 3, 3] ),//6;13
     (EDefaultFactories/Defense,     [0,] ),//55 cases 107 pts...Coef 1,95
 ]
 
@@ -341,14 +354,14 @@ MatrixCostName_SOV_76_VDV_multi is MAP
 
 MatrixCostName_SOV_79_Gds_Tank_multi is MAP
 [
-    (EDefaultFactories/Logistic,    [1, 2, 3, 3] ),//4;9
+    (EDefaultFactories/Logistic,    [1, 1, 2, 2] ),//4;9
     (EDefaultFactories/Recons,        [1, 1, 1, 2, 3, 3, 3] ),//7;14
     (EDefaultFactories/Infantry,  [1, 1, 1, 2, 2, 2, 3, 3, 3] ),//7;14
     (EDefaultFactories/Tanks,        [1, 1, 1, 1, 1, 1, 2, 3, 3] ),//9;14
     (EDefaultFactories/Art,     [1, 1, 1, 1, 1, 2, 2, 2] ),//8;15    =ART
     (EDefaultFactories/DCA,          [1, 1, 1, 2, 2, 3, 3, 3] ),//8;15   =AA
     (EDefaultFactories/Helis,       [1, 1, 2, 3, 3, 3] ),//6;13
-    (EDefaultFactories/Planes,         [1, 1, 2, 3, 3, 3] ),//6;13
+    (EDefaultFactories/Planes,         [1, 1, 2, 2, 3, 3] ),//6;13
     (EDefaultFactories/Defense,     [0,] ),//55 cases 107 pts...Coef 1,95
 ]
 
@@ -497,15 +510,15 @@ MatrixCostName_US_8th_Inf_multi is MAP
 
 MatrixCostName_US_9th_Mot_multi is MAP
 [
-    (EDefaultFactories/Art, [1, 1, 2, 2, 3, 3, 3]),
+    (EDefaultFactories/Art, [1, 1, 1, 1, 1, 2, 2, 3,]),
     (EDefaultFactories/DCA, [1, 1, 2, 3, 3, 3]),
     (EDefaultFactories/Defense, [0]),
     (EDefaultFactories/Helis, [1, 2, 3, 3]),
-    (EDefaultFactories/Infantry, [1, 1, 1, 1, 1, 1, 1, 1, 2, 3]),
+    (EDefaultFactories/Infantry, [1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2,]),
     (EDefaultFactories/Logistic, [1, 1, 2, 3, 3, 3]),
     (EDefaultFactories/Planes, [1, 2, 2, 3, 3]),
     (EDefaultFactories/Recons, [1, 1, 1, 1, 1, 2, 3, 3, 3]),
-    (EDefaultFactories/Tanks, [1, 1, 1, 2, 2, 3, 3]),
+    (EDefaultFactories/Tanks, [1, 1, 2, 2, 3, 3, 3]),
 ]
 
 MatrixCostName_WP_Unternehmen_Zentrum_multi is MAP
@@ -521,15 +534,3 @@ MatrixCostName_WP_Unternehmen_Zentrum_multi is MAP
     (EDefaultFactories/Defense,     [0,] ),//55cases 107pts...Coef 1.94
 ]
 
-/*MatrixCostName_BEL_16de_Pz_multi is MAP
-[
-    (EDefaultFactories/Logistic,    [1, 1, 1, 2, 3, 3, 3] ),//7;14
-    (EDefaultFactories/Recons,        [1, 1, 1, 2, 3, 3, 3] ),//7;14
-    (EDefaultFactories/Infantry,  [1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3] ),//10;17
-    (EDefaultFactories/Tanks,        [1, 1, 1, 2, 3, 3, 3] ),//7;14
-    (EDefaultFactories/Art,     [1, 1, 1, 1, 2, 2, 2, 3, 3] ),//7;12   =ART
-    (EDefaultFactories/DCA,          [1, 1, 1, 2, 3, 3, 3] ),//7;14 ),//4;8   =AA
-    (EDefaultFactories/Helis,       [1, 2, 3] ),//3;6
-    (EDefaultFactories/Planes,         [1, 1, 2, 3, 3, 3, 3] ),// 7;16
-    (EDefaultFactories/Defense,     [0,] ),//55cases 107pts...Coef 1,95
-]*/

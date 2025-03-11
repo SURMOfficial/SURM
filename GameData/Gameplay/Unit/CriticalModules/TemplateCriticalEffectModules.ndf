@@ -199,6 +199,46 @@ template CriticalEffect_EngineDestroyed
     Descriptor = ~/CriticalEffect_EngineDestroyed_Desc
 )
 
+CriticalEffect_RoughGround_Desc is TCriticalEffectDescriptor
+(
+    Token = 'ROUGHGND'//'PWRDAMAG'
+    HappeningKey = 'critical_engine_damaged'
+    EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Vitesse_50
+    TimeOut = 45
+    RepairCost = -1
+    Unique = False
+    DisplayOnDeath = False
+)
+// Transmission endommagée -> 50% vitesse
+template CriticalEffect_RoughGround
+[
+    Roll
+] is TCriticalEffect
+(
+    Roll = <Roll>
+    Descriptor = ~/CriticalEffect_RoughGround_Desc
+)
+
+CriticalEffect_BoggedDown_Desc is TCriticalEffectDescriptor
+(
+    Token = 'BOGGED'
+    HappeningKey = 'critical_track_broke'
+    EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Full_Stop
+    TimeOut = 450 //this is probably too fast
+    RepairCost = -1
+    Unique = False
+    DisplayOnDeath = False
+)
+// Track broken -> no rotation
+template CriticalEffect_BoggedDown
+[
+    Roll
+] is TCriticalEffect
+(
+    Roll = <Roll>
+    Descriptor = ~/CriticalEffect_BoggedDown_Desc
+)
+
 CriticalEffect_TracksBroken_Desc is TCriticalEffectDescriptor
 (
     Token = 'CRITIC10'
@@ -1312,7 +1352,6 @@ PackEffetPierceArmeSidesTop is
         //CriticalEffect_TurretStuck(Roll=(76,84)), // Turret stuck -> no rotation tourelle
         //CriticalEffect_SightDamaged(Roll=(85,88)), // Sight damaged -> Précision 0.5
         //CriticalEffect_LoaderWounded(Roll=(6,6)), // Loader wounded -> reload *0.5
-        CriticalEffect_TransmissionDamaged(Roll=(54,63)), // Transmission endommagée -> 50% vitesse
         CriticalEffect_CrewPanicked(Roll=(89,93)), // Crew panicked -> Deroute
         CriticalEffect_Spalling(Roll=(94,100)), // Spalling -> perd 2PV
 ]
