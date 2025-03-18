@@ -3742,25 +3742,25 @@ Ammo_AGM_9M14_MalyutkaP_x4 is TAmmunitionDescriptor  //unused
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 2625
-    PorteeMinimaleGRU                 = 353
-    AngleDispersion                   = 0.0020001473227855013
-    DispersionAtMaxRangeGRU              = ((50) * 0.1209058738)
-    DispersionAtMinRangeGRU              = ((45) * 0.1209058738)
+    PorteeMaximaleGRU                 = 3000
+    PorteeMinimaleGRU                 = 500
+    AngleDispersion                   = 0.02
+    DispersionAtMaxRangeGRU              = ((500) * 0.1209058738)
+    DispersionAtMinRangeGRU              = ((500) * 0.1209058738)
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU       = 3 * 0.1209058738
-    PhysicalDamages                   = 1.0
+    RadiusSplashPhysicalDamagesGRU       = 0
+    PhysicalDamages                   = 0.8
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU       = 68 * 0.1209058738
-    SuppressDamages                   = 160.0
+    RadiusSplashSuppressDamagesGRU       = ((5))
+    SuppressDamages                   = 250.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
     TirReflexe                        = True
     InterdireTirReflexe               = True
-    MaximalSpeedGRU                      = 880 * 0.1209058738
-    MaxAccelerationGRU                   = 500 * 0.1209058738
+    MaximalSpeedGRU              		  = 800 * 0.1209058738
+    MaxAccelerationGRU               	  = 500 * 0.1209058738
     ShotWithoutPhysics                = True
     FluidFriction                     = 0.0
     NoiseDissimulationMalus           = 2.0
@@ -3773,19 +3773,19 @@ Ammo_AGM_9M14_MalyutkaP_x4 is TAmmunitionDescriptor  //unused
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 40),
+            (EBaseHitValueModifier/Idling, AccCorrATGM * 40),
             (EBaseHitValueModifier/Moving, 0),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = False
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 2.2
-    TempsEntreDeuxSalves              = 6.0
+    TempsDeVisee                      = 3.0
+    TempsEntreDeuxSalves              = 80.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 4
-    SupplyCost                        = 60
+    SupplyCost                        = 119
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     NbrProjectilesSimultanes          = 1
@@ -3818,29 +3818,25 @@ Ammo_AGM_9M14_MalyutkaP_x6 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 945
-    PorteeMinimaleTBAGRU                 = 0
-    PorteeMaximaleTBAGRU                 = 0
-    PorteeMinimaleHAGRU                  = 0
-    PorteeMaximaleHAGRU                  = 0
-    PorteeMinimaleGRU                    = 125
-    AngleDispersion                   = 0.0020001473227855013
-    DispersionAtMaxRangeGRU              = ((50) * 0.1209058738)
-    DispersionAtMinRangeGRU              = ((45) * 0.1209058738)
+    PorteeMaximaleGRU                 = 3000
+    PorteeMinimaleGRU                 = 500
+    AngleDispersion                   = 0.02
+    DispersionAtMaxRangeGRU              = ((500) * 0.1209058738)
+    DispersionAtMinRangeGRU              = ((500) * 0.1209058738)
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU       = 13 * 0.1209058738
-    PhysicalDamages                   = 1.0
+    RadiusSplashPhysicalDamagesGRU       = 0
+    PhysicalDamages                   = 0.8
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU       = 126 * 0.1209058738
-    SuppressDamages                   = 160.0
+    RadiusSplashSuppressDamagesGRU       = ((5))
+    SuppressDamages                   = 250.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
     TirReflexe                        = True
     InterdireTirReflexe               = True
-    MaximalSpeedGRU                      = 880 * 0.1209058738
-    MaxAccelerationGRU                   = 500 * 0.1209058738
+    MaximalSpeedGRU              		  = 800 * 0.1209058738
+    MaxAccelerationGRU               	  = 500 * 0.1209058738
     ShotWithoutPhysics                = True
     FluidFriction                     = 0.0
     NoiseDissimulationMalus           = 2.0
@@ -3860,12 +3856,12 @@ Ammo_AGM_9M14_MalyutkaP_x6 is TAmmunitionDescriptor
          ]
     )
     MaxSuccessiveHitCount             = 3
-    TempsDeVisee                      = 2.2
-    TempsEntreDeuxSalves              = 15.0
+    TempsDeVisee                      = 3.0
+    TempsEntreDeuxSalves              = 120.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 6
-    SupplyCost                        = 90.0
+    SupplyCost                        = 178.0
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
@@ -4740,7 +4736,7 @@ Ammo_AGM_AGM114A_x2_sol_LOAL is TAmmunitionDescriptor  //needs work
     TargetOnlyOneUnitInDistrict       = False
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
-         DescriptorId          = GUID:{fcf57f30-0d8d-435d-97f4-106868723cff}
+         DescriptorId          = GUID:{89974cd6-fd7e-4424-870f-a5ce698c1662}
          BaseCriticModifier = 0
           //BaseEffectModifier = 0
          BaseHitValueModifiers =
@@ -10151,7 +10147,7 @@ Ammo_ATGM_9M14_MalyutkaP_x6 is TAmmunitionDescriptor
     FxPower                           = EFXPower/UltraLourd
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                    = 2995
+    PorteeMaximaleGRU                    = 3000
     PorteeMinimaleTBAGRU                 = 0
     PorteeMaximaleTBAGRU                 = 0
     PorteeMinimaleHAGRU                  = 0

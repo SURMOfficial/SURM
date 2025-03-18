@@ -6468,7 +6468,7 @@ Ammo_Bomb_CBU_Mk20_Rockeye_II_250kg_x24 is TAmmunitionDescriptor //now has 24
     TargetOnlyOneUnitInDistrict       = False
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
-         DescriptorId          = GUID:{b0d10b14-edad-4b3d-ae04-b32a5a9060bb}
+         DescriptorId          = GUID:{0af284fc-fb3e-45c2-814c-e7a41bfb371d}
          BaseCriticModifier = 0
          //BaseEffectModifier = 0
          BaseHitValueModifiers =
@@ -7800,7 +7800,7 @@ Ammo_Bomb_FAB_500kg_x4 is TAmmunitionDescriptor
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
-    NbrProjectilesSimultanes          = 1
+    NbrProjectilesSimultanes          = 2
     AffichageMunitionParSalve         = 4
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_FAB_500"
     SmokeDescriptor                   = nil
@@ -53640,15 +53640,15 @@ Ammo_Howz_Canon_M30_Howitzer_122mm is TAmmunitionDescriptor//needs work
     ProjectileType                    = EProjectileType/Artillerie
     ImpactHappening                   = [ 'ArtillerieM185155Mm' ]
     FxPower                           = EFXPower/Moyen
-    TempsEntreDeuxTirs                = 5.0
-    TempsEntreDeuxFx                  = 3.0
-    PorteeMaximaleGRU                    = 5085
+    TempsEntreDeuxTirs                = 10.0
+    TempsEntreDeuxFx                  = 10.0
+    PorteeMaximaleGRU                    = 11800
     PorteeMinimaleGRU                    = 765
     AltitudeAPorteeMinimaleGRU           = ((300.0) * 0.1209058738 )
     AltitudeAPorteeMaximaleGRU           = ((15000.0) * 0.1209058738 )
     AngleDispersion                   = 0.0
-    DispersionAtMaxRangeGRU              = ((500) * 0.1209058738 )
-    DispersionAtMinRangeGRU              = ((500) * 0.1209058738 )
+    DispersionAtMaxRangeGRU              = 150
+    DispersionAtMinRangeGRU              = 10
     DispersionWithoutSorting          = True
     CorrectedShotDispersionMultiplier = 0.7
     CorrectedShotAimtimeMultiplier    = 1.0
@@ -53687,7 +53687,7 @@ Ammo_Howz_Canon_M30_Howitzer_122mm is TAmmunitionDescriptor//needs work
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 6
-    SupplyCost                        = 1.2
+    SupplyCost                        = 97.56
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
@@ -75655,18 +75655,18 @@ Ammo_RocketArt_PW_MICLICS is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TempsEntreDeuxTirs                = 1.0
     TempsEntreDeuxFx                  = 1.0
-    PorteeMaximaleGRU                 = 1750
-    PorteeMinimaleGRU                 = 350
+    PorteeMaximaleGRU                 = 350 //guess but it's not that far
+    PorteeMinimaleGRU                 = 75
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = ((250) * 0.1209058738 )
     DispersionAtMinRangeGRU              = ((100) * 0.1209058738 )
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU       = 400 * 0.1209058738 
-    PhysicalDamages                   = 3.3
+    RadiusSplashPhysicalDamagesGRU       = (BombRadiusCorr * (140) ) //guess
+    PhysicalDamages                   = 23.1
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU       = 500 * 0.1209058738 
-    SuppressDamages                   = 250.0
+    RadiusSplashSuppressDamagesGRU       = ((330))
+    SuppressDamages                   = 1200.0
     AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = True
@@ -75692,8 +75692,8 @@ Ammo_RocketArt_PW_MICLICS is TAmmunitionDescriptor
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 1
-    TempsDeVisee                      = 10.0
-    TempsEntreDeuxSalves              = 60.0
+    TempsDeVisee                      = 18.0
+    TempsEntreDeuxSalves              = 180.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
     NbTirParSalves                    = 1
@@ -76559,7 +76559,7 @@ Ammo_RocketInf_B11_RCL_107mm_HE_TOWED is TAmmunitionDescriptor //unused
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 2.0
+    TempsDeVisee                      = 4.0
     TempsEntreDeuxSalves              = 9.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -76638,7 +76638,7 @@ Ammo_RocketInf_B11_RCL_107mm_TOWED is TAmmunitionDescriptor //unused
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 2.0
+    TempsDeVisee                      = 5.0
     TempsEntreDeuxSalves              = 9.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -76716,7 +76716,7 @@ Ammo_RocketInf_Blindicide_RL_100 is TAmmunitionDescriptor //unused
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 1.0
+    TempsDeVisee                      = 3.0
     TempsEntreDeuxSalves              = 12.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -76795,7 +76795,7 @@ Ammo_RocketInf_Blindicide_RL_83 is TAmmunitionDescriptor //unused
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 1.0
+    TempsDeVisee                      = 3.0
     TempsEntreDeuxSalves              = 12.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -76871,7 +76871,7 @@ Ammo_RocketInf_C90CR is TAmmunitionDescriptor
         ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 1.5
+    TempsDeVisee                      = 3.0
     TempsEntreDeuxSalves              = 3.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0
@@ -77021,7 +77021,7 @@ Ammo_RocketInf_HAFLA is TAmmunitionDescriptor
         ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 2.0
+    TempsDeVisee                      = 3.0
     TempsEntreDeuxSalves              = 3.0
     TempsEntreDeuxSalves_Min           = -1.0
     TempsEntreDeuxSalves_Max           = -1.0

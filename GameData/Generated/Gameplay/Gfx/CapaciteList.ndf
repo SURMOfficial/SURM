@@ -3222,7 +3222,7 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
 	"Allie_Proche",
     ]
     Conditions = [
-        ~/ConditionTagNotRaisedInUnit_Panique_1,
+        ~/ConditionTagNotRaisedInUnit_Panique_1, //units shouldn't flee or surrender to panicked enemies
     ]
 )
 export Capacite_Menace_Ennemi_Proche_flee is TCapaciteDescriptor
@@ -3298,11 +3298,11 @@ export Capacite_Menace_Ennemi_Proche_tank is TCapaciteDescriptor
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     Price = MAP[]
-    TagsCiblePossible = [
-	"Infanterie_Cowering",
+	TagsCiblePossible = [
+        "Infanterie_Cowering",
     ]
     TagsCibleExcluded = [
-	"Allie_Proche",
+        "Allie_Proche",
     ]
     Conditions = [
         ~/ConditionTagNotRaisedInUnit_Panique_1,
@@ -4567,6 +4567,45 @@ export Capacite_poorly_trained is TCapaciteDescriptor
         ~/ConditionNotInMovement,
     ]
 )
+export Capacite_supply_block is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{b44b8b0e-3834-4988-b47c-87e42e2b3dfc}
+    Name             = "reserviste"
+    NameToken        = "None"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TypeCible               = ~/CapaciteTypeCible_soi
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    TargetWoundedFilter     = ~/CapaciteWoundedFilterType_tout
+    AreaShape               = ~/CapaciteAreaShape_soi
+    RadiusGRU               = 1
+    RangeGRU                = 1
+    CastTime                = 0.00
+    Cooldown                = 1.00
+    CheckVisibility         = True
+    AllowReflexDuringCast   = True
+    CanBeCastFromTransport  = True
+    TargetEffect            = ~/UnitEffect_supply_block
+    TargetEffectDuration    = -1.00
+    SelfEffectDuration      = 0.00
+    MaxTargetNb            = 1
+    MultiplyCost           = False
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    Price = MAP[]
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
 export Capacite_reserviste is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{7ede2a6d-5414-4cfd-b6a0-dd9ce3a6b0f4}
@@ -5366,7 +5405,7 @@ export Capacite_kill_missile_13_seconds is TCapaciteDescriptor
 )
 export Capacite_kill_missile_14_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{00c87951-98db-4637-ae9f-87d61cbeafca}
+    DescriptorId     = GUID:{43ce41d9-fb34-4306-bbe0-a2d209242f6f}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -5483,7 +5522,7 @@ export Capacite_kill_missile_16_seconds is TCapaciteDescriptor
 )
 export Capacite_kill_missile_17_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{720788e7-6a6d-43ce-ac80-73df3766b922}
+    DescriptorId     = GUID:{2178f11e-8cac-438b-9042-8b7cd9a2eb1c}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -5561,7 +5600,7 @@ export Capacite_kill_missile_18_seconds is TCapaciteDescriptor
 )
 export Capacite_kill_missile_19_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{9ac420f2-8830-4f4e-9f57-0fb16df97095}
+    DescriptorId     = GUID:{668403c7-2a4e-4d7d-94c5-c6c7e24c67a7}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -5639,7 +5678,7 @@ export Capacite_kill_missile_20_seconds is TCapaciteDescriptor
 )
 export Capacite_kill_missile_21_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{a549b250-e245-400f-b8aa-46642f4e5af7}
+    DescriptorId     = GUID:{ef9711dd-a0d6-4564-95d3-0c8616ef2759}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -5678,7 +5717,7 @@ export Capacite_kill_missile_21_seconds is TCapaciteDescriptor
 )
 export Capacite_kill_missile_22_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{a549b250-e245-400f-b8aa-46642f4e5af7}
+    DescriptorId     = GUID:{278734e2-231f-41f2-bdae-a623c202ab22}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -5717,7 +5756,7 @@ export Capacite_kill_missile_22_seconds is TCapaciteDescriptor
 )
 export Capacite_kill_missile_23_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{a549b250-e245-400f-b8aa-46642f4e5af7}
+    DescriptorId     = GUID:{457d3b7c-90c3-4f55-b24d-0529e05ef478}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6037,7 +6076,7 @@ export Capacite_tripod_no_tripod_fast is TCapaciteDescriptor //want a delay so v
 )
 export Capacite_slow_missile_1_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{35a51933-0edd-47ab-825d-a43a7f80c23f}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6076,7 +6115,7 @@ export Capacite_slow_missile_1_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_2_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{feb66c62-beda-4abc-900c-86db8980dbeb}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6115,7 +6154,7 @@ export Capacite_slow_missile_2_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_3_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{6ff87e4b-06c7-4dd0-a5f0-72fd5601be5b}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6154,7 +6193,7 @@ export Capacite_slow_missile_3_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_4_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{07570566-7195-4557-93a6-9075a9be1032}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6193,7 +6232,7 @@ export Capacite_slow_missile_4_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_5_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{95e85877-b272-437a-bc40-378ede091f5f}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6232,7 +6271,7 @@ export Capacite_slow_missile_5_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_6_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{ac5678e4-35b5-4567-ab23-d8629284ec13}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6271,7 +6310,7 @@ export Capacite_slow_missile_6_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_7_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{f3e49be4-d3f8-47db-8065-c17fac824cc5}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6310,7 +6349,7 @@ export Capacite_slow_missile_7_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_8_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{c3914d6b-ba9b-4379-bd95-3f0aac3879c7}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6349,7 +6388,7 @@ export Capacite_slow_missile_8_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_9_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{27c42fc5-0bd9-4d54-bc17-fc60af544dcc}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6388,7 +6427,7 @@ export Capacite_slow_missile_9_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_10_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{5031528d-ba83-4b96-a11f-c21db6a7b4a1}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6427,7 +6466,7 @@ export Capacite_slow_missile_10_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_11_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{9945ee8b-8d6b-4e03-bfd2-c1286099f0ee}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6466,7 +6505,7 @@ export Capacite_slow_missile_11_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_12_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{435dac0c-8a2a-4f73-be55-a20f7c390c4f}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6505,7 +6544,7 @@ export Capacite_slow_missile_12_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_13_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{842dd35f-8c14-48f8-9f86-8e36581414a7}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6544,7 +6583,7 @@ export Capacite_slow_missile_13_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_14_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{79bcc862-472d-4e5e-8845-c25787e4b321}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6583,7 +6622,7 @@ export Capacite_slow_missile_14_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_15_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{70527aef-921c-4440-9b33-45f82f4b51de}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6622,7 +6661,7 @@ export Capacite_slow_missile_15_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_16_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{fc00c39c-d17d-4efb-93f0-8e76fb8d3643}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6661,7 +6700,7 @@ export Capacite_slow_missile_16_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_17_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{96f93915-85c3-4ed9-a37f-522150b90029}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6700,7 +6739,7 @@ export Capacite_slow_missile_17_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_18_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{9381fe49-4d84-4f31-9786-71e6bed68121}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6739,7 +6778,7 @@ export Capacite_slow_missile_18_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_19_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{de345248-71b7-4184-b0ab-1d940e2955df}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6778,7 +6817,7 @@ export Capacite_slow_missile_19_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_20_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{cc1fd62a-6578-437b-aa18-9ec629f38a96}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6817,7 +6856,7 @@ export Capacite_slow_missile_20_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_21_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{aeab1d9f-5383-4d8a-bb54-00409466cb51}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6856,7 +6895,7 @@ export Capacite_slow_missile_21_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_22_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{7f721bba-d25b-4845-bca5-1a03484ae6c0}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -6895,7 +6934,7 @@ export Capacite_slow_missile_22_seconds is TCapaciteDescriptor
 )
 export Capacite_slow_missile_23_seconds is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
+    DescriptorId     = GUID:{afc5c21d-b495-4487-b7c5-8036c3e830d9}
     Name             = "sniper_no_snipe"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais

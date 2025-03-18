@@ -1176,6 +1176,7 @@ export UnitEffect_Critic_Bailed_Out is TEffectsPackDescriptor
         (
             TagListToRaise = [
                  "Bailed_Out",
+				 "Panique",
             ]
         ),
         TUnitEffectSetSelectableDescriptor
@@ -1349,6 +1350,7 @@ export UnitEffect_Critic_Deroute_Infantry is TEffectsPackDescriptor
         (
             TagListToRaise = [
                  "Retraite",
+				 "Panique",
             ]
         ),
         TUnitEffectSetSelectableDescriptor
@@ -1363,7 +1365,7 @@ export UnitEffect_Critic_Deroute_Infantry_Flee is TEffectsPackDescriptor
     DescriptorId       = GUID:{babc34e3-f375-59bf-bd21-2c44875424d9}
     NameForDebug       = 'Critic_Deroute_Infantry'
     EffectsDescriptors = [
-        TUnitEffectIncreaseWeaponPorteeMaxDescriptor
+/*         TUnitEffectIncreaseWeaponPorteeMaxDescriptor
         (
             ModifierType         = ~/ModifierType_Pourcentage
             ModifierValue = -100
@@ -1405,7 +1407,12 @@ export UnitEffect_Critic_Deroute_Infantry_Flee is TEffectsPackDescriptor
         (
             Selectable = False
         ),
-		TDerouteUnitEffectDescriptor(),
+		TDerouteUnitEffectDescriptor(), */
+        TEffectInflictSuppressDamageDescriptor
+        (
+            ModifierType             = ~/ModifierType_Additionnel
+            SuppressDamageValue      = 1600 //should rout any unit I think
+        ),
     ]
 )
 export UnitEffect_Critic_Deroute is TEffectsPackDescriptor
@@ -1470,6 +1477,7 @@ export UnitEffect_GroundUnit_full_suppressed is TEffectsPackDescriptor
         (
             TagListToRaise = [
                  "Retraite",
+				 "Panique",
             ]
         ),
     ]
@@ -2726,6 +2734,7 @@ export UnitEffect_GroundUnit_Cowering is TEffectsPackDescriptor
                  "GroundUnit_Suppressed",
                  "GroundUnit_Pinned",
                  "GroundUnit_Cowering",
+				 "Panique",
             ]
         ),
     ]
@@ -4543,6 +4552,19 @@ export UnitEffect_military_police_feedback is TEffectsPackDescriptor
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_mp"
+        ),
+    ]
+)
+export UnitEffect_supply_block is TEffectsPackDescriptor //didn't work, negative heal units are not allowed
+(
+    DescriptorId       = GUID:{10881d28-5f5d-4251-854b-85b30261f1da}
+    NameForDebug       = 'reserviste'
+    EffectsDescriptors = [
+        TUnitEffectHealOverTimeDescriptor
+        (
+            NbUpdatePerSecond  = 1
+            HealUnitsPerSecond = 1
+            DamageType = EDamageType/Suppress
         ),
     ]
 )
@@ -6706,7 +6728,7 @@ export UnitEffect_additional_XP_from_command is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_1s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{e2addb58-eb3e-4101-ab19-dfde23cebd9b}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6718,7 +6740,7 @@ export UnitEffect_slow_missile_1s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_2s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{aac64bce-60d6-4205-9c3e-89a33cecc0bc}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6730,7 +6752,7 @@ export UnitEffect_slow_missile_2s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_3s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{c68c5122-cc8c-4253-a04c-12210fc79b03}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6742,7 +6764,7 @@ export UnitEffect_slow_missile_3s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_4s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{3215b729-92c7-47d6-a7b6-33d7c2d918c2}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6754,7 +6776,7 @@ export UnitEffect_slow_missile_4s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_5s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{423c3348-995c-4518-9ff8-57c87b674ad3}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6766,7 +6788,7 @@ export UnitEffect_slow_missile_5s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_6s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{d87baf94-6789-4f2e-9465-5280a36d62a6}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6778,7 +6800,7 @@ export UnitEffect_slow_missile_6s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_7s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{c0900eae-da51-4334-b765-4acc1806a18b}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6790,7 +6812,7 @@ export UnitEffect_slow_missile_7s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_8s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{e879f989-67ad-4aff-9a87-2efe5667398f}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6802,7 +6824,7 @@ export UnitEffect_slow_missile_8s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_9s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{c8e06bdd-a734-4f9a-a3db-f256e78d0154}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6814,7 +6836,7 @@ export UnitEffect_slow_missile_9s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_10s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{60326587-c091-42f6-bfe0-fe95a79a9308}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6826,7 +6848,7 @@ export UnitEffect_slow_missile_10s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_11s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{47689c6e-4acb-46de-b2b9-e6fb5ff71fec}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6838,7 +6860,7 @@ export UnitEffect_slow_missile_11s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_12s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{b79b07ed-0622-488d-bdd3-2b4b8dbf27ed}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6850,7 +6872,7 @@ export UnitEffect_slow_missile_12s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_13s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{d7e384c5-77ec-45ce-b1b3-6262cf861bb2}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6862,7 +6884,7 @@ export UnitEffect_slow_missile_13s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_14s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{b29cb1bb-2f17-4442-8a09-4a7a97c9d3a0}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6874,7 +6896,7 @@ export UnitEffect_slow_missile_14s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_15s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{557da11e-92d5-4fd2-8b5a-8bf41a0fcaab}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6886,7 +6908,7 @@ export UnitEffect_slow_missile_15s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_16s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{4cb644b0-1ecc-47e2-b76b-a65a68b651b9}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6898,7 +6920,7 @@ export UnitEffect_slow_missile_16s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_17s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{1400c6eb-198d-481e-a7f8-a01d79dfa94f}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6910,7 +6932,7 @@ export UnitEffect_slow_missile_17s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_18s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{dd9f8f7f-fd0d-4a7f-a0eb-433bd3278f40}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6922,7 +6944,7 @@ export UnitEffect_slow_missile_18s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_19s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{8c0cef3c-5690-4704-8467-64c5cdbe4b24}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6934,7 +6956,7 @@ export UnitEffect_slow_missile_19s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_20s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{555a597a-1673-44ad-9a5c-a5fe3f783adc}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6946,7 +6968,7 @@ export UnitEffect_slow_missile_20s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_21s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{fbe0da1a-a7e2-4674-b87d-548d95522f40}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6958,7 +6980,7 @@ export UnitEffect_slow_missile_21s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_22s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{7a4929df-ebae-4a11-baad-244a8d2f2d78}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6970,7 +6992,7 @@ export UnitEffect_slow_missile_22s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_23s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{8fbce51c-e518-40d8-a8e1-6d5cf9d92255}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6982,7 +7004,7 @@ export UnitEffect_slow_missile_23s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_24s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{851b0b54-a6fa-40d9-9901-89eb091c7ffb}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
@@ -6994,7 +7016,7 @@ export UnitEffect_slow_missile_24s is TEffectsPackDescriptor
 )
 export UnitEffect_slow_missile_25s is TEffectsPackDescriptor
 (
-    DescriptorId       = GUID:{ac339b28-f3ea-4240-9123-1daad25211ae}
+    DescriptorId       = GUID:{b996ffb1-2912-4d36-97cf-363f61c776a4}
     NameForDebug       = 'ArtyUnit_Cohesion_Low'
     EffectsDescriptors = [
         TUnitEffectIncreaseSpeedDescriptor
