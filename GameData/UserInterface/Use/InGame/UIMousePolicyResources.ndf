@@ -596,6 +596,15 @@ TerrainTypeToText is MAP
             //ExtendedToken = "terr_roue"
         )
     ),
+    (
+        ~/ETerrainType/Crater,
+        THintContentHolder
+        (
+            TitleToken = "crater"
+            BodyToken = "craterB"
+            //ExtendedToken = "terr_roue"
+        )
+    ),
 
 ]
 
@@ -686,6 +695,7 @@ MouseWidget_SelectNeutralLand is Template_HardwareMouseWidgetResource_WithTerrai
         (ETerrainType/HeavySmoke,       ~/MouseCurseur_couvert_lourd),
         (ETerrainType/Rocher,           ~/MouseCurseur_couvert_rocher),
         (ETerrainType/Wreck,            ~/MouseCurseur_couvert_leger),
+        (ETerrainType/Crater,           ~/MouseCurseur_couvert_leger),
         (ETerrainType/PetitBatiment,    ~/MouseCurseur_couvert_lourd),
         (ETerrainType/Batiment,         ~/MouseCurseur_couvert_lourd),
         (ETerrainType/Ruin,             ~/MouseCurseur_couvert_lourd),
@@ -734,6 +744,7 @@ MouseWidget_OrderMoveFast_WithTerrainFeedback is Template_HardwareMouseWidgetRes
         (ETerrainType/MediumSmoke,      ~/Mousecurseur_mouvement_rapide_coverl),
         (ETerrainType/HeavySmoke,       ~/Mousecurseur_mouvement_rapide_coverh),
         (ETerrainType/Wreck,       		~/Mousecurseur_mouvement_rapide_coverl),
+        (ETerrainType/Crater,       	~/Mousecurseur_mouvement_rapide_coverl),
         (ETerrainType/PetitBatiment,    ~/Mousecurseur_mouvement_rapide_coverh),
         (ETerrainType/Batiment,         ~/Mousecurseur_mouvement_rapide_coverh),
         (ETerrainType/Ruin,             ~/Mousecurseur_mouvement_rapide_coverh),
@@ -768,6 +779,7 @@ MouseWidget_OrderReverse_WithTerrainFeedback is Template_HardwareMouseWidgetReso
         (ETerrainType/MediumSmoke,      ~/Mousecurseur_curseur_retour_coverl),
         (ETerrainType/HeavySmoke,       ~/Mousecurseur_curseur_retour_coverh),
         (ETerrainType/Wreck,       		~/Mousecurseur_curseur_retour_coverl),
+        (ETerrainType/Crater,       	~/Mousecurseur_curseur_retour_coverl),
         (ETerrainType/PetitBatiment,    ~/Mousecurseur_curseur_retour_coverh),
         (ETerrainType/Batiment,         ~/Mousecurseur_curseur_retour_coverh),
         (ETerrainType/Ruin,             ~/Mousecurseur_curseur_retour_coverh),
@@ -802,6 +814,7 @@ MouseWidget_OrderUnloadAtPosition_WithTerrainFeedback is Template_HardwareMouseW
         (ETerrainType/MediumSmoke,      ~/Mousecurseur_UnloadAtPosition_coverl),
         (ETerrainType/HeavySmoke,       ~/Mousecurseur_UnloadAtPosition_coverh),
         (ETerrainType/Wreck,       		~/Mousecurseur_UnloadAtPosition_coverl),
+        (ETerrainType/Crater,       	~/Mousecurseur_UnloadAtPosition_coverl),
         (ETerrainType/PetitBatiment,    ~/Mousecurseur_UnloadAtPosition_coverh),
         (ETerrainType/Batiment,         ~/Mousecurseur_UnloadAtPosition_coverh),
         (ETerrainType/Ruin,             ~/Mousecurseur_UnloadAtPosition_coverh),
@@ -953,6 +966,7 @@ is TUIMouseWidgetResource
                     (ETerrainType/MediumSmoke,      ~/Mousecurseur_mouvement_attaque_coverl),
                     (ETerrainType/HeavySmoke,       ~/Mousecurseur_mouvement_attaque_coverh),
 					(ETerrainType/Wreck,       		~/Mousecurseur_mouvement_attaque_coverl),
+					(ETerrainType/Crater,       	~/Mousecurseur_mouvement_attaque_coverl),
                     (ETerrainType/PetitBatiment,    ~/Mousecurseur_mouvement_attaque_coverh),
                     (ETerrainType/Batiment,         ~/Mousecurseur_mouvement_attaque_coverh),
                     (ETerrainType/Ruin,             ~/Mousecurseur_mouvement_attaque_coverh),

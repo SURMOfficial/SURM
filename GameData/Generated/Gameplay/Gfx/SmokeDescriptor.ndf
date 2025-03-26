@@ -27,7 +27,7 @@ export Descriptor_Smoke_Fumi105mm is TEntityDescriptor
             AltitudeGRU    = 30
             TimeToLive     = 90
             RadiusGRU      = 30
-            Terrain        = $/GFX/Terrains/SmokeMedium
+            Terrain        = ~/ETerrainType/MediumSmoke
         ),
     ]
 )
@@ -57,7 +57,7 @@ export Descriptor_Smoke_Fumi107mm is TEntityDescriptor
             AltitudeGRU       = 30
             TimeToLive     = 90
             RadiusGRU         = 30
-            Terrain        = $/GFX/Terrains/SmokeMedium
+            Terrain        = ~/ETerrainType/MediumSmoke
         ),
     ]
 )
@@ -87,7 +87,7 @@ export Descriptor_Smoke_Fumi120mm is TEntityDescriptor
             AltitudeGRU       = 36
             TimeToLive     = 90
             RadiusGRU         = 36
-            Terrain        = $/GFX/Terrains/SmokeMedium
+            Terrain        = ~/ETerrainType/MediumSmoke
         ),
     ]
 )
@@ -117,7 +117,7 @@ export Descriptor_Smoke_Fumi120mm_mortier is TEntityDescriptor
             AltitudeGRU       = 106
             TimeToLive     = 45
             RadiusGRU         = 106
-            Terrain        = $/GFX/Terrains/SmokeMedium
+            Terrain        = ~/ETerrainType/MediumSmoke
         ),
     ]
 )
@@ -147,7 +147,7 @@ export Descriptor_Smoke_Fumi122mm is TEntityDescriptor
             AltitudeGRU       = 36
             TimeToLive     = 90
             RadiusGRU         = 36
-            Terrain        = $/GFX/Terrains/SmokeMedium
+            Terrain        = ~/ETerrainType/MediumSmoke
         ),
     ]
 )
@@ -177,7 +177,7 @@ export Descriptor_Smoke_Fumi152mm is TEntityDescriptor
             AltitudeGRU       = 42
             TimeToLive     = 90
             RadiusGRU         = 42
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -207,7 +207,7 @@ export Descriptor_Smoke_Fumi155mm is TEntityDescriptor
             AltitudeGRU       = 42
             TimeToLive     = 90
             RadiusGRU         = 42
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -237,7 +237,7 @@ export Descriptor_Smoke_Fumi203mm is TEntityDescriptor
             AltitudeGRU       = 42
             TimeToLive     = 90
             RadiusGRU         = 60
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -267,7 +267,7 @@ export Descriptor_Smoke_Fumi60mm is TEntityDescriptor
             AltitudeGRU       = 18
             TimeToLive     = 90
             RadiusGRU         = 18
-            Terrain        = $/GFX/Terrains/SmokeLight
+            Terrain        = ~/ETerrainType/LightSmoke
         ),
     ]
 )
@@ -297,7 +297,7 @@ export Descriptor_Smoke_Fumi40mm is TEntityDescriptor
             AltitudeGRU       = 3
             TimeToLive     = 45
             RadiusGRU         = 3
-            Terrain        = $/GFX/Terrains/SmokeLight
+            Terrain        = ~/ETerrainType/LightSmoke
         ),
     ]
 )
@@ -327,7 +327,7 @@ export Descriptor_Smoke_Fumi81mm is TEntityDescriptor
             AltitudeGRU       = 24
             TimeToLive     = 90
             RadiusGRU         = 24
-            Terrain        = $/GFX/Terrains/SmokeLight
+            Terrain        = ~/ETerrainType/LightSmoke
         ),
     ]
 )
@@ -357,7 +357,7 @@ export Descriptor_Smoke_FumiBombe is TEntityDescriptor
             AltitudeGRU       = 124
             TimeToLive     = 100
             RadiusGRU         = 141
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -376,7 +376,7 @@ export Descriptor_Smoke_FumiIncendie is TEntityDescriptor
             AltitudeGRU       = ((350) * 0.1209058738)
             TimeToLive     = 60
             RadiusGRU         = ((75) * 0.1209058738)
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -395,7 +395,7 @@ export Descriptor_Smoke_FumiIncendie_small is TEntityDescriptor
             AltitudeGRU       = ((65) * 0.1209058738)
             TimeToLive     = 67
             RadiusGRU         = ((65) * 0.1209058738)
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -414,7 +414,7 @@ export Descriptor_Smoke_Fumi_burning_tank is TEntityDescriptor
             AltitudeGRU       = ((65) * 0.1209058738)
             TimeToLive     = 90
             RadiusGRU         = ((45) * 0.1209058738)
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -433,11 +433,49 @@ export Descriptor_Smoke_Fumi_tank_wreck is TEntityDescriptor
             AltitudeGRU       = ((1.5))
             TimeToLive     = 14400
             RadiusGRU         = ((1.5))
-            Terrain        = $/GFX/Terrains/VehicleWreck
+            Terrain        = ~/ETerrainType/Wreck
         ),
     ]
 )
-export Descriptor_Smoke_FumiDust is TEntityDescriptor
+export Descriptor_Smoke_Fumi_crater_med is TEntityDescriptor //artillery
+(
+    World        = WorldIndices_Smokes
+    DescriptorId       = GUID:{a50df405-96c1-4591-8fbe-417170eb95ba}
+    ClassNameForDebug  = 'Smoke_FumiIncendie_small'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ~/SmokePositionModuleDescriptor,
+		TSmokeModuleDescriptor
+        (
+            AltitudeGRU       = ((4))
+            TimeToLive     = 14400
+            RadiusGRU         = ((4))
+            Terrain        = ~/ETerrainType/Crater
+        ),
+    ]
+)
+export Descriptor_Smoke_Fumi_crater_large is TEntityDescriptor //bombs
+(
+    World        = WorldIndices_Smokes
+    DescriptorId       = GUID:{a240e886-cee6-4e18-b236-d5f98e7ebd85}
+    ClassNameForDebug  = 'Smoke_FumiIncendie_small'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ~/SmokePositionModuleDescriptor,
+		TSmokeModuleDescriptor
+        (
+            AltitudeGRU       = ((8))
+            TimeToLive     = 14400
+            RadiusGRU         = ((8))
+            Terrain        = ~/ETerrainType/Crater
+        ),
+    ]
+)
+export Descriptor_Smoke_FumiDust_small is TEntityDescriptor
 (
     World        = WorldIndices_Smokes
     DescriptorId       = GUID:{28a30a28-c1d5-4b31-a6dd-9f53ce03281e}
@@ -449,10 +487,29 @@ export Descriptor_Smoke_FumiDust is TEntityDescriptor
         ~/SmokePositionModuleDescriptor,
 		TSmokeModuleDescriptor
         (
-            AltitudeGRU       = ((65) * 0.1209058738)
+            AltitudeGRU       = 3
+            TimeToLive     = 8
+            RadiusGRU         = 3
+            Terrain        = ~/ETerrainType/HeavySmoke
+        ),
+    ]
+)
+export Descriptor_Smoke_FumiDust is TEntityDescriptor
+(
+    World        = WorldIndices_Smokes
+    DescriptorId       = GUID:{ba444453-5fe4-4f58-9591-b23c0c54d4e4}
+    ClassNameForDebug  = 'Smoke_FumiIncendie'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ~/SmokePositionModuleDescriptor,
+		TSmokeModuleDescriptor
+        (
+            AltitudeGRU       = 8
             TimeToLive     = 15
-            RadiusGRU         = ((65) * 0.1209058738)
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            RadiusGRU         = 8
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -468,10 +525,10 @@ export Descriptor_Smoke_FumiDustBomb is TEntityDescriptor
         ~/SmokePositionModuleDescriptor,
 		TSmokeModuleDescriptor
         (
-            AltitudeGRU       = ((50))
+            AltitudeGRU       = 40
             TimeToLive     = 15
-            RadiusGRU         = ((50))
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            RadiusGRU         = 40
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -490,7 +547,7 @@ export Descriptor_Smoke_FumiNapalm is TEntityDescriptor
             AltitudeGRU       = ((350) * 0.1209058738)
             TimeToLive     = 60
             RadiusGRU         = ((75) * 0.1209058738)
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -509,7 +566,7 @@ export Descriptor_Smoke_FumiNapalmleger is TEntityDescriptor
             AltitudeGRU       = ((350) * 0.1209058738)
             TimeToLive     = 60
             RadiusGRU         = ((150) * 0.1209058738)
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -528,7 +585,7 @@ export Descriptor_Smoke_FumiNapalmlourd is TEntityDescriptor
             AltitudeGRU       = ((350) * 0.1209058738)
             TimeToLive     = 75
             RadiusGRU         = ((65))
-            Terrain        = $/GFX/Terrains/SmokeHeavy
+            Terrain        = ~/ETerrainType/HeavySmoke
         ),
     ]
 )
@@ -558,7 +615,7 @@ export Descriptor_Smoke_FumiTest1 is TEntityDescriptor
             AltitudeGRU       = 44
             TimeToLive     = 70
             RadiusGRU         = 1
-            Terrain        = $/GFX/Terrains/SmokeLight
+            Terrain        = ~/ETerrainType/LightSmoke
         ),
     ]
 )
@@ -588,7 +645,7 @@ export Descriptor_Smoke_Fumi_smoke_grenade is TEntityDescriptor
             AltitudeGRU       = 18
             TimeToLive     = 20
             RadiusGRU         = 18
-            Terrain        = $/GFX/Terrains/SmokeLight
+            Terrain        = ~/ETerrainType/LightSmoke
         ),
     ]
 )

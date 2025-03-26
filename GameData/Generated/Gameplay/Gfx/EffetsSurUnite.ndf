@@ -1052,6 +1052,64 @@ export UnitEffect_CanonAT_Suppressed is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_Professional is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{482029f4-6e5c-4188-aedc-2c2dd2edd769}
+    NameForDebug       = 'Professional'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseDamageTakenDescriptor
+        (
+            ModifierType        = ~/ModifierType_Pourcentage
+            BonusDamage         = -20
+            DamageType          = EDamageType/Suppress
+        ),
+        TUnitEffectHealOverTimeDescriptor
+        (
+            NbUpdatePerSecond  = 1
+            HealUnitsPerSecond = 0.35
+            DamageType = EDamageType/Suppress
+        ),
+    ]
+)
+export UnitEffect_Advanced_Training is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{0d41a022-ad10-42a0-8d73-655e90ac6b9e}
+    NameForDebug       = 'Choc'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseSpeedDescriptor
+        (
+            ModifierType             = ~/ModifierType_Pourcentage
+            BonusSpeedBaseInPercent  = 15
+        ),
+		TUnitEffectIncreaseDamageTakenDescriptor
+        (
+            ModifierType        = ~/ModifierType_Pourcentage
+            BonusDamage         = -25
+            DamageType          = EDamageType/Suppress
+        ),
+        TUnitEffectHealOverTimeDescriptor
+        (
+            NbUpdatePerSecond  = 1
+            HealUnitsPerSecond = 0.5
+            DamageType = EDamageType/Suppress
+        ),
+        TBonusWeaponAimtimeEffectDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.8
+        ),
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 20
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 20
+        ),
+    ]
+)
 export UnitEffect_Choc is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{a13be162-63bd-4223-8b44-e67daee0191f}
@@ -1062,11 +1120,11 @@ export UnitEffect_Choc is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Pourcentage
             BonusSpeedBaseInPercent  = 15
         ),
-        TBonusWeaponAimtimeEffectDescriptor
+/*         TBonusWeaponAimtimeEffectDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
             ModifierValue = 0.8
-        ),
+        ), */
         //TUnitEffectIncreaseWeaponPhysicalDamagesDescriptor
         //(
         //    ModifierType               = ~/ModifierType_Pourcentage
@@ -1077,10 +1135,11 @@ export UnitEffect_Choc is TEffectsPackDescriptor
             ModifierType  = ~/ModifierType_Multiplicatif
             ModifierValue = 0.8
         ),
-        TUnitEffectAlterWeaponTempsEntreDeuxTirsDescriptor
+		TUnitEffectHealOverTimeDescriptor
         (
-            ModifierType  = ~/ModifierType_Pourcentage
-            ModifierValue = -20
+            NbUpdatePerSecond  = 1
+            HealUnitsPerSecond = 1
+            DamageType = EDamageType/Suppress
         ),
         TUnitEffectShowLabelIconDescriptor
         (
@@ -1127,14 +1186,8 @@ export UnitEffect_Critic_Bailed_Out is TEffectsPackDescriptor
         ),
         TUnitEffectIncreaseSpecializedDetectionDescriptor
         (
-            ModifierType            = ~/ModifierType_Remplacement
-            VisionType              = ~/EVisionUnitType/Building
-            BonusValue              = 0
-        ),
-        TUnitEffectIncreaseSpecializedDetectionDescriptor
-        (
             ModifierType       = ~/ModifierType_Remplacement
-            VisionType         = ~/EVisionUnitType/AlwaysInHighAltitude
+            VisionType         = ~/EVisionUnitType/HighAltitude
             BonusValueGRU      = 0
         ),
         TUnitEffectIncreaseInfluenceValueDescriptor
@@ -1222,14 +1275,8 @@ export UnitEffect_Critic_Weakpoint is TEffectsPackDescriptor
         ),
         TUnitEffectIncreaseSpecializedDetectionDescriptor
         (
-            ModifierType            = ~/ModifierType_Remplacement
-            VisionType              = ~/EVisionUnitType/Building
-            BonusValue              = 0
-        ),
-        TUnitEffectIncreaseSpecializedDetectionDescriptor
-        (
             ModifierType       = ~/ModifierType_Remplacement
-            VisionType         = ~/EVisionUnitType/AlwaysInHighAltitude
+            VisionType         = ~/EVisionUnitType/HighAltitude
             BonusValue         = ((0) * Metre)
         ),
         TUnitEffectIncreaseInfluenceValueDescriptor
@@ -4613,13 +4660,13 @@ export UnitEffect_resolute is TEffectsPackDescriptor
         TUnitEffectIncreaseDamageTakenDescriptor
         (
             ModifierType        = ~/ModifierType_Multiplicatif
-            BonusDamage         = 0.7
+            BonusDamage         = 0.65
             DamageType          = EDamageType/Suppress
         ),
         TUnitEffectHealOverTimeDescriptor
         (
             NbUpdatePerSecond  = 1
-            HealUnitsPerSecond = 0.5
+            HealUnitsPerSecond = 1.4
             DamageType = EDamageType/Suppress
         ),
     ]
@@ -5655,16 +5702,6 @@ export UnitEffect_SF is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Pourcentage
             BonusSpeedBaseInPercent  = 25
         ),
-        //TUnitEffectIncreaseWeaponPhysicalDamagesDescriptor
-        //(
-        //    ModifierType               = ~/ModifierType_Pourcentage
-        //    ModifierValue = 20 //used to be 20 but didn't make sense and would mess with AT weapons
-        //),
-		TUnitEffectIncreaseWeaponPrecisionArretDescriptor
-        (
-            ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 1.3
-        ),
 		TUnitEffectIncreaseConcealmentBonusDescriptor
         (
             ModifierType       = ~/ModifierType_Multiplicatif
@@ -5678,21 +5715,16 @@ export UnitEffect_SF is TEffectsPackDescriptor
         TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
         (
             ModifierType     = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.6
+            ModifierValue = 0.5
         ),
-        /*TUnitEffectAlterWeaponTempsEntreDeuxTirsDescriptor
-        (
-            ModifierType     = ~/ModifierType_Pourcentage
-            ModifierValue   = -35
-        ),*/
         TUnitEffectShowLabelIconDescriptor
         (
-            TextureToken         = "icone_shock"
+            TextureToken         = "icone_sf"
         ),
 		TUnitEffectIncreaseDamageTakenDescriptor
         (
             ModifierType        = ~/ModifierType_Multiplicatif
-            BonusDamage         = 0.3
+            BonusDamage         = 0.35
             DamageType          = EDamageType/Suppress
         ),
 		TUnitEffectHealOverTimeDescriptor
@@ -5700,6 +5732,21 @@ export UnitEffect_SF is TEffectsPackDescriptor
             NbUpdatePerSecond  = 1
             HealUnitsPerSecond = 5
             DamageType = EDamageType/Suppress
+        ),
+        TBonusWeaponAimtimeEffectDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.6
+        ),
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 50
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 50
         ),
     ]
 )

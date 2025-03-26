@@ -5,7 +5,7 @@ export DefaultTerrain is TGameplayTerrain
     BloqueInfanterie = false
     BloqueVehicule = false
     BloqueVision = false
-    CriticalEffectProbability = 0.0//0.05
+    CriticalEffectProbability = 0.005//0.05
     DebugColor = RGBA[0, 0, 0, 255]
     DissimulationModifierGroundAir = 0
     DissimulationModifierGroundGround = 0
@@ -176,7 +176,7 @@ export Ruin is TGameplayTerrain
     BloqueInfanterie = false
     BloqueVehicule = true
     BloqueVision = true
-    CriticalEffectProbability = 0 //0.75
+    CriticalEffectProbability = 0.075
     DamageModifierPerFamilyAndResistance =
     MAP [
             (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.45)]),
@@ -441,6 +441,47 @@ export VehicleWreck is TGameplayTerrain //wrecks provide some cover
     SpeedModifierTrack = 1.0
     ConcealmentBonus = 4.75
     TerrainType = ~/ETerrainType/Wreck
+    AuthorizeNearGroundFlying = true
+)
+export Crater is TGameplayTerrain //craters provide some cover 
+(
+    BloqueAmphibie = false
+    BloqueAtterrissage = false
+    BloqueInfanterie = false
+    BloqueVehicule = false
+    BloqueVision = false
+    CriticalEffectProbability = 0.075
+	DamageModifierPerFamilyAndResistance =
+    MAP [
+            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.55)]),
+            (DamageFamily_he_autocanon, MAP [(ResistanceFamily_infanterie,0.55)]),
+            (DamageFamily_superhe, MAP [(ResistanceFamily_infanterie,0.55)]),
+            (DamageFamily_balle, MAP [(ResistanceFamily_infanterie,0.45)]),
+            (DamageFamily_balledca, MAP [(ResistanceFamily_infanterie,0.55)]),
+            (DamageFamily_howz, MAP [(ResistanceFamily_infanterie,0.65)]),
+            (DamageFamily_howz_bombe, MAP [(ResistanceFamily_infanterie,0.65)]),
+			(DamageFamily_bombe, MAP [(ResistanceFamily_infanterie,1.0)]),
+            (DamageFamily_fmballe, MAP [(ResistanceFamily_infanterie,0.45)]),
+			(DamageFamily_pmballe, MAP [(ResistanceFamily_infanterie,0.45)]),
+            // (DamageFamily_cac, MAP [(ResistanceFamily_infanterie,0.85)]), //unused damage type
+            (DamageFamily_roquette_ap, MAP [(ResistanceFamily_infanterie,0.55)]),
+			(DamageFamily_roquette, MAP [(ResistanceFamily_infanterie,1.0)]),
+			(DamageFamily_flamme, MAP [(ResistanceFamily_infanterie,1.0)]),
+			(DamageFamily_cluster_ap, MAP [(ResistanceFamily_infanterie,1.0)]),
+			(DamageFamily_artillerie, MAP [(ResistanceFamily_infanterie,0.6)]),
+			(DamageFamily_suppress, MAP [(ResistanceFamily_infanterie,4.0)]), //experiment to make infantry in buildings easier to suppress
+        ]
+    DebugColor = RGBA[128, 128, 128, 255]
+    DissimulationModifierGroundAir = 0
+    DissimulationModifierGroundGround = 0
+    HeightInMeters = 1
+    InflammabilityProbability = 0.05
+    Name = 'Crater'
+    SpeedModifierAllTerrainWheel = 0.25
+    SpeedModifierInfantry = 0.6
+    SpeedModifierTrack = 0.6
+    ConcealmentBonus = 4.75
+    TerrainType = ~/ETerrainType/Crater
     AuthorizeNearGroundFlying = true
 )
 export SmokeLight is TGameplayTerrain

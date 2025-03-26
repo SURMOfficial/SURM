@@ -116,7 +116,7 @@ export Descriptor_Fire_Frag_HEAT_Small is TEntityDescriptor //Copperhead, AGM-11
                 AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_small //Ammo_Degats_cluster
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
-                SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDust
+                SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDust_small
             ),
 
     ]
@@ -718,7 +718,7 @@ export Descriptor_Fire_Incendie is TEntityDescriptor
         ),
     ]
 )
-export Descriptor_Fire_Dust is TEntityDescriptor
+export Descriptor_Fire_Dust is TEntityDescriptor //smaller weapons
 (
     World              = WorldIndices_Fires
     DescriptorId       = GUID:{94b3b62b-1d83-4537-860f-aa3f1f809c16}
@@ -749,7 +749,7 @@ export Descriptor_Fire_Dust is TEntityDescriptor
             AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_dust
             TimeBetweenBurns               = 5
             OverridenSpreadDescriptor      = nil
-            SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDust
+            SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDust_small
         ),
     ]
 )
@@ -781,10 +781,115 @@ export Descriptor_Fire_Bomb_Dust is TEntityDescriptor
             SpreadProbability              = 0.0
             IsNewFireProbability           = 0.0
             RadiusGRU                         = 10
-            AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_dust
+            AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_dust_bomb
             TimeBetweenBurns               = 5
             OverridenSpreadDescriptor      = nil
             SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDustBomb
+        ),
+    ]
+)
+export Descriptor_Fire_Crater_arty is TEntityDescriptor
+(
+    World              = WorldIndices_Fires
+    DescriptorId       = GUID:{355dcd93-6afd-41ab-ad3e-214aa0a2961e}
+    ClassNameForDebug  = 'Fire_Dust'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/FirePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TApparenceModuleDescriptor
+        (
+            Depiction  = Template_DescriptorFire_Depiction
+            (
+                 Radius               = 15 * Metre
+                 FX                   = $/GFX/GameFx/fx_binder_fire
+                 Density              = 1
+            )
+            DefaultVisibility  = True
+        ),
+        TFireModuleDescriptor
+        (
+            TimeToLive                     = 0.1
+            TimeBeforeSpreading            = 10
+            TimeBeforeSpreadAttempt        = 10
+            SpreadProbability              = 0.0
+            IsNewFireProbability           = 0.0
+            RadiusGRU                         = 10
+            AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_dust
+            TimeBetweenBurns               = 5
+            OverridenSpreadDescriptor      = nil
+            SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_Fumi_crater_med
+        ),
+    ]
+)
+export Descriptor_Fire_Crater_med is TEntityDescriptor
+(
+    World              = WorldIndices_Fires
+    DescriptorId       = GUID:{a6dadd71-3989-4414-a61c-7e99f7e1c80d}
+    ClassNameForDebug  = 'Fire_Dust'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/FirePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TApparenceModuleDescriptor
+        (
+            Depiction  = Template_DescriptorFire_Depiction
+            (
+                 Radius               = 15 * Metre
+                 FX                   = $/GFX/GameFx/fx_binder_fire
+                 Density              = 1
+            )
+            DefaultVisibility  = True
+        ),
+        TFireModuleDescriptor
+        (
+            TimeToLive                     = 0.1
+            TimeBeforeSpreading            = 10
+            TimeBeforeSpreadAttempt        = 10
+            SpreadProbability              = 0.0
+            IsNewFireProbability           = 0.0
+            RadiusGRU                         = 10
+            AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_dust
+            TimeBetweenBurns               = 5
+            OverridenSpreadDescriptor      = nil
+            SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_Fumi_crater_med
+        ),
+    ]
+)
+export Descriptor_Fire_Crater_large is TEntityDescriptor
+(
+    World              = WorldIndices_Fires
+    DescriptorId       = GUID:{d3fb2841-775e-488b-98a8-5702abb10a16}
+    ClassNameForDebug  = 'Fire_Dust'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/FirePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TApparenceModuleDescriptor
+        (
+            Depiction  = Template_DescriptorFire_Depiction
+            (
+                 Radius               = 15 * Metre
+                 FX                   = $/GFX/GameFx/fx_binder_fire
+                 Density              = 1
+            )
+            DefaultVisibility  = True
+        ),
+        TFireModuleDescriptor
+        (
+            TimeToLive                     = 0.1
+            TimeBeforeSpreading            = 10
+            TimeBeforeSpreadAttempt        = 10
+            SpreadProbability              = 0.0
+            IsNewFireProbability           = 0.0
+            RadiusGRU                         = 10
+            AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_dust
+            TimeBetweenBurns               = 5
+            OverridenSpreadDescriptor      = nil
+            SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_Fumi_crater_large
         ),
     ]
 )

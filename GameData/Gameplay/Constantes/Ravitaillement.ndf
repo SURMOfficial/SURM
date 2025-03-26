@@ -1,9 +1,6 @@
-export SpecificDefaultSupplyRangeGRU is 110 //442 //utilisé par le halo également
 export StandardSupply is TSupplyDescriptor
 (
-    // Rayon par défaut de la zone de ravitaillement, cette valeur est utilisée si
-    // aucun rayon n'est défini dans l'ODS
-    DefaultSupplyRangeGRU = SpecificDefaultSupplyRangeGRU
+    DefaultSupplyRangeGRU = 150
 
     // Tous les ravitaillement sont découpé en deux variables
     // 1 -> SupplyBySecond => Nombre de point de la ressource concerné ravitaillé par seconde
@@ -22,9 +19,9 @@ export StandardSupply is TSupplyDescriptor
     FuelSupplyCostBySecond =  0.69 // 1 correct so 1L of fuel weighs 850g (diesel) divide by 100
 
     // Point de vie ravitaillés par seconde
-    HealthSupplyBySecond = 0.1 //0.15 //0.00001
+    HealthSupplyBySecond = 0 //0.15 //0.00001
     // Cout du ravitaillement de point de vie par seconde
-    HealthSupplyCostBySecond = 100000//0.3 // 0.00001
+    HealthSupplyCostBySecond = 0//0.3 // 0.00001
 // corrected by new higher supply amounts
     // Point de ravitaillement ravitaillés par seconde
     SupplySupplyBySecond = 30
@@ -47,11 +44,6 @@ SupplyFeedbackDrawer is TSupplyFeedbackDrawer
     LineColor = RGBA[244, 187, 50, 255]
     ZOffset = 250.0
     LineThickness = 600.0
-    FeedbackDescriptor = ~/SupplyFeedbackDescriptor
-)
-
-SupplyFeedbackDescriptor is TSupplyFeedbackDescriptor
-(
     FeedbackScreenResilienceDuration = 3.0
     FeedbackFadeOutTime = 1.0
 )
