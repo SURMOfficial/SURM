@@ -7346,6 +7346,11 @@ AllWeaponSubDepiction_Gendarmerie_Air_FR is TemplateAllSubWeaponDepiction
       FireEffectTag = ["FireEffect_PM_MAT_49"]
       WeaponShootDataPropertyName = "WeaponShootData_0_1"
     ),
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_MAS_56"]
@@ -25989,6 +25994,11 @@ AllWeaponSubDepiction_VDV_Combine_SOV is TemplateAllSubWeaponDepiction
 (
   Alternatives = AllWeaponAlternatives_VDV_Combine_SOV
   Operators = [
+  	DepictionOperator_WeaponInstantFireInfantry
+	(
+     FireEffectTag = ["FireEffect_Grenade_Launcher"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_0"
+    ),
     DepictionOperator_WeaponInstantFireInfantry
     (
       FireEffectTag = ["FireEffect_FM_AKS_74"]
@@ -26364,7 +26374,8 @@ export Gfx_Volkspolizei_DDR is TemplateInfantryDepictionSquad
 )
 AllWeaponAlternatives_Volkspolizei_DDR is [
   TDepictionDescriptor( SelectorId = ['MeshAlternative_1'] MeshDescriptor = $/GFX/DepictionResources/Modele_Skorpion ),
-  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_Skorpion ),
+  TDepictionDescriptor( SelectorId = ['MeshAlternative_2'] MeshDescriptor = $/GFX/DepictionResources/Modele_RPG18 ),
+  TMeshlessDepictionDescriptor( SelectorId = ['none'] ReferenceMeshForSkeleton = $/GFX/DepictionResources/Modele_RPG18 ),
 ]
 AllWeaponSubDepiction_Volkspolizei_DDR is TemplateAllSubWeaponDepiction
 (
@@ -26374,6 +26385,11 @@ AllWeaponSubDepiction_Volkspolizei_DDR is TemplateAllSubWeaponDepiction
     (
       FireEffectTag = ["FireEffect_PM_Skorpion"]
       WeaponShootDataPropertyName = "WeaponShootData_0_1"
+    ),
+    DepictionOperator_WeaponInstantFireInfantry
+    (
+      FireEffectTag = ["FireEffect_RocketInf_RPG18_64mm"]
+      WeaponShootDataPropertyName = "WeaponShootData_0_2"
     ),
   ]
 )

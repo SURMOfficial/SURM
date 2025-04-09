@@ -382,27 +382,6 @@ export Rocher is TGameplayTerrain
     TerrainType = ~/ETerrainType/Rocher
     AuthorizeNearGroundFlying = true
 )
-export SmokeHeavy is TGameplayTerrain
-(
-    BloqueAmphibie = false
-    BloqueAtterrissage = false
-    BloqueInfanterie = false
-    BloqueVehicule = false
-    BloqueVision = false
-    CriticalEffectProbability = 0
-    DebugColor = RGBA[128, 128, 128, 255]
-    DissimulationModifierGroundAir = 1000
-    DissimulationModifierGroundGround = 1000
-    HeightInMeters = 25
-    InflammabilityProbability = 0
-    Name = 'HeavySmoke'
-    SpeedModifierAllTerrainWheel = 1
-    SpeedModifierInfantry = 1
-    SpeedModifierTrack = 1
-    ConcealmentBonus = 5
-    TerrainType = ~/ETerrainType/HeavySmoke
-    AuthorizeNearGroundFlying = true
-)
 export VehicleWreck is TGameplayTerrain //wrecks provide some cover 
 (
     BloqueAmphibie = false
@@ -484,27 +463,6 @@ export Crater is TGameplayTerrain //craters provide some cover
     TerrainType = ~/ETerrainType/Crater
     AuthorizeNearGroundFlying = true
 )
-export SmokeLight is TGameplayTerrain
-(
-    BloqueAmphibie = false
-    BloqueAtterrissage = false
-    BloqueInfanterie = false
-    BloqueVehicule = false
-    BloqueVision = false
-    CriticalEffectProbability = 0
-    DebugColor = RGBA[187, 187, 187, 255]
-    DissimulationModifierGroundAir = 1000
-    DissimulationModifierGroundGround = 1000
-    HeightInMeters = 25
-    InflammabilityProbability = 0
-    Name = 'LightSmoke'
-    SpeedModifierAllTerrainWheel = 1
-    SpeedModifierInfantry = 1
-    SpeedModifierTrack = 1
-    ConcealmentBonus = 4
-    TerrainType = ~/ETerrainType/LightSmoke
-    AuthorizeNearGroundFlying = true
-)
 export SmokeMedium is TGameplayTerrain
 (
     BloqueAmphibie = false
@@ -522,7 +480,7 @@ export SmokeMedium is TGameplayTerrain
     SpeedModifierAllTerrainWheel = 1
     SpeedModifierInfantry = 1
     SpeedModifierTrack = 1
-    ConcealmentBonus = 4.5
+    ConcealmentBonus = 5.0
     TerrainType = ~/ETerrainType/MediumSmoke
     AuthorizeNearGroundFlying = true
 )

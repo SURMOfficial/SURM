@@ -192,8 +192,8 @@ Constantes is TTunableConstante
 
 //---------------------------- Constantes Visibilite --------------------------------------//
 
-    MultiplicateurDistancePourBonusDissimulationGRU = 0.00052 div 100.0 // = (Distance en GRU) / 100.f
-    RelativeScanningPositionGRU = [0, 0, 2] //[0, 0, 7]
+    MultiplicateurBonusDissimulationParDistanceGRU = 0.0283 // = (Distance en GRU^-1)
+    RelativeScanningPositionGRU = [0, 0, 2]
 
 //------------------------------ Constantes Vision ----------------------------------------//
 
@@ -440,18 +440,18 @@ WargameConstantes is TWargameTunableConstante
 
     BaseIncome = MAP
     [
-        (CombatRule/NotSpecified,   0),
-        (CombatRule/Conquest, 3000),
-        (CombatRule/Destruction,    3000),
+        (ECombatRule/NotSpecified,   0),
+        (ECombatRule/Conquest,       3000),
+        (ECombatRule/Destruction,    3000),
     ]
     DefaultIncomeMultiplierIndex    = 3 // normal
     //                   none   very_low   low      normal    high     very_high
     IncomeMultiplier = [   0,    0.5,    0.75,       1,      1.25,       1.5 ]
     TimeBeforeEarningCommandPoints = MAP
     [
-        (CombatRule/NotSpecified,   60.0),
-        (CombatRule/Conquest, 600.0),
-        (CombatRule/Destruction,     600.0),
+        (ECombatRule/NotSpecified,   60.0),
+        (ECombatRule/Conquest,       600.0),
+        (ECombatRule/Destruction,     600.0),
     ]
 
     TimeBeforeEarningCommandPointsFactorToAddByNbPlayers = //Facteur de TimeBeforeEarningCommandPoints à ajouter selon des paliers de joueurs

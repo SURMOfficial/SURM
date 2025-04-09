@@ -6766,7 +6766,7 @@ export MissileCarriage_AH1F_Hog_US_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// AH64_Apache_ATAS_US : ['SAM FIM92 Stinger CS x4'] ['AGM AGM114A x8']
+// AH1S_Cobra_US : ['RocketAir Hydra 70mm x19'] ['RocketAir Hydra 70mm x19']
 export MissileCarriage_AH1S_Cobra_US is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_AH1S_Cobra_US
@@ -8690,7 +8690,7 @@ export MissileCarriage_Mi_8TB_DDR_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Mi_8TB_reco_Marine_DDR : ['RocketAir S5 57mm x32'] ['AGM 9M14 MalyutkaP x6']
+// Mi_8TB_SOV : ['RocketAir S5 57mm x32'] ['AGM 9M17P FalangaP x4']
 export MissileCarriage_Mi_8TB_SOV is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_8TB_SOV
@@ -9814,7 +9814,7 @@ export MissileCarriage_A37B_Dragonfly_US_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Alpha_Jet_A_clu_RFA : ['Bomb CBU Mk20 Rockeye II 250kg x4']
+// A6E_Intruder_SEAD_US : ['AGM AGM45 Shrike']
 export MissileCarriage_A6E_Intruder_SEAD_US is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_A6E_Intruder_SEAD_US
@@ -10493,7 +10493,7 @@ export MissileCarriage_CM170_Magister_FR_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// CM170_Magister_SS11_FR : ['AGM AS11 x2']
+// CM170_Magister_SS11_FR : ['AGM AS11 x2 air']
 export MissileCarriage_CM170_Magister_SS11_FR is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_CM170_Magister_SS11_FR
@@ -10522,7 +10522,7 @@ export MissileCarriage_CM170_Magister_SS11_FR_Showroom is TMissileCarriageConnoi
         ),
     ]
 )
-// F104G_Starfighter_AT_RFA : ['AGM AS30']
+// EA6B_Prowler_US : ['AGM AGM88 HARM']
 export MissileCarriage_EA6B_Prowler_US is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_EA6B_Prowler_US
@@ -11086,16 +11086,16 @@ export MissileCarriage_F16A_AA_BEL is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 3
+            Count = 6
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+/*         TMissileCarriageWeaponInfo
         (
             Count = 3
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ), */
     ]
 )
 export MissileCarriage_F16A_AA_BEL_Showroom is TMissileCarriageConnoisseur
@@ -11106,16 +11106,16 @@ export MissileCarriage_F16A_AA_BEL_Showroom is TMissileCarriageConnoisseur
     [
         TMissileCarriageWeaponInfo
         (
-            Count = 3
+            Count = 6
             MissileType = eAAM
             WeaponIndex = 2
         ),
-        TMissileCarriageWeaponInfo
+/*         TMissileCarriageWeaponInfo
         (
             Count = 3
             MissileType = eAAM
             WeaponIndex = 3
-        ),
+        ), */
     ]
 )
 // F16A_AA_NL : ['AA AIM9L Sidewinder'] ['AA AIM9L Sidewinder']
@@ -12596,7 +12596,7 @@ export MissileCarriage_F8P_Crusader_FR_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// FA16_CAS_US : ['AGM AGM65D Maverick'] ['AA AIM9P Sidewinder x2']
+// FA16_CAS_US : ['AGM AGM65D Maverick'] ['AA AIM9L Sidewinder']
 export MissileCarriage_FA16_CAS_US is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_FA16_CAS_US
@@ -12916,7 +12916,7 @@ export MissileCarriage_Harrier_HE2_UK_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Harrier_RKT1_UK : ['RocketAir SNEB 68mm x18'] ['AA AIM9L Sidewinder']
+// Harrier_RKT1_UK : ['RocketAir SNEB 68mm x36'] ['AA AIM9L Sidewinder']
 export MissileCarriage_Harrier_RKT1_UK is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT1_UK
@@ -12959,7 +12959,7 @@ export MissileCarriage_Harrier_RKT1_UK_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Harrier_RKT2_UK : ['RocketAir SNEB 68mm x18'] ['RocketAir SNEB 68mm x18']
+// Harrier_RKT2_UK : ['RocketAir SNEB 68mm x36'] ['RocketAir SNEB 68mm x18']
 export MissileCarriage_Harrier_RKT2_UK is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Harrier_RKT2_UK
@@ -13234,7 +13234,7 @@ export MissileCarriage_Jaguar_HE_FR_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Jaguar_RKT_FR : ['RocketAir SNEB 68mm x18'] ['RocketAir SNEB 68mm x18']
+// Jaguar_RKT_FR : ['RocketAir SNEB 68mm x36'] ['RocketAir SNEB 68mm x18']
 export MissileCarriage_Jaguar_RKT_FR is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_FR
@@ -13279,7 +13279,7 @@ export MissileCarriage_Jaguar_RKT_FR_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Jaguar_RKT_UK : ['RocketAir Hydra 70mm x19 avion'] ['AA AIM9L Sidewinder']
+// Jaguar_RKT_UK : ['RocketAir Hydra 70mm x38 avion'] ['AA AIM9L Sidewinder']
 export MissileCarriage_Jaguar_RKT_UK is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Jaguar_RKT_UK
@@ -14520,7 +14520,7 @@ export MissileCarriage_MiG_23MF_DDR_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// MiG_23MLD_SOV : ['AA R24MR Vympel'] ['AA R73 Vympel']
+// MiG_23MLD_AA1_SOV : ['AA R24R Vympel'] ['AA R60M Vympel']
 export MissileCarriage_MiG_23MLD_AA1_SOV is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_23MLD_AA1_SOV
@@ -16052,7 +16052,7 @@ export MissileCarriage_Mirage_IV_SEAD_FR_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Su_17M4_SOV : ['RocketAir S13 122mm x20'] ['AA R60M Vympel']
+// OA10A_US : ['RocketAir Hydra 70mm x38 avion'] ['RocketAir Hydra 70mm avion SMOKE x38']
 export MissileCarriage_OA10A_US is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_OA10A_US
@@ -17588,7 +17588,7 @@ export MissileCarriage_Su_25_rkt_SOV_Showroom is TMissileCarriageConnoisseur
         ),
     ]
 )
-// Su_27S_SOV : ['AA R73 Vympel'] ['AA R27R Vympel']
+// Su_27K_SOV : ['AA R27R Vympel'] ['AA R27T Vympel'] ['AA R73 Vympel']
 export MissileCarriage_Su_27K_SOV is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Su_27K_SOV

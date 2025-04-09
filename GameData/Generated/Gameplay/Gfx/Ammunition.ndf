@@ -5884,7 +5884,7 @@ Ammo_Bomb_CBU_Mk20_Rockeye_II_250kg_x10 is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'cluster', ]
     WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
     MinMaxCategory                    = MinMax_Bombe
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_clu_sol_ap Index=10)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_cluster_ap Index=8)
     ProjectileType                    = EProjectileType/Bombe
     ImpactHappening                   = [ 'BombeMk20RockeyeII' ]
     FxPower                           = EFXPower/Moyen
@@ -7752,7 +7752,7 @@ Ammo_Bomb_FAB_500kg_x4 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots                = 0.1
     TimeBetweenTwoFx                  = 0.1
-    PorteeMaximaleGRU                    = 55
+    PorteeMaximaleGRU                    = 250
     AltitudeAPorteeMinimaleGRU           = ((37.5) * 0.1209058738 )
     AltitudeAPorteeMaximaleGRU           = ((75.0) * 0.1209058738 )
     AngleDispersion                   = 0.0
@@ -14692,7 +14692,7 @@ Ammo_Canon_AP_105mm_M68_M48A5 is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=17)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=17)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDSM1Abrams' ]
     FxPower                           = EFXPower/Moyen
@@ -16488,7 +16488,7 @@ Ammo_Canon_AP_122mm_D25T is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=15)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=15)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDSM1Abrams' ]
     FxPower                           = EFXPower/Moyen
@@ -19078,7 +19078,7 @@ Ammo_Canon_AP_76mm_L23A1_Cougar is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=10)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=10)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonMoyenAPPT76' ]
     FxPower                           = EFXPower/Moyen
@@ -19775,7 +19775,7 @@ Ammo_Canon_AP_90_mm_CATI is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=15)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=15)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonAPM48' ]
     FxPower                           = EFXPower/Moyen
@@ -20633,7 +20633,7 @@ Ammo_Canon_AP_HEAT_90mm_M36 is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=25)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=25)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'CanonGrosAPFDSM1Abrams' ]
     FxPower                           = EFXPower/Moyen
@@ -38298,7 +38298,7 @@ export Ammo_Degats_napalm_lourd is TAmmunitionDescriptor
     DistanceForSpeedGRU                      = 0.0
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
-Ammo_FM_AKM is TAmmunitionDescriptor //unused
+Ammo_FM_AKM is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{30c4640b-4627-4f05-a378-2ec2abd608e5}
     Name                              = 'ZOFVOELGYZ'
@@ -38312,10 +38312,12 @@ Ammo_FM_AKM is TAmmunitionDescriptor //unused
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'FusilMitrailleurAK762MmGreen' ]
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots                = 1.0
-    TimeBetweenTwoFx                  = 0.5
-    PorteeMaximaleGRU                 = 850
-    PorteeMaximaleTBAGRU              = 525
+    TimeBetweenTwoShots                = 0.8
+    TimeBetweenTwoFx                  = 0.8
+    PorteeMaximaleGRU                    = 500
+    PorteeMinimaleTBAGRU                 = 69
+    PorteeMaximaleTBAGRU                 = 190
+    PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU              = ((180) * 0.1209058738 )
@@ -38344,8 +38346,8 @@ Ammo_FM_AKM is TAmmunitionDescriptor //unused
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 35),
-            (EBaseHitValueModifier/Moving, 10),
+             (EBaseHitValueModifier/Idling, 25*AccCorrRifle),
+             (EBaseHitValueModifier/Moving, 10*AccCorrRifle),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
@@ -38362,6 +38364,82 @@ Ammo_FM_AKM is TAmmunitionDescriptor //unused
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
     AffichageMunitionParSalve         = 3
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_AK74"
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    TargetUnitCenter                  = True
+    CanHarmAirplanes                  = True
+    IsHarmlessForAllies               = True
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    FlightTimeForSpeed                    = 0.8
+    DistanceForSpeedGRU                   = 450.0
+    DamageTypeEvolutionOverRangeDescriptor  = nil//~/DamageTypeEvolutionOverRangeDescriptor_AP1_1Km
+)
+Ammo_FM_AKM_fullauto is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{30c4640b-4627-4f05-a378-2ec2abd608e5}
+    Name                              = 'ZOFVOELGYZ'
+    TypeCategoryName                  = 'MPRVLPMVZK'
+    Caliber                           = 'ARZDNMYCBF'
+    WeaponDescriptionToken            = 'YEKMWFEREZ'
+    TraitsToken                       = [ 'MOTION', 'CAC', ]
+    WeaponCursorType                  = Weapon_Cursor_MachineGun
+    MinMaxCategory                    = MinMax_inf_MMG
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_fmballe Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = [ 'FusilMitrailleurAK762MmGreen' ]
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots                = 0.1
+    TimeBetweenTwoFx                  = 0.1
+    PorteeMaximaleGRU                 = 100
+    PorteeMaximaleTBAGRU              = 70
+    AffecteParNombre                  = True
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU              = ((180) * 0.1209058738 )
+    DispersionWithoutSorting          = False
+    CorrectedShotAimtimeMultiplier    = 1.0
+    RadiusSplashPhysicalDamagesGRU       = 5 * 0.1209058738 
+    PhysicalDamages                   = 0.05
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU       = 23 * 0.1209058738 
+    SuppressDamages                   = 4.0
+    AllowSuppressDamageWhenNoImpact                = False
+    DisplaySalveAccuracy              = True
+    TirIndirect                       = False
+    TirReflexe                        = True
+    InterdireTirReflexe               = False
+    MaximalSpeedGRU                      = 0.0
+    ShotWithoutPhysics                = False
+    FluidFriction                     = 0.0
+    NoiseDissimulationMalus           = 2.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+        DescriptorId          = GUID:{0bcb252c-7235-4e4d-b5b7-f14d8045fdb9}
+        BaseCriticModifier = 25
+        BaseHitValueModifiers =
+        [
+            (EBaseHitValueModifier/Base, 0.0),
+             (EBaseHitValueModifier/Idling, 33*AccCorrRifle),
+             (EBaseHitValueModifier/Moving, 13*AccCorrRifle),
+            (EBaseHitValueModifier/Targeted, 0.0),
+        ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 5
+    TempsDeVisee                      = 1.0
+    TimeBetweenTwoSalvos              = 1.5
+    TimeBetweenTwoSalvos_Min           = -1.0
+    TimeBetweenTwoSalvos_Max           = -1.0
+    NbTirParSalves                    = 5
+    SupplyCost                        = 1.0
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = True
+    NbrProjectilesSimultanes          = 1
+    AffichageMunitionParSalve         = 5
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_AK74"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -38391,7 +38469,7 @@ Ammo_FM_AKS_74 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -38548,7 +38626,7 @@ Ammo_FM_AK_74 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -38705,7 +38783,7 @@ Ammo_FM_C7A1 is TAmmunitionDescriptor //needs work unused
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -39171,7 +39249,7 @@ Ammo_FM_FAMAS is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -39328,7 +39406,7 @@ Ammo_FM_FNC is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -39485,7 +39563,7 @@ Ammo_FM_FNC_Para is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -39873,21 +39951,21 @@ Ammo_FM_Garand is TAmmunitionDescriptor
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'FusilMitrailleurM16556Mm' ]
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots                = 1.0
-    TimeBetweenTwoFx                  = 0.5
-    PorteeMaximaleGRU                 = 850
-    PorteeMaximaleTBAGRU              = 700
+    TimeBetweenTwoShots                = 1.1
+    TimeBetweenTwoFx                  = 1.1
+    PorteeMaximaleGRU                 = 550
+    PorteeMaximaleTBAGRU              = 190
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
-    DispersionAtMaxRangeGRU              = ((180) * 0.1209058738 )
-    DispersionWithoutSorting          = False
+    DispersionAtMaxRangeGRU              = ((2) )
+    DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU       = 5 * 0.1209058738 
-    PhysicalDamages                   = 0.05
+    RadiusSplashPhysicalDamagesGRU       = ((0) * 0.1209058738 )
+    PhysicalDamages                   = 0.21
     ShowDamageInUI                    = True
-    RadiusSplashSuppressDamagesGRU       = 23 * 0.1209058738 
-    SuppressDamages                   = 5.0
-    AllowSuppressDamageWhenNoImpact                = False
+    RadiusSplashSuppressDamagesGRU       = BulletSuppressRadCorr * ((14) * 0.1209058738 )
+    SuppressDamages                   = 2.0
+    AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = True
     TirIndirect                       = False
     TirReflexe                        = True
@@ -39895,8 +39973,8 @@ Ammo_FM_Garand is TAmmunitionDescriptor
     MaximalSpeedGRU                      = 0.0
     ShotWithoutPhysics                = False
     FluidFriction                     = 0.0
-    NoiseDissimulationMalus           = 2.0
-    ShotsBeforeMaxNoise               = 3
+    NoiseDissimulationMalus           = 9.8 //need to better reveal firing infantry
+    ShotsBeforeMaxNoise               = 10
     TargetOnlyOneUnitInDistrict       = True
     HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
     (
@@ -39905,24 +39983,24 @@ Ammo_FM_Garand is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 40),
-            (EBaseHitValueModifier/Moving, 5),
+            (EBaseHitValueModifier/Idling, 35*AccCorrRifle),
+            (EBaseHitValueModifier/Moving, 5*AccCorrRifle),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
     )
     MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 1.5
-    TimeBetweenTwoSalvos              = 1.75
+    TempsDeVisee                      = 1.0
+    TimeBetweenTwoSalvos              = 2.2
     TimeBetweenTwoSalvos_Min           = -1.0
     TimeBetweenTwoSalvos_Max           = -1.0
-    NbTirParSalves                    = 1
-    SupplyCost                        = 0.01
+    NbTirParSalves                    = 5
+    SupplyCost                        = 0.1
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
-    AffichageMunitionParSalve         = 3
+    AffichageMunitionParSalve         = 5
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_FM_Garand"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -39952,7 +40030,7 @@ Ammo_FM_KMS_72 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -40187,7 +40265,7 @@ Ammo_FM_L85A1 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -40576,7 +40654,7 @@ Ammo_FM_M16 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -40733,7 +40811,7 @@ Ammo_FM_M16A1 is TAmmunitionDescriptor //needs work
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -41044,7 +41122,7 @@ Ammo_FM_Mpi_AKS_74NK is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -41201,7 +41279,7 @@ Ammo_FM_Mpi_AK_74N is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -41358,7 +41436,7 @@ Ammo_FM_SIG_540 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -41509,7 +41587,7 @@ Ammo_FM_SIG_543 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -41666,7 +41744,7 @@ Ammo_FM_StG_941 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -41823,7 +41901,7 @@ Ammo_FM_StG_942 is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -41980,7 +42058,7 @@ Ammo_FM_Tantal is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -42287,7 +42365,7 @@ Ammo_FM_kbk_AK is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -42444,7 +42522,7 @@ Ammo_FM_kbk_AKM is TAmmunitionDescriptor
     TimeBetweenTwoShots                = 0.8
     TimeBetweenTwoFx                  = 0.8
     PorteeMaximaleGRU                    = 500
-    PorteeMinimaleTBAGRU                 = 0
+    PorteeMinimaleTBAGRU                 = 69
     PorteeMaximaleTBAGRU                 = 190
     PorteeMinimaleGRU                 = 99
     AffecteParNombre                  = True
@@ -50994,7 +51072,7 @@ Ammo_Howz_Canon_D1_towed_152mm_Direct is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=12)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=12)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'ArtillerieM185155Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -53075,7 +53153,7 @@ Ammo_Howz_Canon_L13A1_Howitzer_105mm_Direct is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=11)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=11)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'Artillerie2A18122Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -55052,7 +55130,7 @@ Ammo_Howz_Canon_M118_105mm_Direct is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=11)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=11)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'Artillerie2A18122Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -56594,7 +56672,7 @@ Ammo_Howz_Canon_M30_Howitzer_122mm is TAmmunitionDescriptor//needs work
     TimeBetweenTwoSalvos_Min           = -1.0
     TimeBetweenTwoSalvos_Max           = -1.0
     NbTirParSalves                    = 6
-    SupplyCost                        = 97.56
+    SupplyCost                        = 585.36
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
@@ -56623,8 +56701,8 @@ Ammo_Howz_Canon_M30_Howitzer_122mm_Direct is TAmmunitionDescriptor//needs work
     WeaponDescriptionToken            = 'YDWRGQLHYI'
     TraitsToken                       = [ 'STAT', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
-    MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=9)
+    MinMaxCategory                    = MinMax_obusier
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_howz_bombe Index=1)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'ArtillerieM185155Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -56637,12 +56715,12 @@ Ammo_Howz_Canon_M30_Howitzer_122mm_Direct is TAmmunitionDescriptor//needs work
     DispersionAtMinRangeGRU              = ((5) * 0.1209058738 )
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
-    RadiusSplashPhysicalDamagesGRU       = 12 * 0.1209058738 
-    PhysicalDamages                   = 1.0
-    ShowDamageInUI                    = False
-    RadiusSplashSuppressDamagesGRU       = 98 * 0.1209058738 
-    SuppressDamages                   = 122.0
-    AllowSuppressDamageWhenNoImpact                = False
+    RadiusSplashPhysicalDamagesGRU       = ((33) )
+    PhysicalDamages                   = 4.05
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU       = (ArtySuppressRadCorr *(450) * 0.1209058738 )
+    SuppressDamages                   = ArtySuppressCorr * 127.0
+    AllowSuppressDamageWhenNoImpact                = True
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
     TirReflexe                        = True
@@ -56667,12 +56745,12 @@ Ammo_Howz_Canon_M30_Howitzer_122mm_Direct is TAmmunitionDescriptor//needs work
          ]
         DistanceToTarget = True
     )
-    TempsDeVisee                      = 3.0
-    TimeBetweenTwoSalvos              = 12.0
+    TempsDeVisee                      = 12.0
+    TimeBetweenTwoSalvos              = 10.0
     TimeBetweenTwoSalvos_Min           = -1.0
     TimeBetweenTwoSalvos_Max           = -1.0
     NbTirParSalves                    = 1
-    SupplyCost                        = 0.1
+    SupplyCost                        = 97.56
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
@@ -57561,7 +57639,7 @@ Ammo_Howz_Canon_M56_105mm_Direct is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=9)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=9)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'Artillerie2A18122Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -57867,7 +57945,7 @@ Ammo_Howz_Canon_ML20S_towed_152mm_Direct_HEAT is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=13)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=13)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'ArtillerieM185155Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -58096,7 +58174,7 @@ Ammo_Howz_Canon_OB_M50_TF_105mm_Direct is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=9)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=9)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'Artillerie2A18122Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -62344,13 +62422,13 @@ Ammo_MMG_PKM_7_62mm is TAmmunitionDescriptor //infantry bipod MG
     TimeBetweenTwoSalvos              = 2.4
     TimeBetweenTwoSalvos_Min           = -1.0
     TimeBetweenTwoSalvos_Max           = -1.0
-    NbTirParSalves                    = 6
+    NbTirParSalves                    = 10
     SupplyCost                        = 0.12
     NbSalvosShootOnPosition           = 4
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
     NbrProjectilesSimultanes          = 4
-    AffichageMunitionParSalve         = 6
+    AffichageMunitionParSalve         = 10
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_PKM"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -66941,7 +67019,7 @@ Ammo_Mortier_81mm_TOWED_CLU_Guided is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'cluster', 'CLGP', ]
     WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
     MinMaxCategory                    = MinMax_Mortier
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_clu_sol_ap Index=2)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_cluster_ap Index=2)
     ProjectileType                    = EProjectileType/Artillerie
     ImpactHappening                   = [ 'MortierM30107Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -67563,7 +67641,7 @@ Ammo_Mortier_M240_240mm_Cluster is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HE', 'IND', ]
     WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
     MinMaxCategory                    = MinMax_Mortier
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_clu_sol_ap Index=6)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_cluster_ap Index=6)
     ProjectileType                    = EProjectileType/Artillerie
     ImpactHappening                   = [ 'MortierM240240Mm' ]
     FxPower                           = EFXPower/Moyen
@@ -67717,7 +67795,7 @@ Ammo_Mortier_M240_240mm_EXT_Cluster is TAmmunitionDescriptor //unused as doesn't
     TraitsToken                       = [ 'STAT', 'cluster', 'IND', ]
     WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
     MinMaxCategory                    = MinMax_Mortier
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_clu_sol_ap Index=6)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_cluster_ap Index=6)
     ProjectileType                    = EProjectileType/Artillerie
     ImpactHappening                   = [ 'RoquetteM26M270227MmCluster' ]
     FxPower                           = EFXPower/Moyen
@@ -75496,7 +75574,7 @@ Ammo_RocketAir_Hydra_70mm_avion_SMOKE_x38 is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'smoke', ]
     WeaponCursorType                  = Weapon_Cursor_UnguidedMissile
     MinMaxCategory                    = MinMax_Roquette_AS
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=10)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=10)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'Artillerie2A18122MmSmoke' ]
     FxPower                           = EFXPower/Moyen
@@ -78348,7 +78426,7 @@ Ammo_RocketArt_9F53_122mm_cluster_x50 is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HEAT', 'cluster', ]
     WeaponCursorType                  = Weapon_Cursor_CorrectedArtillery
     MinMaxCategory                    = MinMax_MLRS
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_clu_sol_ap Index=4)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_cluster_ap Index=4)
     ProjectileType                    = EProjectileType/Artillerie
     ImpactHappening                   = [ 'Roquette110Mm130MmCluster' ]
     FxPower                           = EFXPower/Moyen
@@ -80968,7 +81046,7 @@ Ammo_RocketInf_C90CR is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_UnguidedMissile
     MinMaxCategory                    = MinMax_LAW
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=15)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=15)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'RoquetteLAW' ]
     FxPower                           = EFXPower/Moyen
@@ -81118,7 +81196,7 @@ Ammo_RocketInf_Carl_Gustav_SRAAW is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_UnguidedMissile
     MinMaxCategory                    = MinMax_LAW
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=16)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=16)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'RoquetteLAW' ]
     FxPower                           = EFXPower/Moyen
@@ -82207,7 +82285,7 @@ Ammo_RocketInf_M65 is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_UnguidedMissile
     MinMaxCategory                    = MinMax_LAW
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=10)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=10)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'RoquetteLAW' ]
     FxPower                           = EFXPower/Moyen
@@ -82515,7 +82593,7 @@ Ammo_RocketInf_M72_LAW_66mm_SRAAW is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_UnguidedMissile
     MinMaxCategory                    = MinMax_LAW
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=13)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=13)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'RoquetteLAW' ]
     FxPower                           = EFXPower/Moyen
@@ -84604,7 +84682,7 @@ Ammo_RocketInf_Viper_70mm is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_UnguidedMissile
     MinMaxCategory                    = MinMax_LAW
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=15)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=15)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'RoquetteLAW' ]
     FxPower                           = EFXPower/Moyen
@@ -85068,7 +85146,7 @@ Ammo_RocketInf_Tarasnice_T21_82mm_inf is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_UnguidedMissile
     MinMaxCategory                    = MinMax_LAW
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=13)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=13)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'RoquetteRecoilessGun' ]
     FxPower                           = EFXPower/Moyen
@@ -85523,7 +85601,7 @@ Ammo_RocketInf_Vz59_82mm_TOWED is TAmmunitionDescriptor
     TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=17)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=17)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'RoquetteRecoilessGun' ]
     FxPower                           = EFXPower/Moyen
@@ -85758,19 +85836,20 @@ Ammo_SAW_DP28_7_62mm is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', ]
     WeaponCursorType                  = Weapon_Cursor_MachineGun
     MinMaxCategory                    = MinMax_inf_MMG
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_fmballe Index=1)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_fmballe Index=2)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = [ 'MitrailleuseMMGInf' ]
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots                = 1.0
-    TimeBetweenTwoFx                  = 1.0
-    PorteeMaximaleGRU                 = 850
-    PorteeMaximaleTBAGRU              = 700
-    PorteeMinimaleGRU                 = 35
+    TimeBetweenTwoShots                = 0.1
+    TimeBetweenTwoFx                  = 0.1
+    PorteeMaximaleGRU                    = 550
+    PorteeMinimaleTBAGRU                 = 0
+    PorteeMaximaleTBAGRU                 = 250
+    PorteeMinimaleGRU                    = 25 //fix
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
-    DispersionAtMaxRangeGRU              = 64
-    DispersionAtMinRangeGRU              = 18
+    DispersionAtMaxRangeGRU              = ((15) * 0.1209058738 )
+    DispersionAtMinRangeGRU              = ((3) * 0.1209058738 )
     DispersionWithoutSorting          = True
     CorrectedShotAimtimeMultiplier    = 1.0
     RadiusSplashPhysicalDamagesGRU    = 3
@@ -85796,24 +85875,24 @@ Ammo_SAW_DP28_7_62mm is TAmmunitionDescriptor
         BaseHitValueModifiers =
         [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 30),
-            (EBaseHitValueModifier/Moving, 10),
+			(EBaseHitValueModifier/Idling, AccCorrMG * 20),
+			(EBaseHitValueModifier/Moving, AccCorrMG * 5),
             (EBaseHitValueModifier/Targeted, 0.0),
         ]
         DistanceToTarget = True
     )
-    MaxSuccessiveHitCount             = 5
-    TempsDeVisee                      = 1.5
-    TimeBetweenTwoSalvos              = 1.8
+    MaxSuccessiveHitCount             = 1
+    TempsDeVisee                      = 1.0
+    TimeBetweenTwoSalvos              = 2.0
     TimeBetweenTwoSalvos_Min           = 2.0
     TimeBetweenTwoSalvos_Max           = 2.0
-    NbTirParSalves                    = 1
-    SupplyCost                        = 1.0
+    NbTirParSalves                    = 6
+    SupplyCost                        = 0.12
     NbSalvosShootOnPosition           = 4
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
     NbrProjectilesSimultanes          = 1
-    AffichageMunitionParSalve         = 8
+    AffichageMunitionParSalve         = 6
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     TargetUnitCenter                  = True
@@ -85822,8 +85901,8 @@ Ammo_SAW_DP28_7_62mm is TAmmunitionDescriptor
     PiercingWeapon                    = False
     TandemCharge                      = False
     FlightTimeForSpeed                    = 0.8
-    DistanceForSpeedGRU                   = 450.0
-    DamageTypeEvolutionOverRangeDescriptor  = ~/DamageTypeEvolutionOverRangeDescriptor_AP1_1Km
+    DistanceForSpeedGRU                   = 530.0
+    DamageTypeEvolutionOverRangeDescriptor  = nil //~/DamageTypeEvolutionOverRangeDescriptor_MG
 )
 Ammo_SAW_FALO is TAmmunitionDescriptor
 (
@@ -85904,7 +85983,7 @@ Ammo_SAW_FALO is TAmmunitionDescriptor
     PiercingWeapon                    = False
     TandemCharge                      = False
     FlightTimeForSpeed                    = 0.8
-    DistanceForSpeedGRU                      = ProjSpeedCorrBullet * 1500 * 0.1209058738 
+    DistanceForSpeedGRU                      = 530.0
     DamageTypeEvolutionOverRangeDescriptor  = nil //~/DamageTypeEvolutionOverRangeDescriptor_MG
 )
 Ammo_SAW_FALO_C2 is TAmmunitionDescriptor
