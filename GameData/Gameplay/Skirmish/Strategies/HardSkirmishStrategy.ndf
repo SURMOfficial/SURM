@@ -5,7 +5,6 @@ export HardStrategy is TIAGeneralStrategy
 (
     StrategyName = "GenericAI"
     FirstGenerator = Hard_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         Hard_Transition_StartToPhaseCommand,
@@ -68,24 +67,20 @@ export Hard_Transition_CommandPhaseToLastHope is TIAGeneralStrategyTransition
 export Hard_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
     ]
 )
 //-------------------------------------------------------------------------
 export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
 
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish,
 
@@ -149,7 +144,6 @@ export Hard_Phase_Deploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export Hard_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
         // Même chose que la phase de déploiement mais avec les Défenses
@@ -159,7 +153,6 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish,
 
@@ -244,7 +237,6 @@ export Hard_Phase_Command is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export Hard_Phase_LastHope is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
         // Même chose que la phase de déploiement mais avec les Défenses
@@ -258,7 +250,6 @@ export Hard_Phase_LastHope is TSequenceGeneratorDescriptor
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish,
         ~/Reco,

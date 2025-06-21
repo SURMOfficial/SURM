@@ -19,13 +19,13 @@ template Template_DescriptorMissileBase
 ]
 is TTimelyDepictionReceiverFactory
 (
-    DepictionTemplate = TDepictionTemplate
+    DepictionDescriptor = TDepictionDescriptor
     (
         ResidentMaterialTags = [ MaterialTagMech ]
         AdditionalTextures = $/M3D/Shader/VehicleDestTextures
         Selector = TConstantAlternativeSelector(Key = [LOD_High])
         DepictionAlternatives = [
-            DepictionDescriptor_LOD_High( MeshDescriptor = <ProjectileModelResource> ),
+            DepictionVisual_LOD_High( MeshDescriptor = <ProjectileModelResource> ),
         ]
         Actions = <Actions>
 

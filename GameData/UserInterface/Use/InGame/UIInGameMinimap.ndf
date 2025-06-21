@@ -108,7 +108,7 @@ InGameMinimap is TUISpecificInGameMinimapResources
     // 'SortOrderInsideLayer' définit le sous-niveau, à l'intérieur d'une couche. Là c'est plutôt "Parmi tel type d'infos, on affiche mes trucs par-dessus ceux des autres"
     // Avec les valeurs actuelles, par exemple un Supply ennemi appartiendra à la couche 1, sous-couche 2, soit layer 6 (1x4 + 2)
 
-    // specifier Layer pour CommandZone,Unit,Fob,Command,Supply,Alert,Mort,Flare
+    // specifier Layer pour GameplayZone,Unit,Fob,Command,Supply,Alert,Mort,Flare
     // 0 en dessous 5 au dessus et 7 valeurs OBLIGATOIREMENT
     SortOrderList                       = [0,0,1,1,1,3,4,2]
     // specifier Ordre a l'interieur d'un layer pour Player,Allied,Enemy

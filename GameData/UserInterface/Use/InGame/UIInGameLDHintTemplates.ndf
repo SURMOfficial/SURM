@@ -1641,6 +1641,7 @@ template SuperHint
 [
     alignementGauche : boolean = true,
     challenge : boolean = false,
+    hasImage : bool = false,
 ]
  is BUCKListDescriptor
 (
@@ -1727,6 +1728,27 @@ template SuperHint
             )
         )
     ]
+
+    +
+
+    ( <hasImage> ?
+        [
+            BUCKListElementDescriptor
+            (
+                ComponentDescriptor = BUCKTextureDescriptor
+                (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                                MagnifiableWidthHeight = [335.0, 225.0]
+                                AlignementToAnchor = [0.5, 0.0]
+                                AlignementToFather = [0.5, 0.0]
+                            )
+                        TextureToken = 'UseInGame_LDhint_Intel_Arty'
+                )
+            )
+        ]
+
+        : []    )
 
     BackgroundComponents =
     [

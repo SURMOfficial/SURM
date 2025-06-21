@@ -510,6 +510,8 @@ DebriefLevelPlayerName is BUCKTextDescriptor
     TextDico = ~/LocalisationConstantes/dico_interface_outgame
     TextColor = "LDHintSolo_fond"
     TextSize = "46"
+
+    TextFormatScript = nil
 )
 
 DebriefLevelLevel is BUCKTextDescriptor
@@ -2565,7 +2567,7 @@ UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescrip
     CoalitionDico = ~/LocalisationConstantes/dico_interface_outgame
     CoalitionTokens = MAP
     [
-        (ECoalition/OTAN, "NATO"),
+        (ECoalition/NATO, "NATO"),
         (ECoalition/PACT, "PACT"),
     ]
 

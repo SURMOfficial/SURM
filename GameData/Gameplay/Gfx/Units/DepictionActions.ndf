@@ -85,12 +85,12 @@ template CompositeCadaverFX [Fx] is TCompositeHappening
 )
 
 DepictionAction_Wrecked is MAP[
-    ( ['Fx_Cadavre_Fire'], CompositeCadaverFX(Fx = $/GFX/GameFx/FX_Vehicule_Dest_Fire) ),
+    ( 'Fx_Cadavre_Fire', CompositeCadaverFX(Fx = $/GFX/GameFx/FX_Vehicule_Dest_Fire) ),
 ]
 
 DepictionAction_Wrecked_Avion is MAP[
-    ( ['Fx_Cadavre_Fire'], CompositeCadaverFX(Fx = $/GFX/GameFx/FX_Vehicule_Dest_Fire_Avion) ),
-    ( ['Fx_Cadavre_Crashing'], TCompositeHappening
+    ( 'Fx_Cadavre_Fire', CompositeCadaverFX(Fx = $/GFX/GameFx/FX_Vehicule_Dest_Fire_Avion) ),
+    ( 'Fx_Cadavre_Crashing', TCompositeHappening
     (
         SubHappenings =
         [
@@ -127,8 +127,8 @@ DepictionAction_Wrecked_Avion is MAP[
 
 
 DepictionAction_Wrecked_Helicopter is MAP[
-    ( ['Fx_Cadavre_Fire'], CompositeCadaverFX( Fx = $/GFX/GameFx/FX_Vehicule_Dest_Fire_Avion) ),
-    ( ['Fx_Cadavre_Crashing'], TIntroduceMobileHappening
+    ( 'Fx_Cadavre_Fire', CompositeCadaverFX( Fx = $/GFX/GameFx/FX_Vehicule_Dest_Fire_Avion) ),
+    ( 'Fx_Cadavre_Crashing', TIntroduceMobileHappening
         (
             Anchor = "fx_stress_02"
             Happening = TRandomHappening
@@ -149,8 +149,8 @@ DepictionAction_Wrecked_Helicopter is MAP[
 
 Stress is MAP
 [
-    ( ["Stress_1" ], StressFumeeNoire  ( SousMobile = "fx_stress_01" )),
-    ( ["Stress_2" ], StressFumeeNoire  ( SousMobile = "fx_stress_02" )),
+    ( "Stress_1", StressFumeeNoire  ( SousMobile = "fx_stress_01" )),
+    ( "Stress_2", StressFumeeNoire  ( SousMobile = "fx_stress_02" )),
 ]
 
 DepictionAction_Stress_And_Wrecked is DepictionAction_Wrecked + Stress
@@ -167,7 +167,7 @@ DepictionAction_Stress_And_Wrecked_Helicopter is DepictionAction_Wrecked_Helicop
 
 DepictionAction_MovementFX_Wheeled is MAP[
     (
-        ['fx_deplacement'],
+        'fx_deplacement',
         TCompositeHappening
         (
             SubHappenings =
@@ -189,7 +189,7 @@ DepictionAction_MovementFX_Wheeled is MAP[
 
 DepictionAction_MovementFX_Tracked is MAP[
     (
-        ['fx_deplacement'],
+        'fx_deplacement',
         TCompositeHappening
         (
             SubHappenings =
@@ -213,7 +213,7 @@ DepictionAction_MovementFX_Tracked is MAP[
 DepictionAction_SplashFX_Amphibious is MAP
 [
     (
-        ['fx_Amphibious_Splash'],
+        'fx_Amphibious_Splash',
         TIntroduceMobileHappening
         (
             Anchor = 'fx_eau'
@@ -241,7 +241,7 @@ DepictionAction_SplashFX_Amphibious is MAP
 DepictionAction_MovementFX_Amphibious is MAP
 [
     (
-        ['fx_deplacement_Amphibious'],
+        'fx_deplacement_Amphibious',
         TIntroduceMobileHappening
         (
             Anchor = 'fx_eau'
@@ -370,7 +370,7 @@ template template_CriticalHappening
 
 DepictionAction_CriticalFX_Incendiary is MAP[
     (
-        ['critical_incendiary'],
+        'critical_incendiary',
         template_HappeningFXandSound
         (
             FXHappening = template_HappeningFXWithAnchor(
@@ -384,7 +384,7 @@ DepictionAction_CriticalFX_Incendiary is MAP[
 
 DepictionAction_CriticalFX_Hull_Break is MAP[
     (
-        ['critical_hull_break'],
+        'critical_hull_break',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_hull_break
@@ -396,7 +396,7 @@ DepictionAction_CriticalFX_Hull_Break is MAP[
 
 DepictionAction_CriticalFX_Moteur_Damaged is MAP[
     (
-        ['critical_engine_damaged'],
+        'critical_engine_damaged',
         template_HappeningFXWithAnchor
         (
             FX = $/GFX/GameFx/fx_critique_moteur_endommage
@@ -407,7 +407,7 @@ DepictionAction_CriticalFX_Moteur_Damaged is MAP[
 
 DepictionAction_CriticalFX_Gun_Turret_Stuck is MAP[
     (
-        ['critical_gun_turret_stuck'],
+        'critical_gun_turret_stuck',
         template_HappeningFXandSound
         (
             FXHappening = template_HappeningFXWithAnchor(
@@ -421,7 +421,7 @@ DepictionAction_CriticalFX_Gun_Turret_Stuck is MAP[
 
 DepictionAction_CriticalFX_Moteur_Destroyed is MAP[
     (
-        ['critical_engine_destroyed'],
+        'critical_engine_destroyed',
         template_HappeningFXandSound
         (
             FXHappening = template_HappeningFXWithAnchor(
@@ -435,7 +435,7 @@ DepictionAction_CriticalFX_Moteur_Destroyed is MAP[
 
 DepictionAction_CriticalFX_Fuel_Explosion is MAP[
     (
-        ['critical_fuel_explosion'],
+        'critical_fuel_explosion',
         template_HappeningFXandSound
         (
             FXHappening = template_HappeningFXWithAnchor(
@@ -449,7 +449,7 @@ DepictionAction_CriticalFX_Fuel_Explosion is MAP[
 
 DepictionAction_CriticalFX_Ammo is MAP[
     (
-        ['critical_ammo'],
+        'critical_ammo',
         template_HappeningFXandSound
         (
             FXHappening = template_HappeningFXWithAnchor(
@@ -463,7 +463,7 @@ DepictionAction_CriticalFX_Ammo is MAP[
 
 DepictionAction_CriticalFX_Spalling is MAP[
     (
-        ['critical_spalling'],
+        'critical_spalling',
         template_HappeningFXandSound
         (
             FXHappening = template_HappeningFXWithAnchor(
@@ -477,35 +477,35 @@ DepictionAction_CriticalFX_Spalling is MAP[
 
 DepictionAction_CriticalEffect_CompReset is MAP[
     (
-        ['critical_compreset'],
+        'critical_compreset',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Comp_Reset )
     )
 ]
 
 DepictionAction_CriticalEffect_Crew is MAP[
     (
-        ['critical_crew'],
+        'critical_crew',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Crew)
     )
 ]
 
 DepictionAction_CriticalEffect_Crew_Dead is MAP[
     (
-        ['critical_crew_dead'],
+        'critical_crew_dead',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Crew_Dead)
     )
 ]
 
 DepictionAction_CriticalEffect_Track_broke is MAP[
     (
-        ['critical_track_broke'],
+        'critical_track_broke',
         $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Track
     )
 ]
 
 DepictionAction_CriticalEffect_Engine_Fire is MAP[
     (
-        ['critical_engine_fire'],
+        'critical_engine_fire',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_engine_fire
@@ -517,7 +517,7 @@ DepictionAction_CriticalEffect_Engine_Fire is MAP[
 
 DepictionAction_CriticalEffect_Tank_Fire is MAP[
     (
-        ['critical_tank_fire'],
+        'critical_tank_fire',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_leak_fire
@@ -529,7 +529,7 @@ DepictionAction_CriticalEffect_Tank_Fire is MAP[
 
 DepictionAction_CriticalEffect_Reactor_Damaged is MAP[
     (
-        ['critical_reactor_damaged'],
+        'critical_reactor_damaged',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_reactor_damaged
@@ -541,7 +541,7 @@ DepictionAction_CriticalEffect_Reactor_Damaged is MAP[
 
 DepictionAction_CriticalEffect_Leak is MAP[
     (
-        ['critical_leak'],
+        'critical_leak',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_reactor_damaged
@@ -553,21 +553,21 @@ DepictionAction_CriticalEffect_Leak is MAP[
 
 DepictionAction_CriticalEffect_Pilot is MAP[
     (
-        ['critical_pilot'],
+        'critical_pilot',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Crew )
     )
 ]
 
 DepictionAction_CriticalEffect_HUD_Damaged is MAP[
     (
-        ['critical_HUD'],
+        'critical_HUD',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Alarm_Plane_HUD )
     )
 ]
 
 DepictionAction_CriticalEffect_Structural_Damaged is MAP[
     (
-        ['structural_damaged'],
+        'structural_damaged',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_structural_damaged
@@ -579,14 +579,14 @@ DepictionAction_CriticalEffect_Structural_Damaged is MAP[
 
 DepictionAction_CriticalEffect_Computer_Down is MAP[
     (
-        ['computer_down'],
+        'computer_down',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Alarm_Plane_Computer_Down )
     )
 ]
 
 DepictionAction_CriticalEffect_Helico_Leak is MAP[
     (
-        ['critical_helico_leak'],
+        'critical_helico_leak',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_helico_leak
@@ -598,7 +598,7 @@ DepictionAction_CriticalEffect_Helico_Leak is MAP[
 
 DepictionAction_CriticalEffect_Helico_Structural_Damaged is MAP[
     (
-        ['structural_damaged'],
+        'structural_damaged',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_Helico_structural_damaged
@@ -610,7 +610,7 @@ DepictionAction_CriticalEffect_Helico_Structural_Damaged is MAP[
 
 DepictionAction_CriticalEffect_Helico_turbine_Damaged is MAP[
     (
-        ['critical_reactor_damaged'],
+        'critical_reactor_damaged',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_helico_turbine_damaged
@@ -622,7 +622,7 @@ DepictionAction_CriticalEffect_Helico_turbine_Damaged is MAP[
 
 DepictionAction_CriticalEffect_Helico_Turbine_Fire is MAP[
     (
-        ['critical_engine_fire'],
+        'critical_engine_fire',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_helico_turbine_fire
@@ -634,7 +634,7 @@ DepictionAction_CriticalEffect_Helico_Turbine_Fire is MAP[
 
 DepictionAction_CriticalEffect_Helico_Tank_Fire is MAP[
     (
-        ['critical_tank_fire'],
+        'critical_tank_fire',
         template_CriticalHappening
         (
             FX = $/GFX/GameFx/fx_critique_helico_leak_fire
@@ -646,21 +646,21 @@ DepictionAction_CriticalEffect_Helico_Tank_Fire is MAP[
 
 DepictionAction_CriticalEffect_Helico_Computer_Down is MAP[
     (
-        ['computer_down'],
+        'computer_down',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Alarm_Helico_Computer_Down )
     )
 ]
 
 DepictionAction_CriticalEffect_Helico_Crew is MAP[
     (
-        ['critical_pilot'],
+        'critical_pilot',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Crew )
     )
 ]
 
 DepictionAction_CriticalEffect_Helico_HUD_Damaged is MAP[
     (
-        ['critical_HUD'],
+        'critical_HUD',
         template_HappeningOnlyOnPlayer( Happening = $/GFX/Sound/SoundHappening_FULDA_CriticalFX_Alarm_Helico_HUD )
     )
 ]
@@ -715,7 +715,7 @@ DepictionAction_CriticalFX_Helicopter is MAP[]
 DepictionAction_VortexFX is MAP
 [
     (
-        ['leftVortex'],
+        'leftVortex',
         TIntroduceMobileHappening(
             Anchor = "fx_vortex_g"
             Happening = TSequencingActionHappening(ActionDescriptor = $/GFX/GameFx/FX_Binder_Avion_Vortex)
@@ -724,7 +724,7 @@ DepictionAction_VortexFX is MAP
 ] + MAP
 [
     (
-        ['rightVortex'],
+        'rightVortex',
         TIntroduceMobileHappening(
             Anchor = "fx_vortex_d"
             Happening = TSequencingActionHappening(ActionDescriptor = $/GFX/GameFx/FX_Binder_Avion_Vortex)
@@ -764,19 +764,19 @@ template template_Happening_DoubleReactorAirplane
 )
 
 
-DepictionAction_SingleReactorAirplane is MAP [( ['reactor'], template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur) )]
-DepictionAction_SingleReactorAirplane_Smoky is MAP [( ['reactor'], template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_Smoky) )]
-DepictionAction_SingleReactorAirplane_NoSmoke is MAP [( ['reactor'], template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_NoSmoke) )]
-DepictionAction_SingleReactorAirplane_BigNoSmoke is MAP [( ['reactor'], template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_BigNoSmoke) )]
-DepictionAction_SingleReactorAirplane_NoFlameNoSmoke is MAP [( ['reactor'], template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_NoFlameNoSmoke) )]
-DepictionAction_SingleReactorAirplane_VerySmoky is MAP [( ['reactor'], template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_Very_Smoky) )]
+DepictionAction_SingleReactorAirplane is MAP [('reactor', template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur) )]
+DepictionAction_SingleReactorAirplane_Smoky is MAP [('reactor', template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_Smoky) )]
+DepictionAction_SingleReactorAirplane_NoSmoke is MAP [('reactor', template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_NoSmoke) )]
+DepictionAction_SingleReactorAirplane_BigNoSmoke is MAP [('reactor', template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_BigNoSmoke) )]
+DepictionAction_SingleReactorAirplane_NoFlameNoSmoke is MAP [('reactor', template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_NoFlameNoSmoke) )]
+DepictionAction_SingleReactorAirplane_VerySmoky is MAP [('reactor', template_Happening_SingleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_Very_Smoky) )]
 
-DepictionAction_DoubleReactorAirplane is MAP [( ['reactor'], template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur) )]
-DepictionAction_DoubleReactorAirplane_Smoky is MAP [( ['reactor'], template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_Smoky) )]
-DepictionAction_DoubleReactorAirplane_NoSmoke is MAP [( ['reactor'], template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_NoSmoke) )]
-DepictionAction_DoubleReactorAirplane_BigNoSmoke is MAP [( ['reactor'], template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_BigNoSmoke) )]
-DepictionAction_DoubleReactorAirplane_NoFlameNoSmoke is MAP [( ['reactor'], template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_NoFlameNoSmoke) )]
-DepictionAction_DoubleReactorAirplane_VerySmoky is MAP [( ['reactor'], template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_Very_Smoky) )]
+DepictionAction_DoubleReactorAirplane is MAP [('reactor', template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur) )]
+DepictionAction_DoubleReactorAirplane_Smoky is MAP [('reactor', template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_Smoky) )]
+DepictionAction_DoubleReactorAirplane_NoSmoke is MAP [('reactor', template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_NoSmoke) )]
+DepictionAction_DoubleReactorAirplane_BigNoSmoke is MAP [('reactor', template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_BigNoSmoke) )]
+DepictionAction_DoubleReactorAirplane_NoFlameNoSmoke is MAP [('reactor', template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_NoFlameNoSmoke) )]
+DepictionAction_DoubleReactorAirplane_VerySmoky is MAP [('reactor', template_Happening_DoubleReactorAirplane(Action = $/GFX/GameFx/FX_Binder_Avion_Reacteur_Very_Smoky) )]
 
 DepictionAction_MovementFX_SingleReactorAirplane is DepictionAction_VortexFX + DepictionAction_SingleReactorAirplane
 DepictionAction_MovementFX_SingleReactorAirplane_Smoky is DepictionAction_VortexFX + DepictionAction_SingleReactorAirplane_Smoky
@@ -821,7 +821,7 @@ private Flare_Happening is TCompositeHappening
 
 DepictionAction_Flare_Simple is MAP
 [
-    ( ['fx_flare'], TIntroduceMobileHappening
+    ( 'fx_flare', TIntroduceMobileHappening
         (
             Anchor = 'fx_leurre'
             Happening = Flare_Happening
@@ -831,7 +831,7 @@ DepictionAction_Flare_Simple is MAP
 
 DepictionAction_Flare_Double is MAP
 [
-    ( ['fx_flare'], TCompositeHappening
+    ( 'fx_flare', TCompositeHappening
         (
             SubHappenings =
             [

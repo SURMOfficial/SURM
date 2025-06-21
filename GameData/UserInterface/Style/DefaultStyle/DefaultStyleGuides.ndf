@@ -1946,16 +1946,6 @@ DefaultStyleGuide is TUIStyleGuide
 
         ("Resume/CadreDivisions",                       MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = Noir ) ), ]),
 
-
-
-
-
-        ("SkinRack/Border",                             MAP [
-                                                            ( ~/ComponentState/Grayed,      TColorRTTI( Color = Blanc184 ) ),
-                                                            ( ~/ComponentState/Normal,      TColorRTTI( Color = Blanc184 ) ),
-                                                            ( ~/ComponentState/Highlighted, TColorRTTI( Color = Blanc5 ) ),
-                                                            ( ~/ComponentState/Clicked,     TColorRTTI( Color = Blanc2 ) ),
-                                                        ]),
         ("UIPlayerSpecific/Otan",                       MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = Otan ) ), ]),
         ("UIPlayerSpecific/Pact",                       MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = Pact ) ), ]),
         ("UIPlayerSpecific/Orange/Primary",             MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = Orange5 ) ), ]),
@@ -2400,6 +2390,11 @@ DefaultStyleGuide is TUIStyleGuide
                                                             ( ~/ComponentState/Grayed,      TColorRTTI( Color = [30, 30, 30, 120] ) ),
                                                         ]),
 
+        ("filterColor",                                MAP [
+                                                            ( ~/ComponentState/Normal,      TColorRTTI( Color = [255,255,255,225] ) ),
+                                                            ( ~/ComponentState/Highlighted,      TColorRTTI( Color = [255,255,255,255] ) ),
+                                                            ( ~/ComponentState/Grayed,      TColorRTTI( Color = [118, 115, 109, 255] ) ),
+                                                        ]),
         //-------------------------------------------------------------------------------------
         //Steelman
         ("SM_SelectPawn_oob",                       MAP [
@@ -2558,6 +2553,7 @@ DefaultStyleGuide is TUIStyleGuide
         ("SovDivision_kassel_1",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [99,191,172,180] ) ), ]),
         ("SovDivision_kassel_3",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [201,59,12,180] ) ), ]),
         ("SovDivision_boar_1",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [255,45,46,180] ) ), ]),
+        ("division_SOV_4",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [201,59,12,255] ) ), ]),
 
 
         ("canadianDiv_1",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [120, 40, 30,220] ) ), ]),
@@ -2565,8 +2561,18 @@ DefaultStyleGuide is TUIStyleGuide
         ("CzecDiv_1",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [60, 75, 50,255] ) ), ]),
         ("CzecDiv_2",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [85, 107, 47,255] ) ), ]),
         ("CzecDiv_3",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [90, 95, 80,255] ) ), ]),
+        ("CzecDiv_4",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [70, 85, 90,255] ) ), ]),
+        ("CzecDiv_5",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [110, 120, 90,255] ) ), ]),
+
+        // division ESP
+        ("division_ESP_1",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [181, 82, 57,250] ) ), ]),
 
 
+        // division FR
+        ("division_FR_1",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [0, 85, 164,250] ) ), ]),
+        ("division_FR_2",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [47, 62, 117,250] ) ), ]),
+        ("division_FR_3",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [62, 76, 89,250] ) ), ]),
+        ("division_FR_4",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [63, 93, 90, 250] ) ), ]),
 
         // ("division_DDR_1",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [139,65,5,220] ) ), ]),
         ("division_DDR_1",                    MAP [ ( ~/ComponentState/Normal, TColorRTTI( Color = [15,5,5,210] ) ), ]),
@@ -3334,9 +3340,7 @@ DefaultStyleGuide is TUIStyleGuide
         ("Noir",                                        MAP [ ( ~/ComponentState/Normal,      TColorRTTI( Color = [0,0,0,255]  ) ),
                                                             ( ~/ComponentState/Highlighted,           TColorRTTI( Color = [50,50,50,255] ) ),
                                                             ]),
-        ("Noir_noHL",                                        MAP [ ( ~/ComponentState/Normal,      TColorRTTI( Color = [0,0,0,255]  ) ),
-                                                            // ( ~/ComponentState/Highlighted,           TColorRTTI( Color = [50,50,50,255] ) ),
-                                                            ]),
+        ("Noir_noHL",                                        MAP [ ( ~/ComponentState/Normal,      TColorRTTI( Color = [0,0,0,255]  ) ), ]),
         ("NoirEndgameButton",                           MAP [ ( ~/ComponentState/Normal,      TColorRTTI( Color = [30,30,30,255]  ) ),
                                                             ( ~/ComponentState/Highlighted,           TColorRTTI( Color = [150,150,150,255] ) ),
                                                             ( ~/ComponentState/Grayed,           TColorRTTI( Color = [150,150,150,150] ) ),

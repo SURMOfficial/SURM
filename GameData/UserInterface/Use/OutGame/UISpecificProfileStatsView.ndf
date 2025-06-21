@@ -7,6 +7,7 @@ template StatsPanelMultiListTitleLine
 ]
 is BUCKListDescriptor
 (
+    ElementName = <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [0.0, 45+22.5]
@@ -686,26 +687,6 @@ StatsPanelRankMultiList is BUCKListDescriptor
             (
                 ElementName = "RankedGameAsPACT"
                 TextToken = "SP_RNKPACT"
-            )
-        ),
-
-        // Most played division
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = StatsPanelMultiListLine
-            (
-                ElementName = "MostPlayedDivision"
-                TextToken = "SP_MSTPDIV"
-            )
-        ),
-
-        // Division with best winning ratio
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = StatsPanelMultiListLine
-            (
-                ElementName = "BestWinningRatioDivision"
-                TextToken = "SP_BESTDIV"
             )
         ),
     ]

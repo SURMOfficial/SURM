@@ -2,7 +2,6 @@ private template CheckboxWithTitleDefinition
 [
     ElementName : string = "",
     ToggleListButtonTextToken : string = "",
-    IsMainCheckbox : bool = false,
     TextColor : string = "Blanc",
     TextSize : string = "12",
     TextDico : string = ~/LocalisationConstantes/dico_interface_outgame,
@@ -68,10 +67,8 @@ is BUCKCheckBoxDescriptor
                         TextToken = <ToggleListButtonTextToken>
                         TextSize = <TextSize>
                         TextColor = <TextColor>
-                        TextStyle = 'Default'
+                        TextStyle = "Default"
                         TypefaceToken = "Eurostyle"
-
-                        ComponentStateLocked = (<IsMainCheckbox> ? false : true)
 
                         HorizontalFitStyle = ~/FitStyle/FitToContent
                         VerticalFitStyle = ~/FitStyle/FitToParent
@@ -94,8 +91,7 @@ private template CheckboxWithIconAndTitleDefinition
 [
     ElementName : string = "",
     ToggleListButtonTextToken : string = "",
-    IsMainCheckbox : bool = false,
-    TextColor : string = "Blanc",
+    TextColor : string = "filterColor",
     TextSize : string = "12",
     TextDico : string = ~/LocalisationConstantes/dico_interface_outgame,
     BoxMagnifiableWidthHeight : float2 = [12.0, 12.0],
@@ -103,6 +99,7 @@ private template CheckboxWithIconAndTitleDefinition
     IconTextureMagnifiableWidthHeight : float2 = [20.0, 20.0],
     TextureToken : string = "StyleDeskTexture_CheckBox",
     TextureColorToken : string = "",
+    TextureIconeColorToken : string = "filterColor",
     CheckboxHasBorder : bool = true,
     CheckboxHasBackground : bool = true,
     BackgroundBlockColorToken : string = "Checkbox/Background",
@@ -125,7 +122,7 @@ is BUCKCheckBoxDescriptor
         (
             ComponentFrame = TUIFramePropertyRTTI()
 
-            FirstMargin = TRTTILength(Magnifiable = 9)
+            FirstMargin = TRTTILength(Magnifiable = 9.0)
             InterItemMargin = TRTTILength(Magnifiable = 4.0)
             Axis = ~/ListAxis/Horizontal
             BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
@@ -171,7 +168,7 @@ is BUCKCheckBoxDescriptor
                             AlignementToFather = [0.5, 0.5]
                         )
                         ClipTextureToComponent = true
-
+                        TextureColorToken = <TextureIconeColorToken>
                         Components =
                         [
                             BUCKSpecificHintableArea
@@ -195,8 +192,6 @@ is BUCKCheckBoxDescriptor
                         TextColor = <TextColor>
                         TextStyle = "Default"
                         TypefaceToken = "Eurostyle"
-
-                        ComponentStateLocked = (<IsMainCheckbox> ? false : true)
 
                         HorizontalFitStyle = ~/FitStyle/FitToContent
                         VerticalFitStyle = ~/FitStyle/FitToParent

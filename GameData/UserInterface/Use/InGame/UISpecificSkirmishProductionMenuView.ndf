@@ -1109,7 +1109,7 @@ template UISpecificSkirmishProductionMenuViewDescriptor
 
     ShortcutUILayer = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
 
-    NbMaxPlanes = 9
+    NbMaxPlanes = 40
 
     SquadGroupName = "HPROD_SQD"
     HalfSquadGroupName = "HPROD_HSQD"
@@ -1127,8 +1127,8 @@ template UISpecificSkirmishProductionMenuViewDescriptor
 
     ProductionMenuButtonSpotlights = MAP
     [
-        (EDefaultFactories/Infantry, ProductionSpotlight(UniqueName = "Spotlight_logInf")),
-        (EDefaultFactories/Recons, ProductionSpotlight(UniqueName = "Spotlight_logRec"))
+        (EFactory/Infantry, ProductionSpotlight(UniqueName = "Spotlight_logInf")),
+        (EFactory/Recons, ProductionSpotlight(UniqueName = "Spotlight_logRec"))
     ]
 
     UnitContainerDescriptor = UISpecificUnitButtonViewDescriptor
@@ -1148,15 +1148,6 @@ template UISpecificSkirmishProductionMenuViewDescriptor
         UnitCostGlowColorIndexWhenUnitNotAvailable = "ProductionMenu/UnitCostWhenNotAvailable/Glow"
         UnitCostColorWhenUnitCannotBeBought = "ProductionMenu/UnitCostWhenCannotBeBought"
         UnitNameBackgroundColorWhenUnitNotAvailable = "Gris123"
-
-        AceUnitNameColor = "Fulda2_Orange100"
-        AceUnitBorderColorBySide =
-        [
-            (~/TBorderSide/Top | ~/TBorderSide/Left, "Fulda2_Orange100"),
-            (~/TBorderSide/Bottom | ~/TBorderSide/Right, "Fulda2_Orange100"),
-        ]
-
-        AceUnitBorderThickness = "1"
 
         CannotDeselect = true
         ForceEvents = true

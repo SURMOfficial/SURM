@@ -12,12 +12,10 @@ export Capacite_Aura_Commandement_1 is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 450
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Gain_un_niveau_XP
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -36,6 +34,411 @@ export Capacite_Aura_Commandement_1 is TCapaciteDescriptor
         ~/ConditionTagRaisedInUnit_Hors_Transport_1,
     ]
 )
+export Capacite_Morale_display_1 is TCapaciteDescriptor 
+(
+    DescriptorId     = GUID:{c9956818-6018-4b6c-8766-bcae9ada333e}
+    Name             = "Morale3"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_display_Morale_1
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagNotRaisedInUnit_Morale_level_2,
+    ]
+)
+export Capacite_Morale_loss1 is TCapaciteDescriptor //each time a unit routs it loses 
+(
+    DescriptorId     = GUID:{32b7d90d-e5cf-533a-b011-45c5be1e78c5}
+    Name             = "Morale1"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.52
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Lose_Morale_1
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_Routed,
+    ]
+)
+export Capacite_Morale_loss1_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{6823f3a2-62bb-5021-a671-484339e18a81}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Morale_loss_tag1
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagNotRaisedInUnit_Routed
+    ]
+)
+export Capacite_Morale_loss1_effect is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{9e9cb442-df81-4fa3-b68a-8a8ebc4f36b0}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Morale_2_reduce_morale
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagNotRaisedInUnit_Morale_level_3,
+    ]
+)
+export Capacite_Morale_loss2 is TCapaciteDescriptor //each time a unit routs it loses 
+(
+    DescriptorId     = GUID:{91b5f20c-ab2c-4130-8d9a-430072134322}
+    Name             = "Morale2"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.52
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Lose_Morale_2
+    EffectDuration = -1.0
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_Morale_level_2,
+	~/ConditionTagRaisedInUnit_Routed,
+    ]
+)
+export Capacite_Morale_loss2_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{b9662428-ae0b-4a87-bae6-87d564672cbb}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Morale_loss_tag2
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagNotRaisedInUnit_Routed
+    ]
+)
+export Capacite_Morale_loss2_effect is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{8d128474-36b8-4401-b8b5-6dba0c262638}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Morale_3_reduce_morale
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagNotRaisedInUnit_Morale_level_4,
+    ]
+)
+export Capacite_Morale_loss3 is TCapaciteDescriptor //each time a unit routs it loses 
+(
+    DescriptorId     = GUID:{e9245f02-debc-4e50-9752-b6efad014736}
+    Name             = "Morale3"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.52
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Lose_Morale_3
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_Morale_level_3,
+	~/ConditionTagRaisedInUnit_Routed,
+    ]
+)
+export Capacite_Morale_loss3_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{67dd15d4-f8d3-4fb2-81ca-a23ac36e0d9f}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Morale_loss_tag3
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagNotRaisedInUnit_Routed
+    ]
+)
+export Capacite_Morale_loss3_effect is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{7f6e77df-88f5-4c9f-bd06-70b9e5a661c6}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Morale_4_reduce_morale
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagNotRaisedInUnit_Morale_level_5,
+    ]
+)
+export Capacite_Morale_loss4 is TCapaciteDescriptor //each time a unit routs it loses 
+(
+    DescriptorId     = GUID:{2b5dca52-0e84-4030-8f84-ec30360757f2}
+    Name             = "Morale4"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.52
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Lose_Morale_4
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_Morale_level_4,
+	~/ConditionTagRaisedInUnit_Routed,
+    ]
+)
+export Capacite_Morale_loss4_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{26c74d98-6c82-45a7-b81b-6979870fcec7}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Morale_loss_tag4
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionTagNotRaisedInUnit_Routed
+    ]
+)
+export Capacite_Morale_loss4_effect is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{6a1c3c6d-754d-4096-8291-526733a928b5}
+    Name             = "ERAK5"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Morale_5_reduce_morale
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+    ]
+)
 export Capacite_ERA_front_27 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{244936d8-afc2-4f8d-af1a-b3796ea9d6cf}
@@ -47,12 +450,10 @@ export Capacite_ERA_front_27 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_front_27
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -80,12 +481,10 @@ export Capacite_ERA_hit_add is TCapaciteDescriptor //18 hits takes you from 750m
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_add
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -113,12 +512,10 @@ export Capacite_ERA_hit_tag is TCapaciteDescriptor //18 hits takes you from 750m
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -136,7 +533,7 @@ export Capacite_ERA_hit_tag is TCapaciteDescriptor //18 hits takes you from 750m
 )
 export Capacite_ERA_hit1_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
-    DescriptorId     = GUID:{6823f3a2-62bb-5021-a671-484339e18a81}
+    DescriptorId     = GUID:{fc82f20a-3215-49c6-83fa-4bbb12b02377}
     Name             = "ERAK5"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
@@ -145,12 +542,10 @@ export Capacite_ERA_hit1_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag1
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -177,12 +572,10 @@ export Capacite_ERA_hit2_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag2
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -201,7 +594,7 @@ export Capacite_ERA_hit2_tag is TCapaciteDescriptor //18 hits takes you from 750
 )
 export Capacite_ERA_hit_tag1 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
-    DescriptorId     = GUID:{32b7d90d-e5cf-533a-b011-45c5be1e78c5}
+    DescriptorId     = GUID:{9c87df9e-b5c7-4ce8-8ad8-b93169578e2a}
     Name             = "ERAK5"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
@@ -210,12 +603,10 @@ export Capacite_ERA_hit_tag1 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit1_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -243,12 +634,10 @@ export Capacite_ERA_hit_tag2 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit2_cap//UnitEffect_ERA_hit_tag2
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -277,12 +666,10 @@ export Capacite_ERA_hit3_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag3
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -310,12 +697,10 @@ export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit3_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -335,7 +720,7 @@ export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750
 )
 export Capacite_ERA_hit3_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
-    DescriptorId     = GUID:{9e9cb442-df81-4fa3-b68a-8a8ebc4f36b0}
+    DescriptorId     = GUID:{5e0e24d2-baf4-4515-8874-9a94db19752b}
     Name             = "ERAK5"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
@@ -344,12 +729,10 @@ export Capacite_ERA_hit3_armor is TCapaciteDescriptor //18 hits takes you from 7
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit3_remove_armor
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -377,12 +760,10 @@ export Capacite_ERA_hit4_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag4
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -410,12 +791,10 @@ export Capacite_ERA_hit_tag4 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit4_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -445,12 +824,10 @@ export Capacite_ERA_hit5_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag5
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -478,12 +855,10 @@ export Capacite_ERA_hit_tag5 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit5_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -513,12 +888,10 @@ export Capacite_ERA_hit6_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag6
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -546,12 +919,10 @@ export Capacite_ERA_hit_tag6 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit6_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -580,12 +951,10 @@ export Capacite_ERA_hit6_armor is TCapaciteDescriptor //18 hits takes you from 7
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit6_remove_armor
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -614,12 +983,10 @@ export Capacite_ERA_hit7_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag7
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -647,12 +1014,10 @@ export Capacite_ERA_hit_tag7 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit7_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -682,12 +1047,10 @@ export Capacite_ERA_hit8_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag8
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -715,12 +1078,10 @@ export Capacite_ERA_hit_tag8 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit8_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -750,12 +1111,10 @@ export Capacite_ERA_hit9_tag is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag9
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -783,12 +1142,10 @@ export Capacite_ERA_hit_tag9 is TCapaciteDescriptor //18 hits takes you from 750
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit9_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -817,12 +1174,10 @@ export Capacite_ERA_hit9_armor is TCapaciteDescriptor //18 hits takes you from 7
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit9_remove_armor
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -851,12 +1206,10 @@ export Capacite_ERA_hit10_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag10
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -884,12 +1237,10 @@ export Capacite_ERA_hit_tag10 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit10_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -918,12 +1269,10 @@ export Capacite_ERA_hit11_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag11
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -951,12 +1300,10 @@ export Capacite_ERA_hit_tag11 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit11_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -986,12 +1333,10 @@ export Capacite_ERA_hit12_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag12
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1019,12 +1364,10 @@ export Capacite_ERA_hit_tag12 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit12_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1053,12 +1396,10 @@ export Capacite_ERA_hit12_armor is TCapaciteDescriptor //18 hits takes you from 
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit12_remove_armor
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1087,12 +1428,10 @@ export Capacite_ERA_hit13_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag13
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1120,12 +1459,10 @@ export Capacite_ERA_hit_tag13 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit13_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1155,12 +1492,10 @@ export Capacite_ERA_hit14_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag14
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1188,12 +1523,10 @@ export Capacite_ERA_hit_tag14 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit14_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1223,12 +1556,10 @@ export Capacite_ERA_hit15_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag15
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1256,12 +1587,10 @@ export Capacite_ERA_hit_tag15 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit15_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1290,12 +1619,10 @@ export Capacite_ERA_hit15_armor is TCapaciteDescriptor //18 hits takes you from 
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit15_remove_armor
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1324,12 +1651,10 @@ export Capacite_ERA_hit16_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag16
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1357,12 +1682,10 @@ export Capacite_ERA_hit_tag16 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit16_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1392,12 +1715,10 @@ export Capacite_ERA_hit17_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag17
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1425,12 +1746,10 @@ export Capacite_ERA_hit_tag17 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit17_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1460,12 +1779,10 @@ export Capacite_ERA_hit18_tag is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag18
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1492,12 +1809,10 @@ export Capacite_ERA_hit_tag18 is TCapaciteDescriptor //18 hits takes you from 75
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.02
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_add_hit18_cap
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1526,12 +1841,10 @@ export Capacite_ERA_hit18_armor is TCapaciteDescriptor //18 hits takes you from 
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.0
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit18_remove_armor
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1558,12 +1871,10 @@ export Capacite_Aura_Commandement_2 is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 601
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Gain_un_niveau_XP
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1593,12 +1904,10 @@ export Capacite_Aura_Commandement_3 is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 750
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Gain_un_niveau_XP
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1628,12 +1937,10 @@ export Capacite_Aura_capture_allie_solo is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 123
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_capture_allie_solo
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1660,12 +1967,10 @@ export Capacite_Bouclier_Anti_Suppression_50 is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 353
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Bouclier_Suppression_50
-    TargetEffectDuration    = 2.00
-    SelfEffectDuration      = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1691,12 +1996,10 @@ export Capacite_Bouclier_Anti_Suppression_99 is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 250
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Bouclier_Suppression_99
-    TargetEffectDuration    = 2.00
-    SelfEffectDuration      = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1722,13 +2025,11 @@ export Capacite_Choc is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 175
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Placebo
-    TargetEffectDuration    = -1.00
+    EffectDuration    = -1.00
     SelfEffect       = ~/UnitEffect_Choc
-    SelfEffectDuration      = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1753,12 +2054,10 @@ export Capacite_Choc_feedback is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Choc_feedback
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1786,13 +2085,11 @@ export Capacite_SF is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 400 * 0.35333333333 
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Placebo
-    TargetEffectDuration = 1.00
+    EffectDuration = -1.00
     SelfEffect       = ~/UnitEffect_SF
-    SelfEffectDuration   = 1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1817,12 +2114,10 @@ export Capacite_Cowering_Rampe_Capacite is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Infanterie_Cowering_Rampe
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -1851,12 +2146,10 @@ export Capacite_Cowering_Stop_Capacite is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Infanterie_Cowering_Stop
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -1885,12 +2178,10 @@ export Capacite_Debarque_camion is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 2.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Baisse_Dangerosite_et_Transport_0_Effet
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -1918,12 +2209,10 @@ export Capacite_Declare_hors_transport is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Ajoute_Tag_Hors_Transport
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = False
@@ -1949,12 +2238,10 @@ export Capacite_Surrender is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Reddition_Effet_kill
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1985,12 +2272,10 @@ export Capacite_Flee is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Critic_Deroute_Infantry_Flee
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2020,12 +2305,10 @@ export Capacite_Flee_from_tank is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/ennemi
     RangeGRU               = 1
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Critic_Deroute_Infantry_Flee
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2055,12 +2338,10 @@ export Capacite_Discipline is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1000 * 0.35333333333 
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_Allie_Proche_Discipline
-    TargetEffectDuration = 2.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2088,12 +2369,10 @@ export Capacite_GSR is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_GSR
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2123,12 +2402,10 @@ export Capacite_GSR_no_GSR is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 8.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_GSR_ok
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2156,12 +2433,10 @@ export Capacite_cover is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_infantry_cover
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2189,12 +2464,10 @@ export Capacite_vehicle_cover is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_infantry_cover2
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2221,12 +2494,10 @@ export Capacite_vehicle_stop is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_vehicle_stopped_hit_perc //immediately easier to hit (needs test)
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2254,12 +2525,10 @@ export Capacite_dig_in is TCapaciteDescriptor //hasty position
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_dig_in
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2288,12 +2557,10 @@ export Capacite_IFV is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 350
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Bouclier_Suppression_IFV
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2320,12 +2587,10 @@ export Capacite_IFV_feedback is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_IFV_feedback
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2353,12 +2618,10 @@ export Capacite_Observer_ring is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1500
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Placebo
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2383,12 +2646,10 @@ export Capacite_Observer_ring_batt is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1500
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Placebo
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2413,12 +2674,10 @@ export Capacite_BattComm is TCapaciteDescriptor //experimental battalion command
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 20000
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_additional_XP_from_command  //UnitEffect_Bouclier_Suppression_IFV
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2445,12 +2704,10 @@ export Capacite_Burn_Bailed_Tank is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 15
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt 
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2479,12 +2736,10 @@ export Capacite_Provide_extra_XP is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1600 * RangeCorr  * 0.35333333333 
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Gain_extra_niveau_XP // UnitEffect_Gain_deux_niveau_XP // UnitEffect_Gain_un_niveau_XP
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2510,12 +2765,10 @@ export Capacite_Infanterie_Dissimulee is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Infanterie_bonus_discretion
-    TargetEffectDuration    = 2.00
-    SelfEffectDuration      = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -2545,12 +2798,10 @@ export Capacite_Infanterie_Retranchee is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Infanterie_bonus_defense
-    TargetEffectDuration    = 2.00
-    SelfEffectDuration      = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -2570,63 +2821,59 @@ export Capacite_Infanterie_Retranchee is TCapaciteDescriptor
 )
 export Capacite_Malus_Suppress_AllTime is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{9449549b-03f5-4bf7-bc64-eef556033256}
-    Name             = "Malus_Suppress_AllTime"
-    NameToken        = "None"
+    DescriptorId            = GUID:{9449549b-03f5-4bf7-bc64-eef556033256}
+    Name                    = "Malus_Suppress_AllTime"
+    NameToken               = "None"
     CumulEffect             = ~/CapaciteCumulEffect_jamais
     Declenchement           = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU                = 1
+    RangeGRU                = 0
     CastTime                = 0.00
-    Cooldown                = 30.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Effet_Suppress_Recu_125pourcent
-    TargetEffectDuration    = 30.00
-    SelfEffectDuration      = 0.00
-    MaxTargetNb            = 1
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    TagsCiblePossible = [
+    EffectDuration          = -1.00
+    MaxTargetNb             = 1
+    TargetInBuilding        = True
+    TargetInTransport       = True
+    TargetInSelf            = True
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor       = RGBA[0,0,0,0]
+    DisplayRangeThickness   = 0.00
+    TagsCiblePossible       = [
     ]
-    TagsCibleExcluded = [
+    TagsCibleExcluded       = [
     ]
 
 )
 export Capacite_Malus_Suppress_Zone_Influence_Ennemie is TCapaciteDescriptor
 (
-    DescriptorId     = GUID:{ad4f4562-2bb2-4b42-9dbd-cfd8b30c1cd2}
-    Name             = "Malus_Suppress_Zone_Influence_Ennemie"
-    NameToken        = "None"
+    DescriptorId            = GUID:{ad4f4562-2bb2-4b42-9dbd-cfd8b30c1cd2}
+    Name                    = "Malus_Suppress_Zone_Influence_Ennemie"
+    NameToken               = "None"
     CumulEffect             = ~/CapaciteCumulEffect_jamais
     Declenchement           = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/ennemi
-    RangeGRU                = 1
+    RangeGRU                = 0
     CastTime                = 0.00
-    Cooldown                = 0.60
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Effet_Suppress_Recu_125pourcent
-    TargetEffectDuration    = 0.60
-    SelfEffectDuration      = 0.00
-    MaxTargetNb            = 1
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    TagsCiblePossible = [
+    EffectDuration          = -1.00
+    MaxTargetNb             = 1
+    TargetInBuilding        = True
+    TargetInTransport       = True
+    TargetInSelf            = True
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor       = RGBA[0,0,0,0]
+    DisplayRangeThickness   = 0.00
+    TagsCiblePossible       = [
     ]
-    TagsCibleExcluded = [
+    TagsCibleExcluded       = [
     ]
 
 )
@@ -2641,12 +2888,10 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 30
     CastTime            = 0.00
-    Cooldown            = 0.10
     CheckVisibility     = False
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Reddition_Effet_kill
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = -1.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2676,12 +2921,10 @@ export Capacite_Menace_Ennemi_Proche_flee is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 30
     CastTime            = 0.00
-    Cooldown            = 0.10
     CheckVisibility     = False
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Critic_Deroute_Infantry_Flee
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = -1.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2710,12 +2953,10 @@ export Capacite_Menace_Ennemi_Proche_tank is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 20
     CastTime            = 0.00
-    Cooldown            = 0.10
     CheckVisibility     = False
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Critic_Deroute_Infantry_Flee
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = -1.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2745,12 +2986,10 @@ export Capacite_MilitaryPolice is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 500
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_military_police
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2777,47 +3016,14 @@ export Capacite_MilitaryPolice_feedback is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_military_police_feedback
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
     TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    TagsCiblePossible = [
-    ]
-    TagsCibleExcluded = [
-    ]
-
-)
-export Capacite_Ordre_Unload_NonArmes is TCapaciteDescriptor
-(
-    DescriptorId     = GUID:{889498fc-c2fb-45fd-8f96-b3805e45cf87}
-    Name             = "Ordre_Unload_NonArmes"
-    NameToken        = "None"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_post_ordre
-    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU                = 0
-    CastTime                = 0.00
-    Cooldown                = 1.00
-    CheckVisibility         = True
-    CanBeCastFromTransport  = True
-    TargetEffect            = ~/UnitEffect_Destruction
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 0.00
-    MaxTargetNb            = 1
-    TargetInBuilding       = False
-    TargetInTransport      = False
-    TargetInSelf           = False
     TargetMySelf           = True
     FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
     DisplayRangeColor      = RGBA[0,0,0,0]
@@ -2839,12 +3045,10 @@ export Capacite_Regen_suppress_xp_1 is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Regen_suppress_regular
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 1.00
+    EffectDuration          = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -2873,12 +3077,10 @@ export Capacite_Regen_suppress_xp_2 is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Regen_suppress_veteran
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 1.00
+    EffectDuration          = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -2907,12 +3109,10 @@ export Capacite_Regen_suppress_xp_3 is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Regen_suppress_elite
-    TargetEffectDuration    = 1.00
-    SelfEffectDuration      = 1.00
+    EffectDuration          = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -2941,12 +3141,10 @@ export Capacite_SF_feedback is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_SF_feedback
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2972,12 +3170,10 @@ export Capacite_StressOnMiss_high is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 400
     CastTime                = 0.00
-    Cooldown                = 0.10
     CheckVisibility         = False
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_stressOnMiss_high
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = -1.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3007,12 +3203,10 @@ export Capacite_StressOnMiss_low is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 400
     CastTime                = 0.00
-    Cooldown                = 0.10
     CheckVisibility         = False
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_stressOnMiss_low
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = -1.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3042,12 +3236,10 @@ export Capacite_StressOnMiss_mid is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 400
     CastTime                = 0.00
-    Cooldown                = 0.10
     CheckVisibility         = False
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_stressOnMiss_mid
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = -1.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3077,12 +3269,10 @@ export Capacite_Tank_Dissimule is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Tank_bonus_discretion
-    TargetEffectDuration    = 2.00
-    SelfEffectDuration      = 0.00
+    EffectDuration          = -1.00
     MaxTargetNb             = 1
     TargetInBuilding        = False
     TargetInTransport       = False
@@ -3110,12 +3300,10 @@ export Capacite_Trepied is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Trepied
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb             = 1
     TargetInBuilding        = True
     TargetInTransport       = True
@@ -3144,12 +3332,10 @@ export Capacite_Trepied_no_Trepied is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 10.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Ajoute_Tag_Trepied_ok
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb             = 1
     TargetInBuilding        = True
     TargetInTransport       = True
@@ -3177,12 +3363,10 @@ export Capacite_Soutien_Allie_Proche is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 50
     CastTime            = 0.00
-    Cooldown                = 0.10
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_Allie_Proche
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = -1.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3210,12 +3394,10 @@ export Capacite_Soutien_Allie_Proche_Commandant is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1000 * 0.35333333333 
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_Allie_Proche
-    TargetEffectDuration = 2.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3243,12 +3425,10 @@ export Capacite_Soutien_Allie_Proche_Commandant_2 is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1250 * 0.35333333333 
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_Allie_Proche
-    TargetEffectDuration = 2.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3276,12 +3456,10 @@ export Capacite_Soutien_Allie_Proche_Commandant_3 is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1500 * 0.35333333333 
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_Allie_Proche
-    TargetEffectDuration = 2.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3309,13 +3487,11 @@ export Capacite_Suicide_SurCetteCibleEnnemie is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 100 * 0.35333333333 
     CastTime            = 0.00
-    Cooldown            = 2.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Effet_Vide
-    TargetEffectDuration = 1.00
+    EffectDuration = 1.00
     SelfEffect       = ~/UnitEffect_Effet_Meurt
-    SelfEffectDuration   = 1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = False
@@ -3343,13 +3519,11 @@ export Capacite_Suicide_SurCettePosition is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 2.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Effet_Vide
-    TargetEffectDuration    = 1.00
+    EffectDuration    = 1.00
     SelfEffect       = ~/UnitEffect_Effet_Meurt
-    SelfEffectDuration      = 1.00
     MaxTargetNb            = 1
     TargetInBuilding       = False
     TargetInTransport      = False
@@ -3378,12 +3552,10 @@ export Capacite_UAV is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Malus_ciblage_UAV
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3409,13 +3581,11 @@ export Capacite_electronic_warfare is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 20000.00
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_electronic_warfare
-    TargetEffectDuration = 1.00
+    EffectDuration = -1.00
 	SelfEffect       = ~/UnitEffect_disp_electronicwarfare
-    SelfEffectDuration   = -1.00
     MaxTargetNb            = 2 // a total guess that I'll probably never know the answer to for obvious reasons -1 allows infinite targets
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3429,6 +3599,63 @@ export Capacite_electronic_warfare is TCapaciteDescriptor
 		"AA_radar_Old",
     ]
 )
+export Capacite_electronic_warfare_standoff is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1e1bc2ab-70ba-4e98-97b4-a191815b1529}
+    Name             = "electronic_warfare_standoff"
+    NameToken        = "None"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU               = 20000.00
+    CastTime            = 0.00
+    CheckVisibility     = False
+    CanBeCastFromTransport  = False
+    TargetEffect         = ~/UnitEffect_electronic_warfare_standoff
+    EffectDuration = -1.00
+	SelfEffect       = ~/UnitEffect_disp_electronicwarfare
+    MaxTargetNb            = 2 // a total guess that I'll probably never know the answer to for obvious reasons -1 allows infinite targets
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_selected | ~/CapaciteFeedbackActivationMask_anyalliance
+    DisplayRangeColor      = RGBA[0,255,255,255]
+    DisplayRangeThickness  = 0.40
+    TagsCiblePossible = [
+        "AA_radar",
+		"AA_radar_Old",
+    ]
+)
+export Capacite_disp_electronic_warfare_standoff is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{68f7156e-8066-4b9d-b348-774afb9e253b}
+    Name             = "electronic_warfare_disp_standoff"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 1.00
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_disp_electronicwarfare
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+)
 export Capacite_disp_electronic_warfare is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{f9de4f9c-3a29-49f9-b352-51f34ae7efa3}
@@ -3440,12 +3667,10 @@ export Capacite_disp_electronic_warfare is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_disp_electronicwarfare
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3470,12 +3695,10 @@ export Capacite_disp_electronic_warfare_basic is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_disp_electronicwarfare_basic
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3500,12 +3723,10 @@ export Capacite_electronic_warfare_basic is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 20000.00
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_electronic_warfare_basic
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = -1.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1 // a total guess that I'll probably never know the answer to for obvious reasons -1 allows infinite targets
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3529,12 +3750,10 @@ export Capacite_electronic_warfare_gun is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 20000.00
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_electronic_warfare_gun
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1 // a total guess that I'll probably never know the answer to for obvious reasons -1 allows infinite targets
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3558,12 +3777,10 @@ export Capacite_electronic_warfare_search_radar is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 20000.00
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_electronic_warfare_search_radar
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 2 // a total guess that I'll probably never know the answer to for obvious reasons -1 allows infinite targets
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3587,12 +3804,10 @@ export Capacite_IRCM is TCapaciteDescriptor //haven't figured out how to make th
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 10000 * 0.35333333333 
     CastTime            = 0.00
-    Cooldown            = 1.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_IRCM
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = -1 // these early non-directional jammers will be indiscriminate
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3617,12 +3832,10 @@ export Capacite_eo_dazzler is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_eo_dazzler
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3650,12 +3863,10 @@ export Capacite_fireDirection is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1415
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_fireDirection
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = False
@@ -3682,12 +3893,10 @@ export Capacite_jammer is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 3887
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = False
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_jammer
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3714,12 +3923,10 @@ export Capacite_jammer_arty is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 3887
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = False
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_electronic_warfare_arty
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3746,12 +3953,10 @@ export Capacite_poorly_trained is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_reserviste
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3780,12 +3985,10 @@ export Capacite_supply_block is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_supply_block
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3812,12 +4015,10 @@ export Capacite_reserviste is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_reserviste
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3845,12 +4046,10 @@ export Capacite_Professional is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Professional
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3877,12 +4076,10 @@ export Capacite_Advanced_Training is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Advanced_Training
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3909,12 +4106,10 @@ export Capacite_resolute is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_resolute
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3940,12 +4135,10 @@ export Capacite_security is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_security
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -3974,12 +4167,10 @@ export Capacite_security_feedback is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_Choc_feedback
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4005,13 +4196,11 @@ export Capacite_sigint_close is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 2250
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = False
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Placebo
-    TargetEffectDuration    = -1.00
+    EffectDuration    = -1.00
     SelfEffect       = ~/UnitEffect_sigint_close
-    SelfEffectDuration      = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4042,13 +4231,11 @@ export Capacite_sigint_far is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 4500
     CastTime                = 0.00
-    Cooldown                = 1.00
     CheckVisibility         = False
     CanBeCastFromTransport  = False
     TargetEffect            = ~/UnitEffect_Placebo
-    TargetEffectDuration    = -1.00
+    EffectDuration    = -1.00
     SelfEffect       = ~/UnitEffect_sigint_far
-    SelfEffectDuration      = -1.00
     MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4080,12 +4267,10 @@ export Capacite_sigint_feedback is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_sigint_feedback
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4113,12 +4298,10 @@ export Capacite_sniper is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_sniper
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4147,12 +4330,10 @@ export Capacite_sniper_feedback is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
     CastTime                = 1.00
-    Cooldown                = 0.00
     CheckVisibility         = True
     CanBeCastFromTransport  = True
     TargetEffect            = ~/UnitEffect_sniper_feedback
-    TargetEffectDuration    = -1.00
-    SelfEffectDuration      = 0.00
+    EffectDuration    = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4180,12 +4361,10 @@ export Capacite_sniper_no_snipe is TCapaciteDescriptor
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 10.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_snipe_ok
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4202,7 +4381,7 @@ export Capacite_sniper_no_snipe is TCapaciteDescriptor
         ~/ConditionNotInMovement,
     ]
 )
-export Capacite_kill_missile_4_seconds is TCapaciteDescriptor
+export Capacite_kill_missile_2_seconds is TCapaciteDescriptor //a tester
 (
     DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
     Name             = "sniper_no_snipe"
@@ -4212,13 +4391,12 @@ export Capacite_kill_missile_4_seconds is TCapaciteDescriptor
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
-    CastTime            = 4.10
-    Cooldown            = 0.00
+    CastTime            = 1.10
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4230,6 +4408,39 @@ export Capacite_kill_missile_4_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_kill_missile_4_seconds is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{1b027dd0-e805-4cdc-833c-5fae2590779a}
+    Name             = "sniper_no_snipe"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 4.10
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_Effet_Meurt
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4245,12 +4456,11 @@ export Capacite_kill_missile_5_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 5.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4262,6 +4472,7 @@ export Capacite_kill_missile_5_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4277,12 +4488,11 @@ export Capacite_kill_missile_6_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 6.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4294,6 +4504,7 @@ export Capacite_kill_missile_6_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4309,12 +4520,11 @@ export Capacite_kill_missile_7_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 7.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4326,6 +4536,7 @@ export Capacite_kill_missile_7_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4341,12 +4552,11 @@ export Capacite_kill_missile_8_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 8.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4358,6 +4568,7 @@ export Capacite_kill_missile_8_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4373,12 +4584,11 @@ export Capacite_kill_missile_9_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 9.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4390,6 +4600,7 @@ export Capacite_kill_missile_9_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4405,12 +4616,11 @@ export Capacite_kill_missile_10_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 10.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4422,6 +4632,7 @@ export Capacite_kill_missile_10_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4437,12 +4648,11 @@ export Capacite_kill_missile_11_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 11.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4454,6 +4664,7 @@ export Capacite_kill_missile_11_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4469,12 +4680,11 @@ export Capacite_kill_missile_12_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 12.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4486,6 +4696,7 @@ export Capacite_kill_missile_12_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4501,12 +4712,11 @@ export Capacite_kill_missile_13_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 13.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4518,6 +4728,7 @@ export Capacite_kill_missile_13_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4533,12 +4744,11 @@ export Capacite_kill_missile_14_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 14.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4550,6 +4760,7 @@ export Capacite_kill_missile_14_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4565,12 +4776,11 @@ export Capacite_kill_missile_15_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 15.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4582,6 +4792,7 @@ export Capacite_kill_missile_15_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4597,12 +4808,11 @@ export Capacite_kill_missile_16_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 16.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4614,6 +4824,7 @@ export Capacite_kill_missile_16_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4629,12 +4840,11 @@ export Capacite_kill_missile_17_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 17.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4646,6 +4856,7 @@ export Capacite_kill_missile_17_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4661,12 +4872,11 @@ export Capacite_kill_missile_18_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 18.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4678,6 +4888,7 @@ export Capacite_kill_missile_18_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4693,12 +4904,11 @@ export Capacite_kill_missile_19_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 19.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4710,6 +4920,7 @@ export Capacite_kill_missile_19_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4725,12 +4936,11 @@ export Capacite_kill_missile_20_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 20.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4742,6 +4952,7 @@ export Capacite_kill_missile_20_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4757,12 +4968,11 @@ export Capacite_kill_missile_21_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 21.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4774,6 +4984,7 @@ export Capacite_kill_missile_21_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4789,12 +5000,11 @@ export Capacite_kill_missile_22_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 22.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4806,6 +5016,7 @@ export Capacite_kill_missile_22_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4821,12 +5032,11 @@ export Capacite_kill_missile_23_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 23.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4838,6 +5048,7 @@ export Capacite_kill_missile_23_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4853,12 +5064,11 @@ export Capacite_kill_missile_24_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 24.10
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Effet_Meurt
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
+    //SelfEffect       = ~/UnitEffect_Effet_Meurt
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4870,6 +5080,7 @@ export Capacite_kill_missile_24_seconds is TCapaciteDescriptor
     TagsCiblePossible = [
     ]
     TagsCibleExcluded = [
+	"Unite",
     ]
     Conditions = [
     ]
@@ -4885,12 +5096,10 @@ export Capacite_cover_no_cover is TCapaciteDescriptor //want a delay so vehicles
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 15.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_cover_ok
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 15.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4918,12 +5127,10 @@ export Capacite_dig_in_no_dig_in is TCapaciteDescriptor //want a delay so vehicl
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 720.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_dig_in_ok
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4952,12 +5159,10 @@ export Capacite_no_tripod is TCapaciteDescriptor //HMGs and AGLs need to be moun
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_no_tripod
-    TargetEffectDuration = 1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -4985,12 +5190,10 @@ export Capacite_tripod is TCapaciteDescriptor //set up tripod
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 1.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_tripod
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5019,12 +5222,10 @@ export Capacite_tripod_no_tripod is TCapaciteDescriptor //want a delay so vehicl
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 40.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_tripod_ok
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5052,12 +5253,10 @@ export Capacite_tripod_no_tripod_fast is TCapaciteDescriptor //want a delay so v
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 20.00
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_tripod_ok
-    TargetEffectDuration = -1.00
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5085,12 +5284,10 @@ export Capacite_slow_missile_1_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 3.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_1s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5117,12 +5314,10 @@ export Capacite_slow_missile_2_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 4.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_2s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5149,12 +5344,10 @@ export Capacite_slow_missile_3_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 5.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_3s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5181,12 +5374,10 @@ export Capacite_slow_missile_4_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 6.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_4s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5213,12 +5404,10 @@ export Capacite_slow_missile_5_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 7.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_5s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5245,12 +5434,10 @@ export Capacite_slow_missile_6_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 8.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_6s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5277,12 +5464,10 @@ export Capacite_slow_missile_7_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 9.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_7s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5309,12 +5494,10 @@ export Capacite_slow_missile_8_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 10.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_8s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5341,12 +5524,10 @@ export Capacite_slow_missile_9_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 11.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_9s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5373,12 +5554,10 @@ export Capacite_slow_missile_10_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 12.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_10s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5405,12 +5584,10 @@ export Capacite_slow_missile_11_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 13.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_11s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5437,12 +5614,10 @@ export Capacite_slow_missile_12_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 14.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_12s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5469,12 +5644,10 @@ export Capacite_slow_missile_13_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 15.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_13s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5501,12 +5674,10 @@ export Capacite_slow_missile_14_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 16.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_14s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5533,12 +5704,10 @@ export Capacite_slow_missile_15_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 17.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_15s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5565,12 +5734,10 @@ export Capacite_slow_missile_16_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 18.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_16s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5597,12 +5764,10 @@ export Capacite_slow_missile_17_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 19.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_17s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5629,12 +5794,10 @@ export Capacite_slow_missile_18_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 20.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_18s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5661,12 +5824,10 @@ export Capacite_slow_missile_19_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 21.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_19s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5693,12 +5854,10 @@ export Capacite_slow_missile_20_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 22.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_20s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5725,12 +5884,10 @@ export Capacite_slow_missile_21_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 23.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_21s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5757,12 +5914,10 @@ export Capacite_slow_missile_22_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 24.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_22s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5789,12 +5944,10 @@ export Capacite_slow_missile_23_seconds is TCapaciteDescriptor
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1
     CastTime            = 25.01
-    Cooldown            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_slow_missile_23s
-    TargetEffectDuration = 1.00 //maybe this will avoid stacking issues
-    SelfEffectDuration   = 0.00
+    EffectDuration = -1.00 //maybe this will avoid stacking issues
     MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True

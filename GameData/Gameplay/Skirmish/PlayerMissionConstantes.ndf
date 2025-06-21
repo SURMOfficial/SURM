@@ -19,7 +19,6 @@ export playerMissionAttackDescriptor is TMacroActionDescriptor_ObjectiveAttack_S
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
-        TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 2),
         TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 0.01  MinimumCostForSelfPreservation = 0),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.00001),
@@ -36,7 +35,6 @@ export playerMissionDefenseDescriptor is TMacroActionDescriptor_Defense_Specific
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 1),
-        TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TMacroActionProductionSettingHolder(DisableReinforcement = true),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TDisableUnitToReleaseSettingHolder(),

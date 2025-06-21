@@ -8,7 +8,6 @@ export VeryEasyStrategy is TIAGeneralStrategy
 (
     StrategyName = "VeryEasyAI"
     FirstGenerator = VEasy_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         VEasy_Transition_StartToPhaseCommand,
@@ -58,17 +57,14 @@ export VEasy_Transition_DeployToCommandPhase is TIAGeneralStrategyTransition
 export VEasy_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
     ]
 )
 //-------------------------------------------------------------------------
 export VEasy_Phase_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
         ~/CaptureOneObjectif,
@@ -80,7 +76,6 @@ export VEasy_Phase_Deploiement is TSequenceGeneratorDescriptor
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish,
 
@@ -111,7 +106,6 @@ export VEasy_Phase_Deploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export VEasy_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
         ~/CaptureOneObjectif,
@@ -120,7 +114,6 @@ export VEasy_Phase_Command is TSequenceGeneratorDescriptor
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish,
 

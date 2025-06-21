@@ -10,7 +10,7 @@ unnamed TMimeticWorldDescriptor
 (
     World = $/M3D/Scene/DefaultWorld
     Happenings = MAP[
-        (['test_weapon'], TIntroduceMobileHappening
+        ('test_weapon', TIntroduceMobileHappening
             (
                 Happening = InfantryFiringHappening
                 (
@@ -20,10 +20,10 @@ unnamed TMimeticWorldDescriptor
                 )
             )
         ),
-        (['chaleur'], TIntroduceMobileHappening( Happening = TSequencingActionHappening( ActionDescriptor = TActionCall( Action = $/VFX_Bank/FX_BANK_Binder_Chaleur_Simple )))),
-        (['fumigene'], TIntroduceMobileHappening( Happening = TSequencingActionHappening( ActionDescriptor = FxFumigeneWithParams ))),
-        (['fumigene_ghost'], TIntroduceMobileHappening( Happening = TSequencingActionHappening( ActionDescriptor = FxFumigeneGhostWithParams ))),
-        (["districtCombat"], TIntroduceMobileHappening(
+        ('chaleur', TIntroduceMobileHappening( Happening = TSequencingActionHappening( ActionDescriptor = TActionCall( Action = $/VFX_Bank/FX_BANK_Binder_Chaleur_Simple )))),
+        ('fumigene', TIntroduceMobileHappening( Happening = TSequencingActionHappening( ActionDescriptor = FxFumigeneWithParams ))),
+        ('fumigene_ghost', TIntroduceMobileHappening( Happening = TSequencingActionHappening( ActionDescriptor = FxFumigeneGhostWithParams ))),
+        ("districtCombat", TIntroduceMobileHappening(
             Happening = TRandomHappening
             (
                 Alternatives =
@@ -43,7 +43,7 @@ unnamed TMimeticWorldDescriptor
                 ]
             ))
         ),
-        (['FOBDestruction'],             TIntroduceMobileHappening(
+        ('FOBDestruction',             TIntroduceMobileHappening(
             Happening = TRandomHappening
             (
                 Alternatives =
@@ -57,7 +57,7 @@ unnamed TMimeticWorldDescriptor
                 ]
             ))
         ),
-        (["helicoGroundPuff"], TIntroduceMobileHappening(
+        ("helicoGroundPuff", TIntroduceMobileHappening(
             Happening = TSequencingActionHappening
             (
                 ActionDescriptor = TActionCall
@@ -66,7 +66,7 @@ unnamed TMimeticWorldDescriptor
                 )
             ))
         ),
-        (["wait_until_next_turn"], TIntroduceMobileHappening(
+        ("wait_until_next_turn", TIntroduceMobileHappening(
             Happening = TSequencingActionHappening
             (
                 ActionDescriptor = TActionCall
@@ -75,7 +75,7 @@ unnamed TMimeticWorldDescriptor
                 )
             ))
         ),
-        (["wakeup_this_turn"], TIntroduceMobileHappening(
+        ("wakeup_this_turn", TIntroduceMobileHappening(
             Happening = TSequencingActionHappening
             (
                 ActionDescriptor = TActionCall

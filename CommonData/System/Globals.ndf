@@ -329,8 +329,6 @@ CommandName is TBaseClass
 
     WindowFormReloadOption   is "WindowForm::ReloadOption"
 
-    UIMarginUpdate is "UIManager::UpdateMargin"
-
     CommonDepictionOnOptionChange is "CommonDepictionOnOptionChange::OnOptionChange"   // ceci correspond au nom donné dans DepictionDistanceToCameraBasedSelector.cpp
 
     LightManagerFactoryOnOptionChanged is "LightManagerFactoryOnOptionChanged"
@@ -338,14 +336,7 @@ CommandName is TBaseClass
     LevelBuildViewManagerResetOptions is "UnitLevelBuildInstanceManager::ResetOptions"   // ceci correspond au nom donné dans UnitLevelBuildView.cpp
     ParticleMediumsResetOptions is "ParticleMediums::ResetOptions"   // ceci correspond au nom donné dans ParticleMedium.cpp
 
-    ActivateTestText3D is "Text3DTest::Activate"
-    DectivateTestText3D is "Text3DTest::Deactivate"
-    ActivateTestObjective is "ObjectiveTest::ActivateDeactivate"
-    ActivateDeactivateLabelTest is "LabelTest::ActivateDeactivate"
-
     SituationAwarenessNextEvent is "TInstancePositionEvents::Trigg"
-
-    UpdateStaticFXsQuality is "StaticLevelBuildManager::UpdateFXQuality"                                // ceci correspond au nom donné dans StaticLevelBuildManager.cpp
 
     UpdateLocalisationLanguage is "Localisation::UpdateLanguage"
 )
@@ -718,13 +709,13 @@ ELevelLaunch is TBaseClass
 Seconde                           is 1.0
 Metre                             is 26.0
 MultiplicateurMetreRTSVersDistanceFeedbackTactique is 1 div 7.85
-MortarTimeCorr				      is 1.257744371 //1.0 // 0.93 //0.76 // 1.27
+MortarTimeCorr				      is 0.75//1.257744371 //1.0 // 0.93 //0.76 // 1.27
 MortarSpeedCorr					  is 0.6
 RangeCorr                         is 2.7742749056
 RangeCorrRkt					  is 1.629372515
 RangeCorrFix				      is 0.88
 RangeCorrVis					  is 2.5
-AC_AP_corr						  is 1.0 //reduced since I can't stop the crits anymore
+AC_AP_corr						  is 2.0 //reduced since I can't stop the crits anymore, went up to 2.0 as TTK was getting slow
 Accnostab						  is 0.0
 AccCorr							  is 0.26 // 0.57 //this reduces the hit roll to compensate for the range corr increase
 AccCorrSov						  is 0.38 // 0.68 //for 3.3 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
@@ -754,14 +745,14 @@ ACSuppressCorr				      is 0.8
 BulletSuppressRadCorr			  is 0.33
 FuelCorr						  is 75
 SupplyCorr						  is 1.85 //was 185 divide by 100
-OpticalStrengthReducer			  is 4.088 // new value so inf see tanks at 2km in the open 3.212  //1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
+OpticalStrengthReducer			  is 1.0//0.48//1.4 //4.088 // new value so inf see tanks at 2km in the open 3.212  //1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
 OpticAltCorr					  is 100 //not sure why I need this but I do
 Degre                             is 0.017453292
 SniperSuppress				      is 175.0 //suppression from sniper fire
 pinneddamagereducer				  is 0.101 //can't use these in  the table, so  they are for reference
 engageddmagereducer				  is 0.299
 infdamageadjust					  is 0.51
-BuildingHealthMult				  is 3
+BuildingHealthMult				  is 4
 ScoutOpticBonus					  is 1.7
 TripodBonus						  is 1.8
 ClusterRadiusCorr				  is 1.4 //clusters experience the same radius fall off as HE so we have to widen their area of effect to compensate (not a great solution)

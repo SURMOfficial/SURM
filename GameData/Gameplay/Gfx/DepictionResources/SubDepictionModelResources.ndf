@@ -141,6 +141,14 @@ export MeshDescriptor_Driver_FR_LOW is TResourceMesh
 (
     Mesh=FR_Chasseur_LOW
 )
+export MeshDescriptor_Driver_Legion_2_FR is TResourceMesh
+(
+    Mesh=FR_Legion_2
+)
+export MeshDescriptor_Driver_Legion_2_FR_LOW is TResourceMesh
+(
+    Mesh=FR_Legion_1_LOW
+)
 //--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Driver_CAN is TResourceMesh
 (
@@ -165,6 +173,15 @@ export MeshDescriptor_Driver_Vysadkar_TCH is TResourceMesh
     Mesh=TCH_Vysadkar_2
 )
 export MeshDescriptor_Driver_Vysadkar_TCH_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Driver_ESP is TResourceMesh
+(
+    Mesh=Soldier_3_ESP
+)
+export MeshDescriptor_Driver_ESP_LOW is TResourceMesh
 (
     Mesh=US_GI_1_LOW
 )
@@ -613,6 +630,23 @@ export MeshDescriptor_Servant_D_FR_LOW is TResourceMesh
 (
     Mesh="GameData:/Assets/3D/Units/FR/Infanterie/Chasseurs/Chasseur_2.fbx"
 )
+
+export MeshDescriptor_Servant_G_Legion_2_FR is TResourceMesh
+(
+    Mesh=FR_Legion_2
+)
+export MeshDescriptor_Servant_D_Legion_2_FR is TResourceMesh
+(
+    Mesh=FR_Legion_2
+)
+export MeshDescriptor_Servant_G_Legion_2_FR_LOW is TResourceMesh
+(
+    Mesh=FR_Legion_1_LOW
+)
+export MeshDescriptor_Servant_D_Legion_2_FR_LOW is TResourceMesh
+(
+    Mesh=FR_Legion_1_LOW
+)
 //--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Servant_Para_Sep_G_FR is TResourceMesh
 (
@@ -812,7 +846,23 @@ export MeshDescriptor_Servant_G_CAN_LOW is TResourceMesh
 (
     Mesh=US_GI_1_LOW
 )
-
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_D_ESP is TResourceMesh
+(
+    Mesh=Soldier_3_ESP
+)
+export MeshDescriptor_Servant_G_ESP is TResourceMesh
+(
+    Mesh=Soldier_1_ESP
+)
+export MeshDescriptor_Servant_D_ESP_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
+export MeshDescriptor_Servant_G_ESP_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
 //--------------------------------------------------------------------------------------------------------------------
 export FuldaSoldier is TResourceMesh
 (

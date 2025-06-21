@@ -51,47 +51,19 @@ is BUCKDraggableContainerDescriptor
             [
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = BUCKListDescriptor
+                    ComponentDescriptor = MainUnitButton
                     (
-                        Axis = ~/ListAxis/Horizontal
-                        ChildFitToContent = true
-                        BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-                        Elements =
-                        [
-                            BUCKListElementDescriptor
-                            (
-                                ComponentDescriptor = MainUnitButton
-                                (
-                                    IsTogglable = <IsTogglable>
-                                    IsFocusable = <IsFocusable>
-                                    CannotDeselect = <CannotDeselect>
-                                    ForceEvents = <ForceEvents>
-                                    RadioButtonManager = <RadioButtonManager>
+                        IsTogglable = <IsTogglable>
+                        IsFocusable = <IsFocusable>
+                        CannotDeselect = <CannotDeselect>
+                        ForceEvents = <ForceEvents>
+                        RadioButtonManager = <RadioButtonManager>
 
-                                    ShowXPButtons = <ShowXPButtons>
-                                    ShowAddUnitButton = <ShowAddUnitButton>
-                                    ShowRemoveUnitButton = <ShowRemoveUnitButton>
+                        ShowXPButtons = <ShowXPButtons>
+                        ShowAddUnitButton = <ShowAddUnitButton>
+                        ShowRemoveUnitButton = <ShowRemoveUnitButton>
 
-                                    MaskColorToken = <MaskColorToken>
-                                )
-                            ),
-
-                            BUCKListElementDescriptor
-                            (
-                                ComponentDescriptor = BUCKRackDescriptor
-                                (
-                                    ElementName = "UnitSkinButtonRack"
-
-                                    Axis = ~/ListAxis/Horizontal
-                                    ComponentFrame = TUIFramePropertyRTTI
-                                    (
-                                        RelativeWidthHeight = [0.0, 1.0]
-                                    )
-
-                                    BladeDescriptor = ~/UnitSkinButton
-                                )
-                            )
-                        ]
+                        MaskColorToken = <MaskColorToken>
                     )
                 ),
 
@@ -1542,10 +1514,6 @@ template UISpecificUnitButtonViewDescriptor
     UnitCostGlowColorIndexWhenUnitNotAvailable : string = "",
     UnitCostColorWhenUnitCannotBeBought : string = "",
 
-    AceUnitNameColor : string = "",
-    AceUnitBorderColorBySide : LIST<PAIR<int, string>> = [],
-    AceUnitBorderThickness : string = "",
-
     ComponentFrameAlignment : float2 = [0.0, 0.5],
 
     IsTogglable : bool = true,
@@ -1603,8 +1571,4 @@ is TUISpecificUnitButtonViewDescriptor
     UnitCostColorWhenUnitNotAvailable = <UnitCostColorWhenUnitNotAvailable>
     UnitCostGlowColorIndexWhenUnitNotAvailable = <UnitCostGlowColorIndexWhenUnitNotAvailable>
     UnitCostColorWhenUnitCannotBeBought = <UnitCostColorWhenUnitCannotBeBought>
-
-    AceUnitNameColor = <AceUnitNameColor>
-    AceUnitBorderColorBySide = <AceUnitBorderColorBySide>
-    AceUnitBorderThickness = <AceUnitBorderThickness>
 )

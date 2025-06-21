@@ -34,13 +34,13 @@ template TemplateDepictionPose
     Selector,
     Animation,
 ]
-is TDepictionTemplate
+is TDepictionDescriptor
 (
     ShadowLessInitialValue = true
     Selector = <Selector>
     DepictionAlternatives = [
-        TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptorHigh> ),
-        TDepictionDescriptor( SelectorId = [LOD_Low]  MeshDescriptor = <MeshDescriptorLow> ),
+        TDepictionVisual( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptorHigh> ),
+        TDepictionVisual( SelectorId = [LOD_Low]  MeshDescriptor = <MeshDescriptorLow> ),
     ]
 
     Operators = [
@@ -70,7 +70,7 @@ is TemplateDepictionPose
 // ----------------------------------------------------------------------------------------------------------------------------------------
 
 // IMPORTANT : si vous rajoutez de nouveaux templates de sous-dépictions d'humains dans des avions/helicos,
-// Pensez à le rajouter aussi dans la liste __anchorToSubDepictionTemplate du script DepictionAerialUnitsFileWriter.py.
+// Pensez à le rajouter aussi dans la liste __anchorToSubDepictionDesc du script DepictionAerialUnitsFileWriter.py.
 
 template SubDepiction_Driver [ MeshDescriptorHigh, MeshDescriptorLow ]
 is TSubDepiction ( Anchors = ['driver'] Depiction = TemplateDepictionDriver(MeshDescriptorHigh = <MeshDescriptorHigh> MeshDescriptorLow = <MeshDescriptorLow>) )
@@ -127,12 +127,12 @@ template SubDepiction_ServantTemplate
 ] is TSubDepiction
 (
     Anchors = [<Anchor>]
-    Depiction = TDepictionTemplate
+    Depiction = TDepictionDescriptor
     (
         Selector = <Selector>
         DepictionAlternatives = [
-            TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptorHigh> ),
-            TDepictionDescriptor( SelectorId = [LOD_Low]  MeshDescriptor = <MeshDescriptorLow> ),
+            TDepictionVisual( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptorHigh> ),
+            TDepictionVisual( SelectorId = [LOD_Low]  MeshDescriptor = <MeshDescriptorLow> ),
         ]
 
         Operators = [ <AnimationOperator> ]
@@ -301,10 +301,10 @@ template ShowroomSubDepiction_Template
 ] is TSubDepiction
 (
     Anchors = [<Anchor>]
-    Depiction = TDepictionTemplate
+    Depiction = TDepictionDescriptor
     (
         Selector = OnlyHighDepictionSelector
-        DepictionAlternatives = [ TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> ) ]
+        DepictionAlternatives = [ TDepictionVisual( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> ) ]
 
         Operators = [
             TCosmeticSingleSkeletalAnimationOperatorDesc(Animation = <Animation>)

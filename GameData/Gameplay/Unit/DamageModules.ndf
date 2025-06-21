@@ -64,29 +64,6 @@ Airplane_MaxStunDamages is 9999
 
 Airplane_MaxSuppressionDamages is 350
 
-
-
-// -------------------------------------------------------------------------------------------------
-// Bunker
-// -------------------------------------------------------------------------------------------------
-
-// Ratio de régénération des points de suppressions suivant le temps passé depuis la dernière suppression reçue
-// Possibilité d'enlever/rajouter des lignes dans le tableau
-Bunker_SuppressDamagesRegenRatioList is
-[
-    [30, 10],   // 10s => regen x1
-]
-
-// Points de "stun" récupérés par seconde
-Bunker_StunDamagesRegen is 9999
-
-// Dégâts de "stun" que l'unité doit atteindre pour être stunned (dégâts augmentant avec les dégâts de suppressions et regénérés avec StunDamagesRegen)
-Bunker_MaxStunDamages is 9999
-
-Bunker_MaxSuppressionDamages is 1000
-
-
-
 // -------------------------------------------------------------------------------------------------
 // Helico
 // -------------------------------------------------------------------------------------------------
@@ -103,7 +80,6 @@ Helico_SuppressDamagesRegenRatioList is
 Helico_StunDamagesRegen is 1
 
 // Dégâts de "stun" que l'unité doit atteindre pour être stunned (dégâts augmentant avec les dégâts de suppressions et regénérés avec StunDamagesRegen)
-
 Helico_MaxStunDamages is 9999
 
 Helico_MaxSuppressionDamages is 350

@@ -1714,20 +1714,20 @@ is TUISpecificBattlegroupsListViewDescriptor
 
     FactoryDisplayOrder =
     [
-        EDefaultFactories/Logistic,
-        EDefaultFactories/Infantry,
-        EDefaultFactories/Art,
-        EDefaultFactories/Tanks,
-        EDefaultFactories/Recons,
-        EDefaultFactories/DCA,
-        EDefaultFactories/Helis,
-        EDefaultFactories/Planes,
+        EFactory/Logistic,
+        EFactory/Infantry,
+        EFactory/Art,
+        EFactory/Tanks,
+        EFactory/Recons,
+        EFactory/DCA,
+        EFactory/Helis,
+        EFactory/Planes,
     ]
 
     ColorForAlliance = MAP
     [
         (
-            ECoalition/OTAN,
+            ECoalition/NATO,
             "GameDebrief/TeamStats/PlayerLine/Nato"
         ),
         (
@@ -1739,7 +1739,7 @@ is TUISpecificBattlegroupsListViewDescriptor
     AllianceFlagTexture = MAP
     [
         (
-            ECoalition/OTAN,
+            ECoalition/NATO,
             "CommonTexture_MotherCountryFlag_NATO_small"
         ),
         (
@@ -1767,14 +1767,6 @@ is TUISpecificBattlegroupsListViewDescriptor
         UnitCostColorWhenUnitCannotBeBought = "Fulda2_Orange30"
         UnitCostGlowColorIndexWhenUnitNotAvailable = "Fulda2_Orange100"
         UnitNameBackgroundColorWhenUnitNotAvailable = "Gris123"
-
-        AceUnitNameColor = "Fulda2_Orange100"
-        AceUnitBorderColorBySide =
-        [
-            (~/TBorderSide/Top | ~/TBorderSide/Left, "Fulda2_Orange100"),
-            (~/TBorderSide/Bottom | ~/TBorderSide/Right, "Fulda2_Orange100"),
-        ]
-        AceUnitBorderThickness = "1"
 
         OpacityPercentWhenUnitNotAvailable = 1.0
         TimeInSecondBeforeAdditionalUnitSpecificContainerShowUp = 0.2

@@ -5,7 +5,6 @@ export EasyBreakthroughAttackStrategy is TIAGeneralStrategy
 (
     StrategyName = "IziBTAtkAI"
     FirstGenerator = EasyBTAtk_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         EasyBTAtk_Transition_StartToPhaseCommand,
@@ -55,17 +54,14 @@ export EasyBTAtk_Transition_DeployToPhaseCommand is TIAGeneralStrategyTransition
 export EasyBTAtk_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish_WithAllied_OnePerCorridor,
     ]
 )
 //-------------------------------------------------------------------------
 export EasyBTAtk_PhaseDeploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
         // Capture de zones
@@ -74,7 +70,6 @@ export EasyBTAtk_PhaseDeploiement is TSequenceGeneratorDescriptor
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/FOB_Skirmish,
 
@@ -111,7 +106,6 @@ export EasyBTAtk_PhaseDeploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export EasyBTAtk_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
         // Capture de zones
@@ -120,7 +114,6 @@ export EasyBTAtk_Phase_Command is TSequenceGeneratorDescriptor
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish_WithAllied_OnePerCorridor,
         ~/Reco,

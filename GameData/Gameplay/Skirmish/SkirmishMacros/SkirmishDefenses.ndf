@@ -49,7 +49,6 @@ is TMacroActionDescriptor_CorridorDefense_Specific
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = <NumberLaunchBasedOnGenerationType>),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 1),
-        TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible]
         PoolModelList = <PoolModelList>
         TaggedPoolModelList = (
@@ -368,7 +367,6 @@ export Defense_Objectif is TMacroActionDescriptor_Defense_Specific
         TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfObjectives NumberLaunchBasedOnGenerationType = 1 ConsiderOnlyOwnedObjectives = true ConsiderOnlyAssignedCorridors = true),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 1),
-        TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [ ~/Pool_Defense_Objectif]),
         TForcedPlacementSettingHolder(OrderedPrioritaryZoneWeightList = [~/CommandZoneCustomWeighForIAStrat] ForceInAssignedCorridor = true),
     ]
@@ -430,7 +428,6 @@ is TMacroActionDescriptor_Defense_Specific
         TGenerationSettingHolder(GenerationType = <GenerationType> NumberLaunchBasedOnGenerationType = 1 ConsiderOnlyAssignedCorridors = true),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 1),
-        TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [ <Pool> ]),
         TForcedPlacementSettingHolder(OrderedPrioritaryZoneWeightList = [~/CommandZoneCustomWeighForIAStrat] ForceInAssignedCorridor = true),
         TDefenseBehaviorSettingHolder(DisableAttackDuringZoneDefense = false),
@@ -682,7 +679,6 @@ is TMacroActionDescriptor_Defense_Specific
         TForcedPlacementSettingHolder(OrderedPrioritaryZoneWeightList = <OrderedPrioritaryZoneWeightList>),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 1),
-        TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = <PoolModelList> DisableReinforcement = true),
     ]
 )

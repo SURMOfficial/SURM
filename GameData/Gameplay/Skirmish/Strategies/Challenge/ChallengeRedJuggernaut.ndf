@@ -5,7 +5,6 @@ export ChallengeRedJuggernautStrategy is TIAGeneralStrategy
 (
     StrategyName = "ChalRedJAI"
     FirstGenerator = ChalRedJuggernaut_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         ChalRedJuggernaut_Transition_StartToPhaseCommand,
@@ -55,20 +54,16 @@ export ChalRedJuggernaut_Transition_DeployToCommandPhase is TIAGeneralStrategyTr
 export ChalRedJuggernaut_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
     ]
 )
 //-------------------------------------------------------------------------
 export ChalRedJuggernaut_Phase_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
 
         ~/CaptureOneObjectif, //Dependant du deck estimation 125
@@ -94,10 +89,8 @@ export ChalRedJuggernaut_Phase_Deploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export ChalRedJuggernaut_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
 
         ~/CaptureOneObjectif, //Dependant du deck estimation 125

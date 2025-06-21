@@ -1,9 +1,9 @@
 
-template TacticVirtualFactory
+template TacticProductionQueue
 [
     FactoryType,
 ]
-is TVirtualFactoryDescriptor
+is TProductionQueueDescriptor
 (
     FactoryType = <FactoryType>
     TimeMinBetweenEndOfEachProductionInSec = 1
@@ -25,7 +25,7 @@ export Tactic_TeamUnitDescriptor is TEntityDescriptor
             // Cout du ravitaillement de point de vie par tick
             HealthSupplyAmountBySecond = 0.0001
             // Cout du ravitaillement de munition par tick
-            AmmunitionSupplyAmountBySecond = 1 //1 should be 1but nothing makes sense at all// want to correct 178 by 0.00068587105 but can't since it's stuck as an int max I've hit is 2350 which is around 40 minutes
+            AmmunitionSupplyAmountBySecond = 0.1 //1 should be 1but nothing makes sense at all// want to correct 178 by 0.00068587105 but can't since it's stuck as an int max I've hit is 2350 which is around 40 minutes
         ),
         TTeamCurrencyManagerModuleDescriptor
         (
@@ -48,54 +48,54 @@ export Tactic_TeamUnitDescriptor is TEntityDescriptor
         ),
         TFactoryModuleDescriptor
         (
-            Factories = [
-                TacticVirtualFactory
+            ProductionQueues = [
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Logistic
+                    FactoryType = EFactory/Logistic
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Infantry
+                    FactoryType = EFactory/Infantry
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Planes
+                    FactoryType = EFactory/Planes
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Vehicles
+                    FactoryType = EFactory/Vehicles
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Tanks
+                    FactoryType = EFactory/Tanks
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Recons
+                    FactoryType = EFactory/Recons
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Helis
+                    FactoryType = EFactory/Helis
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Support
+                    FactoryType = EFactory/Support
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/DCA
+                    FactoryType = EFactory/DCA
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Art
+                    FactoryType = EFactory/Art
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/AT
+                    FactoryType = EFactory/AT
                 ),
-                TacticVirtualFactory
+                TacticProductionQueue
                 (
-                    FactoryType = EDefaultFactories/Defense
+                    FactoryType = EFactory/Defense
                 ),
             ]
         ),

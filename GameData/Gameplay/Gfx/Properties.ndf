@@ -1,17 +1,38 @@
-DummyDepiction is TDepictionTemplate
+DummyDepiction is TDepictionDescriptor
 (
     Scaler = TIdentityScaler()
     Selector = TConstantAlternativeSelector(Key = [LOD_High])
-    DepictionAlternatives = [ DepictionDescriptor_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien) ]
+    DepictionAlternatives = [ DepictionVisual_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien) ]
+)
+
+FumigeneDepiction is TDepictionDescriptor
+(
+    Scaler = TIdentityScaler()
+    Selector = OnlyHighDepictionSelector
+    DepictionAlternatives = [
+        DepictionVisual_LOD_High(
+            MeshDescriptor = $/GFX/DepictionResources/Rien
+        ),
+    ]
+
+    Operators = [ TCosmeticFumigeneOperatorDesc() ]
+
+    Actions = MAP
+    [
+        (
+            "fumigene",
+            TIntroduceMobileHappening( Happening = TSequencingActionHappening( ActionDescriptor = FxFumigeneGhostWithParams ))
+        )
+    ]
 )
 
 export InfantryDepictionSquadShowroom is TTimelyDepictionReceiverFactory
 (
-  DepictionTemplate = TDepictionTemplate
+  DepictionDescriptor = TDepictionDescriptor
   (
     Selector = OnlyHighDepictionSelector
     DepictionAlternatives = [
-      DepictionDescriptor_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien),
+      DepictionVisual_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien),
     ]
   )
 )
@@ -22,6 +43,7 @@ unnamed TMimeticGhostRegistration
     MimeticGhost = MAP
     [
         ('dummy', DummyDepiction),
+        ('fumigene', FumigeneDepiction),
     ]
 )
 
@@ -44,6 +66,10 @@ DefaultRenderLayerSelector is TRenderLayerSelector(
 
 export DepictionProperties is TDepictionProperties
 (
+    Descriptors = MAP
+    [
+        ('fumigene', FumigeneDepiction),
+    ]
     World = $/M3D/Scene/DefaultWorld
     DepictionMaterialPack = $/M3D/Shader/MultiRenderTypeMaterialPack_Depiction
     DistrictMaterialPack = $/M3D/Shader/MultiRenderTypeMaterialPack_District

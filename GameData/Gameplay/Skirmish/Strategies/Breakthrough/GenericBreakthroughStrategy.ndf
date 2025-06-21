@@ -5,7 +5,6 @@ export GenericBreakthroughStrategy is TIAGeneralStrategy
 (
     StrategyName = "GenBTAI"
     FirstGenerator = GenBT_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         GenBT_Transition_DefMod,
@@ -56,7 +55,6 @@ export GenBT_Transition_AtkMod is TIAGeneralStrategyTransition
 export GenBT_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
     ]

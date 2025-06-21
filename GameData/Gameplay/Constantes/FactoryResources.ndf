@@ -2,21 +2,21 @@ FactoryResources is TSpecificFactoryResources
 (
     FactoryDisplayOrder =
     [
-        EDefaultFactories/Logistic,
-        EDefaultFactories/Infantry,
-        EDefaultFactories/Art,
-        EDefaultFactories/Tanks,
-        EDefaultFactories/Recons,
-        EDefaultFactories/DCA,
-        EDefaultFactories/Helis,
-        EDefaultFactories/Planes,
-        EDefaultFactories/Defense,
+        EFactory/Logistic,
+        EFactory/Infantry,
+        EFactory/Art,
+        EFactory/Tanks,
+        EFactory/Recons,
+        EFactory/DCA,
+        EFactory/Helis,
+        EFactory/Planes,
+        EFactory/Defense,
     ]
 
     FactoryDescriptions = MAP
     [
         (
-            EDefaultFactories/Logistic,
+            EFactory/Logistic,
             TSpecificFactoryDescription
             (
                 FactoryName = "LOGISTIC"
@@ -27,7 +27,7 @@ FactoryResources is TSpecificFactoryResources
         ),
 
         (
-            EDefaultFactories/Art,
+            EFactory/Art,
             TSpecificFactoryDescription
             (
                 FactoryName = "ARTILLERY"
@@ -37,7 +37,7 @@ FactoryResources is TSpecificFactoryResources
             )
         ),
         (
-            EDefaultFactories/Infantry,
+            EFactory/Infantry,
             TSpecificFactoryDescription
             (
                 FactoryName = "INFANTRY"
@@ -47,7 +47,7 @@ FactoryResources is TSpecificFactoryResources
             )
         ),
         (
-            EDefaultFactories/Tanks,
+            EFactory/Tanks,
             TSpecificFactoryDescription
             (
                 FactoryName = "TANK"
@@ -57,7 +57,7 @@ FactoryResources is TSpecificFactoryResources
             )
         ),
         (
-            EDefaultFactories/Recons,
+            EFactory/Recons,
             TSpecificFactoryDescription
             (
                 FactoryName = "RECON"
@@ -67,7 +67,7 @@ FactoryResources is TSpecificFactoryResources
             )
         ),
         (
-            EDefaultFactories/DCA,
+            EFactory/DCA,
             TSpecificFactoryDescription
             (
                 FactoryName = "ANTIAIR"
@@ -77,7 +77,7 @@ FactoryResources is TSpecificFactoryResources
             )
         ),
         (
-            EDefaultFactories/Helis,
+            EFactory/Helis,
             TSpecificFactoryDescription
             (
                 FactoryName = "HELO"
@@ -87,7 +87,7 @@ FactoryResources is TSpecificFactoryResources
             )
         ),
         (
-            EDefaultFactories/Planes,
+            EFactory/Planes,
             TSpecificFactoryDescription
             (
                 FactoryName = "AIR"
@@ -97,7 +97,7 @@ FactoryResources is TSpecificFactoryResources
             )
         ),
         (
-            EDefaultFactories/Defense,
+            EFactory/Defense,
             TSpecificFactoryDescription
             (
                 FactoryName = "DEFENSE"
@@ -107,7 +107,7 @@ FactoryResources is TSpecificFactoryResources
             )
         ),
         (
-            EDefaultFactories/UniversalFactory,
+            EFactory/UniversalFactory,
             TSpecificFactoryDescription
             (
                 FactoryName = "ALL"

@@ -2086,6 +2086,10 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             TemplateTFS_Division(TextureToken = "CommonTexture_division_BEL_1_INFDIV")
         ),
         (
+            "CAN_1",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CAN_1")
+        ),
+        (
             "RFA_26llb",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_26llb")
         ),
@@ -2100,6 +2104,10 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         (
             "RFA_3PZ",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_3PZ")
+        ),
+        (
+            "RFA_10PZ",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_10PZ")
         ),
         (
             "RFA_12PZ",
@@ -2118,6 +2126,18 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_2Luft")
         ),
         (
+            "RFA_Luft",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_luft")
+        ),
+        (
+            "RFA_4PzGren",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_4PzGren")
+        ),
+        (
+            "RFA_default",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_RFA_default")
+        ),
+        (
             "NL_1D",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_NL_1D")
         ),
@@ -2128,6 +2148,54 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
         (
             "NL_KLu",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_NL_KLu")
+        ),
+
+        (
+            "FR_4",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_FR_4")
+        ),
+        (
+            "FR_5db",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_FR_5db")
+        ),
+        (
+            "FR_6dbl",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_FR_6dbl")
+        ),
+        (
+            "FR_11para",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_FR_11para")
+        ),
+        (
+            "ES_brunete",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_ES_brunete")
+        ),
+
+
+        // pacte
+        (
+            "CZ_1tk",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CZ_1tk")
+        ),
+        (
+            "CZ_9tk",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CZ_9tk")
+        ),
+        (
+            "CZ_2mot",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CZ_2mot")
+        ),
+        (
+            "CZ_3mot",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CZ_3mot")
+        ),
+        (
+            "CZ_20mot",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CZ_20mot")
+        ),
+        (
+            "CZ_19mot",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CZ_19mot")
         ),
         (
             "DDR_7PZD",
@@ -2320,6 +2388,14 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "NL",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_NL")
         ),
+        (
+            "ESP",
+            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_ESP")
+        ),
+        (
+            "ES",
+            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_ESP")
+        ),
         //-------------------------------------------------------------------------------------
         (
             "ammo",
@@ -2445,46 +2521,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                 TextureToken = "Icon_ContentDLC"
                 BBMin=[0, -0.8, 0]
                 BBMax=[1, 0.2, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
-            "iconSteam",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "Icon_Steam"
-                BBMin=[0, -0.8, 0]
-                BBMax=[1.3, 0.5, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
-            "iconGOG",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "Icon_GOG"
-                BBMin=[0, -0.8, 0]
-                BBMax=[1.3, 0.5, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
-            "iconEpic",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "Icon_Epic"
-                BBMin=[0, -0.8, 0]
-                BBMax=[1.3, 0.5, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
-        (
-            "iconEugen",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "Icon_Eugen"
-                BBMin=[0, -0.8, 0]
-                BBMax=[1.3, 0.5, 0]
                 ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
             )
         ),

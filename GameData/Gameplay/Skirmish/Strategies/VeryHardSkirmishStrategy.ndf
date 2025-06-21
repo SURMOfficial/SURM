@@ -5,7 +5,6 @@ export VeryHardStrategy is TIAGeneralStrategy
 (
     StrategyName = "GenericAI"
     FirstGenerator = VHard_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         VHard_Transition_StartToPhaseCommand,
@@ -68,24 +67,20 @@ export VHard_Transition_CommandPhaseToLastHope is TIAGeneralStrategyTransition
 export VHard_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
     ]
 )
 //-------------------------------------------------------------------------
 export VHard_Phase_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
 
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish,
 
@@ -150,7 +145,6 @@ export VHard_Phase_Deploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export VHard_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
         // Même chose que la phase de déploiement mais avec les Défenses
@@ -161,7 +155,6 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish,
 
@@ -250,7 +243,6 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export VHard_Phase_LastHope is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
         // Même chose que la phase de déploiement mais avec les Défenses
@@ -264,7 +256,6 @@ export VHard_Phase_LastHope is TSequenceGeneratorDescriptor
         //------------------------------
         // Support & Supply
         //------------------------------
-        ~/Support_Transports,
 
         ~/Supply_Skirmish,
         ~/Reco,

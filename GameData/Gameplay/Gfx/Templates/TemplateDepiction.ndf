@@ -6,6 +6,7 @@ private DisabledOperatorMid is [
     'weapon_effet_tag4_physic_fire_effect',
     'airplane_parts',
     'ikchain1',
+    'Tracks',
     'WaterRotors',
 ]
 
@@ -26,36 +27,36 @@ LOD_Low  is 'low'
 // ****************************************************************************************************************************************
 // *** Véhicules **************************************************************************************************************************
 // ****************************************************************************************************************************************
-template DepictionDescriptor_LOD_High
+template DepictionVisual_LOD_High
 [
     MeshDescriptor : TResourceMesh,
     SelectorId = LOD_High
 ]
-is TDepictionDescriptor
+is TDepictionVisual
 (
     SelectorId = [<SelectorId>]
     MeshDescriptor = <MeshDescriptor>
 )
 // ****************************************************************************************************************************************
-template DepictionDescriptor_LOD_Mid
+template DepictionVisual_LOD_Mid
 [
     MeshDescriptor : TResourceMesh,
     SelectorId = LOD_Mid
 ]
-is TDepictionDescriptor
+is TDepictionVisual
 (
     SelectorId = [<SelectorId>]
     MeshDescriptor = <MeshDescriptor>
     DisabledOperators = DisabledOperatorMid
 )
 // ****************************************************************************************************************************************
-template DepictionDescriptor_LOD_Low
+template DepictionVisual_LOD_Low
 [
     MeshDescriptor : TResourceMesh,
     SelectorId = LOD_Low,
     DisabledOperators = []
 ]
-is TDepictionDescriptor
+is TDepictionVisual
 (
     SelectorId = [<SelectorId>]
     MeshDescriptor = <MeshDescriptor>
@@ -71,21 +72,21 @@ AlternativeNone is TMeshlessDepictionDescriptor
     ReferenceMeshForSkeleton = $/GFX/DepictionResources/Rien
 )
 
-template DepictionDescriptor_LOD_InfantryHigh
+template DepictionVisual_LOD_InfantryHigh
 [
     MeshDescriptor : TResourceMesh
 ]
-is TDepictionDescriptor
+is TDepictionVisual
 (
     SelectorId = [LOD_High]
     MeshDescriptor = <MeshDescriptor>
 )
 
-template DepictionDescriptor_LOD_InfantryLow
+template DepictionVisual_LOD_InfantryLow
 [
     MeshDescriptor : TResourceMesh
 ]
-is TDepictionDescriptor
+is TDepictionVisual
 (
     SelectorId = [LOD_Low]
     MeshDescriptor = <MeshDescriptor>
@@ -98,7 +99,7 @@ template TemplateAllSubWeaponDepiction
 ] is TSubDepiction
 (
     Anchors = ['arme_1']
-    Depiction = TDepictionTemplate
+    Depiction = TDepictionDescriptor
     (
         Selector = ~/SoldierDynamicWeaponSubDepictionSelector
         DepictionAlternatives = <Alternatives>
@@ -112,7 +113,7 @@ template TemplateAllSubBackpackWeaponDepiction
 ] is TSubDepiction
 (
     Anchors = ['arme_2']
-    Depiction = TDepictionTemplate
+    Depiction = TDepictionDescriptor
     (
         Selector = ~/SoldierDynamicBackpackWeaponSubDepictionSelector
         DepictionAlternatives = <Alternatives>
@@ -126,7 +127,7 @@ template TemplateWeaponAccessorySubDepiction
 ] is TSubDepiction
 (
     Anchors = ['bip01 spine1']
-    Depiction = TDepictionTemplate
+    Depiction = TDepictionDescriptor
     (
         Selector = TInfantryWeaponAccessorySelector
         (
@@ -137,7 +138,7 @@ template TemplateWeaponAccessorySubDepiction
             EnabledValue = <EnabledValue>
         )
         DepictionAlternatives = [
-          TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> ),
+          TDepictionVisual( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> ),
         ]
     )
 )
@@ -173,7 +174,7 @@ template TemplateInfantryDepictionFactoryTactic
     SubDepictions = [],
     Operators,
     Selector
-] is TDepictionTemplate
+] is TDepictionDescriptor
 (
         Scaler = CommonInfantryScaler
         Selector = <Selector>
@@ -186,7 +187,7 @@ template TemplateInfantryDepictionFactoryGhost
 [
     Alternatives,
     Selector
-] is TDepictionTemplate
+] is TDepictionDescriptor
 (
     ResidentMaterialTags = [ MaterialTagGhost ]
     Scaler = CommonInfantryScaler
@@ -200,19 +201,19 @@ template TemplateInfantryDepictionSquad
     SoundOperator
 ] is TTimelyDepictionReceiverFactory
 (
-  DepictionTemplate = TDepictionTemplate
+  DepictionDescriptor = TDepictionDescriptor
   (
     Selector = OnlyHighDepictionSelector
     DepictionAlternatives = [
-      DepictionDescriptor_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien),
+      DepictionVisual_LOD_High(MeshDescriptor = $/GFX/DepictionResources/Rien),
     ]
     Operators = [ <SoundOperator>, DepictionOperator_AlwaysAliveSoundProbe ]
   )
 )
 
-template GhostUnitDepictionTemplate
+template GhostUnitDepictionDesc
 [ Selector, Scaler, Alternatives ]
-is TDepictionTemplate
+is TDepictionDescriptor
 (
     ResidentMaterialTags = [ MaterialTagGhost ]
     Scaler = <Scaler>
@@ -221,25 +222,25 @@ is TDepictionTemplate
     Operators = [ DepictionOperator_Shader_Ghost ]
 )
 
-template GhostVehicleDepictionTemplate
+template GhostVehicleDepictionDesc
 [ Selector, Alternatives ]
-is GhostUnitDepictionTemplate
+is GhostUnitDepictionDesc
 (
     Selector = <Selector>
     Alternatives = <Alternatives>
     Scaler = CommonVehicleScaler
 )
 
-template GhostAerialDepictionTemplate
+template GhostAerialDepictionDesc
 [ Selector, Alternatives ]
-is GhostUnitDepictionTemplate
+is GhostUnitDepictionDesc
 (
     Selector = <Selector>
     Alternatives = <Alternatives>
     Scaler = SpecificFlyingScaler
 )
 
-template TacticVehicleDepictionTemplate
+template TacticVehicleDepictionDesc
 [
     CoatingName,
     Selector,
@@ -251,7 +252,7 @@ template TacticVehicleDepictionTemplate
 ]
 is TTimelyDepictionReceiverFactory
 (
-    DepictionTemplate = TDepictionTemplate
+    DepictionDescriptor = TDepictionDescriptor
     (
         ResidentMaterialTags = [ MaterialTagMech ]
         PossibleCullingSubBBoxes = ['tourelle_01']
@@ -267,7 +268,7 @@ is TTimelyDepictionReceiverFactory
     )
 )
 
-template TacticAerialDepictionTemplate
+template TacticAerialDepictionDesc
 [
     Deviator = nil,
     AdditionalTextures,
@@ -281,7 +282,7 @@ template TacticAerialDepictionTemplate
 ]
 is TTimelyDepictionReceiverFactory
 (
-    DepictionTemplate = TDepictionTemplate
+    DepictionDescriptor = TDepictionDescriptor
     (
         Deviator = <Deviator>
         AdditionalTextures = <AdditionalTextures>
@@ -305,7 +306,7 @@ is TTimelyDepictionReceiverFactory
     )
 )
 
-template ShowroomVehicleDepictionTemplate
+template ShowroomVehicleDepictionDesc
 [
     Alternatives,
     Selector,
@@ -314,7 +315,7 @@ template ShowroomVehicleDepictionTemplate
 ]
 is TTimelyDepictionReceiverFactory
 (
-    DepictionTemplate = TDepictionTemplate
+    DepictionDescriptor = TDepictionDescriptor
     (
         Selector = <Selector>
         Operators = [ DepictionOperator_ShadowPointCloudProvider ]
@@ -324,24 +325,24 @@ is TTimelyDepictionReceiverFactory
     )
 )
 
-template ShowroomDepictionTemplateInternal
+template ShowroomDepictionDescInternal
 [
     MeshDescriptor,
     Operators = [],
     SubDepictions = [],
     SubDepictionGenerators = []
 ]
-is TDepictionTemplate
+is TDepictionDescriptor
 (
     Selector = OnlyHighDepictionSelector
-    DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = <MeshDescriptor> ) ]
+    DepictionAlternatives = [ DepictionVisual_LOD_High( MeshDescriptor = <MeshDescriptor> ) ]
 
     Operators = <Operators>
     SubDepictions = <SubDepictions>
     SubDepictionGenerators = <SubDepictionGenerators>
 )
 
-template ShowroomAerialDepictionTemplate
+template ShowroomAerialDepictionDesc
 [
     MeshDescriptor,
     Operators = [],
@@ -350,7 +351,7 @@ template ShowroomAerialDepictionTemplate
 ]
 is TTimelyDepictionReceiverFactory
 (
-    DepictionTemplate = ShowroomDepictionTemplateInternal
+    DepictionDescriptor = ShowroomDepictionDescInternal
     (
         MeshDescriptor = <MeshDescriptor>
         Operators = <Operators> + [ DepictionOperator_ShadowPointCloudProvider ]
@@ -365,11 +366,11 @@ template ShowroomLandingGear
 ]
 is TSubDepiction
 (
-    Depiction = TDepictionTemplate
+    Depiction = TDepictionDescriptor
     (
         Selector = OnlyHighDepictionSelector
         DepictionAlternatives = [
-            TDepictionDescriptor( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> )
+            TDepictionVisual( SelectorId = [LOD_High] MeshDescriptor = <MeshDescriptor> )
         ]
     )
 )
@@ -377,7 +378,7 @@ is TSubDepiction
 template TransportedInfantryDepiction
 [
     Index,
-] is TDepictionTemplate
+] is TDepictionDescriptor
 (
     Selector = TTransportedInfantrySelector
     (
@@ -390,7 +391,7 @@ template TransportedInfantryDepiction
 
     Operators = [ TCosmeticFreezeSkeletalAnimationOperatorDesc(Animation = $/GFX/DepictionResources/FusilierTransport) ]
 
-    DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = $/GFX/DepictionResources/FuldaSoldier ) ] // pour avoir un 'high' pour le skeleton
+    DepictionAlternatives = [ DepictionVisual_LOD_High( MeshDescriptor = $/GFX/DepictionResources/FuldaSoldier ) ] // pour avoir un 'high' pour le skeleton
 )
 template TransportedInfantrySubGenerator
 [
@@ -430,7 +431,7 @@ is TTowedUnitSubDepictionGenerator
     TowedUnitCatalog = $/DepictionCore/TowedUnitCatalog
 )
 
-template RocketSubDepictionTemplate
+template RocketSubDepictionDesc
 [
     UnitMeshDescriptor,
     RocketMeshDescriptor,
@@ -451,7 +452,7 @@ template RocketSubDepictionTemplate
         [
             TMissileCarriageWeaponInfo
             (
-                Count = <RocketCount>
+                MissileCount = <RocketCount>
                 MissileType = eAGM
                 WeaponIndex = <WeaponIndex>
             ),
@@ -476,7 +477,7 @@ template RocketSubDepictionTemplate
     ReferenceMesh = <UnitMeshDescriptor>
 )
 
-template ShowroomRocketSubDepictionTemplate
+template ShowroomRocketSubDepictionDesc
 [
     UnitMeshDescriptor,
     RocketMeshDescriptor,
@@ -496,7 +497,7 @@ template ShowroomRocketSubDepictionTemplate
         [
             TMissileCarriageWeaponInfo
             (
-                Count = <RocketCount>
+                MissileCount = <RocketCount>
                 MissileType = eAGM
                 WeaponIndex = <WeaponIndex>
             ),

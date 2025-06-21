@@ -8,8 +8,6 @@ PackSignauxModuleDescriptor  is TPackSignauxModuleDescriptor()
 SimpleTypeUnitModuleDescriptor is TTypeUnitModuleDescriptor()
 TargetDataModuleDescriptor is TTargetDataModuleDescriptor()
 
-IfNotCadavreCondition is TModuleSelectorCondition_IsNotCadavre()
-
 BuildingPositionModuleDescriptor is TPositionModuleDescriptor
 (
     InGeoDb                    = True
@@ -38,11 +36,7 @@ MissilePositionModuleDescriptor is TPositionModuleDescriptor
     ClampOutMap                = True
 )
 
-IAStratZoneIndexModuleDescriptor is TModuleSelector
-(
-    Default        = TIAStratZoneIndexModuleDescriptor()
-    Condition      = ~/IfNotCadavreCondition
-)
+IAStratZoneIndexModuleDescriptor is TIAStratZoneIndexModuleDescriptor()
 
 SmokePositionModuleDescriptor is TPositionModuleDescriptor
 (
@@ -171,3 +165,7 @@ DefaultFlagsModuleDescriptor is TFlagsModuleDescriptor
         Flag_LdDetectable,
     ]
 )
+
+LinkToDistrictModuleDescriptor is TLinkToDistrictModuleDescriptor()
+
+SellModuleDescriptor is TSellModuleDescriptor()

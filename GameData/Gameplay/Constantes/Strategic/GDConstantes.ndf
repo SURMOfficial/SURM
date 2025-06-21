@@ -113,8 +113,8 @@ StrategicConstantes is TStrategicTunableConstante
     BattleDeploymentMode = EDeploymentMode/Breakthrough
 
     SteelmanMaxUnitSelection = MAP[
-        (ECoalition/Allied, 1),
-        (ECoalition/Axis, 1)
+        (ECoalition/NATO, 1),
+        (ECoalition/PACT, 1)
     ]
 
     // Le tableau de valeur contient le nombre de ticketPoint disponible en fonction du nombre de pions dans le battle plan, le nombre de cases dans le tableau
@@ -185,7 +185,6 @@ StrategicConstantes is TStrategicTunableConstante
 
     // Ordres
     ActionPointCostPerOrder = MAP [
-        ("Fortify",                 3.0), // Fortify - action de défense
         ("FortifyAntiAir",          4.0), // FortifyAntiAir - action de defense Anti aerienne des unites au sol
         ("Move",                    0.0), // Le cout du move est calculé en fonction de la distance parcourue
     ]

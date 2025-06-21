@@ -34,7 +34,6 @@ export Challenge_Hydra_Defense_Objectif is TMacroActionDescriptor_Defense_Specif
         TGenerationSettingHolder(GenerationType = TGenerationType_BasedOnNumberOfObjectives NumberLaunchBasedOnGenerationType = 1 ConsiderOnlyOwnedObjectives = true ConsiderOnlyAssignedCorridors = true),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 1),
-        TSupportSettingHolder(SettingList = [Renfort_TransportsAbandonnes]),
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [ ~/Pool_Defense_Objectif_Challenge_Hydra]),
         TForcedPlacementSettingHolder(OrderedPrioritaryZoneWeightList = [~/CommandZoneCustomWeighForIAStrat] ForceInAssignedCorridor = true),
     ]

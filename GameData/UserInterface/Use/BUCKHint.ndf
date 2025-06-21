@@ -291,6 +291,8 @@ template HintableAreaBUCKComponent
 
     // hint avec un composant spécifique : les tokens et le composant standards ne seront pas utilisés
     HintSpecificBUCKComponent : TBUCKHintDescriptor = nil,
+
+    TextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,
 ]
 is BUCKHintableAreaDescriptor
 (
@@ -314,4 +316,6 @@ is BUCKHintableAreaDescriptor
 
     HintStandardBUCKComponent = <HintStandardBUCKComponent>
     HintSpecificBUCKComponent = <HintSpecificBUCKComponent>
+
+    TextFormatScript = <TextFormatScript>
 )

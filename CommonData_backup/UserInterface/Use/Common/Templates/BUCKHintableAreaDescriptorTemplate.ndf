@@ -50,6 +50,8 @@ template BUCKHintableAreaDescriptor
     HintTitleToken : string = "",                                       // Titre de l'astuce
     HintBodyToken : string = "",                                        // Corps de l'astuce
     HintExtendedToken : string = "",                                    // Partie qui apparaîtra après une seconde d'affichage de l'astuce
+
+    TextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,
 ]
 is TBUCKHintableAreaDescriptor
 (
@@ -105,4 +107,6 @@ is TBUCKHintableAreaDescriptor
     HintTitleToken = <HintTitleToken>
     HintBodyToken = <HintBodyToken>
     HintExtendedToken = <HintExtendedToken>
+
+    TextFormatScript = <TextFormatScript>
 )

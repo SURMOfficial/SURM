@@ -5,25 +5,13 @@ CapturableModuleDescriptor is TCapturableModuleDescriptor
     RadiusCaptureGRU            =  121 //353
 )
 
-GroupableUnitModuleSelector is TModuleSelector
-(
-    Default        = TGroupableUnitModuleDescriptor()
-    Condition      = ~/IfNotCadavreCondition
-)
+GroupableUnitModuleDescriptor is TGroupableUnitModuleDescriptor()
 
 PlayerMissionModuleDescriptor is TPlayerMissionModuleDescriptor()
 
-TargetCoordinatorModuleSelector is TModuleSelector
-(
-    Default        = TTargetCoordinatorModuleDescriptor()
-    Condition      = ~/IfNotCadavreCondition
-)
+TargetCoordinatorModuleDescriptor is TTargetCoordinatorModuleDescriptor()
 
-TargetManagerModuleSelector is TModuleSelector
-(
-    Default        = TTargetManagerModuleDescriptor()
-    Condition      = ~/IfNotCadavreCondition
-)
+TargetManagerModuleDescriptor is TTargetManagerModuleDescriptor()
 
 BuildingOrderConfigModuleDescriptor is TOrderableModuleDescriptor
 (
@@ -36,74 +24,60 @@ template AirplaneMovementDescriptor
     AltitudeMinGRU,
     SpeedInKmph,
     AgilityRadiusGRU,
-    PitchAngle,
-    RollAngle,
-    RollSpeed,
-    EvacAngle,
+    PitchAngleDegree,
+    RollAngleDegree,
+    RollSpeedDegreePerSecond,
+    EvacAngleDegree,
     EvacToStartingPoint,
-    OrderedAttackStrategies,
-] is TModuleSelector
+    AttackStrategiesDescriptorsSortedByPriority,
+] is TAirplaneMovementModuleDescriptor
 (
-    Default        = TAirplaneMovementModuleDescriptor
-    (
-        AltitudeGRU = <AltitudeGRU>
-        AltitudeMaxGRU = ~/MaxAltitudeGRU
-        AltitudeMinGRU = <AltitudeMinGRU>
-        AltitudeMinForRollGRU = ~/MinAltitudeForRollGRU
-        MinRollSpeedForRoll = ~/MinRollSpeedForRoll
-        SpeedInKmph = <SpeedInKmph>
-        AgilityRadiusGRU = <AgilityRadiusGRU>
-        PitchAngle = <PitchAngle>
-        PitchSpeed = ~/MaxPitchSpeed
-        RollAngle = <RollAngle>
-        RollSpeed = <RollSpeed>
-        EvacAngle = <EvacAngle>
-        EvacToStartingPoint = <EvacToStartingPoint>
-        ElevatorRotationMax = ~/ElevatorRotationMax
-        AileronRotationMax = ~/AileronRotationMax
-        RudderRotationMax = ~/RudderRotationMax
-        OrderedAttackStrategies = <OrderedAttackStrategies>
-    )
-    Condition = ~/IfNotCadavreCondition
+    AltitudeGRU = <AltitudeGRU>
+    AltitudeMaxGRU = ~/MaxAltitudeGRU
+    AltitudeMinGRU = <AltitudeMinGRU>
+    AltitudeMinForRollGRU = ~/MinAltitudeForRollGRU
+    MinRollSpeedDegreePerSecond = ~/MinRollSpeedDegreePerSecond
+    SpeedInKmph = <SpeedInKmph>
+    AgilityRadiusGRU = <AgilityRadiusGRU>
+    PitchAngleDegree = <PitchAngleDegree>
+    PitchSpeedDegreePerSecond = ~/PitchSpeedDegreePerSecond
+    RollAngleDegree = <RollAngleDegree>
+    RollSpeedDegreePerSecond = <RollSpeedDegreePerSecond>
+    EvacAngleDegree = <EvacAngleDegree>
+    EvacToStartingPoint = <EvacToStartingPoint>
+    ElevatorRotationMax = ~/ElevatorRotationMax
+    AileronRotationMax = ~/AileronRotationMax
+    RudderRotationMax = ~/RudderRotationMax
+    AttackStrategiesDescriptorsSortedByPriority = <AttackStrategiesDescriptorsSortedByPriority>
 )
 
 template BuildingApparenceModuleDescriptor
 [
     BlackHoleIdentifier,
     SymbolName,
-] is TModuleSelector
+] is TApparenceModuleDescriptor
 (
-    Default            = TApparenceModuleDescriptor
+    PickableObject                        = True
+    BlackHoleIdentifier = <BlackHoleIdentifier>
+    Depiction = TTimelyModifyLevelBuildReceiverFactory
     (
-        PickableObject                        = True
-        BlackHoleIdentifier = <BlackHoleIdentifier>
-        Depiction = TTimelyModifyLevelBuildReceiverFactory
-        (
-            SymbolName = <SymbolName>
-        )
+        SymbolName = <SymbolName>
     )
-    Condition = ~/IfNotCadavreCondition
 )
 
-DistrictApparenceModuleDescriptor is TModuleSelector
+DistrictApparenceModuleDescriptor is TApparenceModuleDescriptor
 (
-    Default = TApparenceModuleDescriptor
-    (
-        PickableObject = True
-        Depiction = TTimelyModifyLevelBuildReceiverFactory()
-    )
-    Condition = ~/IfNotCadavreCondition
+    PickableObject = True
+    Depiction = TTimelyModifyLevelBuildReceiverFactory()
 )
 
 template InfantryApparenceModuleDescriptor [
     Depiction,
-    SkinWardrobe = nil,
 ] is TApparenceModuleDescriptor
 (
     UseFollowCam = True
     PickableObject = False
     Depiction = <Depiction>
-    SkinWardrobe = <SkinWardrobe>
     ReferenceMesh = $/GFX/DepictionResources/Rien
 )
 
@@ -111,30 +85,20 @@ template VehicleApparenceModuleDescriptor [
     Depiction,
     BlackHoleIdentifier,
     GameplayBBoxBoneName = "",
-    SkinWardrobe = nil,
     ReferenceMesh,
-] is TModuleSelector
+] is TApparenceModuleDescriptor
 (
-    Default = TApparenceModuleDescriptor
-    (
-        UseFollowCam = True
-        PickableObject = True
-        Depiction = <Depiction>
-        ReferenceMesh = <ReferenceMesh>
-        BlackHoleIdentifier = <BlackHoleIdentifier>
-        GameplayBBoxBoneName = <GameplayBBoxBoneName>
-        SkinWardrobe = <SkinWardrobe>
-    )
-    Condition = ~/IfNotCadavreCondition
+    UseFollowCam = True
+    PickableObject = True
+    Depiction = <Depiction>
+    ReferenceMesh = <ReferenceMesh>
+    BlackHoleIdentifier = <BlackHoleIdentifier>
+    GameplayBBoxBoneName = <GameplayBBoxBoneName>
 )
 
 FacingInfosModuleDescriptor is TFacingInfosModuleDescriptor()
 
-HeliApparenceModuleDescriptor is TModuleSelector
-(
-    Default = THeliApparenceModuleDescriptor()
-    Condition = ~/IfNotCadavreCondition
-)
+HeliApparenceModuleDescriptor is THeliApparenceModuleDescriptor()
 
 UnitStateEngineCompanyModuleDescriptor is TStateEngineCompanyModuleDescriptor
 (
@@ -143,37 +107,18 @@ UnitStateEngineModuleDescriptor is TStateEngineUnitModuleDescriptor
 (
 )
 
-template AirplanePositionModuleDescriptor [
-    LowAltitudeFlyingAltitudeGRU
-] is TPositionModuleDescriptor
+AirplanePositionModuleDescriptor is TPositionModuleDescriptor
 (
     InGeoDb                    = True
     ClampInWorld               = False
     ClampOutMap                = True
-    LowAltitudeFlyingAltitudeGRU  = <LowAltitudeFlyingAltitudeGRU>
 )
 
-
-template AirplaneCadavrePositionModuleDescriptor [
-    LowAltitudeFlyingAltitudeGRU
-] is TPositionModuleDescriptor
+AirplaneCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 (
     InGeoDb                    = False
     ClampInWorld               = False
     ClampOutMap                = True
-    LowAltitudeFlyingAltitudeGRU  = <LowAltitudeFlyingAltitudeGRU>
-)
-
-template HelicopterPositionModuleDescriptor [
-    LowAltitudeFlyingAltitudeGRU,
-    NearGroundFlyingAltitudeGRU
-] is TPositionModuleDescriptor
-(
-    InGeoDb                    = True
-    ClampInWorld               = True
-    ClampOutMap                = False
-    LowAltitudeFlyingAltitudeGRU  = <LowAltitudeFlyingAltitudeGRU>
-    NearGroundFlyingAltitudeGRU   = <NearGroundFlyingAltitudeGRU>
 )
 
 
@@ -267,7 +212,6 @@ InflammableModuleDescriptorDistrict  is TInflammableModuleDescriptor
 
 template BuildingCadavreModuleDescriptor [
     CadavreDuration,
-    ModuleDescriptorsToSteal,
 ] is TCadavreModuleDescriptor
 (
     KillAsVehicule = False
@@ -280,7 +224,6 @@ template BuildingCadavreModuleDescriptor [
     CadavreFireDurationMax = ~/CadavrePeriodeEnFeu_Maximum_Batiment
     FadingDuration = 6
     DeathExplosionAmmo = nil
-    ModuleDescriptorsToSteal = <ModuleDescriptorsToSteal>
 )
 
 template UnitCadavreModuleDescriptor [
@@ -290,7 +233,6 @@ template UnitCadavreModuleDescriptor [
     KillAsAirplane : bool = false,
     CadavreDuration,
     DeathExplosionAmmo,
-    ModuleDescriptorsToSteal,
 ] is TCadavreModuleDescriptor
 (
     KillAsVehicule = <KillAsVehicule>
@@ -303,7 +245,6 @@ template UnitCadavreModuleDescriptor [
     CadavreFireDurationMax = ~/CadavrePeriodeEnFeu_Maximum
     FadingDuration = 1
     DeathExplosionAmmo = <DeathExplosionAmmo>
-    ModuleDescriptorsToSteal = <ModuleDescriptorsToSteal>
 )
 
 FOBBuildingModuleDescriptor is TWargameBuildingModuleDescriptor
@@ -341,11 +282,11 @@ ColumnInfantrySquadSlotPositionsModuleDescriptor is TInfantrySquadSlotPositionsM
 BuildingScannerConfigurationDescriptor is TScannerConfigurationDescriptor
 (
     VisionRangesGRU = MAP [
-        ( EVisionUnitType/Standard, 3533.56890459 ),
-        ( EVisionUnitType/HighAltitude, 3533.56890459 ),
+        ( EVisionRange/Standard, 3533.56890459 ),
+        ( EVisionRange/HighAltitude, 3533.56890459 ),
     ]
     OpticalStrengths = MAP [
-        ( EVisionUnitType/LowAltitude, 40.0 ),
-        ( EVisionUnitType/HighAltitude, 40.0 ),
+        ( EOpticalStrength/LowAltitude, 40.0 ),
+        ( EOpticalStrength/HighAltitude, 40.0 ),
     ]
 )

@@ -15,13 +15,13 @@ export Descriptor_Fire_Smoke_Test is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -55,13 +55,13 @@ export Descriptor_Fire_Frag_HEAT_VerySmall is TEntityDescriptor //Copperhead, AG
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -81,7 +81,7 @@ export Descriptor_Fire_Frag_HEAT_VerySmall is TEntityDescriptor //Copperhead, AG
 
     ]
 )
-export Descriptor_Fire_Frag_HEAT_Small is TEntityDescriptor //Copperhead, AGM-114, etc
+export Descriptor_Fire_Frag_HEAT_Small is TEntityDescriptor //ATGMs, RPGs, etc
 (
     World              = WorldIndices_Fires
     DescriptorId       = GUID:{62375175-a8cc-52d7-b1eb-0913cfddf34c}
@@ -95,13 +95,13 @@ export Descriptor_Fire_Frag_HEAT_Small is TEntityDescriptor //Copperhead, AGM-11
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -113,10 +113,10 @@ export Descriptor_Fire_Frag_HEAT_Small is TEntityDescriptor //Copperhead, AGM-11
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
                 RadiusGRU                         = 13
-                AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_small //Ammo_Degats_cluster
+                AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_small //Ammo_Degats_cluster 
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
-                SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDust_small
+                SmokeDescriptor                = nil//$/GFX/Weapon/Descriptor_Smoke_FumiDust_small //the dust cloud prevents sucessive hits unrealistically
             ),
 
     ]
@@ -135,13 +135,13 @@ export Descriptor_Fire_Frag_HEAT_Medium is TEntityDescriptor //Copperhead, AGM-1
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -175,13 +175,13 @@ export Descriptor_Fire_tank_wreck is TEntityDescriptor //wrecks block LOS and pr
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -215,13 +215,13 @@ export Descriptor_Fire_Frag_HEAT_Large is TEntityDescriptor //Maverick
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -255,13 +255,13 @@ export Descriptor_Fire_Direct_hit_Arty is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -295,13 +295,13 @@ export Descriptor_Fire_Direct_hit_HeavyMortar is TEntityDescriptor //only using 
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -335,13 +335,13 @@ export Descriptor_Fire_Direct_hit_AerialRocket_127 is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -375,13 +375,13 @@ export Descriptor_Fire_Direct_hit_AerialRocket_80 is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -415,13 +415,13 @@ export Descriptor_Fire_Direct_hit_AerialRocket_70 is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -455,13 +455,13 @@ export Descriptor_Fire_Direct_hit_500lb is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -495,13 +495,13 @@ export Descriptor_Fire_Direct_hit_1000lb is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -535,13 +535,13 @@ export Descriptor_Fire_Direct_hit_2000lb is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -575,13 +575,13 @@ export Descriptor_Fire_Direct_hit_MICLIC is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -615,13 +615,13 @@ export Descriptor_Fire_Direct_hit_3000lb is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -655,13 +655,13 @@ export Descriptor_Fire_Cluster_Test is TEntityDescriptor
             TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                      Radius               = 1
                      FX                   = $/GFX/GameFx/fx_binder_fire
                      Density              = 1
-                )
-                DefaultVisibility  = True
+            ))
+            DefaultVisibility  = True
             ),
 
         // Fire
@@ -694,12 +694,12 @@ export Descriptor_Fire_Incendie is TEntityDescriptor
         TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 27 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -730,12 +730,12 @@ export Descriptor_Fire_Dust is TEntityDescriptor //smaller weapons
         ~/LinkTeamModuleDescriptor,
         TApparenceModuleDescriptor
         (
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 15 * 26
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -765,12 +765,12 @@ export Descriptor_Fire_Bomb_Dust is TEntityDescriptor
         ~/LinkTeamModuleDescriptor,
         TApparenceModuleDescriptor
         (
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 15 * 26
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -800,12 +800,12 @@ export Descriptor_Fire_Crater_arty is TEntityDescriptor
         ~/LinkTeamModuleDescriptor,
         TApparenceModuleDescriptor
         (
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 15 * 26
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -835,12 +835,12 @@ export Descriptor_Fire_Crater_med is TEntityDescriptor
         ~/LinkTeamModuleDescriptor,
         TApparenceModuleDescriptor
         (
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 15 * 26
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -870,12 +870,12 @@ export Descriptor_Fire_Crater_large is TEntityDescriptor
         ~/LinkTeamModuleDescriptor,
         TApparenceModuleDescriptor
         (
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 15 * 26
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -906,12 +906,12 @@ export Descriptor_Fire_Napalm is TEntityDescriptor
         TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 177 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -943,12 +943,12 @@ export Descriptor_Fire_NapalmCluster is TEntityDescriptor
         TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 75 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -979,12 +979,12 @@ export Descriptor_Fire_NapalmCluster_petit is TEntityDescriptor
         TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 7 * 26
                  FX                   = $/GFX/GameFx/fx_binder_fire
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -1015,12 +1015,12 @@ export Descriptor_Fire_NapalmLeger is TEntityDescriptor
         TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 53 * 26 * 2.83
                  FX                   = $/GFX/GameFx/fx_binder_fire_Napalm_Leger
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -1052,12 +1052,12 @@ export Descriptor_Fire_NapalmLourd is TEntityDescriptor
         TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 64 * MeterCorr * 26
                  FX                   = $/GFX/GameFx/fx_binder_fire_Napalm_Lourd
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor
@@ -1089,12 +1089,12 @@ export Descriptor_Fire_NapalmMoyen is TEntityDescriptor
         TApparenceModuleDescriptor
         (
             ReferenceMesh  = $/GFX/DepictionResources/Rien
-            Depiction  = Template_DescriptorFire_Depiction
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
             (
                  Radius               = 55 * MeterCorr * 26
                  FX                   = $/GFX/GameFx/fx_binder_fire_Napalm_Moyen
                  Density              = 1
-            )
+            ))
             DefaultVisibility  = True
         ),
         TFireModuleDescriptor

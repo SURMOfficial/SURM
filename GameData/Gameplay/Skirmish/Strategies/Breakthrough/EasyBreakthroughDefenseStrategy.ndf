@@ -5,7 +5,6 @@ export EasyBreakthroughDefenseStrategy is TIAGeneralStrategy
 (
     StrategyName = "IziBTDefAI"
     FirstGenerator = EasyBTDef_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         EasyBTDef_Transition_StartToDeploy,
@@ -55,24 +54,20 @@ export EasyBTDef_Transition_DeployToCommand is TIAGeneralStrategyTransition
 export EasyBTDef_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish_WithAllied_OnePerCorridor,
     ]
 )
 //-------------------------------------------------------------------------
 export EasyBTDef_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
 
         // Capture de zones
         ~/CaptureAllZoneObjectif,
 
-        ~/Support_Transports,
 
         ~/FOB_Skirmish,
 
@@ -105,13 +100,11 @@ export EasyBTDef_Deploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export EasyBTDef_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
         // Capture de zones
         ~/CaptureAllZoneObjectif,
 
-        ~/Support_Transports,
 
         ~/Defense_Static_ATGM_BKT,
         ~/Defense_Static_ATGM_Reco_BKT,

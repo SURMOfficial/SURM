@@ -5,7 +5,6 @@ export ChallengeGenericAttackStrategy is TIAGeneralStrategy
 (
     StrategyName = "ChalAtkAI"
     FirstGenerator = ChalAttackGeneric_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         ChalAttackGeneric_Transition_StartToPhaseCommand,
@@ -55,20 +54,16 @@ export ChalAttackGeneric_Transition_DeployToCommandPhase is TIAGeneralStrategyTr
 export ChalAttackGeneric_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
     ]
 )
 //-------------------------------------------------------------------------
 export ChalAttackGeneric_Phase_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
 
         ~/CaptureOneObjectif, //Dependant du deck estimation 125
@@ -100,10 +95,8 @@ export ChalAttackGeneric_Phase_Deploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export ChalAttackGeneric_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
 
         ~/CaptureOneObjectif, //Dependant du deck estimation 125

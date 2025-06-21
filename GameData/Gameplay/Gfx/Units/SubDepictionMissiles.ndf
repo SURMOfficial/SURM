@@ -54,13 +54,13 @@ template TemplateDepictionMissile
     Selector,
     ProjectileModelResource,
 ]
-is TDepictionTemplate
+is TDepictionDescriptor
 (
     ResidentMaterialTags = [ MaterialTagMech ]
     AdditionalTextures = $/M3D/Shader/VehicleDestTextures
     Selector = <Selector>
     DepictionAlternatives = [
-        TDepictionDescriptor(
+        TDepictionVisual(
             SelectorId = [LOD_High]
             MeshDescriptor = <ProjectileModelResource>
             ),
@@ -118,11 +118,11 @@ template TemplateDepictionMissileShowroom
 [
     ProjectileModelResource
 ]
-is TDepictionTemplate
+is TDepictionDescriptor
 (
     Selector = OnlyHighDepictionSelector
     DepictionAlternatives = [
-        TDepictionDescriptor(
+        TDepictionVisual(
             SelectorId = [LOD_High]
             MeshDescriptor = <ProjectileModelResource>
             )

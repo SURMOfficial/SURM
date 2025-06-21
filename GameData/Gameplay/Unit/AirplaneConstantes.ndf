@@ -1,8 +1,8 @@
 // Autres paramètres avions : DEMANDER AUX DEVS AVANT DE MODIFIER //
-MaxPitchSpeed is 30 // degrés/seconde
+PitchSpeedDegreePerSecond is 30
 MaxAltitudeGRU is 3534
 MinAltitudeForRollGRU is 242//707
-MinRollSpeedForRoll is 65 // degrés/seconde
+MinRollSpeedDegreePerSecond is 65
 
 //Paramètrage visuels des avions
 ElevatorRotationMax is 18
@@ -11,33 +11,12 @@ RudderRotationMax is 20
 
 BombAttackStrategyDescriptor is TBombAttackStrategyDescriptor()
 
-DiveAttackStrategyDescriptor is TDiveAttackStrategyDescriptor
-(
-    MinPitchForDiveInDegree = 5 // Pitch minimal autorisé pour un Dive
-    MaxPitchForDiveInDegree = 65 // Pitch maximal autorisé pour un Dive
-    MinDiveAlignmentDuration = 0.5 // Durée minimale d'alignement lors d'un Dive, en secondes
-)
+DiveAttackStrategyDescriptor is TDiveAttackStrategyDescriptor()
 
-DiveMissileAttackStrategyDescriptor is TDiveMissileAttackStrategyDescriptor
-(
-    MinPitchForDiveInDegree = 5 // Pitch minimal autorisé pour un Dive
-    MaxPitchForDiveInDegree = 65 // Pitch maximal autorisé pour un Dive
-    MinDiveAlignmentDuration = 0.5 // Durée minimale d'alignement lors d'un Dive, en secondes
-)
+DiveMissileAttackStrategyDescriptor is TDiveMissileAttackStrategyDescriptor()
 
 DiveBombAttackStrategyDescriptor is TDiveBombAttackStrategyDescriptor
 (
-    MinPitchForDiveBombInDegree = 10 // Pitch minimal autorisé pour un DiveBomb
-    PitchForDiveBombInDegree = 45 // Pitch à essayer d'atteindre pour un DiveBomb
-    MaxPitchForDiveBombInDegree = 65  // Pitch maximal autorisé pour un DiveBomb
-    DiveBombRecoveryDuration = 10 // Temps en secondes pendant lequel l'avion vol à basse altitude après avoir largué ses bombes
-)
-
-LAHDDiveBombAttackStrategyDescriptor is TDiveBombAttackStrategyDescriptor
-(
-    MinPitchForDiveBombInDegree = 10  // Pitch minimal autorisé pour un DiveBomb
-    PitchForDiveBombInDegree = 23 // Pitch à essayer d'atteindre pour un DiveBomb
-    MaxPitchForDiveBombInDegree = 30 // Pitch maximal autorisé pour un DiveBomb
     DiveBombRecoveryDuration = 10 // Temps en secondes pendant lequel l'avion vol à basse altitude après avoir largué ses bombes
 )
 

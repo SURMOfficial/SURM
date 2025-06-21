@@ -3,19 +3,19 @@
 //----------------------------------------------------------------------------------------------------------------------------------------
 //Ci-dessous, declaration des meshes de pylones qui sont sur les avions et helicos.
 //C'est sur ces meshes que sont ensuite attaches les MISSILES et BOMBES.
-template PylonDepictionCommon [ ModelResource ] is TDepictionTemplate
+template PylonDepictionCommon [ ModelResource ] is TDepictionDescriptor
 (
     Selector = SpecificPylonDepictionSelector
-    DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = <ModelResource> ) ]
+    DepictionAlternatives = [ DepictionVisual_LOD_High( MeshDescriptor = <ModelResource> ) ]
 )
 
-template PylonDepictionShowroom [ ModelResource ] is TDepictionTemplate
+template PylonDepictionShowroom [ ModelResource ] is TDepictionDescriptor
 (
     Selector = OnlyHighDepictionSelector
-    DepictionAlternatives = [ DepictionDescriptor_LOD_High( MeshDescriptor = <ModelResource> ) ]
+    DepictionAlternatives = [ DepictionVisual_LOD_High( MeshDescriptor = <ModelResource> ) ]
 )
 
-PylonSet_DefaultMissileVehicle is TDepictionPylonSet
+PylonSet_DefaultMissileVehicle is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/ModelPylon1 ),
@@ -28,7 +28,7 @@ PylonSet_DefaultMissileVehicle is TDepictionPylonSet
     ]
 )
 
-PylonSet_DefaultMissileAirplane is TDepictionPylonSet
+PylonSet_DefaultMissileAirplane is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/ModelPylon1 ),
@@ -41,7 +41,7 @@ PylonSet_DefaultMissileAirplane is TDepictionPylonSet
     ]
 )
 
-PylonSet_DefaultMissileHelico is TDepictionPylonSet
+PylonSet_DefaultMissileHelico is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/ModelPylon1 ),
@@ -55,7 +55,7 @@ PylonSet_DefaultMissileHelico is TDepictionPylonSet
 )
 
 //Ci-dessous, declaration des meshes de pylones de ROQUETTES qui sont sur les avions et helicos.
-PylonSet_DefaultPodVehicle is TDepictionPylonSet
+PylonSet_DefaultPodVehicle is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodModelPylon4 ),
@@ -64,7 +64,7 @@ PylonSet_DefaultPodVehicle is TDepictionPylonSet
     ]
 )
 
-PylonSet_DefaultPodAirplane is TDepictionPylonSet
+PylonSet_DefaultPodAirplane is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodModelPylon4 ),
@@ -74,7 +74,7 @@ PylonSet_DefaultPodAirplane is TDepictionPylonSet
     ]
 )
 
-PylonSet_DefaultPodHelico is TDepictionPylonSet
+PylonSet_DefaultPodHelico is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodModelPylon4 ),
@@ -83,7 +83,7 @@ PylonSet_DefaultPodHelico is TDepictionPylonSet
     ]
 )
 
-PylonSet_DefaultMissileShowroom is TDepictionPylonSet
+PylonSet_DefaultMissileShowroom is TPylonSet
 (
     Pylons = [
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/ModelPylon1 ),
@@ -96,7 +96,7 @@ PylonSet_DefaultMissileShowroom is TDepictionPylonSet
     ]
 )
 
-PylonSet_DefaultPodShowroom is TDepictionPylonSet
+PylonSet_DefaultPodShowroom is TPylonSet
 (
     Pylons = [
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodModelPylon4 ),
@@ -142,7 +142,7 @@ DepictionPylonSet_Helico_Default is TMultiPylonSet
 //----------------------------------------------------------------------------------------------------------------------------------------
 
 //Ci-dessous, declaration des meshes de pylones de ROQUETTES qui sont sur les avions et helicos SOV
-PylonSet_SOVPodHelico is TDepictionPylonSet
+PylonSet_SOVPodHelico is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_5  ),
@@ -154,7 +154,7 @@ PylonSet_SOVPodHelico is TDepictionPylonSet
     ]
 )
 
-PylonSet_SOVPodAirplane is TDepictionPylonSet
+PylonSet_SOVPodAirplane is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_5 ),
@@ -166,7 +166,7 @@ PylonSet_SOVPodAirplane is TDepictionPylonSet
     ]
 )
 
-PylonSet_SOVPodAirplaneShowroom is TDepictionPylonSet
+PylonSet_SOVPodAirplaneShowroom is TPylonSet
 (
     Pylons = [
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_5 ),
@@ -178,7 +178,7 @@ PylonSet_SOVPodAirplaneShowroom is TDepictionPylonSet
     ]
 )
 
-PylonSet_SOVPodHelicoShowroom is TDepictionPylonSet
+PylonSet_SOVPodHelicoShowroom is TPylonSet
 (
     Pylons = [
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_5 ),
@@ -190,12 +190,12 @@ PylonSet_SOVPodHelicoShowroom is TDepictionPylonSet
     ]
 )
 
-template PylonSet_PodAirplane [ ModelResource ] is TDepictionPylonSet
+template PylonSet_PodAirplane [ ModelResource ] is TPylonSet
 (
     Pylons = [ PylonDepictionCommon( ModelResource = <ModelResource> ) ]
 )
 
-template PylonSet_PodAirplaneShowroom [ ModelResource ] is TDepictionPylonSet
+template PylonSet_PodAirplaneShowroom [ ModelResource ] is TPylonSet
 (
     Pylons = [ PylonDepictionShowroom( ModelResource = <ModelResource> ) ]
 )
@@ -260,7 +260,7 @@ DepictionPylonSet_Airplane_FR_Showroom is TMultiPylonSet
     BombPylonSet = PylonSet_DefaultMissileShowroom
 )
 
-PylonSet_FRPodAirplane is TDepictionPylonSet
+PylonSet_FRPodAirplane is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodFRModelPylon_4 ),
@@ -268,7 +268,7 @@ PylonSet_FRPodAirplane is TDepictionPylonSet
     ]
 )
 
-PylonSet_FRPodAirplaneShowroom is TDepictionPylonSet
+PylonSet_FRPodAirplaneShowroom is TPylonSet
 (
     Pylons = [
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodFRModelPylon_4 ),
@@ -298,7 +298,7 @@ DepictionPylonSet_Airplane_US_Showroom is DepictionPylonSet_Airplane_Common_Show
 
 template DepictionPylonSet_ATGM_Template [ Pylon ] is TMultiPylonSet
 (
-    DefaultPylonSet = TDepictionPylonSet( Pylons = [ <Pylon> ] )
+    DefaultPylonSet = TPylonSet( Pylons = [ <Pylon> ] )
 )
 
 DepictionPylonSet_ATGM_Showroom is DepictionPylonSet_ATGM_Template

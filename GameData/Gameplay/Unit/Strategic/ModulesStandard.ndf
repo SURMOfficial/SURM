@@ -49,12 +49,12 @@ PawnAirplaneOrderConfigModuleDescriptor is TOrderConfigModuleDescriptor()
 PawnAirportScannerConfigurationDescriptor is TScannerConfigurationDescriptor
 (
     VisionRangesGRU = MAP [
-        ( EVisionUnitType/Standard, 121 ),//353.356890459 
-        ( EVisionUnitType/HighAltitude, 242 ),//706.713780919
+        ( EVisionRange/Standard, 121 ),//353.356890459 
+        ( EVisionRange/HighAltitude, 242 ),//706.713780919
     ]
     OpticalStrengths = MAP [
-        ( EVisionUnitType/Standard, 120.0 ),
-        ( EVisionUnitType/LowAltitude, 120.0 ),
-        ( EVisionUnitType/HighAltitude, 60.0 ),
+        ( EOpticalStrength/Standard, 120.0 ),
+        ( EOpticalStrength/LowAltitude, 120.0 ),
+        ( EOpticalStrength/HighAltitude, 60.0 ),
     ]
 )

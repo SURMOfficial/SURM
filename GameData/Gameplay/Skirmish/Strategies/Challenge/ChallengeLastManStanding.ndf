@@ -5,7 +5,6 @@ export ChallengeTheDieburgSalientStrategy is TIAGeneralStrategy
 (
     StrategyName = "ChalLMSAI"
     FirstGenerator = ChalTheDieburgSalient_Choose_Strategy
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         ChalTheDieburgSalient_Transition_StartToPhaseCommand,
@@ -55,20 +54,16 @@ export ChalTheDieburgSalient_Transition_DeployToCommandPhase is TIAGeneralStrate
 export ChalTheDieburgSalient_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
     ]
 )
 //-------------------------------------------------------------------------
 export ChalTheDieburgSalient_Phase_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
 
         ~/Challenge_CaptureOneObjectif_LowCost, //Dependant du deck estimation 125
@@ -93,10 +88,8 @@ export ChalTheDieburgSalient_Phase_Deploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export ChalTheDieburgSalient_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
 
         ~/Challenge_CaptureOneObjectif_LowCost, //Dependant du deck estimation 125

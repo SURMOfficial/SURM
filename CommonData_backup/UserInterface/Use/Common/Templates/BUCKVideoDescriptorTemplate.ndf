@@ -36,7 +36,7 @@ template BUCKVideoDescriptor
     Components : LIST<TBUCKContainerDescriptor> = [],
     // -- BUCKContainerDescriptor
 
-    Video : TUIResourceVideo = nil,                                                               // La vidéo
+    Video : TResourceVideo = nil,                                                                 // La vidéo
     VideoDrawer : TUIVideoDrawer = $/UserInterface/UIVideoDrawer,                                 // Le drawer vidéo
     VideoFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] ), // Taille de la vidéo
 

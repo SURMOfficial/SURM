@@ -51,10 +51,8 @@ export TestAuto_Supply_Transition_DeployToCommandPhase is TIAGeneralStrategyTran
 export TestAuto_Supply_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
     ]
 )
@@ -64,7 +62,6 @@ export TestAuto_Supply_Choose_Strategy is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export TestAuto_Supply_Phase_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
         ~/FOB_Skirmish,
@@ -77,7 +74,6 @@ export TestAuto_Supply_Phase_Deploiement is TSequenceGeneratorDescriptor
 //-------------------------------------------------------------------------
 export TestAuto_Supply_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
         ~/Supply_TestAutoOnly,

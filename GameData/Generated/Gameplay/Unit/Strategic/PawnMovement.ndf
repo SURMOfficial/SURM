@@ -17,6 +17,14 @@ export StrategicMovementDescriptor_helico is TStrategicMovementModuleDescriptor
     RoadAPConsumptionModifier = 1.0 * 2.92
     ConsumeAPOnMove = True
 )
+export StrategicMovementDescriptor_helico_inf is TStrategicMovementModuleDescriptor
+(
+    MaxSpeed = 177.0
+    NormalTerrainAPConsumptionModifier = 1.5 * 2.92
+    SpeedReducerTerrainAPConsumptionModifier = 1.5 * 2.92
+    RoadAPConsumptionModifier = 1.5 * 2.92
+    ConsumeAPOnMove = True
+)
 export StrategicMovementDescriptor_howitzer is TStrategicMovementModuleDescriptor
 (
     MaxSpeed = 424.0
@@ -30,6 +38,14 @@ export StrategicMovementDescriptor_mecanized is TStrategicMovementModuleDescript
     MaxSpeed = 177.0
     NormalTerrainAPConsumptionModifier = 2.0 * 2.92
     SpeedReducerTerrainAPConsumptionModifier = 4.0 * 2.92
+    RoadAPConsumptionModifier = 1.0 * 2.92
+    ConsumeAPOnMove = True
+)
+export StrategicMovementDescriptor_montagne is TStrategicMovementModuleDescriptor
+(
+    MaxSpeed = 177.0
+    NormalTerrainAPConsumptionModifier = 2.0 * 2.92
+    SpeedReducerTerrainAPConsumptionModifier = 2.0 * 2.92
     RoadAPConsumptionModifier = 1.0 * 2.92
     ConsumeAPOnMove = True
 )

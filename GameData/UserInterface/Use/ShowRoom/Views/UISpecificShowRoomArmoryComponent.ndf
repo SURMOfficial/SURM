@@ -395,93 +395,6 @@ ArmoryDivisionFilterButtonDescriptor is BUCKButtonDescriptor
     ]
 )
 
-// -------------------------------------------------------------------------------------------------
-// UISpecificSkinRackView
-// -------------------------------------------------------------------------------------------------
-
-UISpecificSkinRackView is TUISpecificSkinRackViewDescriptor
-(
-    MainComponentDescriptor = BUCKRackDescriptor
-    (
-        ElementName = "UnitSkinButtonRack"
-
-        Axis = ~/ListAxis/Horizontal
-        ComponentFrame = TUIFramePropertyRTTI
-        (
-            RelativeWidthHeight = [0.0, 0.5]
-        )
-
-        InterItemMargin = TRTTILength(Pixel = 2.0)
-
-        BladeDescriptor = ~/UnitSkinButton
-    )
-)
-
-// -------------------------------------------------------------------------------------------------
-// UnitSkinButton
-// -------------------------------------------------------------------------------------------------
-
-private UnitSkinButtonMagnifiableWidth is 29.0
-private UnitSkinButtonMagnifiableWithBorderWidth is 32.0
-private UnitSkinButtonMagnifiableBorderWidth is 3.0
-
-// Button for Skin Unit Icon
-UnitSkinButton is BUCKButtonDescriptor
-(
-    ElementName = "UnitSkinButton"
-
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [~/UnitSkinButtonMagnifiableWithBorderWidth, 0.0]
-        RelativeWidthHeight = [0.0, 1.0]
-    )
-
-    IsTogglable = true
-    CannotDeselect = true
-    HidePointerEvents = false
-
-    HasBorder = true
-    BorderLineColorToken = "SkinRack/Border"
-    BorderThicknessToken = "2"
-
-    Components =
-    [
-        ~/UnitSkinButtonBigBorder,
-
-        BUCKTextureDescriptor
-        (
-            ElementName = "UnitSkinIcon"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [0.0, 1.0]
-                MagnifiableWidthHeight = [UnitSkinButtonMagnifiableWidth, 0.0]
-                PixelOffset = [UnitSkinButtonMagnifiableBorderWidth, 0.0]
-            )
-
-            TextureFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-            )
-        ),
-    ]
-)
-
-//-------------------------------------------------------------------------------------
-
-UnitSkinButtonBigBorder is BUCKContainerDescriptor
-(
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [0.0, 1.0]
-        PixelWidthHeight = [~/UnitSkinButtonMagnifiableBorderWidth, 0.0]
-        AlignementToAnchor = [0.0, 0.5]
-        AlignementToFather = [0.0, 0.5]
-    )
-
-    HasBackground = true
-    BackgroundBlockColorToken = "ButtonHUD/Main"
-)
-
 //-------------------------------------------------------------------------------------
 // affichage des pays & catégories d'unités
 
@@ -862,6 +775,7 @@ DisplayNewFilterBar is BUCKListDescriptor
                     TextDico = ~/LocalisationConstantes/dico_interface_ingame
                     BorderLineColorToken = "AmroryFiltreTxt"
                     BackgroundBlockColorToken = "AmroryCheckBoxBkg"
+                    TextureIconeColorToken = 'Blanc'
                 )
             )
         ),
@@ -985,76 +899,64 @@ UnitGridNameFilter is BUCKSpecificEditableTextDescriptor
 
 //-------------------------------------------------------------------------------------
 
-ArmoryUnitListContainer is BUCKContainerDescriptor
+ArmoryUnitListContainer is BUCKSpecificScrollingContainerDescriptor
 (
-    ElementName = 'ArmoryUnitListContainer'
+    ElementName = "UnitDivisionScrollingContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [700.0, 805.0]
+        MagnifiableWidthHeight = [770.0, 785.0]
+    )
+
+    ExternalScrollbar = true
+    ScrollStepSize = [0.0, 60.0]
+    HasVerticalScrollbar = true
+    ScrollBarBackgroundToken = "AmroryButtonTxt"
+    ScrollBarElevatorBackgroundToken = "AmroryButtonBkg"
+    VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [10.0, 0.0]
+        MagnifiableOffset = [5.0, 0.0]
     )
 
     Components =
     [
-        BUCKSpecificScrollingContainerDescriptor
+        BUCKRackDescriptor
         (
-            ElementName = "UnitDivisionScrollingContainer"
+            ElementName = "UnitDivisionGrid"
+
             ComponentFrame = TUIFramePropertyRTTI
             (
-                RelativeWidthHeight = [1.0, 1.0]
+                RelativeWidthHeight = [1.0, 0.0]
             )
 
-            ExternalScrollbar = true
-            ScrollStepSize = [0.0, 60.0]
-            HasVerticalScrollbar = true
-            ScrollBarBackgroundToken = "AmroryButtonTxt"
-            ScrollBarElevatorBackgroundToken = "AmroryButtonBkg"
-            VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
+            Axis = ~/ListAxis/Vertical
+            InterItemMargin = TRTTILength( Magnifiable = 1.0 )
+
+            BladeDescriptor = BUCKContainerDescriptor
             (
-                MagnifiableWidthHeight = [10.0, 0.0]
-                MagnifiableOffset = [5.0, 0.0]
-            )
-
-            Components =
-            [
-                BUCKRackDescriptor
+                ComponentFrame = TUIFramePropertyRTTI
                 (
-                    ElementName = "UnitDivisionGrid"
+                    RelativeWidthHeight = [1.0, 0.0]
+                    MagnifiableWidthHeight = [0.0, 90.0]
+                )
 
-                    ComponentFrame = TUIFramePropertyRTTI
+                Components =
+                [
+                    BUCKGridDescriptor
                     (
-                        RelativeWidthHeight = [1.0, 0.0]
+                        ElementName = "PackList"
+
+                        ComponentFrame = TUIFramePropertyRTTI()
+                        FirstElementMargin = TRTTILength2( Magnifiable = [15.0, 0.0] )
+                        InterElementMargin = TRTTILength2( Magnifiable = [1.0, 1.0] )
+                        LastElementMargin = TRTTILength2( Magnifiable = [25.0, 0.0] )
+
+                        MaxElementsPerDimension = [~/MaxUnitByLineInUnitDivisionGridArmory, 0]
+
+                        // envoie UnitPackDescriptor
                     )
-
-                    Axis = ~/ListAxis/Vertical
-                    InterItemMargin = TRTTILength( Magnifiable = 1.0 )
-
-                    BladeDescriptor = BUCKContainerDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [1.0, 0.0]
-                            MagnifiableWidthHeight = [0.0, 90.0]
-                        )
-
-                        Components =
-                        [
-                            BUCKGridDescriptor
-                            (
-                                ElementName = "PackList"
-
-                                ComponentFrame = TUIFramePropertyRTTI()
-                                FirstElementMargin = TRTTILength2( Magnifiable = [15.0, 0.0] )
-                                InterElementMargin = TRTTILength2( Magnifiable = [1.0, 1.0] )
-                                LastElementMargin = TRTTILength2( Magnifiable = [25.0, 0.0] )
-
-                                MaxElementsPerDimension = [~/MaxUnitByLineInUnitDivisionGridArmory, 0]
-
-                                // envoie UnitPackDescriptor
-                            )
-                        ]
-                    )
-                ),
-            ]
+                ]
+            )
         ),
     ]
 )
@@ -1347,11 +1249,10 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
 
     DeckUnitButtonDummyDescriptor = UnitDeckListDummyButton()
 
-    SkinRackComponentDescriptor = ~/UISpecificSkinRackView
-
     UnitPackComponentDescriptor = UnitButtonPackDescriptor
     (
         RadioButtonManager = ~/ArmoryUnitButtonRadioManager
+        ShowXPButtons = true
     )
 
     DivisionFilterTag = ~/DefaultDivisionFilterTag
@@ -1361,15 +1262,15 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
 
     FactoryDisplayOrder =
     [
-        EDefaultFactories/UniversalFactory,
-        EDefaultFactories/Logistic,
-        EDefaultFactories/Infantry,
-        EDefaultFactories/Art,
-        EDefaultFactories/Tanks,
-        EDefaultFactories/Recons,
-        EDefaultFactories/DCA,
-        EDefaultFactories/Helis,
-        EDefaultFactories/Planes,
+        EFactory/UniversalFactory,
+        EFactory/Logistic,
+        EFactory/Infantry,
+        EFactory/Art,
+        EFactory/Tanks,
+        EFactory/Recons,
+        EFactory/DCA,
+        EFactory/Helis,
+        EFactory/Planes,
     ]
 
     UnarmedTraitToken = "Unarmed"
@@ -1389,8 +1290,8 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
             MovementToken = "FILT_WHE"
             MovementTypes =
             [
-                EUnitMovingType/AllTerrainWheel,
-                EUnitMovingType/AllTerrainWheelAmphibious,
+                EUnitMovingType/Wheel,
+                EUnitMovingType/WheelAmphibious,
             ]
         ),
         TMovementTypeAndLocalisation

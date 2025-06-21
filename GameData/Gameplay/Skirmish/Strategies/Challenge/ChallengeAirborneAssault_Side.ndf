@@ -9,7 +9,6 @@ export ChallengeAirborneAssault_Side is TIAGeneralStrategy
     StrategyName = "AirSideAI"
     FirstGenerator = ChalAttackGeneric_Choose_Strategy
     AuthorizedCorridorList = [0]
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         ChalAttackGeneric_Transition_StartToPhaseCommand,

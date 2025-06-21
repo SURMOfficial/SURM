@@ -20,10 +20,10 @@ export Strategic_TeamUnitDescriptor is TEntityDescriptor
         ),
         TFactoryModuleDescriptor
         (
-            Factories = [
-                TVirtualFactoryDescriptor
+            ProductionQueues = [
+                TProductionQueueDescriptor
                 (
-                    FactoryType = EDefaultFactories/UniversalFactory
+                    FactoryType = EFactory/UniversalFactory
                     IsSimultaneous = False
                 ),
             ]

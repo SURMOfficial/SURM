@@ -19,7 +19,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     CanRequestTransportProduction = false
     CanSelectTransportUnits = false
     ForceSelectCurrentTransporter = true
-    NbMacroActionAllowedToProduceSimultaneous = 3
     RayonDOccupationDansLaGeoDbProdution_ValeurMinGRU = 6//18
     RayonDOccupationDansLaGeoDbProdution_ValeurMaxGRU = 12//35
     ForbiddenTagsByMission = MAP
@@ -27,7 +26,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
         (EMacroActionMissionType/Attack, ['Avion', 'InfmapCommander']),
         (EMacroActionMissionType/Defense, ['Avion', 'InfmapCommander']),
         (EMacroActionMissionType/Reco, ['InfmapCommander']),
-        (EMacroActionMissionType/Support, ['InfmapCommander']),
         (EMacroActionMissionType/Supply, ['InfmapCommander']),
         (EMacroActionMissionType/AirStrike, ['InfmapCommander']),
         (EMacroActionMissionType/AirReco, ['InfmapCommander']),
@@ -107,8 +105,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
         (EDefensePointType/HardCover, ["Infanterie", "Canon_AT", "ChasseurDeChar", "Canon_AA", "Char", "Infanterie_Reco", "Vehicule_Reco", "InfmapCommander"]),
         (EDefensePointType/All, ["InfmapCommander"]),
     ]
-
-    MaxDistanceForNearCoverDefensePoint = 2.0
 
     // Bonus appliqués aux points de défense par défaut
     // Surchargeable par tag et par mission
@@ -426,7 +422,7 @@ MapSlicingConstantes is TMapSlicingConstantes
     NbPositionsPerPolygon = 9
     MaxNbUnitsPerPolygon = 8
 
-    WaypointsInLightCoverTerrainTypes = [~/ETerrainType/ForetLegere]
+    ForestTerrainTypes = [~/ETerrainType/ForetLegere]
 )
 
 //--------------------------------------------------------------------------------------//

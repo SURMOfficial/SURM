@@ -5,7 +5,6 @@ export AutoDeployStrategy is TIAGeneralStrategy
 (
     StrategyName = "AutoDepAI"
     FirstGenerator = AutoDeploy_DoNothing
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     DoNotCancelProduction = true
     TransitionList =
     [
@@ -50,7 +49,6 @@ export AutoDeploy_Transition_DeployToDoNothing is TIAGeneralStrategyTransition
 export AutoDeploy_DoNothing is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
     ]

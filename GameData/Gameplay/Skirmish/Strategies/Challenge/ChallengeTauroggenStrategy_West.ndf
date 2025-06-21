@@ -6,7 +6,6 @@ export ChallengeTauroggenStrategy_West is TIAGeneralStrategy
     StrategyName = "TaurWestAI"
     FirstGenerator = ChalTauroWest_Choose_Strategy
     AuthorizedCorridorList = [0]
-    AllowToByPassNbMacroActionAllowedToProduceSimultaneous = true
     TransitionList =
     [
         ChalTauroWest_Transition_StartToPhaseCommand,
@@ -56,30 +55,24 @@ export ChalTauroWest_Transition_DeployToCommandPhase is TIAGeneralStrategyTransi
 export ChalTauroWest_Choose_Strategy is TSequenceGeneratorDescriptor
 (
     // Fake phase qui permet juste d'orienter la strategie dans la direction voulue
-    NbMacroActionAllowedToProduceSimultaneous = 9001
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Supply_Skirmish,
     ]
 )
 //-------------------------------------------------------------------------
 export ChalTauroWest_Phase_Deploiement is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 4
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Challenge_Main_Attack_All,
     ]
 )
 //-------------------------------------------------------------------------
 export ChalTauroWest_Phase_Command is TSequenceGeneratorDescriptor
 (
-    NbMacroActionAllowedToProduceSimultaneous = 3
     GeneratorList =
     [
-        ~/Support_Transports,
         ~/Challenge_Main_Attack_All,
         ~/CaptureAllZoneObjectif,
     ]

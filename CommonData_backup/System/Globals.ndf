@@ -1,6 +1,6 @@
 // A incrémenter quand on veut provoquer une recompilation des glads chez tout le monde sans gêner personne
 
-// Version : 00564
+// Version : 00565
 
 //-----------------------------------------------------------------------------
 // differentes constantes utilisees un peu partout.
@@ -724,7 +724,7 @@ RangeCorr                         is 2.7742749056
 RangeCorrRkt					  is 1.629372515
 RangeCorrFix				      is 0.88
 RangeCorrVis					  is 2.5
-AC_AP_corr						  is 1.0 //reduced since I can't stop the crits anymore
+AC_AP_corr						  is 2.0 //reduced since I can't stop the crits anymore, went up to 2.0 as TTK was getting slow
 Accnostab						  is 0.0
 AccCorr							  is 0.26 // 0.57 //this reduces the hit roll to compensate for the range corr increase
 AccCorrSov						  is 0.38 // 0.68 //for 3.3 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
@@ -754,14 +754,14 @@ ACSuppressCorr				      is 0.8
 BulletSuppressRadCorr			  is 0.33
 FuelCorr						  is 75
 SupplyCorr						  is 1.85 //was 185 divide by 100
-OpticalStrengthReducer			  is 4.088 // new value so inf see tanks at 2km in the open 3.212  //1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
+OpticalStrengthReducer			  is 1.0//0.48//1.4 //4.088 // new value so inf see tanks at 2km in the open 3.212  //1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
 OpticAltCorr					  is 100 //not sure why I need this but I do
 Degre                             is 0.017453292
 SniperSuppress				      is 175.0 //suppression from sniper fire
 pinneddamagereducer				  is 0.101 //can't use these in  the table, so  they are for reference
 engageddmagereducer				  is 0.299
 infdamageadjust					  is 0.51
-BuildingHealthMult				  is 3
+BuildingHealthMult				  is 4
 ScoutOpticBonus					  is 1.7
 TripodBonus						  is 1.8
 ClusterRadiusCorr				  is 1.4 //clusters experience the same radius fall off as HE so we have to widen their area of effect to compensate (not a great solution)
