@@ -4783,6 +4783,32 @@ export UnitEffect_security is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_Block_EW is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{2c92aa17-4a86-40cc-ade2-f0294df2edeb}
+    NameForDebug       = 'sigint_close'
+    EffectsDescriptors = [
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "EW_Block",
+            ]
+        ),
+    ]
+)
+export UnitEffect_EW_OK is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{06c34d8a-4407-4ce5-8a0b-656fbacb9338}
+    NameForDebug       = 'sigint_close'
+    EffectsDescriptors = [
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "EW_OK",
+            ]
+        ),
+    ]
+)
 export UnitEffect_sigint_close is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{ba449531-00da-441d-b398-2ffc8257d451}
@@ -4887,12 +4913,12 @@ export UnitEffect_stressOnMiss_high is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Additionnel
             SuppressDamageValue      = 250
         ),
-        TUnitEffectRaiseTagDescriptor
+/*         TUnitEffectRaiseTagDescriptor
         (
             TagListToRaise = [
                  "RadioJammed",
             ]
-        ),
+        ), */
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_effet_stressOnMiss"
@@ -4914,12 +4940,12 @@ export UnitEffect_stressOnMiss_low is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Additionnel
             SuppressDamageValue      = 75
         ),
-        TUnitEffectRaiseTagDescriptor
+/*         TUnitEffectRaiseTagDescriptor
         (
             TagListToRaise = [
                  "RadioJammed",
             ]
-        ),
+        ), */
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_effet_stressOnMiss"
@@ -4941,12 +4967,12 @@ export UnitEffect_stressOnMiss_mid is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Additionnel
             SuppressDamageValue      = 150
         ),
-        TUnitEffectRaiseTagDescriptor
+/*         TUnitEffectRaiseTagDescriptor
         (
             TagListToRaise = [
                  "RadioJammed",
             ]
-        ),
+        ), */
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_effet_stressOnMiss"

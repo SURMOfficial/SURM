@@ -162,28 +162,26 @@ export Gen_Phase_Command is TSequenceGeneratorDescriptor
         //------------------------------
         // Attaques principales
         //------------------------------
-        ~/Attack_Main,  
-        ~/Attack_Main,  
         ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
 
-        //~/Defense_Objectif,
+        ~/Defense_Objectif,
 
         //------------------------------
         // Défenses prioritaires
         //------------------------------
         // Statiques pour tenir le terrain
-        //~/Defense_Corridor_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        ~/Defense_Corridor_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
 
-        //~/Defense_Corridor_Adaptive,
-        //~/Defense_Corridor_Adaptive,
+        ~/Defense_Corridor_Adaptive,
+        ~/Defense_Corridor_Adaptive,
 
-        ////~/Defense_Corridor_AA,
+        ~/Defense_Corridor_AA,
         ~/Defense_Corridor_AA,
 
         ~/Airstrike_AirReco,
 
         ~/Attack_Helo,
-        ////~/Defense_Corridor_AA,
+        ~/Defense_Corridor_AA,
 
         ~/CaptureHalfZoneObjectif_Ceil,
 
@@ -255,8 +253,6 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
         ~/Attack_Main,
         ~/Attack_Main,
         ~/Attack_Main,
-        ~/Attack_Main,
-        ~/Attack_Main,
         ~/Attack_Helo,
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
@@ -289,13 +285,13 @@ export Gen_Phase_LastHope is TSequenceGeneratorDescriptor
 // les situations et appuyer le reste des missions
 Defenses_Airstrike_Arti_Shuffle_Deploy is
 [
-    //~/Defense_Corridor_Adaptive,
+    ~/Defense_Corridor_Adaptive,
     ~/Airstrike_Assault,
     ~/Artillery_Expensive,
-    //~/Defense_Corridor_Adaptive,
-    //~/Defense_Corridor_AA,
+    ~/Defense_Corridor_Adaptive,
     ~/Defense_Corridor_AA,
-    //~/Defense_Corridor_Adaptive,
+    ~/Defense_Corridor_AA,
+    ~/Defense_Corridor_Adaptive,
     ~/Airstrike_Offense,
     ~/Airstrike_AA,
     ~/Artillery_TriggerHappy_1for4Corridors,

@@ -20,8 +20,8 @@ export playerMissionAttackDescriptor is TMacroActionDescriptor_ObjectiveAttack_S
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TAirStrikeSettingHolder(Setting = ~/BasicAirstrikeSupport),
         TArtilleryAmountSettingHolder(ArtilleryAmount = 2),
-        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 0.01  MinimumCostForSelfPreservation = 0),
-        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.00001),
+        TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 0.01   MinimumCostForSelfPreservation = 100),
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = 0.001),
         TMacroActionProductionSettingHolder(DisableReinforcement = true),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TDisableUnitToReleaseSettingHolder(),
@@ -114,7 +114,7 @@ export playerMissionSupplyDescriptor is TMacroActionDescriptor_Supply_Specific
         TSupplySettingHolder(SupplyableMinimumRatio = MAP[
             (ESupplyableType_Fuel, 0.3),
             (ESupplyableType_Weapons, 0.3),
-            (ESupplyableType_Life, 0.0),
+            (ESupplyableType_Life, 0.5),
         ]),
         TMacroActionLifetimeSettingHolder(MaintainForever = true), //IMPORTANT
         TDisableUnitToReleaseSettingHolder(),

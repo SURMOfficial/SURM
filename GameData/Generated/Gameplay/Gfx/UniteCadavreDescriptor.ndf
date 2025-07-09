@@ -29751,6 +29751,31 @@ Descriptor_UnitCadavre_FO_122_DDR is TEntityDescriptor
         ~/DebugModuleDescriptor,
     ]
 )
+Descriptor_UnitCadavre_FO_130_DDR is TEntityDescriptor
+(
+    DescriptorId       = GUID:{27e5fb2e-c277-4736-bd52-81b343369b1a}
+    ClassNameForDebug  = 'Unit_CadavreScout_DDR'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = ECoalition/PACT
+            MotherCountry                    = 'DDR'
+            AcknowUnitType                   = ~/TAcknowUnitType_Recon_INF
+        ),
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillAsInfanterie = True
+            CadavreDuration = ~/CadavreDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+        ),
+        ~/PackSignauxModuleDescriptor,
+        ~/DebugModuleDescriptor,
+    ]
+)
 Descriptor_UnitCadavre_FO_152_DDR is TEntityDescriptor
 (
     DescriptorId       = GUID:{419e366b-cd7b-4b9b-8cc6-22bcace9d5ab}
@@ -30329,6 +30354,56 @@ Descriptor_UnitCadavre_Scout_POL is TEntityDescriptor
 Descriptor_UnitCadavre_FO_POL is TEntityDescriptor
 (
     DescriptorId       = GUID:{179934ea-8251-4949-bd16-f0024b4aa7d0}
+    ClassNameForDebug  = 'Unit_CadavreScout_POL'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = ECoalition/PACT
+            MotherCountry                    = 'POL'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+        ),
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillAsInfanterie = True
+            CadavreDuration = ~/CadavreDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+        ),
+        ~/PackSignauxModuleDescriptor,
+        ~/DebugModuleDescriptor,
+    ]
+)
+Descriptor_UnitCadavre_FO_152_POL is TEntityDescriptor
+(
+    DescriptorId       = GUID:{86cb7365-51d6-4bcb-aa1d-3376750e8918}
+    ClassNameForDebug  = 'Unit_CadavreScout_POL'
+    ModulesDescriptors = [
+        TTypeUnitModuleDescriptor
+        (
+            Coalition                        = ECoalition/PACT
+            MotherCountry                    = 'POL'
+            AcknowUnitType                   = ~/TAcknowUnitType_Reco
+        ),
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillAsInfanterie = True
+            CadavreDuration = ~/CadavreDuration_Infanterie
+            DeathExplosionAmmo = $/GFX/Weapon/Ammo_Mort_Unite_infanterie
+        ),
+        ~/PackSignauxModuleDescriptor,
+        ~/DebugModuleDescriptor,
+    ]
+)
+Descriptor_UnitCadavre_FO_122_POL is TEntityDescriptor
+(
+    DescriptorId       = GUID:{c54be874-2934-411f-84cc-bc62571a5127}
     ClassNameForDebug  = 'Unit_CadavreScout_POL'
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor

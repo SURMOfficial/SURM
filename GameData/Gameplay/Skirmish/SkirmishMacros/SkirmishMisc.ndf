@@ -1,8 +1,8 @@
 //-------------------------------------------------------------------------
 //----------------------------- MISC ---------------------------------
 //-------------------------------------------------------------------------
-MinimumResourceForLaunch_Stage_1 is MAP [($/GFX/Resources/Resource_CommandPoints, 400) , ($/GFX/Resources/Resource_Tickets, 400)]
-MinimumResourceForLaunch_Economic is MAP [($/GFX/Resources/Resource_CommandPoints, 1000) , ($/GFX/Resources/Resource_Tickets, 1000)]
+MinimumResourceForLaunch_Stage_1 is MAP [($/GFX/Resources/Resource_CommandPoints, 400) , ($/GFX/Resources/Resource_Tickets, 5)]
+MinimumResourceForLaunch_Economic is MAP [($/GFX/Resources/Resource_CommandPoints, 1000) , ($/GFX/Resources/Resource_Tickets, 25)]
 
 //-------------------------------------------------------------------------
 //------------------------------ SUPPLY -----------------------------------
@@ -26,7 +26,7 @@ is TMacroActionDescriptor_Supply_Specific
         TSupplySettingHolder(SupplyableMinimumRatio = MAP[
             (ESupplyableType_Fuel, 0.3),
             (ESupplyableType_Weapons, 0.3),
-            (ESupplyableType_Life, 0.0),
+            (ESupplyableType_Life, 0.5),
         ]),
     ]
     +
@@ -102,8 +102,8 @@ is TMacroActionDescriptor_CorridorDefense_Specific
                     (EDefensePointScoringFeature/AltitudeCoeff, 0.0),                       // Bonus dépendant de l'altitude min et max sur la carte et appliqué sur toute la carte
 
                     (EDefensePointScoringFeature/DistanceBonus, 1.0),                       // | Entre 0 et DistanceMargin => Bonus de DistanceBonus
-                    (EDefensePointScoringFeature/DistanceMarginGRU, 61), //177                   // | Entre DistanceMargin et DistanceDecayLength => Diminution progressive du bonus jusqu'à 0
-                    (EDefensePointScoringFeature/DistanceDecayLengthGRU, 121),  //353              // | Après DistanceDecayLength => Malus progressif
+                    (EDefensePointScoringFeature/DistanceMarginGRU, 177),                   // | Entre DistanceMargin et DistanceDecayLength => Diminution progressive du bonus jusqu'à 0
+                    (EDefensePointScoringFeature/DistanceDecayLengthGRU, 353),              // | Après DistanceDecayLength => Malus progressif
                     (EDefensePointScoringFeature/DistanceDecayCoeff, 1.0),
 
                     (EDefensePointScoringFeature/DistrictCoeff, 1.0),                       // | Bonus appliqués en fonction de la présence d'un quartier ou d'un terrain

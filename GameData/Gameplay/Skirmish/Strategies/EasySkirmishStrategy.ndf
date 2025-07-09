@@ -85,7 +85,7 @@ export Easy_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Reco,            // 40 par reco
 
 
-        //~/Defense_Objectif,
+        ~/Defense_Objectif,
 
         //------------------------------
         // Attaques principales
@@ -101,8 +101,8 @@ export Easy_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Defense_Corridor_Adaptive,          // ~100
 
 
-        //~/Defense_Static_Adaptive,          // ~100
-        //~/Defense_Filler,            // budget 40
+        ~/Defense_Corridor_Adaptive,          // ~100
+        ~/Defense_Filler,            // budget 40
 
         //------------------------------
         // Défenses Avions Arti
@@ -146,20 +146,18 @@ export Easy_Phase_Command is TSequenceGeneratorDescriptor
         ~/Defense_Objectif,
 
         // On garde les fillers
-        //~/Defense_Filler,
+        ~/Defense_Filler,
 
 
-        ~/Attack_Main,  
-        ~/Attack_Main,  
         ~/Attack_Main,              // Plusieurs tanks pour un budget donné // 200
         ~/Artillery_Support,        // Artillerie pas chère                 //  80
 
-        //~/Defense_Static_AA,
+        ~/Defense_Corridor_AA,
 
-        //~/Defense_Static_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
-        //~/Defense_Static_Adaptive,
+        ~/Defense_Corridor_Adaptive,  // Faire du code pour adapater le budget en fonction de l'income
+        ~/Defense_Corridor_Adaptive,
 
-        //~/Defense_Static_Adaptive,
+        ~/Defense_Corridor_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,

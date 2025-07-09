@@ -63,6 +63,9 @@ export Capacite_Morale_display_1 is TCapaciteDescriptor
     ]
     Conditions = [
 	~/ConditionTagNotRaisedInUnit_Morale_level_2,
+	~/ConditionTagNotRaisedInUnit_Morale_level_3,
+	~/ConditionTagNotRaisedInUnit_Morale_level_4,
+	~/ConditionTagNotRaisedInUnit_Morale_level_5,
     ]
 )
 export Capacite_Morale_loss1 is TCapaciteDescriptor //each time a unit routs it loses 
@@ -156,6 +159,8 @@ export Capacite_Morale_loss1_effect is TCapaciteDescriptor //18 hits takes you f
     ]
     Conditions = [
 	~/ConditionTagNotRaisedInUnit_Morale_level_3,
+	~/ConditionTagNotRaisedInUnit_Morale_level_4,
+	~/ConditionTagNotRaisedInUnit_Morale_level_5,
     ]
 )
 export Capacite_Morale_loss2 is TCapaciteDescriptor //each time a unit routs it loses 
@@ -250,6 +255,7 @@ export Capacite_Morale_loss2_effect is TCapaciteDescriptor //18 hits takes you f
     ]
     Conditions = [
 	~/ConditionTagNotRaisedInUnit_Morale_level_4,
+	~/ConditionTagNotRaisedInUnit_Morale_level_5,
     ]
 )
 export Capacite_Morale_loss3 is TCapaciteDescriptor //each time a unit routs it loses 
@@ -2886,17 +2892,17 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
     Declenchement           = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU               = 30
-    CastTime            = 0.00
-    CheckVisibility     = False
-    CanBeCastFromTransport  = True
+    RangeGRU                = 30
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Reddition_Effet_kill
     EffectDuration    = -1.00
-    MaxTargetNb            = 1
+    MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
     TargetInSelf           = True
-    TargetMySelf           = True
+    TargetMySelf           = False
     FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
@@ -2910,6 +2916,7 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
         ~/ConditionTagNotRaisedInUnit_Panique_1, //units shouldn't flee or surrender to panicked enemies
     ]
 )
+
 export Capacite_Menace_Ennemi_Proche_flee is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{d2d8d211-c923-4823-a0b3-b2b0e269fa2a}
@@ -2919,17 +2926,17 @@ export Capacite_Menace_Ennemi_Proche_flee is TCapaciteDescriptor
     Declenchement           = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU               = 30
-    CastTime            = 0.00
-    CheckVisibility     = False
-    CanBeCastFromTransport  = True
+    RangeGRU                = 30
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Critic_Deroute_Infantry_Flee
     EffectDuration    = -1.00
-    MaxTargetNb            = 1
+    MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
     TargetInSelf           = True
-    TargetMySelf           = True
+    TargetMySelf           = False
     FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
@@ -2951,21 +2958,21 @@ export Capacite_Menace_Ennemi_Proche_tank is TCapaciteDescriptor
     Declenchement           = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU               = 20
-    CastTime            = 0.00
-    CheckVisibility     = False
-    CanBeCastFromTransport  = True
+    RangeGRU                = 30
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Critic_Deroute_Infantry_Flee
     EffectDuration    = -1.00
-    MaxTargetNb            = 1
+    MaxTargetNb            = -1
     TargetInBuilding       = True
     TargetInTransport      = True
     TargetInSelf           = True
-    TargetMySelf           = True
+    TargetMySelf           = False
     FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
-	TagsCiblePossible = [
+    TagsCiblePossible = [
         "Infanterie_Cowering",
     ]
     TagsCibleExcluded = [
@@ -3188,7 +3195,6 @@ export Capacite_StressOnMiss_high is TCapaciteDescriptor
     ]
     TagsCibleExcluded = [
         "UAV",
-        "UAV",
     ]
 
 )
@@ -3221,7 +3227,6 @@ export Capacite_StressOnMiss_low is TCapaciteDescriptor
     ]
     TagsCibleExcluded = [
         "UAV",
-        "UAV",
     ]
 
 )
@@ -3253,7 +3258,6 @@ export Capacite_StressOnMiss_mid is TCapaciteDescriptor
         "Helo",
     ]
     TagsCibleExcluded = [
-        "UAV",
         "UAV",
     ]
 
@@ -3357,14 +3361,14 @@ export Capacite_Soutien_Allie_Proche is TCapaciteDescriptor
     DescriptorId     = GUID:{36a751a7-90b7-483b-acb1-0e4e4a453e2d}
     Name             = "Soutien_Allie_Proche"
     NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_allie
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 50
-    CastTime            = 0.00
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 70
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_Allie_Proche
     EffectDuration    = -1.00
     MaxTargetNb            = -1
@@ -3579,7 +3583,7 @@ export Capacite_electronic_warfare is TCapaciteDescriptor
     Declenchement           = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU               = 20000.00
+    RangeGRU               = 12000.13
     CastTime            = 0.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
@@ -3598,6 +3602,12 @@ export Capacite_electronic_warfare is TCapaciteDescriptor
         "AA_radar",
 		"AA_radar_Old",
     ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_EW_OK,
+        ~/ConditionTagNotRaisedInUnit_EW_Block,
+    ]
 )
 export Capacite_electronic_warfare_standoff is TCapaciteDescriptor
 (
@@ -3608,14 +3618,14 @@ export Capacite_electronic_warfare_standoff is TCapaciteDescriptor
     Declenchement           = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU               = 20000.00
+    RangeGRU               = 12000.13
     CastTime            = 0.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_electronic_warfare_standoff
     EffectDuration = -1.00
 	SelfEffect       = ~/UnitEffect_disp_electronicwarfare
-    MaxTargetNb            = 2 // a total guess that I'll probably never know the answer to for obvious reasons -1 allows infinite targets
+    MaxTargetNb            = 5 // a total guess that I'll probably never know the answer to for obvious reasons -1 allows infinite targets
     TargetInBuilding       = True
     TargetInTransport      = True
     TargetInSelf           = True
@@ -3627,89 +3637,11 @@ export Capacite_electronic_warfare_standoff is TCapaciteDescriptor
         "AA_radar",
 		"AA_radar_Old",
     ]
-)
-export Capacite_disp_electronic_warfare_standoff is TCapaciteDescriptor
-(
-    DescriptorId     = GUID:{68f7156e-8066-4b9d-b348-774afb9e253b}
-    Name             = "electronic_warfare_disp_standoff"
-    NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 1
-    CastTime            = 1.00
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_disp_electronicwarfare
-    EffectDuration = -1.00
-    MaxTargetNb            = 1
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    TagsCiblePossible = [
-    ]
     TagsCibleExcluded = [
     ]
-)
-export Capacite_disp_electronic_warfare is TCapaciteDescriptor
-(
-    DescriptorId     = GUID:{f9de4f9c-3a29-49f9-b352-51f34ae7efa3}
-    Name             = "electronic_warfare_disp"
-    NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 1
-    CastTime            = 1.00
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_disp_electronicwarfare
-    EffectDuration = -1.00
-    MaxTargetNb            = 1
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    TagsCiblePossible = [
-    ]
-    TagsCibleExcluded = [
-    ]
-)
-export Capacite_disp_electronic_warfare_basic is TCapaciteDescriptor
-(
-    DescriptorId     = GUID:{9188525d-7056-49d3-94da-add91b867ba7}
-    Name             = "electronic_warfare_disp_basic"
-    NameToken        = "None"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 1
-    CastTime            = 1.00
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_disp_electronicwarfare_basic
-    EffectDuration = -1.00
-    MaxTargetNb            = 1
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    TagsCiblePossible = [
-    ]
-    TagsCibleExcluded = [
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_EW_OK,
+        ~/ConditionTagNotRaisedInUnit_EW_Block,
     ]
 )
 export Capacite_electronic_warfare_basic is TCapaciteDescriptor
@@ -3721,7 +3653,7 @@ export Capacite_electronic_warfare_basic is TCapaciteDescriptor
     Declenchement        = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi //should jamming be indiscriminate?
     InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 20000.00
+    RangeGRU               = 12000.13
     CastTime            = 0.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
@@ -3738,6 +3670,12 @@ export Capacite_electronic_warfare_basic is TCapaciteDescriptor
     TagsCiblePossible = [
         "AA_radar_Old",
     ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_EW_OK,
+        ~/ConditionTagNotRaisedInUnit_EW_Block,
+    ]
 )
 export Capacite_electronic_warfare_gun is TCapaciteDescriptor
 (
@@ -3748,7 +3686,7 @@ export Capacite_electronic_warfare_gun is TCapaciteDescriptor
     Declenchement        = ~/CapaciteDeclenchementType_automatique
     TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi //should jamming be indiscriminate?
     InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 20000.00
+    RangeGRU               = 12000.13
     CastTime            = 0.00
     CheckVisibility     = False
     CanBeCastFromTransport  = False
@@ -3765,32 +3703,140 @@ export Capacite_electronic_warfare_gun is TCapaciteDescriptor
     TagsCiblePossible = [
         "AA_radar_Gun",
     ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_EW_OK,
+        ~/ConditionTagNotRaisedInUnit_EW_Block,
+    ]
 )
 export Capacite_electronic_warfare_search_radar is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{818933fb-dd34-4cb6-af17-170e5d4a9681}
     Name             = "electronic_warfare"
+    NameToken               = "None"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 12000.13
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = False
+    TargetEffect         	= ~/UnitEffect_electronic_warfare_search_radar
+    EffectDuration          = -1.00
+    MaxTargetNb             = 2
+    TargetInBuilding        = True
+    TargetInTransport       = True
+    TargetInSelf            = True
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_selected | ~/CapaciteFeedbackActivationMask_anyalliance
+    DisplayRangeColor       = RGBA[0,255,255,255]
+    DisplayRangeThickness   = 0.40
+    TagsCiblePossible       = [
+        "AA_Search_radar",
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_EW_OK,
+        ~/ConditionTagNotRaisedInUnit_EW_Block,
+    ]
+)
+export Capacite_disp_electronic_warfare_standoff is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{68f7156e-8066-4b9d-b348-774afb9e253b}
+    Name             = "electronic_warfare_disp_standoff"
     NameToken        = "None"
     CumulEffect          = ~/CapaciteCumulEffect_jamais
     Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi //should jamming be indiscriminate?
+    TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 20000.00
+    RangeGRU               = 1
     CastTime            = 0.00
-    CheckVisibility     = False
-    CanBeCastFromTransport  = False
-    TargetEffect         = ~/UnitEffect_electronic_warfare_search_radar
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_disp_electronicwarfare
     EffectDuration = -1.00
-    MaxTargetNb            = 2 // a total guess that I'll probably never know the answer to for obvious reasons -1 allows infinite targets
+    MaxTargetNb            = 1
     TargetInBuilding       = True
     TargetInTransport      = True
     TargetInSelf           = True
     TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_selected | ~/CapaciteFeedbackActivationMask_anyalliance
-    DisplayRangeColor      = RGBA[0,255,255,255]
-    DisplayRangeThickness  = 0.40
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
     TagsCiblePossible = [
-        "AA_Search_radar",
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_EW_OK,
+        ~/ConditionTagNotRaisedInUnit_EW_Block,
+    ]
+)
+export Capacite_disp_electronic_warfare is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{f9de4f9c-3a29-49f9-b352-51f34ae7efa3}
+    Name             = "electronic_warfare_disp"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.00
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_disp_electronicwarfare
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_EW_OK,
+        ~/ConditionTagNotRaisedInUnit_EW_Block,
+    ]
+)
+export Capacite_disp_electronic_warfare_basic is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{9188525d-7056-49d3-94da-add91b867ba7}
+    Name             = "electronic_warfare_disp_basic"
+    NameToken        = "None"
+    CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.00
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_disp_electronicwarfare_basic
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_EW_OK,
+        ~/ConditionTagNotRaisedInUnit_EW_Block,
     ]
 )
 export Capacite_IRCM is TCapaciteDescriptor //haven't figured out how to make this work yet
@@ -4154,6 +4200,69 @@ export Capacite_security is TCapaciteDescriptor
     ]
     Conditions = [
         ~/ConditionNotInMovement,
+    ]
+)
+export Capacite_allow_EW is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{44917eee-a900-4490-89ba-ce515997880f}
+    Name             = "block_EW"
+    NameToken        = "None"
+	CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 3300
+    CastTime            = 0.0
+    CheckVisibility     = False
+    CanBeCastFromTransport  = False
+    TargetEffect         = ~/UnitEffect_EW_OK
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = False
+    TargetInTransport      = False
+    TargetInSelf           = False
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+	"Avion",
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	//~/ConditionNotInMovement,
+    ]
+)
+export Capacite_block_EW is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{70760df2-5f90-472f-9b76-15ffd4ed8020}
+    Name             = "block_EW"
+    NameToken        = "None"
+	CumulEffect          = ~/CapaciteCumulEffect_jamais
+    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 1
+    CastTime            = 0.0
+    CheckVisibility     = False
+    CanBeCastFromTransport  = False
+    TargetEffect         = ~/UnitEffect_Block_EW
+    EffectDuration = -1.00
+    MaxTargetNb            = 1
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    TagsCiblePossible = [
+    ]
+    TagsCibleExcluded = [
+    ]
+    Conditions = [
+	~/ConditionNotInMovement,
     ]
 )
 export Capacite_security_feedback is TCapaciteDescriptor
