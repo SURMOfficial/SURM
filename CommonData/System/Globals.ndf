@@ -163,11 +163,11 @@ DeviceType is TBaseClass
 )
 
 //-----------------------------------------------------------------------------
-// doit matcher avec Core3D/GameApplicationWindowMode.h
-WindowMode is TBaseClass
+// doit matcher avec Core3D/WindowMode.h
+EWindowMode is TBaseClass
 (
     Windowed            is 0
-    FullscreenWindowed  is 2
+    Borderless          is 1
 )
 
 //-----------------------------------------------------------------------------
@@ -309,6 +309,7 @@ CommandName is TBaseClass
     GameApplicationResetMode      is "GameApplication::ChangeModeUsingDefaultValue"
     GameApplicationToggle         is "GameApplicationToggler::Toggle"
     GameApplicationPerformPendingToggle is 'GameApplicationToggler::PerformPendingToggle'
+    ResetDeviceType is 'TClusterInitGameApplication::ResetDeviceType'
     GraphicsModeRefresh             is "GraphicDependentObjectHandler::GraphicsModeRefreshCallback"
     IncGraphicsDeviceVariability    is "IncGraphicsDeviceVariability"
     SoundEngineUpdateSoundVolume        is "ClusterSoundEngine::UpdateSoundVolume"
@@ -743,7 +744,8 @@ ArtySuppressCorr				  is 3.5
 BulletSuppressCorr				  is 0.1
 ACSuppressCorr				      is 0.8
 BulletSuppressRadCorr			  is 0.33
-FuelCorr						  is 75
+FuelCorr						  is 45
+FuelCorrHeli					  is 12
 SupplyCorr						  is 1.85 //was 185 divide by 100
 OpticalStrengthReducer			  is 1.0//0.48//1.4 //4.088 // new value so inf see tanks at 2km in the open 3.212  //1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
 OpticAltCorr					  is 100 //not sure why I need this but I do

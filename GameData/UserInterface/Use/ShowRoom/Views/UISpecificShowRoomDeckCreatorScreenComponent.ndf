@@ -724,7 +724,7 @@ ListeDesUnitesDuDeck is BUCKListDescriptor
                 RelativeWidthHeight = [1.0, 1.0]
             )
         ),
-        BUCKSensibleAreaDescriptor
+        BUCKSensitiveAreaDescriptor
         (
             ElementName = "UnitDeckListArea"
             HidePointerEvents = true
@@ -1429,9 +1429,10 @@ DeckCreatorScreenMainComponent is BUCKContainerDescriptor
         ~/DivisionGridContainer,
         // barre supérieure
         DeckEditorTopBar(SelectedTab = ~/DeckEditorTab),
+        // Transports
+        ~/TransportSelectionContainer,
         // affichage des Panelinfos
         AnimationPanelUnitInfos(),
-        ~/TransportSelectionContainer,
         // bouton "close" en bas à gauche
         ~/DeckEditorCloseButton,
     ]

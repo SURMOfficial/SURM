@@ -32,7 +32,7 @@ Default_Support_Request_Attack_Settings is
 //-------------------------------------------------------------------------
 Blitzkrieg_Attack_Settings is
 [
-    TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 0.1   MinimumCostForSelfPreservation = 0),
+    TBlitzkriegSettingHolder(RatioFactorToDisableSelfPreservation = 0.1   MinimumCostForSelfPreservation = 10000),
 ]
 //-------------------------------------------------------------------------
 AvoidFillerCorridors_Attack_Settings is
@@ -115,7 +115,7 @@ is TMacroActionDescriptor_CorridorAttack_Specific
             TaggedPoolModelList = [(["AttackMain"], [<PoolModel_Generic>]),] PrioritizeCorridorsForTaggedPoolModels = true),
         TMacroActionProductionSettingHolder(DifficultyList = [IADifficulty/Facile] ProdProperties = <ProdProperties> PoolModelList = [<PoolModel_Easy>] TaggedPoolModelList = [(["AttackMain"], [<PoolModel_Easy>]),] PrioritizeCorridorsForTaggedPoolModels = true),
 
-        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.00084), // Perte de 0.1 de ratio toutes les 2 minutes
+        TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.84), // Perte de 0.1 de ratio toutes les 2 minutes
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
         TCorridorPlacementSettingHolder(MargeDeRegroupementDepuisLaLigneDeFront = 1 ActiveComportementEnBoutDeCouloir = true),
     ]
@@ -186,7 +186,7 @@ is TMacroActionDescriptor_CorridorAttack_Specific
         [
             (["AttackInfantry"], [ Pool_Infantry_Attack_1, Pool_Infantry_Attack_2, Pool_Infantry_Attack_3 ]),
             (["AttackCombined"], [ Pool_Combined_Attack_1, Pool_Combined_Attack_2, Pool_Combined_Attack_3 ]),
-            (["AttackTank"], [ Pool_Combined_Attack_1, Pool_Combined_Attack_2, Pool_Combined_Attack_3 ]),
+            (["AttackTank"], [ Pool_Main_Attack, Pool_Main_Attack, Pool_Main_Attack ]),
         ]
         ),
         TAttackRatioSettingHolder(RatioMinimumPourAttaquer = <RatioMinimumPourAttaquer> RatioPourAttaquerPerduAChaqueTick = 0.001),
@@ -250,15 +250,15 @@ export Attack_Adaptive_Autogen is Template_Attack_Corridor
 //-------------------------------------------------------------------------
 // Budgets
 //-------------------------------------------------------------------------
-Budget_Objective_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 300) , ($/GFX/Resources/Resource_Tickets, 15)]
-Budget_Main_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 600) , ($/GFX/Resources/Resource_Tickets, 20)]
-Budget_Reinforce_Main_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 10)]
-Budget_Default_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 10)]
-Budget_Attack_Helo is MAP [($/GFX/Resources/Resource_CommandPoints, 250) , ($/GFX/Resources/Resource_Tickets, 5)]
-Budget_Infantry_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 160) , ($/GFX/Resources/Resource_Tickets, 4)]
-Budget_Tank_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 10)]
-Budget_Combined_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 10)]
-Budget_Attack_Filler is MAP [($/GFX/Resources/Resource_CommandPoints, 80) , ($/GFX/Resources/Resource_Tickets, 3)]
+Budget_Objective_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 800) , ($/GFX/Resources/Resource_Tickets, 800)]
+Budget_Main_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 1000) , ($/GFX/Resources/Resource_Tickets, 1000)]
+Budget_Reinforce_Main_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 200)]
+Budget_Default_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 200)]
+Budget_Attack_Helo is MAP [($/GFX/Resources/Resource_CommandPoints, 250) , ($/GFX/Resources/Resource_Tickets, 250)]
+Budget_Infantry_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 160) , ($/GFX/Resources/Resource_Tickets, 160)]
+Budget_Tank_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 200)]
+Budget_Combined_Attack is MAP [($/GFX/Resources/Resource_CommandPoints, 200) , ($/GFX/Resources/Resource_Tickets, 200)]
+Budget_Attack_Filler is MAP [($/GFX/Resources/Resource_CommandPoints, 80) , ($/GFX/Resources/Resource_Tickets, 80)]
 //-------------------------------------------------------------------------
 // PoolModelList
 //-------------------------------------------------------------------------

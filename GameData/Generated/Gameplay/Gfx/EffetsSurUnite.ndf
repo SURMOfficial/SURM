@@ -61,7 +61,8 @@ export UnitEffect_Ajoute_Tag_Allie_Proche is TEffectsPackDescriptor
         TUnitEffectRaiseTagDescriptor
         (
             TagListToRaise = [
-                 "Allie_Proche",
+				 "Ennemi_Proche_Tank",
+                 // "Allie_Proche",
             ]
         ),
     ]
@@ -213,6 +214,10 @@ export UnitEffect_Ajoute_Tag_tripod_ok is TEffectsPackDescriptor
                  "tripod_ok",
             ]
         ),
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_sniper"
+        ),
     ]
 )
 export UnitEffect_Ajoute_Tag_xp_elite is TEffectsPackDescriptor
@@ -292,6 +297,11 @@ export UnitEffect_tripod is TEffectsPackDescriptor
                  "tripod_ok",
             ]
         ),
+        TUnitEffectIncreaseWeaponPorteeMaxDescriptor
+        (
+            ModifierType  = ~/ModifierType_Pourcentage
+            ModifierValue = 34
+        ),
     ]
 )
 export UnitEffect_no_tripod is TEffectsPackDescriptor
@@ -319,10 +329,6 @@ export UnitEffect_no_tripod is TEffectsPackDescriptor
             ModifierType  = ~/ModifierType_Pourcentage
             ModifierValue = -100
         ),
-		/*TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "Texture_Speciality_Icon_eo_dazzler"
-        ),*/
     ]
 )
 export UnitEffect_ArmyGen_No_regen_PA is TEffectsPackDescriptor
@@ -1120,16 +1126,6 @@ export UnitEffect_Choc is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Pourcentage
             BonusSpeedBaseInPercent  = 15
         ),
-/*         TBonusWeaponAimtimeEffectDescriptor
-        (
-            ModifierType  = ~/ModifierType_Multiplicatif
-            ModifierValue = 0.8
-        ), */
-        //TUnitEffectIncreaseWeaponPhysicalDamagesDescriptor
-        //(
-        //    ModifierType               = ~/ModifierType_Pourcentage
-        //    ModifierValue = 20 //used to be 20 but didn't make sense and would mess with AT weapons
-        //),
         TUnitEffectAlterWeaponTempsEntreDeuxSalvesDescriptor
         (
             ModifierType  = ~/ModifierType_Multiplicatif
@@ -1144,6 +1140,12 @@ export UnitEffect_Choc is TEffectsPackDescriptor
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_shock"
+        ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "choc_ok",
+            ]
         ),
     ]
 )
@@ -1413,36 +1415,31 @@ export UnitEffect_Critic_Deroute_Infantry_Flee is TEffectsPackDescriptor
     DescriptorId       = GUID:{babc34e3-f375-59bf-bd21-2c44875424d9}
     NameForDebug       = 'Critic_Deroute_Infantry'
     EffectsDescriptors = [
-/*         TUnitEffectIncreaseWeaponPorteeMaxDescriptor
+ 		TUnitEffectBonusPrecisionWhenTargetedDescriptor
         (
-            ModifierType         = ~/ModifierType_Pourcentage
-            ModifierValue = -100
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusPrecisionWhenTargeted = 40
         ),
-        TUnitEffectIncreaseWeaponPorteeMaxHADescriptor
+		TUnitEffectIncreaseConcealmentBonusDescriptor
         (
-            ModifierType           = ~/ModifierType_Pourcentage
-            ModifierValue = -100
+            ModifierType       = ~/ModifierType_Multiplicatif
+            BonusConcealmentBonus  = 0.15
         ),
-        TUnitEffectIncreaseWeaponPorteeMaxProjectileDescriptor
+        // TUnitEffectShowLabelIconDescriptor
+        // (
+            // TextureToken         = "icone_gsr"
+        // ),
+		//replaced the old armor swap with a damage multiplier
+        TUnitEffectIncreaseDamageTakenDescriptor
         (
-            ModifierType   = ~/ModifierType_Pourcentage
-            ModifierValue = -100
-        ),
-        TUnitEffectIncreaseWeaponPorteeMaxTBADescriptor
-        (
-            ModifierType            = ~/ModifierType_Pourcentage
-            ModifierValue = -100
+            ModifierType        = ~/ModifierType_Multiplicatif
+            BonusDamage         = 3.3
+            DamageType          = EDamageType/Physical
         ),
 		TUnitEffectIncreaseSpeedDescriptor //sprint for life
         (
             ModifierType             = ~/ModifierType_Pourcentage
             BonusSpeedBaseInPercent  = 200
-        ),
-		TUnitEffectIncreaseDamageTakenDescriptor //may remove
-        (
-            ModifierType        = ~/ModifierType_Multiplicatif
-            BonusDamage         = 0.6
-            DamageType          = EDamageType/Physical
         ),
 		//TDerouteUnitEffectDescriptor(),
 		TUnitEffectRaiseTagDescriptor
@@ -1455,12 +1452,19 @@ export UnitEffect_Critic_Deroute_Infantry_Flee is TEffectsPackDescriptor
         (
             Selectable = False
         ),
-		TDerouteUnitEffectDescriptor(), */
-        TEffectInflictSuppressDamageDescriptor
+		TDerouteUnitEffectDescriptor(),
+    ]
+)
+export UnitEffect_White_flag is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{dc4eebd8-0b8a-4a65-b0c5-b30cd7d14cf1}
+    NameForDebug       = 'White_Flag'
+    EffectsDescriptors = [
+        TUnitEffectShowLabelIconDescriptor
         (
-            ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 1600 //should rout any unit I think
+            TextureToken         = "icone_surrender"
         ),
+
     ]
 )
 export UnitEffect_Critic_Deroute is TEffectsPackDescriptor
@@ -2449,7 +2453,7 @@ export UnitEffect_GSR is TEffectsPackDescriptor
             TextureToken         = "icone_gsr"
         ),
     ]
-)
+) 
 export UnitEffect_Gain_deux_niveau_XP is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{957d6432-b7dd-4bf8-97e2-c203a34fa25d}
@@ -2828,6 +2832,18 @@ export UnitEffect_Infanterie_Courage_Effet is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_Thermal is TEffectsPackDescriptor //testwhat this does
+(
+    DescriptorId       = GUID:{357a2ed3-3ae0-462e-9998-f0f0a81d4894}
+    NameForDebug       = 'Infanterie_Cowering'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPorteeMaxIgnoreSmokeDescriptor
+        (
+            ModifierType         = ~/ModifierType_Pourcentage
+            BonusWeaponPorteeMax = 500
+        ),
+    ]
+)
 export UnitEffect_Infanterie_Cowering is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{2a16fc83-5a16-48c1-8b58-0eef8d18eb1d}
@@ -2854,7 +2870,7 @@ export UnitEffect_Infanterie_Cowering is TEffectsPackDescriptor
             ModifierType         = ~/ModifierType_Pourcentage
             BonusWeaponPorteeMax = -100
         ),
-        TUnitEffectIncreaseSpeedDescriptor
+         TUnitEffectIncreaseSpeedDescriptor
         (
             ModifierType             = ~/ModifierType_Pourcentage
             BonusSpeedBaseInPercent  = -99
@@ -3425,6 +3441,40 @@ export UnitEffect_Placebo is TEffectsPackDescriptor
     EffectsDescriptors = [
     ]
 )
+export UnitEffect_Precision_moins_10 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{fbebfa6f-61b2-4b95-9832-785c62796cd0}
+    NameForDebug       = 'Precision_moins_10'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.9
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.9
+        ),
+    ]
+)
+export UnitEffect_Precision_moins_15 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{69566404-db94-414f-8f3b-1fb644838207}
+    NameForDebug       = 'Precision_moins_15'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.85
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.85
+        ),
+    ]
+)
 export UnitEffect_Precision_moins_20 is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{604fcc23-ebc2-4620-af2b-2bf470db0be3}
@@ -3446,6 +3496,108 @@ export UnitEffect_Precision_moins_25 is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{ce48bea4-f247-4893-ae50-e3a3b85262be}
     NameForDebug       = 'Precision_moins_25'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.75
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.75
+        ),
+    ]
+)
+export UnitEffect_Precision_moins_30 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{478c94df-f172-4899-905e-b57820f10911}
+    NameForDebug       = 'Precision_moins_30'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.7
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.7
+        ),
+    ]
+)
+export UnitEffect_Precision_moins_45 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{8bd597a4-5705-4333-ac5e-27eda1e0d36d}
+    NameForDebug       = 'Precision_moins_45'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.65
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.65
+        ),
+    ]
+)
+export UnitEffect_Precision_moins_5 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{a4e0a8b2-8cae-4101-a665-890c5163baf8}
+    NameForDebug       = 'Precision_moins_5'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.95
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.95
+        ),
+    ]
+)
+export UnitEffect_Precision_moins_50 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{29301a2a-5d30-4b86-a768-ad4fba6afd8f}
+    NameForDebug       = 'Precision_moins_50'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.5
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.5
+        ),
+    ]
+)
+export UnitEffect_Precision_moins_70 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{4ab20a3d-01ea-48ee-8951-78d5f3f4c665}
+    NameForDebug       = 'Precision_moins_70'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseWeaponPrecisionArretDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.7
+        ),
+        TUnitEffectIncreaseWeaponPrecisionMouvementDescriptor
+        (
+            ModifierType  = ~/ModifierType_Multiplicatif
+            ModifierValue = 0.7
+        ),
+    ]
+)
+export UnitEffect_Precision_moins_75 is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{5f4cafdd-a087-4243-9afc-0e09cb53896b}
+    NameForDebug       = 'Precision_moins_75'
     EffectsDescriptors = [
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
@@ -4640,6 +4792,23 @@ export UnitEffect_jammer is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_jammer_gsr is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{8b47c93c-883a-45c3-bdd7-66e1593c80fc}
+    NameForDebug       = 'jammer_gsr'
+    EffectsDescriptors = [
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "RadioJammed_gsr",
+            ]
+        ),
+        TUnitEffectShowLabelIconDescriptor
+        (
+            TextureToken         = "icone_electronic_warfare"
+        ),
+    ]
+)
 export UnitEffect_military_police is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{0f4d7e16-6a16-4268-8248-13f357aed0ad}
@@ -4865,11 +5034,6 @@ export UnitEffect_sniper is TEffectsPackDescriptor
             ModifierType       = ~/ModifierType_Additionnel
             BonusConcealmentBonus  = 0.5
         ),
-        /*TUnitEffectIncreaseWeaponPhysicalDamagesDescriptor
-        (
-            ModifierType  = ~/ModifierType_Pourcentage
-            ModifierValue = 500
-        ),*/
         TUnitEffectIncreaseWeaponPrecisionArretDescriptor
         (
             ModifierType  = ~/ModifierType_Pourcentage
@@ -4913,12 +5077,6 @@ export UnitEffect_stressOnMiss_high is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Additionnel
             SuppressDamageValue      = 250
         ),
-/*         TUnitEffectRaiseTagDescriptor
-        (
-            TagListToRaise = [
-                 "RadioJammed",
-            ]
-        ), */
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_effet_stressOnMiss"
@@ -4940,12 +5098,6 @@ export UnitEffect_stressOnMiss_low is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Additionnel
             SuppressDamageValue      = 75
         ),
-/*         TUnitEffectRaiseTagDescriptor
-        (
-            TagListToRaise = [
-                 "RadioJammed",
-            ]
-        ), */
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_effet_stressOnMiss"
@@ -4967,12 +5119,6 @@ export UnitEffect_stressOnMiss_mid is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Additionnel
             SuppressDamageValue      = 150
         ),
-/*         TUnitEffectRaiseTagDescriptor
-        (
-            TagListToRaise = [
-                 "RadioJammed",
-            ]
-        ), */
         TUnitEffectShowLabelIconDescriptor
         (
             TextureToken         = "icone_effet_stressOnMiss"
@@ -5900,10 +6046,6 @@ export UnitEffect_infantry_cover is TEffectsPackDescriptor //infantry who are st
             ModifierType         = ~/ModifierType_Multiplicatif
             BonusOpticalStrength = 1.7
         ),
-		/*TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_mp"
-        ),*/
     ]
 )
 
@@ -5922,21 +6064,12 @@ export UnitEffect_infantry_cover2 is TEffectsPackDescriptor //infantry who are s
             ModifierType         = ~/ModifierType_Multiplicatif
             BonusOpticalStrength = 1.3
         ),
-		/*TUnitEffectBonusPrecisionWhenTargetedDescriptor
-        (
-            ModifierType       = ~/ModifierType_Pourcentage
-            BonusPrecisionWhenTargeted = 67 //undoes 40% reduction on the move now in the stop effect
-        ),*/
 		TUnitEffectRaiseTagDescriptor
         (
             TagListToRaise = [
                  "cover_ok",
             ]
         ),
-		/*TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_electronic_warfare"
-        ),*/
     ]
 )
 export UnitEffect_dig_in is TEffectsPackDescriptor //infantry who are static for a long time dig hasty positions and are harder to see //and hit
@@ -5989,21 +6122,12 @@ export UnitEffect_vehicle_cover is TEffectsPackDescriptor//vehicles which are st
             ModifierType         = ~/ModifierType_Multiplicatif
             BonusOpticalStrength = 1.3
         ),
-		/*TUnitEffectBonusPrecisionWhenTargetedDescriptor
-        (
-            ModifierType       = ~/ModifierType_Pourcentage
-            BonusPrecisionWhenTargeted = 67 //undoes 40% reduction on the move now in the stop effect
-        ),*/
 		TUnitEffectRaiseTagDescriptor
         (
             TagListToRaise = [
                  "cover_ok",
             ]
         ),
-		/*TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_electronic_warfare"
-        ),*/
     ]
 )
 export UnitEffect_vehicle_stopped_hit_perc is TEffectsPackDescriptor //vehicles which are static are immediately easier to hit (no 15 second wait)
@@ -6016,11 +6140,6 @@ export UnitEffect_vehicle_stopped_hit_perc is TEffectsPackDescriptor //vehicles 
             ModifierType       = ~/ModifierType_Pourcentage
             BonusPrecisionWhenTargeted = 67 //undoes 40% reduction on the move
         ),
-		/*TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_electronic_warfare"
-            CanBeSeenByEnemy         = false
-        ),*/
     ]
 )
 export UnitEffect_display_Morale_1 is TEffectsPackDescriptor
@@ -6841,42 +6960,6 @@ export UnitEffect_ERA_hit_add is TEffectsPackDescriptor
         ),
     ]
 )
-/*export UnitEffect_ERA_hit_1 is TEffectsPackDescriptor
-(
-    DescriptorId       = GUID:{b78cc4d6-90f7-4770-8c88-d44b387eb86c}
-    NameForDebug       = 'ERA_hit'
-    EffectsDescriptors = [
-        TUnitEffectAddCapacityDescriptor
-        (
-            CapacityToAdd = [ ~/Capacite_ERA_hit2 ]
-        ),
-		TUnitEffectRaiseTagDescriptor
-        (
-            TagListToRaise = [
-                 "ERA_hit1",
-            ]
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_shock"
-        ),
-    ]
-)
-export UnitEffect_ERA_hit_2 is TEffectsPackDescriptor
-(
-    DescriptorId       = GUID:{859eb42c-0920-4a55-96a8-c54ee9b8953a}
-    NameForDebug       = 'ERA_hit'
-    EffectsDescriptors = [
-        TUnitEffectAddCapacityDescriptor
-        (
-            CapacityToAdd = [ ~/Capacite_ERA_hit2 ]
-        ),
-		TUnitEffectShowLabelIconDescriptor
-        (
-            TextureToken         = "icone_shock"
-        ),
-    ]
-)*/
 export UnitEffect_ERA_hit_3 is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{211e4a47-b442-4547-8e0e-9456c7e84078}

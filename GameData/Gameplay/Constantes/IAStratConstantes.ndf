@@ -39,10 +39,10 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
         (EMacroActionMissionType/ProduceBuilding, ['Avion', 'InfmapCommander']),
     ]
 
-    MinUnitWeightToReserveCorridor = 15.0
+    MinUnitWeightToReserveCorridor = 0.1
     UnitTagAndWeightToReserveCorridor = MAP
     [
-        ( "Infanterie", 1.0 ),
+        ( "Infanterie", 0.3 ),
         ( "Char", 0.5 ),
     ]
 
@@ -55,7 +55,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     CommandZoneWeight = ~/CommandZoneCustomWeighForIAStrat // Numero donné aux zones générées automatiquement autours des zones objectif.
 
     //--------------- Transport ----------------------------------------//
-    MinDistanceToRequireTransportGRU = 3534 //un peu plus de 3.5KM in game
+    MinDistanceToRequireTransportGRU = 5 //un peu plus de 3.5KM in game
     MaxDistanceToAcceptTransportRequestGRU = 10601 //un peu plus de 10KM in game
     ForbidToLoadNewUnits = false // Ce paramètre a true empêche de charger une unité qu'on ne transporte pas à la base (applicable aux transports qui spawnent préchargés)
 
@@ -218,9 +218,9 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     //---------------------------------------------------------------------------------//
     //---------------------------------------------------------------------------------//
 
-    DistanceToRetreatForFleeGRU = 707
-    TimeToWaitAfterFleeToGoBackToOriginalPositionInSeconds = 7.5
-    TimeSinceLastShotReceivedForFlee = 5
+    DistanceToRetreatForFleeGRU = 1
+    TimeToWaitAfterFleeToGoBackToOriginalPositionInSeconds = 0.5
+    TimeSinceLastShotReceivedForFlee = 0.1
 
     //---------------------------------------------------------------------------------//
     //---------------------------------------------------------------------------------//
@@ -252,7 +252,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     ]
 
     IAStratPathCostCacheFilePath = "CurrentScenarioData:/IAStratZone/ZonePathCache.ndfbin"
-    IAStratDistanceFromNotDefendedCommandZoneGRU = 1413 //Un peu plus que la taille de 1 zone IAStrat
+    IAStratDistanceFromNotDefendedCommandZoneGRU = 500 //Un peu plus que la taille de 1 zone IAStrat
     HysteresisDistanceForCommandUnitAlreadyAssignToCommandZoneGRU = 530
 
     //first moveOutRatio / second CaptureRatio
@@ -265,8 +265,8 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
             (IADifficulty/Facile, (0.9, 1.25)),
             (IADifficulty/Normal, (0.7, 1.0)),
             (IADifficulty/Difficile, (0.65, 0.9)),
-            (IADifficulty/TresDifficile, (0.65, 0.9)),     // On prend plus de risque a partir de very hard
-            (IADifficulty/PlusDifficile, (0.65, 0.9)),
+            (IADifficulty/TresDifficile, (0.5, 0.75)),     // On prend plus de risque a partir de very hard
+            (IADifficulty/PlusDifficile, (0.35, 0.6)),
         ]),
 
         (EDeploymentMode/Breakthrough, MAP[
@@ -306,7 +306,7 @@ UnitPowerInformation is TUnitPowerInformationConstante
     UnitPowerTerrainCoeff = 1.0
     UnitPowerBuildingMultiplier = 0.01
     UnitPowerUnarmedOrPinnedMultiplier = 0.1
-    DefaultDistanceToConsiderOtherUnitsPowerGRU = 707 // Les missions d'attaque prendront en compte ce rayon pour calculer leurs ratios
+    DefaultDistanceToConsiderOtherUnitsPowerGRU = 200 // Les missions d'attaque prendront en compte ce rayon pour calculer leurs ratios
 )
 
 //--------------------------------------------------------------------------------------//
@@ -365,7 +365,6 @@ AirstrikeConstantes is TIAStratAirstrikeConstantes
 
 ArtilleryStrikeConstantes is TIAStratArtilleryStrikeConstantes
 (
-    ArtilleryStrikeSupportOffsetGRU = 353 // Les artilleries sur carte lançant un tir Smoke en soutien viseront à cette distance derrière l'ennemi
     ArtilleryStrikeThreatBonusPerTags =  // Multiplicateur appliqué lors du calcul de la menace d'unité. On applique le premier bonus qui match les tags de notre unité (1 par défaut)
     [
         (["Canon_AT"], 1.5),
@@ -380,7 +379,9 @@ ArtilleryStrikeConstantes is TIAStratArtilleryStrikeConstantes
         (["Helo"], 0.5),
     ]
 
-    ArtilleryRangeRatioPosition = 0.70
+    ArtilleryRangeRatioPosition = 0.70       // Distance souhaitée à la zone de combat, par rapport la portée de l'unité
+    ArtilleryRangeRatioToleranceNear = 0.10  // Tolérance soustraite au ratio pour conserver une position un peu plus proche de la zone de combat
+    ArtilleryRangeRatioToleranceFar = 0.15   // Tolérance ajoutée au ratio pour conserver une position un peu plus loin de la zone de combat
 )
 
 //--------------------------------------------------------------------------------------//

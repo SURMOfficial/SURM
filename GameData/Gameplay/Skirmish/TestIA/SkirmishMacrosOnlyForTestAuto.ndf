@@ -198,12 +198,11 @@ export Artillery_OnlyTestAuto is TMacroActionDescriptor_Artillery_Specific
     ParametresDeMission =
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
-        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 353357 ArtilleryUpdateOffsetGRU = 353357),
-        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 0  MinimumThreatPerSplashForSupport = 999 ),
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 SupportZoneMaxRangeGRU = 504796),
+        TArtilleryStrikeThreatSettingHolder(MinimumThreatPerSplashForKill = 0  MinimumThreatForSupport = 999 ),
         TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 1 MoveOutThreatProbability = 1.0),
 
         TArtilleryStrikeSettingHolder(
-            SupportStrikeRatio = 0.3
             ArtilleryStrikeThreatBonusPerTags =
             [
                 (["Canon_AT"], 100.0),

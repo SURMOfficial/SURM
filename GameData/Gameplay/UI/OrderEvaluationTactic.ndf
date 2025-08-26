@@ -8,7 +8,6 @@ public orderEvaluatorCollectionTactic is TOrderEvaluatorCollectionDescriptor(
         TOrderEvaluatorStop( OrderToken = "Stop"),
         TOrderEvaluatorAny( OrderToken = "AirplaneEvacuate"),
         TOrderEvaluatorChangeAltitude( OrderToken = "ChangeAltitude"),
-        TOrderEvaluatorSpread( OrderToken = "Spread"),
         TOrderEvaluatorAny( OrderToken = "AIDefend"),
         TOrderEvaluatorAny( OrderToken = "AIManageArtillery_CounterBattery"),
         TOrderEvaluatorAny( OrderToken = "AIManageArtillery_Auto"),
@@ -139,7 +138,6 @@ public orderEvaluatorCollectionTactic is TOrderEvaluatorCollectionDescriptor(
         ("Stop", TOrderFeedback()),
         ("AirplaneEvacuate", TOrderFeedback()),
         ("ChangeAltitude", TOrderFeedback()),
-        ("Spread", TOrderFeedback()),
 
         ("AIDefend", TOrderFeedback()),
         ("AIManageArtillery_CounterBattery", TOrderFeedback()),

@@ -90,7 +90,7 @@ is BUCKSliderDescriptor
 
     ElevatorCageAreaName = <ElementName> + 'HorizontalScrollBar/Cage'
     ElevatorButtonName = <ElementName> + 'HorizontalScrollBar/Elevator'
-    ElevatorCageArea = BUCKSensibleAreaDescriptor
+    ElevatorCageArea = BUCKSensitiveAreaDescriptor
     (
         ElementName = <ElementName> + 'HorizontalScrollBar/Cage'
         ComponentFrame = TUIFramePropertyRTTI
@@ -131,7 +131,7 @@ is BUCKSliderDescriptor
             ),
 
             //Curseur
-            BUCKSensibleAreaDescriptor
+            BUCKSensitiveAreaDescriptor
             (
                 ElementName = <ElementName> + 'HorizontalScrollBar/Elevator'
                 ComponentFrame = TUIFramePropertyRTTI

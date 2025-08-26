@@ -219,6 +219,8 @@ BUCKSpecificOutGameAutoMatchMainComponentDescriptor is SpecificModalWindow
             )
         ),
 
+        BUCKListElementSpacer(Magnifiable = 20.0),
+
         BUCKListElementDescriptor
         (
             ComponentDescriptor = SpecificModalDropdown
@@ -228,6 +230,11 @@ BUCKSpecificOutGameAutoMatchMainComponentDescriptor is SpecificModalWindow
                 TextMagnifiableWidth = 350.0
                 DropdownMagnifiableWidth = 450.0
             )
+        ),
+
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = ~/AutomatchIncludePremadeInDeckListButton
         ),
 
         //-------------------------------------------------------------------------------------
@@ -242,6 +249,88 @@ BUCKSpecificOutGameAutoMatchMainComponentDescriptor is SpecificModalWindow
         )
     ]
 )
+
+//-------------------------------------------------------------------------------------
+
+AutomatchIncludePremadeInDeckListButton is BUCKButtonDescriptor
+(
+    ElementName = "IncludePremadeDecksInList"
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 25.0]
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
+    )
+    FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+    IsTogglable = true
+
+    Components =
+    [
+        BUCKListDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                RelativeWidthHeight = [0.0, 1.0]
+            )
+            Axis = ~/ListAxis/Horizontal
+            InterItemMargin = TRTTILength(Magnifiable = 12.0)
+
+            Elements =
+            [
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextureDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            MagnifiableWidthHeight = [16.0, 16.0]
+                            AlignementToAnchor = [0.0, 0.5]
+                            AlignementToFather = [0.0, 0.5]
+                        )
+                        TextureToken = "StyleDeskTexture_CheckBox"
+
+                        HasBorder = true
+                        BorderLineColorToken = "Checkbox/Frame"
+                        BorderThicknessToken = "1"
+                    )
+                ),
+                BUCKListElementDescriptor
+                (
+                    ComponentDescriptor = BUCKTextDescriptor
+                    (
+                        ComponentFrame = TUIFramePropertyRTTI
+                        (
+                            AlignementToAnchor = [0.0, 0.5]
+                            AlignementToFather = [0.0, 0.5]
+                        )
+
+                        ParagraphStyle = TParagraphStyle
+                        (
+                            Alignment = UIText_Center
+                            VerticalAlignment = UIText_VerticalCenter
+                        )
+
+                        BigLineAction = ~/BigLineAction/CutByDots
+
+                        HorizontalFitStyle = ~/FitStyle/FitToContent
+                        VerticalFitStyle = ~/FitStyle/FitToContent
+
+                        TextStyle = "TextStyleEcranMoniteur"
+                        TypefaceToken = "IBM"
+
+                        TextToken = "Auto_Prm"
+                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
+
+                        TextColor = "Blanc"
+                        TextSize = "20"
+                    )
+                ),
+            ]
+        )
+    ]
+)
+
+//-------------------------------------------------------------------------------------
 
 UISpecificOutGameAutoMatchViewDescriptor is TUISpecificOutGameAutoMatchViewDescriptor
 (

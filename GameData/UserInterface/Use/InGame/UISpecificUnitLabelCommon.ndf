@@ -67,7 +67,6 @@ LeavingDistrictChronoDescription is TLeavingDistrictChronoDescription
     ChronoForegroundColor = "Cyan"
 )
 //-------------------------------------------------------------------------------------
-// nom & nb unités d'infanterie
 private template CarriedUnitNameList
 [
     ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
@@ -90,22 +89,20 @@ private template CarriedUnitNameList
     NameAndUnitCountDescription = ~/CarriedNameAndUnitCountDescription
 
     Components =
-    (
-        [
-            // Size will be calculated in cpp
-            BUCKSensibleAreaDescriptor
-            (
-                ElementName = "CarriedUnitNameListSensibleArea"
+    [
+        // Size will be calculated in cpp
+        BUCKSensitiveAreaDescriptor
+        (
+            ElementName = "CarriedUnitNameListSensitiveArea"
 
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    AlignementToFather = [0.5, 1.0]
-                    AlignementToAnchor = [0.5, 1.0]
-                )
-                IsClippable = false
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather = [0.5, 1.0]
+                AlignementToAnchor = [0.5, 1.0]
             )
-        ]
-    )
+            IsClippable = false
+        )
+    ]
 )
 //-------------------------------------------------------------------------------------
 private template CurrentUnitLabelUpperList
@@ -158,9 +155,9 @@ private template CurrentUnitLabelUpperList
     (
         [
             // Size will be calculated in cpp
-            BUCKSensibleAreaDescriptor
+            BUCKSensitiveAreaDescriptor
             (
-                ElementName = "UnitNameListSensibleArea"
+                ElementName = "UnitNameListSensitiveArea"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (

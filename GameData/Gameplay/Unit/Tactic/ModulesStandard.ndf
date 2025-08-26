@@ -192,59 +192,86 @@ DistrictSelectionModuleDescriptor is TSelectionModuleDescriptor
     HasHighlightShader  = True
 )
 
-public FXState is TBaseClass
-(
-    // Doit être synchro avec TActOfRuseBuildingAnimationStates/Type
-    // (BuildingAnimationModule_WarGame.h)
-
-    Idle            is 0x00000001
-    OnFire          is 0x00000002
-
-    // Merci de mettre à jour ce champ au besoin
-    All is Idle + OnFire
-)
-
 InflammableModuleDescriptorDistrict  is TInflammableModuleDescriptor
 (
-    FireFxStateId                   = ~/FXState/OnFire
-    IdleFxStateId                   = ~/FXState/Idle
 )
 
-template BuildingCadavreModuleDescriptor [
-    CadavreDuration,
-] is TCadavreModuleDescriptor
+EKillMode is TBaseClass
 (
-    KillAsVehicule = False
-    KillAsInfanterie = False
-    KillAsHelico = False
-    KillAsAirplane = False
-    KillAsBatiment = True
-    CadavreDuration = <CadavreDuration>
+    Vehicle  is 0
+    Infantry is 1
+    Helico   is 2
+    Airplane is 3
+    Building is 4
+)
+
+BuildingCadavreModuleDescriptor is TCadavreModuleDescriptor
+(
+    KillMode = EKillMode/Building
+    CadavreDuration = ~/CadavreDurationApresFeu_Batiment
     CadavreFireDurationMin = ~/CadavrePeriodeEnFeu_Minimum_Batiment
     CadavreFireDurationMax = ~/CadavrePeriodeEnFeu_Maximum_Batiment
-    FadingDuration = 6
     DeathExplosionAmmo = nil
 )
 
 template UnitCadavreModuleDescriptor [
-    KillAsVehicule : bool = false,
-    KillAsInfanterie : bool = false,
-    KillAsHelico : bool = false,
-    KillAsAirplane : bool = false,
+    KillMode : int,
     CadavreDuration,
     DeathExplosionAmmo,
 ] is TCadavreModuleDescriptor
 (
-    KillAsVehicule = <KillAsVehicule>
-    KillAsInfanterie = <KillAsInfanterie>
-    KillAsHelico = <KillAsHelico>
-    KillAsAirplane = <KillAsAirplane>
-    KillAsBatiment = False
+    KillMode = <KillMode>
     CadavreDuration = <CadavreDuration>
     CadavreFireDurationMin = ~/CadavrePeriodeEnFeu_Minimum
     CadavreFireDurationMax = ~/CadavrePeriodeEnFeu_Maximum
-    FadingDuration = 1
     DeathExplosionAmmo = <DeathExplosionAmmo>
+)
+
+template UnitCadavreGeneratorModuleDescriptor
+[
+    KillMode : int,
+    CadavreDuration,
+    DeathExplosionAmmo,
+] is TCadavreGeneratorModuleDescriptor
+(
+    CadavreModuleDescriptors =
+    [
+        ~/EmptyTagsModuleDescriptor,
+        ~/CadavreFlagsModuleDescriptor,
+        ~/UnitCadavrePositionModuleDescriptor,
+        UnitCadavreModuleDescriptor
+        (
+            KillMode = <KillMode>
+            CadavreDuration = <CadavreDuration>
+            DeathExplosionAmmo = <DeathExplosionAmmo>
+        ),
+    ]
+)
+
+template BuildingCadavreGeneratorModuleDescriptor[] is TCadavreGeneratorModuleDescriptor
+(
+    CadavreModuleDescriptors =
+    [
+        ~/CadavreFlagsModuleDescriptor,
+        ~/BuildingCadavrePositionModuleDescriptor,
+        ~/BuildingCadavreModuleDescriptor,
+    ]
+)
+
+template DistrictCadavreGeneratorModuleDescriptor[] is TCadavreGeneratorModuleDescriptor
+(
+    CadavreModuleDescriptors =
+    [
+        ~/DistrictTagsModuleDescriptor,
+        ~/DistrictFlagsModuleDescriptor,
+        ~/DistrictCadavrePositionModuleDescriptor,
+        TIAStratModuleDescriptor
+        (
+            DatabaseId = 1
+            GameplayBehavior = EGameplayBehavior/Nothing
+        ),
+        ~/BuildingCadavreModuleDescriptor,
+    ]
 )
 
 FOBBuildingModuleDescriptor is TWargameBuildingModuleDescriptor
@@ -260,7 +287,7 @@ BuildingDescriptorTagsModuleDescriptor is TTagsModuleDescriptor
 
 DistrictTagsModuleDescriptor is TTagsModuleDescriptor
 (
-    TagSet = [ "Standard" ]
+    TagSet = [ "District" ]
 )
 
 DistrictModuleDescriptor is TDistrictModuleDescriptor()

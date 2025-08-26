@@ -230,7 +230,7 @@ is TBUCKZoomableContainerDescriptor
 
     // -- BUCKContainerDescriptor
 
-    SensibleAreaName = <ElementName> + 'SensibleArea'
+    SensitiveAreaName = <ElementName> + 'SensitiveArea'
     ZoomableContentName = <ElementName> + 'ZoomableContent'
     NonZoomableContentName = <ElementName> + 'NonZoomableContent'
     NonZoomableElementsName = <NonZoomableElementsName>
@@ -259,9 +259,9 @@ is TBUCKZoomableContainerDescriptor
 
             Components = <NonZoomableElements>
         ),
-        BUCKSensibleAreaDescriptor
+        BUCKSensitiveAreaDescriptor
         (
-            ElementName = <ElementName> + 'SensibleArea'
+            ElementName = <ElementName> + 'SensitiveArea'
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]

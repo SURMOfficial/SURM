@@ -36,11 +36,11 @@ template BUCKOneTabDescriptor
     Components : LIST<TBUCKContainerDescriptor> = [],
     // -- BUCKContainerDescriptor
 
-    // ++ BUCKSensibleAreaDescriptor
+    // ++ BUCKSensitiveAreaDescriptor
     MaskEvents : bool = true,                                           // Par défaut on masque les évenements
     IgnoreMask : bool = false,
     AreaShape : int = ~/AreaShape/Rect,
-    // -- BUCKSensibleAreaDescriptor
+    // -- BUCKSensitiveAreaDescriptor
 
     // ++ BUCKButtonDescriptor
     // IsTogglable : bool = false,                                      // Les Tabs sont forcément togglable
@@ -97,11 +97,11 @@ is TBUCKOneTabDescriptor
     Components = <Components>
     // -- BUCKContainerDescriptor
 
-    // ++ BUCKSensibleAreaDescriptor
+    // ++ BUCKSensitiveAreaDescriptor
     MaskEvents = <MaskEvents>
     IgnoreMask = <IgnoreMask>
     AreaShape = <AreaShape>
-    // -- BUCKSensibleAreaDescriptor
+    // -- BUCKSensitiveAreaDescriptor
 
     // ++ BUCKButtonDescriptor
     IsTogglable = true

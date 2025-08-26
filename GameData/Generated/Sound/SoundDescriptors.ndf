@@ -3207,6 +3207,65 @@ export SoundHappening_FULDA_73mm_BMP1 is TSoundHappening
 )
 
 
+export Sound_FULDA_75mm_AMX13_Mle51 is TSoundSet
+(
+    Items = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Canon_Gros
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Canon/90mm_canon_tir_M48_1.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Canon_Gros
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Canon/90mm_canon_tir_M48_2.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Canon_Gros
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Canon/90mm_canon_tir_M48_3.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Canon_Gros
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Canon/90mm_canon_tir_M48_4.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Canon_Gros
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Canon/90mm_canon_tir_M48_5.wav"
+            )
+            UseSpecialLoop = False
+        ),
+    ]
+)
+
+export SoundHappening_FULDA_75mm_AMX13_Mle51 is TSoundHappening
+(
+    SoundDescList = Sound_FULDA_75mm_AMX13_Mle51
+    Volume = 2
+)
+
+
 export Sound_FULDA_76mm_L23A1 is TSoundSet
 (
     Items = 
@@ -7652,6 +7711,65 @@ export SoundHappening_FULDA_M16_Burst_3_Rounds is TSoundHappening
 )
 
 
+export Sound_FULDA_M1919 is TSoundSet
+(
+    Items = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/M1919_mitrailleuse_1.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/M1919_mitrailleuse_2.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/M1919_mitrailleuse_3.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/M1919_mitrailleuse_4.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/M1919_mitrailleuse_5.wav"
+            )
+            UseSpecialLoop = False
+        ),
+    ]
+)
+
+export SoundHappening_FULDA_M1919 is TSoundHappening
+(
+    SoundDescList = Sound_FULDA_M1919
+    Volume = 1
+)
+
+
 export Sound_FULDA_M197_Gatling is TSoundSet
 (
     Items = 
@@ -8650,6 +8768,65 @@ export Sound_FULDA_MG3_Firing is TSoundSet
 export SoundHappening_FULDA_MG3_Firing is TSoundHappening
 (
     SoundDescList = Sound_FULDA_MG3_Firing
+    Volume = 1
+)
+
+
+export Sound_FULDA_MG42_Firing is TSoundSet
+(
+    Items = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/MG42_mitrailleuse_rafale_longue_1.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/MG42_mitrailleuse_rafale_longue_2.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/MG42_mitrailleuse_rafale_longue_3.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/MG42_mitrailleuse_rafale_longue_4.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Mitrailleuse_legere
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/MMG/MG42_mitrailleuse_rafale_longue_5.wav"
+            )
+            UseSpecialLoop = False
+        ),
+    ]
+)
+
+export SoundHappening_FULDA_MG42_Firing is TSoundHappening
+(
+    SoundDescList = Sound_FULDA_MG42_Firing
     Volume = 1
 )
 
@@ -11720,6 +11897,74 @@ export SoundHappening_FULDA_YaKB is TSoundHappening
 (
     SoundDescList = Sound_FULDA_YaKB
     Volume = 2
+)
+
+
+export Sound_FULDA_Z70B_Burst is TSoundSet
+(
+    Items = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Z70B_firing_burst_01.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Z70B_firing_burst_02.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Z70B_firing_burst_03.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Z70B_firing_burst_04.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Z70B_firing_burst_05.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Z70B_firing_burst_06.wav"
+            )
+            UseSpecialLoop = False
+        ),
+    ]
+)
+
+export SoundHappening_FULDA_Z70B_Burst is TSoundHappening
+(
+    SoundDescList = Sound_FULDA_Z70B_Burst
+    Volume = 1
 )
 
 

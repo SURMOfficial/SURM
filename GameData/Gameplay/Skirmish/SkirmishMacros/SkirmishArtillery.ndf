@@ -17,21 +17,20 @@ is TMacroActionDescriptor_Artillery_Specific
     ParametresDeMission =
     [
         <GenerationSettingHolder>,
-        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 4417 ArtilleryUpdateOffsetGRU = 1325),
-        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 30 MinimumThreatPerSplashForSupport = 20 ),
-        TArtilleryThreatPerSplashSettingHolder(DifficultyList = [IADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 20 MinimumThreatPerSplashForSupport = 10),
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 SupportZoneMaxRangeGRU = 6310),
+        TArtilleryStrikeThreatSettingHolder(MinimumThreatPerSplashForKill = 30 MinimumThreatForSupport = 200 ),
+        TArtilleryStrikeThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 20 MinimumThreatForSupport = 100),
         TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 10 MoveOutThreatProbability = 0.1),
         TArtilleryMoveOutThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] ThreatThresholdValue = 10 MoveOutThreatProbability = 1),
         TMacroActionProductionSettingHolder(PoolModelList = <PoolModelList> DistanceToOptimumStartDuringDeploymentGRU = 1060),
         TArtilleryStrikeSettingHolder(
-            SupportStrikeRatio = 0.5
             ArtilleryStrikeThreatBonusPerTags =
             [
                 (["Canon_AT"], 2.0),
                 (["Canon_AA"], 1.5),
                 (["Infanterie_Standard"], 1.5),
                 (["Infanterie_Spec_Defense"], 2.0),
-                (["Artillerie"], 2.0),
+                // (["Artillerie"], 2.0),
                 (["Vehicule_Logistique"], 2.0),
                 (["Vehicule_SuperCMD"], 2.0),
                 (["Infanterie"], 1.5),
@@ -62,8 +61,8 @@ export Artillery_Sniper is TMacroActionDescriptor_Artillery_Specific
     ParametresDeMission =
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
-        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 2120 ArtilleryUpdateOffsetGRU = 0),
-        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 50 MinimumThreatPerSplashForSupport = 75),
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 SupportZoneMaxRangeGRU = 3029),
+        TArtilleryStrikeThreatSettingHolder(MinimumThreatPerSplashForKill = 50 MinimumThreatForSupport = 750),
         TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 10 MoveOutThreatProbability = 0.03 ), // 50% à 17s
         TMacroActionProductionSettingHolder(ProdProperties = [TProdProperty_LaunchAsSoonAsPossible] PoolModelList = [~/Pool_Artillery_Sniper] DistanceToOptimumStartDuringDeploymentGRU = 1060),
         TArtilleryStrikeSettingHolder(
@@ -73,7 +72,7 @@ export Artillery_Sniper is TMacroActionDescriptor_Artillery_Specific
                 (["Canon_AA"], 1.5),
                 (["Infanterie_Standard"], 1.5),
                 (["Infanterie_Spec_Defense"], 2.0),
-                (["Artillerie"], 3),
+                // (["Artillerie"], 3),
                 (["Vehicule_Logistique"], 2.0),
                 (["Vehicule_SuperCMD"], 2.0),
                 (["Infanterie"], 1.5),
@@ -101,12 +100,12 @@ export Artillery_Support is TMacroActionDescriptor_Artillery_Specific
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
         TCoordinationSettingHolder(CoordinationType = ESupportingStatus/IsSupport),
-        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 3534 ArtilleryUpdateOffsetGRU = 1325),
-        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 20  MinimumThreatPerSplashForSupport = 15 ),
-                TArtilleryThreatPerSplashSettingHolder(DifficultyList = [IADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 15 MinimumThreatPerSplashForSupport = 10),
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 SupportZoneMaxRangeGRU = 5049),
+        TArtilleryStrikeThreatSettingHolder(MinimumThreatPerSplashForKill = 20  MinimumThreatForSupport = 150 ),
+        TArtilleryStrikeThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 15 MinimumThreatForSupport = 100),
         TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 10 MoveOutThreatProbability = 0.1),
         TArtilleryMoveOutThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] ThreatThresholdValue = 10 MoveOutThreatProbability = 1),
-        TArtilleryStrikeSettingHolder(SupportStrikeRatio = 0.5
+        TArtilleryStrikeSettingHolder(
             ArtilleryStrikeThreatBonusPerTags =
             [
                 (["Canon_AT"], 2.0),
@@ -114,7 +113,7 @@ export Artillery_Support is TMacroActionDescriptor_Artillery_Specific
                 (["Infanterie_Standard"], 2.5),
                 (["Infanterie_Spec_Defense"], 2.5),
                 (["Infanterie"], 2.0),
-                (["Artillerie"], 1.5),
+                // (["Artillerie"], 1.5),
                 (["Vehicule_Logistique"], 0.5),
                 (["Vehicule"], 1.0),
                 (["Char"], 0.5),
@@ -135,8 +134,8 @@ is TMacroActionDescriptor_Artillery_Specific
     ParametresDeMission =
     [
         TGenerationSettingHolder(GenerationType = TGenerationType_FixedSize NumberLaunchBasedOnGenerationType = 1),
-        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 ArtilleryPositionOffsetGRU = 2120 ArtilleryUpdateOffsetGRU = 0),
-        TArtilleryThreatPerSplashSettingHolder(MinimumThreatPerSplashForKill = 55 MinimumThreatPerSplashForSupport = 999),
+        TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 SupportZoneMaxRangeGRU = 3029),
+        TArtilleryStrikeThreatSettingHolder(MinimumThreatPerSplashForKill = 55 MinimumThreatForSupport = 999),
         TArtilleryMoveOutThreatSettingHolder(ThreatThresholdValue = 10 MoveOutThreatProbability = 0.1),
         TArtilleryMoveOutThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] ThreatThresholdValue = 10 MoveOutThreatProbability = 1),
 
@@ -151,7 +150,7 @@ is TMacroActionDescriptor_Artillery_Specific
                 (["Infanterie_Standard"], 2.5),
                 (["Infanterie_Spec_Defense"], 2.5),
                 (["Infanterie"], 2.0),
-                (["Artillerie"], 3.0),
+                // (["Artillerie"], 3.0),
                 (["Vehicule_Logistique"], 0.5),
                 (["Vehicule"], 0.5),
                 (["Char"], 0.5),
@@ -168,7 +167,7 @@ is TMacroActionDescriptor_Artillery_Specific
                 (["Infanterie_Standard"], 2.5),
                 (["Infanterie_Spec_Defense"], 2.5),
                 (["Infanterie"], 2.0),
-                (["Artillerie"], 1.5),
+                // (["Artillerie"], 1.5),
                 (["Vehicule_Logistique"], 0.5),
                 (["Vehicule"], 0.5),
                 (["Char"], 0.5),
@@ -199,6 +198,7 @@ export Pool_Artillery_TriggerHappy is TPoolModel
         IndexPriorityOverPrice = true
         PriceComparisonMethod = EPriceComparatorType/Random
         TagsPriority = [
+            "Forward_Observer",
             "Artillerie_Longue_Portee",
             "Artillerie_Courte_Portee",
         ]
@@ -216,6 +216,7 @@ export Pool_Artillery_Support is TPoolModel
         IndexPriorityOverPrice = true
         PriceComparisonMethod = EPriceComparatorType/Cheapest
         TagsPriority = [
+            "Forward_Observer",
             "Artillerie_Courte_Portee",
             "Artillerie_Longue_Portee",
             "Artillerie_Observateur",
@@ -234,6 +235,7 @@ export Pool_Artillery_Expensive is TPoolModel
         IndexPriorityOverPrice = false
         PriceComparisonMethod = EPriceComparatorType/Random
         TagsPriority = [
+            "Forward_Observer",
             "Artillerie_MLRS",
             "Artillerie_Observateur",
         ]
@@ -260,6 +262,7 @@ export Pool_Artillery_Sniper is TPoolModel
         Nb = 1
         IndexPriorityOverPrice = true
         TagsPriority = [
+            "Forward_Observer",
             "Artillerie_Longue_Portee",
             "Artillerie",
         ]

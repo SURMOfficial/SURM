@@ -122,9 +122,9 @@ private UnitLabelUnitBUCKComponentDescriptor is BUCKLocalLayerContainerDescripto
     ]
 )
 //-------------------------------------------------------------------------------------
-private CurrentUnitIconAndRightLabel is BUCKSensibleAreaDescriptor
+private CurrentUnitIconAndRightLabel is BUCKSensitiveAreaDescriptor
 (
-    ElementName = "UnitIconSensibleArea"
+    ElementName = "UnitIconSensitiveArea"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -247,7 +247,6 @@ private UpperLabel is BUCKListDescriptor
     Axis = ~/ListAxis/Vertical
     ClipContent = false
 
-    // Penser a modifier la taille en Pixel du LabelUnitBUCKComponent si on aggrandit ce composant !
     Elements =
     [
         BUCKListElementDescriptor

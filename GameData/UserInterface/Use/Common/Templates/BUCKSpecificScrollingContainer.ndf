@@ -81,7 +81,7 @@ is BUCKScrollingContainerDescriptor
         LastMargin = TRTTILength(Magnifiable = 4.0)
         ElevatorCageAreaName = <ElementName> + '/VerticalScrollBar/Cage'
         ElevatorButtonName = <ElementName> + '/VerticalScrollBar/Elevator'
-        ElevatorCageArea = BUCKSensibleAreaDescriptor
+        ElevatorCageArea = BUCKSensitiveAreaDescriptor
         (
             ElementName = <ElementName> + '/VerticalScrollBar/Cage'
             ComponentFrame = TUIFramePropertyRTTI
@@ -96,7 +96,7 @@ is BUCKScrollingContainerDescriptor
 
             Components =
             [
-                BUCKSensibleAreaDescriptor
+                BUCKSensitiveAreaDescriptor
                 (
                     ElementName = <ElementName> + '/VerticalScrollBar/Elevator'
                     ComponentFrame = TUIFramePropertyRTTI
@@ -137,7 +137,7 @@ is BUCKScrollingContainerDescriptor
         LastMargin = TRTTILength(Magnifiable = 4.0)
         ElevatorCageAreaName = <ElementName> + '/HorizontalScrollBar/Cage'
         ElevatorButtonName = <ElementName> + '/HorizontalScrollBar/Elevator'
-        ElevatorCageArea = BUCKSensibleAreaDescriptor
+        ElevatorCageArea = BUCKSensitiveAreaDescriptor
         (
             ElementName = <ElementName> + '/HorizontalScrollBar/Cage'
             ComponentFrame = TUIFramePropertyRTTI
@@ -152,7 +152,7 @@ is BUCKScrollingContainerDescriptor
 
             Components =
             [
-                BUCKSensibleAreaDescriptor
+                BUCKSensitiveAreaDescriptor
                 (
                     ElementName = <ElementName> + '/HorizontalScrollBar/Elevator'
                     ComponentFrame = TUIFramePropertyRTTI

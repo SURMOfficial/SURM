@@ -452,14 +452,6 @@ private AffichageFuelOrSupply is BUCKContainerDescriptor
 
                     TextColor = "BlancEquipe"
                     TextSize = "12"
-
-                    // Hints
-                    Hint = BUCKSpecificHintableArea
-                    (
-                        ElementName = 'AffichageFuelOrSupplyHintText'
-                        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
-                        HintBodyToken = 'pi_fuel'
-                    )
                 )
             ),
             BUCKListElementDescriptor
@@ -492,13 +484,6 @@ private AffichageFuelOrSupply is BUCKContainerDescriptor
 
                     TextColor =  "Blanc"
                     TextSize = "12"
-
-                    Hint = BUCKSpecificHintableArea
-                    (
-                        ElementName = 'RemainingFuelOrSupplyHintText'
-                        DicoToken = ~/LocalisationConstantes/dico_interface_ingame
-                        HintBodyToken = 'pi_fuel'
-                    )
                 )
             ),
         ]
@@ -1093,10 +1078,7 @@ UISpecificUnitSelectionPanelViewDescriptor is TUISpecificUnitSelectionPanelViewD
     ]
 
     FuelToken = "UIPA_FUEL"
-    FuelHintToken = "pi_fuel"
-
     SupplyToken = "UIPA_SUPLY"
-    SupplyHintToken = "pi_supply"
 
     SupplyButtonData =
     [

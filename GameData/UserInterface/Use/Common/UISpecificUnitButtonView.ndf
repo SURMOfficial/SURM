@@ -82,7 +82,7 @@ is BUCKDraggableContainerDescriptor
             ForegroundComponents =
             [
                 // Sensible area used to manage the additional unit's container's display
-                ~/UnitButtonUnitContainerGlobalSensibleArea,
+                ~/UnitButtonUnitContainerGlobalSensitiveArea,
 
                 BUCKContainerDescriptor
                 (
@@ -849,9 +849,9 @@ private UnitButtonAdditionalUnitNameText is BUCKTextDescriptor
 
     Components =
     [
-        BUCKSensibleAreaDescriptor
+        BUCKSensitiveAreaDescriptor
         (
-            ElementName = 'UnitAdditionnalUnitSensibleArea'
+            ElementName = 'UnitAdditionnalUnitSensitiveArea'
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
@@ -903,9 +903,9 @@ is BUCKButtonDescriptor
 
     Components =
     [
-        BUCKSensibleAreaDescriptor
+        BUCKSensitiveAreaDescriptor
         (
-            ElementName = 'UnitAloneButtonSensibleArea'
+            ElementName = 'UnitAloneButtonSensitiveArea'
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
@@ -1478,13 +1478,13 @@ private UnitButtonUnitAvailabilityFeedback is BUCKContainerDescriptor
 )
 
 // -------------------------------------------------------------------------------------------------
-// UnitContainerGlobalSensibleArea
+// UnitContainerGlobalSensitiveArea
 // -------------------------------------------------------------------------------------------------
 
 // Sensible area used to manage the additional unit's container's display
-private UnitButtonUnitContainerGlobalSensibleArea is BUCKSensibleAreaDescriptor
+private UnitButtonUnitContainerGlobalSensitiveArea is BUCKSensitiveAreaDescriptor
 (
-    ElementName = 'UnitContainerGlobalSensibleArea'
+    ElementName = 'UnitContainerGlobalSensitiveArea'
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]

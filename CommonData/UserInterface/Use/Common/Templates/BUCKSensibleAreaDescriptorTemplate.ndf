@@ -1,4 +1,4 @@
-template BUCKSensibleAreaDescriptor
+template BUCKSensitiveAreaDescriptor
 [
     // ++ BUCKContainerDescriptor
     ElementName : string = "",
@@ -40,7 +40,7 @@ template BUCKSensibleAreaDescriptor
     IgnoreMask : bool = false,                                  // Définit si le composant ignore ou non le fait qu'un évènement soit masqué
     AreaShape : int = ~/AreaShape/Rect,
 ]
-is TBUCKSensibleAreaDescriptor
+is TBUCKSensitiveAreaDescriptor
 (
     // ++ BUCKContainerDescriptor
     ElementName = <ElementName>

@@ -951,7 +951,11 @@ FxRebondObusGros is ImpactWrapper( Action = $/GFX/GameFx/fx_rebond_obus_gros )
 FxRebondObusMoyen is ImpactWrapper( Action = $/GFX/GameFx/fx_rebond_obus_moyen )
 FxRebondObusPetit is ImpactWrapper( Action = $/GFX/GameFx/fx_rebond_obus_petit )
 
-AllImpactHappenings is MAP[
+unnamed TMimeticWorldHappeningRegistration
+(
+    MimeticWorldDescriptor = $/DepictionCore/MimeticWorldDescriptor
+    Happenings = MAP
+    [
   ('Artillerie2A18122Mm', TImpactHappening( Happenings = MAP[
       ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolHE122Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
       ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHeTresgros2, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),
@@ -2421,6 +2425,7 @@ AllImpactHappenings is MAP[
       ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactDCAM168GatlingVehiculeAir_, $/GFX/Sound/SoundHappening_FULDA_Impacts_DCA ] ) ),
       ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Impacts_DCA ),
       ( EImpactSurface/Ricochet , TCompositeHappening( SubHappenings = [ OrientationWrapperFxImpactVehiculeM197Gatling, $/GFX/Sound/SoundHappening_ImpactObus_petitVehicule ] ) ),
-    ])),
-]
+        ])),
+    ]
+)
 

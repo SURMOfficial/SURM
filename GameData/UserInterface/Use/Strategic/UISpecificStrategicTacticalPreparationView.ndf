@@ -236,82 +236,83 @@ PawnMainList is BUCKListDescriptor
 
 SmartGroupDisplayerContainer is BUCKContainerDescriptor
 (
-    ElementName = "SmartGroupDisplayerContainerForTacticalPreparation"
-
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 220.0]
+        MagnifiableWidthHeight = [0.0, 305.0]
     )
+
     HasBackground = true
-    BackgroundBlockColorToken = 'SM_Ebony'
-    FitStyle = ~/ContainerFitStyle/FitToLargestBetweenChildAndParentVertically
+    BackgroundBlockColorToken = "SM_Ebony"
+
+    ClipContent = true
+
+    Components =
+    [
+        BUCKContainerDescriptor
+        (
+            ElementName = "SmartGroupDisplayerContainerForTacticalPreparation"
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToAnchor = [0.5, 0.5]
+                AlignementToFather = [0.5, 0.5]
+            )
+            FitStyle = ~/ContainerFitStyle/FitToContent
+        ),
+    ]
 )
 
 //------------------------------------------------------------------------------
 
-TacticalPreparationCenterContainer is BUCKListDescriptor
-(
-    ElementName = "CenterContainerList"
-
-    ComponentFrame = TUIFramePropertyRTTI
+TacticalPreparationCenterContainer is
+[
+    BUCKListElementDescriptor
     (
-        RelativeWidthHeight = [1.0, 0.0]
-    )
+        ComponentDescriptor = ~/SmartGroupDisplayerContainer
+    ),
+    BUCKListElementDescriptor
+    (
+        ComponentDescriptor = ~/Title_bataillonDetails
+    ),
+    BUCKListElementDescriptor
+    (
+        ComponentDescriptor = BUCKSpecificScrollingContainerDescriptor
+        (
+            ElementName = "PawnsScrollingContainer"
 
-    Axis = ~/ListAxis/Vertical
-
-    Elements =
-    [
-        BUCKListElementDescriptor
-        (
-            MinSize = TRTTILength( Magnifiable = 305.0 )
-            ComponentDescriptor = ~/SmartGroupDisplayerContainer
-        ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = ~/Title_bataillonDetails
-        ),
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = BUCKSpecificScrollingContainerDescriptor
+            ComponentFrame = TUIFramePropertyRTTI
             (
-                ElementName = "PawnsScrollingContainer"
-
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    RelativeWidthHeight = [1.0, 0.0]
-                    MagnifiableWidthHeight = [0.0, 381.0]
-                )
-
-                ExternalScrollbar = true
-                HasVerticalScrollbar = true
-
-                VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
-                (
-                    MagnifiableWidthHeight = [10.0, 0.0]
-                    MagnifiableOffset = [2.0, 0.0]
-                    AlignementToAnchor = [1.0, 0.0]
-                    AlignementToFather = [1.0, 0.0]
-                )
-
-                Components =
-                [
-                    ~/PawnMainList
-                ]
+                RelativeWidthHeight = [1.0, 0.0]
+                MagnifiableWidthHeight = [0.0, 381.0]
             )
-        ),
-        // Filler
-        BUCKListElementDescriptor
-        (
-            ExtendWeight = 1.0
-            ComponentDescriptor = BUCKContainerDescriptor
+
+            ExternalScrollbar = true
+            HasVerticalScrollbar = true
+
+            VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
             (
-                ComponentFrame = TUIFramePropertyRTTI()
+                MagnifiableWidthHeight = [10.0, 0.0]
+                MagnifiableOffset = [2.0, 0.0]
+                AlignementToAnchor = [1.0, 0.0]
+                AlignementToFather = [1.0, 0.0]
             )
-        ),
-    ]
-)
+
+            Components =
+            [
+                ~/PawnMainList
+            ]
+        )
+    ),
+    // Filler
+    BUCKListElementDescriptor
+    (
+        ExtendWeight = 1.0
+        ComponentDescriptor = BUCKContainerDescriptor
+        (
+            ComponentFrame = TUIFramePropertyRTTI()
+        )
+    ),
+]
 
 //------------------------------------------------------------------------------
 TitleList is BUCKListDescriptor
@@ -324,12 +325,12 @@ TitleList is BUCKListDescriptor
     )
 
     Axis = ~/ListAxis/Vertical
-    FirstMargin = TRTTILength( Magnifiable = 30.0)
-    InterItemMargin = TRTTILength( Magnifiable = 5.0)
-    LastMargin = TRTTILength( Magnifiable = 10.0)
+    FirstMargin = TRTTILength(Magnifiable = 30.0)
+    InterItemMargin = TRTTILength(Magnifiable = 5.0)
+    LastMargin = TRTTILength(Magnifiable = 10.0)
 
     HasBackground = true
-    BackgroundBlockColorToken = 'SM_Noir_80'
+    BackgroundBlockColorToken = "SM_Noir_80"
 
     Elements =
     [
@@ -600,9 +601,9 @@ template StrategicTacticalPreparationInfosLine
 template TacticalPreparationCategoryLine
 [
     TextToken : string,
-    HintExtendedToken : string = '',
-    HintTitleToken : string = '',
-    HintBodyToken : string = '',
+    HintExtendedToken : string = "",
+    HintTitleToken : string = "",
+    HintBodyToken : string = "",
 ] is BUCKTextDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
@@ -767,7 +768,7 @@ SliderTitles is BUCKListDescriptor
                 Axis = ~/ListAxis/Vertical
                 BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-                InterItemMargin = TRTTILength( Magnifiable = 4.0 )
+                InterItemMargin = TRTTILength(Magnifiable = 4.0)
 
                 Elements =
                 [
@@ -795,7 +796,7 @@ SliderTitles is BUCKListDescriptor
                             TextStyle = "Default"
                             TypefaceToken = "Eurostyle"
 
-                            TextToken = 'PrC_in1'
+                            TextToken = "PrC_in1"
                             TextDico = ~/LocalisationConstantes/dico_interface_ingame
                         )
                     ),
@@ -1060,9 +1061,12 @@ BUCKSpecificStrategicTacticalPreparationMainComponentDescriptor is BUCKListDescr
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 0.0]
+        AlignementToFather = [0.0, 1.0]
+        AlignementToAnchor = [0.0, 1.0]
     )
 
     Axis = ~/ListAxis/Vertical
+    LastMargin = TRTTILength(Magnifiable = 5.0)
 
     HasBackground = true
     BackgroundBlockColorToken = "SM_Ebony"
@@ -1076,7 +1080,7 @@ BUCKSpecificStrategicTacticalPreparationMainComponentDescriptor is BUCKListDescr
             (
                 AlignementToFather = [1.0, 0.5]
                 AlignementToAnchor = [1.0, 0.5]
-                MagnifiableOffset = [-4,0]
+                MagnifiableOffset = [-4.0, 0.0]
             )
             FitStyle = ~/ContainerFitStyle/FitToContent
         )
@@ -1099,10 +1103,10 @@ BUCKSpecificStrategicTacticalPreparationMainComponentDescriptor is BUCKListDescr
                 )
 
                 HasBackground = true
-                BackgroundBlockColorToken = 'SM_RifleGreen'
+                BackgroundBlockColorToken = "SM_RifleGreen"
 
                 HasBorder = true
-                BorderThicknessToken = '1'
+                BorderThicknessToken = "1"
                 BorderLineColorToken = "SM_Noir"
                 BordersToDraw = ~/TBorderSide/Bottom
 
@@ -1116,11 +1120,9 @@ BUCKSpecificStrategicTacticalPreparationMainComponentDescriptor is BUCKListDescr
         (
             ComponentDescriptor = Title_companieDetails
         ),
-        BUCKListElementDescriptor
-        (
-            ExtendWeight = 1.0
-            ComponentDescriptor = ~/TacticalPreparationCenterContainer
-        ),
+    ]
+    + ~/TacticalPreparationCenterContainer +
+    [
         BUCKListElementDescriptor
         (
             ComponentDescriptor = BUCKContainerDescriptor
@@ -1128,54 +1130,31 @@ BUCKSpecificStrategicTacticalPreparationMainComponentDescriptor is BUCKListDescr
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [1.0, 0.0]
-                    MagnifiableWidthHeight = [0.0, 16.0]
+                    MagnifiableWidthHeight = [0.0, 6.0]
                 )
             )
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKListDescriptor
+            ComponentDescriptor = ConfirmButton
             (
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    AlignementToAnchor = [0.5, 0.0]
-                    AlignementToFather = [0.5, 0.0]
-                )
-
-                BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
-                Axis = ~/ListAxis/Horizontal
-
-                FirstMargin = TRTTILength( Magnifiable = 5.0)
-                InterItemMargin = TRTTILength( Magnifiable = 5.0)
-                LastMargin = TRTTILength( Magnifiable = 5.0)
-
-                Elements =
-                [
-                    BUCKListElementDescriptor
-                    (
-                        ComponentDescriptor = ConfirmButton
-                        (
-                            TextToken = 'BtnBattle'
-                            ElementName = 'StartButton'
-                            Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
-                            ButtonMagnifiableWidthHeight = [175.0, 35.0]
-                            ButtonAlignementToAnchor = [0.0, 0.0]
-                            ButtonAlignementToFather = [0.0, 0.0]
-                            ButtonMagnifiableOffset = [0.0, -10.0]
-                            TextTypefaceToken = "Liberator"
-                            TextColorToken = "tampon_vert"
-                            BorderLineColorToken = "tampon_vert"
-                            HasBackground = false
-                            BackgroundBlockColorToken = "loginBoutonBackground_cyan"
-                            TextSizeToken = "32"
-                            BorderThicknessToken = "3"
-                            BigLineAction = ~/BigLineAction/ResizeFont
-                            TextPadding = TRTTILength4( Magnifiable = [5.0, 0.0, 5.0, 0.0] )
-                            TextDico = ~/LocalisationConstantes/dico_interface_ingame
-                            LeftClickSound = ~/SoundEvent_SteelmanTacticPrepStart
-                        )
-                    ),
-                ]
+                TextToken = "BtnBattle"
+                ElementName = "StartButton"
+                Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
+                ButtonMagnifiableWidthHeight = [175.0, 35.0]
+                ButtonAlignementToAnchor = [0.5, 0.0]
+                ButtonAlignementToFather = [0.5, 0.0]
+                TextTypefaceToken = "Liberator"
+                TextColorToken = "tampon_vert"
+                BorderLineColorToken = "tampon_vert"
+                HasBackground = false
+                BackgroundBlockColorToken = "loginBoutonBackground_cyan"
+                TextSizeToken = "32"
+                BorderThicknessToken = "3"
+                BigLineAction = ~/BigLineAction/ResizeFont
+                TextPadding = TRTTILength4( Magnifiable = [5.0, 0.0, 5.0, 0.0] )
+                TextDico = ~/LocalisationConstantes/dico_interface_ingame
+                LeftClickSound = ~/SoundEvent_SteelmanTacticPrepStart
             )
         ),
     ]
@@ -1183,7 +1162,7 @@ BUCKSpecificStrategicTacticalPreparationMainComponentDescriptor is BUCKListDescr
 
 //------------------------------------------------------------------------------
 
-TacticalPreparationTopContainer is BUCKSensibleAreaDescriptor
+TacticalPreparationTopContainer is BUCKSensitiveAreaDescriptor
 (
     ElementName = "TacticalPreparationTopContainer"
 

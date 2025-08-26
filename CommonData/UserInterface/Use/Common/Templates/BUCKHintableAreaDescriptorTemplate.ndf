@@ -36,11 +36,11 @@ template BUCKHintableAreaDescriptor
     Components : LIST<TBUCKContainerDescriptor> = [],
     // -- BUCKContainerDescriptor
 
-    // ++ BUCKSensibleAreaDescriptor
+    // ++ BUCKSensitiveAreaDescriptor
     MaskEvents : bool = false,
     IgnoreMask : bool = false,
     AreaShape : int = ~/AreaShape/Rect,
-    // -- BUCKSensibleAreaDescriptor
+    // -- BUCKSensitiveAreaDescriptor
 
     HintStandardBUCKComponent : TBUCKHintDescriptor = nil,              // Le descriptor du composant standard de hint.
     HintSpecificBUCKComponent : TBUCKHintDescriptor = nil,              // Le descriptor du composant spécific de hint. Si renseigné, écrase le composant standard
@@ -93,11 +93,11 @@ is TBUCKHintableAreaDescriptor
     Components = <Components>
     // -- BUCKContainerDescriptor
 
-    // ++ BUCKSensibleAreaDescriptor
+    // ++ BUCKSensitiveAreaDescriptor
     MaskEvents = <MaskEvents>
     IgnoreMask = <IgnoreMask>
     AreaShape = <AreaShape>
-    // -- BUCKSensibleAreaDescriptor
+    // -- BUCKSensitiveAreaDescriptor
 
     HintStandardBUCKComponent = <HintStandardBUCKComponent>
     HintSpecificBUCKComponent = <HintSpecificBUCKComponent>

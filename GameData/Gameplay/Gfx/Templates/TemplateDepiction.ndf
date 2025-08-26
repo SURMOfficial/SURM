@@ -433,6 +433,7 @@ is TTowedUnitSubDepictionGenerator
 
 template RocketSubDepictionDesc
 [
+    PylonConnoisseur = nil,
     UnitMeshDescriptor,
     RocketMeshDescriptor,
     RocketCount,
@@ -442,6 +443,7 @@ template RocketSubDepictionDesc
     GroundStartGroupIndex = 0,
 ] is TRocketSubDepictionGenerator
 (
+    PylonConnoisseur = <PylonConnoisseur>
     MissileCarriageConnoisseur = TMissileCarriageConnoisseur
     (
         MeshDescriptor = <UnitMeshDescriptor>
@@ -473,12 +475,12 @@ template RocketSubDepictionDesc
             WeaponIndex = <WeaponIndex>
         ),
     ]
-    Pylons = ~/DepictionPylonSet_ATGM
     ReferenceMesh = <UnitMeshDescriptor>
 )
 
 template ShowroomRocketSubDepictionDesc
 [
+    PylonConnoisseur = nil,
     UnitMeshDescriptor,
     RocketMeshDescriptor,
     RocketCount,
@@ -487,6 +489,7 @@ template ShowroomRocketSubDepictionDesc
     GroundStartGroupIndex = 0,
 ] is TStaticMissileCarriageSubDepictionGenerator
 (
+    PylonConnoisseur = <PylonConnoisseur>
     MissileCarriageConnoisseur = TMissileCarriageConnoisseur
     (
         MeshDescriptor = <UnitMeshDescriptor>
@@ -518,4 +521,22 @@ template ShowroomRocketSubDepictionDesc
     ]
     Pylons = ~/DepictionPylonSet_Vehicle_Default_Showroom
     ReferenceMesh = <UnitMeshDescriptor>
+)
+
+template ObjectSubDepiction
+[
+    Anchor,
+    MeshDescriptor,
+] is TSubDepiction
+(
+    Anchors =[ <Anchor> ]
+    Depiction = TDepictionDescriptor
+    (
+        ResidentMaterialTags = [ MaterialTagMech ]
+        AdditionalTextures = $/M3D/Shader/VehicleDestTextures
+        Selector = ~/OnlyHighDepictionSelector
+        DepictionAlternatives = [
+            DepictionVisual_LOD_High( MeshDescriptor = <MeshDescriptor> )
+        ]
+    )
 )

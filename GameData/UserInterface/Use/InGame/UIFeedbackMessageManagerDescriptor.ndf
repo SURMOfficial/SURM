@@ -66,32 +66,6 @@ OnUnitLost is TUIFeedbackDispatchedMessageDescriptor
     IsActiveForPlayer = true
 )
 
-OnREDUnitLostForReplay is TUIFeedbackDispatchedMessageDescriptor
-(
-    MinimapPingType     = $/UI/Components/MinimapPing_Cross
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Fade
-    BaseFilterColorForMinimap = [255,0,0,255]
-    MinimapPingDuration = 4
-    MinimapPingAnimStartTime = 1.5
-    TimeBeforeRepeat = 0.1
-    AlertMessageType = AlertMsg_Per_UniteDetruiteREDReplay
-    AllowFocusOnEvent = true
-    IsActiveForSpectator = true
-)
-
-OnBLUUnitLostForReplay is TUIFeedbackDispatchedMessageDescriptor
-(
-    MinimapPingType     = $/UI/Components/MinimapPing_Cross
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Fade
-    BaseFilterColorForMinimap = [255,0,0,255]
-    MinimapPingDuration = 4
-    MinimapPingAnimStartTime = 1.5
-    TimeBeforeRepeat = 0.1
-    AlertMessageType = AlertMsg_Per_UniteDetruiteBLUReplay
-    AllowFocusOnEvent = true
-    IsActiveForSpectator = true
-)
-
 OnUnitCapturedByEnemy is TUIFeedbackDispatchedMessageDescriptor
 (
 //  MinimapPingType     = $/UI/Components/MinimapPing_Cross
@@ -145,6 +119,51 @@ OnDamageReceived is TUIFeedbackDispatchedMessageDescriptor
     UnitAcknow = TAcknowUnitAction_DamageReceived
     TimeBeforeRepeat = 20
     IsActiveForPlayer = true
+)
+
+OnGainXpLevel is TUIFeedbackDispatchedMessageDescriptor
+(
+    TimeBeforeRepeat = 0
+    IsActiveForPlayer = true
+
+    LabelDescriptor = TFeedback2DLabelDescriptor(
+        UILayer = $/UserInterface/UILayer_Labels
+        Camera = $/M3D/Misc/CameraPrincipale
+
+        ComponentDescriptor = BUCKTextDescriptor
+        (
+            ElementName = "TextComponent"
+
+            ComponentFrame = TUIFramePropertyRTTI
+            (
+                AlignementToFather = [0.5, 0.5]
+                AlignementToAnchor = [0.5, 0.5]
+            )
+
+            ParagraphStyle = ~/FeedbackParagraphStyle
+            TextStyle = "TextStyleFeedbackLabel"
+            BigLineAction = ~/BigLineAction/BalancedMultiline
+
+            VerticalFitStyle = ~/FitStyle/FitToContent
+            HorizontalFitStyle = ~/FitStyle/FitToContent
+            TypefaceToken = "Eurostyle_Medium"
+            TextDico = ~/LocalisationConstantes/dico_interface_ingame
+            TextColor = "Feedback/OnGainXpLevel"
+            TextSize = "16"
+        )
+
+        TotalTime = 2.5
+        FadeInTime = 0.0
+        FadeOutTime = 0.0
+        InitialOffset = 0.0
+        FinalOffset = 100.0
+    )
+
+    TextFormatter = TUIFeedbackTextFormatterWithToken
+    (
+        Dico = ~/LocalisationConstantes/dico_interface_ingame
+        Token = "FRM_STARS"
+    )
 )
 
 OnUnitSelected is TUIFeedbackDispatchedMessageDescriptor
@@ -569,123 +588,6 @@ OnCriticEvacuate is TUIFeedbackDispatchedMessageDescriptor
     IsActiveForPlayer = true
 )
 
-OnCommandZoneSecuredByPlayer is TUIFeedbackDispatchedMessageDescriptor
-(
-    AlertMessageType = AlertMsg_Zone_SecuredByPlayer
-    MinimapPingType = $/UI/Components/MinimapPing_Alarm
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
-    MinimapPingDuration = 1
-    MinimapPingAnimStartTime = 0.5 // 1.5
-    BaseFilterColorForMinimap = [5,222,10,255]
-    HudSound = ~/HudSoundGainSector
-    TimeBeforeRepeat = 10
-    IsActiveForPlayer = true
-    IsActiveForAllies = true
-    IsActiveForEnemies = false
-    AllowFocusOnEvent = true
-)
-
-OnCommandZoneLost is TUIFeedbackDispatchedMessageDescriptor
-(
-    AlertMessageType = AlertMsg_Zone_Lost
-    MinimapPingType = $/UI/Components/MinimapPing_Alarm
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
-    MinimapPingDuration = 2
-    MinimapPingAnimStartTime = 0.5
-    BaseFilterColorForMinimap = [204,0,0,250]
-    HudSound = ~/HudSoundAlarm
-    TimeBeforeRepeat = 10
-    IsActiveForPlayer = true
-    IsActiveForAllies = true
-    IsActiveForEnemies = false
-    AllowFocusOnEvent = true
-)
-
-OnCommandZoneCapturedForReplay is TUIFeedbackDispatchedMessageDescriptor
-(
-    AlertMessageType = AlertMsg_Per_CommandZoneCapturedForReplay
-    MinimapPingType = $/UI/Components/MinimapPing_Alarm
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
-    MinimapPingDuration = 1
-    MinimapPingAnimStartTime = 0.5 // 1.5
-    BaseFilterColorForMinimap = [5,222,10,255]
-    HudSound = ~/HudSoundGainSector
-    TimeBeforeRepeat = 0.1
-    IsActiveForSpectator = true
-)
-
-OnCommandZoneLostForReplay is TUIFeedbackDispatchedMessageDescriptor
-(
-    AlertMessageType = AlertMsg_Per_CommandZoneLostForReplay
-    MinimapPingType = $/UI/Components/MinimapPing_Alarm
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
-    MinimapPingDuration = 2
-    MinimapPingAnimStartTime = 0.5
-    BaseFilterColorForMinimap = [204,0,0,250]
-    HudSound = ~/HudSoundAlarm
-    TimeBeforeRepeat = 0.1
-    IsActiveForSpectator = true
-)
-
-OnCommandZoneSecuredByEnemy is TUIFeedbackDispatchedMessageDescriptor
-(
-    AlertMessageType = AlertMsg_Zone_SecuredByEnemy
-    UnitAcknow = AlertMsg_Zone_SecuredByEnemy
-    IsActiveForEnemies = true
-    MinimapPingType = $/UI/Components/MinimapPing_Alarm
-    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
-    MinimapPingDuration = 1
-    MinimapPingAnimStartTime = 0.5
-    BaseFilterColorForMinimap = [204,0,0,250]
-    HudSound = ~/HudSoundEnnemyGainSector
-    TimeBeforeRepeat = 10
-    AllowFocusOnEvent = true
-)
-
-OnAutomaticBehavior is TUIFeedbackDispatchedMessageDescriptor
-(
-    TimeBeforeRepeat = 10
-    IsActiveForPlayer = true
-
-    LabelDescriptor = TFeedback2DLabelDescriptor(
-        UILayer = $/UserInterface/UILayer_Labels
-        Camera = $/M3D/Misc/CameraPrincipale
-
-        ComponentDescriptor = BUCKTextDescriptor
-        (
-            ElementName = "TextComponent"
-
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                AlignementToFather = [0.5, 0.5]
-                AlignementToAnchor = [0.5, 0.5]
-            )
-
-            ParagraphStyle = ~/FeedbackParagraphStyle
-            TextStyle = "TextStyleFeedbackLabel"
-            BigLineAction = ~/BigLineAction/BalancedMultiline
-
-            VerticalFitStyle = ~/FitStyle/FitToContent
-            HorizontalFitStyle = ~/FitStyle/FitToContent
-            TypefaceToken = "Eurostyle_Medium"
-            TextDico = ~/LocalisationConstantes/dico_interface_ingame
-            TextColor = "Feedback/AutomaticBehavior"
-            TextSize = "16"
-        )
-
-        TotalTime = 5
-        FadeInTime = 0.0
-        FadeOutTime = 1.0
-        InitialOffset = 20.0
-        FinalOffset = 20.0
-    )
-
-    TextFormatter = TUIFeedbackTextFormatterUseOptionalParamAsToken
-    (
-        Dico = ~/LocalisationConstantes/dico_interface_ingame
-    )
-)
-
 OnUnitSold is TUIFeedbackDispatchedMessageDescriptor
 (
     TimeBeforeRepeat = 0
@@ -732,9 +634,9 @@ OnUnitSold is TUIFeedbackDispatchedMessageDescriptor
     )
 )
 
-OnGainXpLevel is TUIFeedbackDispatchedMessageDescriptor
+OnAutomaticBehavior is TUIFeedbackDispatchedMessageDescriptor
 (
-    TimeBeforeRepeat = 0
+    TimeBeforeRepeat = 10
     IsActiveForPlayer = true
 
     LabelDescriptor = TFeedback2DLabelDescriptor(
@@ -759,23 +661,70 @@ OnGainXpLevel is TUIFeedbackDispatchedMessageDescriptor
             HorizontalFitStyle = ~/FitStyle/FitToContent
             TypefaceToken = "Eurostyle_Medium"
             TextDico = ~/LocalisationConstantes/dico_interface_ingame
-            TextColor = "Feedback/OnGainXpLevel"
+            TextColor = "Feedback/AutomaticBehavior"
             TextSize = "16"
         )
 
-        TotalTime = 2.5
+        TotalTime = 5
         FadeInTime = 0.0
-        FadeOutTime = 0.0
-        InitialOffset = 0.0
-        FinalOffset = 100.0
+        FadeOutTime = 1.0
+        InitialOffset = 20.0
+        FinalOffset = 20.0
     )
 
-    TextFormatter = TUIFeedbackTextFormatterWithToken
+    TextFormatter = TUIFeedbackTextFormatterUseOptionalParamAsToken
     (
         Dico = ~/LocalisationConstantes/dico_interface_ingame
-        Token = "FRM_STARS"
     )
 )
+
+OnCommandZoneSecuredByPlayer is TUIFeedbackDispatchedMessageDescriptor
+(
+    AlertMessageType = AlertMsg_Zone_SecuredByPlayer
+    MinimapPingType = $/UI/Components/MinimapPing_Alarm
+    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
+    MinimapPingDuration = 1
+    MinimapPingAnimStartTime = 0.5 // 1.5
+    BaseFilterColorForMinimap = [5,222,10,255]
+    HudSound = ~/HudSoundGainSector
+    TimeBeforeRepeat = 10
+    IsActiveForPlayer = true
+    IsActiveForAllies = true
+    IsActiveForEnemies = false
+    AllowFocusOnEvent = true
+)
+
+OnCommandZoneLost is TUIFeedbackDispatchedMessageDescriptor
+(
+    AlertMessageType = AlertMsg_Zone_Lost
+    MinimapPingType = $/UI/Components/MinimapPing_Alarm
+    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
+    MinimapPingDuration = 2
+    MinimapPingAnimStartTime = 0.5
+    BaseFilterColorForMinimap = [204,0,0,250]
+    HudSound = ~/HudSoundAlarm
+    TimeBeforeRepeat = 10
+    IsActiveForPlayer = true
+    IsActiveForAllies = true
+    IsActiveForEnemies = false
+    AllowFocusOnEvent = true
+)
+
+OnCommandZoneSecuredByEnemy is TUIFeedbackDispatchedMessageDescriptor
+(
+    AlertMessageType = AlertMsg_Zone_SecuredByEnemy
+    UnitAcknow = AlertMsg_Zone_SecuredByEnemy
+    IsActiveForEnemies = true
+    MinimapPingType = $/UI/Components/MinimapPing_Alarm
+    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
+    MinimapPingDuration = 1
+    MinimapPingAnimStartTime = 0.5
+    BaseFilterColorForMinimap = [204,0,0,250]
+    HudSound = ~/HudSoundEnemyGainSector
+    TimeBeforeRepeat = 10
+    AllowFocusOnEvent = true
+)
+
 OnIFV is TUIFeedbackDispatchedMessageDescriptor
 (
     TimeBeforeRepeat = 0
@@ -821,6 +770,58 @@ OnIFV is TUIFeedbackDispatchedMessageDescriptor
     )
 )
 
+OnREDUnitLostForReplay is TUIFeedbackDispatchedMessageDescriptor
+(
+    MinimapPingType     = $/UI/Components/MinimapPing_Cross
+    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Fade
+    BaseFilterColorForMinimap = [255,0,0,255]
+    MinimapPingDuration = 4
+    MinimapPingAnimStartTime = 1.5
+    TimeBeforeRepeat = 0.1
+    AlertMessageType = AlertMsg_Per_UniteDetruiteREDReplay
+    AllowFocusOnEvent = true
+    IsActiveForSpectator = true
+)
+
+OnCommandZoneCapturedForReplay is TUIFeedbackDispatchedMessageDescriptor
+(
+    AlertMessageType = AlertMsg_Per_CommandZoneCapturedForReplay
+    MinimapPingType = $/UI/Components/MinimapPing_Alarm
+    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
+    MinimapPingDuration = 1
+    MinimapPingAnimStartTime = 0.5 // 1.5
+    BaseFilterColorForMinimap = [5,222,10,255]
+    HudSound = ~/HudSoundGainSector
+    TimeBeforeRepeat = 0.1
+    IsActiveForSpectator = true
+)
+
+OnCommandZoneLostForReplay is TUIFeedbackDispatchedMessageDescriptor
+(
+    AlertMessageType = AlertMsg_Per_CommandZoneLostForReplay
+    MinimapPingType = $/UI/Components/MinimapPing_Alarm
+    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Scale
+    MinimapPingDuration = 2
+    MinimapPingAnimStartTime = 0.5
+    BaseFilterColorForMinimap = [204,0,0,250]
+    HudSound = ~/HudSoundAlarm
+    TimeBeforeRepeat = 0.1
+    IsActiveForSpectator = true
+)
+
+OnBLUUnitLostForReplay is TUIFeedbackDispatchedMessageDescriptor
+(
+    MinimapPingType     = $/UI/Components/MinimapPing_Cross
+    MinimapPingAnimType = $/UI/Components/MinimapPingAnim_Fade
+    BaseFilterColorForMinimap = [255,0,0,255]
+    MinimapPingDuration = 4
+    MinimapPingAnimStartTime = 1.5
+    TimeBeforeRepeat = 0.1
+    AlertMessageType = AlertMsg_Per_UniteDetruiteBLUReplay
+    AllowFocusOnEvent = true
+    IsActiveForSpectator = true
+)
+
 //----------------------------------------------------------------------------------
 // Declaration liste des messages
 //----------------------------------------------------------------------------------
@@ -834,6 +835,7 @@ IngameFeedbackMessageManagerDescriptor is TUISpecificInGameFeedbackMessageManage
         ( FeedbackMessage_OnUnitLost, ~/OnUnitLost ),
         ( FeedbackMessage_OnBuildingLost, ~/OnBuildingLost ),
         ( FeedbackMessage_OnDamageReceived, ~/OnDamageReceived ),
+        ( FeedbackMessage_OnGainXpLevel, ~/OnGainXpLevel ),
         ( FeedbackMessage_OnUnitSelected, ~/OnUnitSelected ),
         ( FeedbackMessage_OnPositionForbidden, ~/OnPositionForbidden ),
         ( FeedbackMessage_OnMoveOrder, ~/OnMoveOrder ),
@@ -883,7 +885,6 @@ IngameFeedbackMessageManagerDescriptor is TUISpecificInGameFeedbackMessageManage
         ( FeedbackMessage_OnCriticEvacuate, ~/OnCriticEvacuate),
         ( FeedbackMessage_OnUnitSold, ~/OnUnitSold ),
         ( FeedbackMessage_OnAutomaticBehavior, ~/OnAutomaticBehavior ),
-        ( FeedbackMessage_OnGainXpLevel, ~/OnGainXpLevel ),
         ( FeedbackMessage_OnCommandZoneSecuredByPlayer, ~/OnCommandZoneSecuredByPlayer ),
         ( FeedbackMessage_OnCommandZoneLost, ~/OnCommandZoneLost ),
         ( FeedbackMessage_OnCommandZoneSecuredByEnemy, ~/OnCommandZoneSecuredByEnemy ),

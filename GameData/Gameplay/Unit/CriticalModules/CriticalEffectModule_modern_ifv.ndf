@@ -1,13 +1,6 @@
 export CriticalEffectModule_modern_ifv is TCriticalEffectModuleDescriptor
 (
     Bounds = (1,100)
-    TerrainCriticalEffectTimer = 15.0
-
-    EffectsFromTerrain = 
-    [
-        CriticalEffect_RoughGround(Roll=(1,34)),// Shooter KO -> Armes stop 10sec
-		CriticalEffect_BoggedDown(Roll=(35,38)), // Transmission endommagée -> 50% vitesse
-    ]
 
     EffectsOnFront =
     [

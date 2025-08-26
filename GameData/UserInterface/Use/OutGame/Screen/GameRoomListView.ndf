@@ -10,11 +10,11 @@ NbPlayersAlert is 5
 
 private GameRoomListPanelJoinwithCodeButton is HUBActionButtonResizeWithMax
 (
-    ElementName = 'JoinByInviteCodeButton'
-    TextToken = 'AB_GAMJOIC'
+    ElementName = "JoinByInviteCodeButton"
+    TextToken = "AB_GAMJOIC"
     ButtonMagnifiableHeight = 18.0
     ButtonMagnifiableMaxWidth = 150.0
-    TextColor = 'Blanc_multi'
+    TextColor = "Blanc_multi"
 
     HasAutoHint = true
     AutoHintElementName = "JoinByInviteCodeButtonAutoHint"
@@ -22,16 +22,16 @@ private GameRoomListPanelJoinwithCodeButton is HUBActionButtonResizeWithMax
     ButtonAlignementToAnchor = [0.0, 0.5]
     ButtonAlignementToFather = [0.0, 0.5]
 
-    LeftClickSound = SoundEvent_MultiClickJoinWithCode
+    LeftClickSound = ~/SoundEvent_MultiClickJoinWithCode
 )
 
 private GameRoomListPanelJoinButton is HUBActionButtonResizeWithMax
 (
-    ElementName = 'JoinButton'
-    TextToken = 'AB_GAMJOIN'
+    ElementName = "JoinButton"
+    TextToken = "AB_GAMJOIN"
     ButtonMagnifiableHeight = 18.0
     ButtonMagnifiableMaxWidth = 150.0
-    TextColor = 'Blanc_multi'
+    TextColor = "Blanc_multi"
 
     HasAutoHint = true
     AutoHintElementName = "JoinButtonAutoHint"
@@ -39,14 +39,14 @@ private GameRoomListPanelJoinButton is HUBActionButtonResizeWithMax
     ButtonAlignementToAnchor = [0.0, 0.5]
     ButtonAlignementToFather = [0.0, 0.5]
 
-    LeftClickSound = SoundEvent_MultiClickJoinGame
+    LeftClickSound = ~/SoundEvent_MultiClickJoinGame
 )
 
 private GameRoomListPanelObsButton is HUBActionButtonResizeWithMax
 (
-    ElementName = 'ObsButton'
-    TextToken = 'AB_GAMOBS'
-    TextColor = 'Blanc_multi'
+    ElementName = "ObsButton"
+    TextToken = "AB_GAMOBS"
+    TextColor = "Blanc_multi"
     ButtonMagnifiableHeight = 18.0
     ButtonMagnifiableMaxWidth = 150.0
 
@@ -56,14 +56,14 @@ private GameRoomListPanelObsButton is HUBActionButtonResizeWithMax
     ButtonAlignementToAnchor = [0.0, 0.5]
     ButtonAlignementToFather = [0.0, 0.5]
 
-    LeftClickSound = SoundEvent_MultiClickSpectate
+    LeftClickSound = ~/SoundEvent_MultiClickSpectate
 )
 
 private GameRoomListPanelRefreshButton is HUBActionButtonResizeWithMax
 (
-    ElementName = 'RefreshButton'
-    TextToken = 'AB_GLREFR'
-    TextColor = 'Blanc_multi'
+    ElementName = "RefreshButton"
+    TextToken = "AB_GLREFR"
+    TextColor = "Blanc_multi"
     ButtonMagnifiableHeight = 18.0
     ButtonMagnifiableMaxWidth = 150.0
 
@@ -73,14 +73,14 @@ private GameRoomListPanelRefreshButton is HUBActionButtonResizeWithMax
     ButtonAlignementToAnchor = [0.0, 0.5]
     ButtonAlignementToFather = [0.0, 0.5]
 
-    LeftClickSound = SoundEvent_MultiClickRefresh
+    LeftClickSound = ~/SoundEvent_MultiClickRefresh
 )
 
 private GameRoomListPanelBackToLobbyButton is HUBActionButton
 (
-    ElementName = 'BackToLobbyButton'
-    TextToken = 'AB_GLREJO'
-    TextColor = 'Blanc_multi'
+    ElementName = "BackToLobbyButton"
+    TextToken = "AB_GLREJO"
+    TextColor = "Blanc_multi"
     ButtonMagnifiableWidthHeight = [200,18]
 
     ButtonAlignementToAnchor = [0.5, 0.5]
@@ -91,11 +91,11 @@ private GameRoomListPanelBackToLobbyButton is HUBActionButton
 
 private template RoomListTitleElementDescriptor
 [
-    ElementName : string = '',
-    TextToken : string = '',
+    ElementName : string,
+    TextToken : string,
     TextSize : string = "23",
     SortingType : int = ~/MultiListSorting/None,
-    MagnifiableWidthHeight : float2 = [50,20]
+    MagnifiableWidthHeight : float2 = [50.0, 20.0]
 ]
 is BUCKListElementDescriptor
 (
@@ -129,10 +129,10 @@ is BUCKListElementDescriptor
                 BigLineAction = ~/BigLineAction/MultiLine
                 HorizontalFitStyle = ~/FitStyle/UserDefined
                 VerticalFitStyle = ~/FitStyle/UserDefined
-                TextStyle = 'Default'
+                TextStyle = "Default"
                 TypefaceToken = "Liberator"
                 TextSize =  <TextSize>
-                TextColor = 'Blanc_leaderboard'
+                TextColor = "Blanc_leaderboard"
                 TextToken =  <TextToken>
                 TextDico = ~/LocalisationConstantes/dico_interface_outgame
             )
@@ -227,9 +227,9 @@ GameRoomListPanelWindowFrame is BUCKContainerDescriptor
             )
         ),
 
-        AffichagePanneauOnlinePlayers,
+        ~/AffichagePanneauOnlinePlayers,
 
-        ListeDesParties,
+        ~/ListeDesParties,
 
         BUCKSimpleButtonCheckBoxListDescriptor
         (
@@ -246,7 +246,7 @@ GameRoomListPanelWindowFrame is BUCKContainerDescriptor
             CheckboxHasBackground = false
             CheckboxHasBorder = false
         ),
-        ListeBouton_Partie,
+        ~/ListeBouton_Partie,
     ]
 )
 //-------------------------------------------------------------------------------------
@@ -255,15 +255,15 @@ private AffichagePanneauOnlinePlayers is BUCKContainerDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [200,200]
-        AlignementToFather = [0.5,0]
-        AlignementToAnchor = [0.5,0]
+        AlignementToFather = [0.5, 0.0]
+        AlignementToAnchor = [0.5, 0.0]
     )
 
     Components =
     [
         BUCKTextDescriptor
         (
-            ElementName = 'NbPlayersOnline'
+            ElementName = "NbPlayersOnline"
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [130.0, 18.0]
@@ -284,14 +284,14 @@ private AffichagePanneauOnlinePlayers is BUCKContainerDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableWidthHeight = [150.0, 18.0]
-                AlignementToAnchor = [0.5,0]
-                AlignementToFather = [0.5,0]
+                AlignementToAnchor = [0.5, 0.0]
+                AlignementToFather = [0.5, 0.0]
                 MagnifiableOffset = [0.0, 60.0]
             )
 
             ParagraphStyle = ~/paragraphStyleTextCenter
             TextStyle = "Default"
-            TextToken = 'onlineP'
+            TextToken = "onlineP"
             TypefaceToken = "SevenSegments"
             TextSize = "16"
             TextColor = "Jaune_NbPlayers"
@@ -313,7 +313,7 @@ private ListeDesParties is BUCKContainerDescriptor
     [
         BUCKMultiListDescriptor
         (
-            ElementName = 'GameList'
+            ElementName = "GameList"
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
@@ -327,26 +327,26 @@ private ListeDesParties is BUCKContainerDescriptor
 
             SortableColumnNames =
             [
-                'Relevance',
-                'CombatRule',
-                'Name',
-                'Map',
-                'LevelRequired',
-                'NbPlayers',
-                'Status',
-                'Rules',
-                'Mods',
+                "Relevance",
+                "CombatRule",
+                "Name",
+                "Map",
+                "LevelRequired",
+                "NbPlayers",
+                "Status",
+                "Rules",
+                "Mods",
             ]
 
-            RackName = 'ListGames'
+            RackName = "ListGames"
 
-            TitleDescriptor = ListeDesParties_Titre
-            ContentDescriptor = ListeDesParties_Content
+            TitleDescriptor = ~/ListeDesParties_Titre
+            ContentDescriptor = ~/ListeDesParties_Content
         ),
         // affichage nb jeux en cours
         BUCKTextDescriptor
         (
-            ElementName = 'NbRunningSessions'
+            ElementName = "NbRunningSessions"
             ComponentFrame = TUIFramePropertyRTTI
             (
                 MagnifiableOffset = [20.0, -183.0]
@@ -364,11 +364,11 @@ private ListeDesParties is BUCKContainerDescriptor
             HorizontalFitStyle = ~/FitStyle/FitToContent
             VerticalFitStyle = ~/FitStyle/FitToContent
 
-            TextStyle = 'Default'
+            TextStyle = "Default"
             TypefaceToken = "Liberator"
-            TextSize = '12'
-            TextColor = 'ListeExcel/Lignes/Defaut'
-            TextToken = 'SGP_INST'
+            TextSize = "12"
+            TextColor = "ListeExcel/Lignes/Defaut"
+            TextToken = "SGP_INST"
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
             TextPadding = TRTTILength4(Magnifiable = [5.0, 0.0, 0.0, 0.0])
@@ -384,7 +384,7 @@ private ListeDesParties_Titre is BUCKListDescriptor
     BordersToDraw = ~/TBorderSide/Bottom
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight =  [0.0, TitleLineHeight]
+        MagnifiableWidthHeight =  [0.0, ~/TitleLineHeight]
     )
 
     Axis = ~/ListAxis/Horizontal
@@ -393,60 +393,60 @@ private ListeDesParties_Titre is BUCKListDescriptor
     [
         RoomListTitleElementDescriptor
         (
-            ElementName = 'CombatRule'
-            TextToken = 'CL_GAMMODE'
+            ElementName = "CombatRule"
+            TextToken = "CL_GAMMODE"
             SortingType = ~/MultiListSorting/Integer
-            MagnifiableWidthHeight = [CombatRuleColumnWidth, TitleLineHeight]
+            MagnifiableWidthHeight = [~/CombatRuleColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
-            ElementName ='Name'
-            TextToken = 'CL_GAMNAME'
+            ElementName ="Name"
+            TextToken = "CL_GAMNAME"
             SortingType = ~/MultiListSorting/String
-            MagnifiableWidthHeight = [GameNameColumnWidth, TitleLineHeight]
+            MagnifiableWidthHeight = [~/GameNameColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
-            ElementName ='Map'
-            TextToken = 'CL_GAMMAP'
+            ElementName ="Map"
+            TextToken = "CL_GAMMAP"
             SortingType = ~/MultiListSorting/String
-            MagnifiableWidthHeight = [MapNameColumnWidth, TitleLineHeight]
+            MagnifiableWidthHeight = [~/MapNameColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
-            ElementName ='LevelRequired'
-            TextToken = 'CL_GAMLVL'
+            ElementName ="LevelRequired"
+            TextToken = "CL_GAMLVL"
             TextSize = "16"
             SortingType = ~/MultiListSorting/Integer
-            MagnifiableWidthHeight = [LevelRequiredColumnWidth, TitleLineHeight]
+            MagnifiableWidthHeight = [~/LevelRequiredColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
-            ElementName = 'NbPlayers'
-            TextToken = 'CL_GAMPLNB'
+            ElementName = "NbPlayers"
+            TextToken = "CL_GAMPLNB"
             SortingType = ~/MultiListSorting/Integer
-            MagnifiableWidthHeight = [NbPlayersColumnWidth, TitleLineHeight]
+            MagnifiableWidthHeight = [~/NbPlayersColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
-            ElementName = 'Status'
-            TextToken = 'CL_GAMSTS'
+            ElementName = "Status"
+            TextToken = "CL_GAMSTS"
             SortingType = ~/MultiListSorting/Integer
-            MagnifiableWidthHeight = [GameStatusColumnWidth, TitleLineHeight]
+            MagnifiableWidthHeight = [~/GameStatusColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
-            ElementName = 'Rules'
-            TextToken = 'CL_GAMRUL'
+            ElementName = "Rules"
+            TextToken = "CL_GAMRUL"
             SortingType = ~/MultiListSorting/Integer
-            MagnifiableWidthHeight = [GameRulesColumnWidth, TitleLineHeight]
+            MagnifiableWidthHeight = [GameRulesColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
-            ElementName = 'Mods'
-            TextToken = 'CL_MOD'
+            ElementName = "Mods"
+            TextToken = "CL_MOD"
             SortingType = ~/MultiListSorting/Integer
-            MagnifiableWidthHeight = [ModsStatusColumnWidth, TitleLineHeight]
+            MagnifiableWidthHeight = [~/ModsStatusColumnWidth, ~/TitleLineHeight]
         ),
     ]
 )
@@ -461,7 +461,7 @@ template ListDesParties_SeparateurVertical
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [0.0, 1.0]
-        PixelWidthHeight = [EpaisseurLignesGrilleMulti, 0.0]
+        PixelWidthHeight = [~/EpaisseurLignesGrilleMulti, 0.0]
         MagnifiableOffset = [<Offset>, 0.0]
     )
 
@@ -480,13 +480,13 @@ ListDesParties_GrilleVerticale is BUCKContainerDescriptor
 
     Components =
     [
-        ListDesParties_SeparateurVertical( Offset = CombatRuleColumnWidth ),
-        ListDesParties_SeparateurVertical( Offset = CombatRuleColumnWidth + GameNameColumnWidth  ),
-        ListDesParties_SeparateurVertical( Offset = CombatRuleColumnWidth + GameNameColumnWidth + MapNameColumnWidth ),
-        ListDesParties_SeparateurVertical( Offset = CombatRuleColumnWidth + GameNameColumnWidth + MapNameColumnWidth + LevelRequiredColumnWidth),
-        ListDesParties_SeparateurVertical( Offset = CombatRuleColumnWidth + GameNameColumnWidth + MapNameColumnWidth + LevelRequiredColumnWidth + NbPlayersColumnWidth ),
-        ListDesParties_SeparateurVertical( Offset = CombatRuleColumnWidth + GameNameColumnWidth + MapNameColumnWidth + LevelRequiredColumnWidth + NbPlayersColumnWidth + GameStatusColumnWidth ),
-        ListDesParties_SeparateurVertical( Offset = CombatRuleColumnWidth + GameNameColumnWidth + MapNameColumnWidth + LevelRequiredColumnWidth + NbPlayersColumnWidth + GameStatusColumnWidth + GameRulesColumnWidth )
+        ListDesParties_SeparateurVertical( Offset = ~/CombatRuleColumnWidth ),
+        ListDesParties_SeparateurVertical( Offset = ~/CombatRuleColumnWidth + ~/GameNameColumnWidth  ),
+        ListDesParties_SeparateurVertical( Offset = ~/CombatRuleColumnWidth + ~/GameNameColumnWidth + ~/MapNameColumnWidth ),
+        ListDesParties_SeparateurVertical( Offset = ~/CombatRuleColumnWidth + ~/GameNameColumnWidth + ~/MapNameColumnWidth + ~/LevelRequiredColumnWidth),
+        ListDesParties_SeparateurVertical( Offset = ~/CombatRuleColumnWidth + ~/GameNameColumnWidth + ~/MapNameColumnWidth + ~/LevelRequiredColumnWidth + ~/NbPlayersColumnWidth ),
+        ListDesParties_SeparateurVertical( Offset = ~/CombatRuleColumnWidth + ~/GameNameColumnWidth + ~/MapNameColumnWidth + ~/LevelRequiredColumnWidth + ~/NbPlayersColumnWidth + ~/GameStatusColumnWidth ),
+        ListDesParties_SeparateurVertical( Offset = ~/CombatRuleColumnWidth + ~/GameNameColumnWidth + ~/MapNameColumnWidth + ~/LevelRequiredColumnWidth + ~/NbPlayersColumnWidth + ~/GameStatusColumnWidth + ~/GameRulesColumnWidth )
     ]
 )
 //-------------------------------------------------------------------------------------
@@ -514,8 +514,8 @@ private ListeDesParties_Content is BUCKContainerDescriptor
 
     Components =
     [
-        ListDesParties_GrilleVerticale,
-        ListeDesParties_ScrollingContainer
+        ~/ListDesParties_GrilleVerticale,
+        ~/ListeDesParties_ScrollingContainer
     ]
 )
 //-------------------------------------------------------------------------------------
@@ -533,7 +533,7 @@ private ListeDesParties_ScrollingContainer is BUCKSpecificScrollingContainerDesc
     [
         BUCKRackDescriptor
         (
-            ElementName = 'ListGames'
+            ElementName = "ListGames"
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 0.0]
@@ -543,22 +543,22 @@ private ListeDesParties_ScrollingContainer is BUCKSpecificScrollingContainerDesc
             InterItemMargin = TRTTILength( Magnifiable = 2.0 )
             LastMargin = TRTTILength( Magnifiable = 2.0 )
 
-            BladeDescriptor = ListeDesParties_BoutonLigne
+            BladeDescriptor = ~/ListeDesParties_BoutonLigne
         )
     ]
 )
 //-------------------------------------------------------------------------------------
 ListeDesParties_BoutonLigne is BUCKButtonDescriptor
 (
-    ElementName = 'GameSensibleArea'
+    ElementName = "GameSensitiveArea"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, ContentLineHeight]
+        MagnifiableWidthHeight = [0.0, ~/ContentLineHeight]
         RelativeWidthHeight = [1.0, 0.0]
     )
 
     HasBackground = true
-    BackgroundBlockColorToken = 'ListeExcel/Fond'
+    BackgroundBlockColorToken = "ListeExcel/Fond"
     HasBorder = false
     BorderLineColorToken = "Noir"
     BorderThicknessToken = "2"
@@ -569,8 +569,8 @@ ListeDesParties_BoutonLigne is BUCKButtonDescriptor
 
     Components =
     [
-        ListeDesParties_ContentList,
-        ListDesParties_SeparateurHorizontal
+        ~/ListeDesParties_ContentList,
+        ~/ListDesParties_SeparateurHorizontal
     ]
 )
 //-------------------------------------------------------------------------------------
@@ -589,7 +589,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'Relevance'
+                ElementName = "Relevance"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     MagnifiableWidthHeight = [0.0, 0.0]
@@ -601,20 +601,20 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'CombatRule'
+                ElementName = "CombatRule"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [CombatRuleColumnWidth, ContentLineHeight]
+                    MagnifiableWidthHeight = [~/CombatRuleColumnWidth, ~/ContentLineHeight]
                 )
 
                 Components =
                 [
                     BUCKContainerDescriptor
                     (
-                        ElementName = 'CombatRuleContainer'
+                        ElementName = "CombatRuleContainer"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
-                            MagnifiableWidthHeight = [CombatRuleColumnWidth*0.8, ContentLineHeight*0.8]
+                            MagnifiableWidthHeight = [~/CombatRuleColumnWidth*0.8, ~/ContentLineHeight*0.8]
                             AlignementToAnchor = [0.5, 0.5]
                             AlignementToFather = [0.5, 0.5]
                         )
@@ -627,10 +627,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'Name'
+                ElementName = "Name"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [GameNameColumnWidth, ContentLineHeight]
+                    MagnifiableWidthHeight = [~/GameNameColumnWidth, ~/ContentLineHeight]
                 )
 
                 Components =
@@ -640,22 +640,59 @@ ListeDesParties_ContentList is BUCKListDescriptor
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [0.0, 1.0]
-                            AlignementToAnchor = [0.5,0.5]
-                            AlignementToFather = [0.5,0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                            AlignementToFather = [0.5, 0.5]
                         )
 
                         Axis = ~/ListAxis/Horizontal
+                        FirstMargin = TRTTILength(Magnifiable = 6.0)
 
                         Elements =
                         [
                             BUCKListElementDescriptor
                             (
-                                ComponentDescriptor = BUCKTextDescriptor
+                                ComponentDescriptor = BUCKTextureDescriptor
                                 (
-                                    ElementName = 'TextName'
+                                    ElementName = "GameDLCTexture"
+
                                     ComponentFrame = TUIFramePropertyRTTI
                                     (
-                                        MagnifiableWidthHeight = [GameNameColumnWidth-20, ContentLineHeight]
+                                        MagnifiableWidthHeight = [22.0, 22.0]
+                                        AlignementToAnchor = [0.0, 0.5]
+                                        AlignementToFather = [0.0, 0.5]
+                                    )
+
+                                    ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+                                    TextureFrame = TUIFramePropertyRTTI
+                                    (
+                                        AlignementToAnchor = [0.5, 0.5]
+                                        AlignementToFather = [0.5, 0.5]
+                                    )
+                                    TextureToken = "Icon_ContentDLC"
+
+                                    Components =
+                                    [
+                                        BUCKSpecificHintableArea
+                                        (
+                                            ElementName = "HintDLC"
+                                            DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                                            HintTitleToken = "GRL_DLCT"
+                                            HintBodyToken = "GRL_DLCB"
+                                            HintExtendedToken = "GRL_DLCE"
+                                        ),
+                                    ]
+                                )
+                            ),
+                            BUCKListElementDescriptor
+                            (
+                                ExtendWeight = 1.0
+                                ComponentDescriptor = BUCKTextDescriptor
+                                (
+                                    ElementName = "TextName"
+                                    ComponentFrame = TUIFramePropertyRTTI
+                                    (
+                                        RelativeWidthHeight = [1.0, 0.0]
+                                        MagnifiableWidthHeight = [0.0, ~/ContentLineHeight]
                                     )
 
                                     ParagraphStyle = TParagraphStyle
@@ -663,16 +700,15 @@ ListeDesParties_ContentList is BUCKListDescriptor
                                         VerticalAlignment = ~/UIText_VerticalCenter
                                         Alignment = UIText_Center
                                         InterLine = 0.3
-
                                     )
 
                                     HorizontalFitStyle = ~/FitStyle/UserDefined
                                     VerticalFitStyle = ~/FitStyle/UserDefined
                                     BigLineAction = ~/BigLineAction/MultiLine
-                                    TextStyle = 'Default'
+                                    TextStyle = "Default"
                                     TypefaceToken = "Courrier"
-                                    TextSize = '14'
-                                    TextColor = 'Noir_multi'
+                                    TextSize = "14"
+                                    TextColor = "Noir_multi"
                                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
                                     TextFormatScript = nil
@@ -682,7 +718,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
                             (
                                 ComponentDescriptor = BUCKTextureDescriptor
                                 (
-                                    ElementName = 'GameWarningTexture'
+                                    ElementName = "GameWarningTexture"
 
                                     ComponentFrame = TUIFramePropertyRTTI
                                     (
@@ -692,16 +728,18 @@ ListeDesParties_ContentList is BUCKListDescriptor
                                     )
 
                                     ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-
-                                    TextureFrame = TUIFramePropertyRTTI()
-
+                                    TextureFrame = TUIFramePropertyRTTI
+                                    (
+                                        AlignementToAnchor = [0.5, 0.5]
+                                        AlignementToFather = [0.5, 0.5]
+                                    )
                                     TextureToken = "UseOutGame_Warning"
 
                                     Components =
                                     [
                                         BUCKSpecificHintableArea
                                         (
-                                            ElementName = 'HintWarning'
+                                            ElementName = "HintWarning"
                                             DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                                             HintTitleToken = "GRL_WART"
                                             HintBodyToken = "GRL_WARB"
@@ -714,7 +752,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
                             (
                                 ComponentDescriptor = BUCKTextureDescriptor
                                 (
-                                    ElementName = 'GameAlertTexture'
+                                    ElementName = "GameAlertTexture"
 
                                     ComponentFrame = TUIFramePropertyRTTI
                                     (
@@ -736,7 +774,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
                                     [
                                         BUCKSpecificHintableArea
                                         (
-                                            ElementName = 'HintAlert'
+                                            ElementName = "HintAlert"
                                             DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                                             HintTitleToken = "GRL_ALRT"
                                             HintBodyToken = "GRL_ALRB"
@@ -754,17 +792,17 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'Map'
+                ElementName = "Map"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [MapNameColumnWidth, ContentLineHeight]
+                    MagnifiableWidthHeight = [~/MapNameColumnWidth, ~/ContentLineHeight]
                 )
 
                 Components =
                 [
                     BUCKTextDescriptor
                     (
-                        ElementName = 'TextMap'
+                        ElementName = "TextMap"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
@@ -779,10 +817,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
                         )
                         HorizontalFitStyle = ~/FitStyle/UserDefined
                         VerticalFitStyle = ~/FitStyle/UserDefined
-                        TextStyle = 'Default'
+                        TextStyle = "Default"
                         TypefaceToken = "Courrier"
-                        TextSize = '14'
-                        TextColor = 'Noir_multi'
+                        TextSize = "14"
+                        TextColor = "Noir_multi"
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                     ),
                 ]
@@ -792,22 +830,22 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'LevelRequired'
+                ElementName = "LevelRequired"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [LevelRequiredColumnWidth, ContentLineHeight]
+                    MagnifiableWidthHeight = [~/LevelRequiredColumnWidth, ~/ContentLineHeight]
                 )
 
                 Components =
                 [
                     BUCKTextDescriptor
                     (
-                        ElementName = 'TextLevelRequired'
+                        ElementName = "TextLevelRequired"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
-                            AlignementToAnchor = [0.5,0.5]
-                            AlignementToFather = [0.5,0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                            AlignementToFather = [0.5, 0.5]
                         )
 
                         ParagraphStyle = TParagraphStyle
@@ -817,10 +855,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
                         )
                         HorizontalFitStyle = ~/FitStyle/UserDefined
                         VerticalFitStyle = ~/FitStyle/UserDefined
-                        TextStyle = 'Default'
+                        TextStyle = "Default"
                         TypefaceToken = "Courrier"
-                        TextSize = '14'
-                        TextColor = 'Noir_multi'
+                        TextSize = "14"
+                        TextColor = "Noir_multi"
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                     ),
                 ]
@@ -830,10 +868,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'NbPlayers'
+                ElementName = "NbPlayers"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [NbPlayersColumnWidth, ContentLineHeight]
+                    MagnifiableWidthHeight = [~/NbPlayersColumnWidth, ~/ContentLineHeight]
                 )
                 Components =
                 [
@@ -854,12 +892,12 @@ ListeDesParties_ContentList is BUCKListDescriptor
 
                                 ComponentDescriptor = BUCKTextDescriptor
                                 (
-                                    ElementName = 'TextNbPlayers'
+                                    ElementName = "TextNbPlayers"
                                     ComponentFrame = TUIFramePropertyRTTI
                                     (
-                                        MagnifiableWidthHeight = [0.5*NbPlayersColumnWidth, ContentLineHeight]
-                                        AlignementToAnchor = [0,0.5]
-                                        AlignementToFather = [0,0.5]
+                                        MagnifiableWidthHeight = [0.5 * ~/NbPlayersColumnWidth, ~/ContentLineHeight]
+                                        AlignementToAnchor = [0.0, 0.5]
+                                        AlignementToFather = [0.0, 0.5]
                                     )
                                     HorizontalFitStyle = ~/FitStyle/UserDefined
                                     VerticalFitStyle = ~/FitStyle/UserDefined
@@ -868,10 +906,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
                                         VerticalAlignment = ~/UIText_VerticalCenter
                                         Alignment = UIText_Right
                                     )
-                                    TextStyle = 'Default'
+                                    TextStyle = "Default"
                                     TypefaceToken = "Courrier"
-                                    TextSize = '16'
-                                    TextColor = 'Noir_multi'
+                                    TextSize = "16"
+                                    TextColor = "Noir_multi"
                                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                 )
                             ),
@@ -879,12 +917,12 @@ ListeDesParties_ContentList is BUCKListDescriptor
                             (
                                 ComponentDescriptor = BUCKTextDescriptor
                                 (
-                                    ElementName = 'TextNbPlayersMax'
+                                    ElementName = "TextNbPlayersMax"
                                     ComponentFrame = TUIFramePropertyRTTI
                                     (
-                                        MagnifiableWidthHeight = [0.5*NbPlayersColumnWidth, ContentLineHeight]
-                                        AlignementToAnchor = [0,0.5]
-                                        AlignementToFather = [0,0.5]
+                                        MagnifiableWidthHeight = [0.5 * ~/NbPlayersColumnWidth, ~/ContentLineHeight]
+                                        AlignementToAnchor = [0.0, 0.5]
+                                        AlignementToFather = [0.0, 0.5]
                                     )
                                     ParagraphStyle = TParagraphStyle
                                     (
@@ -895,10 +933,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
                                     HorizontalFitStyle = ~/FitStyle/UserDefined
                                     VerticalFitStyle = ~/FitStyle/UserDefined
 
-                                    TextStyle = 'Default'
+                                    TextStyle = "Default"
                                     TypefaceToken = "Courrier"
-                                    TextSize = '16'
-                                    TextColor = 'Noir_multi'
+                                    TextSize = "16"
+                                    TextColor = "Noir_multi"
                                     TextToken = "NBPLYRMAX"
                                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                 )
@@ -912,11 +950,11 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'Status'
+                ElementName = "Status"
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [GameStatusColumnWidth, ContentLineHeight]
+                    MagnifiableWidthHeight = [~/GameStatusColumnWidth, ~/ContentLineHeight]
                 )
 
                 Components =
@@ -926,12 +964,11 @@ ListeDesParties_ContentList is BUCKListDescriptor
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 0.0]
-                            AlignementToAnchor = [0.5,0.5]
-                            AlignementToFather = [0.5,0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                            AlignementToFather = [0.5, 0.5]
                         )
                         InterItemMargin = TRTTILength( Magnifiable = 2.0 )
 
-                        //ClipContent = true
                         Axis = ~/ListAxis/Vertical
                         Elements =
                         [
@@ -939,7 +976,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
                             (
                                 ComponentDescriptor = BUCKTextDescriptor
                                 (
-                                    ElementName = 'TextStatus'
+                                    ElementName = "TextStatus"
                                     ComponentFrame = TUIFramePropertyRTTI
                                     (
                                         RelativeWidthHeight = [1.0, 0.0]
@@ -952,10 +989,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
                                         Alignment = UIText_Center
                                         VerticalAlignment = ~/UIText_VerticalCenter
                                     )
-                                    TextStyle = 'Default'
+                                    TextStyle = "Default"
                                     TypefaceToken = "Courrier"
-                                    TextSize = '12'
-                                    TextColor = 'Noir_multi'
+                                    TextSize = "12"
+                                    TextColor = "Noir_multi"
                                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                 )
                             ),
@@ -963,7 +1000,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
                             (
                                 ComponentDescriptor = BUCKTextDescriptor
                                 (
-                                    ElementName = 'TextSubStatus'
+                                    ElementName = "TextSubStatus"
                                     ComponentFrame = TUIFramePropertyRTTI
                                     (
                                         RelativeWidthHeight = [1.0, 0.0]
@@ -975,10 +1012,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
                                         Alignment = UIText_Center
                                         VerticalAlignment = ~/UIText_VerticalCenter
                                     )
-                                    TextStyle = 'Default'
+                                    TextStyle = "Default"
                                     TypefaceToken = "Courrier"
-                                    TextSize = '8'
-                                    TextColor = 'Noir_multi'
+                                    TextSize = "8"
+                                    TextColor = "Noir_multi"
                                     TextDico = ~/LocalisationConstantes/dico_interface_outgame
                                 )
                             ),
@@ -991,22 +1028,22 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'Rules'
+                ElementName = "Rules"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [GameRulesColumnWidth, ContentLineHeight]
+                    MagnifiableWidthHeight = [~/GameRulesColumnWidth, ~/ContentLineHeight]
                 )
 
                 Components =
                 [
                     BUCKTextDescriptor
                     (
-                        ElementName = 'TextRules'
+                        ElementName = "TextRules"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
-                            AlignementToAnchor = [0.5,0.5]
-                            AlignementToFather = [0.5,0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                            AlignementToFather = [0.5, 0.5]
                         )
 
                         ParagraphStyle = TParagraphStyle
@@ -1019,10 +1056,10 @@ ListeDesParties_ContentList is BUCKListDescriptor
                         VerticalFitStyle = ~/FitStyle/UserDefined
 
 
-                        TextStyle = 'Default'
+                        TextStyle = "Default"
                         TypefaceToken = "Courrier"
-                        TextSize = '12'
-                        TextColor = 'Noir_multi'
+                        TextSize = "12"
+                        TextColor = "Noir_multi"
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                     )
                 ]
@@ -1032,22 +1069,22 @@ ListeDesParties_ContentList is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKMultiListContentElementDescriptor
             (
-                ElementName = 'Mods'
+                ElementName = "Mods"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    MagnifiableWidthHeight = [ModsStatusColumnWidth, ContentLineHeight]
+                    MagnifiableWidthHeight = [~/ModsStatusColumnWidth, ~/ContentLineHeight]
                 )
 
                 Components =
                 [
                     BUCKRackDescriptor
                     (
-                        ElementName = 'ModsContainer'
+                        ElementName = "ModsContainer"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [0.0, 1.0]
-                            AlignementToAnchor = [0.5,0.5]
-                            AlignementToFather = [0.5,0.5]
+                            AlignementToAnchor = [0.5, 0.5]
+                            AlignementToFather = [0.5, 0.5]
                         )
 
                         Axis = ~/ListAxis/Horizontal
@@ -1079,15 +1116,15 @@ ListeDesParties_ContentList is BUCKListDescriptor
 
 private ModaleAskPasswordCancelButton is CancelButton
 (
-    ElementName = 'CancelButton'
+    ElementName = "CancelButton"
     TextToken = "BTN_CANCEL"
     Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ESCAPE ) )
 )
 
 private ModaleAskPasswordJoinButton is ConfirmButton
 (
-    ElementName = 'JoinButton'
-    TextToken = 'AB_GAMJOIN'
+    ElementName = "JoinButton"
+    TextToken = "AB_GAMJOIN"
     Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
 )
 
@@ -1095,7 +1132,7 @@ private ModaleAskPasswordJoinButton is ConfirmButton
 ModaleAskPasswordWindowFrame is SpecificModaleWindowFrame
 (
     ContentMagnifiableWidthHeight = [850.0, 360.0]
-    TitleToken = 'SRV_AUTH'
+    TitleToken = "SRV_AUTH"
 
     ContentComponents =
     [
@@ -1110,7 +1147,7 @@ ModaleAskPasswordWindowFrame is SpecificModaleWindowFrame
                 AlignementToAnchor = [0.5, 0.5]
             )
 
-            ElementName = 'Password'
+            ElementName = "Password"
             MaxChars = 128
             Flags = EditableTextFlag/PASSWORD | EditableTextFlag/ONE_LINE
             DontMaskEventOnValidate = true
@@ -1127,7 +1164,7 @@ ModaleAskPasswordWindowFrame is SpecificModaleWindowFrame
 UISpecificOutGameGameRoomListViewDescriptor is TUISpecificOutGameGameRoomListViewDescriptor
 (
     MainComponentDescriptor = ~/GameRoomListPanelWindowFrame
-    MainComponentContainerUniqueName = "MultiGameRoomListContainer" // Permet d'indiquer l'endroit ou le composant doit s'insérer
+    MainComponentContainerUniqueName = "MultiGameRoomListContainer" // Permet d'indiquer l"endroit ou le composant doit s'insérer
     ModaleAskPassword = ~/ModaleAskPasswordWindowFrame
 
     StrategicModeComponent = GameModeDecorationComponent

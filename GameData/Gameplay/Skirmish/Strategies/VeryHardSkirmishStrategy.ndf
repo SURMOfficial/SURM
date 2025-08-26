@@ -3,7 +3,7 @@
 //-------------------------------------------------------------------------
 export VeryHardStrategy is TIAGeneralStrategy
 (
-    StrategyName = "GenericAI"
+    StrategyName = "VHardAI"
     FirstGenerator = VHard_Choose_Strategy
     TransitionList =
     [
@@ -102,8 +102,8 @@ export VHard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Attack_Main,
         ~/Attack_Helo,
 
-        ~/Defense_Corridor_AA,
-        ~/Defense_Corridor_AA,
+        // ~/Defense_Corridor_AA,
+        // ~/Defense_Corridor_AA,
 
         ~/Airstrike_AirReco,
 
@@ -116,7 +116,7 @@ export VHard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Attack_Adaptive,          // ~100
         ~/Attack_Filler,            // budget 40
 
-        ~/Defense_Corridor_AA,
+        // ~/Defense_Corridor_AA,
         ~/CaptureHalfZoneObjectif_Ceil,
 
         //------------------------------
@@ -125,8 +125,8 @@ export VHard_Phase_Deploiement is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/Defense_Corridor_Adaptive,
-        ~/Defense_Corridor_Adaptive,
+        // ~/Defense_Corridor_Adaptive,
+        // ~/Defense_Corridor_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
@@ -177,17 +177,17 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
         // Défenses prioritaires
         //------------------------------
         // Statiques pour tenir le terrain
-        ~/Defense_Corridor_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
-        ~/Defense_Corridor_AA,
-        ~/Defense_Corridor_AA,
+        // ~/Defense_Corridor_Adaptive, // Canon AT - Chasseur de char - ATInf - HMG - Flamer // 85
+        // ~/Defense_Corridor_AA,
+        // ~/Defense_Corridor_AA,
 
         ~/Airstrike_AirReco,
 
-        ~/Defense_Corridor_Adaptive,
-        ~/Defense_Corridor_Adaptive,
+        // ~/Defense_Corridor_Adaptive,
+        // ~/Defense_Corridor_Adaptive,
 
         //Cet mission lance les objectifs restant
-        ~/Defense_Objectif,
+        // ~/Defense_Objectif,
 
         ~/Artillery_TriggerHappy,        // Artillerie pas chère                 //  80
 
@@ -210,12 +210,12 @@ export VHard_Phase_Command is TSequenceGeneratorDescriptor
         ~/Airstrike_Assault,
 
         ~/Defense_Corridor_AA,
-        ~/Defense_Corridor_AA,
+        // ~/Defense_Corridor_AA,
 
         ~/Artillery_TriggerHappy_1for2Corridors,
 
-        ~/Defense_Corridor_Adaptive,
-        ~/Defense_Corridor_Adaptive,
+        // ~/Defense_Corridor_Adaptive,
+        // ~/Defense_Corridor_Adaptive,
 
         ~/Airstrike_Offense,
         ~/Airstrike_AA,
