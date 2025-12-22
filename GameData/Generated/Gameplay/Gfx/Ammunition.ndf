@@ -36799,9 +36799,195 @@ Ammo_DCA_4_canons_AZP_23_Amur_23mm_late is TAmmunitionDescriptor
     DistanceForSpeedGRU               = 0.0
     DamageTypeEvolutionOverRangeDescriptor  = nil //~/DamageTypeEvolutionOverRangeDescriptor_AA_Autocannon
 )
-export Ammo_Degats_incendie is TAmmunitionDescriptor
+export Ammo_IRCM is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{d3e07d9a-617b-4f4c-90d3-b7d85e830185}
+    Name                              = 'None'
+    TypeCategoryName                  = 'None'
+    Caliber                           = ''
+    TraitsToken                       = [ ]
+    WeaponCursorType                  = Weapon_Cursor_None
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 0.2
+    TimeBetweenTwoFx                  = 0.2
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 50
+    AngleDispersion                   = 0.0
+    SalvoShotsSorted          		  = False
+    RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 2.0
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 0
+    SuppressDamages                   = 0.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = True
+    TirReflexe                        = True
+    MaximalSpeedGRU                   = 3534
+    ShotWithPhysics                   = False
+    FluidFriction                     = 0.0
+    ShotsBeforeMaxNoise               = 1
+	TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor  = TDiceHitRollRuleDescriptor
+    (
+         DescriptorId          = GUID:{c5e4f64e-bfde-4cfd-995a-afc2ac88ed94}
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, 100.0),
+            (EBaseHitValueModifier/Moving, 100.0),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    TimeBetweenTwoSalvos              = 0.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    NbTirParSalves                    = 1000
+    SupplyCost                        = 1.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    NbrProjectilesSimultanes          = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+	TandemCharge                      = False
+    FlightTimeForSpeed                = 1.0
+    DistanceForSpeedGRU               = 1000
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+export Ammo_Flares is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{e06e646c-2887-4074-be0c-d7dd0f00b45e}
+    Name                              = 'None'
+    TypeCategoryName                  = 'None'
+    Caliber                           = ''
+    TraitsToken                       = [ ]
+    WeaponCursorType                  = Weapon_Cursor_None
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 0.2
+    TimeBetweenTwoFx                  = 0.2
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 50
+    AngleDispersion                   = 0.0
+    SalvoShotsSorted          		  = False
+    RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 2.0
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 0
+    SuppressDamages                   = 0.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = True
+    TirReflexe                        = True
+    MaximalSpeedGRU                   = 3534
+    ShotWithPhysics                   = False
+    FluidFriction                     = 0.0
+    ShotsBeforeMaxNoise               = 1
+	TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor  = TDiceHitRollRuleDescriptor
+    (
+         DescriptorId          = GUID:{00d2cf14-a754-4859-aa25-358565cf70b0}
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, 80.0),
+            (EBaseHitValueModifier/Moving, 80.0),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    TimeBetweenTwoSalvos              = 0.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    NbTirParSalves                    = 1000
+    SupplyCost                        = 1.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    NbrProjectilesSimultanes          = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+	TandemCharge                      = False
+    FlightTimeForSpeed                = 1.0
+    DistanceForSpeedGRU               = 1000
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+export Ammo_Exhaust_Cooler is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{5508f02b-2c0f-4364-98f4-0207547da8fe}
+    Name                              = 'None'
+    TypeCategoryName                  = 'None'
+    Caliber                           = ''
+    TraitsToken                       = [ ]
+    WeaponCursorType                  = Weapon_Cursor_None
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 0.2
+    TimeBetweenTwoFx                  = 0.2
+    MinimumRangeProjectileGRU         = 0
+    MaximumRangeProjectileGRU         = 50
+    AngleDispersion                   = 0.0
+    SalvoShotsSorted          		  = False
+    RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 2.0
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = 0
+    SuppressDamages                   = 0.0
+    AllowSuppressDamageWhenNoImpact   = False
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = True
+    TirReflexe                        = True
+    MaximalSpeedGRU                   = 3534
+    ShotWithPhysics                   = False
+    FluidFriction                     = 0.0
+    ShotsBeforeMaxNoise               = 1
+	TargetOnlyOneUnitInDistrict       = False
+    HitRollRuleDescriptor  = TDiceHitRollRuleDescriptor
+    (
+         DescriptorId          = GUID:{373d64a5-d2b9-43c9-b605-6bea48895a6a}
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, 50.0),
+            (EBaseHitValueModifier/Moving, 50.0),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    TimeBetweenTwoSalvos              = 0.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    NbTirParSalves                    = 1000
+    SupplyCost                        = 1.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    NbrProjectilesSimultanes          = 1
+    AffichageMunitionParSalve         = 1
+    SmokeDescriptor                   = nil
+    FireDescriptor                    = nil
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+	TandemCharge                      = False
+    FlightTimeForSpeed                = 1.0
+    DistanceForSpeedGRU               = 1000
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+export Ammo_Degats_incendie is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{7f50c1a4-b9ec-4ab9-9f71-4680c3b7beab}
     Name                              = 'None'
     TypeCategoryName                  = 'None'
     Caliber                           = ''
@@ -36835,7 +37021,7 @@ export Ammo_Degats_incendie is TAmmunitionDescriptor
 	TargetOnlyOneUnitInDistrict       = False
     HitRollRuleDescriptor  = TDiceHitRollRuleDescriptor
     (
-         DescriptorId          = GUID:{c5e4f64e-bfde-4cfd-995a-afc2ac88ed94}
+         DescriptorId          = GUID:{251ba3bc-bce0-4ec4-8a2e-81c00fb87b92}
          BaseCriticModifier = 0
          BaseHitValueModifiers =
          [
