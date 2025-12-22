@@ -36,11 +36,11 @@ template BUCKButtonDescriptor
     Components : LIST<TBUCKContainerDescriptor> = [],
     // -- BUCKContainerDescriptor
 
-    // ++ BUCKSensibleAreaDescriptor
+    // ++ BUCKSensitiveAreaDescriptor
     MaskEvents : bool = true,                                           // Par défaut on masque les évenements
     IgnoreMask : bool = false,
     AreaShape : int = ~/AreaShape/Rect,
-    // -- BUCKSensibleAreaDescriptor
+    // -- BUCKSensitiveAreaDescriptor
 
     // ++ BUCKButtonDescriptor
     IsTogglable : bool = false,                                         // Détermine si le bouton est togglable
@@ -101,11 +101,11 @@ is TBUCKButtonDescriptor
     Components = <Components>
     // -- BUCKContainerDescriptor
 
-    // ++ BUCKSensibleAreaDescriptor
+    // ++ BUCKSensitiveAreaDescriptor
     MaskEvents = <MaskEvents>
     IgnoreMask = <IgnoreMask>
     AreaShape = <AreaShape>
-    // -- BUCKSensibleAreaDescriptor
+    // -- BUCKSensitiveAreaDescriptor
 
     // ++ BUCKButtonDescriptor
     IsTogglable = <IsTogglable>

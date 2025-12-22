@@ -6,12 +6,12 @@ TSoundFilter_RadioVehicule  is 20
 TSoundFilter_RadioOutside   is 21
 TSoundFilter_RadioAirplane  is 22
 
-template Template_UnitAcknow [ Identifier : string, Filter : int ] is TSoundDescriptor
+template Template_UnitAcknow [ FileName : string, Filter : int ] is TSoundDescriptor
 (
     SoundSettings = $/SoundSettings/AcknowUnit_SoundSettings
     TheSoundStream       = TSoundStream
     (
-        FileName = 'GameData:/Assets/Sons/Acknows/' + <Identifier> + '.ogg'
+        FileName = <FileName>
     )
     Filter = <Filter>
 )

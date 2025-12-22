@@ -51,7 +51,7 @@ ShowRoomResource is TUISpecificShowRoomResources
 
     AllianceToCountriesToShow = MAP [
         (ECoalition/PACT, ["SOV","POL","DDR","TCH"]),
-        (ECoalition/NATO, ["US","UK","FR","CAN","RFA","NL","BEL","LUX","ESP"])
+        (ECoalition/NATO, ["US","UK","FR","CAN","RFA","NL","BEL","LUX","ESP", "DK"])
     ]
 
     SpecificHidingViewDescriptor = ~/UISpecificHidingViewDescriptor
@@ -65,10 +65,6 @@ ShowRoomResource is TUISpecificShowRoomResources
 
 ShowRoomMainContainerResource is TUICommonMainContainerResource
 (
-    ContentRefSize = [ 2134 , 1440 ]
-    SafeBoxMin     = [  107 ,   80 ]
-    SafeBoxSize    = ~/FullScreenSafeBoxSize
-
     ForegroundComponents = BUCKContainerDescriptor
     (
         ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1,1] )
@@ -84,4 +80,5 @@ ShowRoomMainContainerResource is TUICommonMainContainerResource
             ),
         ]
     )
+    SafeBoxSize    = [ 1920 , 1080 ]
 )

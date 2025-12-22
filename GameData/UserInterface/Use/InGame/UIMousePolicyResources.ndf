@@ -1051,7 +1051,7 @@ MouseWidget_Inefficient is Template_SoftwareMouseWidgetResource_Targeting
 private PathAndArrowSizeMultiplierHelper is TPathAndArrowSizeMultiplierHelper
 (
     Camera = $/M3D/Misc/CameraPrincipale
-    LineSizeMultiplierParam = $/M3D/Shader/LineSizeMultiplierParamVector
+    LineSizeMultiplierParam = float3[0.3,7,16000]
 )
 
 //--------------------------------------------------------
@@ -1061,8 +1061,6 @@ private AirplaneMissionArrowDescriptor is TUIPathDescriptor
 (
     Color                 = RGBA[255, 255, 255, 255]
     World                 = $/M3D/Scene/DefaultWorld
-    RenderLayerSelector = TRenderLayerSelector(RenderLayerName='Calque_Fleche_GD')
-    Material              = $/M3D/Shader/MaterialBezierLine_Bichrome
     Width                 = 1500
     ArrowLength           = 2500
     ArrowWidth            = 2500
@@ -1075,8 +1073,6 @@ private SpawnUnitArrowDescriptor is TUIPathDescriptor
 (
     Color                 = RGBA[255, 255, 255, 255]
     World                 = $/M3D/Scene/DefaultWorld
-    RenderLayerSelector = TRenderLayerSelector(RenderLayerName='Calque_Fleche_GD')
-    Material              = $/M3D/Shader/MaterialBezierLine_Bichrome
     Width                 = 1500
     ArrowLength           = 2500
     ArrowWidth            = 2500

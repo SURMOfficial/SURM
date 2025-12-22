@@ -137,6 +137,60 @@ DepictionPylonSet_Helico_Default is TMultiPylonSet
     BombPylonSet = PylonSet_DefaultMissileHelico
 )
 
+PylonSet_DefaultNoPOD is TPylonSet
+(
+    Pylons = [
+        PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/ModelPylon9NoPOD_Adapter ),
+    ]
+)
+
+PylonSet_DefaultNoPODShowroom is TPylonSet
+(
+    Pylons = [
+        PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/ModelPylon9NoPOD_Adapter ),
+    ]
+)
+
+DepictionPylonSet_NoPOD_Default is TMultiPylonSet
+(
+    DefaultPylonSet = PylonSet_DefaultNoPOD
+    PodPylonSet = PylonSet_DefaultNoPOD
+    BombPylonSet = PylonSet_DefaultNoPOD
+)
+DepictionPylonSet_NoPOD_Default_Showroom is TMultiPylonSet
+(
+    DefaultPylonSet = PylonSet_DefaultNoPODShowroom
+    PodPylonSet = PylonSet_DefaultNoPODShowroom
+    BombPylonSet = PylonSet_DefaultNoPODShowroom
+)
+
+PylonSet_DefaultNoPODx2 is TPylonSet
+(
+    Pylons = [
+        PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/ModelPylon2NoPOD ),
+    ]
+)
+
+PylonSet_DefaultNoPODx2Showroom is TPylonSet
+(
+    Pylons = [
+        PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/ModelPylon2NoPOD ),
+    ]
+)
+
+DepictionPylonSet_NoPODx2_Default is TMultiPylonSet
+(
+    DefaultPylonSet = PylonSet_DefaultNoPODx2
+    PodPylonSet = PylonSet_DefaultNoPODx2
+    BombPylonSet = PylonSet_DefaultNoPODx2
+)
+DepictionPylonSet_NoPODx2_Default_Showroom is TMultiPylonSet
+(
+    DefaultPylonSet = PylonSet_DefaultNoPODx2Showroom
+    PodPylonSet = PylonSet_DefaultNoPODx2Showroom
+    BombPylonSet = PylonSet_DefaultNoPODx2Showroom
+)
+
 //----------------------------------------------------------------------------------------------------------------------------------------
 //---------------------------------------FIN PYLONES D'EMPORT de ROQUETTES et MISSILES par DEFAUT-----------------------------------------
 //----------------------------------------------------------------------------------------------------------------------------------------
@@ -145,6 +199,7 @@ DepictionPylonSet_Helico_Default is TMultiPylonSet
 PylonSet_SOVPodHelico is TPylonSet
 (
     Pylons = [
+        PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_4  ),
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_5  ),
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_16 ),
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_17 ),
@@ -181,6 +236,7 @@ PylonSet_SOVPodAirplaneShowroom is TPylonSet
 PylonSet_SOVPodHelicoShowroom is TPylonSet
 (
     Pylons = [
+        PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_4 ),
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_5 ),
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_16 ),
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodSOVModelPylon_17 ),
@@ -264,6 +320,7 @@ PylonSet_FRPodAirplane is TPylonSet
 (
     Pylons = [
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodFRModelPylon_4 ),
+        PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodFRModelPylon_18 ),
         PylonDepictionCommon( ModelResource = $/GFX/DepictionResources/PodFRModelResource ),
     ]
 )
@@ -272,6 +329,7 @@ PylonSet_FRPodAirplaneShowroom is TPylonSet
 (
     Pylons = [
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodFRModelPylon_4 ),
+        PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodFRModelPylon_18 ),
         PylonDepictionShowroom( ModelResource = $/GFX/DepictionResources/PodFRModelResource ),
     ]
 )

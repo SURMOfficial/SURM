@@ -36,11 +36,11 @@ template BUCKStateUpdaterDescriptor
     Components : LIST<TBUCKContainerDescriptor> = [],
     // -- BUCKContainerDescriptor
 
-    // ++ BUCKSensibleAreaDescriptor
+    // ++ BUCKSensitiveAreaDescriptor
     MaskEvents : bool = false,
     IgnoreMask : bool = false,
     AreaShape : int = ~/AreaShape/Rect,
-    // -- BUCKSensibleAreaDescriptor
+    // -- BUCKSensitiveAreaDescriptor
 
 ]
 is TBUCKStateUpdaterDescriptor
@@ -83,10 +83,10 @@ is TBUCKStateUpdaterDescriptor
     Components = <Components>
     // -- BUCKContainerDescriptor
 
-    // ++ BUCKSensibleAreaDescriptor
+    // ++ BUCKSensitiveAreaDescriptor
     MaskEvents = <MaskEvents>
     IgnoreMask = <IgnoreMask>
     AreaShape = <AreaShape>
-    // -- BUCKSensibleAreaDescriptor
+    // -- BUCKSensitiveAreaDescriptor
 
 )

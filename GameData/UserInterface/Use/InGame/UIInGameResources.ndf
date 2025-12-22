@@ -14,7 +14,7 @@ UIInGameResource is TUISpecificInGameResources
     ViewDescriptors = MAP
     [
         ("UISpecificIngameChatViewDescriptor", UISpecificIngameChatViewDescriptor(PanelColorStyle = "TacticPanel" ButtonColorStyle = "TacticButton_highlightable")),
-        ("UISpecificInGameFlarePanelViewDescriptor", ~/UIInGameFlarePanelViewDescriptor),
+        ("UISpecificInGameBeaconPanelViewDescriptor", ~/UIInGameBeaconPanelViewDescriptor),
         ("UISpecificIngameHUDTransportAndUnitsInfoViewDescriptor", ~/UISpecificInGameHUDTransportAndUnitsInfoViewDescriptor),
         ("UISpecificUnitInfoPanelViewDescriptor", UISpecificUnitInfoPanelViewDescriptor()),
         ("SkirmishProductionMenu", UISpecificSkirmishProductionMenuViewDescriptor()),
@@ -55,7 +55,7 @@ UIInGameResource is TUISpecificInGameResources
     CommonHUDResources          = ~/InGameHUDResource
     HUDResource                 = ~/InGameHUDResource
     LabelResource               = ~/CommonLabelResource
-    FlareLabelResources         = ~/CommonFlareLabelResources
+    BeaconLabelResources        = ~/CommonBeaconLabelResources
     PlayerMissionLabelResources = ~/SpecificInGamePlayerMissionLabelResources
     GabaritResources            = ~/InGameGabaritResources
     UnitLabelResource           = ~/SpecificInGameUnitLabelResources
@@ -88,9 +88,7 @@ IngameHUDRightFramesWidth is 320.0
 
 InGameMainContainerResource is TUICommonMainContainerResource
 (
-    ContentRefSize = [ 2134 , 1440 ]
-    SafeBoxMin     = [  107 ,   80 ]
-    SafeBoxSize    = ~/FullScreenSafeBoxSize
+    SafeBoxSize    = [ 1920 , 1080 ]
 
     ForegroundComponents = BUCKContainerDescriptor
     (
@@ -190,7 +188,7 @@ InGameMainContainerResource is TUICommonMainContainerResource
                     (
                         ComponentDescriptor = BUCKContainerDescriptor
                         (
-                            UniqueName = "UICommonFlarePanelViewMainContainer"
+                            UniqueName = "UICommonBeaconPanelViewMainContainer"
                             ComponentFrame = TUIFramePropertyRTTI
                             (
                                 RelativeWidthHeight = [1.0, 0.0]

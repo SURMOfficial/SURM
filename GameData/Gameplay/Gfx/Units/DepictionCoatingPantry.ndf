@@ -1,3 +1,44 @@
+//////////////////////////////////////////////////////////////////////////////
+//ECRIRE LE NOM DES BONES EN MINUSCULES POUR QUE LES ANIMS FONCTIONNENT INGAME
+//////////////////////////////////////////////////////////////////////////////
+Puma_Orchidee_FR_landing_gears_coating_ingredient is TCoatingIngredientOperator
+(
+    Descriptor = TCosmeticLandingGearOperatorDesc
+    (
+        AnimationList = [
+            TBoneProceduralAnimation
+            (
+                BoneName = 'roue_avant'
+                Axis = 1
+                LimitValue = -90
+                Delay = 4
+                Duration = 1.5
+            ),
+            TBoneProceduralAnimation
+            (
+                BoneName = 'roue_arriere'
+                Axis = 1
+                LimitValue = -90
+                Delay = 4
+                Duration = 1.5
+            ),
+        ]
+    )
+)
+
+Puma_Orchidee_FR_radar_coating_ingredient is TCoatingIngredientOperator
+(
+    Descriptor = TCosmeticHelicopterRadarOperatorDesc
+    (
+        RPM = 10
+        FoldAngleInDegree = -90
+        FoldDurationInSeconds = 1.5
+        UnfoldDelayInSeconds = 4
+        RadarFoldBone = 'radar_base'
+        RadarRotationBone = 'radar'
+    )
+)
+
 OH58A_Gatling_CAN_tourelle_coating_ingredient is TCoatingIngredientOperator
 (
     Descriptor = TCosmeticLandingGearOperatorDesc
@@ -47,6 +88,14 @@ F117_Nighthawk_trapdoor_coating_ingredient is TCoatingIngredientOperator
 )
 
 Faun_Kraka_20mm_RFA_offset_coating_ingredient is TCoatingIngredientOperator
+(
+    Descriptor = TCosmeticOffsetTurretWhileMovingOperatorDesc
+    (
+        AngleInDegree = 20
+    )
+)
+
+Faun_Kraka_M40A1_RFA_offset_coating_ingredient is TCoatingIngredientOperator
 (
     Descriptor = TCosmeticOffsetTurretWhileMovingOperatorDesc
     (
