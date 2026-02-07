@@ -1,4 +1,4 @@
-template BUCKMultiListContentElementDescriptor
+template BUCKSortableElementFieldDescriptor
 [
     // ++ BUCKContainerDescriptor
     ElementName : string = "",
@@ -36,7 +36,7 @@ template BUCKMultiListContentElementDescriptor
     Components : LIST<TBUCKContainerDescriptor> = [],
     // -- BUCKContainerDescriptor
 ]
-is TBUCKMultiListContentElementDescriptor
+is TBUCKSortableElementFieldDescriptor
 (
     // ++ BUCKContainerDescriptor
     ElementName = <ElementName>
@@ -79,7 +79,7 @@ is TBUCKMultiListContentElementDescriptor
 //-------------------------------------------------------------------------------------
 
 //-------------------------------------------------------------------------------------
-template BUCKMultiListTitleButtonDescriptor
+template BUCKSortableElementFieldTitleButtonDescriptor
 [
     // ++ BUCKContainerDescriptor
     ElementName : string = "",
@@ -130,11 +130,11 @@ template BUCKMultiListTitleButtonDescriptor
     ToggledByDefault : bool = false,
     // -- BUCKCheckBoxDescriptor
 
-    SortingType : int = ~/MultiListSorting/None,
+    SortingType : int = ~/SortableElementField/None,
     ShowCheckbox : bool = true,
     CheckBoxBorderLineColorToken : string = 'MarronPanel_noir',
 ]
-is TBUCKMultiListTitleButtonDescriptor
+is TBUCKSortableElementFieldTitleButtonDescriptor
 (
     // ++ BUCKContainerDescriptor
     ElementName = <ElementName>
@@ -283,8 +283,7 @@ template BUCKMultiListDescriptor
     // -- BUCKContainerDescriptor
 
     RackName : string,                                                                  // ElementName du Rack où seront insérés les éléments
-    ColumnNames : LIST<string> = [],                                                    // Liste des ElementName des composants d'une ligne du Rack
-    SortableColumnNames : LIST<string> = [],                                            // Map des [ElementName -> trie] des composants triables d'une ligne du Rack
+    SortableElementFieldNames : LIST<string> = [],                                      // Map des [ElementName -> trie] des composants triables d'une ligne du Rack
     SortingCriteriaListByPriority : LIST<string> = [],
 
     TitleDescriptor : TBUCKContainerDescriptor = nil,                                   // Descriptor de l'en-tête de la MultiList (optionnel)
@@ -329,8 +328,7 @@ is TBUCKMultiListDescriptor
     // -- BUCKContainerDescriptor
 
     RackName = <RackName>
-    ColumnNames = <ColumnNames>
-    SortableColumnNames = <SortableColumnNames>
+    SortableElementFieldNames = <SortableElementFieldNames>
     SortingCriteriaListByPriority = <SortingCriteriaListByPriority>
 
     Components =

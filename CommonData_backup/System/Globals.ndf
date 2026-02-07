@@ -1,6 +1,6 @@
 // A incrémenter quand on veut provoquer une recompilation des glads chez tout le monde sans gêner personne
 
-// Version : 00568
+// Version : 00569
 
 //-----------------------------------------------------------------------------
 // differentes constantes utilisees un peu partout.
@@ -303,7 +303,6 @@ CommandName is TBaseClass
 (
     GameApplicationResetMode      is "GameApplication::ChangeModeUsingDefaultValue"
     GameApplicationToggle         is "GameApplicationToggler::Toggle"
-    GameApplicationPerformPendingToggle is 'GameApplicationToggler::PerformPendingToggle'
     ResetDeviceType is 'TClusterInitGameApplication::ResetDeviceType'
     GraphicsModeRefresh             is "GraphicDependentObjectHandler::GraphicsModeRefreshCallback"
     IncGraphicsDeviceVariability    is "IncGraphicsDeviceVariability"
@@ -434,8 +433,8 @@ ProjSpeedCorr					  is 2.47
 ProjSpeedCorrBullet				  is 2.62
 ProjSpeedCorrAC					  is 2.0 // rough estimate from external ballistics calculator in spreadsheet
 ProjSpeedCorrHeavy				  is 2.0
-ArtySuppressRadCorr				  is 2.3
-ArtySuppressCorr				  is 3.5
+ArtySuppressRadCorr				  is 1.8
+ArtySuppressCorr				  is 1.5
 BulletSuppressCorr				  is 0.1
 ACSuppressCorr				      is 0.8
 BulletSuppressRadCorr			  is 0.33
