@@ -44,7 +44,7 @@ private TutorialBriefDescriptor is BUCKButtonDescriptor
                 // status
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = BUCKMultiListContentElementDescriptor
+                    ComponentDescriptor = BUCKSortableElementFieldDescriptor
                     (
                         ElementName = "IsCompletedMultilist"
                         ComponentFrame = TUIFramePropertyRTTI
@@ -80,7 +80,7 @@ private TutorialBriefDescriptor is BUCKButtonDescriptor
                 BUCKListElementDescriptor
                 (
                     ExtendWeight = 1.0
-                    ComponentDescriptor = BUCKMultiListContentElementDescriptor
+                    ComponentDescriptor = BUCKSortableElementFieldDescriptor
                     (
                         ElementName = "TutorialNameMultilist"
                         ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
@@ -126,7 +126,7 @@ private TutorialBriefDescriptor is BUCKButtonDescriptor
                 ),
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = BUCKMultiListContentElementDescriptor
+                    ComponentDescriptor = BUCKSortableElementFieldDescriptor
                     (
                         ElementName = "TutorialDurationMultilist"
                         ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [0.0, 1.0] )
@@ -422,14 +422,7 @@ TutorialListContainer is BUCKContainerDescriptor
                                         )
                                         FitStyle = ~/ContainerFitStyle/FitToContentVertically
 
-                                        ColumnNames =
-                                        [
-                                            "IsCompletedMultilist",
-                                            "TutorialNameMultilist",
-                                            "TutorialDurationMultilist"
-                                        ]
-
-                                        SortableColumnNames = []
+                                        SortableElementFieldNames = []
 
                                         RackName = "TutorialBriefsRack"
 
@@ -463,14 +456,7 @@ TutorialListContainer is BUCKContainerDescriptor
                                         )
                                         FitStyle = ~/ContainerFitStyle/FitToContentVertically
 
-                                        ColumnNames =
-                                        [
-                                            "StrategicIsCompletedMultilist",
-                                            "StrategicTutorialNameMultilist",
-                                            "StrategicTutorialDurationMultilist"
-                                        ]
-
-                                        SortableColumnNames = []
+                                        SortableElementFieldNames = []
 
                                         RackName = "StrategicTutorialBriefsRack"
 
@@ -601,7 +587,7 @@ is BUCKListDescriptor
                 [
                     BUCKListElementDescriptor
                     (
-                        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+                        ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
                         (
                             ElementName = <PrefixName> + "IsCompletedMultilist"
                             ComponentFrame = TUIFramePropertyRTTI
@@ -610,7 +596,7 @@ is BUCKListDescriptor
                                 MagnifiableWidthHeight = [TutorialDoneColumnWidth, 0.0]
                             )
 
-                            SortingType = ~/MultiListSorting/Integer
+                            SortingType = ~/SortableElementField/Integer
                             ShowCheckbox = false
                             HidePointerEvents = true
                             Components =
@@ -626,7 +612,7 @@ is BUCKListDescriptor
                     BUCKListElementDescriptor
                     (
                         ExtendWeight = 1
-                        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+                        ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
                         (
                             ElementName = <PrefixName> + "TutorialNameMultilist"
                             ComponentFrame = TUIFramePropertyRTTI
@@ -634,7 +620,7 @@ is BUCKListDescriptor
                                 RelativeWidthHeight = [1.0, 1.0]
                             )
 
-                            SortingType = ~/MultiListSorting/String
+                            SortingType = ~/SortableElementField/String
                             ShowCheckbox = false
                             HidePointerEvents = true
                             Components =
@@ -649,7 +635,7 @@ is BUCKListDescriptor
                     ),
                     BUCKListElementDescriptor
                     (
-                        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+                        ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
                         (
                             ElementName = <PrefixName> + "TutorialDurationMultilist"
                             ComponentFrame = TUIFramePropertyRTTI
@@ -658,7 +644,7 @@ is BUCKListDescriptor
                                 MagnifiableWidthHeight = [TutorialDurationColumnWidth, 0.0]
                             )
 
-                            SortingType = ~/MultiListSorting/Integer
+                            SortingType = ~/SortableElementField/Integer
                             ShowCheckbox = false
                             HidePointerEvents = true
                             Components =

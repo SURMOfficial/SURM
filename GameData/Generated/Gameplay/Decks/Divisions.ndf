@@ -6,7 +6,7 @@ export Descriptor_Deck_Division_BEL_16e_Mecanisee_multi is TDeckDivisionDescript
     DescriptorId = GUID:{7265322a-3993-4b09-9f2c-d775bcc7e14e}
     CfgName = 'BEL_16e_Mecanisee_multi'
     DivisionName = 'DCPLBIYTNN'
-    InterfaceOrder = 27.0
+    InterfaceOrder = 28.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'BEL', 'NATO', 'armored', 'DC_PWR1']
@@ -24,7 +24,7 @@ export Descriptor_Deck_Division_BEL_Division_Mobilisation_multi is TDeckDivision
     DescriptorId = GUID:{561f1843-9bb7-45e3-b731-813f9ca996d5}
     CfgName = 'BEL_Division_Mobilisation_multi'
     DivisionName = 'CODMEOMHDV'
-    InterfaceOrder = 28.0
+    InterfaceOrder = 29.0
     DivisionPowerClassification = 'DC_PWR3'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'BEL', 'NATO', 'infantryReg', 'DC_PWR3']
@@ -42,7 +42,7 @@ export Descriptor_Deck_Division_CAN_1st_Canadian_multi is TDeckDivisionDescripto
     DescriptorId = GUID:{66e7d6ef-7eae-48b0-8928-b84cb0867b33}
     CfgName = 'CAN_1st_Canadian_multi'
     DivisionName = 'PUHREDFXOM'
-    InterfaceOrder = 31.0
+    InterfaceOrder = 32.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'CAN', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -60,7 +60,7 @@ export Descriptor_Deck_Division_ESP_Division_Brunete_multi is TDeckDivisionDescr
     DescriptorId = GUID:{06544c5f-b76f-4518-a435-674250af63ca}
     CfgName = 'ESP_Division_Brunete_multi'
     DivisionName = 'SUBZCHCRXV'
-    InterfaceOrder = 32.0
+    InterfaceOrder = 33.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'ESP', 'NATO', 'armored', 'DC_PWR2']
@@ -73,12 +73,30 @@ export Descriptor_Deck_Division_ESP_Division_Brunete_multi is TDeckDivisionDescr
     TypeTexture       = "Texture_Division_Type_armored"
     CountryId = "ESP"
 )
+export Descriptor_Deck_Division_ESP_Division_Guzman_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{c2688f0f-09de-4d8d-9e34-afb14d517bca}
+    CfgName = 'ESP_Division_Guzman_multi'
+    DivisionName = 'MWCCWPKTOX'
+    InterfaceOrder = 34.0
+    DivisionPowerClassification = 'DC_PWR2'
+    DivisionCoalition = ECoalition/NATO
+    DivisionTags = ['DEFAULT', 'ESP', 'NATO', 'infantryReg', 'DC_PWR2']
+    DescriptionHintTitleToken = 'MWCCWPKTOX'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_ESP_Division_Guzman_multi_Rule
+    CostMatrix = MatrixCostName_ESP_Division_Guzman_multi
+    EmblemTexture     = "Texture_Division_Emblem_ESP_Guzman"
+    PortraitTexture   = "Texture_Division_Portrait_default"
+    TypeTexture       = "Texture_Division_Type_infantryReg"
+    CountryId = "ESP"
+)
 export Descriptor_Deck_Division_FR_11e_Para_multi is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{beaeddc6-2819-4025-b72f-9448e16b39ec}
     CfgName = 'FR_11e_Para_multi'
     DivisionName = 'PPYRYDDJRK'
-    InterfaceOrder = 24.0
+    InterfaceOrder = 25.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -96,7 +114,7 @@ export Descriptor_Deck_Division_FR_152e_Infanterie_multi is TDeckDivisionDescrip
     DescriptorId = GUID:{adb9f240-782d-44d1-bb70-20f2736182de}
     CfgName = 'FR_152e_Infanterie_multi'
     DivisionName = 'YHHSJATYLU'
-    InterfaceOrder = 25.0
+    InterfaceOrder = 26.0
     DivisionPowerClassification = 'DC_PWR3'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'infantryReg', 'DC_PWR3']
@@ -114,7 +132,7 @@ export Descriptor_Deck_Division_FR_5e_Blindee_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{3eea10f1-c482-46f2-a747-f49879749d82}
     CfgName = 'FR_5e_Blindee_multi'
     DivisionName = 'MVUBDSQMBB'
-    InterfaceOrder = 22.0
+    InterfaceOrder = 23.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'armored', 'DC_PWR1']
@@ -132,7 +150,7 @@ export Descriptor_Deck_Division_FR_6e_Blindee_Legere_multi is TDeckDivisionDescr
     DescriptorId = GUID:{b80a36f6-2ec9-4785-848b-4840e54bbb3c}
     CfgName = 'FR_6e_Blindee_Legere_multi'
     DivisionName = 'SDQTSPQMIQ'
-    InterfaceOrder = 23.0
+    InterfaceOrder = 24.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'armored', 'DC_PWR1']
@@ -150,7 +168,7 @@ export Descriptor_Deck_Division_FR_Division_du_Rhin_multi is TDeckDivisionDescri
     DescriptorId = GUID:{efbbd29f-2296-47f7-bc21-a04309edc987}
     CfgName = 'FR_Division_du_Rhin_multi'
     DivisionName = 'KIKUPFXIKH'
-    InterfaceOrder = 26.0
+    InterfaceOrder = 27.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -168,7 +186,7 @@ export Descriptor_Deck_Division_NATO_Garnison_Berlin_multi is TDeckDivisionDescr
     DescriptorId = GUID:{9ab11079-b134-4ec3-beba-48cf4e885757}
     CfgName = 'NATO_Garnison_Berlin_multi'
     DivisionName = 'EYKCGOHKBG'
-    InterfaceOrder = 20.0
+    InterfaceOrder = 21.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -186,7 +204,7 @@ export Descriptor_Deck_Division_NL_4e_Divisie_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{87f7b86f-6455-403f-ba2b-415030226d6b}
     CfgName = 'NL_4e_Divisie_multi'
     DivisionName = 'MRBOKCBPXP'
-    InterfaceOrder = 29.0
+    InterfaceOrder = 30.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'NL', 'NATO', 'armored', 'DC_PWR1']
@@ -204,7 +222,7 @@ export Descriptor_Deck_Division_NL_CLKA_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{122ea001-a6ad-4075-8692-96420abdacf8}
     CfgName = 'NL_CLKA_multi'
     DivisionName = 'TOVCKJKZIO'
-    InterfaceOrder = 30.0
+    InterfaceOrder = 31.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'NL', 'NATO', 'infantryReg', 'DC_PWR1']
@@ -222,7 +240,7 @@ export Descriptor_Deck_Division_POL_20_Pancerna_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{a13936c6-b279-4430-b456-93d953339572}
     CfgName = 'POL_20_Pancerna_multi'
     DivisionName = 'EGPXSAYCXO'
-    InterfaceOrder = 27.0
+    InterfaceOrder = 28.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'POL', 'PACT', 'armored', 'DC_PWR1']
@@ -240,7 +258,7 @@ export Descriptor_Deck_Division_POL_4_Zmechanizowana_multi is TDeckDivisionDescr
     DescriptorId = GUID:{2b303d19-27e5-4a2c-8e3e-e497328bbba8}
     CfgName = 'POL_4_Zmechanizowana_multi'
     DivisionName = 'ZYGJBHWQHW'
-    InterfaceOrder = 25.0
+    InterfaceOrder = 26.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'POL', 'PACT', 'infantryReg', 'DC_PWR1']
@@ -258,7 +276,7 @@ export Descriptor_Deck_Division_POL_Korpus_Desantowy_multi is TDeckDivisionDescr
     DescriptorId = GUID:{1d182660-9f0c-47b0-a90d-bc857ab4d032}
     CfgName = 'POL_Korpus_Desantowy_multi'
     DivisionName = 'CZOHUXQNCE'
-    InterfaceOrder = 28.0
+    InterfaceOrder = 29.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'POL', 'PACT', 'infantryReg', 'DC_PWR1']
@@ -276,7 +294,7 @@ export Descriptor_Deck_Division_RDA_4_MSD_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{97b5d7d2-0a51-461e-b97e-617dd6892858}
     CfgName = 'RDA_4_MSD_multi'
     DivisionName = 'XPXHEQABVZ'
-    InterfaceOrder = 17.0
+    InterfaceOrder = 18.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -294,7 +312,7 @@ export Descriptor_Deck_Division_RDA_7_Panzer_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{81abdbb9-422f-47b0-a073-013c920c04fb}
     CfgName = 'RDA_7_Panzer_multi'
     DivisionName = 'NIZAYXAMPN'
-    InterfaceOrder = 18.0
+    InterfaceOrder = 19.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'armored', 'DC_PWR1']
@@ -312,7 +330,7 @@ export Descriptor_Deck_Division_RDA_9_Panzer_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{3ea1f70e-119a-4dcc-b533-f462a9980686}
     CfgName = 'RDA_9_Panzer_multi'
     DivisionName = 'SXATWWYSVI'
-    InterfaceOrder = 19.0
+    InterfaceOrder = 21.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'armored', 'DC_PWR1']
@@ -330,7 +348,7 @@ export Descriptor_Deck_Division_RDA_KdA_Bezirk_Erfurt_multi is TDeckDivisionDesc
     DescriptorId = GUID:{bd44546a-1cab-43a2-b38e-a44595ac1968}
     CfgName = 'RDA_KdA_Bezirk_Erfurt_multi'
     DivisionName = 'OVYVCMLGYY'
-    InterfaceOrder = 22.0
+    InterfaceOrder = 23.0
     DivisionPowerClassification = 'DC_PWR3'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'infantryReg', 'DC_PWR3']
@@ -348,7 +366,7 @@ export Descriptor_Deck_Division_RDA_Rugen_Gruppierung is TDeckDivisionDescriptor
     DescriptorId = GUID:{8fb7a4b4-1fab-461d-bb09-a94320ba22f7}
     CfgName = 'RDA_Rugen_Gruppierung'
     DivisionName = 'PKOEWMXLJF'
-    InterfaceOrder = 24.0
+    InterfaceOrder = 25.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -366,7 +384,7 @@ export Descriptor_Deck_Division_RFA_1_Luftlande_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{0675f4cb-245d-45ca-8727-e9b3a509fbfd}
     CfgName = 'RFA_1_Luftlande_multi'
     DivisionName = 'DHPCXIPJOW'
-    InterfaceOrder = 11.0
+    InterfaceOrder = 12.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'RFA', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -384,7 +402,7 @@ export Descriptor_Deck_Division_RFA_2_PzGrenadier_multi is TDeckDivisionDescript
     DescriptorId = GUID:{15fa50e1-7534-4f5c-ae1c-afd4098c6ce2}
     CfgName = 'RFA_2_PzGrenadier_multi'
     DivisionName = 'XKYVHEFNED'
-    InterfaceOrder = 12.0
+    InterfaceOrder = 13.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'RFA', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -402,7 +420,7 @@ export Descriptor_Deck_Division_RFA_5_Panzer_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{ec8b43f9-6e9b-40de-8167-304ef4370747}
     CfgName = 'RFA_5_Panzer_multi'
     DivisionName = 'WOEQADLOKM'
-    InterfaceOrder = 13.0
+    InterfaceOrder = 14.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'RFA', 'NATO', 'armored', 'DC_PWR1']
@@ -420,7 +438,7 @@ export Descriptor_Deck_Division_RFA_TerrKdo_Sud_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{a461f564-2c09-471b-9a6b-2c134dd87802}
     CfgName = 'RFA_TerrKdo_Sud_multi'
     DivisionName = 'BIHXAJRCJA'
-    InterfaceOrder = 15.0
+    InterfaceOrder = 16.0
     DivisionPowerClassification = 'DC_PWR3'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'RFA', 'NATO', 'infantryReg', 'DC_PWR3']
@@ -438,7 +456,7 @@ export Descriptor_Deck_Division_SOV_119IndTkBrig_multi is TDeckDivisionDescripto
     DescriptorId = GUID:{b611cb29-bf44-4d02-a529-36312df5ec2c}
     CfgName = 'SOV_119IndTkBrig_multi'
     DivisionName = 'QGUHEAAYWW'
-    InterfaceOrder = 14.0
+    InterfaceOrder = 15.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'armored', 'DC_PWR2']
@@ -456,7 +474,7 @@ export Descriptor_Deck_Division_SOV_157_Rifle_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{56d6f3a5-0cec-4134-bb16-0cd3ace64671}
     CfgName = 'SOV_157_Rifle_multi'
     DivisionName = 'QAULTYGPIU'
-    InterfaceOrder = 9.0
+    InterfaceOrder = 10.0
     DivisionPowerClassification = 'DC_PWR3'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'infantryReg', 'DC_PWR3']
@@ -474,7 +492,7 @@ export Descriptor_Deck_Division_SOV_17_Gds_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{bab0e8e7-c721-4c68-a08e-80ba5aea447a}
     CfgName = 'SOV_17_Gds_Tank_multi'
     DivisionName = 'RRWLDBAEUA'
-    InterfaceOrder = 2.0
+    InterfaceOrder = 3.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'armored', 'DC_PWR1']
@@ -492,7 +510,7 @@ export Descriptor_Deck_Division_SOV_25_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{d82bb5a9-6360-4e01-ba86-d1f14a051ca6}
     CfgName = 'SOV_25_Tank_multi'
     DivisionName = 'UGKDOPAYTF'
-    InterfaceOrder = 7.0
+    InterfaceOrder = 8.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'armored', 'DC_PWR1']
@@ -510,7 +528,7 @@ export Descriptor_Deck_Division_SOV_27_Gds_Rifle_multi is TDeckDivisionDescripto
     DescriptorId = GUID:{c2f0b0e1-b1df-4615-ba56-e9810c89bb00}
     CfgName = 'SOV_27_Gds_Rifle_multi'
     DivisionName = 'PFMPJNZAXB'
-    InterfaceOrder = 3.0
+    InterfaceOrder = 4.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -528,7 +546,7 @@ export Descriptor_Deck_Division_SOV_2_Gds_Rifle_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{0eb3b72b-0a99-4da1-8131-dc58ae6f5ab5}
     CfgName = 'SOV_2_Gds_Rifle_multi'
     DivisionName = 'GLCHUFJCAE'
-    InterfaceOrder = 1.0
+    InterfaceOrder = 2.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -546,7 +564,7 @@ export Descriptor_Deck_Division_SOV_31_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{f163af7e-73f9-42ee-a607-e1b50e104c98}
     CfgName = 'SOV_31_Tank_multi'
     DivisionName = 'ZIJBGPJKVX'
-    InterfaceOrder = 8.0
+    InterfaceOrder = 9.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'armored', 'DC_PWR1']
@@ -564,7 +582,7 @@ export Descriptor_Deck_Division_SOV_35_AirAslt_Brig_multi is TDeckDivisionDescri
     DescriptorId = GUID:{7076e442-e50d-4f50-8b1d-7e8c2ad404e3}
     CfgName = 'SOV_35_AirAslt_Brig_multi'
     DivisionName = 'PFEYNGDKVR'
-    InterfaceOrder = 10.0
+    InterfaceOrder = 11.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -582,7 +600,7 @@ export Descriptor_Deck_Division_SOV_39_Gds_Rifle_multi is TDeckDivisionDescripto
     DescriptorId = GUID:{b8baa312-d7a5-4e10-a32a-ac72a9dd15f2}
     CfgName = 'SOV_39_Gds_Rifle_multi'
     DivisionName = 'QBSDOMYDBX'
-    InterfaceOrder = 4.0
+    InterfaceOrder = 5.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -600,7 +618,7 @@ export Descriptor_Deck_Division_SOV_4_Gds_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{ba026d2c-64b4-422e-8367-a54796c8593c}
     CfgName = 'SOV_4_Gds_Tank_multi'
     DivisionName = 'FOURGTDNAM'
-    InterfaceOrder = 26.0
+    InterfaceOrder = 27.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'armored', 'DC_PWR1']
@@ -618,7 +636,7 @@ export Descriptor_Deck_Division_SOV_56_AirAslt_Brig_multi is TDeckDivisionDescri
     DescriptorId = GUID:{95704837-2d8d-455b-a29f-db8c81d9ac76}
     CfgName = 'SOV_56_AirAslt_Brig_multi'
     DivisionName = 'OJZIMECUCU'
-    InterfaceOrder = 11.0
+    InterfaceOrder = 12.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -636,7 +654,7 @@ export Descriptor_Deck_Division_SOV_6IndMSBrig_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{39320a62-4064-4feb-a84f-cecbe7fe8285}
     CfgName = 'SOV_6IndMSBrig_multi'
     DivisionName = 'VKPNQYHZZN'
-    InterfaceOrder = 13.0
+    InterfaceOrder = 14.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -654,7 +672,7 @@ export Descriptor_Deck_Division_SOV_76_VDV_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{e9691c93-e51b-4587-9529-159ab6e225f0}
     CfgName = 'SOV_76_VDV_multi'
     DivisionName = 'HOVSLMGDMN'
-    InterfaceOrder = 12.0
+    InterfaceOrder = 13.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -672,7 +690,7 @@ export Descriptor_Deck_Division_SOV_79_Gds_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{52703924-4dca-4647-b0d5-376d8410b4a8}
     CfgName = 'SOV_79_Gds_Tank_multi'
     DivisionName = 'ABQKCQLERY'
-    InterfaceOrder = 5.0
+    InterfaceOrder = 6.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'armored', 'DC_PWR1']
@@ -690,7 +708,7 @@ export Descriptor_Deck_Division_TCH_19_MSD_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{be946b20-a4b4-4f2f-9d1a-9c664bd1a426}
     CfgName = 'TCH_19_MSD_multi'
     DivisionName = 'SVEHBMUYZL'
-    InterfaceOrder = 31.0
+    InterfaceOrder = 32.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'TCH', 'PACT', 'infantryReg', 'DC_PWR2']
@@ -708,7 +726,7 @@ export Descriptor_Deck_Division_TCH_1_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{3bd652d3-2c21-4a2d-b0f9-bbefc71802c2}
     CfgName = 'TCH_1_Tank_multi'
     DivisionName = 'XKRAHADQAE'
-    InterfaceOrder = 29.0
+    InterfaceOrder = 30.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'TCH', 'PACT', 'armored', 'DC_PWR1']
@@ -721,12 +739,30 @@ export Descriptor_Deck_Division_TCH_1_Tank_multi is TDeckDivisionDescriptor
     TypeTexture       = "Texture_Division_Type_armored"
     CountryId = "TCH"
 )
+export Descriptor_Deck_Division_TCH_2_MSD_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{d47e64b3-fa26-4a41-a699-38803ee511ad}
+    CfgName = 'TCH_2_MSD_multi'
+    DivisionName = 'COCUIJLWPM'
+    InterfaceOrder = 31.0
+    DivisionPowerClassification = 'DC_PWR2'
+    DivisionCoalition = ECoalition/PACT
+    DivisionTags = ['DEFAULT', 'TCH', 'PACT', 'infantryReg', 'DC_PWR2']
+    DescriptionHintTitleToken = 'XNEYPNTARL'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_TCH_2_MSD_multi_Rule
+    CostMatrix = MatrixCostName_TCH_2_MSD_multi
+    EmblemTexture     = "Texture_Division_Emblem_TCH_2_MSD"
+    PortraitTexture   = "Texture_Division_Portrait_default"
+    TypeTexture       = "Texture_Division_Type_infantryReg"
+    CountryId = "TCH"
+)
 export Descriptor_Deck_Division_TCH_303_Tank_multi is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{d0cc9b9f-1f00-49e7-8f28-610dbbb5574b}
     CfgName = 'TCH_303_Tank_multi'
     DivisionName = 'CUVYCAIFIX'
-    InterfaceOrder = 32.0
+    InterfaceOrder = 33.0
     DivisionPowerClassification = 'DC_PWR3'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'TCH', 'PACT', 'armored', 'DC_PWR3']
@@ -744,7 +780,7 @@ export Descriptor_Deck_Division_UK_1st_Armoured_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{5dff6faa-211f-4743-b3ef-9737d350978f}
     CfgName = 'UK_1st_Armoured_multi'
     DivisionName = 'YPUIEGDPJD'
-    InterfaceOrder = 16.0
+    InterfaceOrder = 17.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'armored', 'DC_PWR1']
@@ -762,7 +798,7 @@ export Descriptor_Deck_Division_UK_2nd_Infantry_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{e27fa0f1-53f1-472c-8380-cad2de5b77fb}
     CfgName = 'UK_2nd_Infantry_multi'
     DivisionName = 'RSIUYDSXND'
-    InterfaceOrder = 17.0
+    InterfaceOrder = 18.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -780,7 +816,7 @@ export Descriptor_Deck_Division_UK_4th_Armoured_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{823c2671-564c-4b82-af1c-26de7afcbe0e}
     CfgName = 'UK_4th_Armoured_multi'
     DivisionName = 'PFQAMEYXCU'
-    InterfaceOrder = 18.0
+    InterfaceOrder = 19.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'armored', 'DC_PWR1']
@@ -798,7 +834,7 @@ export Descriptor_Deck_Division_UK_5th_Airborne_Brigade_multi is TDeckDivisionDe
     DescriptorId = GUID:{fb6db100-d944-44d9-8c6f-df6b54a05d36}
     CfgName = 'UK_5th_Airborne_Brigade_multi'
     DivisionName = 'PWMGFMXLIK'
-    InterfaceOrder = 19.0
+    InterfaceOrder = 20.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -816,10 +852,10 @@ export Descriptor_Deck_Division_UK_London_HDR_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{3bf3066f-98f2-4ea5-b590-bf326622f3ec}
     CfgName = 'UK_London_HDR_multi'
     DivisionName = 'JIUNYRKVBK'
-    InterfaceOrder = 21.0
-    DivisionPowerClassification = 'DC_PWR2'
+    InterfaceOrder = 22.0
+    DivisionPowerClassification = 'DC_PWR3'
     DivisionCoalition = ECoalition/NATO
-    DivisionTags = ['DEFAULT', 'UK', 'NATO', 'infantryReg', 'DC_PWR2']
+    DivisionTags = ['DEFAULT', 'UK', 'NATO', 'infantryReg', 'DC_PWR3']
     DescriptionHintTitleToken = 'IXEQASWYLR'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_UK_London_HDR_multi_Rule
@@ -834,7 +870,7 @@ export Descriptor_Deck_Division_US_101st_Airmobile_multi is TDeckDivisionDescrip
     DescriptorId = GUID:{e2a36cd8-ec00-4d1b-bba4-4a5ce94860bb}
     CfgName = 'US_101st_Airmobile_multi'
     DivisionName = 'VLZCYKIFPB'
-    InterfaceOrder = 9.0
+    InterfaceOrder = 10.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -852,7 +888,7 @@ export Descriptor_Deck_Division_US_11ACR_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{73e51c86-2d41-4fd7-818a-a8f5b288ab4b}
     CfgName = 'US_11ACR_multi'
     DivisionName = 'AJSWBANTOA'
-    InterfaceOrder = 10.0
+    InterfaceOrder = 11.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'armoredRecon', 'DC_PWR2']
@@ -870,7 +906,7 @@ export Descriptor_Deck_Division_US_24th_Inf_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{d0c2a4d9-6ace-4595-b505-a0998b59b974}
     CfgName = 'US_24th_Inf_multi'
     DivisionName = 'DGUURLVDNS'
-    InterfaceOrder = 6.0
+    InterfaceOrder = 7.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -888,7 +924,7 @@ export Descriptor_Deck_Division_US_35th_Inf_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{12587ec5-8ee5-4c0d-bb5e-103b741c4f14}
     CfgName = 'US_35th_Inf_multi'
     DivisionName = 'EUQUXKDWZK'
-    InterfaceOrder = 7.0
+    InterfaceOrder = 8.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -906,7 +942,7 @@ export Descriptor_Deck_Division_US_3rd_Arm_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{462b0cc2-0952-47d9-baf9-ad3af39c68a9}
     CfgName = 'US_3rd_Arm_multi'
     DivisionName = 'RSEACNWCQI'
-    InterfaceOrder = 2.0
+    InterfaceOrder = 3.0
     DivisionPowerClassification = 'DC_PWR1'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'armored', 'DC_PWR1']
@@ -924,7 +960,7 @@ export Descriptor_Deck_Division_US_6th_Light_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{276e2b18-1732-4259-8638-eb1d7839acf6}
     CfgName = 'US_6th_Light_multi'
     DivisionName = 'VHQMMDXDKP'
-    InterfaceOrder = 3.0
+    InterfaceOrder = 4.0
     DivisionPowerClassification = 'DC_PWR3'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'infantryReg', 'DC_PWR3']
@@ -942,7 +978,7 @@ export Descriptor_Deck_Division_US_82nd_Airborne_multi is TDeckDivisionDescripto
     DescriptorId = GUID:{27ac92b1-73ed-4c9c-80d3-9044aa08c38f}
     CfgName = 'US_82nd_Airborne_multi'
     DivisionName = 'TATZFZUVYM'
-    InterfaceOrder = 8.0
+    InterfaceOrder = 9.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -960,7 +996,7 @@ export Descriptor_Deck_Division_US_8th_Inf_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{f483cb5b-aaf9-4e87-9bc1-05644a246a0c}
     CfgName = 'US_8th_Inf_multi'
     DivisionName = 'ECGMWQOEZA'
-    InterfaceOrder = 4.0
+    InterfaceOrder = 5.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -978,7 +1014,7 @@ export Descriptor_Deck_Division_US_9th_Mot_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{6b4ecebb-ed2d-473a-92c0-1acb4b719103}
     CfgName = 'US_9th_Mot_multi'
     DivisionName = 'RYTYXPJEGM'
-    InterfaceOrder = 5.0
+    InterfaceOrder = 6.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'US', 'NATO', 'infantryReg', 'DC_PWR2']
@@ -996,7 +1032,7 @@ export Descriptor_Deck_Division_WP_Unternehmen_Zentrum_multi is TDeckDivisionDes
     DescriptorId = GUID:{4d41c309-2758-4f06-8995-2a3d07e56474}
     CfgName = 'WP_Unternehmen_Zentrum_multi'
     DivisionName = 'CHKSNFWOEZ'
-    InterfaceOrder = 23.0
+    InterfaceOrder = 24.0
     DivisionPowerClassification = 'DC_PWR2'
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'infantryReg', 'DC_PWR2']

@@ -69,7 +69,7 @@ private LeaderboardMultiListTitle is
     BUCKListElementDescriptor
     (
 
-        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+        ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
         (
             ElementName = 'LdbRankMultiList'
             ComponentFrame = TUIFramePropertyRTTI
@@ -78,7 +78,7 @@ private LeaderboardMultiListTitle is
                 MagnifiableWidthHeight = [57,0]
             )
 
-            SortingType = ~/MultiListSorting/String
+            SortingType = ~/SortableElementField/String
 
             HidePointerEvents = true
             ShowCheckbox = false
@@ -92,7 +92,7 @@ private LeaderboardMultiListTitle is
     BUCKListElementDescriptor
     (
 
-        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+        ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
         (
             ElementName = 'LdbNameMultiList'
             ComponentFrame = TUIFramePropertyRTTI
@@ -101,7 +101,7 @@ private LeaderboardMultiListTitle is
                 RelativeWidthHeight = [0.0, 1.0]
             )
 
-            SortingType = ~/MultiListSorting/String
+            SortingType = ~/SortableElementField/String
             HidePointerEvents = true
             ShowCheckbox = false
             Components =
@@ -119,7 +119,7 @@ private LeaderboardMultiListTitle is
     BUCKListElementDescriptor
     (
 
-        ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+        ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
         (
             ElementName = 'LdbGradeMultiList'
             ComponentFrame = TUIFramePropertyRTTI
@@ -128,7 +128,7 @@ private LeaderboardMultiListTitle is
                 RelativeWidthHeight = [0.0, 1.0]
             )
 
-            SortingType = ~/MultiListSorting/String
+            SortingType = ~/SortableElementField/String
 
             HidePointerEvents = true
             ShowCheckbox = false
@@ -161,7 +161,7 @@ private template LeaderboardMultiSimplifiedListContent
         // Rank
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = <ElementNamePrefix> + "LdbRankMultiList"
 
@@ -204,7 +204,7 @@ private template LeaderboardMultiSimplifiedListContent
         BUCKListElementDescriptor
         (
 
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = <ElementNamePrefix> + "LdbTrendMultiList"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -230,7 +230,7 @@ private template LeaderboardMultiSimplifiedListContent
         BUCKListElementDescriptor
         (
 
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = <ElementNamePrefix> + "LdbNameMultiList"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -276,7 +276,7 @@ private template LeaderboardMultiSimplifiedListContent
         // Grade
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = <ElementNamePrefix> + "LdbGradeMultiList"
 
@@ -399,15 +399,7 @@ private  LeaderboardMultiList is BUCKMultiListDescriptor
 
     FitStyle = ~/ContainerFitStyle/FitToContentVertically
 
-    ColumnNames =
-    [
-        "LdbRankMultiList",
-        "LdbTrendMultiList",
-        "LdbNameMultiList",
-        "LdbGradeMultiList",
-    ]
-
-    SortableColumnNames = []
+    SortableElementFieldNames = []
 
     RackName = "LeaderboardRack"
 

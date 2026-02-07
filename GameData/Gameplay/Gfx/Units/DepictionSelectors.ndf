@@ -1,25 +1,24 @@
-export LodHighNoneLimit_Pylon is 100
+LodHighNoneLimit_Pylon is 100
+LodHighNoneLimit_Missile is 400
 
-export LodHighMidLimit_Vehicle is 100
-export LodMidLowLimit_Vehicle  is 200
+LodHighMidLimit_Vehicle is 100
+LodMidLowLimit_Vehicle  is 200
 
-export LodHighMidLimit_Airplane is 100
-export LodMidLowLimit_Airplane  is 200
+LodHighMidLimit_Airplane is 100
+LodMidLowLimit_Airplane  is 200
 
-export LodHighMidLimit_Helico is 100
-export LodMidLowLimit_Helico  is 200
+LodHighMidLimit_Helico is 100
+LodMidLowLimit_Helico  is 200
 
-export LodHighNoneLimit_SoldierWeapon is 40
+LodHighNoneLimit_SoldierWeapon is 40
 
-export MaterialTagGhost is 'GhostTag'
-
-export SpecificPylonDepictionSelector is TDepictionPylonSelector
+SpecificPylonDepictionSelector is TDepictionPylonSelector
 (
     HighLimitInMeter = LodHighNoneLimit_Pylon
     Camera = $/M3D/Misc/CameraPrincipale
 )
 
-export SpecificVehicleDepictionSelector is TLodSelector
+SpecificVehicleDepictionSelector is TLodSelector
 (
     HighMidLimitInMeter = LodHighMidLimit_Vehicle
     MidLowLimitInMeter = LodMidLowLimit_Vehicle
@@ -27,7 +26,7 @@ export SpecificVehicleDepictionSelector is TLodSelector
     OptionalLimit = $/GraphicOption/ModelQuality
 )
 
-export SpecificAirplaneDepictionSelector is TLodSelector
+SpecificAirplaneDepictionSelector is TLodSelector
 (
     HighMidLimitInMeter = LodHighMidLimit_Airplane
     MidLowLimitInMeter = LodMidLowLimit_Airplane
@@ -35,7 +34,7 @@ export SpecificAirplaneDepictionSelector is TLodSelector
     OptionalLimit = $/GraphicOption/ModelQuality
 )
 
-export SpecificFlyingScaler is TCameraScaler
+SpecificFlyingScaler is TCameraScaler
 (
     ScaleFactor = PixelConstantValuesSpecific/AirplaneFactor
     ScaleMax = PixelConstantValuesSpecific/AirplaneScaleMax
@@ -44,7 +43,7 @@ export SpecificFlyingScaler is TCameraScaler
     ScaleOption = $/GUIOption/UnitScalingEnabled
 )
 
-export SpecificHelicoDepictionSelector is TLodSelector
+SpecificHelicoDepictionSelector is TLodSelector
 (
     HighMidLimitInMeter = LodHighMidLimit_Helico
     MidLowLimitInMeter = LodMidLowLimit_Helico
@@ -65,27 +64,27 @@ is THumanWithConditionSelector
     DisplayCondition = <DisplayCondition>
 )
 
-export HumanAlwaysVisibleSelector is HumanSelectorTemplate
+HumanAlwaysVisibleSelector is HumanSelectorTemplate
 (
     DisplayCondition = nil
 )
 
-export HumanVisibleWhenAliveSelector is HumanSelectorTemplate
+HumanVisibleWhenAliveSelector is HumanSelectorTemplate
 (
     DisplayCondition = TVisibleWhenAliveCondition()
 )
 
-export HumanVisibleWhenDeployedSelector is HumanSelectorTemplate
+HumanVisibleWhenDeployedSelector is HumanSelectorTemplate
 (
     DisplayCondition = TVisibleWhenAliveAndDeployedCondition()
 )
 
-export HumanVisibleWhenUndeployedSelector is HumanSelectorTemplate
+HumanVisibleWhenUndeployedSelector is HumanSelectorTemplate
 (
     DisplayCondition = TVisibleWhenDeadOrUndeployedCondition()
 )
 
-export TowedUnitSubDepictionSelector is TTowedUnitSelector
+TowedUnitSubDepictionSelector is TTowedUnitSelector
 (
     HighMidLimitInMeter = LodHighMidLimit_Vehicle
     MidLowLimitInMeter = LodMidLowLimit_Vehicle
@@ -93,7 +92,7 @@ export TowedUnitSubDepictionSelector is TTowedUnitSelector
     OptionalLimit = $/GraphicOption/ModelQuality
 )
 
-export SoldierDynamicWeaponSubDepictionSelector is TInfantryWeaponSelector
+SoldierDynamicWeaponSubDepictionSelector is TInfantryWeaponSelector
 (
     NoneLimitInMeter = LodHighNoneLimit_SoldierWeapon
     CameraMoverManager = $/Camera/CameraMoverManager
@@ -101,7 +100,7 @@ export SoldierDynamicWeaponSubDepictionSelector is TInfantryWeaponSelector
     PrincipalDepiction = ['WeaponAlternative_1'] // On verra bien si y'a besoin de gérer un truc ici si ça crash parce que y'a pas d'arme 1
 )
 
-export SoldierDynamicBackpackWeaponSubDepictionSelector is TInfantryBackpackWeaponSelector
+SoldierDynamicBackpackWeaponSubDepictionSelector is TInfantryBackpackWeaponSelector
 (
     NoneLimitInMeter = LodHighNoneLimit_SoldierWeapon
     CameraMoverManager = $/Camera/CameraMoverManager

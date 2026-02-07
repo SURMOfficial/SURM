@@ -86,7 +86,7 @@ private template Texte_Mission
         // status
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "IsCompletedMultilist"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -122,7 +122,7 @@ private template Texte_Mission
         BUCKListElementDescriptor
         (
             ExtendWeight = 1.0
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "OperationNameMultilist"
                 ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
@@ -226,7 +226,7 @@ private template Texte_Mission
         ) ] + ((<GameType> == ~/GameChallenge) ? [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "OperationCountryMultilist"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -272,7 +272,7 @@ private template Texte_Mission
         ) ] : []) + [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "OperationDurationMultilist"
                 ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [0.0, 1.0] )
@@ -767,14 +767,7 @@ private template ScenarioMultiList
         RelativeWidthHeight = [1.0, 1.0]
     )
 
-    ColumnNames =
-    [
-        "IsCompletedMultilist",
-        "OperationNameMultilist",
-        "OperationDurationMultilist"
-    ] + ((<GameType> == ~/GameChallenge) ? ["OperationCountryMultilist"] : [])
-
-    SortableColumnNames = ((<GameType> == ~/GameTutorial) ? [] :
+    SortableElementFieldNames = ((<GameType> == ~/GameTutorial) ? [] :
     [
         "IsCompletedMultilist",
         "OperationNameMultilist",
@@ -959,7 +952,7 @@ template titleColumnMissionList
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = "IsCompletedMultilist"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -968,7 +961,7 @@ template titleColumnMissionList
                     MagnifiableWidthHeight = [ChallengeDoneColumnWidth, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 HidePointerEvents = true
                 Components =
@@ -984,7 +977,7 @@ template titleColumnMissionList
         BUCKListElementDescriptor
         (
             ExtendWeight = 1
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = "OperationNameMultilist"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -992,7 +985,7 @@ template titleColumnMissionList
                     RelativeWidthHeight = [1.0, 1.0]
                 )
 
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 ShowCheckbox = false
                 HidePointerEvents = true
                 Components =
@@ -1007,7 +1000,7 @@ template titleColumnMissionList
         ) ] + ((<GameType> == ~/GameChallenge) ? [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = "OperationCountryMultilist"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -1016,7 +1009,7 @@ template titleColumnMissionList
                     MagnifiableWidthHeight = [ChallengeCountryColumnWidth, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 ShowCheckbox = false
                 HidePointerEvents = true
                 Components =
@@ -1031,7 +1024,7 @@ template titleColumnMissionList
         ) ] : []) + [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = "OperationDurationMultilist"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -1040,7 +1033,7 @@ template titleColumnMissionList
                     MagnifiableWidthHeight = [ChallengeDurationColumnWidth, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 HidePointerEvents = true
                 Components =

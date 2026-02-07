@@ -2795,6 +2795,65 @@ export Capacite_Infanterie_Retranchee is TCapaciteDescriptor
         ~/ConditionNotInMovement,
     ]
 )
+export Capacite_Instructor_INF is TCapaciteDescriptor
+(
+    DescriptorId            = GUID:{372beef8-db90-445d-99fa-434e5fa14b85}
+    Name                    = "Instructor_INF"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 450
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = False
+    TargetEffect            = ~/UnitEffect_Instructor
+    EffectDuration          = -1.00
+    TargetInBuilding        = True
+    TargetInTransport       = False
+    TargetInSelf            = False
+    TargetMySelf            = False
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_soloselected | ~/CapaciteFeedbackActivationMask_allied
+    DisplayRangeColor       = RGBA[248,248,248,200]
+    DisplayRangeThickness   = 0.80
+    AllowedTargetTags       = [
+        "Infanterie",
+    ]
+    ForbiddenTargetTags     = [
+        "Infanterie_CMD",
+        "Infanterie_AA",
+        "Infanterie_Reco",
+    ]
+
+)
+export Capacite_Instructor_TNK is TCapaciteDescriptor
+(
+    DescriptorId            = GUID:{2d12901e-ed56-4519-8fda-6632f2444e9c}
+    Name                    = "Instructor_TNK"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 450
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = False
+    TargetEffect            = ~/UnitEffect_Instructor
+    EffectDuration          = -1.00
+    TargetInBuilding        = True
+    TargetInTransport       = False
+    TargetInSelf            = False
+    TargetMySelf            = False
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_soloselected | ~/CapaciteFeedbackActivationMask_allied
+    DisplayRangeColor       = RGBA[248,248,248,200]
+    DisplayRangeThickness   = 0.80
+    AllowedTargetTags       = [
+        "Char_Standard",
+    ]
+    ForbiddenTargetTags     = [
+    ]
+
+)
 export Capacite_Malus_Suppress_AllTime is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{9449549b-03f5-4bf7-bc64-eef556033256}

@@ -1,5 +1,29 @@
 // Ne pas éditer, ce fichier est généré par ConditionFileWriter
 
+ConditionTagRaisedInUnit_IFV_ok is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{5874c8f9-d9a9-42c5-bb55-d88d1937fbcb}
+    Tag = "IFV_ok"
+)
+
+ConditionTagNotRaisedInUnit_IFV_ok is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_IFV_ok
+    DescriptorId = GUID:{dc33e94e-f4ad-45f5-93fe-7684050b128c}
+)
+
+ConditionTagRaisedInUnit_Instructor_immune is TConditionTagRaisedInUnit
+(
+    DescriptorId = GUID:{9f7e313e-d63d-4697-ad66-a13414412f5a}
+    Tag = "Instructor_immune"
+)
+
+ConditionTagNotRaisedInUnit_Instructor_immune is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_Instructor_immune
+    DescriptorId = GUID:{94e145bd-e99e-485a-8c22-c4170772e77b}
+)
+
 ConditionTagRaisedInUnit_GSR_ok_1 is TConditionTagRaisedInUnit
 (
     DescriptorId    = GUID:{2d545288-878c-43ce-8c67-a61bccc9a4ad}
@@ -455,7 +479,7 @@ ConditionTagRaisedInUnit_IFV_ok_1 is TConditionTagRaisedInUnit
 
 ConditionTagRaisedInUnit_EW_Block is TConditionTagRaisedInUnit
 (
-    DescriptorId = GUID:{5874c8f9-d9a9-42c5-bb55-d88d1937fbcb}
+    DescriptorId = GUID:{33b851b3-366b-4deb-8a23-e4bd6bebdc04}
     Tag = "EW_Block"
 )
 

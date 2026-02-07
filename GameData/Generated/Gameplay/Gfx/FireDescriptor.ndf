@@ -1076,6 +1076,43 @@ export Descriptor_Fire_NapalmLourd is TEntityDescriptor
         ),
     ]
 )
+export Descriptor_Fire_NapalmSpecial is TEntityDescriptor
+(
+    World              = WorldIndices_Fires
+    DescriptorId       = GUID:{79147f5f-0b6c-4955-94b6-f750cc084614}
+    ClassNameForDebug  = 'Fire_NapalmSpecial'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/FirePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        TApparenceModuleDescriptor
+        (
+            ReferenceMesh  = $/GFX/DepictionResources/Rien
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
+            (
+                Radius               = 53 * 26 * 2.83
+                FX                   = $/GFX/GameFx/fx_binder_fire_Napalm_Leger
+                Density              = 1
+            ))
+            DefaultVisibility  = True
+        ),
+        TFireModuleDescriptor
+        (
+            TimeToLive                     = 30
+            TimeBeforeSpreading            = 1
+            TimeBeforeSpreadAttempt        = 1
+            SpreadProbability              = 1.0
+            IsNewFireProbability           = 0.5
+            RadiusGRU                      = 53
+            AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_napalm_leger
+            TimeBetweenBurns               = 5
+            IgniteDistricts                = False
+            OverridenSpreadDescriptor      = Descriptor_Fire_Incendie
+            SmokeDescriptor                = nil
+        ),
+    ]
+)
 export Descriptor_Fire_NapalmMoyen is TEntityDescriptor
 (
     World              = WorldIndices_Fires

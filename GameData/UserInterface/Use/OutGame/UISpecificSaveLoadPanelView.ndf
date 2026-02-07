@@ -114,7 +114,7 @@ template CelluleSaveAndLoad
 is BUCKListElementDescriptor
 (
     ExtendWeight = <ExtendWeight>
-    ComponentDescriptor = BUCKMultiListContentElementDescriptor
+    ComponentDescriptor = BUCKSortableElementFieldDescriptor
     (
         ElementName = <ElementName> + <Category>
 
@@ -173,7 +173,7 @@ template TitreCelluleSaveAndLoad
     Category : string,
     TextToken : string,
     TailleColonne : int,
-    SortingType : int = ~/MultiListSorting/String,
+    SortingType : int = ~/SortableElementField/String,
     ShowCheckbox : bool = false,
     ExtendWeight : float = 0.0,
     RelativeWidth : float = 0.0,
@@ -181,7 +181,7 @@ template TitreCelluleSaveAndLoad
 ] is BUCKListElementDescriptor
 (
     ExtendWeight = <ExtendWeight>
-    ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+    ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
     (
         ElementName = <ElementName> + <Category>
 
@@ -362,7 +362,7 @@ private template SaveLoadMultiListContent
         // Cloud
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "SaveLoadCloudMultiList" + <Category>
 
@@ -394,7 +394,7 @@ private template SaveLoadMultiListContent
         // Mods
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "SaveLoadModMultiList" + <Category>
 
@@ -464,7 +464,7 @@ private template SaveLoadMultiListContent
         // Downloads
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "SaveLoadDlMultiList" + <Category>
 
@@ -665,7 +665,7 @@ private template SaveLoadMultiListTitle
             Category = <Category>
             TextToken = 'SGP_DATE'
             TailleColonne = colonneDate
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             TextAlignment = ~/UIText_Left
         ),
     ]
@@ -707,7 +707,7 @@ private template SaveLoadMultiListTitle
             Category = <Category>
             TextToken = 'LS_Dur'
             TailleColonne = colonneDuration
-            SortingType = ~/MultiListSorting/Float
+            SortingType = ~/SortableElementField/Float
             TextAlignment = ~/UIText_Left
         ),
 
@@ -801,18 +801,7 @@ private template SaveLoadMultiList
         AlignementToAnchor = [0.5, 0.0]
     )
 
-    ColumnNames =
-    [
-        'SaveLoadCloudMultiList' + <Category>,
-        'SaveLoadModMultiList' + <Category>,
-        'SaveLoadDlMultiList' + <Category>,
-    ]
-    + (<IsReplay> ?
-    [
-        'SaveLoadPlayerMultiList' + <Category>,
-    ] : [] )
-
-    SortableColumnNames =
+    SortableElementFieldNames =
     [
         'SaveLoadNameMultiList' + <Category>,
         'SaveLoadModeMultiList' + <Category>,

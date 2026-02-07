@@ -89,7 +89,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'ModName'
                 ComponentFrame = TUIFramePropertyRTTI
@@ -97,7 +97,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                     MagnifiableWidthHeight = [200.0, 25.0]
                 )
                 ShowCheckbox = false
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 HidePointerEvents = true
                 Components =
                 [
@@ -127,7 +127,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'ModRating'
 
@@ -137,7 +137,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                 )
 
                 ShowCheckbox = false
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 HidePointerEvents = true
                 Components =
                 [
@@ -168,7 +168,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'ModType'
 
@@ -177,7 +177,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                     MagnifiableWidthHeight = [145.0, 25.0]
                 )
 
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 HidePointerEvents = true
                 ShowCheckbox = false
                 Components =
@@ -209,7 +209,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
 
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'ModSize'
 
@@ -218,7 +218,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                     MagnifiableWidthHeight = [116.0, 25.0]
                 )
                 ShowCheckbox = false
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 HidePointerEvents = true
                 Components =
                 [
@@ -248,7 +248,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'ModActive'
 
@@ -257,7 +257,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
                     MagnifiableWidthHeight = [137.0, 25.0]
                 )
 
-                SortingType = ~/MultiListSorting/Bool
+                SortingType = ~/SortableElementField/Bool
                 ShowCheckbox = false
                 HidePointerEvents = true
                 Components =
@@ -288,7 +288,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'ModDetail'
 
@@ -340,7 +340,7 @@ ModPanelMultiListLine is BUCKListDescriptor
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = 'ModName'
 
@@ -379,7 +379,7 @@ ModPanelMultiListLine is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = 'ModRating'
 
@@ -450,7 +450,7 @@ ModPanelMultiListLine is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = 'ModType'
 
@@ -529,7 +529,7 @@ ModPanelMultiListLine is BUCKListDescriptor
 
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = 'ModSize'
 
@@ -566,7 +566,7 @@ ModPanelMultiListLine is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = 'ModActive'
 
@@ -594,7 +594,7 @@ ModPanelMultiListLine is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = 'ModDetail'
 
@@ -727,12 +727,7 @@ BUCKSpecificOutGameModPanelMainComponentDescriptor is WindowFrame
                  AlignementToFather = [0.5, 0.0]
             )
 
-            ColumnNames =
-            [
-                "ModDetail"
-            ]
-
-            SortableColumnNames =
+            SortableElementFieldNames =
             [
                 "ModName",
                 "ModRating",

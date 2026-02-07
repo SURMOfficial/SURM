@@ -201,7 +201,7 @@ BattlegroupsButton is BUCKButtonDescriptor
 template ShowroomTogglableFilterButton
 [
     ElementName : string = "",
-    MagnifiableWidthHeight : float2 = [72.0, 43.2],
+    MagnifiableWidthHeight : float2 = [66.0, 40],
     AlignementToAnchor : float2 = [0.0, 0.5],
     AlignementToFather : float2 = [0.0, 0.5],
     SubComponentRelativeWidthHeight : float2 = [1.0, 1.0],
@@ -407,8 +407,6 @@ private ShowroomTopFiltersBarContainer is BUCKListDescriptor
     )
 
     Axis = ~/ListAxis/Vertical
-    FirstMargin = TRTTILength( Magnifiable = 8.0 )
-    InterItemMargin = TRTTILength( Magnifiable = 4.0 )
 
     HasBackground = true
     BackgroundBlockColorToken = "MarronPanel_base_75"
@@ -441,11 +439,13 @@ private AllNationsFilter is BUCKListDescriptor
     ElementName = "AllNationsFilter"
     ComponentFrame = TUIFramePropertyRTTI
     (
+        MagnifiableWidthHeight = [0,48]
         AlignementToAnchor = [0.5, 0.0]
         AlignementToFather = [0.5, 0.0]
+
     )
 
-    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
+    // BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
     FirstMargin = TRTTILength( Magnifiable = 0.0 )
     InterItemMargin = TRTTILength( Magnifiable = 8.0 )
@@ -475,7 +475,7 @@ private AllNationsFilter is BUCKListDescriptor
             )
         ),
 
-        BUCKListElementSpacer( Magnifiable = 24.0 ),
+        BUCKListElementSpacer( Magnifiable = 8.0 ),
         BUCKListElementDescriptor
         (
             ComponentDescriptor = ShowroomTogglableFilterButton
@@ -538,7 +538,7 @@ template AllegianceDivisionFilter
     ElementName = <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 44.0]
+        MagnifiableWidthHeight = [0.0, 48.0]
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
@@ -546,7 +546,7 @@ template AllegianceDivisionFilter
     Axis = ~/ListAxis/Horizontal
 
     FirstMargin = TRTTILength( Magnifiable = 0.0 )
-    InterItemMargin = TRTTILength( Pixel = 8.0 )
+    InterItemMargin = TRTTILength( Pixel = 4.0 )
 
     BladeDescriptor = ~/ArmoryDivisionFilterButtonDescriptor
 )
@@ -561,7 +561,7 @@ template ShowroomLightCycleButton
     ElementName = "ShowroomLightCycleButton"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [30.0, 30.0]
+        MagnifiableWidthHeight = [32.0, 32.0]
         AlignementToAnchor = [1.0, 0.0]
         AlignementToFather = [1.0, 0.0]
         MagnifiableOffset = <MagnifiableOffset>
@@ -580,7 +580,7 @@ template ShowroomLightCycleButton
             )
 
             ResizeMode = ~/TextureResizeMode/UserDefined
-            TextureColorToken = "ShowroomGray"
+            TextureColorToken = "AmroryFiltreTxt"
         ),
         BUCKSpecificHintableArea
         (
@@ -598,16 +598,16 @@ ShowHideHUDButton is BUCKButtonDescriptor
     ElementName = "ShowHideHUDButton"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [80.0, 25.0]
+        MagnifiableWidthHeight = [80.0, 24.0]
         AlignementToAnchor = [1.0, 0.0]
         AlignementToFather = [1.0, 0.0]
-        MagnifiableOffset = [-10.0, 35.0]
+        MagnifiableOffset = [-8.0, 128.0+24]
     )
 
     IsTogglable = true
     HasBorder = true
-    BorderThicknessToken = "2"
-    BorderLineColorToken = "MarronPanel_noir"
+    BorderThicknessToken = "1"
+    BorderLineColorToken = "AmroryFiltreTxt"
 
     Components =
     [
@@ -633,9 +633,9 @@ ShowHideHUDButton is BUCKButtonDescriptor
             BigLineAction = ~/BigLineAction/MultiLine
             TextToken = "ARM_HHUD"
             TextDico = ~/LocalisationConstantes/dico_interface_outgame
-            TextColor = "BlancTexte"
+            TextColor = "AmroryFiltreTxt"
             TextSize = "12"
-            TextPadding = TRTTILength4(Magnifiable = [5.0, 5.0, 5.0, 5.0])
+            TextPadding = TRTTILength4(Magnifiable = [4.0, 4.0, 4.0, 4.0])
         ),
     ]
 )
@@ -706,7 +706,7 @@ DisplayNewFilterBar is BUCKListDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 44.0]
+        MagnifiableWidthHeight = [0.0, 40.0]
     )
 
     Axis = ~/ListAxis/Horizontal
@@ -714,6 +714,7 @@ DisplayNewFilterBar is BUCKListDescriptor
     InterItemMargin = TRTTILength(Magnifiable = 24.0)
     HasBackground = true
     BackgroundBlockColorToken = "AmroryButtonBkg_75"
+
 
     Elements =
     [
@@ -840,7 +841,7 @@ UnitGridNameFilter is BUCKSpecificEditableTextDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [230.0, 20.0]
+        MagnifiableWidthHeight = [240.0, 24.0]
         AlignementToAnchor = [0.0, 0.5]
         AlignementToFather = [0.0, 0.5]
     )
@@ -904,7 +905,7 @@ ArmoryUnitListContainer is BUCKSpecificScrollingContainerDescriptor
     ElementName = "UnitDivisionScrollingContainer"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [770.0, 785.0]
+        MagnifiableWidthHeight = [768.0, 836.0]
     )
 
     ExternalScrollbar = true
@@ -914,8 +915,8 @@ ArmoryUnitListContainer is BUCKSpecificScrollingContainerDescriptor
     ScrollBarElevatorBackgroundToken = "AmroryButtonBkg"
     VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [10.0, 0.0]
-        MagnifiableOffset = [5.0, 0.0]
+        MagnifiableWidthHeight = [12.0, 0.0]
+        MagnifiableOffset = [0.0, 0.0]
     )
 
     Components =
@@ -937,7 +938,7 @@ ArmoryUnitListContainer is BUCKSpecificScrollingContainerDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [1.0, 0.0]
-                    MagnifiableWidthHeight = [0.0, 90.0]
+                    MagnifiableWidthHeight = [0.0, 96.0]
                 )
 
                 Components =
@@ -947,9 +948,9 @@ ArmoryUnitListContainer is BUCKSpecificScrollingContainerDescriptor
                         ElementName = "PackList"
 
                         ComponentFrame = TUIFramePropertyRTTI()
-                        FirstElementMargin = TRTTILength2( Magnifiable = [15.0, 0.0] )
+                        FirstElementMargin = TRTTILength2( Magnifiable = [16.0, 0.0] )
                         InterElementMargin = TRTTILength2( Magnifiable = [1.0, 1.0] )
-                        LastElementMargin = TRTTILength2( Magnifiable = [25.0, 0.0] )
+                        LastElementMargin = TRTTILength2( Magnifiable = [24.0, 0.0] )
 
                         MaxElementsPerDimension = [~/MaxUnitByLineInUnitDivisionGridArmory, 0]
 
@@ -1162,7 +1163,7 @@ ArmoryMainComponentDescriptor is BUCKContainerDescriptor
             )
         ),
         ~/ShowHideHUDButton,
-        ShowroomLightCycleButton(MagnifiableOffset = [-10.0, 65.0]),
+        ShowroomLightCycleButton(MagnifiableOffset = [-96.0, 128.0+20]),
     ]
 )
 
@@ -1231,7 +1232,7 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
     (
         ComponentFrame = TUIFramePropertyRTTI
         (
-            MagnifiableWidthHeight = [0.0, 90.0]
+            MagnifiableWidthHeight = [0.0, 96.0]
         )
 
         MagnifierMultiplication = 1
@@ -1240,8 +1241,8 @@ ArmoryComponentDescriptor is TUISpecificShowRoomArmoryComponentDescriptor
         Axis = ~/ListAxis/Horizontal
 
         BackgroundBlockColorToken = 'Blanc'
-        FirstMargin = TRTTILength( Magnifiable = 9.0 )
-        LastMargin = TRTTILength( Magnifiable = 10.0 )
+        FirstMargin = TRTTILength( Magnifiable = 2.0 )
+        LastMargin = TRTTILength( Magnifiable = 2.0 )
      )
 
     UnitSpecialtiesContainer = ~/UnitSpecialties

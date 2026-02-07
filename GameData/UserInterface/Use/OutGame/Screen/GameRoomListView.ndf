@@ -94,12 +94,12 @@ private template RoomListTitleElementDescriptor
     ElementName : string,
     TextToken : string,
     TextSize : string = "23",
-    SortingType : int = ~/MultiListSorting/None,
+    SortingType : int = ~/SortableElementField/None,
     MagnifiableWidthHeight : float2 = [50.0, 20.0]
 ]
 is BUCKListElementDescriptor
 (
-    ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+    ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
     (
         ElementName = <ElementName>
         SortingType = <SortingType>
@@ -321,11 +321,7 @@ private ListeDesParties is BUCKContainerDescriptor
                 AlignementToFather = [0.5, 0.5]
             )
 
-            ColumnNames =
-            [
-            ]
-
-            SortableColumnNames =
+            SortableElementFieldNames =
             [
                 "Relevance",
                 "CombatRule",
@@ -395,21 +391,21 @@ private ListeDesParties_Titre is BUCKListDescriptor
         (
             ElementName = "CombatRule"
             TextToken = "CL_GAMMODE"
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             MagnifiableWidthHeight = [~/CombatRuleColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
             ElementName ="Name"
             TextToken = "CL_GAMNAME"
-            SortingType = ~/MultiListSorting/String
+            SortingType = ~/SortableElementField/String
             MagnifiableWidthHeight = [~/GameNameColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
             ElementName ="Map"
             TextToken = "CL_GAMMAP"
-            SortingType = ~/MultiListSorting/String
+            SortingType = ~/SortableElementField/String
             MagnifiableWidthHeight = [~/MapNameColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
@@ -417,35 +413,35 @@ private ListeDesParties_Titre is BUCKListDescriptor
             ElementName ="LevelRequired"
             TextToken = "CL_GAMLVL"
             TextSize = "16"
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             MagnifiableWidthHeight = [~/LevelRequiredColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
             ElementName = "NbPlayers"
             TextToken = "CL_GAMPLNB"
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             MagnifiableWidthHeight = [~/NbPlayersColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
             ElementName = "Status"
             TextToken = "CL_GAMSTS"
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             MagnifiableWidthHeight = [~/GameStatusColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
             ElementName = "Rules"
             TextToken = "CL_GAMRUL"
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             MagnifiableWidthHeight = [GameRulesColumnWidth, ~/TitleLineHeight]
         ),
         RoomListTitleElementDescriptor
         (
             ElementName = "Mods"
             TextToken = "CL_MOD"
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             MagnifiableWidthHeight = [~/ModsStatusColumnWidth, ~/TitleLineHeight]
         ),
     ]
@@ -622,7 +618,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         // relevance
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "Relevance"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -634,7 +630,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         // combat rule
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "CombatRule"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -660,7 +656,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         // name
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "Name"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -795,7 +791,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "Map"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -833,7 +829,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "LevelRequired"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -871,7 +867,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "NbPlayers"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -953,7 +949,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "Status"
 
@@ -1031,7 +1027,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "Rules"
                 ComponentFrame = TUIFramePropertyRTTI
@@ -1072,7 +1068,7 @@ ListeDesParties_ContentList is BUCKListDescriptor
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "Mods"
                 ComponentFrame = TUIFramePropertyRTTI

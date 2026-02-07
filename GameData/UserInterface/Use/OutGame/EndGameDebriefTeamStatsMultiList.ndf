@@ -19,7 +19,7 @@ is BUCKListDescriptor
         // Avatar
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsAvatarMultiList"
 
@@ -56,7 +56,7 @@ is BUCKListDescriptor
         // Emblem
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsEmblemMultiList"
 
@@ -103,7 +103,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.2
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsPlayersMultiList"
 
@@ -164,7 +164,7 @@ is BUCKListDescriptor
         // Add friend
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsAddFriendMultiList"
 
@@ -246,7 +246,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.02
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsGameModePointsMultiBestList"
 
@@ -268,7 +268,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsGameModePointsMultiList"
 
@@ -310,7 +310,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.02
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsKillsMultiBestList"
 
@@ -331,7 +331,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsKillsMultiList"
 
@@ -373,7 +373,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.02
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsLossesMultiBestList"
 
@@ -394,7 +394,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsLossesMultiList"
 
@@ -436,7 +436,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.02
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsKillRatioMultiBestList"
 
@@ -457,7 +457,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "StatsKillRatioMultiList"
 
@@ -499,7 +499,7 @@ is BUCKListDescriptor
         // Utilisé par le cpp pour trier les joueur avec la formule : nbKills - nbLosses + nb_points_de_commandement (FUL-1493)
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "HiddenSortingCriterion"
 
@@ -615,7 +615,7 @@ is BUCKListDescriptor
         // Avatar
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsAvatarMultiList'
 
@@ -625,7 +625,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [37.0, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 HidePointerEvents = true
                 Components = []
@@ -634,7 +634,7 @@ is BUCKListDescriptor
         // Emblem
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsEmblemMultiList'
 
@@ -644,7 +644,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [37.0, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 HidePointerEvents = true
                 Components = []
@@ -654,7 +654,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.2
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsPlayersMultiList'
 
@@ -663,7 +663,7 @@ is BUCKListDescriptor
                     RelativeWidthHeight = [1.0, 1.0]
                 )
 
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 ShowCheckbox = false
                 HidePointerEvents = true
                 Components =
@@ -695,7 +695,7 @@ is BUCKListDescriptor
         // Add Friend
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsAddFriendMultiList'
 
@@ -705,7 +705,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [50.0, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
 
                 HidePointerEvents = true
@@ -716,7 +716,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.02
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsGameModePointsMultiBestList'
 
@@ -726,7 +726,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [Icone_BestScore_Size, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
 
                 HidePointerEvents = true
@@ -737,7 +737,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsGameModePointsMultiList'
 
@@ -747,7 +747,7 @@ is BUCKListDescriptor
                 )
 
                 HidePointerEvents = true
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 Components =
                 [
@@ -781,7 +781,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.02
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsKillsMultiBestList'
 
@@ -791,7 +791,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [Icone_BestScore_Size, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
 
                 HidePointerEvents = true
@@ -802,7 +802,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsKillsMultiList'
 
@@ -813,7 +813,7 @@ is BUCKListDescriptor
 
                 HidePointerEvents = true
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 Components =
                 [
@@ -846,7 +846,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.02
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsLossesMultiBestList'
 
@@ -856,7 +856,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [Icone_BestScore_Size, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
 
                 HidePointerEvents = true
@@ -867,7 +867,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsLossesMultiList'
 
@@ -877,7 +877,7 @@ is BUCKListDescriptor
                 )
 
                 HidePointerEvents = true
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 Components =
                 [
@@ -910,7 +910,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.02
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsKillRatioMultiBestList'
 
@@ -920,7 +920,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [Icone_BestScore_Size, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
 
                 HidePointerEvents = true
@@ -931,7 +931,7 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 0.1
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'StatsKillRatioMultiList'
 
@@ -941,7 +941,7 @@ is BUCKListDescriptor
                 )
 
                 HidePointerEvents = true
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 Components =
                 [
@@ -974,7 +974,7 @@ is BUCKListDescriptor
         // Utilisé par le cpp pour trier les joueur avec la formule : nbKills - nbLosses + nb_points_de_commandement (FUL-1493)
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = "HiddenSortingCriterion"
 
@@ -983,7 +983,7 @@ is BUCKListDescriptor
                     MagnifiableWidthHeight = [0.0, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 Components =
                 [
                     BUCKContainerDescriptor
@@ -1015,19 +1015,7 @@ is BUCKMultiListDescriptor
 
     FitStyle = ~/ContainerFitStyle/FitToContentVertically
 
-    ColumnNames =
-    [
-        "StatsAvatarMultiList",
-        "StatsEmblemMultiList",
-        "StatsPlayersMultiList",
-        "StatsAddFriendMultiList",
-        "StatsGameModePointsMultiBestList",
-        "StatsKillsMultiBestList",
-        "StatsLossesMultiBestList",
-        "StatsKillRatioMultiBestList",
-    ]
-
-    SortableColumnNames =
+    SortableElementFieldNames =
     [
         "HiddenSortingCriterion",
     ]

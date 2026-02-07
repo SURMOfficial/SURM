@@ -434,7 +434,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
         //embleme
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'DivisionEmblemMultiList'
 
@@ -445,7 +445,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                 )
                 ShowCheckbox = false
                 CheckBoxBorderLineColorToken = 'gris_load'
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 HidePointerEvents = false
                 Components =
                 [
@@ -461,7 +461,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
         // Country Flag
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'DivisionFlagMultiList'
 
@@ -471,7 +471,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                     MagnifiableWidthHeight = [DeckListColonne_Flag, 0.0]
                 )
 
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 ShowCheckbox = false
                 CheckBoxBorderLineColorToken = 'gris_load'
                 HidePointerEvents = true
@@ -490,7 +490,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
         // AllianceText
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'AllianceTextMultiList'
                 ComponentFrame = TUIFramePropertyRTTI
@@ -501,7 +501,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                 ShowCheckbox = false
 
                 CheckBoxBorderLineColorToken = 'gris_load'
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
 
                 HidePointerEvents = true
                 Components =
@@ -520,7 +520,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 1.0
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'BattlegroupNameMultiList'
 
@@ -530,7 +530,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                 )
                 ShowCheckbox = false
                 CheckBoxBorderLineColorToken = 'gris_load'
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 HidePointerEvents = true
                 Components =
                 [
@@ -547,7 +547,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
         // Power rating
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'DivisionPowerTextMultiList'
 
@@ -558,7 +558,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                 )
                 ShowCheckbox = false
                 CheckBoxBorderLineColorToken = 'gris_load'
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 HidePointerEvents = true
                 Components =
                 [
@@ -575,7 +575,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
         // Unit Type
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
                 ElementName = 'DivisionUnitTypeMultiList'
 
@@ -586,7 +586,7 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                 )
                 ShowCheckbox = false
                 CheckBoxBorderLineColorToken = 'gris_load'
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 HidePointerEvents = true
                 Components =
                 [
@@ -613,12 +613,7 @@ BattlegroupsBriefMultiList is BUCKMultiListDescriptor
         RelativeWidthHeight = [1.0, 1.0]
     )
 
-    ColumnNames =
-    [
-        "IncomeTextMultiList",
-    ]
-
-    SortableColumnNames =
+    SortableElementFieldNames =
     [
         "AllianceTextMultiList",
         "BattlegroupNameMultiList",

@@ -63,6 +63,7 @@ is TDepictionVisual
     DisabledOperators = DisabledOperatorLow + <DisabledOperators>
 )
 MaterialTagMech is 'Mechanical'
+MaterialTagGhost is 'GhostTag'
 // ****************************************************************************************************************************************
 // *** infantrie **************************************************************************************************************************
 // ****************************************************************************************************************************************
@@ -361,6 +362,7 @@ template ShowroomVehicleDepictionRegistration
     Selector : TAbstractDepictionSelector,
     SubDepictions : LIST<TSubDepiction> = [],
     SubDepictionGenerators : LIST<TAbstractSubDepictionGenerator> = [],
+    Operators = [],
 ]
 is UnitDepictionRegistration
 (
@@ -368,7 +370,7 @@ is UnitDepictionRegistration
     DepictionDescriptor = TDepictionDescriptor
     (
         Selector = <Selector>
-        Operators = [ DepictionOperator_ShadowPointCloudProvider ]
+        Operators = [ DepictionOperator_ShadowPointCloudProvider ] + <Operators>
         DepictionAlternatives = <Alternatives>
         SubDepictions = <SubDepictions>
         SubDepictionGenerators = <SubDepictionGenerators>
@@ -539,7 +541,7 @@ template ShowroomRocketSubDepictionDesc
     WeaponIndex : int = 1,
     AirStartGroupIndex : int = 0,
     GroundStartGroupIndex : int = 0,
-] is TStaticMissileCarriageSubDepictionGenerator
+] is TShowroomRocketSubDepictionGenerator
 (
     PylonConnoisseur = <PylonConnoisseur>
     MissileCarriageConnoisseur = TMissileCarriageConnoisseur
@@ -561,7 +563,7 @@ template ShowroomRocketSubDepictionDesc
 
     Missiles =
     [
-        TStaticMissileCarriageSubDepictionMissileInfo
+        TShowroomRocketSubDepictionMissileInfo
         (
             Depiction = TemplateDepictionMissileShowroom
             (

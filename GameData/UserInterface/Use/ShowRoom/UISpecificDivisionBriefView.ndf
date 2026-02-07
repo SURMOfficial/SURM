@@ -71,7 +71,7 @@ is BUCKListDescriptor
         // alliance
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "AllianceTextMultiList"
 
@@ -177,7 +177,7 @@ is BUCKListDescriptor
     ]
 )
 //-------------------------------------------------------------------------------------
-private DivisionInfoDeckName is BUCKMultiListContentElementDescriptor
+private DivisionInfoDeckName is BUCKSortableElementFieldDescriptor
 (
     ElementName = 'BattlegroupNameMultiList'
     ComponentFrame = TUIFramePropertyRTTI
@@ -216,7 +216,7 @@ private DivisionInfoDeckName is BUCKMultiListContentElementDescriptor
     ]
 )
 //-------------------------------------------------------------------------------------
-private DivisionInfoDrapeauNation is BUCKMultiListContentElementDescriptor
+private DivisionInfoDrapeauNation is BUCKSortableElementFieldDescriptor
 (
     ElementName = "DivisionFlagMultiList"
 
@@ -261,7 +261,7 @@ private DivisionInfoDrapeauNation is BUCKMultiListContentElementDescriptor
     ]
 )
 //-------------------------------------------------------------------------------------
-private DivisionPower is BUCKMultiListContentElementDescriptor
+private DivisionPower is BUCKSortableElementFieldDescriptor
 (
     ElementName = "DivisionPowerTextMultiList"
 
@@ -303,7 +303,7 @@ private DivisionPower is BUCKMultiListContentElementDescriptor
     ]
 )
 //-------------------------------------------------------------------------------------
-private DivisionType is BUCKMultiListContentElementDescriptor
+private DivisionType is BUCKSortableElementFieldDescriptor
 (
     ElementName = "DivisionUnitTypeMultiList"
 
@@ -352,7 +352,7 @@ private template DivisionInfoName
 [
     DivisionNameWidth : float,
 ]
-is BUCKMultiListContentElementDescriptor
+is BUCKSortableElementFieldDescriptor
 (
     ElementName = "DivisionNameMultiList"
 
@@ -438,7 +438,7 @@ is BUCKMultiListContentElementDescriptor
     ]
 )
 //-------------------------------------------------------------------------------------
-private DivisionInfoEmblem is BUCKMultiListContentElementDescriptor
+private DivisionInfoEmblem is BUCKSortableElementFieldDescriptor
 (
     ElementName = "DivisionEmblemMultiList"
 

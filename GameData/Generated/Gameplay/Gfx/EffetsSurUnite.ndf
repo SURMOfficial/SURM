@@ -3286,6 +3286,24 @@ export UnitEffect_Infanterie_bonus_discretion is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_Instructor is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{7ae0cd0a-e771-43eb-8652-dbdf2773f981}
+    NameForDebug       = 'Instructor'
+    EffectsDescriptors = [
+        TUnitEffectBonusExperienceLevelDescriptor
+        (
+            ModifierType            = ~/ModifierType_Additionnel
+            ExperienceLevelModifier = 1
+        ),
+        TUnitEffectRaiseTagDescriptor
+        (
+            TagListToRaise = [
+                 "Instructor_immune",
+            ]
+        ),
+    ]
+)
 export UnitEffect_Malus_ciblage_UAV is TEffectsPackDescriptor
 (
     DescriptorId       = GUID:{8651f756-e794-4dc7-bafd-ff5f79fc5de0}

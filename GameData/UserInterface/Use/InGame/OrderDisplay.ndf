@@ -47,7 +47,8 @@ export OrderDisplayDrawer is TOrderDisplayDrawer
                                 OrderDisplayAIAirplaneAutoManage,
                                 OrderDisplayAISupply,
 
-                                OrderDisplaySell
+                                OrderDisplaySell,
+                                OrderDisplaySupply,
                             ]
     DefaultOrderDisplayDrawInfo = OrderDisplayNotFound
     AltitudeMinToDrawDashLine = 100.0
@@ -88,6 +89,26 @@ export OrderDisplaySell is TOrderDisplayDrawInfo
 export OrderDisplayMove is TOrderDisplayDrawInfo
 (
     OrderType                   = EOrderType/Move
+    ColorLineStart              = [128, 187, 255, 50]
+    ColorLineEnd                = [128, 187, 255, alpha] //Light blue
+    MaxDistanceBetweenColorsGRU = MaxMeter
+    LineThickness               = 2000.0
+    DisplayWaypoints            = true
+    HideNextOrders              = false
+    MustDrawCircle              = false
+    MustDrawArrow               = true
+
+    AerialDashLineThickness     = 500.0
+    AerialDashLineDashLength    = 5.0
+    MustDrawDashLineForAerialOrderDestination = true
+    AerialDashLineDrawCircleAtBase = true
+    AerialDashLineBaseCircleThickness     = 500.0
+    AerialDashLineBaseCircleRadius     = CerclePositionAir
+)
+
+export OrderDisplaySupply is TOrderDisplayDrawInfo
+(
+    OrderType                   = EOrderType/SupplyUnit
     ColorLineStart              = [128, 187, 255, 50]
     ColorLineEnd                = [128, 187, 255, alpha] //Light blue
     MaxDistanceBetweenColorsGRU = MaxMeter

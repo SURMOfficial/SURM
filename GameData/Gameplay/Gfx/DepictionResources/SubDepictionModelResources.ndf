@@ -16,6 +16,14 @@ export MeshDescriptor_Driver_US_LOW is TResourceMesh
 (
     Mesh=US_GI_1_LOW
 )
+export MeshDescriptor_Driver_USMC is TResourceMesh
+(
+    Mesh=US_USMC_Crew
+)
+export MeshDescriptor_Driver_USMC_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
 //--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Driver_UK is TResourceMesh
 (
@@ -430,6 +438,23 @@ export MeshDescriptor_Servant_G_US_LOW is TResourceMesh
 export MeshDescriptor_Servant_D_US_LOW is TResourceMesh
 (
     Mesh="GameData:/Assets/3D/Units/US/Infanterie/GI/GI_2.fbx"
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_G_USMC is TResourceMesh
+(
+    Mesh=US_USMC_Crew
+)
+export MeshDescriptor_Servant_D_USMC is TResourceMesh
+(
+    Mesh=US_USMC_1
+)
+export MeshDescriptor_Servant_G_USMC_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
+export MeshDescriptor_Servant_D_USMC_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
 )
 //--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Servant_GI_NCO_G_US is TResourceMesh

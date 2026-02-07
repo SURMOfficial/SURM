@@ -81,7 +81,7 @@ DivisionsBriefMultiListTitle is BUCKListDescriptor
         MultilistTitle
         (
             ElementName = 'DivisionFlagMultiList'
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             TextToken = 'DB_FLAG'
             HintBodyToken = "div_counB"
             HintExtendedToken = ""
@@ -90,7 +90,7 @@ DivisionsBriefMultiListTitle is BUCKListDescriptor
         MultilistTitle
         (
             ElementName = 'AllianceTextMultiList'
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             TextToken = 'DB_ALLIA'
             HintBodyToken = "div_alliB"
             HintExtendedToken = "div_alliE"
@@ -98,7 +98,7 @@ DivisionsBriefMultiListTitle is BUCKListDescriptor
         MultilistTitle
         (
             ElementName = 'DivisionNameMultiList'
-            SortingType = ~/MultiListSorting/StringStartingWithNumber
+            SortingType = ~/SortableElementField/StringStartingWithNumber
             TextToken = 'DB_NAME'
             HintBodyToken = "div_nameB"
             HintExtendedToken = ""
@@ -115,7 +115,7 @@ DivisionsBriefMultiListTitle is BUCKListDescriptor
         MultilistTitle
         (
             ElementName = 'DivisionUnitTypeMultiList'
-            SortingType = ~/MultiListSorting/Integer
+            SortingType = ~/SortableElementField/Integer
             TextToken = 'DB_UTYPE'
             HintBodyToken = "div_typeB"
             HintExtendedToken = "div_typeE"
@@ -130,13 +130,13 @@ template MultilistTitle
     TextToken : string,
     HintBodyToken : string,
     HintExtendedToken : string,
-    SortingType : int = ~/MultiListSorting/String,
+    SortingType : int = ~/SortableElementField/String,
     ExtendWeight : float = 0.0,
     MagnifiableWidthHeight : float2 = [70.0, 0.0],
 ] is BUCKListElementDescriptor
 (
     ExtendWeight = <ExtendWeight>
-    ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+    ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
     (
 
         ElementName = <ElementName>
@@ -190,7 +190,7 @@ template MultilistTitle
 
 private DivisionEmblem is BUCKListElementDescriptor
 (
-    ComponentDescriptor = BUCKMultiListTitleButtonDescriptor
+    ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
     (
         ElementName = 'DivisionEmblemMultiList'
 
@@ -228,12 +228,7 @@ DivisionsBriefMultiList is BUCKMultiListDescriptor
         AlignementToAnchor = [1.0, 0.0]
     )
 
-    ColumnNames =
-    [
-        "DivisionEmblemMultiList",
-    ]
-
-    SortableColumnNames =
+    SortableElementFieldNames =
     [
         "AllianceTextMultiList",
         "DivisionPowerTextMultiList",

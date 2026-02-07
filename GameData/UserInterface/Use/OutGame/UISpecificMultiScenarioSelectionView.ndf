@@ -187,7 +187,7 @@ private template MultiScenarioMultiListTitle
 
             Components =
             [
-                BUCKMultiListTitleButtonDescriptor
+                BUCKSortableElementFieldTitleButtonDescriptor
                 (
                     ElementName = <ElementName>
                     ComponentFrame = TUIFramePropertyRTTI
@@ -240,7 +240,7 @@ private MultiScenarioSelectionTitleColumns is BUCKListDescriptor
             (
                 ElementName = "ScenarioNameMultiList"
                 RelativeWidthHeight = [1.0, 1.0]
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 TextToken = "MSSNAME"
                 HintBodyToken = "msnameh"
             )
@@ -251,7 +251,7 @@ private MultiScenarioSelectionTitleColumns is BUCKListDescriptor
             (
                 ElementName = "CombatRuleMultiList"
                 MagnifiableWidthHeight = [~/MultiScenarioSelectionCombatRuleColumnWidth, 0.0]
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 TextToken = "MSSCBTRUL"
                 HintBodyToken = "MSSCBTRULh"
             )
@@ -262,7 +262,7 @@ private MultiScenarioSelectionTitleColumns is BUCKListDescriptor
             (
                 ElementName = "IsRankedMultiList"
                 MagnifiableWidthHeight = [~/MultiScenarioSelectionIsRankedColumnWidth, 0.0]
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 TextToken = "MSSRANKED"
                 HintBodyToken = "MSSRANKEDh"
             )
@@ -273,7 +273,7 @@ private MultiScenarioSelectionTitleColumns is BUCKListDescriptor
             (
                 ElementName = "NumberPlayersMultiList"
                 MagnifiableWidthHeight = [~/MultiScenarioSelectionNumberPlayersColumnWidth, 0.0]
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 TextToken = "MSSNBPLAY"
                 HintBodyToken = "MSSNBPLAYh"
             )
@@ -284,7 +284,7 @@ private MultiScenarioSelectionTitleColumns is BUCKListDescriptor
             (
                 ElementName = "MapSizeMultiList"
                 MagnifiableWidthHeight = [~/MultiScenarioSelectionMapSizeColumnWidth, 0.0]
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 TextToken = "MSSMAPSIZ"
                 HintBodyToken = "MSSMAPSIZh"
             )
@@ -295,7 +295,7 @@ private MultiScenarioSelectionTitleColumns is BUCKListDescriptor
             (
                 ElementName = "DensityMultiList"
                 MagnifiableWidthHeight = [~/MultiScenarioSelectionDensityColumnWidth, 0.0]
-                SortingType = ~/MultiListSorting/String
+                SortingType = ~/SortableElementField/String
                 TextToken = "MSSDENSIT"
                 HintBodyToken = "MSSDENSITh"
             )
@@ -306,7 +306,7 @@ private MultiScenarioSelectionTitleColumns is BUCKListDescriptor
             (
                 ElementName = "RiversMultiList"
                 MagnifiableWidthHeight = [~/MultiScenarioSelectionRiversColumnWidth, 0.0]
-                SortingType = ~/MultiListSorting/Integer
+                SortingType = ~/SortableElementField/Integer
                 TextToken = "MSSRIVERS"
                 HintBodyToken = "MSSRIVERSh"
             )
@@ -377,7 +377,7 @@ template MultiScenarioSelectionOneContentElement
     TextPadding : TRTTILength4 = TRTTILength4( Magnifiable = [5.0, 0.0, 0.0, 0.0]),
     HorizontalFitStyle : int = ~/FitStyle/UserDefined,
 ]
-is BUCKMultiListContentElementDescriptor
+is BUCKSortableElementFieldDescriptor
 (
     ElementName = <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
@@ -437,7 +437,7 @@ private MultiScenarioSelectionMultiListOneLineContent is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 1.0
-            ComponentDescriptor = BUCKMultiListContentElementDescriptor
+            ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
                 ElementName = "ScenarioNameMultiList"
                 ComponentFrame = TUIFramePropertyRTTI( RelativeWidthHeight = [1.0, 1.0] )
@@ -732,9 +732,7 @@ private MultiScenarioListContainer is BUCKContainerDescriptor
                             RelativeWidthHeight = [1.0, 1.0]
                         )
 
-                        ColumnNames = []
-
-                        SortableColumnNames =
+                        SortableElementFieldNames =
                         [
                             "ScenarioNameMultiList",
                             "NumberPlayersMultiList",

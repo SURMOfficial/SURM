@@ -1,25 +1,17 @@
 
 export SpecificCountriesInfos is MAP [
-    ("GER", TUISpecificCountryInfos
+
+// ==================================================
+// NATO COUNTRIES
+// ==================================================
+
+    ("US", TUISpecificCountryInfos
         (
-            FlagTexture = "CommonTexture_MotherCountryFlag_GERW"
+            FlagTexture = "CommonTexture_MotherCountryFlag_US"
             PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "GER"
-            NameToken = "CtrGER"
-        )),
-    ("SOV", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_SOV"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "SOV"
-            NameToken = "CtrSOV"
-        )),
-    ("HON", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_HON"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "HON"
-            NameToken = "CtrHON"
+            Country = "US"
+            NameToken = "CtrUS"
+            Coalition = ECoalition/NATO
         )),
     ("UK", TUISpecificCountryInfos
         (
@@ -27,35 +19,15 @@ export SpecificCountriesInfos is MAP [
             PawnExpTexture = "CommonTexture_Etoile_Grande"
             Country = "UK"
             NameToken = "CtrUK"
+            Coalition = ECoalition/NATO
         )),
-    ("US", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_US"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "US"
-            NameToken = "CtrUS"
-        )),
-    ("DDR", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_DDR"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "DDR"
-            NameToken = "CtrDDR"
-        )),
-    ("RFA", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_RFA"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "RFA"
-            NameToken = "CtrRFA"
-        )),
-    //----------------------^ affichées dans la showroom-------------------------- // Voir UIShowRoomResources.ndf, CountriesToShow
     ("FR", TUISpecificCountryInfos
         (
             FlagTexture = "CommonTexture_MotherCountryFlag_FR"
             PawnExpTexture = "CommonTexture_Etoile_Grande"
             Country = "FR"
             NameToken = "CtrFR"
+            Coalition = ECoalition/NATO
         )),
     ("CAN", TUISpecificCountryInfos
         (
@@ -63,20 +35,15 @@ export SpecificCountriesInfos is MAP [
             PawnExpTexture = "CommonTexture_Etoile_Grande"
             Country = "CAN"
             NameToken = "CtrCAN"
+            Coalition = ECoalition/NATO
         )),
-    ("POL", TUISpecificCountryInfos
+    ("RFA", TUISpecificCountryInfos
         (
-            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
+            FlagTexture = "CommonTexture_MotherCountryFlag_RFA"
             PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "POL"
-            NameToken = "CtrPOL"
-        )),
-    ("LUX", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_LUX"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "LUX"
-            NameToken = "CtrLUX"
+            Country = "RFA"
+            NameToken = "CtrRFA"
+            Coalition = ECoalition/NATO
         )),
     ("NL", TUISpecificCountryInfos
         (
@@ -84,20 +51,7 @@ export SpecificCountriesInfos is MAP [
             PawnExpTexture = "CommonTexture_Etoile_Grande"
             Country = "NL"
             NameToken = "CtrNL"
-        )),
-    ("FIN", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_FIN"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "FIN"
-            NameToken = "CtrFIN"
-        )),
-    ("ROU", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_ROU"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "ROU"
-            NameToken = "CtrROU"
+            Coalition = ECoalition/NATO
         )),
     ("BEL", TUISpecificCountryInfos
         (
@@ -105,27 +59,15 @@ export SpecificCountriesInfos is MAP [
             PawnExpTexture = "CommonTexture_Etoile_Grande"
             Country = "BEL"
             NameToken = "CtrBEL"
+            Coalition = ECoalition/NATO
         )),
-    ("LIT", TUISpecificCountryInfos
+    ("LUX", TUISpecificCountryInfos
         (
-            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
+            FlagTexture = "CommonTexture_MotherCountryFlag_LUX"
             PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "LIT"
-            NameToken = "CtrLIT"
-        )),
-    ("EST", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "EST"
-            NameToken = "CtrEST"
-        )),
-    ("TCH", TUISpecificCountryInfos
-        (
-            FlagTexture = "CommonTexture_MotherCountryFlag_TCH"
-            PawnExpTexture = "CommonTexture_Etoile_Grande"
-            Country = "TCH"
-            NameToken = "CtrTCH"
+            Country = "LUX"
+            NameToken = "CtrLUX"
+            Coalition = ECoalition/NATO
         )),
     ("ESP", TUISpecificCountryInfos
         (
@@ -133,6 +75,7 @@ export SpecificCountriesInfos is MAP [
             PawnExpTexture = "CommonTexture_Etoile_Grande"
             Country = "ESP"
             NameToken = "CtrESP"
+            Coalition = ECoalition/NATO
         )),
     ("DK", TUISpecificCountryInfos
         (
@@ -140,6 +83,124 @@ export SpecificCountriesInfos is MAP [
             PawnExpTexture = "CommonTexture_Etoile_Grande"
             Country = "DK"
             NameToken = "CtrDK"
+            Coalition = ECoalition/NATO
+        )),
+    ("SWI", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_SWI"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "SWI"
+            NameToken = "CtrSWI"
+            Coalition = ECoalition/NATO
+        )),
+    ("OST", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_OST"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "OST"
+            NameToken = "CtrOST"
+            Coalition = ECoalition/NATO
+        )),
+    ("EST", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "EST"
+            NameToken = "CtrEST"
+            Coalition = ECoalition/NATO
+        )),
+    ("ITA", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_ITA"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "ITA"
+            NameToken = "CtrITA"
+            Coalition = ECoalition/NATO
+        )),
+
+// ==================================================
+// PACT COUNTRIES
+// ==================================================
+
+    ("SOV", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_SOV"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "SOV"
+            NameToken = "CtrSOV"
+            Coalition = ECoalition/PACT
+        )),
+    ("POL", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "POL"
+            NameToken = "CtrPOL"
+            Coalition = ECoalition/PACT
+        )),
+    ("DDR", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_DDR"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "DDR"
+            NameToken = "CtrDDR"
+            Coalition = ECoalition/PACT
+        )),
+    ("TCH", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_TCH"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "TCH"
+            NameToken = "CtrTCH"
+            Coalition = ECoalition/PACT
+        )),
+    ("ALB", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_ALB"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "ALB"
+            NameToken = "CtrALB"
+            Coalition = ECoalition/PACT
+        )),
+    ("HON", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_HON"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "HON"
+            NameToken = "CtrHON"
+            Coalition = ECoalition/PACT
+        )),
+    ("CYP", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_CYP"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "CYP"
+            NameToken = "CtrCYP"
+            Coalition = ECoalition/PACT
+        )),
+    ("FIN", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_FIN"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "FIN"
+            NameToken = "CtrFIN"
+            Coalition = ECoalition/PACT
+        )),
+    ("ROU", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_ROU"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "ROU"
+            NameToken = "CtrROU"
+            Coalition = ECoalition/PACT
+        )),
+    ("LIT", TUISpecificCountryInfos
+        (
+            FlagTexture = "CommonTexture_MotherCountryFlag_POL"
+            PawnExpTexture = "CommonTexture_Etoile_Grande"
+            Country = "LIT"
+            NameToken = "CtrLIT"
+            Coalition = ECoalition/PACT
         )),
 ]
 
