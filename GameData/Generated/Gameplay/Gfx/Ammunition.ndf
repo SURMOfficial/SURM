@@ -36807,13 +36807,13 @@ export Ammo_IRCM is TAmmunitionDescriptor
     Caliber                           = ''
     TraitsToken                       = [ ]
     WeaponCursorType                  = Weapon_Cursor_None
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=6)
     ProjectileType                    = EProjectileType/Obus
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 0.2
-    TimeBetweenTwoFx                  = 0.2
+    TimeBetweenTwoShots               = 0.5
+    TimeBetweenTwoFx                  = 0.5
     MinimumRangeProjectileGRU         = 0
-    MaximumRangeProjectileGRU         = 50
+    MaximumRangeProjectileGRU         = 280
     AngleDispersion                   = 0.0
     SalvoShotsSorted          		  = False
     RadiusSplashPhysicalDamagesGRU    = 0
@@ -36825,8 +36825,7 @@ export Ammo_IRCM is TAmmunitionDescriptor
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
     TirReflexe                        = True
-    MaximalSpeedGRU                   = 3534
-    ShotWithPhysics                   = False
+    SpeedGRU                   		  = 5000
     FluidFriction                     = 0.0
     ShotsBeforeMaxNoise               = 1
 	TargetOnlyOneUnitInDistrict       = False
@@ -36843,22 +36842,21 @@ export Ammo_IRCM is TAmmunitionDescriptor
          ]
         DistanceToTarget = True
     )
+    AimingTime                        = 0.0
     TimeBetweenTwoSalvos              = 0.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    NbTirParSalves                    = 1000
+    ShotsCountPerSalvo                = 1000
     SupplyCost                        = 1.0
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
-    NbrProjectilesSimultanes          = 1
+    SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
 	TandemCharge                      = False
-    FlightTimeForSpeed                = 1.0
-    DistanceForSpeedGRU               = 1000
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
 export Ammo_Flares is TAmmunitionDescriptor
@@ -36869,13 +36867,13 @@ export Ammo_Flares is TAmmunitionDescriptor
     Caliber                           = ''
     TraitsToken                       = [ ]
     WeaponCursorType                  = Weapon_Cursor_None
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=5)
     ProjectileType                    = EProjectileType/Obus
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 0.2
-    TimeBetweenTwoFx                  = 0.2
+    TimeBetweenTwoShots               = 0.5
+    TimeBetweenTwoFx                  = 0.5
     MinimumRangeProjectileGRU         = 0
-    MaximumRangeProjectileGRU         = 50
+    MaximumRangeProjectileGRU         = 280
     AngleDispersion                   = 0.0
     SalvoShotsSorted          		  = False
     RadiusSplashPhysicalDamagesGRU    = 0
@@ -36885,10 +36883,9 @@ export Ammo_Flares is TAmmunitionDescriptor
     SuppressDamages                   = 0.0
     AllowSuppressDamageWhenNoImpact   = False
     DisplaySalveAccuracy              = False
-    TirIndirect                       = True
+    TirIndirect                       = False
     TirReflexe                        = True
-    MaximalSpeedGRU                   = 3534
-    ShotWithPhysics                   = False
+    SpeedGRU                   		  = 5000
     FluidFriction                     = 0.0
     ShotsBeforeMaxNoise               = 1
 	TargetOnlyOneUnitInDistrict       = False
@@ -36899,28 +36896,27 @@ export Ammo_Flares is TAmmunitionDescriptor
          BaseHitValueModifiers =
          [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, 80.0),
-            (EBaseHitValueModifier/Moving, 80.0),
+            (EBaseHitValueModifier/Idling, 500.0),
+            (EBaseHitValueModifier/Moving, 500.0),
             (EBaseHitValueModifier/Targeted, 0.0),
          ]
         DistanceToTarget = True
     )
+    AimingTime                        = 0.0
     TimeBetweenTwoSalvos              = 0.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    NbTirParSalves                    = 1000
+    ShotsCountPerSalvo                = 30
     SupplyCost                        = 1.0
     CanShootOnPosition                = False
-    CanShootWhileMoving               = False
-    NbrProjectilesSimultanes          = 1
-    AffichageMunitionParSalve         = 1
+    CanShootWhileMoving               = True
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 30
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
-    PiercingWeapon                    = False
+    PiercingWeapon                    = True
 	TandemCharge                      = False
-    FlightTimeForSpeed                = 1.0
-    DistanceForSpeedGRU               = 1000
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
 export Ammo_Exhaust_Cooler is TAmmunitionDescriptor
@@ -36931,13 +36927,13 @@ export Ammo_Exhaust_Cooler is TAmmunitionDescriptor
     Caliber                           = ''
     TraitsToken                       = [ ]
     WeaponCursorType                  = Weapon_Cursor_None
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=2)
     ProjectileType                    = EProjectileType/Obus
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 0.2
-    TimeBetweenTwoFx                  = 0.2
+    TimeBetweenTwoShots               = 0.5
+    TimeBetweenTwoFx                  = 0.5
     MinimumRangeProjectileGRU         = 0
-    MaximumRangeProjectileGRU         = 50
+    MaximumRangeProjectileGRU         = 280
     AngleDispersion                   = 0.0
     SalvoShotsSorted          		  = False
     RadiusSplashPhysicalDamagesGRU    = 0
@@ -36949,8 +36945,7 @@ export Ammo_Exhaust_Cooler is TAmmunitionDescriptor
     DisplaySalveAccuracy              = False
     TirIndirect                       = True
     TirReflexe                        = True
-    MaximalSpeedGRU                   = 3534
-    ShotWithPhysics                   = False
+    SpeedGRU                   		  = 5000
     FluidFriction                     = 0.0
     ShotsBeforeMaxNoise               = 1
 	TargetOnlyOneUnitInDistrict       = False
@@ -36967,22 +36962,21 @@ export Ammo_Exhaust_Cooler is TAmmunitionDescriptor
          ]
         DistanceToTarget = True
     )
+    AimingTime                        = 0.0
     TimeBetweenTwoSalvos              = 0.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    NbTirParSalves                    = 1000
+    ShotsCountPerSalvo                = 1000
     SupplyCost                        = 1.0
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
-    NbrProjectilesSimultanes          = 1
+    SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
     PiercingWeapon                    = False
 	TandemCharge                      = False
-    FlightTimeForSpeed                = 1.0
-    DistanceForSpeedGRU               = 1000
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
 export Ammo_Degats_incendie is TAmmunitionDescriptor
@@ -37035,7 +37029,7 @@ export Ammo_Degats_incendie is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 0.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 1
+    ShotsCountPerSalvo                = 1
     SupplyCost                        = 0.01
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True

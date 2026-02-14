@@ -7647,3 +7647,39 @@ export UnitEffect_slow_missile_25s is TEffectsPackDescriptor
         ),
     ]
 )
+export UnitEffect_IR_missile_basic is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{1bbf94ed-e96a-4409-a581-0a4b230162c6}
+    NameForDebug = "Critic_IR_missile_basic"
+    EffectsDescriptors = [
+ 		TUnitEffectBonusPrecisionWhenTargetedDescriptor
+        (
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusPrecisionWhenTargeted = -40
+        ),
+	]
+)
+export UnitEffect_IR_missile_intermediate is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{173371df-b3c4-43e9-bd9b-dd8c0f7550b2}
+    NameForDebug = "Critic_IR_missile_intermediate"
+    EffectsDescriptors = [
+ 		TUnitEffectBonusPrecisionWhenTargetedDescriptor
+        (
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusPrecisionWhenTargeted = -99
+        ),
+	]
+)
+export UnitEffect_IR_missile_advanced is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{2df168be-b0cf-4d02-9f08-81bfc23e0b38}
+    NameForDebug = "Critic_IR_missile_advanced"
+    EffectsDescriptors = [
+ 		TUnitEffectBonusPrecisionWhenTargetedDescriptor
+        (
+            ModifierType       = ~/ModifierType_Pourcentage
+            BonusPrecisionWhenTargeted = -85
+        ),
+	]
+)

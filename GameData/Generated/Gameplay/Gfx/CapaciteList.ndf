@@ -4206,6 +4206,90 @@ export Capacite_poorly_trained is TCapaciteDescriptor
         ~/ConditionNotInMovement,
     ]
 )
+export Capacite_IR_missile_basic is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{dc5d41d0-0145-4c0a-8ce8-1abd87216efa}
+    Name             = "IR_missile_basic"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 1
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = True
+    TargetEffect            = ~/UnitEffect_IR_missile_basic
+    EffectDuration    = -1.00
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_IR_missile_intermediate is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{da9e6380-ba51-40b0-89cc-e22853c13441}
+    Name             = "IR_missile_intermediate"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 1
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = True
+    TargetEffect            = ~/UnitEffect_IR_missile_intermediate
+    EffectDuration    = -1.00
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_IR_missile_advanced is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{7a126b67-61fa-4a21-a236-b0fb05da4d2e}
+    Name             = "IR_missile_advanced"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 1
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = True
+    TargetEffect            = ~/UnitEffect_IR_missile_advanced
+    EffectDuration    = -1.00
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+    ]
+)
 export Capacite_supply_block is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{b44b8b0e-3834-4988-b47c-87e42e2b3dfc}

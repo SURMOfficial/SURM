@@ -160749,7 +160749,7 @@ export WeaponDescriptor_A109A_RKT_UK is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_A109BA_TOW_BEL is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 1, ]
+    Salves           = [ 1, 1,]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -160778,12 +160778,43 @@ export WeaponDescriptor_A109BA_TOW_BEL is TWeaponManagerModuleDescriptor
             ]
             Tag                         = 'tourelle1'
             YulBoneOrdinal              = 1
-        )
+        ),
+        TTurretUnitDescriptor
+        (
+            AngleRotationMax            = 6.283185307179586
+            AngleRotationMaxPitch       = 1.5707963267948966
+            AngleRotationMinPitch       = -1.5707963267948966
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Flares
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "L"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 1
+                    SalvoStockIndex = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_9"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_9"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_9",
+                    ]
+                ),
+            ]
+            Tag = "tourelle2"
+            YulBoneOrdinal = 2
+        ),
     ]
 )
 export WeaponDescriptor_A109BA_TOW_twin_BEL is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 1, ]
+    Salves           = [ 1, 1, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretUnitDescriptor
@@ -160812,7 +160843,38 @@ export WeaponDescriptor_A109BA_TOW_twin_BEL is TWeaponManagerModuleDescriptor
             ]
             Tag                         = 'tourelle1'
             YulBoneOrdinal              = 1
-        )
+        ),
+        TTurretUnitDescriptor
+        (
+            AngleRotationMax            = 6.283185307179586
+            AngleRotationMaxPitch       = 1.5707963267948966
+            AngleRotationMinPitch       = -1.5707963267948966
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Flares
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "L"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 1
+                    SalvoStockIndex = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_9"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_9"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_9",
+                    ]
+                ),
+            ]
+            Tag = "tourelle2"
+            YulBoneOrdinal = 2
+        ),
     ]
 )
 export WeaponDescriptor_AH1E_Cobra_US is TWeaponManagerModuleDescriptor
