@@ -2495,10 +2495,10 @@ export Descriptor_Missile_AA_R40TD1 is TEntityDescriptor
             StunDamagesRegen = ~/Missile_StunDamagesRegen
             BlindageProperties = TBlindageProperties
             (
-                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
-                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
-                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
-                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=20)
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
                 ExplosiveReactiveArmor = False
             )
             KillWhenDamagesReachMax = True
@@ -3489,13 +3489,13 @@ export Descriptor_Missile_AA_R98MT is TEntityDescriptor
             DefaultConfig = TGuidedMissileMovementConfigDescriptor
             (
                 MaxSpeedGRU        = 686
-                MaxAccelerationGRU = 500
+                MaxAccelerationGRU = 300
                 AutoGyr            = 1.5707963267948966
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
                 MaxSpeedGRU        = 686
-                MaxAccelerationGRU = 500
+                MaxAccelerationGRU = 300
                 AutoGyr            = 1.3962634015954636
             )
             AscendantPhaseConfig = nil
