@@ -292,7 +292,7 @@ template HintableAreaBUCKComponent
     // hint avec un composant spécifique : les tokens et le composant standards ne seront pas utilisés
     HintSpecificBUCKComponent : TBUCKHintDescriptor = nil,
 
-    TextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,
+    TextFormatScript : TTextFormatScriptBank = $/UI/TextFormatScript/DefaultTextFormatScriptBank,
 ]
 is BUCKHintableAreaDescriptor
 (
@@ -301,8 +301,6 @@ is BUCKHintableAreaDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        AlignementToFather = [0.0, 0.0]
-        AlignementToAnchor = [0.0, 0.0]
     )
 
     ForbiddenTags = <ForbiddenTags>

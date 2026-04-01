@@ -4034,6 +4034,34 @@ export Capacite_fireDirection is TCapaciteDescriptor
     ]
 
 )
+export Capacite_gunship_plane is TCapaciteDescriptor
+(
+    DescriptorId            = GUID:{f5b43190-c28e-4ba1-8aef-62360760ae9a}
+    Name                    = "gunship_plane"
+    CumulEffect             = ~/CapaciteCumulEffect_jamais
+    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 0
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = False
+    TargetEffect            = ~/UnitEffect_Gunship_SuppressResist
+    EffectDuration          = -1.00
+    TargetInBuilding        = True
+    TargetInTransport       = True
+    TargetInSelf            = True
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor       = RGBA[0,0,0,0]
+    DisplayRangeThickness   = 0.00
+    AllowedTargetTags       = [
+        "Gunship",
+    ]
+    ForbiddenTargetTags     = [
+    ]
+
+)
 export Capacite_jammer is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{e8d88ab7-f594-4802-bc2a-b28d3c8e9f79}

@@ -940,7 +940,7 @@ is TUISpecificUnitInfoSingleWeaponPanelViewDescriptor
         ),
 
         // ------------------------------------------------
-        // UNUSED but who knows
+        // UNUSED on official version, requested to be kept for modding purposes
         // Weapon Area Of Effect
         ("WeaponAreaOfEffect",     WeaponDamageTypeAttribute(ElementName = "WeaponAreaOfEffect" Token = "UIPT_AOE" ValueToken = "UIP_VAL" HintToken = "HIP_WAOE" Scale = <Scale>)),
         // Weapon Reload Time
@@ -973,9 +973,7 @@ is TUISpecificUnitInfoSingleWeaponPanelViewDescriptor
     WeaponTraitsContainer = ~/WeaponTraits
 
     WeaponDamageTypeAttributeDummy = ~/WeaponDamageTypeAttributeDummy // permet de configurer les "" dans le tableau du DamageTypeConfiguration
-    NotApplicableToken = "UIP_NA"
     NoValueToken = "UIP_NOVAL"
-    InfiniteToken = "UIP_INF"
     WeaponNameAndAmountToken = "UIPW_NUM"
     WeaponBigStatTextToken = "UIPW_THSD"
 

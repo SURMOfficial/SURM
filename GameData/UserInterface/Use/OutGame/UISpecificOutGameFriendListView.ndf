@@ -465,24 +465,12 @@ private LigneAction is BUCKContainerDescriptor
     ]
 )
 
-FriendlistTextFormatScript is TTextFormatScriptRTTI
+FriendlistTextFormatScript is TTextFormatScript
 (
+    TextFormatScriptBank = $/UI/TextFormatScript/FriendlisTTextFormatScriptBank
+
     Commands = MAP
     [
-        (
-            "default",
-            TTFSCommand_StyleChange
-            (
-                Style = TTextStyle
-                (
-                    FontSize    = 1.0
-                    ColorBottom = [0, 0, 0, 0]
-                    ColorUp     = [0, 0, 0, 0]
-                    ColorStroke = [0, 0, 0, 0]
-                    Stroke = false
-                )
-            )
-        ),
         (
             "iconSteam",
             TTFSCommand_UISymbol
@@ -610,7 +598,7 @@ private BoutonFriend is BUCKButtonDescriptor
                         TextColor = 'Noir'
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
 
-                        TextFormatScript = FriendlistTextFormatScript
+                        TextFormatScript = $/UI/TextFormatScript/FriendlisTTextFormatScriptBank
                     )
                 ),
                 BUCKListElementDescriptor
@@ -724,15 +712,8 @@ is BUCKListDescriptor
 
     //FirstMargin = TRTTILength(Magnifiable = 5.0 )
     InterItemMargin = TRTTILength(Magnifiable = 1.0 )
-    HasBackground = false
-    BackgroundBlockColorToken = 'Orange'
-    Elements =
-    (<IsSubView> ?
-    [] :
-    [
 
-    ])
-    +
+    Elements =
     [
         BUCKListElementDescriptor
         (
@@ -780,8 +761,6 @@ is BUCKListDescriptor
                         (
                             ComponentDescriptor = HUBButton
                             (
-                                ButtonAlignementToFather = [0.0, 0.0]
-                                ButtonAlignementToAnchor = [0.0, 0.0]
                                 ElementName = "BackButton"
                                 TextToken = "NV_BACK"
 

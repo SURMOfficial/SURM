@@ -46,12 +46,12 @@ template AirplaneMovementDescriptor
 
 template BuildingApparenceModuleDescriptor
 [
-    BlackHoleIdentifier,
+    BlackHoleKey,
     SymbolName,
 ] is TApparenceModuleDescriptor
 (
     PickableObject                        = True
-    BlackHoleIdentifier = <BlackHoleIdentifier>
+    BlackHoleKey = <BlackHoleKey>
     Depiction = TTimelyModifyLevelBuildReceiverFactory
     (
         SymbolName = <SymbolName>
@@ -70,22 +70,22 @@ template InfantryApparenceModuleDescriptor [
 (
     UseFollowCam = True
     PickableObject = False
-    Depiction = TTimelyDepictionReceiverFactory( MimeticName = <MimeticName> )
+    Depiction = TTimelyDepictionReceiverFactory( BlackHoleKey = <MimeticName> )
     ReferenceMesh = $/GFX/DepictionResources/Rien
 )
 
 template VehicleApparenceModuleDescriptor [
     MimeticName,
-    BlackHoleIdentifier,
+    BlackHoleKey,
     GameplayBBoxBoneName = "",
     ReferenceMesh,
 ] is TApparenceModuleDescriptor
 (
     UseFollowCam = True
     PickableObject = True
-    Depiction = TTimelyDepictionReceiverFactory( MimeticName = <MimeticName> )
+    Depiction = TTimelyDepictionReceiverFactory( BlackHoleKey = <MimeticName> )
     ReferenceMesh = <ReferenceMesh>
-    BlackHoleIdentifier = <BlackHoleIdentifier>
+    BlackHoleKey = <BlackHoleKey>
     GameplayBBoxBoneName = <GameplayBBoxBoneName>
 )
 
@@ -93,12 +93,8 @@ FacingInfosModuleDescriptor is TFacingInfosModuleDescriptor()
 
 HeliApparenceModuleDescriptor is THeliApparenceModuleDescriptor()
 
-UnitStateEngineCompanyModuleDescriptor is TStateEngineCompanyModuleDescriptor
-(
-)
-UnitStateEngineModuleDescriptor is TStateEngineUnitModuleDescriptor
-(
-)
+UnitStateEngineUnitModuleDescriptor is TStateEngineUnitModuleDescriptor()
+UnitStateEngineSubUnitModuleDescriptor is TStateEngineSubUnitModuleDescriptor()
 
 AirplanePositionModuleDescriptor is TPositionModuleDescriptor
 (

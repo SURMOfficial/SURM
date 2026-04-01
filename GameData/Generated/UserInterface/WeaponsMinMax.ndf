@@ -1,8 +1,6 @@
 // Ne pas éditer, ce fichier est généré par WeaponsMinMaxFileWriter
 
 
-
-
 MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
 (
     WeaponsMinMaxValues = MAP
@@ -177,7 +175,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 0
                )
                AimTime = TMinMaxValue (
-                       Min = 1.5
+                       Min = 1.0
                        Max = 2.5
                )
                ReloadTime = TMinMaxValue (
@@ -309,16 +307,16 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 7
                )
                MaxRangeGRU = TMinMaxValue (
-                       Min = 1400
+                       Min = 1200
                        Max = 1750
                )
                MaxRangeHelicopterGRU = TMinMaxValue (
                        Min = 0
-                       Max = 1500
+                       Max = 2125
                )
                MaxRangeAirplaneGRU = TMinMaxValue (
                        Min = 0
-                       Max = 0
+                       Max = 1775
                )
                AimTime = TMinMaxValue (
                        Min = 2.25
@@ -545,8 +543,8 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                        Max = 0.1
                )
                TurretSpeed = TMinMaxValue (
-                       Min = 360
-                       Max = 360
+                       Min = 0
+                       Max = 0
                )
                Accuracy = TMinMaxValue (
                        Min = 10
@@ -1509,7 +1507,7 @@ MinMaxValuesInterfaceHelper is TWeaponsMinMaxValuesInterfaceHelper
                // PhysicalDamages x weapon_count_ (Number of weapons)
                PhysicalDamages = TMinMaxValue (
                        Min = 0.15
-                       Max = 0.25
+                       Max = 0.3
                )
                // SuppressDamages x weapon_count_ (Number of weapons)
                SuppressDamages = TMinMaxValue (

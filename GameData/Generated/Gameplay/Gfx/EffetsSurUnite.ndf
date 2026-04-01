@@ -1335,10 +1335,11 @@ export UnitEffect_Critic_Weakpoint is TEffectsPackDescriptor
         (
             UpdateEachTick  = True
         ),
-        TEffectInflictPhysicalDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Physical
             ModifierType             = ~/ModifierType_Additionnel
-            PhysicalDamageValue      = 6
+            DamageValue      = 6
         ),
     ]
 )
@@ -1593,10 +1594,11 @@ export UnitEffect_Critic_Perd_1_PV is TEffectsPackDescriptor
     DescriptorId       = GUID:{6ab81696-9047-4541-9079-3e2105e148a7}
     NameForDebug = "Critic_Perd_1_PV"
     EffectsDescriptors = [
-        TEffectInflictPhysicalDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Physical
             ModifierType             = ~/ModifierType_Additionnel
-            PhysicalDamageValue      = 1
+            DamageValue      = 1
         ),
     ]
 )
@@ -1605,10 +1607,11 @@ export UnitEffect_Critic_Pert_2_PV is TEffectsPackDescriptor
     DescriptorId       = GUID:{d2ce1149-f261-48ad-9fef-60b12c8e1fdd}
     NameForDebug = "Critic_Pert_2_PV"
     EffectsDescriptors = [
-        TEffectInflictPhysicalDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Physical
             ModifierType             = ~/ModifierType_Additionnel
-            PhysicalDamageValue      = 2
+            DamageValue      = 2
         ),
     ]
 )
@@ -1627,10 +1630,11 @@ export UnitEffect_Critic_Pert_3_PV is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Multiplicatif
             BonusSpeedBaseInPercent  = 0
         ),
-        TEffectInflictPhysicalDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Physical
             ModifierType             = ~/ModifierType_Additionnel
-            PhysicalDamageValue      = 3
+            DamageValue      = 3
         ),
     ]
 )
@@ -1649,10 +1653,11 @@ export UnitEffect_Critic_Pert_4_PV is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Multiplicatif
             BonusSpeedBaseInPercent  = 0
         ),
-        TEffectInflictPhysicalDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Physical
             ModifierType             = ~/ModifierType_Additionnel
-            PhysicalDamageValue      = 4
+            DamageValue      = 4
         ),
     ]
 )
@@ -1671,10 +1676,11 @@ export UnitEffect_Critic_Pert_5_PV is TEffectsPackDescriptor
             ModifierType             = ~/ModifierType_Multiplicatif
             BonusSpeedBaseInPercent  = 0
         ),
-        TEffectInflictPhysicalDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Physical
             ModifierType             = ~/ModifierType_Additionnel
-            PhysicalDamageValue      = 5
+            DamageValue      = 5
         ),
     ]
 )
@@ -2329,10 +2335,11 @@ export UnitEffect_Effet_Suppress_Subit_100 is TEffectsPackDescriptor
     DescriptorId       = GUID:{9ee326f4-58af-4b4b-9613-782ea6891f8a}
     NameForDebug = "Effet_Suppress_Subit_100"
     EffectsDescriptors = [
-        TEffectInflictSuppressDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Suppress
             ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 100
+            DamageValue      = 100
         ),
     ]
 )
@@ -2341,10 +2348,11 @@ export UnitEffect_Effet_Suppress_Subit_200 is TEffectsPackDescriptor
     DescriptorId       = GUID:{46449a3f-62ff-429e-8527-a141483c8cd2}
     NameForDebug = "Effet_Suppress_Subit_200"
     EffectsDescriptors = [
-        TEffectInflictSuppressDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Suppress
             ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 200
+            DamageValue      = 200
         ),
     ]
 )
@@ -2353,10 +2361,11 @@ export UnitEffect_Effet_Suppress_Subit_300 is TEffectsPackDescriptor
     DescriptorId       = GUID:{384697c3-ee57-4686-af72-4579494eab8c}
     NameForDebug = "Effet_Suppress_Subit_300"
     EffectsDescriptors = [
-        TEffectInflictSuppressDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Suppress
             ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 300
+            DamageValue      = 300
         ),
     ]
 )
@@ -2365,10 +2374,11 @@ export UnitEffect_Effet_Suppress_Subit_400 is TEffectsPackDescriptor
     DescriptorId       = GUID:{b347dfb2-670e-4bc0-a796-b19eea138d85}
     NameForDebug = "Effet_Suppress_Subit_400"
     EffectsDescriptors = [
-        TEffectInflictSuppressDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Suppress
             ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 400
+            DamageValue      = 400
         ),
     ]
 )
@@ -2377,10 +2387,11 @@ export UnitEffect_Effet_Suppress_Subit_500 is TEffectsPackDescriptor
     DescriptorId       = GUID:{70054f1f-cce5-45b2-835e-70c356fadecb}
     NameForDebug = "Effet_Suppress_Subit_500"
     EffectsDescriptors = [
-        TEffectInflictSuppressDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Suppress
             ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 500
+            DamageValue      = 500
         ),
     ]
 )
@@ -2801,6 +2812,19 @@ export UnitEffect_GroundUnit_Cowering is TEffectsPackDescriptor
                  "GroundUnit_Cowering",
 				 "Panique",
             ]
+        ),
+    ]
+)
+export UnitEffect_Gunship_SuppressResist is TEffectsPackDescriptor
+(
+    DescriptorId       = GUID:{b61005f8-4b2a-40fb-bc68-2ff9f330e870}
+    NameForDebug       = 'Gunship_SuppressResist'
+    EffectsDescriptors = [
+        TUnitEffectIncreaseDamageTakenDescriptor
+        (
+            ModifierType        = ~/ModifierType_Pourcentage
+            BonusDamage         = -50
+            DamageType          = EDamageType/Suppress
         ),
     ]
 )
@@ -5090,10 +5114,11 @@ export UnitEffect_stressOnMiss_high is TEffectsPackDescriptor
             ModifierType         = ~/ModifierType_Additionnel
             BonusOpticalStrength = -43
         ),
-        TEffectInflictSuppressDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Suppress
             ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 250
+            DamageValue      = 250
         ),
         TUnitEffectShowLabelIconDescriptor
         (
@@ -5111,10 +5136,11 @@ export UnitEffect_stressOnMiss_low is TEffectsPackDescriptor
             ModifierType         = ~/ModifierType_Additionnel
             BonusOpticalStrength = -43
         ),
-        TEffectInflictSuppressDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Suppress
             ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 75
+            DamageValue      = 75
         ),
         TUnitEffectShowLabelIconDescriptor
         (
@@ -5132,10 +5158,11 @@ export UnitEffect_stressOnMiss_mid is TEffectsPackDescriptor
             ModifierType         = ~/ModifierType_Additionnel
             BonusOpticalStrength = -43
         ),
-        TEffectInflictSuppressDamageDescriptor
+        TEffectInflictDamageDescriptor
         (
+            DamageType     = ~/EDamageType/Suppress
             ModifierType             = ~/ModifierType_Additionnel
-            SuppressDamageValue      = 150
+            DamageValue      = 150
         ),
         TUnitEffectShowLabelIconDescriptor
         (

@@ -16,38 +16,6 @@ is TUICommonGabaritDefinition
 
 //-------------------------------------------------------------------------------------
 
-StrategicFeedbackAreaOfEffectRangeGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
-(
-    CircleColor = [216,80,73,255]
-    CircleThickness = 800.0 * 4
-    TextStyle       = TTextStyle
-    (
-        FontSize    = 16
-        ColorBottom = [255,128, 0,255]
-        ColorUp     = [255,128, 0,255]
-        ColorStroke = [ 0, 0, 0, 255]
-        Stroke = false
-    )
-)
-
-//-------------------------------------------------------------------------------------
-
-StrategicFeedbackAreaOfEffectRadiusGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
-(
-    CircleColor = [40.0, 62.0, 62.0, 128.0]
-    CircleThickness = 1.0
-    TextStyle       = TTextStyle
-    (
-        FontSize    = 16
-        ColorBottom = [255,128, 0,255]
-        ColorUp     = [255,128, 0,255]
-        ColorStroke = [ 0, 0, 0, 255]
-        Stroke = false
-    )
-)
-
-//-------------------------------------------------------------------------------------
-
 StrategicFeedbackSplashGabaritResource is TStrategicFeedbackUICommonGabaritDefinition
 (
     CircleColor = [255,128, 0,96]
@@ -125,8 +93,6 @@ StrategicGabaritResources is TUICommonGabaritResources
     WorldFloorProxy = $/M3D/Scene/WorldFloorOutMapProxy
     Scene3D = $/M3D/Scene/Scene_2D_Interface
     Camera = $/M3D/Misc/CameraPrincipale
-    AreaOfEffectRangeGabarit     = ~/StrategicFeedbackAreaOfEffectRangeGabaritResource
-    AreaOfEffectRadiusGabarit    = ~/StrategicFeedbackAreaOfEffectRadiusGabaritResource
     SplashGabarit                = ~/StrategicFeedbackSplashGabaritResource
     CapacityGabarit              = ~/StrategicFeedbackCapacityGabaritResource
     DispersionGabarit            = ~/StrategicFeedbackDispersionGabaritResource

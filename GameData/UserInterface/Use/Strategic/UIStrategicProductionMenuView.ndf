@@ -27,9 +27,6 @@ BUCKSpecificStrategicProductionMenuMainComponentDescriptor is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 1.0]
-                    AlignementToAnchor = [0.0, 0.0]
-                    AlignementToFather = [0.0, 0.0]
-                    // MagnifiableOffset = [0,8]
                 )
 
                 FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
@@ -48,12 +45,8 @@ BUCKSpecificStrategicProductionMenuMainComponentDescriptor is BUCKListDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                        MagnifiableWidthHeight = [180.0, 21.0]
-                        AlignementToAnchor = [0.0, 0.0]
-                        AlignementToFather = [0.0, 0.0]
-                        // MagnifiableOffset = [0,8]
-
-                    )
+                    MagnifiableWidthHeight = [180.0, 21.0]
+                )
                 TextureToken = 'renfort_end'
                 TextureColorToken = 'SM_Grullo'
             )
@@ -253,9 +246,7 @@ private StrategicProductionBattalionRackScrollingContainer is BUCKSpecificScroll
     VerticalScrollbarComponentFrame = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = [7.0, 0.0]
-        MagnifiableOffset = [0.0, 0.0]
         AlignementToFather = [1.0, 0.0]
-        AlignementToAnchor = [0.0, 0.0]
     )
 
     Components =

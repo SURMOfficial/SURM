@@ -7,15 +7,16 @@ template BUCKSpecificDivisionBriefMainComponentDescriptor
     CannotDeselect : bool = false,
     RadioButtonManager : TBUCKRadioButtonManager,
     HasBattlegroup : bool,
+    ShowDivisionName : bool = true,
     MagnifierMultiplication : float = 1.0,
-    DivisionNameWidth : float = 503.0,
 ] is BUCKButtonDescriptor
 (
     ElementName = "MainButton"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = (<HasBattlegroup> == true ? [DeckListListWidth, 52.0] : [285.0 + <DivisionNameWidth>, 50.0])
+        MagnifiableWidthHeight = (<HasBattlegroup> == true ? [DeckListListWidth, 52.0] : [-32.0, 48.0]) // -32 for the scrollbar
+        RelativeWidthHeight = (<HasBattlegroup> == true ? [0.0, 0.0] : [1.0, 0.0])
         AlignementToAnchor = <AlignementToAnchor>
         AlignementToFather = <AlignementToFather>
     )
@@ -31,7 +32,7 @@ template BUCKSpecificDivisionBriefMainComponentDescriptor
         DivisionBriefList
         (
             HasBattlegroup = <HasBattlegroup>
-            DivisionNameWidth = <DivisionNameWidth>
+            ShowDivisionName = <ShowDivisionName>
         )
     ]
 )
@@ -39,14 +40,14 @@ template BUCKSpecificDivisionBriefMainComponentDescriptor
 template DivisionBriefList
 [
     HasBattlegroup : bool,
-    DivisionNameWidth : float = 503.0,
+    ShowDivisionName : bool = true,
 ]
 is BUCKListDescriptor
 (
     ElementName = "DivisionBriefList"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = (<HasBattlegroup> == true ? [0.0, 31.0] : [0.0, 40.0])
+        MagnifiableWidthHeight = (<HasBattlegroup> == true ? [0.0, 31.0] : [0.0, 48.0])
         AlignementToAnchor = [0.5, 0.5]
         AlignementToFather = [0.5, 0.5]
     )
@@ -55,6 +56,7 @@ is BUCKListDescriptor
     BackgroundBlockColorToken = "Gray"
 
     Axis = ~/ListAxis/Horizontal
+    InterItemMargin  = TRTTILength(Magnifiable = ~/DeckListInterItemMargin)
 
     Elements =
     [
@@ -83,28 +85,42 @@ is BUCKListDescriptor
 
                 Components =
                 [
-                    BUCKTextureDescriptor
+                    BUCKContainerDescriptor
                     (
-                        ElementName = "AllianceTexture"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
                             RelativeWidthHeight = [1.0, 1.0]
-                        )
-
-                        TextureFrame = TUIFramePropertyRTTI
-                        (
+                            MagnifiableWidthHeight = [-2.0, -2.0]
                             AlignementToAnchor = [0.5, 0.5]
                             AlignementToFather = [0.5, 0.5]
                         )
 
-                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-                    ),
+                        Components =
+                        [
+                            BUCKTextureDescriptor
+                            (
+                                ElementName = "AllianceTexture"
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    RelativeWidthHeight = [1.0, 1.0]
+                                )
+
+                                TextureFrame = TUIFramePropertyRTTI
+                                (
+                                    AlignementToAnchor = [0.5, 0.5]
+                                    AlignementToFather = [0.5, 0.5]
+                                )
+
+                                ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+                            ),
+                        ]
+                    )
                 ]
             )
         ),
     ] +
     //-------------------------------------------------------------------------------------
-    (<HasBattlegroup> == true ?
+    (<ShowDivisionName> == false ?
     [
         // affichage nom du deck
         BUCKListElementDescriptor
@@ -118,20 +134,14 @@ is BUCKListDescriptor
         BUCKListElementDescriptor
         (
             ExtendWeight = 1.0
-            ComponentDescriptor = DivisionInfoName ( DivisionNameWidth = <DivisionNameWidth> )
+            ComponentDescriptor = DivisionInfoName
         ),
     ]) +
     //-------------------------------------------------------------------------------------
     [
-        // division power
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = DivisionPower
-        ),
-        // division type
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = DivisionType
+            ComponentDescriptor = DivisionType (HasBattlegroup = <HasBattlegroup>)
         ),
     ]
 
@@ -233,6 +243,9 @@ private DivisionInfoDrapeauNation is BUCKSortableElementFieldDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
+                MagnifiableWidthHeight = [-2,-2]
+                AlignementToAnchor = [0.5, 0.5]
+                AlignementToFather = [0.5, 0.5]
             )
 
             Components =
@@ -261,56 +274,18 @@ private DivisionInfoDrapeauNation is BUCKSortableElementFieldDescriptor
     ]
 )
 //-------------------------------------------------------------------------------------
-private DivisionPower is BUCKSortableElementFieldDescriptor
-(
-    ElementName = "DivisionPowerTextMultiList"
-
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [0.0, 1.0]
-        MagnifiableWidthHeight = [DeckListColonne_Power, 0.0]
-    )
-
-    Components =
-    [
-        BUCKTextDescriptor
-        (
-            ElementName = "DivisionPowerText"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 1.0]
-            )
-
-            ParagraphStyle = TParagraphStyle
-            (
-                Alignment = UIText_Center
-                VerticalAlignment = UIText_VerticalCenter
-            )
-
-            BigLineAction = ~/BigLineAction/CutByDots
-            TextStyle = "TextStyleEcranMoniteur"
-            TypefaceToken = "IBM"
-
-            TextDico = ~/LocalisationConstantes/dico_interface_outgame
-
-            TextColor = "Blanc"
-            TextSize = "30"
-            HasBorder = true
-            BorderThicknessToken = '1'
-            BorderLineColorToken = "MarronPanel_noir"
-            BordersToDraw  = ~/TBorderSide/Left | ~/TBorderSide/Right
-        )
-    ]
-)
-//-------------------------------------------------------------------------------------
-private DivisionType is BUCKSortableElementFieldDescriptor
+private template DivisionType
+[
+    HasBattlegroup : bool
+]
+is BUCKSortableElementFieldDescriptor
 (
     ElementName = "DivisionUnitTypeMultiList"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [0.0, 1.0]
-        MagnifiableWidthHeight = [DeckListColonne_Type -7 , 0.0]
+        MagnifiableWidthHeight = [~/DeckListColonne_Type, 0.0]
     )
 
     Components =
@@ -320,6 +295,8 @@ private DivisionType is BUCKSortableElementFieldDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
+                AlignementToAnchor = [0, 0.5]
+                AlignementToFather = [0, 0.5]
             )
 
             Components =
@@ -329,39 +306,37 @@ private DivisionType is BUCKSortableElementFieldDescriptor
                     ElementName = "DivisionUnitType"
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        RelativeWidthHeight = [1.0, 1.0]
+                        MagnifiableWidthHeight = ( <HasBattlegroup> ? [35.0, 23.0] : [44.0, 29.0])
                         AlignementToAnchor = [0.5, 0.5]
                         AlignementToFather = [0.5, 0.5]
                     )
 
-                    TextureFrame = TUIFramePropertyRTTI
-                    (
-                        AlignementToAnchor = [0.5, 0.5]
-                        AlignementToFather = [0.5, 0.5]
-                    )
-
+                    TextureFrame = TUIFramePropertyRTTI()
                     ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-                    TextureColorToken = "White"
+                    TextureColorToken = "Multiliste_division_text"
+
+                    Components =
+                    [
+                        BUCKSpecificHintableArea
+                        (
+                            ElementName = "DivisionUnitTypeHintableArea"
+                            DicoToken = ~/LocalisationConstantes/dico_interface_outgame
+                        )
+                    ]
                 ),
             ]
         )
     ]
 )
 //-------------------------------------------------------------------------------------
-private template DivisionInfoName
-[
-    DivisionNameWidth : float,
-]
-is BUCKSortableElementFieldDescriptor
+private DivisionInfoName is BUCKSortableElementFieldDescriptor
 (
     ElementName = "DivisionNameMultiList"
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [0.0, 1.0]
+        RelativeWidthHeight = [1.0, 1.0]
     )
-
-    FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
 
     Components =
     [
@@ -370,12 +345,10 @@ is BUCKSortableElementFieldDescriptor
             ElementName = "DivisionNameList"
             ComponentFrame = TUIFramePropertyRTTI
             (
-                MagnifiableWidthHeight = [<DivisionNameWidth>, 0.0]
-                AlignementToAnchor = [0.5, 0.5]
-                AlignementToFather = [0.5, 0.5]
+                RelativeWidthHeight = [1.0, 0.0]
+                AlignementToAnchor = [0.5, 0.0]
+                AlignementToFather = [0.5, 0.0]
             )
-
-            HasBackground = false
             Axis = ~/ListAxis/Vertical
 
             Elements =
@@ -388,23 +361,21 @@ is BUCKSortableElementFieldDescriptor
                         ElementName = "DivisionName"
                         ComponentFrame = TUIFramePropertyRTTI
                         (
-                            MagnifiableWidthHeight = [<DivisionNameWidth>, 0.0]
-                            RelativeWidthHeight = [0.0, 1.0]
+                            RelativeWidthHeight = [1.0, 1.0]
                             AlignementToFather = [0.5, 0.0]
                             AlignementToAnchor = [0.5, 0.0]
                         )
                         ParagraphStyle = paragraphStyleTextCenter
                         TextStyle = "Default"
+                        TextPadding = TRTTILength4(Magnifiable = [4.0, 0.0, 4.0, 0.0])
 
                         VerticalFitStyle = ~/FitStyle/UserDefined
                         TypefaceToken = "IBM"
-                        BigLineAction = ~/BigLineAction/MultiLine
+                        BigLineAction = ~/BigLineAction/ResizeFont
                         TextToken = 'HINT_EX_SP'
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                         TextColor = "Multiliste_division_text"
                         TextSize = "24"
-
-                        BackgroundBlockColorToken = 'Orange'
                     )
                 ),
                 BUCKListElementDescriptor
@@ -421,10 +392,11 @@ is BUCKSortableElementFieldDescriptor
                         )
                         ParagraphStyle = paragraphStyleTextCenter
                         TextStyle = "Default"
+                        TextPadding = TRTTILength4(Magnifiable = [4.0, 0.0, 4.0, 0.0])
 
                         VerticalFitStyle = ~/FitStyle/UserDefined
                         TypefaceToken = "IBM"
-                        BigLineAction = ~/BigLineAction/CutByDots
+                        BigLineAction = ~/BigLineAction/ResizeFont
                         TextToken = 'DIVSEL_DLC'
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
                         TextColor = "Multiliste_division_text"

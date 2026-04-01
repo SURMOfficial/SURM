@@ -6,6 +6,8 @@ private DummyComponentForBlur is BUCKContainerDescriptor
     )
 )
 
+//-------------------------------------------------------------------------------------
+
 ShowRoomResource is TUISpecificShowRoomResources
 (
     Handler = $/UI/ResourcesHandler/ShowRoomResourcesHandler
@@ -57,6 +59,8 @@ ShowRoomResource is TUISpecificShowRoomResources
     ShortcutUserInputLayer = $/M3D/Input/UserInputLayerHandler/InputLayer_InGameShortcuts
     LDScriptUserInputLayer =  $/M3D/Input/UserInputLayerHandler/InputLayer_LDScriptInterceptor
 )
+
+//-------------------------------------------------------------------------------------
 
 ShowRoomMainContainerResource is TUICommonMainContainerResource
 (

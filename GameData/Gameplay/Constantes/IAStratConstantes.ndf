@@ -39,10 +39,10 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
         (EMacroActionMissionType/ProduceBuilding, ['Avion', 'InfmapCommander']),
     ]
 
-    MinUnitWeightToReserveCorridor = 0.1
+    MinUnitWeightToReserveCorridor = 15.0
     UnitTagAndWeightToReserveCorridor = MAP
     [
-        ( "Infanterie", 0.3 ),
+        ( "Infanterie", 1.0 ),
         ( "Char", 0.5 ),
     ]
 
@@ -55,7 +55,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     CommandZoneWeight = ~/CommandZoneCustomWeighForIAStrat // Numero donné aux zones générées automatiquement autours des zones objectif.
 
     //--------------- Transport ----------------------------------------//
-    MinDistanceToRequireTransportGRU = 5 //un peu plus de 3.5KM in game
+    MinDistanceToRequireTransportGRU = 2000 //un peu plus de 3.5KM in game
     MaxDistanceToAcceptTransportRequestGRU = 10601 //un peu plus de 10KM in game
     ForbidToLoadNewUnits = false // Ce paramètre a true empêche de charger une unité qu'on ne transporte pas à la base (applicable aux transports qui spawnent préchargés)
 
@@ -255,7 +255,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
         ("AllUnits", [ECollisionPlane/NearGround, ECollisionPlane/LowAltitude, ECollisionPlane/Ground]),
     ]
 
-    IAStratPathCostCacheFilePath = "CurrentScenarioData:/IAStratZone/ZonePathCache.ndfbin"
+    IAStratPathCostCacheFilePath = "CurrentScenarioData:/out/IAStrat_PathCache.ndfbin"
     IAStratDistanceFromNotDefendedCommandZoneGRU = 500 //Un peu plus que la taille de 1 zone IAStrat
     HysteresisDistanceForCommandUnitAlreadyAssignToCommandZoneGRU = 530
 

@@ -670,59 +670,6 @@ private CreditsScrollingDescriptor is BUCKContainerDescriptor
     ]
 )
 //-------------------------------------------------------------------------------------
-template Credit_PeopleCategory
-[
-    TextToken : string = '0013',
-]
-is BUCKTextDescriptor
-(
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0,30]
-        AlignementToFather = [0.5, 0.5]
-        AlignementToAnchor = [0.5, 0.5]
-        )
-    ParagraphStyle = paragraphStyleTextCenter
-    TextStyle = "Default"
-    HorizontalFitStyle = ~/FitStyle/UserDefined
-    VerticalFitStyle = ~/FitStyle/UserDefined
-    TypefaceToken = "Liberator"
-    BigLineAction = ~/BigLineAction/MultiLine
-    TextToken = <TextToken>
-    TextDico = "CREDITS"
-    TextColor = "Noir_option"
-    TextSize = "16"
-
-
-)
-
-template Credit_PeopleName
-[
-    TextToken : string = '0013',
-]
-is BUCKTextDescriptor
-(
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0,30]
-        AlignementToFather = [0.5, 0.5]
-        AlignementToAnchor = [0.5, 0.5]
-        )
-    ParagraphStyle = paragraphStyleTextCenter
-    TextStyle = "Default"
-    HorizontalFitStyle = ~/FitStyle/UserDefined
-    VerticalFitStyle = ~/FitStyle/UserDefined
-    TypefaceToken = "HandPen"
-    BigLineAction = ~/BigLineAction/MultiLine
-    TextToken = <TextToken>
-    TextDico = "CREDITS"
-    TextColor = "Noir_option"
-    TextSize = "16"
-)
-
-//-------------------------------------------------------------------------------------
 
 template ConfigPanelMultiList [ ElementName : string ]
 is BUCKContainerDescriptor

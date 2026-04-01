@@ -16,38 +16,6 @@ is TUICommonGabaritDefinition
 
 //-------------------------------------------------------------------------------------
 
-TacticalFeedbackAreaOfEffectRangeGabaritResource is TTacticalFeedbackUICommonGabaritDefinition
-(
-    CircleColor = [216,80,73,255]
-    CircleThickness = 1.0
-    TextStyle       = TTextStyle
-    (
-        FontSize    = 16
-        ColorBottom = [255,128, 0,255]
-        ColorUp     = [255,128, 0,255]
-        ColorStroke = [ 0, 0, 0, 255]
-        Stroke = false
-    )
-)
-
-//-------------------------------------------------------------------------------------
-
-TacticalFeedbackAreaOfEffectRadiusGabaritResource is TTacticalFeedbackUICommonGabaritDefinition
-(
-    CircleColor = [40.0, 62.0, 62.0, 128.0]
-    CircleThickness = 1.0
-    TextStyle       = TTextStyle
-    (
-        FontSize    = 16
-        ColorBottom = [255,128, 0,255]
-        ColorUp     = [255,128, 0,255]
-        ColorStroke = [ 0, 0, 0, 255]
-        Stroke = false
-    )
-)
-
-//-------------------------------------------------------------------------------------
-
 TacticalFeedbackSplashGabaritResource is TTacticalFeedbackUICommonGabaritDefinition
 (
     CircleColor = [255,128, 0,96]
@@ -101,8 +69,6 @@ InGameGabaritResources is TUICommonGabaritResources
     WorldFloorProxy = $/M3D/Scene/WorldFloorUIMouseProxy
     Scene3D = $/M3D/Scene/Scene_2D_Interface
     Camera = $/M3D/Misc/CameraPrincipale
-    AreaOfEffectRangeGabarit     = ~/TacticalFeedbackAreaOfEffectRangeGabaritResource
-    AreaOfEffectRadiusGabarit    = ~/TacticalFeedbackAreaOfEffectRadiusGabaritResource
     SplashGabarit                = ~/TacticalFeedbackSplashGabaritResource
     CapacityGabarit              = ~/TacticalFeedbackCapacityGabaritResource
     DispersionGabarit            = ~/TacticalFeedbackDispersionGabaritResource

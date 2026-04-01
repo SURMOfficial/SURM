@@ -89,6 +89,7 @@ export Modele_RPG29_RCL   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo
 export Modele_LPO50   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/DDR/LPO_50.fbx" )
 export Modele_LPO50_fuel   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/DDR/LPO_50_Bidon.fbx" )
 export Modele_MANPAD_Strela2M is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/SOV/SA7_Grail.fbx" )
+export Modele_MANPAD_HQ5A is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/SOV/SA7_Grail.fbx" )
 export Modele_Skorpion is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/DDR/Skorpion_vz61.fbx" )
 export Modele_PM63_RAK is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/DDR/PM63_RAK.fbx" )
 //------------------------------------------------------------------------------
@@ -137,6 +138,7 @@ export Modele_LRAC_F1   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/A
 export Modele_MAS_49_56   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/FR/MAS_49_56.fbx" )
 export Modele_MAT_49   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/FR/MAT_49.fbx" )
 export Modele_Mistral   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/FR/Mistral.fbx" )
+export Modele_RBS70   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/FR/Mistral.fbx" )
 export Modele_SIG_540   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/FR/SIG_540.fbx" )
 export Modele_SIG_543   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/FR/SIG_543.fbx" )
 export Modele_LRAC_73   is TResourceMesh( Mesh="GameData:/Assets/3D/Units/Ammo/Armes/FR/LRAC_73mm.fbx" )
@@ -294,6 +296,12 @@ export Modele_Partisan_SOV_03 is TResourceMesh( Mesh=SOV_Rezervisti_2 )
 export Modele_Partisan_SOV_04 is TResourceMesh( Mesh=SOV_Rezervisti_3 )
 export Modele_Partisan_SOV_LOW is TResourceMesh( Mesh=SOV_Rezervisti_LOW )
 
+//MotRifles_MVD_SOV
+export Modele_MotRifles_MVD_SOV is TResourceMesh( Mesh=SOV_MotoStrelki_Officer )
+export Modele_MotRifles_MVD_SOV_02 is TResourceMesh( Mesh=SOV_MotoStrelki_NCO )
+export Modele_MotRifles_MVD_SOV_03 is TResourceMesh( Mesh=SOV_MotoStrelki_1 )
+export Modele_MotRifles_MVD_SOV_04 is TResourceMesh( Mesh=SOV_MotoStrelki_2 )
+export Modele_MotRifles_MVD_SOV_LOW is TResourceMesh( Mesh=SOV_MotoStrelki_1_LOW )
 
 //MP_Combat_SOV
 export Modele_MP_Combat_SOV is TResourceMesh( Mesh=SOV_MotoStrelki_Officer )
@@ -920,7 +928,27 @@ US_Pathfinder_1 is 'GameData:/Assets/3D/Units/US/Infanterie/Pathfinder/Pathfinde
 US_USAF_Sec_1 is 'GameData:/Assets/3D/Units/US/Infanterie/USAF_SECURITY/USAF_Sec_1.fbx'
 US_USAF_Sec_NCO is 'GameData:/Assets/3D/Units/US/Infanterie/USAF_SECURITY/USAF_Sec_NCO.fbx'
 
+US_CavTrooper_1 is 'GameData:/Assets/3D/Units/US/Infanterie/CavTrooper/CavTrooper_1.fbx'
+US_CavTrooper_2 is 'GameData:/Assets/3D/Units/US/Infanterie/CavTrooper/CavTrooper_2.fbx'
+US_CavTrooper_1_NCO is 'GameData:/Assets/3D/Units/US/Infanterie/CavTrooper/CavTrooper_NCO.fbx'
+US_CavTrooper_1_Officer is 'GameData:/Assets/3D/Units/US/Infanterie/CavTrooper/CavTrooper_Officer.fbx'
+US_CavTrooper_1_Spe is 'GameData:/Assets/3D/Units/US/Infanterie/CavTrooper/CavTrooper_Spe.fbx'
+
 //------------------------------------------------------------------------------
+//Rifles_half_Cav_Dragon_US
+export Modele_Rifles_half_Cav_Dragon_US is TResourceMesh( Mesh=US_CavTrooper_1_NCO )
+export Modele_Rifles_half_Cav_Dragon_US_02 is TResourceMesh( Mesh=US_CavTrooper_1_Spe )
+export Modele_Rifles_half_Cav_Dragon_US_03 is TResourceMesh( Mesh=US_CavTrooper_1 )
+export Modele_Rifles_half_Cav_Dragon_US_04 is TResourceMesh( Mesh=US_CavTrooper_2 )
+export Modele_Rifles_half_Cav_Dragon_US_LOW is TResourceMesh( Mesh=US_GI_1_LOW )
+
+//Rifles_half_Cav_CMD_US
+export Modele_Rifles_half_Cav_CMD_US is TResourceMesh( Mesh=US_CavTrooper_1_Officer )
+export Modele_Rifles_half_Cav_CMD_US_02 is TResourceMesh( Mesh=US_CavTrooper_1_NCO )
+export Modele_Rifles_half_Cav_CMD_US_03 is TResourceMesh( Mesh=US_CavTrooper_1 )
+export Modele_Rifles_half_Cav_CMD_US_04 is TResourceMesh( Mesh=US_CavTrooper_2 )
+export Modele_Rifles_half_Cav_CMD_US_LOW is TResourceMesh( Mesh=US_GI_1_LOW )
+
 //Scout_NG_Alaska_US
 export Modele_Scout_NG_Alaska_US is TResourceMesh( Mesh=US_AlaskanScout_1 )
 export Modele_Scout_NG_Alaska_US_02 is TResourceMesh( Mesh=US_AlaskanScout_2 )
@@ -976,6 +1004,13 @@ export Modele_AeroRifles_USMC_US_02 is TResourceMesh( Mesh=US_USMC_1 )
 export Modele_AeroRifles_USMC_US_03 is TResourceMesh( Mesh=US_USMC_2 )
 export Modele_AeroRifles_USMC_US_04 is TResourceMesh( Mesh=US_USMC_3 )
 export Modele_AeroRifles_USMC_US_LOW is TResourceMesh( Mesh=US_GI_1_LOW )
+
+//Groupe_AT_USMC_US
+export Modele_Groupe_AT_USMC_US is TResourceMesh( Mesh=US_USMC_NCO )
+export Modele_Groupe_AT_USMC_US_02 is TResourceMesh( Mesh=US_USMC_1 )
+export Modele_Groupe_AT_USMC_US_03 is TResourceMesh( Mesh=US_USMC_2 )
+export Modele_Groupe_AT_USMC_US_04 is TResourceMesh( Mesh=US_USMC_3 )
+export Modele_Groupe_AT_USMC_US_LOW is TResourceMesh( Mesh=US_GI_1_LOW )
 
 //Engineer_USMC_CMD_US
 export Modele_Engineer_USMC_CMD_US is TResourceMesh( Mesh=US_USMC_Officer )
@@ -1461,6 +1496,8 @@ export Modele_GreenBerets_US_LOW is TResourceMesh( Mesh=US_GB_1_LOW )
 
 //LRRP_FOLT_US
 export Modele_LRRP_FOLT_US is TResourceMesh( Mesh=US_Rangers_1 )
+export Modele_LRRP_FOLT_US_02 is TResourceMesh( Mesh=US_GI_2 )
+export Modele_LRRP_FOLT_US_03 is TResourceMesh( Mesh=US_GI_Sniper )
 export Modele_LRRP_FOLT_US_LOW is TResourceMesh( Mesh=US_GI_1_LOW )
 
 //LRRP_US
@@ -1869,13 +1906,84 @@ export Modele_Scout_Mech_US_09 is TResourceMesh( Mesh=US_GI_Sniper )
 export Modele_Scout_Mech_US_10 is TResourceMesh( Mesh=US_GI_Sniper )
 export Modele_Scout_Mech_US_LOW is TResourceMesh( Mesh=US_GI_1_LOW )
 
+//------------------------------------------------------------------------------
+//                                   SOLDATS DK---------------------------------
+//------------------------------------------------------------------------------
+DK_MP_1 is 'GameData:/Assets/3D/Units/DK/Infanterie/MP_DK/MP_DK_1.fbx'
+DK_MP_2 is 'GameData:/Assets/3D/Units/DK/Infanterie/MP_DK/MP_DK_2.fbx'
+DK_Dane_1 is 'GameData:/Assets/3D/Units/DK/Infanterie/Dane/Dane_1.fbx'
+DK_Dane_2 is 'GameData:/Assets/3D/Units/DK/Infanterie/Dane/Dane_2.fbx'
+DK_Dane_3 is 'GameData:/Assets/3D/Units/DK/Infanterie/Dane/Dane_3.fbx'
+DK_Dane_NCO is 'GameData:/Assets/3D/Units/DK/Infanterie/Dane/Dane_NCO.fbx'
+DK_Dane_Scout is 'GameData:/Assets/3D/Units/DK/Infanterie/Dane/Dane_Scout.fbx'
+DK_Dane_officer is 'GameData:/Assets/3D/Units/DK/Infanterie/Dane/Dane_officer.fbx'
+DK_HJV_1 is 'GameData:/Assets/3D/Units/DK/Infanterie/HJV/HJV_1.fbx'
+DK_HJV_2 is 'GameData:/Assets/3D/Units/DK/Infanterie/HJV/HJV_2.fbx'
+DK_HJV_3 is 'GameData:/Assets/3D/Units/DK/Infanterie/HJV/HJV_3.fbx'
+DK_HJV_NCO is 'GameData:/Assets/3D/Units/DK/Infanterie/HJV/HJV_NCO.fbx'
+DK_HJV_LRRP is 'GameData:/Assets/3D/Units/DK/Infanterie/HJV/HJV_LRRP.fbx'
+DK_Jaeger_1 is 'GameData:/Assets/3D/Units/DK/Infanterie/Jaeger/Jaeger_1.fbx'
+DK_Jaeger_2 is 'GameData:/Assets/3D/Units/DK/Infanterie/Jaeger/Jaeger_2.fbx'
+DK_Jaeger_NCO is 'GameData:/Assets/3D/Units/DK/Infanterie/Jaeger/Jaeger_NCO.fbx'
+DK_Livgarden_1 is 'GameData:/Assets/3D/Units/DK/Infanterie/Dane/Livgarden_1.fbx'
+DK_Livgarden_officer is 'GameData:/Assets/3D/Units/DK/Infanterie/Dane/Livgarden_officer.fbx'
+//------------------------------------------------------------------------------
+
+//MP_DK
+export Modele_MP_DK is TResourceMesh( Mesh=DK_MP_1 )
+export Modele_MP_DK_02 is TResourceMesh( Mesh=DK_MP_2 )
+export Modele_MP_DK_LOW is TResourceMesh( Mesh=US_GI_1_LOW )
+
+//Jaeger_DK
+export Modele_Jaeger_DK is TResourceMesh( Mesh=DK_Jaeger_NCO )
+export Modele_Jaeger_DK_02 is TResourceMesh( Mesh=DK_Jaeger_2 )
+export Modele_Jaeger_DK_03 is TResourceMesh( Mesh=DK_Jaeger_1 )
+export Modele_Jaeger_DK_LOW is TResourceMesh( Mesh=US_Delta_1_LOW )
+
+//LRRP_DK
+export Modele_LRRP_DK is TResourceMesh( Mesh=DK_Dane_NCO )
+export Modele_LRRP_DK_02 is TResourceMesh( Mesh=DK_Dane_Scout )
+export Modele_LRRP_DK_03 is TResourceMesh( Mesh=DK_HJV_LRRP )
+export Modele_LRRP_DK_LOW is TResourceMesh( Mesh=CRAP_1_LOW )
+
+//Scout_DK
+export Modele_Scout_DK is TResourceMesh( Mesh=DK_Dane_NCO )
+export Modele_Scout_DK_02 is TResourceMesh( Mesh=DK_Dane_Scout )
+export Modele_Scout_DK_03 is TResourceMesh( Mesh=DK_Dane_3 )
+export Modele_Scout_DK_04 is TResourceMesh( Mesh=DK_Dane_1 )
+export Modele_Scout_DK_LOW is TResourceMesh( Mesh=RFA_Jager_LOW )
+
+//Rifles_DK
+export Modele_Rifles_DK is TResourceMesh( Mesh=DK_Dane_NCO )
+export Modele_Rifles_DK_02 is TResourceMesh( Mesh=DK_Dane_2 )
+export Modele_Rifles_DK_03 is TResourceMesh( Mesh=DK_Dane_3 )
+export Modele_Rifles_DK_04 is TResourceMesh( Mesh=DK_Dane_1 )
+export Modele_Rifles_DK_LOW is TResourceMesh( Mesh=RFA_Jager_LOW )
+
+//Rifles_CMD_DK
+export Modele_Rifles_CMD_DK is TResourceMesh( Mesh=DK_Dane_officer )
+export Modele_Rifles_CMD_DK_02 is TResourceMesh( Mesh=DK_Dane_NCO )
+export Modele_Rifles_CMD_DK_03 is TResourceMesh( Mesh=DK_Dane_2 )
+export Modele_Rifles_CMD_DK_04 is TResourceMesh( Mesh=DK_Dane_3 )
+export Modele_Rifles_CMD_DK_05 is TResourceMesh( Mesh=DK_Dane_1 )
+export Modele_Rifles_CMD_DK_LOW is TResourceMesh( Mesh=RFA_Jager_LOW )
+
+//Reserve_DK
+export Modele_Reserve_DK is TResourceMesh( Mesh=DK_HJV_NCO )
+export Modele_Reserve_DK_02 is TResourceMesh( Mesh=DK_HJV_1 )
+export Modele_Reserve_DK_03 is TResourceMesh( Mesh=DK_HJV_2 )
+export Modele_Reserve_DK_04 is TResourceMesh( Mesh=DK_HJV_3 )
+export Modele_Reserve_DK_LOW is TResourceMesh( Mesh=RFA_Jager_LOW )
+
+//Guards_DK
+export Modele_Guards_DK is TResourceMesh( Mesh=DK_Livgarden_officer )
+export Modele_Guards_DK_02 is TResourceMesh( Mesh=DK_Dane_NCO )
+export Modele_Guards_DK_03 is TResourceMesh( Mesh=DK_Livgarden_1 )
+export Modele_Guards_DK_04 is TResourceMesh( Mesh=DK_Dane_3 )
+export Modele_Guards_DK_LOW is TResourceMesh( Mesh=RFA_Jager_LOW )
 
 //------------------------------------------------------------------------------
-//
-//
-//                                   SOLDATS NL
-//
-//
+//                                   SOLDATS NL---------------------------------
 //------------------------------------------------------------------------------
 
 NL_Commando_1 is 'GameData:/Assets/3D/Units/NL/Infanterie/Commando/Commando_1.fbx'
@@ -4386,6 +4494,14 @@ export Modele_Gun_Group_UK_03 is TResourceMesh( Mesh=UK_Rifleman_1 )
 export Modele_Gun_Group_UK_04 is TResourceMesh( Mesh=UK_Rifleman_spe )
 export Modele_Gun_Group_UK_05 is TResourceMesh( Mesh=UK_Rifleman_2 )
 export Modele_Gun_Group_UK_LOW is TResourceMesh( Mesh=UK_Rifleman_1_LOW )
+
+//Groupe_AT_UK
+export Modele_Groupe_AT_UK is TResourceMesh( Mesh=UK_Rifleman_NCO )
+export Modele_Groupe_AT_UK_02 is TResourceMesh( Mesh=UK_Rifleman_Sniper )
+export Modele_Groupe_AT_UK_03 is TResourceMesh( Mesh=UK_Rifleman_1 )
+export Modele_Groupe_AT_UK_04 is TResourceMesh( Mesh=UK_Rifleman_spe )
+export Modele_Groupe_AT_UK_05 is TResourceMesh( Mesh=UK_Rifleman_2 )
+export Modele_Groupe_AT_UK_LOW is TResourceMesh( Mesh=UK_Rifleman_1_LOW )
 
 //Rifles_Mot_UK
 export Modele_Rifles_Mot_UK is TResourceMesh( Mesh=UK_Rifleman_NCO )

@@ -1,91 +1,70 @@
-template TemplateTFS_Flag
-[
-    TextureToken     : string
-] is TTFSCommand_UISymbol
-(
-    TextureToken = <TextureToken>
-    BBMin=[0, -0.85, 0]
-    BBMax=[1.7, 0.15, 0]
-    ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-)
-
-template TemplateTFS_Division
-[
-    TextureToken     : string
-] is TTFSCommand_UISymbol
-(
-    TextureToken = <TextureToken>
-    BBMin=[0, -1, 0]
-    BBMax=[1.5, 0.5, 0]
-    ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-)
 
 DefaultStyleGuide is TUIStyleGuide
 (
     TextStylesMap = MAP [
-        ("ActivationPoint",                                         MAP [ ( ~/ComponentState/Normal, TextStyleActivationPoint ), ]),
-        ("ActivationPointTemp",                                     MAP [ ( ~/ComponentState/Normal, TextStyleActivationPointTemp ), ]),
-        ("ActionPoint",                                             MAP [ ( ~/ComponentState/Normal, TextStylePointAction ), ]),
-        ("Default",                                                 MAP [ ( ~/ComponentState/Normal, TextStyleDefault ), ]),
-        ("LabelUnitNameStroke",                                     MAP [ ( ~/ComponentState/Normal, TextStyleStrokeLabelUnit ), ]),
-        ("DefaultWithStroke",                                       MAP [ ( ~/ComponentState/Normal, TextStyleWithStroke ), ]),
-        ("DefaultWithStroke_labelVille",                            MAP [ ( ~/ComponentState/Normal, TextStyleDefaultWithStroke_labelVille ), ]),
-        ("TitreChallenge_strokeBig",                                MAP [ ( ~/ComponentState/Normal, TitreChallenge_strokeBig ), ]),
-        ("TextStyleEcranMoniteur",                                  MAP [ ( ~/ComponentState/Normal, TextStyleEcranMoniteur ),
-                                                                          ( ~/ComponentState/Grayed, TextStyleDefault ) ]),
+        ("ActivationPoint",                                         MAP [ ( ~/ComponentState/Normal, ~/TextStyleActivationPoint ), ]),
+        ("ActivationPointTemp",                                     MAP [ ( ~/ComponentState/Normal, ~/TextStyleActivationPointTemp ), ]),
+        ("ActionPoint",                                             MAP [ ( ~/ComponentState/Normal, ~/TextStylePointAction ), ]),
+        ("Default",                                                 MAP [ ( ~/ComponentState/Normal, ~/TextStyleDefault ), ]),
+        ("LabelUnitNameStroke",                                     MAP [ ( ~/ComponentState/Normal, ~/TextStyleStrokeLabelUnit ), ]),
+        ("DefaultWithStroke",                                       MAP [ ( ~/ComponentState/Normal, ~/TextStyleWithStroke ), ]),
+        ("DefaultWithStroke_labelVille",                            MAP [ ( ~/ComponentState/Normal, ~/TextStyleDefaultWithStroke_labelVille ), ]),
+        ("TitreChallenge_strokeBig",                                MAP [ ( ~/ComponentState/Normal, ~/TitreChallenge_strokeBig ), ]),
+        ("TextStyleEcranMoniteur",                                  MAP [ ( ~/ComponentState/Normal, ~/TextStyleEcranMoniteur ),
+                                                                          ( ~/ComponentState/Grayed, ~/TextStyleDefault ) ]),
         ("TextStyleEcranMoniteur_cyan",                             MAP [
-                                                                            ( ~/ComponentState/Normal, TextStyleEcranMoniteur_cyan ),
-                                                                            ( ~/ComponentState/Grayed, TextStyleDefault )
+                                                                            ( ~/ComponentState/Normal, ~/TextStyleEcranMoniteur_cyan ),
+                                                                            ( ~/ComponentState/Grayed, ~/TextStyleDefault )
                                                                         ]),
-        ("TextStyleEcranMoniteur_jaune",                            MAP [ ( ~/ComponentState/Normal, TextStyleEcranMoniteur_jaune ), ]),
-        ("TextStyleEcranMoniteur_solo",                             MAP [ ( ~/ComponentState/Normal, TextStyleEcranMoniteur_solo ), ]),
+        ("TextStyleEcranMoniteur_jaune",                            MAP [ ( ~/ComponentState/Normal, ~/TextStyleEcranMoniteur_jaune ), ]),
+        ("TextStyleEcranMoniteur_solo",                             MAP [ ( ~/ComponentState/Normal, ~/TextStyleEcranMoniteur_solo ), ]),
         ("TextStyleFeedbackLabel",                                  MAP [ ( ~/ComponentState/Normal, ~/TextStyleFeedbackLabel ), ]),
 
         //InGame
-        ("ChatLogMessage",                                      MAP [ ( ~/ComponentState/Normal, TextStyleStroke0806 ), ]),
-        ("FactoryName",                                         MAP [ ( ~/ComponentState/Normal, TextStyleFactoryName ), ]),
-        ("UnlockingPhase",                                      MAP [ ( ~/ComponentState/Normal, TextStyleUnlockingPhase ), ]),
-        ("Engagement",                                          MAP [ ( ~/ComponentState/Normal, TextStyleEngagement ), ]),
+        ("ChatLogMessage",                                      MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke0806 ), ]),
+        ("FactoryName",                                         MAP [ ( ~/ComponentState/Normal, ~/TextStyleFactoryName ), ]),
+        ("UnlockingPhase",                                      MAP [ ( ~/ComponentState/Normal, ~/TextStyleUnlockingPhase ), ]),
+        ("Engagement",                                          MAP [ ( ~/ComponentState/Normal, ~/TextStyleEngagement ), ]),
 
-        ("PlayerName",                                          MAP [ ( ~/ComponentState/Normal, TextStyleStroke080604 ), ]),
-        ("NbUnits",                                             MAP [ ( ~/ComponentState/Normal, TextStyleStroke080604 ), ]),
-        ("DefaultSubtitle",                                     MAP [ ( ~/ComponentState/Normal, TextStyleStroke0705 ), ]),
-        ("OutmapFeedback",                                      MAP [ ( ~/ComponentState/Normal, TextStyleStroke0705 ), ]),
-        ("MouseWidget/TextModule",                              MAP [ ( ~/ComponentState/Normal, TextStyleMouseWidgetTextModule ), ]),
-        ("VictoryStatus",                                       MAP [ ( ~/ComponentState/Normal, TextStyleDefault ), ]),
-        ("StrategicPointsText",                                 MAP [ ( ~/ComponentState/Normal, TextStyleStroke0705 ), ]),
-        ("AlertMessage",                                        MAP [ ( ~/ComponentState/Normal, TextStyleStroke0705 ), ]),
-        ("NbUnitsInPackList",                                   MAP [ ( ~/ComponentState/Normal, TextStyleStroke070535 ), ]),
-        ("NbUnitsInPackText",                                   MAP [ ( ~/ComponentState/Normal, TextStyleStroke0503 ), ]),
+        ("PlayerName",                                          MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke080604 ), ]),
+        ("NbUnits",                                             MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke080604 ), ]),
+        ("DefaultSubtitle",                                     MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke0705 ), ]),
+        ("OutmapFeedback",                                      MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke0705 ), ]),
+        ("MouseWidget/TextModule",                              MAP [ ( ~/ComponentState/Normal, ~/TextStyleMouseWidgetTextModule ), ]),
+        ("VictoryStatus",                                       MAP [ ( ~/ComponentState/Normal, ~/TextStyleDefault ), ]),
+        ("StrategicPointsText",                                 MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke0705 ), ]),
+        ("AlertMessage",                                        MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke0705 ), ]),
+        ("NbUnitsInPackList",                                   MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke070535 ), ]),
+        ("NbUnitsInPackText",                                   MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke0503 ), ]),
         ("Chat",                                                MAP [
-                                                                    ( ~/ComponentState/Normal, TextStyleWithStroke ),
-                                                                    ( ~/ComponentState/Highlighted, TextStyleDefault ),
+                                                                    ( ~/ComponentState/Normal, ~/TextStyleWithStroke ),
+                                                                    ( ~/ComponentState/Highlighted, ~/TextStyleDefault ),
                                                                 ]),
 
-        ("AutoKick",                                            MAP [ ( ~/ComponentState/Normal, TextStyleStroke0806 ), ]),
-        ("EGWin",                                               MAP [ ( ~/ComponentState/Normal, TextStyle_EGWin ), ]),
-        ("EGWin2",                                              MAP [ ( ~/ComponentState/Normal, TextStyle_EGWin2 ), ]),
-        ("UpperCase",                                           MAP [ ( ~/ComponentState/Normal, TextStyleUpperCase), ]),
+        ("AutoKick",                                            MAP [ ( ~/ComponentState/Normal, ~/TextStyleStroke0806 ), ]),
+        ("EGWin",                                               MAP [ ( ~/ComponentState/Normal, ~/TextStyle_EGWin ), ]),
+        ("EGWin2",                                              MAP [ ( ~/ComponentState/Normal, ~/TextStyle_EGWin2 ), ]),
+        ("UpperCase",                                           MAP [ ( ~/ComponentState/Normal, ~/TextStyleUpperCase), ]),
     ]
 
     Typeface = MAP [
-        ("UIMainFont",                  TypefaceTitle),              // BOMBARD.ttf
+        ("UIMainFont",                  ~/TypefaceTitle),              // BOMBARD.ttf
 
-        ("UISecondFont",                TypefaceSecond),             // Mx437_MBytePC230_8x16.ttf
-        ("Liberator",                   TypefaceMainOutgame),        // Liberator-Medium.ttf
-        ("SevenSegments",               TypefaceSevenSegments),      // alarm clock.ttf
-        ("Chat",                        TypefaceHandPen),            // FELTPEN_.TTF
-        ("Subtitles",                   Typeface_Subtitles),         // ARIALNB.ttf
-        ("HandPen",                     TypefaceHandPen),            // FELTPEN_.TTF
-        ("Area",                        TypefaceAreas),              // BOMBARD.ttf
-        ("Courrier",                    TypefaceMainIngame),         // CONSOLA.ttf
-        ("IBM",                         TypefaceSecond),             // Mx437_MBytePC230_8x16.ttf
-        ("Eurostyle",                   TypefaceThird),              // Amazon Ember Regular.ttf
-        ("Eurostyle_Heavy",             TypefaceFourth),             // Amazon Ember Regular.ttf
-        ("Eurostyle_Italic",            TypefaceFith),               // Amazon Ember Regular.ttf
-        ("Eurostyle_Medium",            TypefaceSixth),              // Amazon Ember Medium.ttf
-        ("Bombardier",                  TypefaceTitle),              // BOMBARD.ttf
-        ("StrategicFeedbacks",          TypefaceStrategicFeedbacks), // FELTPEN_.ttf
+        ("UISecondFont",                ~/TypefaceSecond),             // Mx437_MBytePC230_8x16.ttf
+        ("Liberator",                   ~/TypefaceMainOutgame),        // Liberator-Medium.ttf
+        ("SevenSegments",               ~/TypefaceSevenSegments),      // alarm clock.ttf
+        ("Chat",                        ~/TypefaceHandPen),            // FELTPEN_.TTF
+        ("Subtitles",                   ~/Typeface_Subtitles),         // ARIALNB.ttf
+        ("HandPen",                     ~/TypefaceHandPen),            // FELTPEN_.TTF
+        ("Area",                        ~/TypefaceAreas),              // BOMBARD.ttf
+        ("Courrier",                    ~/TypefaceMainIngame),         // CONSOLA.ttf
+        ("IBM",                         ~/TypefaceSecond),             // Mx437_MBytePC230_8x16.ttf
+        ("Eurostyle",                   ~/TypefaceThird),              // Amazon Ember Regular.ttf
+        ("Eurostyle_Heavy",             ~/TypefaceFourth),             // Amazon Ember Regular.ttf
+        ("Eurostyle_Italic",            ~/TypefaceFith),               // Amazon Ember Regular.ttf
+        ("Eurostyle_Medium",            ~/TypefaceSixth),              // Amazon Ember Medium.ttf
+        ("Bombardier",                  ~/TypefaceTitle),              // BOMBARD.ttf
+        ("StrategicFeedbacks",          ~/TypefaceStrategicFeedbacks), // FELTPEN_.ttf
     ]
 
 
@@ -2763,6 +2742,14 @@ DefaultStyleGuide is TUIStyleGuide
                                             ( ~/ComponentState/Grayed,      TColorRTTI( Color = [80, 80, 80,160] ) ),
                                             ( ~/ComponentState/Normal,      TColorRTTI( Color = [124,210,150,180] ) ),
                                             ( ~/ComponentState/Highlighted, TColorRTTI( Color = [124,210,150,240] ) ),
+                                           ]),
+        ("VertLogin_nonTransparency",                  MAP [
+                                            ( ~/ComponentState/Grayed,      TColorRTTI( Color = [80, 80, 80,160] ) ),
+                                            ( ~/ComponentState/Normal,      TColorRTTI( Color = [124,210,150,240] ) ),
+                                            ( ~/ComponentState/Highlighted, TColorRTTI( Color = [124,210,150,240] ) ),
+                                           ]),
+        ("VertLogin_superWhite",                  MAP [
+                                            ( ~/ComponentState/Normal,      TColorRTTI( Color = [230,255,230,255] ) ),
                                            ]),
         ("Vert2Login",                 MAP [
                                             ( ~/ComponentState/Normal,      TColorRTTI( Color = [73,215,99,180] ) ),

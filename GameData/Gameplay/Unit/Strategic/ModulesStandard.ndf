@@ -24,13 +24,9 @@ PawnPositionModuleDescriptor is TPositionModuleDescriptor
     ClampOutMap                = False
 )
 
-StrategicStateEngineModuleDescriptor is TStateEngineUnitModuleDescriptor
-(
-)
+StrategicStateEngineModuleDescriptor is TStateEngineUnitModuleDescriptor()
 
-StrategicIdleStatusModuleDescriptor is TStrategicIdleStatusModuleDescriptor
-(
-)
+StrategicIdleStatusModuleDescriptor is TStrategicIdleStatusModuleDescriptor()
 
 StrategicBuildingModuleDescriptor is TWargameBuildingModuleDescriptor
 (
@@ -46,7 +42,7 @@ template StrategicUIModuleDescriptor [ NameToken, ProdMenuTexture ] is TPawnUIMo
 
 PawnAirplaneOrderConfigModuleDescriptor is TOrderConfigModuleDescriptor()
 
-PawnAirportScannerConfigurationDescriptor is TScannerConfigurationDescriptor
+PawnBuildingScannerConfigurationDescriptor is TScannerConfigurationDescriptor
 (
     VisionRangesGRU = MAP [
         ( EVisionRange/Standard, 121 ),//353.356890459 
@@ -58,3 +54,5 @@ PawnAirportScannerConfigurationDescriptor is TScannerConfigurationDescriptor
         ( EOpticalStrength/HighAltitude, 60.0 ),
     ]
 )
+
+StrategicPositionModuleDescriptor is TStrategicPositionModuleDescriptor()

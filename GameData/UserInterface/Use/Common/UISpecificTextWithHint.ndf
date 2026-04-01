@@ -71,8 +71,8 @@ template BUCKSpecificTextWithHint
     LocalRenderLayer : int = 0,                                                 // Layer local pour le composant
 
     Components : LIST<TBUCKContainerDescriptor> = [],
-    TextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,
-    AutoHintTextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,
+    TextFormatScript : TTextFormatScriptBank = $/UI/TextFormatScript/DefaultTextFormatScriptBank,
+    AutoHintTextFormatScript : TTextFormatScriptBank = $/UI/TextFormatScript/DefaultTextFormatScriptBank,
 ]
 is BUCKTextDescriptor
 (

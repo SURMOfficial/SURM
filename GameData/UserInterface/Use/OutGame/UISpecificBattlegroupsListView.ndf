@@ -288,6 +288,7 @@ BattlegroupBriefDescriptorForSelection is BUCKSpecificDivisionBriefMainComponent
     IsTogglable = true
     RadioButtonManager = nil
     HasBattlegroup = true
+    ShowDivisionName = false
 )
 
 //-------------------------------------------------------------------------------------
@@ -297,8 +298,6 @@ BattlegroupBriefsScrollingContainer is BUCKSpecificScrollingContainerDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        AlignementToAnchor = [0.0, 0.0]
-        AlignementToFather = [0.0, 0.0]
     )
 
     HasVerticalScrollbar = true
@@ -373,8 +372,6 @@ BUCKContainerDescriptor
                     ComponentFrame = TUIFramePropertyRTTI
                     (
                         MagnifiableWidthHeight = [85.0, 20.0]
-                        AlignementToAnchor = [0.0, 0.0]
-                        AlignementToFather = [0.0, 0.0]
                     )
 
                     HasBorder = true
@@ -410,8 +407,9 @@ BUCKContainerDescriptor
 DeckListTotalWidth is 600.0
 DeckListScrollbarWidth is 10.0
 DeckListListWidth is 580.0
+DeckListInterItemMargin is 2.0
 
-DeckListColonne_Alliance is 68.0
+DeckListColonne_Alliance is 60.0
 DeckListColonne_Flag is 60.0
 DeckListColonne_Division is 55.0
 DeckListColonne_Power is 50.0
@@ -544,34 +542,6 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
             )
         ),
 
-        // Power rating
-        BUCKListElementDescriptor
-        (
-            ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
-            (
-                ElementName = 'DivisionPowerTextMultiList'
-
-                ComponentFrame = TUIFramePropertyRTTI
-                (
-                    RelativeWidthHeight = [0.0, 1.0]
-                    MagnifiableWidthHeight = [DeckListColonne_Power, 0.0]
-                )
-                ShowCheckbox = false
-                CheckBoxBorderLineColorToken = 'gris_load'
-                SortingType = ~/SortableElementField/String
-                HidePointerEvents = true
-                Components =
-                [
-                    TextListe( TextToken = 'DB_RATE' ),
-                    BUCKSpecificHintableArea
-                    (
-                        DicoToken = ~/LocalisationConstantes/dico_interface_outgame
-                        HintBodyToken = "div_rateB"
-                        HintExtendedToken = "div_rateE"
-                    )
-                ]
-            )
-        ),
         // Unit Type
         BUCKListElementDescriptor
         (
@@ -593,9 +563,9 @@ BattlegroupsBriefMultiListTitle is BUCKListDescriptor
                     TextListe( TextToken = 'DB_UTYPE' ),
                     BUCKSpecificHintableArea
                     (
+                        ElementName = "DivisionUnitTypeHintableArea"
                         DicoToken = ~/LocalisationConstantes/dico_interface_outgame
                         HintBodyToken = "div_typeB"
-                        HintExtendedToken = "div_typeE"
                     )
                 ]
             )
@@ -620,8 +590,7 @@ BattlegroupsBriefMultiList is BUCKMultiListDescriptor
 
         "DivisionFlagMultiList",
         "DivisionEmblemMultiList",
-        "DivisionUnitTypeMultiList",
-        "DivisionPowerTextMultiList"
+        "DivisionUnitTypeMultiList"
     ]
 
     SortingCriteriaListByPriority =
@@ -634,36 +603,6 @@ BattlegroupsBriefMultiList is BUCKMultiListDescriptor
 
     TitleDescriptor = ~/BattlegroupsBriefMultiListTitle
     ContentDescriptor = ~/BattlegroupBriefsScrollingContainer
-)
-
-//-------------------------------------------------------------------------------------
-
-private template DeckSimpleText
-[
-    ComponentFrame,
-    TextToken : string,
-] is BUCKTextDescriptor
-(
-    ComponentFrame = <ComponentFrame>
-
-    TextStyle = "TextStyleEcranMoniteur"
-    TypefaceToken = "IBM"
-    TextColor = 'Blanc'
-    TextSize = '24'
-
-    TextDico = ~/LocalisationConstantes/dico_interface_outgame
-    TextToken = <TextToken>
-
-    BigLineAction = ~/BigLineAction/MultiLine
-    VerticalFitStyle = ~/FitStyle/UserDefined
-
-    ParagraphStyle = TParagraphStyle
-    (
-        Alignment = ~/UIText_Left
-        VerticalAlignment = ~/UIText_VerticalCenter
-        Balanced = true
-        BigWordAction = ~/BigWordAction/BigWordNewLine
-    )
 )
 
 //-------------------------------------------------------------------------------------
@@ -1609,18 +1548,23 @@ is BUCKTranslationAnimatedContainerDescriptor
 BattlegroupFilterList is
 [
     (
-        // Synchro la position de cette categorie avec CustomPremadeDeckCategoryIndex dans le descripteur de la vue
+        // Sync this category position with CustomPremadeDeckCategoryIndex in the view Descriptor
         "ReadOnly",
         [
             (
                 "FLTDK_CUST",
-                0 // Synchro avec CustomDeckFilterIndex dans le descripteur de la vue
+                0 // Sync with CustomDeckFilterIndex in the view Descriptor
             ),
             (
                 "FLTDK_PREM",
-                1 // Synchro avec PremadeDeckFilterIndex dans le descripteur de la vue
+                1 // Sync with PremadeDeckFilterIndex in the view Descriptor
             ),
         ]
+    ),
+    (
+        // Sync this category position with DivisionTypeCategoryIndex in the view Descriptor
+        "Types",
+        []
     ),
     (
         "Countries",
@@ -1635,54 +1579,14 @@ BattlegroupFilterList is
             ),
         ]
     ),
-    (
-        "Types",
-        [
-            (
-                "FLTDK_ARM",
-                4
-            ),
-            (
-                "FLTDK_SOL",
-                5
-            ),
-            (
-                "FLTDK_MEC",
-                6
-            ),
-        ]
-    ),
-    (
-        "Ratings",
-        [
-            (
-                "FLTDK_RK1",
-                7
-            ),
-            (
-                "FLTDK_RK2",
-                8
-            ),
-            (
-                "FLTDK_RK3",
-                9
-            ),
-        ]
-    ),
 ]
 
 BattlegroupTagsVector is
 [
-    "", // Custom Deck - ne fait rien
-    "", // Premade Deck - ne fait rien
+    "", // Custom Deck - handled in c++
+    "", // Premade Deck - handled in c++
     "NATO",
     "PACT",
-    "armored",
-    "infantryReg",
-    "armoredRecon",
-    "DC_PWR1",
-    "DC_PWR2",
-    "DC_PWR3",
 ]
 
 //--------------------------------------------------------
@@ -1704,6 +1608,7 @@ is TUISpecificBattlegroupsListViewDescriptor
 
     TagsVector = ~/BattlegroupTagsVector
     CustomPremadeDeckCategoryIndex = 0
+    DivisionTypeCategoryIndex = 1
     CustomDeckFilterIndex = 0
     PremadeDeckFilterIndex = 1
 

@@ -1,8 +1,10 @@
 private trait_BBMin is [0.5, -0.5, 0]
 private trait_BBMax is [2, 0.5, 0]
 
-DefaultTextFormatScript is TTextFormatScriptRTTI
+unnamed TTextFormatScript
 (
+    TextFormatScriptBank = $/UI/TextFormatScript/DefaultTextFormatScriptBank
+
     Commands = MAP
     [
         //-------------------------------------------------------------------------------------
@@ -333,20 +335,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             )
         ),
         (
-            "default",
-            TTFSCommand_StyleChange
-            (
-                Style = TTextStyle
-                (
-                    FontSize    = 1.0
-                    ColorBottom = [0, 0, 0, 0]
-                    ColorUp     = [0, 0, 0, 0]
-                    ColorStroke = [0, 0, 0, 0]
-                    Stroke = false
-                )
-            )
-        ),
-        (
             "small",
             TTFSCommand_StyleChange
             (
@@ -490,57 +478,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                 )
             )
         ),
-        (
-            "coloredtext3", // ORANGE
-            TTFSCommand_StyleChange
-            (
-                Style = TTextStyle
-                (
-                    FontSize    = 1.1
-                    ColorBottom = [255, 180,   0, 255]
-                    ColorUp     = [255, 180,   0, 255]
-                    ColorStroke = [  0,   0,   0, 255]
-                    Stroke = true
-                    StrokeSize = 0.6
-                    StrokeHardness = 0.5
-                    TextThickness = 0.2
-                )
-            )
-        ),
-        (
-            "coloredtext4", // BLEU CIEL
-            TTFSCommand_StyleChange
-            (
-                Style = TTextStyle
-                (
-                    FontSize    = 1.1
-                    ColorBottom = [130, 235, 255, 200]
-                    ColorUp     = [130, 235, 255, 200]
-                    ColorStroke = [  0,   0,   0, 255]
-                    Stroke = true
-                    StrokeSize = 0.6
-                    StrokeHardness = 0.5
-                    TextThickness = 0.45
-                )
-            )
-        ),
-        (
-            "coloredtext5", // ORANGE - doublon
-            TTFSCommand_StyleChange
-            (
-                Style = TTextStyle
-                (
-                    FontSize    = 1.1
-                    ColorBottom = [255, 180,  10, 220]
-                    ColorUp     = [255, 180,  10, 220]
-                    ColorStroke = [  0,   0,   0, 255]
-                    Stroke = true
-                    StrokeSize = 0.6
-                    StrokeHardness = 0.5
-                    TextThickness = 0.45
-                )
-            )
-        ),
          (
             "blue", // ROUGE
             TTFSCommand_StyleChange
@@ -678,23 +615,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             )
         ),
         (
-            "coloredtext7", // VertPomme
-            TTFSCommand_StyleChange
-            (
-                Style = TTextStyle
-                (
-                    FontSize    = 1.0
-                    ColorBottom = VertPomme
-                    ColorUp     = VertPomme
-                    ColorStroke = [  0,   0,   0, 255]
-                    Stroke = true
-                    StrokeSize = 0.6
-                    StrokeHardness = 0.5
-                    TextThickness = 0.45
-                )
-            )
-        ),
-        (
             "pricetext",
             TTFSCommand_StyleChange
             (
@@ -746,20 +666,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                     ColorBottom = [225, 148, 80, 255]
                     ColorUp     = [225, 148, 80, 255]
                     Stroke = false
-                )
-            )
-        ),
-        (
-            "stroked",
-            TTFSCommand_StyleChange
-            (
-                Style = TTextStyle
-                (
-                    FontSize    = 1.0
-                    ColorBottom = [0, 0, 0, 0]
-                    ColorUp     = [0, 0, 0, 0]
-                    ColorStroke = [0, 0, 0, 0]
-                    Stroke = true
                 )
             )
         ),
@@ -1934,18 +1840,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
                 ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
             )
         ),
-        //-------------------------------------------------------------------------------------
-        // icones pour drapeaux
-        (
-            "sov",
-            TTFSCommand_UISymbol
-            (
-                TextureToken = "CommonTexture_MotherCountryFlag_tfs_SOV"
-                BBMin=[0, -0.8, 0]
-                BBMax=[1, 0.2, 0]
-                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
-            )
-        ),
 
         //-------------------------------------------------------------------------------------
         // icones pour AutoResolve
@@ -2153,23 +2047,6 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             "NL_KLu",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_NL_KLu")
         ),
-
-        (
-            "FR_4",
-            TemplateTFS_Division(TextureToken = "CommonTexture_division_FR_4")
-        ),
-        (
-            "FR_5db",
-            TemplateTFS_Division(TextureToken = "CommonTexture_division_FR_5db")
-        ),
-        (
-            "FR_6dbl",
-            TemplateTFS_Division(TextureToken = "CommonTexture_division_FR_6dbl")
-        ),
-        (
-            "FR_11para",
-            TemplateTFS_Division(TextureToken = "CommonTexture_division_FR_11para")
-        ),
         (
             "ES_brunete",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_ES_brunete")
@@ -2301,129 +2178,26 @@ DefaultTextFormatScript is TTextFormatScriptRTTI
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_PACT_small")
         ),
         (
-            "TCH",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_TCH")
-        ),
-        (
             "CZ",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_TCH")
-        ),
-        (
-            "FR",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_FR")
         ),
         (
             "FRA",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_FR")
         ),
         (
-            "POL",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_POL")
-        ),
-        (
-            "RFA",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_RFA")
-        ),
-        (
             "UK_RFA",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_UK_RFA")
-        ),
-        (
-            "DDR",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_DDR")
-        ),
-        (
-            "UK",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_UK")
-        ),
-        (
-            "SOV",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_SOV")
-        ),
-        (
-            "US",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_US")
-        ),
-        (
-            "CAN",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_CAN")
-        ),
-        (
-            "DK",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_DK")
-        ),
-        (
-            "SWE",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_SWE")
-        ),
-        (
-            "NOR",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_NOR")
-        ),
-        (
-            "NK",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_NK")
-        ),
-        (
-            "ROK",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_ROK")
-        ),
-        (
-            "CHI",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_CHI")
-        ),
-        (
-            "JAP",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_JAP")
-        ),
-        (
-            "ANZ",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_ANZ")
         ),
         (
             "GER",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_GERW")
         ),
         (
-            "BEL",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_BEL")
-        ),
-        (
-            "NL",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_NL")
-        ),
-        (
-            "ESP",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_ESP")
-        ),
-        (
             "ES",
             TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_ESP")
         ),
-        (
-            "ALB",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_ALB")
-        ),
-        (
-            "OST",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_OST")
-        ),
-        (
-            "SWI",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_SWI")
-        ),
-        (
-            "HON",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_HON")
-        ),
-        (
-            "ITA",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_ITA")
-        ),
-        (
-            "CYP",
-            TemplateTFS_Flag(TextureToken = "CommonTexture_MotherCountryFlag_CYP")
-        ),
+
         //-------------------------------------------------------------------------------------
         (
             "ammo",

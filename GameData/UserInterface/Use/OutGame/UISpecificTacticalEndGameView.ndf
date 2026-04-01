@@ -91,23 +91,6 @@ is DebriefBaseText
 
 //-------------------------------------------------------------------
 
-template DebriefCategoryHeaderText
-[
-    ElementName : string = "",
-    ComponentFrame : TUIFramePropertyRTTI,
-    TextToken : string,
-]
-is DebriefBaseText
-(
-    ElementName = <ElementName>
-    ComponentFrame = <ComponentFrame>
-    TextToken = <TextToken>
-    TextColor = "ListeExcel/Cartouche"
-    TextSize = "SD2_Moyen"
-)
-
-//-------------------------------------------------------------------
-
 template TacticalEndgameButton
 [
     ElementName : string = "",

@@ -176,7 +176,7 @@ template SubDepiction_ServantWalkOnlyLeft [ MeshDescriptorHigh, MeshDescriptorLo
     Anchor = 'servant_g'
     MeshDescriptorHigh = <MeshDescriptorHigh>
     MeshDescriptorLow  = <MeshDescriptorLow>
-    Selector = HumanVisibleWhenUndeployedSelector
+    Selector = HumanVisibleWhenDeadOrUndeployedSelector
     AnimationOperator = DepictionOperator_AnimationServant_Cannon_Left
 )
 template SubDepiction_ServantWalkOnlyRight [ MeshDescriptorHigh, MeshDescriptorLow ] is SubDepiction_ServantTemplate
@@ -184,7 +184,7 @@ template SubDepiction_ServantWalkOnlyRight [ MeshDescriptorHigh, MeshDescriptorL
     Anchor = 'servant_d'
     MeshDescriptorHigh = <MeshDescriptorHigh>
     MeshDescriptorLow  = <MeshDescriptorLow>
-    Selector = HumanVisibleWhenUndeployedSelector
+    Selector = HumanVisibleWhenDeadOrUndeployedSelector
     AnimationOperator = DepictionOperator_AnimationServant_Cannon_Right
 )
 

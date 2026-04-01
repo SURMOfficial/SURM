@@ -1,11 +1,3 @@
-template InterfaceSound
-[
-    FileName  : string
-] is TSoundDescriptor
-(
-    SoundSettings = $/SoundSettings/HUD_SoundSettings
-    TheSoundStream = TSoundStream ( FileName = <FileName> )
-)
 
 //=======================================================================================================================
 // SOUNDS DATABASE

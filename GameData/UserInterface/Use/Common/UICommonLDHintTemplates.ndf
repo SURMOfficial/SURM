@@ -109,11 +109,7 @@ is BUCKContainerDescriptor
 (
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [0.0, 0.0]
         RelativeWidthHeight = [1.0, 1.0]
-        MagnifiableOffset = [0.0, 0.0]
-        AlignementToFather = [0.0, 0.0]
-        AlignementToAnchor = [0.0, 0.0]
     )
 
     HidePointerEvents = true
@@ -139,14 +135,7 @@ template LDHintStandardContentHorizontalList
 ]
 is BUCKListDescriptor
 (
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight = [0.0, 0.0]
-        RelativeWidthHeight = [0.0, 0.0]
-        MagnifiableOffset = [0.0, 0.0]
-        AlignementToFather = [0.0, 0.0]
-        AlignementToAnchor = [0.0, 0.0]
-    )
+    ComponentFrame = TUIFramePropertyRTTI()
 
     Axis = ~/ListAxis/Horizontal
     BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild

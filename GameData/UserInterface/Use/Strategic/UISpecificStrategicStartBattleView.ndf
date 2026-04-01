@@ -901,8 +901,6 @@ private PanelInfosBataille is BUCKListDescriptor
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
-                AlignementToAnchor = [0.0, 0.0]
-                AlignementToFather = [0.0, 0.0]
             )
         ),
         PanelRoundedCorner
@@ -1056,8 +1054,6 @@ PanelAide is PanelRoundedCorner
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
-                AlignementToAnchor = [0.0, 0.0]
-                AlignementToFather = [0.0, 0.0]
             )
         ),
     ]
@@ -1381,44 +1377,6 @@ is BUCKTextDescriptor
     TextSize = <TextSize>
 )
 
-//------------------------------------------------------------------------------
-
-template AffichageTextPowerValue
-[
-    ElementName : string = "",
-    TextToken : string = "",
-    TextColor : string = "",
-    TextSize : string = "22",
-    BigLineAction : int = ~/BigLineAction/CutByDots,
-    Alignment : int = UIText_Left
-]
-is BUCKTextDescriptor
-(
-    ElementName = <ElementName>
-
-    ComponentFrame = TUIFramePropertyRTTI()
-
-    ParagraphStyle = TParagraphStyle
-    (
-        Alignment = <Alignment>
-        VerticalAlignment = UIText_VerticalCenter
-    )
-
-    TextToken = <TextToken>
-    TextColor = <TextColor>
-
-    TextStyle = "Default"
-
-    HorizontalFitStyle = ~/FitStyle/FitToContent
-    VerticalFitStyle = ~/FitStyle/FitToContent
-
-    TypefaceToken = "Bombardier"
-    BigLineAction = <BigLineAction>
-
-    TextDico = ~/LocalisationConstantes/dico_interface_ingame
-
-    TextSize = <TextSize>
-)
 //------------------------------------------------------------------------------
 LocalPlayerAttacking is 0
 LocalPlayerAttacked is 1

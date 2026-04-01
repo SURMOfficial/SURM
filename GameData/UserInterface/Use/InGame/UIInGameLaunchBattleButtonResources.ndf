@@ -96,12 +96,7 @@ DeploymentPhasePanel is BUCKContainerDescriptor
                 (
                     ComponentDescriptor = BUCKListDescriptor
                     (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToFather = [0.0, 0.0]
-                            AlignementToAnchor = [0.0, 0.0]
-                        )
-
+                        ComponentFrame = TUIFramePropertyRTTI()
                         BreadthComputationMode = BreadthComputationMode/ComputeBreadthFromLargestChild
                         InterItemMargin = TRTTILength(Magnifiable = 7.0)
                         Axis = ~/ListAxis/Horizontal
@@ -190,8 +185,6 @@ SpotLight_StartGame is BUCKSpotlightDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        AlignementToAnchor = [0.0, 0.0]
-        AlignementToFather = [0.0, 0.0]
     )
 )
 

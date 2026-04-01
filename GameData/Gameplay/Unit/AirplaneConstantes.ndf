@@ -2,6 +2,11 @@
 PitchSpeedDegreePerSecond is 30
 MaxAltitudeGRU is 3534
 
+AirGroundMissileAttackStrategyDescriptor is TAirGroundMissileAttackStrategyDescriptor
+(
+    DescriptorId                     = GUID:{1AC55F2F-BDC0-420A-A89D-A101BEA10EFC}
+)
+
 BombAttackStrategyDescriptor is TBombAttackStrategyDescriptor
 (
     DescriptorId                     = GUID:{1AC55F2F-BDC0-420A-A89D-A101BEA10EF7}
@@ -35,9 +40,4 @@ DogfightAttackStrategyDescriptor is TDogfightAttackStrategyDescriptor
     MaxAngleDifferenceWithTargetInDegree = 60
     MaxAngleToConsiderTargetAheadInDegree = 50
     AngleToFakeTargetPositionInDegree = 60
-)
-
-AirGroundMissileAttackStrategyDescriptor is TAirGroundMissileAttackStrategyDescriptor
-(
-    DescriptorId                     = GUID:{1AC55F2F-BDC0-420A-A89D-A101BEA10EFC}
 )

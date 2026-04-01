@@ -51,7 +51,7 @@ template BUCKHintableAreaDescriptor
     HintBodyToken : string = "",                                        // Corps de l'astuce
     HintExtendedToken : string = "",                                    // Partie qui apparaîtra après une seconde d'affichage de l'astuce
 
-    TextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,
+    TextFormatScript : TTextFormatScriptBank = $/UI/TextFormatScript/DefaultTextFormatScriptBank,
 ]
 is TBUCKHintableAreaDescriptor
 (

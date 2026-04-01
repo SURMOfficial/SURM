@@ -78,9 +78,9 @@ template templateFXWeapon_ProjectileActionDescriptor
 [
     Action,
     Power,
+    BombTrajectory,
     WithPhysics,
     DirectFire,
-    FluidFriction,
     InitialSpeed,
     ShotCount,
     WaitBetweenShot
@@ -91,13 +91,13 @@ is TActionCall
     LocalVariables =
     [
         private parDestination      is TPinnableValue(ExpectedType = 'float3'),
-        private parFluidFriction    is TPinnableValue(ExpectedType = 'float'    InitialValue = <FluidFriction>),
         private parImpactOnGround   is TPinnableValue(ExpectedType = 'bool'     InitialValue = true),
         private parInitialShotDelay is TPinnableValue(ExpectedType = 'float'    InitialValue = 0.0),
         private parInitialSpeed     is TPinnableValue(ExpectedType = 'float3'   InitialValue = <InitialSpeed> * $/VFX_Bank/MobileDirection),
         private parPower            is TPinnableValue(ExpectedType = 'float'    InitialValue = <Power>),
         private parShotCount        is TPinnableValue(ExpectedType = 'float'    InitialValue = <ShotCount>),
         private parShotOnGround     is TPinnableValue(ExpectedType = 'bool'     InitialValue = true),
+        private parBombTrajectory   is TPinnableValue(ExpectedType = 'bool'     InitialValue = <BombTrajectory>),
         private parTirPhysic        is TPinnableValue(ExpectedType = 'bool'     InitialValue = <WithPhysics>),
         private parTirTendu         is TPinnableValue(ExpectedType = 'bool'     InitialValue = <DirectFire>),
         private parTravelDuration   is TPinnableValue(ExpectedType = 'float'),
@@ -106,7 +106,6 @@ is TActionCall
     NamedParams = MAP
     [
         ('parDestination',      parDestination),
-        ('parFluidFriction',    parFluidFriction),
         ('parFlyDuration',      parTravelDuration),
         ('parImpactOnGround',   parImpactOnGround),
         ('parInitialShotDelay', parInitialShotDelay),
@@ -114,6 +113,7 @@ is TActionCall
         ('parPower',            parPower),
         ('parShotCount',        parShotCount),
         ('parShotOnGround',     parShotOnGround),
+        ('parBombTrajectory',   parBombTrajectory),
         ('parTirPhysic',        parTirPhysic),
         ('parTirTendu',         parTirTendu),
         ('parWaitBetweenShot',  parWaitBetweenShot),
@@ -124,9 +124,9 @@ template FXWeaponProjectileHappeningSingle
 [
     Action,
     Power,
+    BombTrajectory,
     WithPhysics,
     DirectFire,
-    FluidFriction,
     InitialSpeed,
     WaitBetweenShot
 ] is TSequencingActionHappening
@@ -136,9 +136,9 @@ template FXWeaponProjectileHappeningSingle
         Action = <Action>
         Power = <Power>
         ShotCount = 1
+        BombTrajectory = <BombTrajectory>
         WithPhysics = <WithPhysics>
         DirectFire = <DirectFire>
-        FluidFriction = <FluidFriction>
         InitialSpeed = <InitialSpeed>
         WaitBetweenShot = <WaitBetweenShot>
     )
@@ -148,9 +148,9 @@ template FXWeaponProjectileHappeningInfinite
 [
     Action,
     Power,
+    BombTrajectory,
     WithPhysics,
     DirectFire,
-    FluidFriction,
     InitialSpeed,
     WaitBetweenShot
 ] is TSequencingActionHappening
@@ -160,9 +160,9 @@ template FXWeaponProjectileHappeningInfinite
         Action = <Action>
         Power = <Power>
         ShotCount = 0
+        BombTrajectory = <BombTrajectory>
         WithPhysics = <WithPhysics>
         DirectFire = <DirectFire>
-        FluidFriction = <FluidFriction>
         InitialSpeed = <InitialSpeed>
         WaitBetweenShot = <WaitBetweenShot>
     )

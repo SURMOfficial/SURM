@@ -222,7 +222,7 @@ template BUCKSpecificHintableArea
     // hint avec un composant spécifique : les tokens et le composant standards ne seront pas utilisés
     HintSpecificBUCKComponent : TBUCKContainerDescriptor = nil,
 
-    TextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,
+    TextFormatScript : TTextFormatScriptBank = $/UI/TextFormatScript/DefaultTextFormatScriptBank,
 ]
 is HintableAreaBUCKComponent
 (

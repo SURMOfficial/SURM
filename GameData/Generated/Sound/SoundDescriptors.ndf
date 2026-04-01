@@ -4697,6 +4697,29 @@ export SoundHappening_FULDA_Bombe_Cluster_sol is TSoundHappening
 )
 
 
+export Sound_FULDA_Bombe_Daisy_Cutter_sol is TSoundSet
+(
+    Items = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tres_Gros_Impact_HE
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Bombes/Bombe_Daisy_Cutter_1.wav"
+            )
+            UseSpecialLoop = False
+        ),
+    ]
+)
+
+export SoundHappening_FULDA_Bombe_Daisy_Cutter_sol is TSoundHappening
+(
+    SoundDescList = Sound_FULDA_Bombe_Daisy_Cutter_sol
+    Volume = 1
+)
+
+
 export Sound_FULDA_Bombe_Mk84_sol is TSoundSet
 (
     Items = 

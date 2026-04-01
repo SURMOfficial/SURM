@@ -13,9 +13,6 @@ template BUCKSpecificCheckBoxDescriptor
     ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
     (
         MagnifiableWidthHeight = DefaultCheckBoxDims
-        MagnifiableOffset = [0.0, 0.0]
-        AlignementToFather = [0.0, 0.0]
-        AlignementToAnchor = [0.0, 0.0]
     ),
 
     IsFocusable : bool = false,
@@ -76,11 +73,9 @@ template BUCKSpecificSortingCheckBoxDescriptor
     UniqueName : string = '',
     ElementName : string = '',
 
-    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(
+    ComponentFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI
+    (
         MagnifiableWidthHeight = DefaultCheckBoxDims
-        MagnifiableOffset = [0.0, 0.0]
-        AlignementToFather = [0.0, 0.0]
-        AlignementToAnchor = [0.0, 0.0]
     ),
 
     HasBackground : bool = true,

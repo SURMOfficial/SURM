@@ -37,10 +37,10 @@ SmokePositionModuleDescriptor is TPositionModuleDescriptor
     ClampOutMap                = False
 )
 
-template Descriptor_Unit_MimeticUnit[ DescriptorId, MimeticName ] is TEntityDescriptor
+template Descriptor_Unit_MimeticUnit[ DescriptorId, BlackHoleKey ] is TEntityDescriptor
 (
     DescriptorId      = <DescriptorId>
-    ClassNameForDebug = 'Unit_MimeticUnit_' + <MimeticName>
+    ClassNameForDebug = 'Unit_MimeticUnit_' + <BlackHoleKey>
     World = WorldIndices_Mimetic_Units
     ModulesDescriptors = [
         // Position
@@ -51,7 +51,7 @@ template Descriptor_Unit_MimeticUnit[ DescriptorId, MimeticName ] is TEntityDesc
             TApparenceModuleDescriptor
             (
                 PickableObject = True
-                Depiction      = TTimelyDepictionReceiverFactory( MimeticName = <MimeticName> )
+                Depiction      = TTimelyDepictionReceiverFactory( BlackHoleKey = <BlackHoleKey> )
             ),
             TSoldierAnimationModuleDescriptor
             (

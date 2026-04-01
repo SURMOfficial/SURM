@@ -63,7 +63,7 @@ template SaveLoadCellText
 [
     ElementName : string,
     TextSize : string = "14",
-    TextFormatScript : TTextFormatScriptRTTI,
+    TextFormatScript : TTextFormatScriptBank,
 ] is BUCKSpecificTextWithHint
 (
     ElementName = <ElementName>
@@ -105,7 +105,7 @@ template CelluleSaveAndLoad
     Category : string,
     TextElementName : string,
     TailleColonne : int,
-    TextFormatScript : TTextFormatScriptRTTI = ~/DefaultTextFormatScript,
+    TextFormatScript : TTextFormatScriptBank = $/UI/TextFormatScript/DefaultTextFormatScriptBank,
     ExtendWeight : float = 0.0,
     RelativeWidth : float = 0.0,
     TextSize : string = '14',
@@ -556,8 +556,6 @@ private template SaveLoadScrollingContainer
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        AlignementToAnchor = [0.0, 0.0]
-        AlignementToFather = [0.0, 0.0]
     )
 
     HasVerticalScrollbar = true
