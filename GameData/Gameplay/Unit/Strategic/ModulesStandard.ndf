@@ -19,6 +19,7 @@ StrategicSelectionModuleDescriptor is TSelectionModuleDescriptor
 
 PawnPositionModuleDescriptor is TPositionModuleDescriptor
 (
+    InitialCollisionPlane      = ECollisionPlane/Ground
     InGeoDb                    = True
     ClampInWorld               = False
     ClampOutMap                = False
@@ -49,9 +50,9 @@ PawnBuildingScannerConfigurationDescriptor is TScannerConfigurationDescriptor
         ( EVisionRange/HighAltitude, 242 ),//706.713780919
     ]
     OpticalStrengths = MAP [
-        ( EOpticalStrength/Standard, 120.0 ),
-        ( EOpticalStrength/LowAltitude, 120.0 ),
-        ( EOpticalStrength/HighAltitude, 60.0 ),
+        ( EOpticalStrength/Standard, 4240.282686 ),
+        ( EOpticalStrength/LowAltitude, 4240.282686 ),
+        ( EOpticalStrength/HighAltitude, 2120.141343 ),
     ]
 )
 

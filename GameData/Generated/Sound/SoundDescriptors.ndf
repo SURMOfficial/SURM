@@ -2064,6 +2064,47 @@ export SoundHappening_FULDA_115mm_U5TS_T62M is TSoundHappening
 )
 
 
+export Sound_FULDA_120mm_CN_120_F1 is TSoundSet
+(
+    Items = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Canon_Gros
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Canon/120mm_canon_tir_CN_120_F1_1.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Canon_Gros
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Canon/120mm_canon_tir_CN_120_F1_2.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Canon_Gros
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Canon/120mm_canon_tir_CN_120_F1_3.wav"
+            )
+            UseSpecialLoop = False
+        ),
+    ]
+)
+
+export SoundHappening_FULDA_120mm_CN_120_F1 is TSoundHappening
+(
+    SoundDescList = Sound_FULDA_120mm_CN_120_F1
+    Volume = 2
+)
+
+
 export Sound_FULDA_120mm_Challenger is TSoundSet
 (
     Items = 
@@ -10770,6 +10811,47 @@ export SoundHappening_FULDA_S_Rockets_Firing is TSoundHappening
 (
     SoundDescList = Sound_FULDA_S_Rockets_Firing
     Volume = 2
+)
+
+
+export Sound_FULDA_Shotgun_KS23 is TSoundSet
+(
+    Items = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Shotgun_KS23_firing_1_round_1.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Shotgun_KS23_firing_1_round_2.wav"
+            )
+            UseSpecialLoop = False
+        ),
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Tir_Fusil_Mitrailleur
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Fusils/Shotgun_KS23_firing_1_round_3.wav"
+            )
+            UseSpecialLoop = False
+        ),
+    ]
+)
+
+export SoundHappening_FULDA_Shotgun_KS23 is TSoundHappening
+(
+    SoundDescList = Sound_FULDA_Shotgun_KS23
+    Volume = 1
 )
 
 

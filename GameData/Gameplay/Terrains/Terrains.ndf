@@ -10,15 +10,11 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = false
 		    BloqueVehicule = false
 		    BloqueVision = false
-		    CriticalEffectProbability = 0.005//0.05
 		    DebugColor = RGBA[0, 0, 0, 255]
 		    DissimulationModifierGroundAir = 0
 		    DissimulationModifierGroundGround = 0
 		    HeightInMeters = 0
 		    InflammabilityProbability = 0.05//allows direct hits // no longer needed as we use IgnoreInflammabilityConditions in the ammo descriptor
-		    SpeedModifierWheel = 1
-		    SpeedModifierInfantry = 1
-		    SpeedModifierTrack = 1
 		    ConcealmentBonus = 1
 		    TerrainType = ~/ETerrainType/Default
 		    AuthorizeNearGroundFlying = true
@@ -31,7 +27,6 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = false
 		    BloqueVehicule = true
 		    BloqueVision = true
-		    CriticalEffectProbability = 0.0//0.45
 		    DamageModifierPerFamilyAndResistance =
 		    MAP [
 		            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.6)]),
@@ -43,9 +38,6 @@ unnamed TGameplayTerrainsRegistration
 		    DissimulationModifierGroundGround = 2.92 * 24
 		    HeightInMeters = 11
 		    InflammabilityProbability = 0.8
-		    SpeedModifierWheel = 0
-		    SpeedModifierInfantry = 1
-		    SpeedModifierTrack = 0
 		    ConcealmentBonus = 4.5
 		    TerrainType = ~/ETerrainType/ForetDense
 		    AuthorizeNearGroundFlying = false
@@ -58,7 +50,6 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = false
 		    BloqueVehicule = false
 		    BloqueVision = true
-		    CriticalEffectProbability = 0.025
 		    DamageModifierPerFamilyAndResistance =
 		    MAP [
 		            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.55)]),
@@ -82,9 +73,6 @@ unnamed TGameplayTerrainsRegistration
 		    DissimulationModifierGroundGround = 200
 		    HeightInMeters = 12
 		    InflammabilityProbability = 0.6
-		    SpeedModifierWheel = 0.2
-		    SpeedModifierInfantry = 0.75
-		    SpeedModifierTrack = 0.4
 		    ConcealmentBonus = 6.0
 		    //~~~~~~~~
 		    TerrainType = ~/ETerrainType/ForetLegere
@@ -98,7 +86,6 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = true
 		    BloqueVehicule = true
 		    BloqueVision = false
-		    CriticalEffectProbability = 0
 		    DamageModifierPerFamilyAndResistance =
 		    MAP [
 		            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.35)]),
@@ -123,9 +110,6 @@ unnamed TGameplayTerrainsRegistration
 		    DissimulationModifierGroundGround = 2.92 * 1000
 		    HeightInMeters = 8
 		    InflammabilityProbability = 0.2
-		    SpeedModifierWheel = 0
-		    SpeedModifierInfantry = 0.35
-		    SpeedModifierTrack = 0
 		    ConcealmentBonus = 9.0
 		    //~~~~~~~~
 		    TerrainType = ~/ETerrainType/PetitBatiment
@@ -139,7 +123,6 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = true
 		    BloqueVehicule = true
 		    BloqueVision = true
-		    CriticalEffectProbability = 0
 		    DamageModifierPerFamilyAndResistance =
 		    MAP [
 		            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.22)]),
@@ -165,9 +148,6 @@ unnamed TGameplayTerrainsRegistration
 		    DissimulationModifierGroundGround = 2.92 * 1000
 		    HeightInMeters = 8
 		    InflammabilityProbability = 0.2
-		    SpeedModifierWheel = 0
-		    SpeedModifierInfantry = 0.35
-		    SpeedModifierTrack = 0
 		    ConcealmentBonus = 9.0
 		    //~~~~~~~~
 		    TerrainType = ~/ETerrainType/Batiment
@@ -181,7 +161,6 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = false
 		    BloqueVehicule = true
 		    BloqueVision = true
-		    CriticalEffectProbability = 0.075
 		    DamageModifierPerFamilyAndResistance =
 		    MAP [
 		            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.45)]),
@@ -207,9 +186,6 @@ unnamed TGameplayTerrainsRegistration
 		    DissimulationModifierGroundGround = 2.92 * 300
 		    HeightInMeters = 4
 		    InflammabilityProbability = 0.2
-		    SpeedModifierWheel = 0
-		    SpeedModifierInfantry = 0.25
-		    SpeedModifierTrack = 0
 		    ConcealmentBonus = 4.75
 		    //~~~~~~~~
 		    TerrainType = ~/ETerrainType/Ruin
@@ -224,15 +200,11 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = true
 		    BloqueVehicule = true
 		    BloqueVision = false
-		    CriticalEffectProbability = 0
 		    DebugColor = RGBA[0, 0, 0, 255]
 		    DissimulationModifierGroundAir = 0
 		    DissimulationModifierGroundGround = 0
 		    HeightInMeters = 0
 		    InflammabilityProbability = 0
-		    SpeedModifierWheel = 1
-		    SpeedModifierInfantry = 1
-		    SpeedModifierTrack = 1
 		    ConcealmentBonus = 1
 		    TerrainType = ~/ETerrainType/Bloqueur
 		    AuthorizeNearGroundFlying = true
@@ -246,15 +218,11 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = true
 		    BloqueVehicule = true
 		    BloqueVision = false
-		    CriticalEffectProbability = 0
 		    DebugColor = RGBA[16, 228, 228, 255]
 		    DissimulationModifierGroundAir = 0
 		    DissimulationModifierGroundGround = 0
 		    HeightInMeters = 0
 		    InflammabilityProbability = 0
-		    SpeedModifierWheel = 1
-		    SpeedModifierInfantry = 0.8
-		    SpeedModifierTrack = 0.3
 		    ConcealmentBonus = 1
 		    TerrainType = ~/ETerrainType/EauPeuProfonde
 		    AuthorizeNearGroundFlying = true
@@ -268,15 +236,11 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = true
 		    BloqueVehicule = true
 		    BloqueVision = false
-		    CriticalEffectProbability = 0
 		    DebugColor = RGBA[186, 247, 200, 255]
 		    DissimulationModifierGroundAir = 0
 		    DissimulationModifierGroundGround = 0
 		    HeightInMeters = 0
 		    InflammabilityProbability = 0.1
-		    SpeedModifierWheel = 0
-		    SpeedModifierInfantry = 1
-		    SpeedModifierTrack = 0
 		    ConcealmentBonus = 1
 		    TerrainType = ~/ETerrainType/Rocher
 		    AuthorizeNearGroundFlying = true
@@ -290,7 +254,6 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = false
 		    BloqueVehicule = false
 		    BloqueVision = true
-		    CriticalEffectProbability = 0
 			DamageModifierPerFamilyAndResistance =
 		    MAP [
 		            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.25)]),
@@ -315,9 +278,6 @@ unnamed TGameplayTerrainsRegistration
 		    DissimulationModifierGroundGround = 55
 		    HeightInMeters = 1.5
 		    InflammabilityProbability = 0.2
-		    SpeedModifierWheel = 1.0
-		    SpeedModifierInfantry = 1.0
-		    SpeedModifierTrack = 1.0
 		    ConcealmentBonus = 4.75
 		    TerrainType = ~/ETerrainType/Wreck
 		    AuthorizeNearGroundFlying = true
@@ -331,7 +291,6 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = false
 		    BloqueVehicule = false
 		    BloqueVision = false
-		    CriticalEffectProbability = 0.075
 			DamageModifierPerFamilyAndResistance =
 		    MAP [
 		            (DamageFamily_he, MAP [(ResistanceFamily_infanterie,0.55)]),
@@ -357,9 +316,6 @@ unnamed TGameplayTerrainsRegistration
 		    DissimulationModifierGroundGround = 0
 		    HeightInMeters = 1
 		    InflammabilityProbability = 0.05
-		    SpeedModifierWheel = 0.25
-		    SpeedModifierInfantry = 0.6
-		    SpeedModifierTrack = 0.6
 		    ConcealmentBonus = 4.75
 		    TerrainType = ~/ETerrainType/Crater
 		    AuthorizeNearGroundFlying = true
@@ -372,15 +328,11 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = false
 		    BloqueVehicule = false
 		    BloqueVision = false
-		    CriticalEffectProbability = 0
 		    DebugColor = RGBA[156, 156, 156, 255]
 		    DissimulationModifierGroundAir = 1000
 		    DissimulationModifierGroundGround = 1000
 		    HeightInMeters = 25
 		    InflammabilityProbability = 0
-		    SpeedModifierWheel = 1
-		    SpeedModifierInfantry = 1
-		    SpeedModifierTrack = 1
 		    ConcealmentBonus = 5.0
 		    TerrainType = ~/ETerrainType/MediumSmoke
 		    AuthorizeNearGroundFlying = true
@@ -393,15 +345,11 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = true
 		    BloqueVehicule = true
 		    BloqueVision = false
-		    CriticalEffectProbability = 0
 		    DebugColor = RGBA[16, 187, 187, 255]
 		    DissimulationModifierGroundAir = 0
 		    DissimulationModifierGroundGround = 0
 		    HeightInMeters = 0
 		    InflammabilityProbability = 0
-		    SpeedModifierWheel = 0.25
-		    SpeedModifierInfantry = 0.8
-		    SpeedModifierTrack = 0.23
 		    ConcealmentBonus = 1
 		    //~~~~~~~~
 		    TerrainType = ~/ETerrainType/EauProfonde
@@ -415,18 +363,14 @@ unnamed TGameplayTerrainsRegistration
 		    BloqueInfanterie = false
 		    BloqueVehicule = false
 		    BloqueVision = false
-		    CriticalEffectProbability = 0
 		    DebugColor = RGBA[100, 100, 100, 100]
 		    DissimulationModifierGroundAir = 0
 		    DissimulationModifierGroundGround = 0
 		    HeightInMeters = 0
 		    InflammabilityProbability = 0
-		    SpeedModifierWheel = 1
-		    SpeedModifierInfantry = 1
-		    SpeedModifierTrack = 1
 		    ConcealmentBonus = 1
 		    TerrainType = ~/ETerrainType/BloqueConstruction
 		    AuthorizeNearGroundFlying = true
         ),
-    ]		    
+    ]
 )

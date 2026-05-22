@@ -11939,6 +11939,2456 @@ export AcknowUnitContainer is TAcknowUnitContainerDescriptor
         ),
         TAcknowDescriptor
         (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_AirplaneOutOfFuel
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/No_Fuel/22.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Attack/1.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Attack/2.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Attack/3.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Attack/4.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Attack/5.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/DamageReceived/7.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/DamageReceived/8.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_EnemyAirplaneContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_Evacuate
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Evacuation_stress/15.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Evacuation_order/13.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Evacuation_order/14.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Move/17.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Move/18.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Move/19.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Move/20.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Move/21.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Evacuation_Ammo/10.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Evacuation_critique/11.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Evacuation_critique/12.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Impossible/16.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Select/23.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Select/24.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Select/25.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Select/26.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Select/27.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Select/28.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Select/29.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Select/30.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Attack_Position/6.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_AirSup
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Target_Destroyed/31.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Airsup/Target_Destroyed/32.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Attack/1.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Attack/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/DamageReceived/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/DamageReceived/7.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Enemy_Contact/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move/11.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move_Attack/16.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move_Attack/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move_Attack/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move_Attack/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Move_Attack/20.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/No_Ammo/26.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Panicking/27.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Panicking/28.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Impossible/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_Reverse
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Reverse/29.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/30.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/31.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/32.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/33.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/34.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/35.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/36.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/37.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/38.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Select/39.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Attack_Position/3.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Attack_Position/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Attack_Position/5.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_Smoke
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Smoke/40.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Stop/41.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Surrender/42.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Target_Destroyed/43.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Target_Destroyed/44.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_ArtShell
+            Action        = TAcknowUnitAction_WithdrawOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Artshell/Withdraw/46.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Attack/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Attack/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Attack/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Attack/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Attack/20.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/DamageReceived/29.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/DamageReceived/36.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Enemy_Contact/25.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move/22.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move_Attack/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move_Attack/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move_Attack/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move_Attack/21.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Move_Attack/23.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/No_Ammo/43.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Panicking/37.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Panicking/38.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Impossible/24.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_Reverse
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Reverse/30.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/27.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/28.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/32.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/33.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/34.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/40.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/41.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/42.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Select/45.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Attack_Position/26.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Stop/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Surrender/31.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Target_Destroyed/39.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Target_Destroyed/44.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_CanonAA
+            Action        = TAcknowUnitAction_WithdrawOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/CanonAA/Withdraw/35.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Attack/1.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Attack/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Attack/3.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Attack/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/DamageReceived/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/DamageReceived/7.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/DamageReceived/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Move/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Move/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Move/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Move_Attack/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Move_Attack/16.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Move_Attack/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Move_Attack/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Move_Attack/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/No_Ammo/25.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Panicking/26.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Panicking/27.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Impossible/10.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/29.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/30.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/31.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/32.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/33.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/34.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/35.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/36.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Select/37.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Attack_Position/5.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Stop/38.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Surrender/39.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Target_Destroyed/40.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Target_Destroyed/41.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Command
+            Action        = TAcknowUnitAction_WithdrawOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Command/Withdraw/43.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Attack/1.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Attack/2.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Attack/3.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Attack/4.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Attack/5.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/DamageReceived/7.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/DamageReceived/8.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/DamageReceived/9.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Enemy_Contact/10.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move/13.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move/14.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move/15.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move/16.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move/17.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move/18.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move/19.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move/20.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move_Attack/21.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move_Attack/22.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move_Attack/23.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move_Attack/24.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move_Attack/25.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move_Attack/26.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Move_Attack/27.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/No_Ammo/28.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/No_Ammo/29.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Panicking/30.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Panicking/31.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Impossible/11.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/32.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/33.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/34.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/35.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/36.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/37.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/38.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/39.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/40.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/40bis.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/41.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/42.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Select/43.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Attack_Position/6.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Stop/44.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Surrender/45.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Surrender/46.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Target_Destroyed/47.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Target_Destroyed/48.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Target_Destroyed/49.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Engineer
+            Action        = TAcknowUnitAction_WithdrawOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Withdraw/50.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Engineer/Withdraw/51.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_AirplaneOutOfFuel
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/No_Fuel/22.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Attack/1.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Attack/2.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Attack/3.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Attack/4.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Attack/5.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Evacuation_stress/15.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_EnemyAirplaneContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_Evacuate
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Evacuation_order/13.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Evacuation_order/14.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Move/17.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Move/18.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Move/19.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Move/20.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Move/21.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Evacuation_Ammo/10.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Evacuation_critique/11.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Evacuation_critique/12.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Impossible/16.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Select/23.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Select/24.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Select/25.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Select/26.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Select/27.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Select/28.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Select/29.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Select/30.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Attack_Position/6.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_GroundAtk
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Target_Destroyed/31.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Groundatk/Target_Destroyed/32.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_AirplaneOutOfFuel
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/No_Fuel/22.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Attack/1.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Attack/2.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Attack/3.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Attack/4.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Attack/5.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Evacuation_stress/15.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_EnemyAirplaneContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_Evacuate
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Evacuation_order/13.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Evacuation_order/14.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Move/17.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Move/18.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Move/19.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Move/20.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Move/21.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Evacuation_Ammo/10.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Evacuation_critique/11.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Evacuation_critique/12.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Impossible/16.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Select/23.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Select/24.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Select/25.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Select/26.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Select/27.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Select/28.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Select/29.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Select/30.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Attack_Position/6.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliAttack
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Target_Destroyed/31.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliAttack/Target_Destroyed/32.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Attack/1.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Attack/2.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Attack/3.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Attack/4.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Attack/5.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/DamageReceived/7.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/DamageReceived/8.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_LoadIntoTransport
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Load/11.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Load/12.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Move/13.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Move/14.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Move/15.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Move/16.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Move/17.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/No_Ammo/18.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Panicking/19.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Panicking/20.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Impossible/10.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/21.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/22.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/23.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/24.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/25.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/26.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/27.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/28.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Select/29.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Attack_Position/6.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Stop/30.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Target_Destroyed/31.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_Unload
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Unload/32.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/Unload/33.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_HeliTransport
+            Action        = TAcknowUnitAction_UnloadAtPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/UnloadAtPosition/34.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/HeliTransport/UnloadAtPosition/35.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Attack/1.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Attack/2.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Attack/3.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Attack/4.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Attack/5.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/DamageReceived/7.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/DamageReceived/8.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/DamageReceived/9.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Enemy_Contact/10.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move/12.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move/13.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move/14.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move/15.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move/16.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move/17.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move/18.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move/19.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move_Attack/20.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move_Attack/21.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move_Attack/22.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move_Attack/23.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move_Attack/24.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move_Attack/25.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Move_Attack/26.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/No_Ammo/27.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/No_Ammo/28.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Panicking/29.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Panicking/30.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Impossible/11.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/31.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/32.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/33.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/34.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/35.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/36.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/37.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/38.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/39.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/40.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/41.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/42.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Select/43.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Attack_Position/6.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Stop/44.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Surrender/45.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Surrender/46.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Target_Destroyed/47.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Target_Destroyed/48.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Target_Destroyed/49.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Inf
+            Action        = TAcknowUnitAction_WithdrawOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Withdraw/50.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Inf/Withdraw/51.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/DamageReceived/1.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Enemy_Contact/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move/5.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move/7.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/No_Ammo/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Panicking/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Panicking/16.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Impossible/3.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_QuickMove
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move_Fast/10.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move_Fast/11.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move_Fast/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move_Fast/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Move_Fast/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_Reverse
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Reverse/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Select/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Select/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Select/20.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Select/21.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Select/22.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Select/23.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Select/24.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Select/25.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Logistic
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Logistic/Stop/26.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_AirplaneOutOfFuel
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/No_Fuel/22.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Attack/1.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Attack/2.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Attack/3.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Attack/4.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Attack/5.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/DamageReceived/7.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/DamageReceived/8.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Evacuation_stress/15.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_EnemyAirplaneContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_Evacuate
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Evacuation_order/13.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Evacuation_order/14.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Move/17.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Move/18.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Move/19.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Move/20.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Move/21.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Evacuation_Ammo/10.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Evacuation_critique/11.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Evacuation_critique/12.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Impossible/16.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Select/23.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Select/24.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Select/25.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Select/26.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Select/27.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Select/28.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Select/29.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Select/30.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Attack_Position/6.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Multirole
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Target_Destroyed/31.ogg' Filter = TSoundFilter_RadioAirplane ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Multirole/Target_Destroyed/32.ogg' Filter = TSoundFilter_RadioAirplane ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Attack/1.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Attack/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Attack/3.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Attack/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Attack/5.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/DamageReceived/7.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/DamageReceived/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move/16.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move_Attack/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move_Attack/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move_Attack/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move_Attack/20.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Move_Attack/21.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/No_Ammo/27.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Panicking/28.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Panicking/29.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Impossible/10.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_Reverse
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Reverse/30.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/31.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/32.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/33.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/34.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/35.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/36.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/37.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/38.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Select/39.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Attack_Position/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Stop/40.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Surrender/41.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Target_Destroyed/42.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Target_Destroyed/43.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Reco
+            Action        = TAcknowUnitAction_WithdrawOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Reco/Withdraw/45.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Attack/1.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Attack/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Attack/3.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Attack/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/DamageReceived/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/DamageReceived/7.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Enemy_Contact/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move/10.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move/11.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move_Attack/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move_Attack/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move_Attack/16.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/No_Ammo/21.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Panicking/22.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Impossible/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_QuickMove
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move_Fast/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move_Fast/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move_Fast/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Move_Fast/20.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_Reverse
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Reverse/23.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/24.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/25.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/26.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/27.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/28.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/29.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/30.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/31.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/32.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Select/33.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Attack_Position/5.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Stop/34.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Surrender/35.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Target_Destroyed/36.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Target_Destroyed/37.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/TankDestroyer/Target_Destroyed/38.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Attack/1.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Attack/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Attack/3.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Attack/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Attack/5.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/DamageReceived/7.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/DamageReceived/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move/11.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Attack/16.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Attack/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Attack/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Attack/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Attack/20.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/No_Ammo/26.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Panicking/27.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Panicking/28.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Impossible/10.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_QuickMove
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Fast/21.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Fast/22.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Fast/23.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Fast/24.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Move_Fast/25.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_Reverse
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Reverse/29.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Reverse/30.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/31.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/32.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/33.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/34.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/35.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/36.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/37.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/38.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/39.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Select/40.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Attack_Position/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Stop/41.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Surrender/42.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Tank
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Target_Destroyed/43.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Tank/Target_Destroyed/44.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Attack/1.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Attack/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Attack/3.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Attack/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Attack/5.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/DamageReceived/7.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/DamageReceived/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Enemy_Contact/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_LoadIntoTransport
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Load/11.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Load/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move/16.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Attack/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Attack/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Attack/20.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Attack/21.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Attack/22.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/No_Ammo/28.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Panicking/29.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Panicking/30.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Impossible/10.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_QuickMove
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Fast/23.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Fast/24.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Fast/25.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Fast/26.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Move_Fast/27.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_Reverse
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Reverse/31.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Reverse/32.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/33.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/34.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/35.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/36.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/37.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/38.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/39.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/40.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/41.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Select/42.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Attack_Position/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Stop/43.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Surrender/44.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Target_Destroyed/45.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_Unload
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Unload/46.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/Unload/47.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'DK'
+            TypeSpecific  = TAcknowUnitType_Transport
+            Action        = TAcknowUnitAction_UnloadAtPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/UnloadAtPosition/48.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/DK/Transport/UnloadAtPosition/49.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
             MotherCountry = 'ESP'
             TypeSpecific  = TAcknowUnitType_AirSup
             Action        = TAcknowUnitAction_AirplaneOutOfFuel
@@ -17985,6 +20435,179 @@ export AcknowUnitContainer is TAcknowUnitContainerDescriptor
                 Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_DE/FR_TankDestroyer_Legion_Target_Destroyed_ca_en_fait_un_de_moins.ogg' Filter = TSoundFilter_RadioVehicule ),
                 Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_DE/FR_TankDestroyer_Legion_Target_Destroyed_dans_ta_face_stuckscheisse.ogg' Filter = TSoundFilter_RadioVehicule ),
                 Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_DE/FR_TankDestroyer_Legion_Target_Destroyed_voila_un_probleme_regle.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Attack/1.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Attack/2.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Attack/3.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Attack/4.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/DamageReceived/6.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/DamageReceived/7.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Enemy_Contact/8.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move/10.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move/11.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move/12.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move/13.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move_Attack/14.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move_Attack/15.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move_Attack/16.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/No_Ammo/21.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Panicking/22.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Impossible/9.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_QuickMove
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move_Fast/17.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move_Fast/18.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move_Fast/19.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Move_Fast/20.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_Reverse
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Reverse/23.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/24.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/25.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/26.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/27.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/28.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/29.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/30.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/31.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/32.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Select/33.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Attack_Position/5.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Stop/34.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Surrender/35.ogg' Filter = TSoundFilter_RadioVehicule ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_TankDestroyer_Legion_ITA
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Target_Destroyed/36.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Target_Destroyed/37.ogg' Filter = TSoundFilter_RadioVehicule ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/TankDestroyer_Legion_ITA/Target_Destroyed/38.ogg' Filter = TSoundFilter_RadioVehicule ),
             ]
         ),
         TAcknowDescriptor

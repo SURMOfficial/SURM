@@ -51,16 +51,6 @@ Texture_RTS_H_infantry_nonIdentifie is TUIResourceTexture_Common
     FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/infantry_nonIdentifie.png'
 )
 
-Texture_supply is TUIResourceTexture_Common
-(
-    FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/NATO/supply.png'
-)
-
-Texture_RTS_H_supply is TUIResourceTexture_Common
-(
-    FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/supply.png'
-)
-
 Texture_appui is TUIResourceTexture_Common
 (
     FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/NATO/appui.png'
@@ -69,6 +59,16 @@ Texture_appui is TUIResourceTexture_Common
 Texture_RTS_H_appui is TUIResourceTexture_Common
 (
     FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/appui.png'
+)
+
+Texture_supply is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/NATO/supply.png'
+)
+
+Texture_RTS_H_supply is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/supply.png'
 )
 
 Texture_ifv is TUIResourceTexture_Common
@@ -326,6 +326,16 @@ Texture_RTS_H_Support_hel is TUIResourceTexture_Common
     FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/Support_hel.png'
 )
 
+Texture_SEAD_air is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/NATO/SEAD_air.png'
+)
+
+Texture_RTS_H_SEAD_hel is TUIResourceTexture_Common
+(
+    FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/SEAD_hel.png'
+)
+
 Texture_RECO_hel is TUIResourceTexture_Common
 (
     FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/NATO/RECO_hel.png'
@@ -391,11 +401,6 @@ Texture_RTS_H_Support_air is TUIResourceTexture_Common
     FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/Support_air.png'
 )
 
-Texture_SEAD_air is TUIResourceTexture_Common
-(
-    FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/NATO/SEAD_air.png'
-)
-
 Texture_RTS_H_SEAD_air is TUIResourceTexture_Common
 (
     FileName      = 'GameData:/Assets/2D/Interface/UseInGame/LabelIcons/RTS/SEAD_air.png'
@@ -446,10 +451,10 @@ unnamed TBUCKToolAdditionalTextureBank
         ("Texture_RTS_H_mortar", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_mortar)]),
         ("Texture_infantry_nonIdentifie", MAP [(~/ComponentState/Normal, ~/Texture_infantry_nonIdentifie)]),
         ("Texture_RTS_H_infantry_nonIdentifie", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_infantry_nonIdentifie)]),
-        ("Texture_supply", MAP [(~/ComponentState/Normal, ~/Texture_supply)]),
-        ("Texture_RTS_H_supply", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_supply)]),
         ("Texture_appui", MAP [(~/ComponentState/Normal, ~/Texture_appui)]),
         ("Texture_RTS_H_appui", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_appui)]),
+        ("Texture_supply", MAP [(~/ComponentState/Normal, ~/Texture_supply)]),
+        ("Texture_RTS_H_supply", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_supply)]),
         ("Texture_ifv", MAP [(~/ComponentState/Normal, ~/Texture_ifv)]),
         ("Texture_RTS_H_ifv", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_ifv)]),
         ("Texture_CMD_veh", MAP [(~/ComponentState/Normal, ~/Texture_CMD_veh)]),
@@ -501,6 +506,8 @@ unnamed TBUCKToolAdditionalTextureBank
         ("Texture_RTS_H_ATGM_hel", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_ATGM_hel)]),
         ("Texture_Support_hel", MAP [(~/ComponentState/Normal, ~/Texture_Support_hel)]),
         ("Texture_RTS_H_Support_hel", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_Support_hel)]),
+        ("Texture_SEAD_air", MAP [(~/ComponentState/Normal, ~/Texture_SEAD_air)]),
+        ("Texture_RTS_H_SEAD_hel", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_SEAD_hel)]),
         ("Texture_RECO_hel", MAP [(~/ComponentState/Normal, ~/Texture_RECO_hel)]),
         ("Texture_RTS_H_RECO_hel", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_RECO_hel)]),
         ("Texture_CMD_hel", MAP [(~/ComponentState/Normal, ~/Texture_CMD_hel)]),
@@ -514,7 +521,6 @@ unnamed TBUCKToolAdditionalTextureBank
         ("Texture_RTS_H_avion_nonIdentifie", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_avion_nonIdentifie)]),
         ("Texture_Support_air", MAP [(~/ComponentState/Normal, ~/Texture_Support_air)]),
         ("Texture_RTS_H_Support_air", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_Support_air)]),
-        ("Texture_SEAD_air", MAP [(~/ComponentState/Normal, ~/Texture_SEAD_air)]),
         ("Texture_RTS_H_SEAD_air", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_SEAD_air)]),
         ("Texture_uav", MAP [(~/ComponentState/Normal, ~/Texture_uav)]),
         ("Texture_RTS_H_uav", MAP [(~/ComponentState/Normal, ~/Texture_RTS_H_uav)]),

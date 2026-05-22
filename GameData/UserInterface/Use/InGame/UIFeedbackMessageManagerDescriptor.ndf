@@ -18,6 +18,8 @@
 //     BaseFilterColorForMinimap = RGBA[255,0,0,255]
 //
 
+UIFeedbackTextFormatterUseOptionalUnitDescriptor is TUIFeedbackTextFormatterUseOptionalUnitDescriptor(UnitNameResources = ~/UICommonUnitNameResources)
+
 FeedbackParagraphStyle is TParagraphStyle
 (
     Alignment         = UIText_Center
@@ -64,6 +66,8 @@ OnUnitLost is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Per_UniteDetruite
     AllowFocusOnEvent = true
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnUnitCapturedByEnemy is TUIFeedbackDispatchedMessageDescriptor
@@ -112,6 +116,8 @@ OnBuildingLost is TUIFeedbackDispatchedMessageDescriptor
 (
     TimeBeforeRepeat = 20
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnDamageReceived is TUIFeedbackDispatchedMessageDescriptor
@@ -329,6 +335,8 @@ OnAirplaneOutOfFuel is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Rens_OnAirplaneOutOfFuel
     UnitAcknow = TAcknowUnitAction_AirplaneOutOfFuel
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnAirplaneOutOfAmmo is TUIFeedbackDispatchedMessageDescriptor
@@ -336,6 +344,8 @@ OnAirplaneOutOfAmmo is TUIFeedbackDispatchedMessageDescriptor
     TimeBeforeRepeat = 10
     AlertMessageType = AlertMsg_Rens_OnAirplaneOutOfAmmo
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnUnitUnderAttack is TUIFeedbackDispatchedMessageDescriptor
@@ -350,6 +360,8 @@ OnUnitUnderAttack is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Rens_UnitUnderAttack
     AllowFocusOnEvent = true
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnUnloadOrder is TUIFeedbackDispatchedMessageDescriptor
@@ -395,6 +407,8 @@ OnEnemyUnitDestroyed is TUIFeedbackDispatchedMessageDescriptor // une unité enn
     AlertMessageType = AlertMsg_Arei_EnemyUnitDestroyed
     TimeBeforeRepeat = 5
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnTargetUnitDestroyed is TUIFeedbackDispatchedMessageDescriptor // une unité du joueur a tué une unité ennemie (donc on joue l'acknow)
@@ -580,6 +594,8 @@ OnCriticEvacuate is TUIFeedbackDispatchedMessageDescriptor
     UnitAcknow = TAcknowUnitAction_CriticEvacuate
     TimeBeforeRepeat = 10
     IsActiveForPlayer = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnUnitSold is TUIFeedbackDispatchedMessageDescriptor
@@ -775,6 +791,8 @@ OnREDUnitLostForReplay is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Per_UniteDetruiteREDReplay
     AllowFocusOnEvent = true
     IsActiveForSpectator = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 OnCommandZoneCapturedForReplay is TUIFeedbackDispatchedMessageDescriptor
@@ -814,6 +832,8 @@ OnBLUUnitLostForReplay is TUIFeedbackDispatchedMessageDescriptor
     AlertMessageType = AlertMsg_Per_UniteDetruiteBLUReplay
     AllowFocusOnEvent = true
     IsActiveForSpectator = true
+
+    TextFormatter = UIFeedbackTextFormatterUseOptionalUnitDescriptor
 )
 
 //----------------------------------------------------------------------------------

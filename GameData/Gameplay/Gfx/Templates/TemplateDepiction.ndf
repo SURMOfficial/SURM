@@ -364,7 +364,6 @@ template ShowroomVehicleDepictionRegistration
 [
     BlackHoleKey : string,
     Alternatives : LIST<IDepictionVisual>,
-    Selector : TAbstractDepictionSelector,
     SubDepictions : LIST<TSubDepiction> = [],
     SubDepictionGenerators : LIST<TAbstractSubDepictionGenerator> = [],
     Operators = [],
@@ -374,7 +373,7 @@ is UnitDepictionRegistration
     BlackHoleKey = <BlackHoleKey>
     DepictionDescriptor = TDepictionDescriptor
     (
-        Selector = <Selector>
+        Selector = OnlyHighDepictionSelector
         Operators = [ DepictionOperator_ShadowPointCloudProvider ] + <Operators>
         DepictionAlternatives = <Alternatives>
         SubDepictions = <SubDepictions>

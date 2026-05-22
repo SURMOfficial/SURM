@@ -435,6 +435,7 @@ FxImpactDestructionUniteRavitaillement_ is TRandomHappening
     ]
 )
 FxImpactDestructionUniteOld is ImpactWrapper( Action = $/GFX/GameFx/fx_impact_destruction_unite_old )
+FxImpactEauBombBlu826000__ is ImpactWrapper( Action = $/GFX/GameFx/fx_impact_eau_Bomb_Blu82_6000_01 )
 FxImpactEauHEGros is ImpactWrapper( Action = $/GFX/GameFx/fx_impact_eau_HE_gros )
 FxImpactEauHEMoyen is ImpactWrapper( Action = $/GFX/GameFx/fx_impact_eau_HE_moyen )
 FxImpactEauHEPetit is ImpactWrapper( Action = $/GFX/GameFx/fx_impact_eau_HE_petit )
@@ -530,6 +531,14 @@ FxImpactSolAutocanonHE_ is TRandomHappening
         ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_Autocanon_HE_6 ),
         ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_Autocanon_HE_7 ),
         ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_Autocanon_HE_8 ),
+    ]
+)
+FxImpactSolBombBlu826000__ is TRandomHappening
+(
+    Alternatives = [
+        ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_Bomb_Blu82_6000_01 ),
+        ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_Bomb_Blu82_6000_02 ),
+        ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_Bomb_Blu82_6000_03 ),
     ]
 )
 FxImpactSolBombFAB250_ is TRandomHappening
@@ -754,6 +763,14 @@ FxImpactSolHEM270227MmCluster_ is TRandomHappening
         ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_Cluster_1 ),
         ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_Cluster_2 ),
         ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_Cluster_3 ),
+    ]
+)
+FxImpactSolHEM270227MmCluster_big_ is TRandomHappening
+(
+    Alternatives = [
+        ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_Cluster_big ),
+        ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_Cluster_big ),
+        ImpactWrapper( Action = $/GFX/GameFx/fx_impact_sol_HE_M270_227mm_Cluster_big ),
     ]
 )
 FxImpactSolHEMortierM30107Mm_ is TRandomHappening
@@ -1095,6 +1112,26 @@ unnamed TMimeticWorldHappeningRegistration
             ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ),
             ( EImpactSurface/Ricochet , nil ),
         ])),
+        ('BombeBLU826000', TImpactHappening( Happenings = MAP[
+            ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolBombBlu826000__, $/GFX/Sound/SoundHappening_FULDA_Bombe_Daisy_Cutter_sol ] ) ),
+            ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauBombBlu826000__, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),
+            ( EImpactSurface/Air , FxImpactSolBombBlu826000__ ),
+            ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolBombBlu826000__, $/GFX/Sound/SoundHappening_FULDA_Bombe_Daisy_Cutter_sol ] ) ),
+            ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombBlu826000__, $/GFX/Sound/SoundHappening_FULDA_Bombe_Daisy_Cutter_sol ] ) ),
+            ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombBlu826000__, $/GFX/Sound/SoundHappening_FULDA_Bombe_Daisy_Cutter_sol ] ) ),
+            ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Daisy_Cutter_sol ),
+            ( EImpactSurface/Ricochet , nil ),
+        ])),
+        ('BombeFAB1000', TImpactHappening( Happenings = MAP[
+            ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHeTresgros2, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),
+            ( EImpactSurface/Air , FxImpactSolBombMk84_ ),
+            ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ),
+            ( EImpactSurface/Ricochet , nil ),
+        ])),
         ('BombeFAB250', TImpactHappening( Happenings = MAP[
             ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolBombFAB250_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk_sol ] ) ),
             ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHeTresgros2, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),
@@ -1172,6 +1209,16 @@ unnamed TMimeticWorldHappeningRegistration
             ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk83_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
             ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk83_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
             ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk83_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ),
+            ( EImpactSurface/Ricochet , nil ),
+        ])),
+        ('BombeMk84', TImpactHappening( Happenings = MAP[
+            ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHeTresgros2, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),
+            ( EImpactSurface/Air , FxImpactSolBombMk84_ ),
+            ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
             ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ),
             ( EImpactSurface/Ricochet , nil ),
         ])),
@@ -1613,6 +1660,16 @@ unnamed TMimeticWorldHappeningRegistration
             ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactDestructionUniteRavitaillement, $/GFX/Sound/SoundHappening_DestructionUnite_Ravitaillement ] ) ),
             ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactDestructionUniteRavitaillement, $/GFX/Sound/SoundHappening_DestructionUniteGros ] ) ),
             ( EImpactSurface/Missile , TCompositeHappening( SubHappenings = [ FxImpactDestructionUniteRavitaillement, $/GFX/Sound/SoundHappening_DestructionUnite_Ravitaillement ] ) ),
+            ( EImpactSurface/Ricochet , nil ),
+        ])),
+        ('DestructionUniteRavitaillementLourd', TImpactHappening( Happenings = MAP[
+            ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHeTresgros2, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),
+            ( EImpactSurface/Air , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolBombMk84_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ] ) ),
+            ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Mk84_sol ),
             ( EImpactSurface/Ricochet , nil ),
         ])),
         ('DestructionUniteMoyen', TImpactHappening( Happenings = MAP[
@@ -2285,6 +2342,16 @@ unnamed TMimeticWorldHappeningRegistration
             ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_ImpactRoquettes_Buratino_lourdeSol ),
             ( EImpactSurface/Ricochet , nil ),
         ])),
+        ('RoquetteCATFAEMICLIC127Mm', TImpactHappening( Happenings = MAP[
+            ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolHERoquette110Mm130Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
+            ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHEGros, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),
+            ( EImpactSurface/Air , FxImpactSolHERoquette110Mm130Mm_ ),
+            ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolHERoquette110Mm130Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
+            ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolHERoquette110Mm130Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
+            ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolHERoquette110Mm130Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
+            ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ),
+            ( EImpactSurface/Ricochet , nil ),
+        ])),
         ('RoquetteDROZD', TImpactHappening( Happenings = MAP[
             ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolDROZD_, $/GFX/Sound/SoundHappening_ImpactRoquette_petitSol ] ) ),
             ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHEPetit, $/GFX/Sound/SoundHappening_Impact_HE_Petit_Eau ] ) ),
@@ -2352,6 +2419,16 @@ unnamed TMimeticWorldHappeningRegistration
             ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227MmCluster_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ] ) ),
             ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227MmCluster_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ] ) ),
             ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227MmCluster_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ] ) ),
+            ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ),
+            ( EImpactSurface/Ricochet , nil ),
+        ])),
+        ('RoquetteM26M270227MmClusterBig', TImpactHappening( Happenings = MAP[
+            ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227MmCluster_big_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ] ) ),
+            ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHEGros, $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ] ) ),
+            ( EImpactSurface/Air , TCompositeHappening( SubHappenings = [ FxOuvertureRoquetteCluster_, $/GFX/Sound/SoundHappening_ImpactCanon_petitSol ] ) ),
+            ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227MmCluster_big_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ] ) ),
+            ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227MmCluster_big_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ] ) ),
+            ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227MmCluster_big_, $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ] ) ),
             ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_FULDA_Bombe_Cluster_sol ),
             ( EImpactSurface/Ricochet , nil ),
         ])),
@@ -2433,6 +2510,16 @@ unnamed TMimeticWorldHappeningRegistration
             ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactVehiculeM261Hydras, $/GFX/Sound/SoundHappening_ImpactRoquette_petitVehicule ] ) ),
             ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactVehiculeHeTresgros2, $/GFX/Sound/SoundHappening_ImpactRoquette_petitVehicule ] ) ),
             ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_ImpactRoquette_petitVehicule ),
+            ( EImpactSurface/Ricochet , nil ),
+        ])),
+        ('RoquetteSVO247Mm', TImpactHappening( Happenings = MAP[
+            ( EImpactSurface/Ground , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
+            ( EImpactSurface/Water , TCompositeHappening( SubHappenings = [ FxImpactEauHeTresgros2, $/GFX/Sound/SoundHappening_Impact_HE_Gros_Eau ] ) ),
+            ( EImpactSurface/Air , FxImpactSolHEM270227Mm_ ),
+            ( EImpactSurface/Wall , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
+            ( EImpactSurface/Vehicle , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
+            ( EImpactSurface/FlyingVehicle , TCompositeHappening( SubHappenings = [ FxImpactSolHEM270227Mm_, $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ] ) ),
+            ( EImpactSurface/Missile , $/GFX/Sound/SoundHappening_ImpactArtillerie_lourdeSol ),
             ( EImpactSurface/Ricochet , nil ),
         ])),
         ('YakBGatling', TImpactHappening( Happenings = MAP[

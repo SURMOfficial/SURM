@@ -75,11 +75,15 @@ MoraleAndHPGaugesDescription is TMoraleAndHPGaugesDescription
 UnitLabelBottomComponent is TLabelBottomDescriptor
 (
     ElementName = "LabelBottomMessage"
+
     MagnifiableHeight = 15.0
     CriticTitleMagnifiableWidth = 120.0
     LeavingDistrictMagnifiableWidth = 100.0
+    WeaponDeploymentMagnifiableWidth = 120.0
+
     AlignementToAnchor = [0.5, 0.0]
     AlignementToFather = [0.5, 1.0]
+
     MagnifiableOffset = [0.0, ~/ReticleMagnifiableSize * 0.5]
 
     ParagraphStyle = TParagraphStyle
@@ -88,12 +92,20 @@ UnitLabelBottomComponent is TLabelBottomDescriptor
         VerticalAlignment = UIText_VerticalCenter
         InterLine = 0
     )
+
     TextDico = ~/LocalisationConstantes/dico_interface_ingame
+
     LeavingDistrictTextToken = "DIST_LEAVE"
-    TextStyle = "Default"
+    WeaponDeploymentTextToken = "DEPL_WEAP"
+    WeaponStowTextToken = "STOW_WEAP"
+
+    TextStyle = "UpperCase"
     TypefaceToken = "IBM"
+
     LeavingDistrictTextColor = "Cyan"
     CriticTitleTextColor = "UnitLabel/CriticTitle"
+    WeaponDeploymentTextColor = "Cyan"
+
     TextSize = "UnitLabel/TextElement"
     TextFormatScript = $/UI/TextFormatScript/DefaultTextFormatScriptBank
 
@@ -105,8 +117,12 @@ UnitLabelBottomComponent is TLabelBottomDescriptor
     LeavingDistrictGradientColor0 = "Label/Gradient05"
     LeavingDistrictGradientColor1 = "Label/Gradient1"
 
+    WeaponDeploymentGradientColor0 = "Label/Gradient05"
+    WeaponDeploymentGradientColor1 = "Label/Gradient1"
+
     LocalRenderLayer = 1
     LeavingDistrictChronoDescription = ~/LeavingDistrictChronoDescription
+    WeaponDeploymentChronoDescription = ~/LeavingDistrictChronoDescription
 )
 //----------------------------------------------------------------------
 // Composant principal

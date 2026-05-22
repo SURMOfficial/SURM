@@ -162,30 +162,6 @@ private OutGameLobbyChatChannelList is BUCKContainerDescriptor
 
 //-------------------------------------------------------------------------------------
 
-template BUCKChatToggleButtonDescriptor
-[
-    UniqueName : string = "",
-    ComponentFrame : TUIFramePropertyRTTI,
-    Components : LIST<TBUCKContainerDescriptor> = [],
-    BackgroundTextureFrame : TUIFramePropertyRTTI = TUIFramePropertyRTTI(RelativeWidthHeight = [1.0, 1.0]),
-]
-is ImageButton
-(
-    UniqueName = <UniqueName>
-    ElementName = 'ChatButton'
-    ComponentFrame = <ComponentFrame>
-    HasBorder = false
-    Mapping = TEugBMutablePBaseClass( Value = TUserInputMapping( KeyboardEventID = UserInputKeyboard/KEY_ENTER ) )
-    BackgroundTextureToken = "Outgame_chat_fond"
-    HintableAreaElementName = "ChatToggleButtonHintableArea"
-    Components = <Components>
-    BackgroundTextureFrame = <BackgroundTextureFrame>
-
-    LeftClickSound = SoundEvent_OpenCloseWarchat
-)
-
-//-------------------------------------------------------------------------------------
-
 BUCKSpecificOutGameChatMainComponentDescriptor is BUCKTranslationAnimatedContainerDescriptor
 (
     ElementName = "ChatTranslationContainer"
@@ -210,8 +186,9 @@ BUCKSpecificOutGameChatMainComponentDescriptor is BUCKTranslationAnimatedContain
 
     Components =
     [
-        BUCKChatToggleButtonDescriptor
+        ImageButton
         (
+            ElementName = "ChatButton"
             ComponentFrame = TUIFramePropertyRTTI
             (
                 RelativeWidthHeight = [1.0, 1.0]
@@ -221,6 +198,11 @@ BUCKSpecificOutGameChatMainComponentDescriptor is BUCKTranslationAnimatedContain
                 RelativeWidthHeight = [1.0, 1.0]
                 MagnifiableOffset = [0.0, 22.0]
             )
+
+            HasBorder = false
+            BackgroundTextureToken = "Outgame_chat_fond"
+            HintableAreaElementName = "ChatToggleButtonHintableArea"
+            LeftClickSound = SoundEvent_OpenCloseWarchat
 
             Components =
             [

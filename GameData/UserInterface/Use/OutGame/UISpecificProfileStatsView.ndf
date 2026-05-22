@@ -117,15 +117,15 @@ is BUCKButtonDescriptor
 
             Elements =
             [
-                // Stat name (e.g. Player level, victories...)
                 BUCKListElementDescriptor
                 (
-                    ComponentDescriptor = BUCKTextDescriptor
+                    ExtendWeight = 1
+                    ComponentDescriptor = BUCKSpecificTextWithHint
                     (
                         ElementName = "TextName" + <ElementName>
                         ComponentFrame = TUIFramePropertyRTTI
                         (
-                            RelativeWidthHeight = [0.0, 1.0]
+                            RelativeWidthHeight = [1.0, 1.0]
                             AlignementToAnchor = [0.0, 0.5]
                             AlignementToFather = [0.0, 0.5]
                         )
@@ -136,25 +136,26 @@ is BUCKButtonDescriptor
                             VerticalAlignment = ~/UIText_VerticalCenter
                         )
 
-                        HorizontalFitStyle = ~/FitStyle/FitToContent
+                        HorizontalFitStyle = ~/FitStyle/UserDefined
                         TextToken = <TextToken>
                         TextStyle = "Default"
                         TypefaceToken = "Courrier"
                         TextColor = "noir_param"
                         TextSize = "14"
                         TextDico = ~/LocalisationConstantes/dico_interface_outgame
+
+                        AutoHintElementName = "AutoHint" + <ElementName>
                     )
                 ),
                 // Stat value
                 BUCKListElementDescriptor
                 (
-                    ExtendWeight = 1
                     ComponentDescriptor = BUCKTextDescriptor
                     (
                         ElementName = "TextValue" + <ElementName>
                         ComponentFrame = TUIFramePropertyRTTI
                         (
-                            RelativeWidthHeight = [1.0, 1.0]
+                            RelativeWidthHeight = [0.0, 1.0]
                             AlignementToAnchor = [0.0, 0.5]
                             AlignementToFather = [0.0, 0.5]
                         )
@@ -166,7 +167,7 @@ is BUCKButtonDescriptor
                             BigWordAction = ~/BigWordAction/BigWordCut
                         )
 
-                        HorizontalFitStyle = ~/FitStyle/UserDefined
+                        HorizontalFitStyle = ~/FitStyle/FitToContent
                         TextStyle = "Default"
                         TypefaceToken = "Courrier"
                         TextSize = "14"

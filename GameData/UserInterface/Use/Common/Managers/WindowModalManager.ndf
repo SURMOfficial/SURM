@@ -84,13 +84,13 @@ SpecificModalConfirmButton is SpecificModalButton
 template SpecificModalText
 [
     ElementName : string = "",
-    TextToken : string = "",
+    TextToken : string = ""
 ] is BUCKTextDescriptor
 (
     ElementName = <ElementName>
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = [~/MagnifiableModaleContentWidth - 20.0, 20.0]
+        MagnifiableWidthHeight = [~/MagnifiableModaleContentWidth - 20.0, 0.0]
         AlignementToFather = [0.5, 0.0]
         AlignementToAnchor = [0.5, 0.0]
     )
@@ -98,7 +98,7 @@ template SpecificModalText
     ParagraphStyle = paragraphStyleTextCenter
     TextStyle = "TextStyleEcranMoniteur"
 
-    VerticalFitStyle = ~/FitStyle/UserDefined
+    VerticalFitStyle = ~/FitStyle/FitToContent
     TypefaceToken = "IBM"
     BigLineAction = ~/BigLineAction/MultiLine
     TextToken = <TextToken>
@@ -356,10 +356,10 @@ template SpecificModalWindow
     UniqueName : string = "",
     ButtonList : List<TBUCKListElementDescriptor> = [],
     TitleToken : string = "",
-    ElementsList : List<TBUCKListElementDescriptor> = [],
-    ContentMagnifiableWidthHeight : float2 = [0.0, 280.0],
+    ElementsList : List<TBUCKListElementDescriptor> = []
 ] is SpecificModaleWindowFrame
 (
+
     UniqueName = <UniqueName>
     ComponentFrame = TUIFramePropertyRTTI
     (
@@ -372,7 +372,7 @@ template SpecificModalWindow
     ButtonList = <ButtonList>
 
     ContentRelativeWidthHeight = [1.0, 0.0]
-    ContentMagnifiableWidthHeight = <ContentMagnifiableWidthHeight>
+    ContentFitStyle = ~/ContainerFitStyle/FitToContentVertically
 
     ContentComponents =
     [
@@ -389,6 +389,7 @@ template SpecificModalWindow
             InterItemMargin = TRTTILength( Magnifiable = 10.0 )
 
             Elements = <ElementsList>
+            ChildFitToContent = true
         ),
 
         BUCKTextureDescriptor
@@ -420,6 +421,22 @@ template SpecificModalWindow
     ]
 )
 
+ModalTextContentWithMinimumSize is BUCKContainerDescriptor
+(
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        MagnifiableWidthHeight = [0.0, 280.0]
+        RelativeWidthHeight = [1.0, 0.0]
+    )
+
+    FitStyle = ~/ContainerFitStyle/MaxBetweenUserDefinedAndContentVertically
+
+    Components =
+    [
+        SpecificModalText(ElementName = "ModalContent")
+    ]
+)
+
 //---------------------------------------------------------------------------------
 // TemporalModal
 //---------------------------------------------------------------------------------
@@ -442,7 +459,7 @@ TemporalModal is SpecificModalWindow
         ),
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+            ComponentDescriptor = ~/ModalTextContentWithMinimumSize
         )
     ]
 )
@@ -462,7 +479,7 @@ ConfirmModal is SpecificModalWindow
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+            ComponentDescriptor = ~/ModalTextContentWithMinimumSize
         )
     ]
 )
@@ -482,7 +499,7 @@ CancelModal is SpecificModalWindow
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+            ComponentDescriptor = ~/ModalTextContentWithMinimumSize
         )
     ]
 )
@@ -511,7 +528,7 @@ BackModal is SpecificModalWindow
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+            ComponentDescriptor = ~/ModalTextContentWithMinimumSize
         )
     ]
 )
@@ -532,7 +549,7 @@ ConfirmCancelModal is SpecificModalWindow
     [
         BUCKListElementDescriptor
         (
-            ComponentDescriptor = SpecificModalText(ElementName = "ModalContent")
+            ComponentDescriptor = ~/ModalTextContentWithMinimumSize
         )
     ]
 )

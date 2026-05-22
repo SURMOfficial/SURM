@@ -1,12 +1,41 @@
 // Ne pas éditer, ce fichier est généré par CapacityNDFFileWriter
 
 
+export Capacite_Artillerie_tag_on_shoot is TCapaciteDescriptor
+(
+    DescriptorId            = GUID:{2400c519-1681-42a7-ade0-c6db41be8516}
+    Name                    = "Artillerie_tag_on_shoot"
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger                 = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 0
+    CastTime                = 0.00
+    CheckVisibility         = True
+    CanBeCastFromTransport  = False
+    TargetEffect            = ~/UnitEffect_Ajoute_Tag_CBR_cible
+    EffectDuration          = -1.00
+    TargetInBuilding        = False
+    TargetInTransport       = False
+    TargetInSelf            = False
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor       = RGBA[0,0,0,0]
+    DisplayRangeThickness   = 0.00
+    AllowedTargetTags       = [
+    ]
+    ForbiddenTargetTags     = [
+    ]
+    Conditions              = [
+        ~/ConditionTimeAfterShot_15000,
+    ]
+)
 export Capacite_Aura_Commandement_1 is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{c5266c39-d304-4d30-8c15-7ff72e65cf4e}
     Name             = "Aura_Commandement_1"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 450
@@ -32,12 +61,41 @@ export Capacite_Aura_Commandement_1 is TCapaciteDescriptor
         ~/ConditionTagRaisedInUnit_Hors_Transport_1,
     ]
 )
-export Capacite_Morale_display_1 is TCapaciteDescriptor 
+/* export Capacite_ERA_hit_tag1 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
+(
+    DescriptorId     = GUID:{9c87df9e-b5c7-4ce8-8ad8-b93169578e2a}
+    Name             = "ERAK56"
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
+    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
+    InfluenceMapAlliance = ~/AllianceRelation/vide
+    RangeGRU               = 0
+    CastTime            = 0.02
+    CheckVisibility     = True
+    CanBeCastFromTransport  = True
+    TargetEffect         = ~/UnitEffect_ERA_add_hit1_cap
+    EffectDuration = 		-1.00
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit_1,
+    ]
+) */
+/* export Capacite_Morale_display_1 is TCapaciteDescriptor 
 (
     DescriptorId     = GUID:{c9956818-6018-4b6c-8766-bcae9ada333e}
     Name             = "Morale_display_1"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -68,8 +126,8 @@ export Capacite_Morale_loss1 is TCapaciteDescriptor //each time a unit routs it 
 (
     DescriptorId     = GUID:{32b7d90d-e5cf-533a-b011-45c5be1e78c5}
     Name             = "Morale1"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -97,8 +155,8 @@ export Capacite_Morale_loss1_tag is TCapaciteDescriptor //18 hits takes you from
 (
     DescriptorId     = GUID:{6823f3a2-62bb-5021-a671-484339e18a81}
     Name             = "Moralet2"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -126,8 +184,8 @@ export Capacite_Morale_loss1_effect is TCapaciteDescriptor //18 hits takes you f
 (
     DescriptorId     = GUID:{9e9cb442-df81-4fa3-b68a-8a8ebc4f36b0}
     Name             = "Moralel3"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -157,8 +215,8 @@ export Capacite_Morale_loss2 is TCapaciteDescriptor //each time a unit routs it 
 (
     DescriptorId     = GUID:{91b5f20c-ab2c-4130-8d9a-430072134322}
     Name             = "Morale2"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -187,8 +245,8 @@ export Capacite_Morale_loss2_tag is TCapaciteDescriptor //18 hits takes you from
 (
     DescriptorId     = GUID:{b9662428-ae0b-4a87-bae6-87d564672cbb}
     Name             = "Moralet2"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -216,8 +274,8 @@ export Capacite_Morale_loss2_effect is TCapaciteDescriptor //18 hits takes you f
 (
     DescriptorId     = GUID:{8d128474-36b8-4401-b8b5-6dba0c262638}
     Name             = "Moralel2"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -246,8 +304,8 @@ export Capacite_Morale_loss3 is TCapaciteDescriptor //each time a unit routs it 
 (
     DescriptorId     = GUID:{e9245f02-debc-4e50-9752-b6efad014736}
     Name             = "Morale3"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -276,8 +334,8 @@ export Capacite_Morale_loss3_tag is TCapaciteDescriptor //18 hits takes you from
 (
     DescriptorId     = GUID:{67dd15d4-f8d3-4fb2-81ca-a23ac36e0d9f}
     Name             = "Morale3t"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -305,8 +363,8 @@ export Capacite_Morale_loss3_effect is TCapaciteDescriptor //18 hits takes you f
 (
     DescriptorId     = GUID:{7f6e77df-88f5-4c9f-bd06-70b9e5a661c6}
     Name             = "Morale3l"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -334,8 +392,8 @@ export Capacite_Morale_loss4 is TCapaciteDescriptor //each time a unit routs it 
 (
     DescriptorId     = GUID:{2b5dca52-0e84-4030-8f84-ec30360757f2}
     Name             = "Morale4"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -364,8 +422,8 @@ export Capacite_Morale_loss4_tag is TCapaciteDescriptor //18 hits takes you from
 (
     DescriptorId     = GUID:{26c74d98-6c82-45a7-b81b-6979870fcec7}
     Name             = "Morale4t"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -393,8 +451,8 @@ export Capacite_Morale_loss4_effect is TCapaciteDescriptor //18 hits takes you f
 (
     DescriptorId     = GUID:{6a1c3c6d-754d-4096-8291-526733a928b5}
     Name             = "Morale4l"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_other_caster
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -416,103 +474,17 @@ export Capacite_Morale_loss4_effect is TCapaciteDescriptor //18 hits takes you f
     ]
     Conditions = [
     ]
-)
-export Capacite_ERA_front_27 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{244936d8-afc2-4f8d-af1a-b3796ea9d6cf}
-    Name             = "ERAK51"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 1.00
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_front_27
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
-    ]
-    Conditions = [
-        ~/ConditionTagRaisedInUnit_ERA_hit_3,
-    ]
-)
-export Capacite_ERA_hit_add is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{e3142f56-3f93-454f-845e-8bf7fdd9971c}
-    Name             = "ERAK52"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.10
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit_add
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
-    ]
-    Conditions = [
-        ~/ConditionTagRaisedInUnit_ERA_hit_1,
-    ]
-)
-export Capacite_ERA_hit_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{3823f3a2-62bb-4021-a671-484739e18a83}
-    Name             = "ERAK53"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.0
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit_tag
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
-    ]
-    Conditions = [
-    ]
-)
+)*/
 export Capacite_ERA_hit1_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{fc82f20a-3215-49c6-83fa-4bbb12b02377}
     Name             = "ERAK54"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag1
@@ -525,8 +497,10 @@ export Capacite_ERA_hit1_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
+		"ERA_hit1"
     ]
     Conditions = [
     ]
@@ -535,12 +509,12 @@ export Capacite_ERA_hit2_tag is TCapaciteDescriptor //18 hits takes you from 750
 (
     DescriptorId     = GUID:{6823f3a2-62bb-5021-b671-484334e18a83}
     Name             = "ERAK55"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.00
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag2
@@ -553,82 +527,25 @@ export Capacite_ERA_hit2_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit3_1,
-    ]
-)
-export Capacite_ERA_hit_tag1 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{9c87df9e-b5c7-4ce8-8ad8-b93169578e2a}
-    Name             = "ERAK56"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit1_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
-    ]
-)
-export Capacite_ERA_hit_tag2 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{12b7d90d-e5cf-433a-b010-45c5be1e78c5}
-    Name             = "ERAK57"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit2_cap//UnitEffect_ERA_hit_tag2
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit2"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit1_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
 export Capacite_ERA_hit3_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{1e9cbc1f-23d4-4124-b884-ca2c0aa59f74}
     Name             = "ERAK58"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag3
@@ -641,56 +558,28 @@ export Capacite_ERA_hit3_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit4_1,
-    ]
-)
-export Capacite_ERA_hit_tag3 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{cbb7db50-ac68-4168-9fc6-3faae9f60a26}
-    Name             = "ERAK59"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit3_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit3"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit2_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
 export Capacite_ERA_hit3_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{5e0e24d2-baf4-4515-8874-9a94db19752b}
     Name             = "ERAK5a"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 0.0
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit3_remove_armor
+    TargetEffect         = ~/UnitEffect_ERA_hit_remove_armor1
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -704,19 +593,24 @@ export Capacite_ERA_hit3_armor is TCapaciteDescriptor //18 hits takes you from 7
     ForbiddenTargetTags = [
     ]
     Conditions = [
-	~/ConditionTagNotRaisedInUnit_ERA_hit6_1,
+	~/ConditionTagNotRaisedInUnit_armor_remove_2,
+	~/ConditionTagNotRaisedInUnit_armor_remove_3,
+	~/ConditionTagNotRaisedInUnit_armor_remove_4,
+	~/ConditionTagNotRaisedInUnit_armor_remove_5,
+	~/ConditionTagNotRaisedInUnit_armor_remove_6,
+	~/ConditionTagRaisedInUnit_ERA_hit3_1,
     ]
 )
 export Capacite_ERA_hit4_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{cddce0f8-2eec-4629-a7eb-cef9c854af89}
     Name             = "ERAK5b"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag4
@@ -729,54 +623,25 @@ export Capacite_ERA_hit4_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit5_1,
-    ]
-)
-export Capacite_ERA_hit_tag4 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{bbe12fc0-f769-419f-993b-bf05f4bed9f0}
-    Name             = "ERAK5c"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit4_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit4"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit3_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit5_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{5908668b-2028-4ec2-a80d-563c817e78e4}
     Name             = "ERAK5d"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag5
@@ -789,54 +654,25 @@ export Capacite_ERA_hit5_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit6_1,
-    ]
-)
-export Capacite_ERA_hit_tag5 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{2db64dfa-0a55-45ca-b89f-65163227cb64}
-    Name             = "ERAK5e"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit5_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit5"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit4_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit6_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{7341afe5-3e67-4e40-a79d-b22967923a12}
     Name             = "ERAK5f"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag6
@@ -849,56 +685,28 @@ export Capacite_ERA_hit6_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit7_1,
-    ]
-)
-export Capacite_ERA_hit_tag6 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{2d873c6c-8490-4e7c-9fa1-c11445618b3b}
-    Name             = "ERAK5g"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit6_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit6"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit5_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
 export Capacite_ERA_hit6_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{2f23c0f6-8a89-426c-a527-c36ce2e0ecb1}
     Name             = "ERAK5h"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 0.0
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit6_remove_armor
+    TargetEffect         = ~/UnitEffect_ERA_hit_remove_armor2
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -912,20 +720,23 @@ export Capacite_ERA_hit6_armor is TCapaciteDescriptor //18 hits takes you from 7
     ForbiddenTargetTags = [
     ]
     Conditions = [
-	~/ConditionTagNotRaisedInUnit_ERA_hit9_1,
+	~/ConditionTagNotRaisedInUnit_armor_remove_3,
+	~/ConditionTagNotRaisedInUnit_armor_remove_4,
+	~/ConditionTagNotRaisedInUnit_armor_remove_5,
+	~/ConditionTagNotRaisedInUnit_armor_remove_6,
+	~/ConditionTagRaisedInUnit_ERA_hit6_1,
     ]
 )
-
 export Capacite_ERA_hit7_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{8f2de3bf-dd17-48fd-88f3-08a77a3849de}
     Name             = "ERAK5i"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag7
@@ -938,54 +749,25 @@ export Capacite_ERA_hit7_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit8_1,
-    ]
-)
-export Capacite_ERA_hit_tag7 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{8cfe87a9-6b32-44d6-800c-558d43ad4477}
-    Name             = "ERAK5k"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit7_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit7"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit6_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit8_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{70d537c1-1898-4624-b770-d0d36a035d28}
     Name             = "ERAK5j"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag8
@@ -998,54 +780,25 @@ export Capacite_ERA_hit8_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit9_1,
-    ]
-)
-export Capacite_ERA_hit_tag8 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{5bf8376a-09c4-474e-88d0-ed8836f70619}
-    Name             = "ERAK5k"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit8_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit8"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit7_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit9_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{4ffc678e-215c-4d0f-91ad-411730ba236c}
     Name             = "ERAK5l"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag9
@@ -1058,56 +811,28 @@ export Capacite_ERA_hit9_tag is TCapaciteDescriptor //18 hits takes you from 750
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit10_1,
-    ]
-)
-export Capacite_ERA_hit_tag9 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{60142ac9-e467-4b99-91c4-a65ec749a087}
-    Name             = "ERAK5m"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit9_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit9"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit8_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
 export Capacite_ERA_hit9_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{b276510f-7436-4b5a-84e6-2f03b660d021}
     Name             = "ERAK5n"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 0.0
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit9_remove_armor
+    TargetEffect         = ~/UnitEffect_ERA_hit_remove_armor3
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1121,20 +846,22 @@ export Capacite_ERA_hit9_armor is TCapaciteDescriptor //18 hits takes you from 7
     ForbiddenTargetTags = [
     ]
     Conditions = [
-	~/ConditionTagNotRaisedInUnit_ERA_hit12_1,
+	~/ConditionTagNotRaisedInUnit_armor_remove_4,
+	~/ConditionTagNotRaisedInUnit_armor_remove_5,
+	~/ConditionTagNotRaisedInUnit_armor_remove_6,
+	~/ConditionTagRaisedInUnit_ERA_hit9_1,
     ]
 )
-
 export Capacite_ERA_hit10_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{789c2562-5826-47bf-8eac-cbb71f936416}
     Name             = "ERAK5o"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag10
@@ -1147,53 +874,25 @@ export Capacite_ERA_hit10_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit11_1,
-    ]
-)
-export Capacite_ERA_hit_tag10 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{16b1ba54-ab64-4bee-84f7-2207f747902c}
-    Name             = "ERAK5p"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit10_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit10"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit9_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
 export Capacite_ERA_hit11_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{047b3a52-e503-40ca-8a32-5c184a9b2a28}
     Name             = "ERAK5q"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag11
@@ -1206,54 +905,25 @@ export Capacite_ERA_hit11_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit12_1,
-    ]
-)
-export Capacite_ERA_hit_tag11 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{3561565d-a840-441d-bd78-a8b2397d0cdd}
-    Name             = "ERAK5r"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit11_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit11"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit10_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit12_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{58109324-9d89-4e74-9e02-aa10b1b02447}
     Name             = "ERAK5s"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag12
@@ -1266,56 +936,28 @@ export Capacite_ERA_hit12_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit13_1,
-    ]
-)
-export Capacite_ERA_hit_tag12 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{be880d6a-26ef-4490-883e-0fa57daa8650}
-    Name             = "ERAK5t"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit12_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit12"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit11_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
 export Capacite_ERA_hit12_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{db9749b2-0800-4518-9152-4dc4e148a81c}
     Name             = "ERAK5u"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 0.0
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit12_remove_armor
+    TargetEffect         = ~/UnitEffect_ERA_hit_remove_armor4
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1329,20 +971,21 @@ export Capacite_ERA_hit12_armor is TCapaciteDescriptor //18 hits takes you from 
     ForbiddenTargetTags = [
     ]
     Conditions = [
-	~/ConditionTagNotRaisedInUnit_ERA_hit15_1,
+	~/ConditionTagNotRaisedInUnit_armor_remove_5,
+	~/ConditionTagNotRaisedInUnit_armor_remove_6,
+	~/ConditionTagRaisedInUnit_ERA_hit12_1,
     ]
 )
-
 export Capacite_ERA_hit13_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{551b9551-6e90-4795-abf0-fb04ee019366}
     Name             = "ERAK5v"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag13
@@ -1355,54 +998,25 @@ export Capacite_ERA_hit13_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit14_1,
-    ]
-)
-export Capacite_ERA_hit_tag13 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{2f25ad22-1ebb-468d-bc60-07fedfa6f876}
-    Name             = "ERAK5w"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit13_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit13"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit12_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit14_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{d4b52ff8-0db6-48db-8ad7-8fcd6a4087dc}
     Name             = "ERAK5x"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag14
@@ -1415,54 +1029,25 @@ export Capacite_ERA_hit14_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit15_1,
-    ]
-)
-export Capacite_ERA_hit_tag14 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{372f79ac-6bf9-4b63-b740-4553e0834cae}
-    Name             = "ERAK5y"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit14_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit14"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit13_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit15_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{a708e49c-77ac-489e-bf01-7cd7e9b6d04c}
     Name             = "ERAK5z"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag15
@@ -1475,56 +1060,28 @@ export Capacite_ERA_hit15_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit16_1,
-    ]
-)
-export Capacite_ERA_hit_tag15 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{debbb25b-a59b-4354-8b45-6b0e8b66316f}
-    Name             = "ERAK5q1"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit15_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit15"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit14_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
 export Capacite_ERA_hit15_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{667662be-c2c4-43fe-a592-e3d6974e45ea}
     Name             = "ERAK5q2"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 0.0
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit15_remove_armor
+    TargetEffect         = ~/UnitEffect_ERA_hit_remove_armor5
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1538,20 +1095,20 @@ export Capacite_ERA_hit15_armor is TCapaciteDescriptor //18 hits takes you from 
     ForbiddenTargetTags = [
     ]
     Conditions = [
-	~/ConditionTagNotRaisedInUnit_ERA_hit18_1,
+	~/ConditionTagNotRaisedInUnit_armor_remove_6,
+	~/ConditionTagRaisedInUnit_ERA_hit15_1,
     ]
 )
-
 export Capacite_ERA_hit16_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{3a141879-fb91-43ec-8e52-bd9e67515f85}
     Name             = "ERAK5q3"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag16
@@ -1564,54 +1121,25 @@ export Capacite_ERA_hit16_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit17_1,
-    ]
-)
-export Capacite_ERA_hit_tag16 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{82dbc55f-08f3-4356-b864-a3b4e6429c3d}
-    Name             = "ERAK5q4"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit16_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit16"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit15_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit17_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{3c5d0b14-fd7a-48cc-9144-2926fe19ded8}
     Name             = "ERAK5q5"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag17
@@ -1624,54 +1152,25 @@ export Capacite_ERA_hit17_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-	//~/ConditionTagNotRaisedInUnit_ERA_hit18_1,
-    ]
-)
-export Capacite_ERA_hit_tag17 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{378b38da-fcc7-46c0-a36c-737bb12bc9cd}
-    Name             = "ERAK5q6"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit17_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit17"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit16_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
-
 export Capacite_ERA_hit18_tag is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{7af03767-6b52-4b57-8a67-3516b8c8bb40}
     Name             = "ERAK5q7"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 0.0
+    CastTime            = 0.2
     CheckVisibility     = True
     CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_ERA_hit_tag18
@@ -1684,55 +1183,28 @@ export Capacite_ERA_hit18_tag is TCapaciteDescriptor //18 hits takes you from 75
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+		"ERA_hit"
     ]
     ForbiddenTargetTags = [
-    ]
-    Conditions = [
-    ]
-)
-export Capacite_ERA_hit_tag18 is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
-(
-    DescriptorId     = GUID:{069f4635-00b3-486c-852b-b7d0afd16fe7}
-    Name             = "ERAK5q8"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance = ~/AllianceRelation/vide
-    RangeGRU               = 0
-    CastTime            = 0.02
-    CheckVisibility     = True
-    CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_add_hit18_cap
-    EffectDuration = -1.00
-    TargetInBuilding       = True
-    TargetInTransport      = True
-    TargetInSelf           = True
-    TargetMySelf           = True
-    FeedbackActivationMask = ~/CapaciteFeedbackActivationMask_never
-    DisplayRangeColor      = RGBA[0,0,0,0]
-    DisplayRangeThickness  = 0.00
-    AllowedTargetTags = [
-    ]
-    ForbiddenTargetTags = [
+		"ERA_hit18"
     ]
     Conditions = [
 	~/ConditionTagRaisedInUnit_ERA_hit17_1,
-	~/ConditionTagRaisedInUnit_ERA_hit_1,
     ]
 )
 export Capacite_ERA_hit18_armor is TCapaciteDescriptor //18 hits takes you from 750mm vs KE to~520 (this is very rough ignoring weakpoints) reduces armor from 28 to 21 (maybe 20) so let each 3 hits reduce front armor by one
 (
     DescriptorId     = GUID:{200ea07e-d854-4be3-8fa1-ebbf32e4f61f}
     Name             = "ERAK5q9"
-    CumulEffect          = ~/CapaciteCumulEffect_autres_lanceurs
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 0.0
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_ERA_hit18_remove_armor
+    TargetEffect         = ~/UnitEffect_ERA_hit_remove_armor6
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -1746,14 +1218,15 @@ export Capacite_ERA_hit18_armor is TCapaciteDescriptor //18 hits takes you from 
     ForbiddenTargetTags = [
     ]
     Conditions = [
+	~/ConditionTagRaisedInUnit_ERA_hit18_1,
     ]
 )
 export Capacite_Aura_Commandement_2 is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{3b515032-11c0-4948-9360-7e389019da94}
     Name                    = "Aura_Commandement_2"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 601
@@ -1783,8 +1256,8 @@ export Capacite_Aura_Commandement_3 is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{a946282c-af30-490b-b121-9184d813dc55}
     Name                    = "Aura_Commandement_3"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 750
@@ -1814,8 +1287,8 @@ export Capacite_Aura_capture_allie_solo is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{212e3fe5-13da-47ad-a015-f418b57f8f71}
     Name                    = "Aura_capture_allie_solo"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 123
@@ -1842,8 +1315,8 @@ export Capacite_Bouclier_Anti_Suppression_50 is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{0f882623-2007-4cd6-8643-4b72b8582393}
     Name                    = "Bouclier_Anti_Suppression_50"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 353
@@ -1869,8 +1342,8 @@ export Capacite_Bouclier_Anti_Suppression_99 is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{5bbc7ba8-708c-4418-bc5f-7f6148dc5aaa}
     Name                    = "Bouclier_Anti_Suppression_99"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 250
@@ -1896,8 +1369,8 @@ export Capacite_Choc is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{206928d2-f3f0-49a8-800d-484b2822b0c6}
     Name                    = "Choc"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 175
@@ -1925,8 +1398,8 @@ export Capacite_Choc_feedback is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{c1c26b50-425f-4f23-b329-fc342f6eab10}
     Name                    = "Choc_feedback"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -1950,19 +1423,49 @@ export Capacite_Choc_feedback is TCapaciteDescriptor
         ~/ConditionTagNotRaisedInUnit_choc_ok_1,
     ]
 )
+export Capacite_Counter_Battery_Radar is TCapaciteDescriptor
+(
+    DescriptorId            = GUID:{75ff4088-1878-4d1e-a84d-b3f2eccaddc8}
+    Name                    = "Counter_Battery_Radar"
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger                 = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 9000
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = True
+    TargetEffect            = ~/UnitEffect_revealUnit
+    EffectDuration          = -1.00
+    TargetInBuilding        = True
+    TargetInTransport       = True
+    TargetInSelf            = True
+    TargetMySelf            = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_soloselected | ~/CapaciteFeedbackActivationMask_anyalliance
+    DisplayRangeColor       = RGBA[184,184,184,255]
+    DisplayRangeThickness   = 0.10
+    AllowedTargetTags       = [
+        "CBR_cible",
+    ]
+    ForbiddenTargetTags     = [
+    ]
+    Conditions              = [
+        ~/ConditionTagNotRaisedInUnit_RadioJammed,
+    ]
+)
 export Capacite_SF is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{bbf719e9-3644-4311-9c96-0699ed2cc02e}
     Name             = "SF"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 400 * 0.35333333333 
     CastTime            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_Placebo
+    TargetEffect         = nil
     EffectDuration = -1.00
     SelfEffect       = ~/UnitEffect_SF
     TargetInBuilding       = True
@@ -1980,15 +1483,15 @@ export Capacite_Thermal is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{213aeab0-d66a-4341-81fc-4784403f1e7b}
     Name             = "Thermal"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 40
     CastTime            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_Placebo
+    TargetEffect         = nil
     EffectDuration = -1.00
     SelfEffect       = ~/UnitEffect_Thermal
     TargetInBuilding       = True
@@ -2007,8 +1510,8 @@ export Capacite_Cowering_Rampe_Capacite is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{2f7b9b74-2d8c-4883-babf-2fe3607e1b15}
     Name                    = "Cowering_Rampe_Capacite"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2037,8 +1540,8 @@ export Capacite_Cowering_Stop_Capacite is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{10fd9b1b-7702-4c6a-9df7-b2afc8595400}
     Name                    = "Cowering_Stop_Capacite"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2067,8 +1570,8 @@ export Capacite_Debarque_camion is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{c5233e7f-e71a-4884-8df7-80e1b4cd14a8}
     Name                    = "Debarque_camion"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2096,8 +1599,8 @@ export Capacite_Declare_hors_transport is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{13f8a78f-6d73-48e7-9fb1-4c3b2a535d4b}
     Name                    = "Declare_hors_transport"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2122,13 +1625,13 @@ export Capacite_Declare_hors_transport is TCapaciteDescriptor
 export Capacite_Surrender is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{25dee14b-9bf5-4d08-bac5-7dd0f811aa15}
-    Name             = "Reddition"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    Name             = "Surrender"
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
-    CastTime            = 5.00
+    CastTime            = 15.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
     TargetEffect         = ~/UnitEffect_Reddition_Effet_kill
@@ -2154,9 +1657,9 @@ export Capacite_Surrender is TCapaciteDescriptor
 export Capacite_Display_Surrender is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{36970a6e-eab4-4ca6-82f2-f235f8fac013}
-    Name             = "Surrender_flag"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    Name             = "Display_Surrender"
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -2187,8 +1690,8 @@ export Capacite_Flee is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{45dee14b-9cf5-4d08-bac5-7ad0f814aa12}
     Name             = "Flee"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -2209,7 +1712,7 @@ export Capacite_Flee is TCapaciteDescriptor
     ForbiddenTargetTags = [
     ]
     Conditions = [
-        ~/ConditionTagNotRaisedInUnit_Allie_Proche_1,
+		~/ConditionTagRaisedInUnit_Allie_Proche_1,
         ~/ConditionTagRaisedInUnit_Infanterie_Cowering_1,
         ~/ConditionTagRaisedInUnit_Ennemi_Proche_1,
     ]
@@ -2218,8 +1721,8 @@ export Capacite_Flee_from_tank is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{50293469-2208-441d-95f2-bbd8d5ba4f46}
     Name             = "FleeTank"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -2249,8 +1752,8 @@ export Capacite_Discipline is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{3425d814-c4d4-4904-b631-3a2bb758301a}
     Name             = "Discipline"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1000 * 0.35333333333 
@@ -2278,8 +1781,8 @@ export Capacite_GSR is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{8a9ab073-0ff1-4cd8-be49-e66a0cba4d60}
     Name                    = "GSR"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2309,8 +1812,8 @@ export Capacite_GSR_no_GSR is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{73e98a18-b95e-436a-a9c7-b581f1e26e97}
     Name                    = "GSR_no_GSR"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2338,8 +1841,8 @@ export Capacite_cover is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{8a9ac074-0ff1-4cd9-be49-e66a0cba4d60}
     Name             = "Cover"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -2367,15 +1870,15 @@ export Capacite_vehicle_cover is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{8a9ac074-0ff1-4ad9-be49-f66a0cba4d60}
     Name             = "VehicleCover"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_EW_OK//UnitEffect_infantry_cover2
+    TargetEffect         = ~/UnitEffect_infantry_cover2
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2395,15 +1898,15 @@ export Capacite_vehicle_stop is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{8ce145bd-fac8-4a31-b134-5f69ce902426}
     Name             = "Vehicle Stop"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 1.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_EW_OK//UnitEffect_vehicle_stopped_hit_perc //immediately easier to hit (needs test)
+    TargetEffect         = ~/UnitEffect_vehicle_stopped_hit_perc //immediately easier to hit (needs test)
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2424,8 +1927,8 @@ export Capacite_dig_in is TCapaciteDescriptor //hasty position
 (
     DescriptorId     = GUID:{af024192-7a56-440b-bbaa-d090f4972e44}
     Name             = "Dig In"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -2454,8 +1957,8 @@ export Capacite_dig_in_tank_M47 is TCapaciteDescriptor //dozer position
 (
     DescriptorId     = GUID:{6b9799f5-59ed-4de4-b463-23a314cf0b2d}
     Name             = "Dig_In_tank_M47"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -2484,8 +1987,8 @@ export Capacite_dig_in_tank_M113 is TCapaciteDescriptor //dozer position
 (
     DescriptorId     = GUID:{b0ae3b32-35fe-4c56-860b-430fc7bf4113}
     Name             = "Dig_In_tank_M113"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -2514,8 +2017,8 @@ export Capacite_dig_in_tank_VCG is TCapaciteDescriptor //dozer position
 (
     DescriptorId     = GUID:{a8b6be1a-3d58-43ad-8c06-0d72783f38ed}
     Name             = "Dig_In_tank_M113"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -2544,8 +2047,8 @@ export Capacite_IFV is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{9945a737-8bd6-4461-9d6f-d630e01fdfe1}
     Name                    = "IFV"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 350
@@ -2572,8 +2075,8 @@ export Capacite_IFV_feedback is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{cba5c0b1-0d5e-445b-abe1-f7f734bfc0c5}
     Name                    = "IFV_feedback"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2601,15 +2104,15 @@ export Capacite_Observer_ring is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9945a787-8bd6-4561-9d6f-d630e01fdfe1}
     Name             = "Observer RangeGRU Ring"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1500
     CastTime            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
-    TargetEffect         = ~/UnitEffect_Placebo
+    TargetEffect         = nil
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2627,15 +2130,15 @@ export Capacite_Observer_ring_batt is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9955a737-8cd6-4462-9d6f-d630e01fdfe1}
     Name             = "RangeGRU Ring Battallion"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1500
     CastTime            = 0.00
     CheckVisibility     = True
     CanBeCastFromTransport  = False
-    TargetEffect         = ~/UnitEffect_Placebo
+    TargetEffect         = nil
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -2653,8 +2156,8 @@ export Capacite_BattComm is TCapaciteDescriptor //experimental battalion command
 (
     DescriptorId     = GUID:{9945b737-6bd6-4461-9d6f-d630e01fdfe1}
     Name             = "BattComm"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 20000
@@ -2681,8 +2184,8 @@ export Capacite_Burn_Bailed_Tank is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{7db9645c-a073-4cfb-95c3-c708b92c4882}
     Name             = "Burn_bailed_tank"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 15
@@ -2711,8 +2214,8 @@ export Capacite_Provide_extra_XP is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{3a13891d-9dbb-489d-866b-7e235ee578d5}
     Name             = "Provide_extra_XP"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1600 * RangeCorr  * 0.35333333333 
@@ -2733,13 +2236,16 @@ export Capacite_Provide_extra_XP is TCapaciteDescriptor
     ]
     ForbiddenTargetTags = [
     ]
+    Conditions = [
+        ~/ConditionTagRaisedInUnit_Batt_comm,
+    ]
 )
 export Capacite_Infanterie_Dissimulee is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{da97526b-947b-4690-9066-254e4b06106c}
     Name                    = "Infanterie_Dissimulee"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2769,8 +2275,8 @@ export Capacite_Infanterie_Retranchee is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{43c036c8-70ef-48de-b223-e9ce406db313}
     Name                    = "Infanterie_Retranchee"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2799,8 +2305,8 @@ export Capacite_Instructor_INF is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{372beef8-db90-445d-99fa-434e5fa14b85}
     Name                    = "Instructor_INF"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 450
@@ -2830,8 +2336,8 @@ export Capacite_Instructor_TNK is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{2d12901e-ed56-4519-8fda-6632f2444e9c}
     Name                    = "Instructor_TNK"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 450
@@ -2858,8 +2364,8 @@ export Capacite_Malus_Suppress_AllTime is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{9449549b-03f5-4bf7-bc64-eef556033256}
     Name                    = "Malus_Suppress_AllTime"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -2885,10 +2391,10 @@ export Capacite_Malus_Suppress_Zone_Influence_Ennemie is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{ad4f4562-2bb2-4b42-9dbd-cfd8b30c1cd2}
     Name                    = "Malus_Suppress_Zone_Influence_Ennemie"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
-    InfluenceMapAlliance    = ~/AllianceRelation/ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
     CastTime                = 0.00
     CheckVisibility         = True
@@ -2912,14 +2418,14 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{f7541be5-1442-46ea-8f96-8128dd7ea358}
     Name             = "Menace_Ennemi_Proche"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
-    InfluenceMapAlliance    = ~/AllianceRelation/ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 30
-    CastTime                = 0.00
+    CastTime                = 0.1
     CheckVisibility         = True
-    CanBeCastFromTransport  = False
+    CanBeCastFromTransport  = True
     TargetEffect         = ~/UnitEffect_Ajoute_Tag_Ennemi_Proche
     EffectDuration    = -1.00
     TargetInBuilding       = True
@@ -2930,6 +2436,7 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
     DisplayRangeColor      = RGBA[0,0,0,0]
     DisplayRangeThickness  = 0.00
     AllowedTargetTags = [
+	"AllUnits",
     ]
     ForbiddenTargetTags = [
     ]
@@ -2937,15 +2444,14 @@ export Capacite_Menace_Ennemi_Proche is TCapaciteDescriptor
         ~/ConditionTagNotRaisedInUnit_Panique_1, //units shouldn't flee or surrender to panicked enemies
     ]
 )
-
 export Capacite_Menace_Ennemi_Proche_flee is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{d2d8d211-c923-4823-a0b3-b2b0e269fa2a}
     Name             = "Menace_Ennemi_Proche"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
-    InfluenceMapAlliance    = ~/AllianceRelation/ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 30
     CastTime                = 0.00
     CheckVisibility         = True
@@ -2972,10 +2478,10 @@ export Capacite_Menace_Ennemi_Proche_tank is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{0b62b7aa-189f-4505-88c2-46ef96891d47}
     Name             = "Menace_Ennemi_Proche"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
-    InfluenceMapAlliance    = ~/AllianceRelation/ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 30
     CastTime                = 0.00
     CheckVisibility         = True
@@ -3001,8 +2507,8 @@ export Capacite_MilitaryPolice is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{ff813fc2-fb20-4376-9d76-842fbc3f71df}
     Name                    = "MilitaryPolice"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 500
@@ -3029,8 +2535,8 @@ export Capacite_MilitaryPolice_feedback is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{29dff076-b61d-47f4-bb62-884b4feaa105}
     Name                    = "MilitaryPolice_feedback"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3056,8 +2562,8 @@ export Capacite_disp_retrait is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{0d42a9e6-34e5-4775-bb9e-cb12090d0f20}
     Name             = "Regen_suppress_xp_1"
-    CumulEffect             = ~/CapaciteCumulEffect_oui
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -3085,8 +2591,8 @@ export Capacite_Regen_suppress_xp_1 is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{64d0cd8c-d3b0-4b04-90db-013399e53746}
     Name                    = "Regen_suppress_xp_1"
-    CumulEffect             = ~/CapaciteCumulEffect_oui
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_always
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3115,8 +2621,8 @@ export Capacite_Regen_suppress_xp_2 is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{7180e5fe-d260-436d-a83e-1a880d4da946}
     Name                    = "Regen_suppress_xp_2"
-    CumulEffect             = ~/CapaciteCumulEffect_oui
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_always
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3145,8 +2651,8 @@ export Capacite_Regen_suppress_xp_3 is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{94d01f8c-32e2-4a4b-824c-23e9e2ee0e58}
     Name                    = "Regen_suppress_xp_3"
-    CumulEffect             = ~/CapaciteCumulEffect_oui
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_always
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3175,8 +2681,8 @@ export Capacite_SF_feedback is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{df3bc3d9-bc30-407d-817c-1d10d1d7c235}
     Name                    = "SF_feedback"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3202,8 +2708,8 @@ export Capacite_Stop_On_Shot is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{87d2fd05-83f8-43d5-80b2-355c6558314f}
     Name                    = "Stop_On_Shot"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3232,11 +2738,11 @@ export Capacite_StressOnMiss_high is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{d94dc338-6d42-4a2c-8e97-accd98d09167}
     Name                    = "StressOnMiss_high"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU                = 400
+    RangeGRU                = 120
     CastTime                = 0.00
     CheckVisibility         = False
     CanBeCastFromTransport  = True
@@ -3262,11 +2768,11 @@ export Capacite_StressOnMiss_low is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{ebd79ee3-f1be-443e-a8e2-86b8837bef13}
     Name                    = "StressOnMiss_low"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU                = 400
+    RangeGRU                = 120
     CastTime                = 0.00
     CheckVisibility         = False
     CanBeCastFromTransport  = True
@@ -3292,11 +2798,11 @@ export Capacite_StressOnMiss_mid is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{9c4f4136-a292-4620-b94a-7cca717482dc}
     Name                    = "StressOnMiss_mid"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
-    RangeGRU                = 400
+    RangeGRU                = 120
     CastTime                = 0.00
     CheckVisibility         = False
     CanBeCastFromTransport  = True
@@ -3322,8 +2828,8 @@ export Capacite_Tank_Dissimule is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{db9adea3-7f78-4360-b9cd-62e078ee81ce}
     Name                    = "Tank_Dissimule"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3351,8 +2857,8 @@ export Capacite_Trepied is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{dc4f6df4-271c-4cf6-b2cc-cfc4cb6704f9}
     Name                    = "Trepied"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3381,8 +2887,8 @@ export Capacite_Trepied_no_Trepied is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{80fcb3ad-eb26-4d3e-b01d-523d53602d2b}
     Name                    = "Trepied_no_Trepied"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3410,8 +2916,8 @@ export Capacite_Soutien_Allie_Proche is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{36a751a7-90b7-483b-acb1-0e4e4a453e2d}
     Name             = "Soutien_Allie_Proche"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 70
@@ -3439,8 +2945,8 @@ export Capacite_Soutien_Allie_Proche_Commandant is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{8dfc841b-48a1-4239-9c82-c7d7d84702c7}
     Name             = "Soutien_Allie_Proche_Commandant"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1000 * 0.35333333333 
@@ -3468,8 +2974,8 @@ export Capacite_Soutien_Allie_Proche_Commandant_2 is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{ccab4429-5f21-4352-90fb-3eb48ef12c78}
     Name             = "Soutien_Allie_Proche_Commandant_2"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1250 * 0.35333333333 
@@ -3497,8 +3003,8 @@ export Capacite_Soutien_Allie_Proche_Commandant_3 is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{3a13891d-9dbb-489c-856b-7e235ee578d5}
     Name             = "Soutien_Allie_Proche_Commandant_3"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_allie
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 1500 * 0.35333333333 
@@ -3526,8 +3032,8 @@ export Capacite_Suicide_SurCetteCibleEnnemie is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{b4be9015-fd8e-4f32-92b5-8a0c006aabca}
     Name             = "Suicide_SurCetteCibleEnnemie"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_ordre_cibles_une_seule_fois
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_order_target_only_once
     TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 100 * 0.35333333333 
@@ -3556,8 +3062,8 @@ export Capacite_Suicide_SurCettePosition is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{b0442fa7-73fa-41c6-be1a-4aba6e7217e9}
     Name             = "Suicide_SurCettePosition"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_ordre_cibles_une_seule_fois
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_order_target_only_once
     TargetTeamFilter        = ~/CapaciteTargetFilter_tout
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -3587,8 +3093,8 @@ export Capacite_UAV is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{5df09981-76d9-4e63-b27b-6a4605eab9eb}
     Name                    = "UAV"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -3614,8 +3120,8 @@ export Capacite_allow_EW is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{44917eee-a900-4490-89ba-ce515997880f}
     Name             = "block_EW"
-	CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+	StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_tout
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 3000
@@ -3643,8 +3149,8 @@ export Capacite_block_EW is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{70760df2-5f90-472f-9b76-15ffd4ed8020}
     Name             = "block_EW"
-	CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+	StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -3672,8 +3178,8 @@ export Capacite_electronic_warfare is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{831c591b-a9f2-43d7-9bff-52e05bb68760}
     Name             = "electronic_warfare"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi//CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 12000.13
@@ -3705,8 +3211,8 @@ export Capacite_electronic_warfare_2 is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{e1f3ce04-e150-45fe-ab9c-b5256a1b9b86}
     Name             = "electronic_warfare_2"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi//CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 12000.13
@@ -3737,8 +3243,8 @@ export Capacite_electronic_warfare_standoff is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{1e1bc2ab-70ba-4e98-97b4-a191815b1529}
     Name             = "electronic_warfare_standoff"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 12000.13
@@ -3770,9 +3276,9 @@ export Capacite_electronic_warfare_basic is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{cbd985f0-aced-4664-95c3-e3e2ab2d78a1}
     Name             = "electronic_warfare_basic"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
-    TargetTeamFilter        = ~/CapaciteTargetFilter_allie//CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 12000.13
     CastTime            = 0.00
@@ -3802,8 +3308,8 @@ export Capacite_electronic_warfare_gun is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{0ec6cc9a-a96b-40a3-8c8b-4edb1953f264}
     Name             = "electronic_warfare_gun"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi//CapaciteTargetFilter_ennemi  //should jamming be indiscriminate?
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU               = 12000.13
@@ -3834,8 +3340,8 @@ export Capacite_electronic_warfare_search_radar is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{818933fb-dd34-4cb6-af17-170e5d4a9681}
     Name             = "electronic_warfare_search_radar"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 12000.13
@@ -3865,8 +3371,8 @@ export Capacite_disp_electronic_warfare_standoff is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{68f7156e-8066-4b9d-b348-774afb9e253b}
     Name             = "electronic_warfare_disp_standoff"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -3895,8 +3401,8 @@ export Capacite_disp_electronic_warfare is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{f9de4f9c-3a29-49f9-b352-51f34ae7efa3}
     Name             = "electronic_warfare_disp"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -3925,8 +3431,8 @@ export Capacite_disp_electronic_warfare_basic is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9188525d-7056-49d3-94da-add91b867ba7}
     Name             = "electronic_warfare_disp_basic"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -3955,8 +3461,8 @@ export Capacite_IRCM is TCapaciteDescriptor //haven't figured out how to make th
 (
     DescriptorId     = GUID:{f6274969-e483-4103-bb24-a94e3017c23e}
     Name             = "IRCM"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_ennemi //should jamming be indiscriminate?
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 10000 * 0.35333333333 
@@ -3981,8 +3487,8 @@ export Capacite_eo_dazzler is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{54695330-337e-4fb3-9034-0014b72c079f}
     Name                    = "eo_dazzler"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -4010,8 +3516,8 @@ export Capacite_fireDirection is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{d5e050b2-5ce4-46fe-9642-6ba1b55f56ef}
     Name                    = "fireDirection"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1415
@@ -4038,8 +3544,8 @@ export Capacite_gunship_plane is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{f5b43190-c28e-4ba1-8aef-62360760ae9a}
     Name                    = "gunship_plane"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -4066,8 +3572,8 @@ export Capacite_jammer is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{e8d88ab7-f594-4802-bc2a-b28d3c8e9f79}
     Name                    = "jammer"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 3887
@@ -4095,8 +3601,8 @@ export Capacite_jammer_arty is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{4bcbd225-2ea6-4389-9f9a-17a5025d3055}
     Name                    = "jammer_arty"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 3887
@@ -4124,8 +3630,8 @@ export Capacite_jammer_gsr is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{73449dc3-0614-4351-848d-47cc53b19d14}
     Name                    = "jammer_gsr"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 3887
@@ -4152,8 +3658,8 @@ export Capacite_militia is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{070fde78-1545-4fa8-9010-278172d62e5c}
     Name                    = "militia"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -4181,8 +3687,8 @@ export Capacite_mountaineer is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{dd57118b-9c5f-4ac1-8fbd-084883cbbf77}
     Name                    = "mountaineer"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -4208,8 +3714,8 @@ export Capacite_poorly_trained is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{d1d22ef2-f237-4549-a51d-ccdad940f7aa}
     Name             = "poorly_trained"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4238,8 +3744,8 @@ export Capacite_IR_missile_basic is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{dc5d41d0-0145-4c0a-8ce8-1abd87216efa}
     Name             = "IR_missile_basic"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4266,8 +3772,8 @@ export Capacite_IR_missile_intermediate is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{da9e6380-ba51-40b0-89cc-e22853c13441}
     Name             = "IR_missile_intermediate"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4294,8 +3800,8 @@ export Capacite_IR_missile_advanced is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{7a126b67-61fa-4a21-a236-b0fb05da4d2e}
     Name             = "IR_missile_advanced"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4322,8 +3828,8 @@ export Capacite_supply_block is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{b44b8b0e-3834-4988-b47c-87e42e2b3dfc}
     Name             = "reserviste"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4350,8 +3856,8 @@ export Capacite_reserviste is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{7ede2a6d-5414-4cfd-b6a0-dd9ce3a6b0f4}
     Name             = "reserviste"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4379,8 +3885,8 @@ export Capacite_Professional is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{4f7c8071-8aab-4682-8b6e-44b37cfe4e97}
     Name             = "professional"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4407,8 +3913,8 @@ export Capacite_Advanced_Training is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{35a0c126-dd83-4ddd-8d8d-c04f4f9630a8}
     Name             = "advancedtraining"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4435,8 +3941,8 @@ export Capacite_resolute is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{7409762f-9ed4-43a7-9852-d614b1229500}
     Name             = "resolute"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4462,8 +3968,8 @@ export Capacite_security is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{3ae34252-5259-4533-aa47-6737becd9a48}
     Name             = "security"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4492,8 +3998,8 @@ export Capacite_security_feedback is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{2bdba237-87c2-495c-812c-23df856856f7}
     Name             = "security_feedback"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4519,15 +4025,15 @@ export Capacite_sigint_close is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{d0116721-a8a9-4943-a9c8-929671d551fd}
     Name             = "sigint_close"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 2250
     CastTime                = 0.00
     CheckVisibility         = False
     CanBeCastFromTransport  = False
-    TargetEffect            = ~/UnitEffect_Placebo
+    TargetEffect            = nil
     EffectDuration    = -1.00
     SelfEffect       = ~/UnitEffect_sigint_close
     TargetInBuilding       = True
@@ -4552,15 +4058,15 @@ export Capacite_sigint_far is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{4da4c11e-18aa-4ba7-8d78-2fdf564a9022}
     Name             = "sigint_far"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 4500
     CastTime                = 0.00
     CheckVisibility         = False
     CanBeCastFromTransport  = False
-    TargetEffect            = ~/UnitEffect_Placebo
+    TargetEffect            = nil
     EffectDuration    = -1.00
     SelfEffect       = ~/UnitEffect_sigint_far
     TargetInBuilding       = True
@@ -4586,8 +4092,8 @@ export Capacite_sigint_feedback is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{655f1d47-cca6-4ce9-bb43-f62b8c0d7033}
     Name             = "sigint_feedback"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 1
@@ -4615,8 +4121,8 @@ export Capacite_sniper is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{8d3a0125-e213-4514-84d8-6921a5d1feb5}
     Name                    = "sniper"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -4645,8 +4151,8 @@ export Capacite_sniper_feedback is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{7a2fd586-e50d-4ea4-97e7-3b5843938a77}
     Name                    = "sniper_feedback"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -4674,8 +4180,8 @@ export Capacite_sniper_no_snipe is TCapaciteDescriptor
 (
     DescriptorId            = GUID:{d789677b-b842-44d8-990e-82b1a32f91c7}
     Name                    = "sniper_no_snipe"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -4703,8 +4209,8 @@ export Capacite_kill_missile_2_seconds is TCapaciteDescriptor //a tester
 (
     DescriptorId     = GUID:{1fd471c5-9e49-4f6e-a82a-849fd87b9bda}
     Name             = "kill_missile_2_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4733,8 +4239,8 @@ export Capacite_kill_missile_4_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{1b027dd0-e805-4cdc-833c-5fae2590779a}
     Name             = "kill_missile_4_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4763,8 +4269,8 @@ export Capacite_kill_missile_5_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{22d9bb46-5c7d-47a4-9d77-84f778f2f9e4}
     Name             = "kill_missile_5_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4793,8 +4299,8 @@ export Capacite_kill_missile_6_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{5aa0dafd-8d16-4f17-87bb-771336ef9989}
     Name             = "kill_missile_6_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4823,8 +4329,8 @@ export Capacite_kill_missile_7_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{b6df30e3-b039-4943-87af-01b20eab84a6}
     Name             = "kill_missile_7_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4853,8 +4359,8 @@ export Capacite_kill_missile_8_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{f4c565f5-c571-4ada-b17f-b129cc6235ec}
     Name             = "kill_missile_8_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4883,8 +4389,8 @@ export Capacite_kill_missile_9_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{f7161cae-ae20-4ebd-b839-12bb5942d390}
     Name             = "kill_missile_9_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4913,8 +4419,8 @@ export Capacite_kill_missile_10_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{66eafb80-0cd1-4b80-b2e6-0089057f4fc1}
     Name             = "kill_missile_10_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4943,8 +4449,8 @@ export Capacite_kill_missile_11_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{563e7b0c-242e-4e5d-88f5-2907b020f09d}
     Name             = "kill_missile_11_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -4973,8 +4479,8 @@ export Capacite_kill_missile_12_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{0bf1a14e-45d8-4f3c-b96c-380686408b35}
     Name             = "kill_missile_12_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5003,8 +4509,8 @@ export Capacite_kill_missile_13_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{00c87951-98db-4637-ae9f-87d61cbeafca}
     Name             = "kill_missile_13_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5033,8 +4539,8 @@ export Capacite_kill_missile_14_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{43ce41d9-fb34-4306-bbe0-a2d209242f6f}
     Name             = "kill_missile_14_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5063,8 +4569,8 @@ export Capacite_kill_missile_15_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{619ec50f-fed1-4321-b61c-4ff9602215c7}
     Name             = "kill_missile_15_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5093,8 +4599,8 @@ export Capacite_kill_missile_16_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{720788e7-6a6d-43ce-ac80-73df3766b922}
     Name             = "kill_missile_16_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5123,8 +4629,8 @@ export Capacite_kill_missile_17_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{2178f11e-8cac-438b-9042-8b7cd9a2eb1c}
     Name             = "kill_missile_17_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5153,8 +4659,8 @@ export Capacite_kill_missile_18_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9ac420f2-8830-4f4e-9f57-0fb16df97095}
     Name             = "kill_missile_18_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5183,8 +4689,8 @@ export Capacite_kill_missile_19_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{668403c7-2a4e-4d7d-94c5-c6c7e24c67a7}
     Name             = "kill_missile_19_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5213,8 +4719,8 @@ export Capacite_kill_missile_20_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{a549b250-e245-400f-b8aa-46642f4e5af7}
     Name             = "kill_missile_20_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5243,8 +4749,8 @@ export Capacite_kill_missile_21_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{ef9711dd-a0d6-4564-95d3-0c8616ef2759}
     Name             = "kill_missile_21_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5273,8 +4779,8 @@ export Capacite_kill_missile_22_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{278734e2-231f-41f2-bdae-a623c202ab22}
     Name             = "kill_missile_22_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5303,8 +4809,8 @@ export Capacite_kill_missile_23_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{457d3b7c-90c3-4f55-b24d-0529e05ef478}
     Name             = "kill_missile_23_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5333,8 +4839,8 @@ export Capacite_kill_missile_24_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{e65bf06b-4831-4a96-ba8b-4b22f88ef4b2}
     Name             = "kill_missile_24_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5363,8 +4869,8 @@ export Capacite_kill_missile_25_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{68a7b0fa-7617-4b74-96d8-680ed48f8d07}
     Name             = "kill_missile_25_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5393,15 +4899,15 @@ export Capacite_cover_no_cover is TCapaciteDescriptor //want a delay so vehicles
 (
     DescriptorId     = GUID:{a7a080c1-cca6-4302-8591-9f469a0651eb}
     Name             = "cover_no_cover"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
     CastTime            = 15.00
     CheckVisibility     = True
     CanBeCastFromTransport  = True
-    TargetEffect         = ~/UnitEffect_EW_OK//UnitEffect_Ajoute_Tag_cover_ok
+    TargetEffect         = ~/UnitEffect_Ajoute_Tag_cover_ok
     EffectDuration = -1.00
     TargetInBuilding       = True
     TargetInTransport      = True
@@ -5422,8 +4928,8 @@ export Capacite_dig_in_no_dig_in is TCapaciteDescriptor //want a delay so vehicl
 (
     DescriptorId     = GUID:{f868a332-b104-4998-9e31-a5faa0e24c27}
     Name             = "dig_in_no_dig_in"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5452,8 +4958,8 @@ export Capacite_dig_in_no_dig_in_tank is TCapaciteDescriptor //want a delay so v
 (
     DescriptorId     = GUID:{5070d605-3635-43ef-bc21-cf7964917cc2}
     Name             = "dig_in_no_dig_in_tank"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5482,8 +4988,8 @@ export Capacite_no_tripod is TCapaciteDescriptor //HMGs and AGLs need to be moun
 (
     DescriptorId     		= GUID:{e0d4b981-8a9d-48c4-baa6-08ac217863d9}
     Name             		= "No Tripod"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -5511,8 +5017,8 @@ export Capacite_tripod is TCapaciteDescriptor //set up tripod
 (
     DescriptorId    		= GUID:{ef64ebec-10b1-4e1e-b370-8cdbc7f3d096}
     Name             		= "Tripod"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -5541,8 +5047,8 @@ export Capacite_tripod_no_tripod is TCapaciteDescriptor //want a delay so vehicl
 (
     DescriptorId    		= GUID:{59c6608c-6a2f-441c-b158-261af568cf07}
     Name             		= "tripod_no_tripod"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -5570,8 +5076,8 @@ export Capacite_tripod_no_tripod_Rapier is TCapaciteDescriptor //30 second set u
 (
     DescriptorId     		= GUID:{749594f0-3abd-4915-ba42-c6ed1bda2b30}
     Name             		= "tripod_no_tripod_rapier"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -5599,8 +5105,8 @@ export Capacite_tripod_no_tripod_OSA is TCapaciteDescriptor // 3:30 set up
 (
     DescriptorId     		= GUID:{111dea31-a53a-4e87-890b-f58307de655b}
     Name             		= "tripod_no_tripod_OSA"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -5628,8 +5134,8 @@ export Capacite_tripod_no_tripod_towed_SAM is TCapaciteDescriptor //30 second se
 (
     DescriptorId     		= GUID:{f10dc5ee-6c47-4299-8404-b520f011a604}
     Name             		= "tripod_no_tripod_towed_SAM"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -5657,8 +5163,8 @@ export Capacite_tripod_no_tripod_fast is TCapaciteDescriptor //want a delay so v
 (
     DescriptorId     		= GUID:{7a08f0a3-0bd3-4974-bfcb-b456287dd12b}
     Name             		= "tripod_no_tripod_fast"
-    CumulEffect             = ~/CapaciteCumulEffect_jamais
-    Declenchement           = ~/CapaciteDeclenchementType_automatique
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
     TargetTeamFilter        = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance    = ~/AllianceRelation/vide
     RangeGRU                = 0
@@ -5686,8 +5192,8 @@ export Capacite_slow_missile_1_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{35a51933-0edd-47ab-825d-a43a7f80c23f}
     Name             = "slow_missile_1_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5714,8 +5220,8 @@ export Capacite_slow_missile_2_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{feb66c62-beda-4abc-900c-86db8980dbeb}
     Name             = "slow_missile_2_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5742,8 +5248,8 @@ export Capacite_slow_missile_3_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{6ff87e4b-06c7-4dd0-a5f0-72fd5601be5b}
     Name             = "slow_missile_3_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5770,8 +5276,8 @@ export Capacite_slow_missile_4_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{07570566-7195-4557-93a6-9075a9be1032}
     Name             = "slow_missile_4_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5798,8 +5304,8 @@ export Capacite_slow_missile_5_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{95e85877-b272-437a-bc40-378ede091f5f}
     Name             = "slow_missile_5_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5826,8 +5332,8 @@ export Capacite_slow_missile_6_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{ac5678e4-35b5-4567-ab23-d8629284ec13}
     Name             = "slow_missile_6_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5854,8 +5360,8 @@ export Capacite_slow_missile_7_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{f3e49be4-d3f8-47db-8065-c17fac824cc5}
     Name             = "slow_missile_7_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5882,8 +5388,8 @@ export Capacite_slow_missile_8_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{c3914d6b-ba9b-4379-bd95-3f0aac3879c7}
     Name             = "slow_missile_8_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5910,8 +5416,8 @@ export Capacite_slow_missile_9_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{27c42fc5-0bd9-4d54-bc17-fc60af544dcc}
     Name             = "slow_missile_9_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5938,8 +5444,8 @@ export Capacite_slow_missile_10_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{5031528d-ba83-4b96-a11f-c21db6a7b4a1}
     Name             = "slow_missile_10_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5966,8 +5472,8 @@ export Capacite_slow_missile_11_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9945ee8b-8d6b-4e03-bfd2-c1286099f0ee}
     Name             = "slow_missile_11_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -5994,8 +5500,8 @@ export Capacite_slow_missile_12_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{435dac0c-8a2a-4f73-be55-a20f7c390c4f}
     Name             = "slow_missile_12_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6022,8 +5528,8 @@ export Capacite_slow_missile_13_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{842dd35f-8c14-48f8-9f86-8e36581414a7}
     Name             = "slow_missile_13_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6050,8 +5556,8 @@ export Capacite_slow_missile_14_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{79bcc862-472d-4e5e-8845-c25787e4b321}
     Name             = "slow_missile_14_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6078,8 +5584,8 @@ export Capacite_slow_missile_15_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{70527aef-921c-4440-9b33-45f82f4b51de}
     Name             = "slow_missile_15_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6106,8 +5612,8 @@ export Capacite_slow_missile_16_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{fc00c39c-d17d-4efb-93f0-8e76fb8d3643}
     Name             = "slow_missile_16_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6134,8 +5640,8 @@ export Capacite_slow_missile_17_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{96f93915-85c3-4ed9-a37f-522150b90029}
     Name             = "slow_missile_17_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6162,8 +5668,8 @@ export Capacite_slow_missile_18_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{9381fe49-4d84-4f31-9786-71e6bed68121}
     Name             = "slow_missile_18_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6190,8 +5696,8 @@ export Capacite_slow_missile_19_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{de345248-71b7-4184-b0ab-1d940e2955df}
     Name             = "slow_missile_19_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6218,8 +5724,8 @@ export Capacite_slow_missile_20_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{cc1fd62a-6578-437b-aa18-9ec629f38a96}
     Name             = "slow_missile_20_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6246,8 +5752,8 @@ export Capacite_slow_missile_21_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{aeab1d9f-5383-4d8a-bb54-00409466cb51}
     Name             = "slow_missile_21_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6274,8 +5780,8 @@ export Capacite_slow_missile_22_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{7f721bba-d25b-4845-bca5-1a03484ae6c0}
     Name             = "slow_missile_22_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6302,8 +5808,8 @@ export Capacite_slow_missile_23_seconds is TCapaciteDescriptor
 (
     DescriptorId     = GUID:{afc5c21d-b495-4487-b7c5-8036c3e830d9}
     Name             = "slow_missile_23_seconds"
-    CumulEffect          = ~/CapaciteCumulEffect_jamais
-    Declenchement        = ~/CapaciteDeclenchementType_automatique
+    StackPolicy          = ~/CapacityStackPolicy_never
+    Trigger        = ~/CapacityTriggerType_automatic
     TargetTeamFilter     = ~/CapaciteTargetFilter_joueur
     InfluenceMapAlliance = ~/AllianceRelation/vide
     RangeGRU               = 0
@@ -6324,5 +5830,203 @@ export Capacite_slow_missile_23_seconds is TCapaciteDescriptor
     ForbiddenTargetTags = [
     ]
     Conditions = [
+    ]
+)
+export Capacite_vehicle_heard_loud is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{5814d1a8-3e92-42c1-b072-f660e35ce312}
+    Name             = "vehicle_heard_loud"
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 300
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = False
+    TargetEffect            = nil
+    EffectDuration    = -1.00
+    SelfEffect       = ~/UnitEffect_Hear_Loud
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+        "Char",
+		"Vehicule",
+		"Canon_AA",
+		"Artillerie",
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+    ]
+)
+export Capacite_vehicle_heard_medium is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{d9a60201-f479-41a0-8531-e98909ebcc23}
+    Name             = "vehicle_heard_medium"
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 900
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = False
+    TargetEffect            = nil
+    EffectDuration    = -1.00
+    SelfEffect       = ~/UnitEffect_Hear_Medium
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+        "Char",
+		"Vehicule",
+		"Canon_AA",
+		"Artillerie",
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+        ~/ConditionTagNotRaisedInUnit_heard_loud,
+    ]
+)
+export Capacite_vehicle_heard_quiet is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{ea41f346-a0b0-4352-8272-49d1a6f8377b}
+    Name             = "vehicle_heard_quiet"
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 1800
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = False
+    TargetEffect            = nil
+    EffectDuration    = -1.00
+    SelfEffect       = ~/UnitEffect_Hear_Quiet
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+        "Char",
+		"Vehicule",
+		"Canon_AA",
+		"Artillerie",
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+        ~/ConditionTagNotRaisedInUnit_heard_medium,
+        ~/ConditionTagNotRaisedInUnit_heard_loud,
+    ]
+)
+export Capacite_infantry_heard_loud is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{636e760b-f129-4fa8-a5c3-977bfadb94ef}
+    Name             = "infantry_heard_loud"
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 65
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = False
+    TargetEffect            = nil
+    EffectDuration    = -1.00
+    SelfEffect       = ~/UnitEffect_Hear_infantry_Loud
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+        "Infanterie",
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+        ~/ConditionNotInMovement,
+    ]
+)
+export Capacite_infantry_heard_medium is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{b4d11255-8255-4bac-b833-f3aa81b749b9}
+    Name             = "infantry_heard_medium"
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 120
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = False
+    TargetEffect            = nil
+    EffectDuration    = -1.00
+    SelfEffect       = ~/UnitEffect_Hear_infantry_Medium
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+        "Infanterie",
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+        ~/ConditionNotInMovement,
+        ~/ConditionTagNotRaisedInUnit_heard_inf_loud,
+    ]
+)
+export Capacite_infantry_heard_quiet is TCapaciteDescriptor
+(
+    DescriptorId     = GUID:{d33d4849-ca77-449e-864a-0b05d1895d3c}
+    Name             = "infantry_heard_quiet"
+    StackPolicy             = ~/CapacityStackPolicy_never
+    Trigger           = ~/CapacityTriggerType_automatic
+    TargetTeamFilter        = ~/CapaciteTargetFilter_ennemi
+    InfluenceMapAlliance    = ~/AllianceRelation/vide
+    RangeGRU                = 250
+    CastTime                = 0.00
+    CheckVisibility         = False
+    CanBeCastFromTransport  = False
+    TargetEffect            = nil
+    EffectDuration    = -1.00
+    SelfEffect       = ~/UnitEffect_Hear_infantry_Quiet
+    TargetInBuilding       = True
+    TargetInTransport      = True
+    TargetInSelf           = True
+    TargetMySelf           = True
+    FeedbackActivationMask  = ~/CapaciteFeedbackActivationMask_never
+    DisplayRangeColor      = RGBA[0,0,0,0]
+    DisplayRangeThickness  = 0.00
+    AllowedTargetTags = [
+        "Infanterie",
+    ]
+    ForbiddenTargetTags = [
+    ]
+    Conditions = [
+        ~/ConditionNotInMovement,
+        ~/ConditionTagNotRaisedInUnit_heard_inf_medium,
+        ~/ConditionTagNotRaisedInUnit_heard_inf_loud,
     ]
 )

@@ -984,58 +984,78 @@ DeckOverview is BUCKTranslationAnimatedContainerDescriptor
     Components =
     [
         OmbrePanel(),
-        DeckOverviewContent
+        DeckOverviewContentList,
     ]
+)
+
+DeckOverviewNameHeaderMargin is 50.0
+DeckOverviewNameHeader is BUCKTextDescriptor
+(
+    ElementName = "DeckOverviewName"
+
+    ComponentFrame = TUIFramePropertyRTTI
+    (
+        RelativeWidthHeight = [1.0, 0.0]
+        MagnifiableWidthHeight = [-(~/DeckOverviewNameHeaderMargin*2), 30.0]
+        MagnifiableOffset = [~/DeckOverviewNameHeaderMargin, 0.0]
+    )
+
+    ParagraphStyle = TParagraphStyle
+    (
+        Alignment = UIText_Center
+        VerticalAlignment = UIText_Bottom
+        InterLine = 0
+    )
+
+    TextStyle = "Default"
+    TypefaceToken = "Liberator"
+    BigLineAction = ~/BigLineAction/ResizeFont
+    TextToken = "DLS_DNAME"
+    TextDico = ~/LocalisationConstantes/dico_interface_outgame
+    TextColor = "gris_load"
+    TextSize = "32"
 )
 
 //--------------------------------------------------------
 
-DeckOverviewContent is BUCKContainerDescriptor
+DeckOverviewContentList is BUCKListDescriptor
 (
-    ElementName = "DeckOverviewContent"
+    ElementName = "DeckOverviewContentList"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1.0, 1.0]
-        MagnifiableWidthHeight = [-180.0, -30.0]
-        MagnifiableOffset = [130.0, 30.0]
+        RelativeWidthHeight = [1.0, 0.0]
     )
 
-    Components =
+    Axis = ~/ListAxis/Vertical
+    InterItemMargin = TRTTILength( Magnifiable = 5.0 )
+
+    Elements =
     [
-        BUCKListDescriptor
+        BUCKListElementSpacer( Magnifiable = 15.0 ),
+        BUCKListElementDescriptor
         (
-            ElementName = "DeckOverviewContentList"
-            ComponentFrame = TUIFramePropertyRTTI
-            (
-                RelativeWidthHeight = [1.0, 0.0]
-            )
-
-            Axis = ~/ListAxis/Vertical
-            InterItemMargin = TRTTILength( Magnifiable = 5.0 )
-
-            Elements =
-            [
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = DeckOverviewInformationsHeadersFrame
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = DeckOverviewInformationsContentFrame
-                ),
-                BUCKListElementSpacer( Magnifiable = 10.0 ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = DeckOverviewActivationPointsFrame
-                ),
-                BUCKListElementSpacer( Magnifiable = 5.0 ),
-                BUCKListElementDescriptor
-                (
-                    ExtendWeight = 1.0
-                    ComponentDescriptor = DeckOverviewUnitsFrame
-                ),
-            ]
-        )
+            ComponentDescriptor = DeckOverviewNameHeader
+        ),
+        BUCKListElementSpacer( Magnifiable = 5.0 ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = DeckOverviewInformationsHeadersFrame
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = DeckOverviewInformationsContentFrame
+        ),
+        BUCKListElementSpacer( Magnifiable = 5.0 ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = DeckOverviewActivationPointsFrame
+        ),
+        BUCKListElementSpacer( Magnifiable = 5.0 ),
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = DeckOverviewUnitsFrame
+        ),
     ]
 )
 
@@ -1043,327 +1063,242 @@ DeckOverviewContent is BUCKContainerDescriptor
 
 DeckOverviewInfosColumnWidth is 130.0
 
-DeckOverviewInformationsHeadersFrame is BUCKContainerDescriptor
+DeckOverviewInformationsHeadersFrame is BUCKListDescriptor
 (
-    ElementName = "DeckOverviewInformationsHeadersFrame"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 45.0]
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
     )
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-    Components =
+    Elements =
     [
-        BUCKListDescriptor
+        BUCKListElementDescriptor
         (
-            ComponentFrame = TUIFramePropertyRTTI
+            ComponentDescriptor = BUCKTextDescriptor
             (
-                RelativeWidthHeight = [0.0, 1.0]
-                MagnifiableOffset = [0.0, 5.0]
-            )
-            Axis = ~/ListAxis/Horizontal
+                ElementName = "DeckOverviewDivisionHeader"
 
-            Elements =
-            [
-                BUCKListElementDescriptor
+                ComponentFrame = TUIFramePropertyRTTI
                 (
-                    ExtendWeight = 1.0
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ElementName = "DeckOverviewNameHeader"
-
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [1.0, 1.0]
-                        )
-
-                        HorizontalFitStyle = ~/FitStyle/UserDefined
-
-                        ParagraphStyle = TParagraphStyle
-                        (
-                            Alignment = UIText_Left
-                            VerticalAlignment = UIText_Bottom
-                            InterLine = 0
-                        )
-
-                        TextStyle = "Default"
-                        TypefaceToken = "Liberator"
-                        BigLineAction = ~/BigLineAction/ResizeFont
-                        TextToken = "DLS_DNAME"
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "gris_load"
-                        TextSize = "24"
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ElementName = "DeckOverviewDivisionHeader"
-
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
-                        )
-
-                        HorizontalFitStyle = ~/FitStyle/UserDefined
-
-                        ParagraphStyle = TParagraphStyle
-                        (
-                            Alignment = UIText_Center
-                            VerticalAlignment = UIText_Bottom
-                            InterLine = 0
-                        )
-
-                        TextStyle = "Default"
-                        TypefaceToken = "Liberator"
-                        BigLineAction = ~/BigLineAction/ResizeFont
-                        TextToken = "DLS_DIVIS"
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "gris_load"
-                        TextSize = "24"
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ElementName = "DeckOverviewNationHeader"
-
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
-                        )
-
-                        HorizontalFitStyle = ~/FitStyle/UserDefined
-
-                        ParagraphStyle = TParagraphStyle
-                        (
-                            Alignment = UIText_Center
-                            VerticalAlignment = UIText_Bottom
-                            InterLine = 0
-                        )
-
-                        TextStyle = "Default"
-                        TypefaceToken = "Liberator"
-                        BigLineAction = ~/BigLineAction/ResizeFont
-                        TextToken = "DB_FLAG"
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "gris_load"
-                        TextSize = "24"
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ElementName = "DeckOverviewAllianceHeader"
-
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
-                        )
-
-                        HorizontalFitStyle = ~/FitStyle/UserDefined
-
-                        ParagraphStyle = TParagraphStyle
-                        (
-                            Alignment = UIText_Center
-                            VerticalAlignment = UIText_Bottom
-                            InterLine = 0
-                        )
-
-                        TextStyle = "Default"
-                        TypefaceToken = "Liberator"
-                        BigLineAction = ~/BigLineAction/ResizeFont
-                        TextToken = "DB_ALLIA"
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "gris_load"
-                        TextSize = "24"
-                    )
+                    MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
                 )
-            ]
+
+                HorizontalFitStyle = ~/FitStyle/UserDefined
+                VerticalFitStyle = ~/FitStyle/FitToContent
+
+                ParagraphStyle = TParagraphStyle
+                (
+                    Alignment = UIText_Center
+                    VerticalAlignment = UIText_Bottom
+                    InterLine = 0
+                )
+
+                TextStyle = "Default"
+                TypefaceToken = "Liberator"
+                BigLineAction = ~/BigLineAction/ResizeFont
+                TextToken = "DLS_DIVIS"
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "24"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = "DeckOverviewNationHeader"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
+                )
+
+                HorizontalFitStyle = ~/FitStyle/UserDefined
+                VerticalFitStyle = ~/FitStyle/FitToContent
+
+                ParagraphStyle = TParagraphStyle
+                (
+                    Alignment = UIText_Center
+                    VerticalAlignment = UIText_Bottom
+                    InterLine = 0
+                )
+
+                TextStyle = "Default"
+                TypefaceToken = "Liberator"
+                BigLineAction = ~/BigLineAction/ResizeFont
+                TextToken = "DB_FLAG"
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "24"
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = "DeckOverviewAllianceHeader"
+
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
+                )
+
+                HorizontalFitStyle = ~/FitStyle/UserDefined
+                VerticalFitStyle = ~/FitStyle/FitToContent
+
+                ParagraphStyle = TParagraphStyle
+                (
+                    Alignment = UIText_Center
+                    VerticalAlignment = UIText_Bottom
+                    InterLine = 0
+                )
+
+                TextStyle = "Default"
+                TypefaceToken = "Liberator"
+                BigLineAction = ~/BigLineAction/ResizeFont
+                TextToken = "DB_ALLIA"
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "24"
+            )
         )
     ]
 )
 
 //--------------------------------------------------------
 
-DeckOverviewInformationsContentFrame is BUCKContainerDescriptor
+DeckOverviewInformationsContentFrame is BUCKListDescriptor
 (
-    ElementName = "DeckOverviewInformationsContentFrame"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1.0, 0.0]
-        MagnifiableWidthHeight = [0.0, 30.0]
+        AlignementToAnchor = [0.5, 0.0]
+        AlignementToFather = [0.5, 0.0]
     )
+    Axis = ~/ListAxis/Horizontal
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
-    Components =
+    Elements =
     [
-        BUCKListDescriptor
+        BUCKListElementDescriptor
         (
-            ComponentFrame = TUIFramePropertyRTTI
+            ComponentDescriptor = BUCKTextureDescriptor
             (
-                RelativeWidthHeight = [0.0, 1.0]
-            )
-            Axis = ~/ListAxis/Horizontal
-
-            Elements =
-            [
-                BUCKListElementDescriptor
+                ElementName = "DeckOverviewDivision"
+                ComponentFrame = TUIFramePropertyRTTI
                 (
-                    ExtendWeight = 1.0
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ElementName = "DeckOverviewName"
-
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [1.0, 1.0]
-                        )
-
-                        HorizontalFitStyle = ~/FitStyle/UserDefined
-                        ParagraphStyle = paragraphStyleTextLeftAlign
-
-                        TextStyle = "Default"
-                        TypefaceToken = "Liberator"
-                        BigLineAction = ~/BigLineAction/ResizeFont
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "gris_load"
-                        TextSize = "28"
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextureDescriptor
-                    (
-                        ElementName = "DeckOverviewDivision"
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
-                        )
-                        TextureFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
-                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextureDescriptor
-                    (
-                        ElementName = "DeckOverviewNation"
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
-                        )
-                        TextureFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
-                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-                    )
-                ),
-                BUCKListElementDescriptor
-                (
-                    ComponentDescriptor = BUCKTextureDescriptor
-                    (
-                        ElementName = "DeckOverviewAlliance"
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                            MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 0.0]
-                        )
-                        TextureFrame = TUIFramePropertyRTTI
-                        (
-                            AlignementToAnchor = [0.5, 0.5]
-                            AlignementToFather = [0.5, 0.5]
-                        )
-                        ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
-                    )
+                    MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 30.0]
                 )
-            ]
+                TextureFrame = TUIFramePropertyRTTI
+                (
+                    AlignementToAnchor = [0.5, 0.5]
+                    AlignementToFather = [0.5, 0.5]
+                )
+                ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextureDescriptor
+            (
+                ElementName = "DeckOverviewNation"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 30.0]
+                )
+                TextureFrame = TUIFramePropertyRTTI
+                (
+                    AlignementToAnchor = [0.5, 0.5]
+                    AlignementToFather = [0.5, 0.5]
+                )
+                ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+            )
+        ),
+        BUCKListElementDescriptor
+        (
+            ComponentDescriptor = BUCKTextureDescriptor
+            (
+                ElementName = "DeckOverviewAlliance"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    MagnifiableWidthHeight = [DeckOverviewInfosColumnWidth, 30.0]
+                )
+                TextureFrame = TUIFramePropertyRTTI
+                (
+                    AlignementToAnchor = [0.5, 0.5]
+                    AlignementToFather = [0.5, 0.5]
+                )
+                ResizeMode = ~/TextureResizeMode/FitToParentConservingRatio
+            )
         )
     ]
 )
 
+
+DeckOverviewInfosMargin is 110.0
+DeckOverviewCategoryNameWidth is 60.0
+DeckOverviewItemsListInterMargin is 5.0
+
 //--------------------------------------------------------
 
-DeckOverviewActivationPointsFrame is BUCKContainerDescriptor
+DeckOverviewActivationPointsFrame is BUCKListDescriptor
 (
-    ElementName = "DeckOverviewActivationPointsFrame"
     ComponentFrame = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [1.0, 0.0]
         MagnifiableWidthHeight = [0.0, 30.0]
     )
+    Axis = ~/ListAxis/Horizontal
 
-    Components =
+    Elements =
     [
-        BUCKListDescriptor
+        // If you want to remove this +2, you'll have to realign every unit button in the game UI
+        BUCKListElementSpacer( Magnifiable = ~/DeckOverviewInfosMargin + ~/DeckOverviewCategoryNameWidth + ~/DeckOverviewItemsListInterMargin + 2.0 ),
+        BUCKListElementDescriptor
         (
-            ComponentFrame = TUIFramePropertyRTTI
+            ComponentDescriptor = BUCKTextDescriptor
             (
-                RelativeWidthHeight = [0.0, 1.0]
-            )
-            Axis = ~/ListAxis/Horizontal
-
-            Elements =
-            [
-                BUCKListElementDescriptor
+                ComponentFrame = TUIFramePropertyRTTI
                 (
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [0.0, 1.0]
-                        )
-
-                        HorizontalFitStyle = ~/FitStyle/FitToContent
-                        ParagraphStyle = paragraphStyleTextLeftAlign
-
-                        TextStyle = "Default"
-                        TextToken = "DCKO_ACTIV"
-                        TypefaceToken = "Liberator"
-                        BigLineAction = ~/BigLineAction/ResizeFont
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "gris_load"
-                        TextSize = "18"
-                    )
-                ),
-                BUCKListElementSpacer(Magnifiable = 20.0),
-                BUCKListElementDescriptor
-                (
-                    ExtendWeight = 1.0
-                    ComponentDescriptor = BUCKTextDescriptor
-                    (
-                        ElementName = "DeckOverviewActivationPoints"
-                        ComponentFrame = TUIFramePropertyRTTI
-                        (
-                            RelativeWidthHeight = [1.0, 1.0]
-                        )
-
-                        HorizontalFitStyle = ~/FitStyle/UserDefined
-                        ParagraphStyle = paragraphStyleTextLeftAlign
-
-                        TextStyle = "Default"
-                        TextToken = "DCKO_FMT"
-                        TypefaceToken = "Liberator"
-                        BigLineAction = ~/BigLineAction/ResizeFont
-                        TextDico = ~/LocalisationConstantes/dico_interface_outgame
-                        TextColor = "gris_load"
-                        TextSize = "18"
-                    )
+                    RelativeWidthHeight = [0.0, 1.0]
                 )
-            ]
+
+                HorizontalFitStyle = ~/FitStyle/FitToContent
+                ParagraphStyle = paragraphStyleTextLeftAlign
+
+                TextStyle = "Default"
+                TextToken = "DCKO_ACTIV"
+                TypefaceToken = "Liberator"
+                BigLineAction = ~/BigLineAction/ResizeFont
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "18"
+            )
+        ),
+        BUCKListElementSpacer(Magnifiable = 20.0),
+        BUCKListElementDescriptor
+        (
+            ExtendWeight = 1.0
+            ComponentDescriptor = BUCKTextDescriptor
+            (
+                ElementName = "DeckOverviewActivationPoints"
+                ComponentFrame = TUIFramePropertyRTTI
+                (
+                    RelativeWidthHeight = [1.0, 1.0]
+                )
+
+                HorizontalFitStyle = ~/FitStyle/UserDefined
+                ParagraphStyle = paragraphStyleTextLeftAlign
+
+                TextStyle = "Default"
+                TextToken = "DCKO_FMT"
+                TypefaceToken = "Liberator"
+                BigLineAction = ~/BigLineAction/ResizeFont
+                TextDico = ~/LocalisationConstantes/dico_interface_outgame
+                TextColor = "gris_load"
+                TextSize = "18"
+            )
         )
     ]
 )
@@ -1376,8 +1311,8 @@ DeckOverviewUnitsFrame is BUCKSpecificScrollingContainerDescriptor
     ComponentFrame = TUIFramePropertyRTTI
     (
         RelativeWidthHeight = [1.0, 1.0]
-        MagnifiableWidthHeight = [20.0, -40.0]
-        MagnifiableOffset = [-20.0, 0.0]
+        MagnifiableWidthHeight = [-(~/DeckOverviewInfosMargin + 30.0), 0.0]
+        MagnifiableOffset = [~/DeckOverviewInfosMargin, 0.0]
     )
 
     ExternalScrollbar = true
@@ -1402,7 +1337,6 @@ DeckOverviewUnitsFrame is BUCKSpecificScrollingContainerDescriptor
                     ComponentFrame = TUIFramePropertyRTTI
                     (
                         RelativeWidthHeight = [1.0, 0.0]
-                        MagnifiableWidthHeight = [-30.0, 0.0]
                     )
                     Axis = ~/ListAxis/Vertical
                     ChildFitToContent = true
@@ -1434,7 +1368,7 @@ DeckOverviewCategoryLine is BUCKListDescriptor
     )
 
     Axis = ~/ListAxis/Horizontal
-    InterItemMargin = TRTTILength(Magnifiable = 5.0)
+    InterItemMargin = TRTTILength(Magnifiable = ~/DeckOverviewItemsListInterMargin)
 
     Elements =
     [
@@ -1446,7 +1380,7 @@ DeckOverviewCategoryLine is BUCKListDescriptor
                 ComponentFrame = TUIFramePropertyRTTI
                 (
                     RelativeWidthHeight = [0.0, 1.0]
-                    MagnifiableWidthHeight = [60.0, 0.0]
+                    MagnifiableWidthHeight = [~/DeckOverviewCategoryNameWidth, 0.0]
                 )
 
                 HorizontalFitStyle = ~/FitStyle/UserDefined

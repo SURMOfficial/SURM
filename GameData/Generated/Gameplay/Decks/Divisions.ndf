@@ -6,7 +6,7 @@ export Descriptor_Deck_Division_BEL_16e_Mecanisee_multi is TDeckDivisionDescript
     DescriptorId = GUID:{7265322a-3993-4b09-9f2c-d775bcc7e14e}
     CfgName = 'BEL_16e_Mecanisee_multi'
     DivisionName = 'DCPLBIYTNN'
-    InterfaceOrder = 30.0
+    InterfaceOrder = 32.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'BEL', 'NATO', 'MECHANIZ']
     DescriptionHintTitleToken = 'DCPLBIYTNN'
@@ -30,7 +30,7 @@ export Descriptor_Deck_Division_BEL_Division_Mobilisation_multi is TDeckDivision
     DescriptorId = GUID:{561f1843-9bb7-45e3-b731-813f9ca996d5}
     CfgName = 'BEL_Division_Mobilisation_multi'
     DivisionName = 'CODMEOMHDV'
-    InterfaceOrder = 32.0
+    InterfaceOrder = 33.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'BEL', 'NATO', 'INFANREG']
     DescriptionHintTitleToken = 'ZGEORIVEPL'
@@ -45,7 +45,6 @@ export Descriptor_Deck_Division_BEL_Division_Mobilisation_multi is TDeckDivision
     StandoutUnits =
     [
         $/GFX/Unit/Descriptor_Unit_ParaCmdo_reserve_BEL,
-        $/GFX/Unit/Descriptor_Unit_M55_203mm_BEL,
         $/GFX/Unit/Descriptor_Unit_M47_Patton_BEL,
     ]
 )
@@ -54,7 +53,7 @@ export Descriptor_Deck_Division_CAN_1st_Canadian_multi is TDeckDivisionDescripto
     DescriptorId = GUID:{66e7d6ef-7eae-48b0-8928-b84cb0867b33}
     CfgName = 'CAN_1st_Canadian_multi'
     DivisionName = 'PUHREDFXOM'
-    InterfaceOrder = 35.0
+    InterfaceOrder = 36.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'CAN', 'NATO', 'MECHANIZ']
     DescriptionHintTitleToken = 'NDLCSJEWBC'
@@ -73,12 +72,60 @@ export Descriptor_Deck_Division_CAN_1st_Canadian_multi is TDeckDivisionDescripto
         $/GFX/Unit/Descriptor_Unit_AVGP_Cougar_CAN,
     ]
 )
+export Descriptor_Deck_Division_DK_Jyske_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{d73ccfa6-b5e4-4272-be51-934670940af5}
+    CfgName = 'DK_Jyske_multi'
+    DivisionName = 'SXLPEXVKMR'
+    InterfaceOrder = -1.0//39.0
+    DivisionCoalition = ECoalition/NATO
+    DivisionTags = ['DK', 'NATO', 'MECHANIZ']
+    DescriptionHintTitleToken = 'VFFWEPTDJT'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_DK_Jyske_multi_Rule
+    CostMatrix = MatrixCostName_DK_Jyske_multi
+    EmblemTexture     = "Texture_Division_Emblem_DK_Jyske"
+    TypeToken        = "MECHANIZ"
+    SummaryTextToken = "SUMDKJyske"
+    HistoryTextToken = "HISDKJyske"
+    CountryId = "DK"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_M41_DK1_Walker_reco_DK,
+        $/GFX/Unit/Descriptor_Unit_Jaeger_DK,
+        $/GFX/Unit/Descriptor_Unit_Ecureuil_TOW_DK,
+    ]
+)
+export Descriptor_Deck_Division_DK_Ostre_Landkommando_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{9f1026d3-0bc4-4d96-b90b-b0bd33abe2ea}
+    CfgName = 'DK_Ostre_Landkommando_multi'
+    DivisionName = 'FRGLSOWZWS'
+    InterfaceOrder = -1.0//40.0
+    DivisionCoalition = ECoalition/NATO
+    DivisionTags = ['DK', 'NATO', 'INFANREG']
+    DescriptionHintTitleToken = 'GLCZEVUTIJ'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_DK_Ostre_Landkommando_multi_Rule
+    CostMatrix = MatrixCostName_DK_Ostre_Landkommando_multi
+    EmblemTexture     = "Texture_Division_Emblem_DK_Ostre_Landkommando"
+    TypeToken        = "INFANREG"
+    SummaryTextToken = "SUMDKOstre"
+    HistoryTextToken = "HISDKOstre"
+    CountryId = "DK"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_Centurion_Mk5_2_upgraded_DK,
+        $/GFX/Unit/Descriptor_Unit_Reserve_DK,
+        $/GFX/Unit/Descriptor_Unit_F18_Hornet_SEAD_US,
+    ]
+)
 export Descriptor_Deck_Division_ESP_Division_Brunete_multi is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{06544c5f-b76f-4518-a435-674250af63ca}
     CfgName = 'ESP_Division_Brunete_multi'
     DivisionName = 'SUBZCHCRXV'
-    InterfaceOrder = 36.0
+    InterfaceOrder = 37.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'ESP', 'NATO', 'MOTORIZD']
     DescriptionHintTitleToken = 'ZXRBOEEYUK'
@@ -102,9 +149,9 @@ export Descriptor_Deck_Division_ESP_Division_Guzman_multi is TDeckDivisionDescri
     DescriptorId = GUID:{c2688f0f-09de-4d8d-9e34-afb14d517bca}
     CfgName = 'ESP_Division_Guzman_multi'
     DivisionName = 'MWCCWPKTOX'
-    InterfaceOrder = 37.0
+    InterfaceOrder = -1.0//38.0
     DivisionCoalition = ECoalition/NATO
-    DivisionTags = ['DEFAULT', 'ESP', 'NATO', 'MECHANIZ']
+    DivisionTags = ['ESP', 'NATO', 'MECHANIZ']
     DescriptionHintTitleToken = 'MWCCWPKTOX'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_ESP_Division_Guzman_multi_Rule
@@ -150,7 +197,7 @@ export Descriptor_Deck_Division_FR_152e_Infanterie_multi is TDeckDivisionDescrip
     DescriptorId = GUID:{adb9f240-782d-44d1-bb70-20f2736182de}
     CfgName = 'FR_152e_Infanterie_multi'
     DivisionName = 'YHHSJATYLU'
-    InterfaceOrder = 28.0
+    InterfaceOrder = 29.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'INFANREG']
     DescriptionHintTitleToken = 'AEINBNGLTE'
@@ -174,7 +221,7 @@ export Descriptor_Deck_Division_FR_5e_Blindee_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{3eea10f1-c482-46f2-a747-f49879749d82}
     CfgName = 'FR_5e_Blindee_multi'
     DivisionName = 'MVUBDSQMBB'
-    InterfaceOrder = 26.0
+    InterfaceOrder = 27.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'ARMORED']
     DescriptionHintTitleToken = 'MVUBDSQMBB'
@@ -198,7 +245,7 @@ export Descriptor_Deck_Division_FR_6e_Blindee_Legere_multi is TDeckDivisionDescr
     DescriptorId = GUID:{b80a36f6-2ec9-4785-848b-4840e54bbb3c}
     CfgName = 'FR_6e_Blindee_Legere_multi'
     DivisionName = 'SDQTSPQMIQ'
-    InterfaceOrder = 27.0
+    InterfaceOrder = 28.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'MOTORIZD']
     DescriptionHintTitleToken = 'YCQRBQVSTK'
@@ -222,7 +269,7 @@ export Descriptor_Deck_Division_FR_Division_du_Rhin_multi is TDeckDivisionDescri
     DescriptorId = GUID:{efbbd29f-2296-47f7-bc21-a04309edc987}
     CfgName = 'FR_Division_du_Rhin_multi'
     DivisionName = 'KIKUPFXIKH'
-    InterfaceOrder = 29.0
+    InterfaceOrder = 30.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'FR', 'NATO', 'INFANREG']
     DescriptionHintTitleToken = 'KIKUPFXIKH'
@@ -246,7 +293,7 @@ export Descriptor_Deck_Division_NATO_Garnison_Berlin_multi is TDeckDivisionDescr
     DescriptorId = GUID:{9ab11079-b134-4ec3-beba-48cf4e885757}
     CfgName = 'NATO_Garnison_Berlin_multi'
     DivisionName = 'EYKCGOHKBG'
-    InterfaceOrder = 24.0
+    InterfaceOrder = 25.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'MECHANIZ']
     DescriptionHintTitleToken = 'EYKCGOHKBG'
@@ -270,7 +317,7 @@ export Descriptor_Deck_Division_NL_4e_Divisie_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{87f7b86f-6455-403f-ba2b-415030226d6b}
     CfgName = 'NL_4e_Divisie_multi'
     DivisionName = 'MRBOKCBPXP'
-    InterfaceOrder = 33.0
+    InterfaceOrder = 34.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'NL', 'NATO', 'MECHANIZ']
     DescriptionHintTitleToken = 'FUYMSLGESC'
@@ -294,7 +341,7 @@ export Descriptor_Deck_Division_NL_CLKA_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{122ea001-a6ad-4075-8692-96420abdacf8}
     CfgName = 'NL_CLKA_multi'
     DivisionName = 'TOVCKJKZIO'
-    InterfaceOrder = 34.0
+    InterfaceOrder = 35.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'NL', 'NATO', 'INFANREG']
     DescriptionHintTitleToken = 'ANIIELXLXU'
@@ -313,12 +360,36 @@ export Descriptor_Deck_Division_NL_CLKA_multi is TDeckDivisionDescriptor
         $/GFX/Unit/Descriptor_Unit_YP_408_TOW_NL,
     ]
 )
+export Descriptor_Deck_Division_POL_15_Zmechanizowana_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{e6f2c475-e6c9-4541-afd2-006988a09c9d}
+    CfgName = 'POL_15_Zmechanizowana_multi'
+    DivisionName = 'JETRSMLRDX'
+    InterfaceOrder = -1.0//28.0
+    DivisionCoalition = ECoalition/PACT
+    DivisionTags = ['POL', 'PACT', 'MECHANIZ']
+    DescriptionHintTitleToken = 'JETRSMLRDX'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_POL_15_Zmechanizowana_multi_Rule
+    CostMatrix = MatrixCostName_POL_15_Zmechanizowana_multi
+    EmblemTexture     = "Texture_Division_Emblem_POL_15_ZMech"
+    TypeToken        = "MECHANIZ"
+    SummaryTextToken = "SUMPOL15DM"
+    HistoryTextToken = "HISPOL15DM"
+    CountryId = "POL"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_BM24M_POL,
+        $/GFX/Unit/Descriptor_Unit_Commandos_Marine_POL,
+        $/GFX/Unit/Descriptor_Unit_Su_27S_jammers_SOV,
+    ]
+)
 export Descriptor_Deck_Division_POL_20_Pancerna_multi is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{a13936c6-b279-4430-b456-93d953339572}
     CfgName = 'POL_20_Pancerna_multi'
     DivisionName = 'EGPXSAYCXO'
-    InterfaceOrder = 28.0
+    InterfaceOrder = 29.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'POL', 'PACT', 'ARMORED']
     DescriptionHintTitleToken = 'EGPXSAYCXO'
@@ -342,7 +413,7 @@ export Descriptor_Deck_Division_POL_4_Zmechanizowana_multi is TDeckDivisionDescr
     DescriptorId = GUID:{2b303d19-27e5-4a2c-8e3e-e497328bbba8}
     CfgName = 'POL_4_Zmechanizowana_multi'
     DivisionName = 'ZYGJBHWQHW'
-    InterfaceOrder = 26.0
+    InterfaceOrder = 27.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'POL', 'PACT', 'MECHANIZ']
     DescriptionHintTitleToken = 'ZYGJBHWQHW'
@@ -366,7 +437,7 @@ export Descriptor_Deck_Division_POL_Korpus_Desantowy_multi is TDeckDivisionDescr
     DescriptorId = GUID:{1d182660-9f0c-47b0-a90d-bc857ab4d032}
     CfgName = 'POL_Korpus_Desantowy_multi'
     DivisionName = 'CZOHUXQNCE'
-    InterfaceOrder = 29.0
+    InterfaceOrder = 30.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'POL', 'PACT', 'DIVNAVAL']
     DescriptionHintTitleToken = 'CZOHUXQNCE'
@@ -385,19 +456,43 @@ export Descriptor_Deck_Division_POL_Korpus_Desantowy_multi is TDeckDivisionDescr
         $/GFX/Unit/Descriptor_Unit_W3W_Sokol_AA_POL,
     ]
 )
+export Descriptor_Deck_Division_RDA_20_MSD_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{34641133-200a-4f57-8174-482b9a0d46a2}
+    CfgName = 'RDA_20_MSD_multi'
+    DivisionName = 'YQBSRWMUUE'
+    InterfaceOrder = -1.0//23.0
+    DivisionCoalition = ECoalition/PACT
+    DivisionTags = ['DDR', 'PACT', 'MECHANIZ']
+    DescriptionHintTitleToken = 'YQBSRWMUUE'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_RDA_20_MSD_multi_Rule
+    CostMatrix = MatrixCostName_RDA_20_MSD_multi
+    EmblemTexture     = "Texture_Division_Emblem_DDR_20_MSD"
+    TypeToken        = "MECHANIZ"
+    SummaryTextToken = "SUMRDA20MD"
+    HistoryTextToken = "HISRDA20MD"
+    CountryId = "DDR"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_T54B_Reserve_DDR,
+        $/GFX/Unit/Descriptor_Unit_Scout_SIGINT_DDR,
+        $/GFX/Unit/Descriptor_Unit_Mi_24D_s5_AT_reco_DDR,
+    ]
+)
 export Descriptor_Deck_Division_RDA_4_MSD_multi is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{97b5d7d2-0a51-461e-b97e-617dd6892858}
     CfgName = 'RDA_4_MSD_multi'
     DivisionName = 'XPXHEQABVZ'
-    InterfaceOrder = 19.0
+    InterfaceOrder = 20.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'MECHANIZ']
     DescriptionHintTitleToken = 'XPXHEQABVZ'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_RDA_4_MSD_multi_Rule
     CostMatrix = MatrixCostName_RDA_4_MSD_multi
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     TypeToken        = "MECHANIZ"
     SummaryTextToken = "SUMRDA4MD"
     HistoryTextToken = "HISRDA4MD"
@@ -414,14 +509,14 @@ export Descriptor_Deck_Division_RDA_7_Panzer_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{81abdbb9-422f-47b0-a073-013c920c04fb}
     CfgName = 'RDA_7_Panzer_multi'
     DivisionName = 'NIZAYXAMPN'
-    InterfaceOrder = 20.0
+    InterfaceOrder = 21.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'ARMORED']
     DescriptionHintTitleToken = 'NIZAYXAMPN'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_RDA_7_Panzer_multi_Rule
     CostMatrix = MatrixCostName_RDA_7_Panzer_multi
-    EmblemTexture     = "Texture_Division_Emblem_7_Panzerdivision_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_7_PzD"
     TypeToken        = "ARMORED"
     SummaryTextToken = "SUMRDA7PzD"
     HistoryTextToken = "HISRDA7PzD"
@@ -438,7 +533,7 @@ export Descriptor_Deck_Division_RDA_9_Panzer_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{3ea1f70e-119a-4dcc-b533-f462a9980686}
     CfgName = 'RDA_9_Panzer_multi'
     DivisionName = 'SXATWWYSVI'
-    InterfaceOrder = 21.0
+    InterfaceOrder = 22.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'ARMORED']
     DescriptionHintTitleToken = 'SXATWWYSVI'
@@ -454,7 +549,6 @@ export Descriptor_Deck_Division_RDA_9_Panzer_multi is TDeckDivisionDescriptor
     [
         $/GFX/Unit/Descriptor_Unit_T72S_DDR,
         $/GFX/Unit/Descriptor_Unit_BMP_2_DDR,
-        $/GFX/Unit/Descriptor_Unit_Mi_8PPA_SOV,
     ]
 )
 export Descriptor_Deck_Division_RDA_KdA_Bezirk_Erfurt_multi is TDeckDivisionDescriptor
@@ -462,7 +556,7 @@ export Descriptor_Deck_Division_RDA_KdA_Bezirk_Erfurt_multi is TDeckDivisionDesc
     DescriptorId = GUID:{bd44546a-1cab-43a2-b38e-a44595ac1968}
     CfgName = 'RDA_KdA_Bezirk_Erfurt_multi'
     DivisionName = 'OVYVCMLGYY'
-    InterfaceOrder = 23.0
+    InterfaceOrder = 24.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'INFANREG']
     DescriptionHintTitleToken = 'OVYVCMLGYY'
@@ -478,7 +572,6 @@ export Descriptor_Deck_Division_RDA_KdA_Bezirk_Erfurt_multi is TDeckDivisionDesc
     [
         $/GFX/Unit/Descriptor_Unit_KdA_DDR,
         $/GFX/Unit/Descriptor_Unit_T62MV_SOV,
-        $/GFX/Unit/Descriptor_Unit_BM30_Smerch_SOV,
     ]
 )
 export Descriptor_Deck_Division_RDA_Rugen_Gruppierung is TDeckDivisionDescriptor
@@ -486,7 +579,7 @@ export Descriptor_Deck_Division_RDA_Rugen_Gruppierung is TDeckDivisionDescriptor
     DescriptorId = GUID:{8fb7a4b4-1fab-461d-bb09-a94320ba22f7}
     CfgName = 'RDA_Rugen_Gruppierung'
     DivisionName = 'PKOEWMXLJF'
-    InterfaceOrder = 25.0
+    InterfaceOrder = 26.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'INFANREG']
     DescriptionHintTitleToken = 'MTGLPEEASU'
@@ -573,8 +666,31 @@ export Descriptor_Deck_Division_RFA_5_Panzer_multi is TDeckDivisionDescriptor
     StandoutUnits =
     [
         $/GFX/Unit/Descriptor_Unit_Leopard_2A4_RFA,
-        $/GFX/Unit/Descriptor_Unit_M270_MLRS_RFA,
         $/GFX/Unit/Descriptor_Unit_Marder_Roland_2_RFA,
+    ]
+)
+export Descriptor_Deck_Division_RFA_6_PzGrenadier_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{b5082b30-89f2-4354-ba3f-eb9a1c0bd917}
+    CfgName = 'RFA_6_PzGrenadier_multi'
+    DivisionName = 'RRAKKLVRJR'
+    InterfaceOrder = 18.0
+    DivisionCoalition = ECoalition/NATO
+    DivisionTags = ['DEFAULT', 'RFA', 'NATO', 'MECHANIZ']
+    DescriptionHintTitleToken = 'IBJQBSTJRN'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_RFA_6_PzGrenadier_multi_Rule
+    CostMatrix = MatrixCostName_RFA_6_PzGrenadier_multi
+    EmblemTexture     = "Texture_Division_Emblem_RFA_6_PzGrenDivision"
+    TypeToken        = "MECHANIZ"
+    SummaryTextToken = "SUMRFA6PzG"
+    HistoryTextToken = "HISRFA6PzG"
+    CountryId = "RFA"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_Leopard_1A2A1_RFA,
+        $/GFX/Unit/Descriptor_Unit_KSM_RFA,
+        $/GFX/Unit/Descriptor_Unit_Tornado_Marine_SEAD_RFA,
     ]
 )
 export Descriptor_Deck_Division_RFA_TerrKdo_Sud_multi is TDeckDivisionDescriptor
@@ -582,7 +698,7 @@ export Descriptor_Deck_Division_RFA_TerrKdo_Sud_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{a461f564-2c09-471b-9a6b-2c134dd87802}
     CfgName = 'RFA_TerrKdo_Sud_multi'
     DivisionName = 'BIHXAJRCJA'
-    InterfaceOrder = 19.0
+    InterfaceOrder = 20.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'RFA', 'NATO', 'INFANREG']
     DescriptionHintTitleToken = 'BIHXAJRCJA'
@@ -598,7 +714,6 @@ export Descriptor_Deck_Division_RFA_TerrKdo_Sud_multi is TDeckDivisionDescriptor
     [
         $/GFX/Unit/Descriptor_Unit_HeimatschutzJager_RFA,
         $/GFX/Unit/Descriptor_Unit_GreenBerets_US,
-        $/GFX/Unit/Descriptor_Unit_DCA_I_Hawk_RFA,
     ]
 )
 export Descriptor_Deck_Division_SOV_119IndTkBrig_multi is TDeckDivisionDescriptor
@@ -606,7 +721,7 @@ export Descriptor_Deck_Division_SOV_119IndTkBrig_multi is TDeckDivisionDescripto
     DescriptorId = GUID:{b611cb29-bf44-4d02-a529-36312df5ec2c}
     CfgName = 'SOV_119IndTkBrig_multi'
     DivisionName = 'QGUHEAAYWW'
-    InterfaceOrder = 15.0
+    InterfaceOrder = 16.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'ARMORED']
     DescriptionHintTitleToken = 'QGUHEAAYWW'
@@ -621,7 +736,6 @@ export Descriptor_Deck_Division_SOV_119IndTkBrig_multi is TDeckDivisionDescripto
     StandoutUnits =
     [
         $/GFX/Unit/Descriptor_Unit_T80UD_SOV,
-        $/GFX/Unit/Descriptor_Unit_Howz_MstaB_150mm_SOV,
         $/GFX/Unit/Descriptor_Unit_TOS1_Buratino_SOV,
     ]
 )
@@ -630,7 +744,7 @@ export Descriptor_Deck_Division_SOV_157_Rifle_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{56d6f3a5-0cec-4134-bb16-0cd3ace64671}
     CfgName = 'SOV_157_Rifle_multi'
     DivisionName = 'QAULTYGPIU'
-    InterfaceOrder = 10.0
+    InterfaceOrder = 11.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'MECHANIZ']
     DescriptionHintTitleToken = 'ZMRQMSTUED'
@@ -678,9 +792,9 @@ export Descriptor_Deck_Division_SOV_1_Gds_Rifle_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{b45c63e2-4c84-409b-86ae-67c1ddacb858}
     CfgName = 'SOV_1_Gds_Rifle_multi'
     DivisionName = 'DCYKEDXANC'
-    InterfaceOrder = 1.0
+    InterfaceOrder = -1.0//1.0
     DivisionCoalition = ECoalition/PACT
-    DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'MECHANIZ']
+    DivisionTags = ['SOV', 'PACT', 'MECHANIZ']
     DescriptionHintTitleToken = 'DIOSAQYULZ'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_SOV_1_Gds_Rifle_multi_Rule
@@ -750,9 +864,9 @@ export Descriptor_Deck_Division_SOV_2_Gds_Rifle_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{0eb3b72b-0a99-4da1-8131-dc58ae6f5ab5}
     CfgName = 'SOV_2_Gds_Rifle_multi'
     DivisionName = 'GLCHUFJCAE'
-    InterfaceOrder = 2.0
+    InterfaceOrder = -1.0//2.0
     DivisionCoalition = ECoalition/PACT
-    DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'MECHANIZ']
+    DivisionTags = ['SOV', 'PACT', 'MECHANIZ']
     DescriptionHintTitleToken = 'JEFNHMECFG'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_SOV_2_Gds_Rifle_multi_Rule
@@ -793,19 +907,43 @@ export Descriptor_Deck_Division_SOV_31_Tank_multi is TDeckDivisionDescriptor
         $/GFX/Unit/Descriptor_Unit_MTLB_BMAN_SOV,
     ]
 )
+export Descriptor_Deck_Division_SOV_336_Naval_Brigade_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{66aae886-a0b8-43f4-833d-1f0720c9b83b}
+    CfgName = 'SOV_336_Naval_Brigade_multi'
+    DivisionName = 'BGIPDWUZNN'
+    InterfaceOrder = -1.0//17.0
+    DivisionCoalition = ECoalition/PACT
+    DivisionTags = ['SOV', 'PACT', 'DIVNAVAL']
+    DescriptionHintTitleToken = 'BGIPDWUZNN'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_SOV_336_Naval_Brigade_multi_Rule
+    CostMatrix = MatrixCostName_SOV_336_Naval_Brigade_multi
+    EmblemTexture     = "Texture_Division_Emblem_SOV_336_Naval_Brigade"
+    TypeToken        = "DIVNAVAL"
+    SummaryTextToken = "SUMSO336"
+    HistoryTextToken = "HISSOV336"
+    CountryId = "SOV"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_T55AMD_SOV,
+        $/GFX/Unit/Descriptor_Unit_Naval_Rifle_SOV,
+        $/GFX/Unit/Descriptor_Unit_Ka_29_SOV,
+    ]
+)
 export Descriptor_Deck_Division_SOV_35_AirAslt_Brig_multi is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{7076e442-e50d-4f50-8b1d-7e8c2ad404e3}
     CfgName = 'SOV_35_AirAslt_Brig_multi'
     DivisionName = 'PFEYNGDKVR'
-    InterfaceOrder = 11.0
+    InterfaceOrder = 12.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'AIRBORNE']
     DescriptionHintTitleToken = 'PFEYNGDKVR'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_SOV_35_AirAslt_Brig_multi_Rule
     CostMatrix = MatrixCostName_SOV_35_AirAslt_Brig_multi
-    EmblemTexture     = "Texture_Division_Emblem_35th_VDV_Brigade"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_35th_VDV"
     TypeToken        = "AIRBORNE"
     SummaryTextToken = "SUMSO35VDV"
     HistoryTextToken = "HISSO35VDV"
@@ -829,7 +967,7 @@ export Descriptor_Deck_Division_SOV_39_Gds_Rifle_multi is TDeckDivisionDescripto
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_SOV_39_Gds_Rifle_multi_Rule
     CostMatrix = MatrixCostName_SOV_39_Gds_Rifle_multi
-    EmblemTexture     = "Texture_Division_Emblem_39th_gmsd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_39_gvMSD"
     TypeToken        = "MECHANIZ"
     SummaryTextToken = "SUMSO39G"
     HistoryTextToken = "HISSO39G"
@@ -838,7 +976,6 @@ export Descriptor_Deck_Division_SOV_39_Gds_Rifle_multi is TDeckDivisionDescripto
     [
         $/GFX/Unit/Descriptor_Unit_T80B_SOV,
         $/GFX/Unit/Descriptor_Unit_Su_25_SOV,
-        $/GFX/Unit/Descriptor_Unit_BM27_Uragan_SOV,
     ]
 )
 export Descriptor_Deck_Division_SOV_4_Gds_Tank_multi is TDeckDivisionDescriptor
@@ -846,7 +983,7 @@ export Descriptor_Deck_Division_SOV_4_Gds_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{ba026d2c-64b4-422e-8367-a54796c8593c}
     CfgName = 'SOV_4_Gds_Tank_multi'
     DivisionName = 'FOURGTDNAM'
-    InterfaceOrder = 34.0
+    InterfaceOrder = 35.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'armored', 'DC_PWR1']
     DescriptionHintTitleToken = 'FOURGTDHNT'
@@ -867,14 +1004,14 @@ export Descriptor_Deck_Division_SOV_56_AirAslt_Brig_multi is TDeckDivisionDescri
     DescriptorId = GUID:{95704837-2d8d-455b-a29f-db8c81d9ac76}
     CfgName = 'SOV_56_AirAslt_Brig_multi'
     DivisionName = 'OJZIMECUCU'
-    InterfaceOrder = 12.0
+    InterfaceOrder = 13.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'AIRMOBIL']
     DescriptionHintTitleToken = 'SGEEXVOOPI'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_SOV_56_AirAslt_Brig_multi_Rule
     CostMatrix = MatrixCostName_SOV_56_AirAslt_Brig_multi
-    EmblemTexture     = "Texture_Division_Emblem_SOV_56th_DSh_Brigade"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_56th_VDV"
     TypeToken        = "AIRMOBIL"
     SummaryTextToken = "SUMSO56VDV"
     HistoryTextToken = "HISSO56VDV"
@@ -891,7 +1028,7 @@ export Descriptor_Deck_Division_SOV_6IndMSBrig_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{39320a62-4064-4feb-a84f-cecbe7fe8285}
     CfgName = 'SOV_6IndMSBrig_multi'
     DivisionName = 'VKPNQYHZZN'
-    InterfaceOrder = 14.0
+    InterfaceOrder = 15.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'MECHANIZ']
     DescriptionHintTitleToken = 'DVUAMGKBXK'
@@ -906,8 +1043,7 @@ export Descriptor_Deck_Division_SOV_6IndMSBrig_multi is TDeckDivisionDescriptor
     StandoutUnits =
     [
         $/GFX/Unit/Descriptor_Unit_2S5_GiatsintS_SOV,
-        $/GFX/Unit/Descriptor_Unit_MiG_31M_SOV,
-        $/GFX/Unit/Descriptor_Unit_Luftsturmjager_DDR,
+        $/GFX/Unit/Descriptor_Unit_TOS1_Buratino_SOV,
     ]
 )
 export Descriptor_Deck_Division_SOV_76_VDV_multi is TDeckDivisionDescriptor
@@ -915,7 +1051,7 @@ export Descriptor_Deck_Division_SOV_76_VDV_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{e9691c93-e51b-4587-9529-159ab6e225f0}
     CfgName = 'SOV_76_VDV_multi'
     DivisionName = 'HOVSLMGDMN'
-    InterfaceOrder = 13.0
+    InterfaceOrder = 14.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'AIRBORNE']
     DescriptionHintTitleToken = 'CRUYREPWFR'
@@ -946,7 +1082,7 @@ export Descriptor_Deck_Division_SOV_79_Gds_Tank_multi is TDeckDivisionDescriptor
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_SOV_79_Gds_Tank_multi_Rule
     CostMatrix = MatrixCostName_SOV_79_Gds_Tank_multi
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_79_gvTD"
     TypeToken        = "ARMORED"
     SummaryTextToken = "SUMSO79G"
     HistoryTextToken = "HISSO79G"
@@ -955,7 +1091,31 @@ export Descriptor_Deck_Division_SOV_79_Gds_Tank_multi is TDeckDivisionDescriptor
     [
         $/GFX/Unit/Descriptor_Unit_T80BV_Beast_SOV,
         $/GFX/Unit/Descriptor_Unit_BMP_2_SOV,
-        $/GFX/Unit/Descriptor_Unit_Osa_9K33M3_SOV,
+        $/GFX/Unit/Descriptor_Unit_Tunguska_2K22_SOV,
+    ]
+)
+export Descriptor_Deck_Division_SOV_94_Gds_Rifle_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{4da2f5de-5ac1-4b2f-8143-7bc0aaabac57}
+    CfgName = 'SOV_94_Gds_Rifle_multi'
+    DivisionName = 'ZHOVVXEYQL'
+    InterfaceOrder = -1.0//7.0
+    DivisionCoalition = ECoalition/PACT
+    DivisionTags = ['SOV', 'PACT', 'MECHANIZ']
+    DescriptionHintTitleToken = 'VXXYPZNDNF'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_SOV_94_Gds_Rifle_multi_Rule
+    CostMatrix = MatrixCostName_SOV_94_Gds_Rifle_multi
+    EmblemTexture     = "Texture_Division_Emblem_SOV_94gvMSD"
+    TypeToken        = "MECHANIZ"
+    SummaryTextToken = "SUMSO94"
+    HistoryTextToken = "HISSOV94"
+    CountryId = "SOV"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_T64A_Obr84_SOV,
+        $/GFX/Unit/Descriptor_Unit_AT_T12R_Ruta_SOV,
+        $/GFX/Unit/Descriptor_Unit_Tu_143_SOV,
     ]
 )
 export Descriptor_Deck_Division_TCH_19_MSD_multi is TDeckDivisionDescriptor
@@ -963,7 +1123,7 @@ export Descriptor_Deck_Division_TCH_19_MSD_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{be946b20-a4b4-4f2f-9d1a-9c664bd1a426}
     CfgName = 'TCH_19_MSD_multi'
     DivisionName = 'SVEHBMUYZL'
-    InterfaceOrder = 32.0
+    InterfaceOrder = 33.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'TCH', 'PACT', 'MECHANIZ']
     DescriptionHintTitleToken = 'JKMLTNCXVK'
@@ -987,7 +1147,7 @@ export Descriptor_Deck_Division_TCH_1_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{3bd652d3-2c21-4a2d-b0f9-bbefc71802c2}
     CfgName = 'TCH_1_Tank_multi'
     DivisionName = 'XKRAHADQAE'
-    InterfaceOrder = 30.0
+    InterfaceOrder = 31.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'TCH', 'PACT', 'ARMORED']
     DescriptionHintTitleToken = 'UEAGAZCLDQ'
@@ -1011,9 +1171,9 @@ export Descriptor_Deck_Division_TCH_2_MSD_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{d47e64b3-fa26-4a41-a699-38803ee511ad}
     CfgName = 'TCH_2_MSD_multi'
     DivisionName = 'COCUIJLWPM'
-    InterfaceOrder = 31.0
+    InterfaceOrder = -1.0//32.0
     DivisionCoalition = ECoalition/PACT
-    DivisionTags = ['DEFAULT', 'TCH', 'PACT', 'MECHANIZ']
+    DivisionTags = ['TCH', 'PACT', 'MECHANIZ']
     DescriptionHintTitleToken = 'XNEYPNTARL'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_TCH_2_MSD_multi_Rule
@@ -1035,7 +1195,7 @@ export Descriptor_Deck_Division_TCH_303_Tank_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{d0cc9b9f-1f00-49e7-8f28-610dbbb5574b}
     CfgName = 'TCH_303_Tank_multi'
     DivisionName = 'CUVYCAIFIX'
-    InterfaceOrder = 33.0
+    InterfaceOrder = 34.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'TCH', 'PACT', 'ARMORED']
     DescriptionHintTitleToken = 'YAOHQBWUVR'
@@ -1059,7 +1219,7 @@ export Descriptor_Deck_Division_UK_1st_Armoured_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{5dff6faa-211f-4743-b3ef-9737d350978f}
     CfgName = 'UK_1st_Armoured_multi'
     DivisionName = 'YPUIEGDPJD'
-    InterfaceOrder = 20.0
+    InterfaceOrder = 21.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'ARMORED']
     DescriptionHintTitleToken = 'YPUIEGDPJD'
@@ -1083,7 +1243,7 @@ export Descriptor_Deck_Division_UK_2nd_Infantry_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{e27fa0f1-53f1-472c-8380-cad2de5b77fb}
     CfgName = 'UK_2nd_Infantry_multi'
     DivisionName = 'RSIUYDSXND'
-    InterfaceOrder = 21.0
+    InterfaceOrder = 22.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'MOTORIZD']
     DescriptionHintTitleToken = 'RSIUYDSXND'
@@ -1099,7 +1259,6 @@ export Descriptor_Deck_Division_UK_2nd_Infantry_multi is TDeckDivisionDescriptor
     [
         $/GFX/Unit/Descriptor_Unit_SAS_UK,
         $/GFX/Unit/Descriptor_Unit_Lynx_AH_Mk7_I_TOW2_UK,
-        $/GFX/Unit/Descriptor_Unit_M270_MLRS_cluster_UK,
     ]
 )
 export Descriptor_Deck_Division_UK_4th_Armoured_multi is TDeckDivisionDescriptor
@@ -1107,7 +1266,7 @@ export Descriptor_Deck_Division_UK_4th_Armoured_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{823c2671-564c-4b82-af1c-26de7afcbe0e}
     CfgName = 'UK_4th_Armoured_multi'
     DivisionName = 'PFQAMEYXCU'
-    InterfaceOrder = 22.0
+    InterfaceOrder = 23.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'ARMORED']
     DescriptionHintTitleToken = 'PFQAMEYXCU'
@@ -1131,7 +1290,7 @@ export Descriptor_Deck_Division_UK_5th_Airborne_Brigade_multi is TDeckDivisionDe
     DescriptorId = GUID:{fb6db100-d944-44d9-8c6f-df6b54a05d36}
     CfgName = 'UK_5th_Airborne_Brigade_multi'
     DivisionName = 'PWMGFMXLIK'
-    InterfaceOrder = 23.0
+    InterfaceOrder = 24.0
     DivisionCoalition = ECoalition/NATO
     DivisionTags = ['DEFAULT', 'UK', 'NATO', 'AIRBORNE']
     DescriptionHintTitleToken = 'GOMSACYMBS'
@@ -1155,9 +1314,9 @@ export Descriptor_Deck_Division_UK_London_HDR_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{3bf3066f-98f2-4ea5-b590-bf326622f3ec}
     CfgName = 'UK_London_HDR_multi'
     DivisionName = 'JIUNYRKVBK'
-    InterfaceOrder = 25.0
+    InterfaceOrder = -1.0//26.0
     DivisionCoalition = ECoalition/NATO
-    DivisionTags = ['DEFAULT', 'UK', 'NATO', 'INFANREG']
+    DivisionTags = ['UK', 'NATO', 'INFANREG']
     DescriptionHintTitleToken = 'IXEQASWYLR'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_UK_London_HDR_multi_Rule
@@ -1171,7 +1330,6 @@ export Descriptor_Deck_Division_UK_London_HDR_multi is TDeckDivisionDescriptor
     [
         $/GFX/Unit/Descriptor_Unit_SAS_G_UK,
         $/GFX/Unit/Descriptor_Unit_AS90_155mm_UK,
-        $/GFX/Unit/Descriptor_Unit_DCA_Bloodhound_UK,
     ]
 )
 export Descriptor_Deck_Division_US_101st_Airmobile_multi is TDeckDivisionDescriptor
@@ -1227,9 +1385,9 @@ export Descriptor_Deck_Division_US_1st_Cavalry_multi is TDeckDivisionDescriptor
     DescriptorId = GUID:{6d98d420-c3af-4d56-ac4e-39bddc124ac8}
     CfgName = 'US_1st_Cavalry_multi'
     DivisionName = 'HELEEEWWHS'
-    InterfaceOrder = 1.0
+    InterfaceOrder = -1.0//1.0
     DivisionCoalition = ECoalition/NATO
-    DivisionTags = ['DEFAULT', 'US', 'NATO', 'ARMORED']
+    DivisionTags = ['US', 'NATO', 'ARMORED']
     DescriptionHintTitleToken = 'KAOWXWQTKA'
     MaxActivationPoints = 50
     DivisionRule = Descriptor_Deck_Division_US_1st_Cavalry_multi_Rule
@@ -1268,6 +1426,30 @@ export Descriptor_Deck_Division_US_24th_Inf_multi is TDeckDivisionDescriptor
         $/GFX/Unit/Descriptor_Unit_AH64_Apache_NG_US,
         $/GFX/Unit/Descriptor_Unit_M2_Bradley_IFV_NG_US,
         $/GFX/Unit/Descriptor_Unit_F15E_StrikeEagle_US,
+    ]
+)
+export Descriptor_Deck_Division_US_2nd_Marine_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{937656cb-b3c6-4ca6-ade5-3ce4897e0265}
+    CfgName = 'US_2nd_Marine_multi'
+    DivisionName = 'MJMLGHNZHN'
+    InterfaceOrder = -1.0//2.0
+    DivisionCoalition = ECoalition/NATO
+    DivisionTags = ['US', 'NATO', 'DIVNAVAL']
+    DescriptionHintTitleToken = 'REPOMYEXZK'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_US_2nd_Marine_multi_Rule
+    CostMatrix = MatrixCostName_US_2nd_Marine_multi
+    EmblemTexture     = "Texture_Division_Emblem_US_2nd_Marine_Division"
+    TypeToken        = "DIVNAVAL"
+    SummaryTextToken = "SUMUS2MAR"
+    HistoryTextToken = "HISUS2MAR"
+    CountryId = "US"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_LAV_AT_US,
+        $/GFX/Unit/Descriptor_Unit_Rifles_USMC_HMG_US,
+        $/GFX/Unit/Descriptor_Unit_F14A_Tomcat_AA_US,
     ]
 )
 export Descriptor_Deck_Division_US_35th_Inf_multi is TDeckDivisionDescriptor
@@ -1419,7 +1601,7 @@ export Descriptor_Deck_Division_WP_Unternehmen_Zentrum_multi is TDeckDivisionDes
     DescriptorId = GUID:{4d41c309-2758-4f06-8995-2a3d07e56474}
     CfgName = 'WP_Unternehmen_Zentrum_multi'
     DivisionName = 'CHKSNFWOEZ'
-    InterfaceOrder = 24.0
+    InterfaceOrder = 25.0
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['DEFAULT', 'DDR', 'PACT', 'INFANREG']
     DescriptionHintTitleToken = 'CHKSNFWOEZ'
@@ -1435,10 +1617,8 @@ export Descriptor_Deck_Division_WP_Unternehmen_Zentrum_multi is TDeckDivisionDes
     [
         $/GFX/Unit/Descriptor_Unit_Wachregiment_DDR,
         $/GFX/Unit/Descriptor_Unit_Su_22_nplm_DDR,
-        $/GFX/Unit/Descriptor_Unit_Howz_M46_130mm_DDR,
     ]
 )
-
 export Descriptor_Deck_Division_BEL_10PtserBrig_solo is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{72f129df-d345-4f5c-b487-2dd212186f94}
@@ -2555,7 +2735,7 @@ export Descriptor_Deck_Division_RDA_15ResPzR_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     StrategicLabelColor     = "division_DDR_1"
     StandoutUnits =
     [
@@ -2600,7 +2780,7 @@ export Descriptor_Deck_Division_RDA_1MSD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     StrategicLabelColor     = "division_DDR_1"
     StandoutUnits =
     [
@@ -2615,7 +2795,7 @@ export Descriptor_Deck_Division_RDA_20MSD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_20_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_20_MSD"
     StrategicLabelColor     = "division_DDR_20"
     StandoutUnits =
     [
@@ -2630,7 +2810,7 @@ export Descriptor_Deck_Division_RDA_25MSR_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     StrategicLabelColor     = "division_DDR_1"
     StandoutUnits =
     [
@@ -2645,7 +2825,7 @@ export Descriptor_Deck_Division_RDA_4MSD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     StrategicLabelColor     = "division_DDR_1"
     StandoutUnits =
     [
@@ -2660,7 +2840,7 @@ export Descriptor_Deck_Division_RDA_5ArtBrig_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     StrategicLabelColor     = "division_DDR_1"
     StandoutUnits =
     [
@@ -2675,7 +2855,7 @@ export Descriptor_Deck_Division_RDA_5GEWR_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     StrategicLabelColor     = "division_DDR_1"
     StandoutUnits =
     [
@@ -2690,7 +2870,7 @@ export Descriptor_Deck_Division_RDA_7PzD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_7_Panzerdivision_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_7_PzD"
     StrategicLabelColor     = "division_DDR_7"
     StandoutUnits =
     [
@@ -2795,7 +2975,7 @@ export Descriptor_Deck_Division_RDA_MBDV_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     StrategicLabelColor     = "division_DDR_1"
     StandoutUnits =
     [
@@ -3500,7 +3680,7 @@ export Descriptor_Deck_Division_SOV_10GTkD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision_kassel_2"
     StandoutUnits =
     [
@@ -3515,7 +3695,7 @@ export Descriptor_Deck_Division_SOV_115TkInde_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3605,7 +3785,7 @@ export Descriptor_Deck_Division_SOV_12GTkD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3620,7 +3800,7 @@ export Descriptor_Deck_Division_SOV_138TkInde_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3635,7 +3815,7 @@ export Descriptor_Deck_Division_SOV_145TkInde_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3665,7 +3845,7 @@ export Descriptor_Deck_Division_SOV_16GTkD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3754,7 +3934,7 @@ export Descriptor_Deck_Division_SOV_207MRD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3798,7 +3978,7 @@ export Descriptor_Deck_Division_SOV_21MRD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3813,7 +3993,7 @@ export Descriptor_Deck_Division_SOV_221TkInde_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3857,7 +4037,7 @@ export Descriptor_Deck_Division_SOV_290ArtBrig_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3887,7 +4067,7 @@ export Descriptor_Deck_Division_SOV_2GTA_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -3975,7 +4155,7 @@ export Descriptor_Deck_Division_SOV_35GvDSHB_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_35th_VDV_Brigade"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_35th_VDV"
     StrategicLabelColor     = "SovDivision_kassel_1"
     StandoutUnits =
     [
@@ -4005,7 +4185,7 @@ export Descriptor_Deck_Division_SOV_385ArtBrig_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -4035,7 +4215,7 @@ export Descriptor_Deck_Division_SOV_39GMRD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_39th_gmsd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_39_gvMSD"
     StrategicLabelColor     = "SovDivision1"
     StandoutUnits =
     [
@@ -4050,7 +4230,7 @@ export Descriptor_Deck_Division_SOV_3A_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -4095,7 +4275,7 @@ export Descriptor_Deck_Division_SOV_46SAMBrig_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -4110,7 +4290,7 @@ export Descriptor_Deck_Division_SOV_47GTkD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -4168,7 +4348,7 @@ export Descriptor_Deck_Division_SOV_61SAMBrig_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -4198,7 +4378,7 @@ export Descriptor_Deck_Division_SOV_79GTkD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_79_gvTD"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -4213,7 +4393,7 @@ export Descriptor_Deck_Division_SOV_7GTkD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision_boar_1"
     StandoutUnits =
     [
@@ -4273,7 +4453,7 @@ export Descriptor_Deck_Division_SOV_94GMRD_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_94gvMSD"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -4317,7 +4497,7 @@ export Descriptor_Deck_Division_SOV_NGF_solo is TDeckDivisionDescriptor
     DivisionCoalition = ECoalition/PACT
     DivisionTags = ['STRAT', 'PACT']
     DivisionRule = nil
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_defaut"
     StrategicLabelColor     = "SovDivision2"
     StandoutUnits =
     [
@@ -5553,7 +5733,6 @@ export Descriptor_Deck_Division_US_UK_6ArmBrig_solo is TDeckDivisionDescriptor
     [
     ]
 )
-
 export Descriptor_Deck_Division_BEL_1BEC_challenge is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{0f232540-0d3b-42ae-9257-08dc5ed528f5}
@@ -5597,7 +5776,7 @@ export Descriptor_Deck_Division_DDR_20MSD_challenge is TDeckDivisionDescriptor
     MaxActivationPoints = 9999
     DivisionRule = nil
     CostMatrix = MatrixCostName_Challenge
-    EmblemTexture     = "Texture_Division_Emblem_20_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_20_MSD"
     StandoutUnits =
     [
     ]
@@ -5773,7 +5952,7 @@ export Descriptor_Deck_Division_RDA_4_MSD_challenge is TDeckDivisionDescriptor
     MaxActivationPoints = 9999
     DivisionRule = nil
     CostMatrix = MatrixCostName_Challenge
-    EmblemTexture     = "Texture_Division_Emblem_4_MSD_DDR"
+    EmblemTexture     = "Texture_Division_Emblem_DDR_4_MSD"
     StandoutUnits =
     [
     ]
@@ -5917,7 +6096,7 @@ export Descriptor_Deck_Division_SOV_35_AirAslt_Brig_challenge is TDeckDivisionDe
     MaxActivationPoints = 9999
     DivisionRule = nil
     CostMatrix = MatrixCostName_Challenge
-    EmblemTexture     = "Texture_Division_Emblem_35th_VDV_Brigade"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_35th_VDV"
     StandoutUnits =
     [
     ]
@@ -5933,7 +6112,7 @@ export Descriptor_Deck_Division_SOV_39_Gds_Rifle_challenge is TDeckDivisionDescr
     MaxActivationPoints = 9999
     DivisionRule = nil
     CostMatrix = MatrixCostName_Challenge
-    EmblemTexture     = "Texture_Division_Emblem_39th_gmsd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_39_gvMSD"
     StandoutUnits =
     [
     ]
@@ -5965,7 +6144,7 @@ export Descriptor_Deck_Division_SOV_79_Gds_Tank_challenge is TDeckDivisionDescri
     MaxActivationPoints = 9999
     DivisionRule = nil
     CostMatrix = MatrixCostName_Challenge
-    EmblemTexture     = "Texture_Division_Emblem_79th_gtd"
+    EmblemTexture     = "Texture_Division_Emblem_SOV_79_gvTD"
     StandoutUnits =
     [
     ]
