@@ -23,12 +23,12 @@ export Hard_Condition_GotoGeneric is TSequenceCondition_True
 //-------------------------------------------------------------------------
 export Hard_Condition_CommandPhase is TSequenceCondition_Phase
 (
-    PhaseType = CommandPhase
+    PhaseType = ~/TGamePhase/Command
 )
 //-------------------------------------------------------------------------
 export Hard_Condition_OpponentWinning is Template_SequenceConditionOpponentHasScoreHigher
 (
-    ScorePointType = ~/EScorePointType/ZonePoint
+    ScorePointType = ~/TScorePointType/ZonePoint
     RatioValue = 0.7
 )
 //-------------------------------------------------------------------------

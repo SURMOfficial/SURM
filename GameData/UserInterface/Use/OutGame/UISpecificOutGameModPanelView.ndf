@@ -170,7 +170,7 @@ ModPanelMultiListTitle is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKSortableElementFieldTitleButtonDescriptor
             (
-                ElementName = 'ModType'
+                ElementName = 'ModTags'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -452,7 +452,7 @@ ModPanelMultiListLine is BUCKListDescriptor
         (
             ComponentDescriptor = BUCKSortableElementFieldDescriptor
             (
-                ElementName = 'ModType'
+                ElementName = 'ModTags'
 
                 ComponentFrame = TUIFramePropertyRTTI
                 (
@@ -483,7 +483,7 @@ ModPanelMultiListLine is BUCKListDescriptor
                             (
                                 ComponentDescriptor = BUCKRackDescriptor
                                 (
-                                    ElementName = 'ModTypeRack'
+                                    ElementName = 'ModTagsRack'
                                     ComponentFrame = TUIFramePropertyRTTI
                                     (
                                         RelativeWidthHeight = [0.0, 1.0]
@@ -493,7 +493,7 @@ ModPanelMultiListLine is BUCKListDescriptor
 
                                     BladeDescriptor = BUCKTextureDescriptor
                                     (
-                                        ElementName = 'ModTypeTexture'
+                                        ElementName = 'ModTagTexture'
                                         ComponentFrame = TUIFramePropertyRTTI
                                         (
                                             RelativeWidthHeight = [0.0, 1.0]
@@ -510,7 +510,7 @@ ModPanelMultiListLine is BUCKListDescriptor
                                     [
                                         BUCKSpecificHintableArea
                                         (
-                                            ElementName = "ModRatingHint"
+                                            ElementName = "ModTagsHint"
                                         )
                                     ]
                                 )
@@ -621,7 +621,7 @@ ModPanelMultiListLine is BUCKListDescriptor
                         [
                             BUCKTextureDescriptor
                             (
-                                ElementName = 'ModTypeTexture'
+                                ElementName = 'ModTagTexture'
                                 ComponentFrame = TUIFramePropertyRTTI
                                 (
                                     RelativeWidthHeight = [0.0, 1.0]
@@ -731,7 +731,7 @@ BUCKSpecificOutGameModPanelMainComponentDescriptor is WindowFrame
             [
                 "ModName",
                 "ModRating",
-                "ModType",
+                "ModTags",
                 "ModSize",
                 "ModActive",
             ]

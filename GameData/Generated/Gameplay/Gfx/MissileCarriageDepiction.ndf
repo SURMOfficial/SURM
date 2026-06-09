@@ -3964,6 +3964,156 @@ SubGenerators_Showroom_DCA_Rapier_UK is TShowroomMissileCarriageSubDepictionGene
 )
 
 
+SubGenerators_DCA_S125_quad_Neva_SOV is TMissileCarriageSubDepictionGenerator
+(
+    MissileCarriageConnoisseur = MissileCarriage_DCA_S125_quad_Neva_SOV
+    Missiles = 
+    [
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 0
+                PhysicalProperty = "Tourelle1_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+            )
+            MissileIndex = 1
+            WeaponIndex = 1
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 1
+                PhysicalProperty = "Tourelle1_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+            )
+            MissileIndex = 2
+            WeaponIndex = 1
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 2
+                PhysicalProperty = "Tourelle1_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+            )
+            MissileIndex = 3
+            WeaponIndex = 1
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 3
+                PhysicalProperty = "Tourelle1_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+            )
+            MissileIndex = 4
+            WeaponIndex = 1
+        ),
+    ]
+    Pylons = ~/DepictionPylonSet_Vehicle_Default
+    ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_S125_quad_Neva_SOV
+)
+
+MissileAlternatives_DCA_S125_quad_Neva_SOV is 
+[
+    TDepictionVisual
+    (
+        MeshDescriptor = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+        SelectorId = 
+        [
+            "DCA_S125_quad_Neva_SOV",
+        ]
+    ),
+]
+
+SubGenerators_Showroom_DCA_S125_quad_Neva_SOV is TShowroomMissileCarriageSubDepictionGenerator
+(
+    MissileCarriageConnoisseur = MissileCarriage_DCA_S125_quad_Neva_SOV_Showroom
+    Missiles = 
+    [
+        TShowroomMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileShowroom
+            (
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+            )
+            MissileCount = 4
+            WeaponIndex = 1
+        ),
+    ]
+    Pylons = ~/DepictionPylonSet_Vehicle_Default_Showroom
+    ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_S125_quad_Neva_SOV
+)
+
+
+SubGenerators_DCA_S125_twin_Neva_SOV is TMissileCarriageSubDepictionGenerator
+(
+    MissileCarriageConnoisseur = MissileCarriage_DCA_S125_twin_Neva_SOV
+    Missiles = 
+    [
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 0
+                PhysicalProperty = "Tourelle1_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+            )
+            MissileIndex = 1
+            WeaponIndex = 1
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 1
+                PhysicalProperty = "Tourelle1_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+            )
+            MissileIndex = 2
+            WeaponIndex = 1
+        ),
+    ]
+    Pylons = ~/DepictionPylonSet_Vehicle_Default
+    ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_S125_twin_Neva_SOV
+)
+
+MissileAlternatives_DCA_S125_twin_Neva_SOV is 
+[
+    TDepictionVisual
+    (
+        MeshDescriptor = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+        SelectorId = 
+        [
+            "DCA_S125_twin_Neva_SOV",
+        ]
+    ),
+]
+
+SubGenerators_Showroom_DCA_S125_twin_Neva_SOV is TShowroomMissileCarriageSubDepictionGenerator
+(
+    MissileCarriageConnoisseur = MissileCarriage_DCA_S125_twin_Neva_SOV_Showroom
+    Missiles = 
+    [
+        TShowroomMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileShowroom
+            (
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_S125_Neva
+            )
+            MissileCount = 2
+            WeaponIndex = 1
+        ),
+    ]
+    Pylons = ~/DepictionPylonSet_Vehicle_Default_Showroom
+    ReferenceMesh = $/GFX/DepictionResources/Modele_DCA_S125_twin_Neva_SOV
+)
+
+
 SubGenerators_DCA_XM85_Chaparral_US is TMissileCarriageSubDepictionGenerator
 (
     MissileCarriageConnoisseur = MissileCarriage_DCA_XM85_Chaparral_US
@@ -9785,10 +9935,10 @@ SubGenerators_F16A_AA_BEL is TStaticMissileCarriageSubDepictionGenerator
                 PhysicalProperty = "Tourelle2_MissileCount"
                 ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_AIM_9J_SideWinder
             )
-            MissileCount = 3
+            MissileCount = 6
             WeaponIndex = 2
         ),
-        TStaticMissileCarriageSubDepictionMissileInfo
+/*         TStaticMissileCarriageSubDepictionMissileInfo
         (
             Depiction = TemplateDepictionStaticMissiles
             (
@@ -9797,7 +9947,7 @@ SubGenerators_F16A_AA_BEL is TStaticMissileCarriageSubDepictionGenerator
             )
             MissileCount = 3
             WeaponIndex = 3
-        ),
+        ), */
     ]
     Pylons = ~/DepictionPylonSet_Airplane_Default
     ReferenceMesh = $/GFX/DepictionResources/Modele_F16A_AA_BEL

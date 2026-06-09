@@ -24,6 +24,14 @@ export MeshDescriptor_Driver_USMC_LOW is TResourceMesh
 (
     Mesh=US_GI_1_LOW
 )
+export MeshDescriptor_Biker_US is TResourceMesh
+(
+    Mesh=US_GI_1
+)
+export MeshDescriptor_Biker_US_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
 //--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Driver_UK is TResourceMesh
 (
@@ -190,6 +198,15 @@ export MeshDescriptor_Driver_ESP is TResourceMesh
     Mesh=Soldier_3_ESP
 )
 export MeshDescriptor_Driver_ESP_LOW is TResourceMesh
+(
+    Mesh=US_GI_1_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Driver_COL is TResourceMesh
+(
+    Mesh=COL_Rifle_1
+)
+export MeshDescriptor_Driver_COL_LOW is TResourceMesh
 (
     Mesh=US_GI_1_LOW
 )
@@ -828,6 +845,23 @@ export MeshDescriptor_Servant_D_Marinier_NL_LOW is TResourceMesh
     Mesh="GameData:/Assets/3D/Units/NL/Infanterie/Marinier/Marinier_1_LOW.fbx"
 )
 //--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_G_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Infanterie/COL_Rifle/COL_Rifle_1.fbx"
+)
+export MeshDescriptor_Servant_D_COL is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Infanterie/COL_Rifle/COL_Rifle_3.fbx"
+)
+export MeshDescriptor_Servant_G_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Infanterie/COL_Rifle/COL_Rifle_1.fbx"
+)
+export MeshDescriptor_Servant_D_COL_LOW is TResourceMesh
+(
+    Mesh="GameData:/Assets/3D/Units/COL/Infanterie/COL_Rifle/COL_Rifle_3.fbx"
+)
+//--------------------------------------------------------------------------------------------------------------------
 export MeshDescriptor_Servant_D_vz60_TCH is TResourceMesh
 (
     Mesh=TCH_NCO_vz60
@@ -937,6 +971,118 @@ export MeshDescriptor_Driver_DK_LOW is TResourceMesh
     Mesh=RFA_Jager_LOW
 )
 //--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_D_BRZ is TResourceMesh
+(
+    Mesh=BRZ_Rifle_3
+)
+export MeshDescriptor_Servant_G_BRZ is TResourceMesh
+(
+    Mesh=BRZ_Rifle_NCO
+)
+export MeshDescriptor_Servant_D_BRZ_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+export MeshDescriptor_Servant_G_BRZ_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Driver_BRZ is TResourceMesh
+(
+    Mesh=BRZ_Rifle_2
+)
+export MeshDescriptor_Driver_BRZ_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_D_VEN is TResourceMesh
+(
+    Mesh=VEN_Rifle_NCO
+)
+export MeshDescriptor_Servant_G_VEN is TResourceMesh
+(
+    Mesh=VEN_Rifle_2
+)
+export MeshDescriptor_Servant_D_VEN_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+export MeshDescriptor_Servant_G_VEN_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Driver_VEN is TResourceMesh
+(
+    Mesh=VEN_Rifle_2
+)
+export MeshDescriptor_Driver_VEN_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_D_CUB is TResourceMesh
+(
+    Mesh=CUB_Rifle_NCO
+)
+export MeshDescriptor_Servant_G_CUB is TResourceMesh
+(
+    Mesh=CUB_Rifle_3
+)
+export MeshDescriptor_Servant_D_CUB_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+export MeshDescriptor_Servant_G_CUB_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Driver_CUB is TResourceMesh
+(
+    Mesh=CUB_Rifle_3
+)
+export MeshDescriptor_Driver_CUB_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_D_MTTf_CUB is TResourceMesh
+(
+    Mesh=CUB_MTT_Female_1
+)
+export MeshDescriptor_Servant_G_MTTf_CUB is TResourceMesh
+(
+    Mesh=CUB_MTT_Female_2
+)
+export MeshDescriptor_Servant_D_MTTf_CUB_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+export MeshDescriptor_Servant_G_MTTf_CUB_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
+export MeshDescriptor_Servant_D_MTT_CUB is TResourceMesh
+(
+    Mesh=CUB_MTT_NCO
+)
+export MeshDescriptor_Servant_G_MTT_CUB is TResourceMesh
+(
+    Mesh=CUB_MTT_1
+)
+export MeshDescriptor_Servant_D_MTT_CUB_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+export MeshDescriptor_Servant_G_MTT_CUB_LOW is TResourceMesh
+(
+    Mesh=RFA_Jager_LOW
+)
+//--------------------------------------------------------------------------------------------------------------------
 export FuldaSoldier is TResourceMesh
 (
     Mesh="GameData:/Assets/3D/Units/US/Infanterie/Test_Soldier/Fulda_Soldier.fbx"
@@ -954,6 +1100,7 @@ template DriverPoseTemplate
 export PilotStand is DriverPoseTemplate(FileName = 'Pilot_Stand.fbx')
 export DriverStand is DriverPoseTemplate(FileName = 'Driver_Stand.fbx')
 export DriverLSV is DriverPoseTemplate(FileName = 'Driver_LSV.fbx')
+export DriverBiker is DriverPoseTemplate(FileName = 'Driver_Biker.fbx')
 
 export GunnerSittingDown is TResourceMatrixArrayAnimation
 (

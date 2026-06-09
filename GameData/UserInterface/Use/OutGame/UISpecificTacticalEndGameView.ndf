@@ -2536,22 +2536,22 @@ UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescrip
 
     AllianceStyleBlockColors = MAP
     [
-        (EAllianceStyle/BLUFOR, "playerHelper/Otan_line_Endgame"),
-        (EAllianceStyle/REDFOR, "playerHelper/Pact_line"),
+        (TAllianceStyle/BLUFOR, "playerHelper/Otan_line_Endgame"),
+        (TAllianceStyle/REDFOR, "playerHelper/Pact_line"),
     ]
 
     ForceDico = ~/LocalisationConstantes/dico_interface_outgame
     ForceTokens = MAP
     [
-        (EAllianceStyle/BLUFOR, "BLUFOR"),
-        (EAllianceStyle/REDFOR, "REDFOR"),
+        (TAllianceStyle/BLUFOR, "BLUFOR"),
+        (TAllianceStyle/REDFOR, "REDFOR"),
     ]
 
     CoalitionDico = ~/LocalisationConstantes/dico_interface_outgame
     CoalitionTokens = MAP
     [
-        (ECoalition/NATO, "NATO"),
-        (ECoalition/PACT, "PACT"),
+        (TWargameCoalition/NATO, "NATO"),
+        (TWargameCoalition/PACT, "PACT"),
     ]
 
     IADico = ~/LocalisationConstantes/dico_interface_outgame
@@ -2610,26 +2610,26 @@ UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescrip
 
     WinTokenByGameEndingCondition = MAP
     [
-        (~/EGameEndingCondition/ScoreVictory,           "EG_pointW"),
-        (~/EGameEndingCondition/ScoreDefeat,            "EG_scDefW"),
-        (~/EGameEndingCondition/PlayerDisconnected,     "EG_discW"),
-        (~/EGameEndingCondition/Surrender,              "EG_surrW"),
-        (~/EGameEndingCondition/NoMoreZone,             "EG_nozoneW"),
-        (~/EGameEndingCondition/NoMoreProd,             "EG_noprodW"),
-        (~/EGameEndingCondition/Time,                   "EG_scWTL"),
-        (~/EGameEndingCondition/ScriptDecided ,         ""),
+        (~/TGameEndingCondition/ScoreVictory,           "EG_pointW"),
+        (~/TGameEndingCondition/ScoreDefeat,            "EG_scDefW"),
+        (~/TGameEndingCondition/PlayerDisconnected,     "EG_discW"),
+        (~/TGameEndingCondition/Surrender,              "EG_surrW"),
+        (~/TGameEndingCondition/NoMoreZone,             "EG_nozoneW"),
+        (~/TGameEndingCondition/NoMoreProd,             "EG_noprodW"),
+        (~/TGameEndingCondition/Time,                   "EG_scWTL"),
+        (~/TGameEndingCondition/ScriptDecided ,         ""),
     ]
 
     LossTokenByGameEndingCondition = MAP
     [
-        (~/EGameEndingCondition/ScoreVictory,           "EG_pointL"),
-        (~/EGameEndingCondition/ScoreDefeat,            "EG_scDefL"),
-        (~/EGameEndingCondition/PlayerDisconnected,     "EG_discL"),
-        (~/EGameEndingCondition/Surrender,              "EG_surrL"),
-        (~/EGameEndingCondition/NoMoreZone,             "EG_nozoneL"),
-        (~/EGameEndingCondition/NoMoreProd,             "EG_noprodL"),
-        (~/EGameEndingCondition/Time,                   "EG_scLTL"),
-        (~/EGameEndingCondition/ScriptDecided ,         ""),
+        (~/TGameEndingCondition/ScoreVictory,           "EG_pointL"),
+        (~/TGameEndingCondition/ScoreDefeat,            "EG_scDefL"),
+        (~/TGameEndingCondition/PlayerDisconnected,     "EG_discL"),
+        (~/TGameEndingCondition/Surrender,              "EG_surrL"),
+        (~/TGameEndingCondition/NoMoreZone,             "EG_nozoneL"),
+        (~/TGameEndingCondition/NoMoreProd,             "EG_noprodL"),
+        (~/TGameEndingCondition/Time,                   "EG_scLTL"),
+        (~/TGameEndingCondition/ScriptDecided ,         ""),
     ]
 
     VictoryTokens = MAP
@@ -2645,24 +2645,24 @@ UISpecificTacticalEndGameViewDescriptor is TUISpecificTacticalEndGameViewDescrip
 
     TacticFromStrategicEndGameReasonToken = MAP
     [
-        (~/EGameEndingCondition/ScoreVictory,       "EG_TFSpoin"),
-        (~/EGameEndingCondition/ScoreDefeat,        "EG_TFSmora"),
-        (~/EGameEndingCondition/PlayerDisconnected, "EG_TFSdisc"),
-        (~/EGameEndingCondition/Surrender,          "EG_TFSsurr"),
-        (~/EGameEndingCondition/NoMoreZone,         "EG_TFSnozo"),
-        (~/EGameEndingCondition/Time,               "EG_TFStime"),
+        (~/TGameEndingCondition/ScoreVictory,       "EG_TFSpoin"),
+        (~/TGameEndingCondition/ScoreDefeat,        "EG_TFSmora"),
+        (~/TGameEndingCondition/PlayerDisconnected, "EG_TFSdisc"),
+        (~/TGameEndingCondition/Surrender,          "EG_TFSsurr"),
+        (~/TGameEndingCondition/NoMoreZone,         "EG_TFSnozo"),
+        (~/TGameEndingCondition/Time,               "EG_TFStime"),
     ]
 
     TacticFromStrategicWinDetailToken = MAP
     [
-        (~/EGameEndingCondition/ScoreVictory,           "EG_TFSpoEV"),
-        (~/EGameEndingCondition/ScoreDefeat,            "EG_TFSmoEV"),
+        (~/TGameEndingCondition/ScoreVictory,           "EG_TFSpoEV"),
+        (~/TGameEndingCondition/ScoreDefeat,            "EG_TFSmoEV"),
     ]
 
     TacticFromStrategicLossDetailToken = MAP
     [
-        (~/EGameEndingCondition/ScoreVictory,           "EG_TFSpoEL"),
-        (~/EGameEndingCondition/ScoreDefeat,            "EG_TFSmoEL"),
+        (~/TGameEndingCondition/ScoreVictory,           "EG_TFSpoEL"),
+        (~/TGameEndingCondition/ScoreDefeat,            "EG_TFSmoEL"),
     ]
 
     // Tokens de terrain à mettre dans le dico MAPS.csv

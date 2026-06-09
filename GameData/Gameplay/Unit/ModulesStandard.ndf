@@ -8,7 +8,7 @@ TargetDataModuleDescriptor is TTargetDataModuleDescriptor()
 
 BuildingPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = True
     ClampInWorld               = True
     ClampOutMap                = False
@@ -16,7 +16,7 @@ BuildingPositionModuleDescriptor is TPositionModuleDescriptor
 
 FirePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
     ClampInWorld               = True
     ClampOutMap                = False
@@ -24,7 +24,7 @@ FirePositionModuleDescriptor is TPositionModuleDescriptor
 
 MissilePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/ProjectileAltitude
+    InitialCollisionPlane      = TCollisionPlane/ProjectileAltitude
     InGeoDb                    = True
     ClampInWorld               = False
     ClampOutMap                = True
@@ -34,7 +34,7 @@ IAStratZoneIndexModuleDescriptor is TIAStratZoneIndexModuleDescriptor()
 
 SmokePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
     ClampInWorld               = True
     ClampOutMap                = False

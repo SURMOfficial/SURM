@@ -8,7 +8,7 @@ export Descriptor_Unit_FOB_BEL is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'BEL'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -82,7 +82,7 @@ export Descriptor_Unit_FOB_BEL is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -136,7 +136,7 @@ export Descriptor_Unit_FOB_CAN is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'CAN'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -210,7 +210,7 @@ export Descriptor_Unit_FOB_CAN is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -249,7 +249,7 @@ export Descriptor_Unit_FOB_CAN is TEntityDescriptor
         (
             UnitRole = 'supply'
             PriceCategory = 'tank_A'
-            NameToken = 'FOBUSUK'
+            NameToken = 'EXIXSSXETL'
             InfoPanelConfigurationToken = 'FOB'
             MenuIconTexture = 'Texture_RTS_H_fob'
             ButtonTexture = 'Texture_Button_Unit_FOB_CAN'
@@ -264,7 +264,7 @@ export Descriptor_Unit_FOB_DDR is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/PACT
+            Coalition                        = TWargameCoalition/PACT
             MotherCountry                    = 'DDR'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -338,7 +338,7 @@ export Descriptor_Unit_FOB_DDR is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -392,7 +392,7 @@ export Descriptor_Unit_FOB_DK is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'DK'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -466,7 +466,7 @@ export Descriptor_Unit_FOB_DK is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -520,7 +520,7 @@ export Descriptor_Unit_FOB_ESP is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'ESP'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -594,7 +594,7 @@ export Descriptor_Unit_FOB_ESP is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -648,7 +648,7 @@ export Descriptor_Unit_FOB_FR is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'FR'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -722,7 +722,7 @@ export Descriptor_Unit_FOB_FR is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -776,7 +776,7 @@ export Descriptor_Unit_FOB_NL is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'NL'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -850,7 +850,7 @@ export Descriptor_Unit_FOB_NL is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -904,7 +904,7 @@ export Descriptor_Unit_FOB_POL is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/PACT
+            Coalition                        = TWargameCoalition/PACT
             MotherCountry                    = 'POL'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -978,7 +978,7 @@ export Descriptor_Unit_FOB_POL is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -1032,7 +1032,7 @@ export Descriptor_Unit_FOB_RFA is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'RFA'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -1106,7 +1106,7 @@ export Descriptor_Unit_FOB_RFA is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -1160,7 +1160,7 @@ export Descriptor_Unit_FOB_SOV is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/PACT
+            Coalition                        = TWargameCoalition/PACT
             MotherCountry                    = 'SOV'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -1234,7 +1234,7 @@ export Descriptor_Unit_FOB_SOV is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -1288,7 +1288,7 @@ export Descriptor_Unit_FOB_TCH is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/PACT
+            Coalition                        = TWargameCoalition/PACT
             MotherCountry                    = 'TCH'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -1362,7 +1362,7 @@ export Descriptor_Unit_FOB_TCH is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -1416,7 +1416,7 @@ export Descriptor_Unit_FOB_UK is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'UK'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -1490,7 +1490,7 @@ export Descriptor_Unit_FOB_UK is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),
@@ -1544,7 +1544,7 @@ export Descriptor_Unit_FOB_US is TEntityDescriptor
     ModulesDescriptors = [
         TTypeUnitModuleDescriptor
         (
-            Coalition                        = ECoalition/NATO
+            Coalition                        = TWargameCoalition/NATO
             MotherCountry                    = 'US'
         ),
         ~/BuildingDescriptorTagsModuleDescriptor,
@@ -1618,7 +1618,7 @@ export Descriptor_Unit_FOB_US is TEntityDescriptor
         ~/UnitStateEngineSubUnitModuleDescriptor,
         TProductionModuleDescriptor
         (
-            FactoryType        = EFactory/Logistic
+            FactoryType        = Factory/Logistic
             ProductionTime     = -1
             ProductionRessourcesNeeded = MAP [
                 ($/GFX/Resources/Resource_CommandPoints, 175),

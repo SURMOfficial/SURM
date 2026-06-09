@@ -38,6 +38,7 @@ is TMacroActionDescriptor_Artillery_Specific
                 (["Helo"], 0.5),
             ]),
         TMacroActionLifetimeSettingHolder(MinimumResourceForLaunch = <MinimumResourceForLaunch>),
+        TArtilleryMoveAfterShootSettingHolder(),
     ]
     +
     <ParametresDeMission>
@@ -79,6 +80,8 @@ export Artillery_Sniper is TMacroActionDescriptor_Artillery_Specific
                 (["Helo"], 0.5),
             ]
         ),
+
+        TArtilleryMoveAfterShootSettingHolder(),
     ]
 )
 //-------------------------------------------------------------------------
@@ -117,6 +120,7 @@ export Artillery_Support is TMacroActionDescriptor_Artillery_Specific
         ),
 
         TMacroActionProductionSettingHolder(PoolModelList = [~/Pool_Artillery_Support]),
+        TArtilleryMoveAfterShootSettingHolder(),
     ]
 )
 //-------------------------------------------------------------------------
@@ -166,6 +170,8 @@ is TMacroActionDescriptor_Artillery_Specific
                 (["Helo"], 0.5),
             ]
         ),
+
+        TArtilleryMoveAfterShootSettingHolder(),
     ]
 )
 //-------------------------------------------------------------------------

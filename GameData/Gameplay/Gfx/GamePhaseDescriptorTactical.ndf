@@ -9,17 +9,17 @@ tacticalGamePhaseManagerDescriptor is TGamePhaseManagerDescriptor
         deploiementGamePhaseDescriptor,
     ]
 
-    InitPhaseType = ~/CommandPhase
+    InitPhaseType = ~/TGamePhase/Command
 )
 
 private commandGamePhaseDescriptor is TWargameGamePhaseDescriptor
 (
-    GamePhaseType = ~/CommandPhase
+    GamePhaseType = ~/TGamePhase/Command
 )
 
 private deploiementGamePhaseDescriptor is TDeploiementGamePhaseDescriptor
 (
-    GamePhaseType = ~/DeploiementPhase
+    GamePhaseType = ~/TGamePhase/Deploiement
 
 // la description pour NotSpecified est obligatoire, c'est celle par défaut pour tous les modes
     ListeProprietesTempsGrace = MAP [

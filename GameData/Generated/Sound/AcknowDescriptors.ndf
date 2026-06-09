@@ -17674,6 +17674,183 @@ export AcknowUnitContainer is TAcknowUnitContainerDescriptor
         TAcknowDescriptor
         (
             MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_Attack
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Attack/1.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Attack/2.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Attack/3.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Attack/4.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Attack/5.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_DamageReceived
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/DamageReceived/7.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/DamageReceived/8.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/DamageReceived/9.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_EnemyUnitContact
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Enemy_Contact/10.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_Move
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move/13.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move/14.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move/15.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move/16.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move/17.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move/18.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move/19.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move/20.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_MoveAndAttackOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move_Attack/21.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move_Attack/22.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move_Attack/23.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move_Attack/24.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move_Attack/25.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move_Attack/26.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Move_Attack/27.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_OutOfAmmo
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/No_Ammo/28.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/No_Ammo/29.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_Panicking
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Panicking/30.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Panicking/31.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_PositionForbidden
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Impossible/11.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_Select
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/32.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/33.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/34.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/35.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/36.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/37.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/38.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/39.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/40.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/41.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/42.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/43.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Select/44.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_ShootOnPosition
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Attack_Position/6.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_Stop
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Stop/45.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_Surrender
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Surrender/46.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Surrender/47.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_TargetDestroyed
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Target_Destroyed/48.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Target_Destroyed/49.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Target_Destroyed/50.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
+            TypeSpecific  = TAcknowUnitType_Gendarme
+            Action        = TAcknowUnitAction_WithdrawOrder
+            Sounds        =
+            [
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Withdraw/52.ogg' Filter = TSoundFilter_RadioOutside ),
+                Template_UnitAcknow( FileName = 'GameData:/Assets/Sons/Acknows/FR/Gendarme/Withdraw/53.ogg' Filter = TSoundFilter_RadioOutside ),
+            ]
+        ),
+        TAcknowDescriptor
+        (
+            MotherCountry = 'FR'
             TypeSpecific  = TAcknowUnitType_GroundAtk
             Action        = TAcknowUnitAction_AirplaneOutOfFuel
             Sounds        =

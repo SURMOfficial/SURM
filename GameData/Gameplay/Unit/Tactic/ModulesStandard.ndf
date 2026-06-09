@@ -11,8 +11,6 @@ PlayerMissionModuleDescriptor is TPlayerMissionModuleDescriptor()
 
 TargetCoordinatorModuleDescriptor is TTargetCoordinatorModuleDescriptor()
 
-TargetManagerModuleDescriptor is TTargetManagerModuleDescriptor()
-
 BuildingOrderConfigModuleDescriptor is TOrderableModuleDescriptor
 (
     UnlockableOrders = [ EOrderType/Stop, EOrderType/SupplyUnit, EOrderType/AskForSupply, EOrderType/AIDefend, EOrderType/AIAttack, EOrderType/AIStop ]
@@ -98,7 +96,7 @@ UnitStateEngineSubUnitModuleDescriptor is TStateEngineSubUnitModuleDescriptor()
 
 AirplanePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/HighAltitude
+    InitialCollisionPlane      = TCollisionPlane/HighAltitude
     InGeoDb                    = True
     ClampInWorld               = False
     ClampOutMap                = True
@@ -106,7 +104,7 @@ AirplanePositionModuleDescriptor is TPositionModuleDescriptor
 
 AirplaneCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
     ClampInWorld               = False
     ClampOutMap                = True
@@ -114,7 +112,7 @@ AirplaneCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 
 UnitPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = True
     ClampInWorld               = True
     ClampOutMap                = False
@@ -122,7 +120,7 @@ UnitPositionModuleDescriptor is TPositionModuleDescriptor
 
 HelicopterPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/NearGround
+    InitialCollisionPlane      = TCollisionPlane/NearGround
     InGeoDb                    = True
     ClampInWorld               = True
     ClampOutMap                = False
@@ -130,7 +128,7 @@ HelicopterPositionModuleDescriptor is TPositionModuleDescriptor
 
 UnitCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
     ClampInWorld               = True
     ClampOutMap                = False
@@ -138,7 +136,7 @@ UnitCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 
 DistrictPositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = True
     ClampInWorld               = False
     ClampOutMap                = False
@@ -146,7 +144,7 @@ DistrictPositionModuleDescriptor is TPositionModuleDescriptor
 
 DistrictCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
     ClampInWorld               = False
     ClampOutMap                = False
@@ -154,7 +152,7 @@ DistrictCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 
 BunkerCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
     ClampInWorld               = False
     ClampOutMap                = False
@@ -162,7 +160,7 @@ BunkerCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 
 BuildingCadavrePositionModuleDescriptor is TPositionModuleDescriptor
 (
-    InitialCollisionPlane      = ECollisionPlane/Ground
+    InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
     ClampInWorld               = True
     ClampOutMap                = False

@@ -48,9 +48,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
 
     //--------------- Connaissance des zones ----------------------------------------//
 
-    // Si on utilise le contrôle des zones par ratios de force, c'est la valeur minimale à dépasser pour contrôler la zone
-    ControlRatioMinToControl = 1.0
-
     ZoneKnowledgeDuration = 360 // Durée pendant laquelle une zone reste connue après reco
     CommandZoneWeight = ~/CommandZoneCustomWeighForIAStrat // Numero donné aux zones générées automatiquement autours des zones objectif.
 
@@ -89,9 +86,6 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     DistanceToSeekPolygonCenterForUnitInDefenseGRU = 707
 
     MaxNumberOfStackingUnits = 2
-
-    // Objectif Attack
-    ObjectiveAttackOwnershipRatio = 0.1
 
     DefenseMacroActionFleePowerRatio = 0.3
 
@@ -252,7 +246,7 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     // constante de l'idle des helico
     HelicoSafeCollisionPlanesOrderByTag =
     [
-        ("AllUnits", [ECollisionPlane/NearGround, ECollisionPlane/LowAltitude, ECollisionPlane/Ground]),
+        ("AllUnits", [TCollisionPlane/NearGround, TCollisionPlane/LowAltitude, TCollisionPlane/Ground]),
     ]
 
     IAStratPathCostCacheFilePath = "CurrentScenarioData:/out/IAStrat_PathCache.ndfbin"

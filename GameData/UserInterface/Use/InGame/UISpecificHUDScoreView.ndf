@@ -871,12 +871,12 @@ UISpecificHUDScoreAllianceViewDescriptor is TUISpecificHUDScoreAllianceViewDescr
 
     ScorePointTypeToElementName = MAP
     [
-        (~/EScorePointType/UnitDestruction, DestructionPointElementName),
-        (~/EScorePointType/ZonePoint, ZonePointElementName),
-        (~/EScorePointType/UnitLoss, UnitLossElementName)
+        (~/TScorePointType/UnitDestruction, DestructionPointElementName),
+        (~/TScorePointType/ZonePoint, ZonePointElementName),
+        (~/TScorePointType/UnitLoss, UnitLossElementName)
     ]
 
-    ScoreTypeToDisplayFromMaxToMin = [ ~/EScorePointType/UnitLoss ]
+    ScoreTypeToDisplayFromMaxToMin = [ ~/TScorePointType/UnitLoss ]
 )
 
 //------------------------------------------------------------------------------
@@ -888,7 +888,7 @@ UISpecificHUDScoreViewDescriptor is TUISpecificHUDScoreViewDescriptor
 
     ScoreToReachToDisplay =
     [
-        ~/EScorePointType/UnitDestruction,
-        ~/EScorePointType/ZonePoint
+        ~/TScorePointType/UnitDestruction,
+        ~/TScorePointType/ZonePoint
     ]
 )

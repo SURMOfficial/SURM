@@ -2922,6 +2922,42 @@ export MissileCarriage_DCA_Rapier_UK_Showroom is TMissileCarriageConnoisseur
 )
 
 
+export MissileCarriage_DCA_S125_quad_Neva_SOV is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_DCA_S125_quad_Neva_SOV
+    PylonSet = ~/DepictionPylonSet_Vehicle_Default
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=4 MissileType=eAAM WeaponIndex=1 ),
+    ]
+)
+
+export MissileCarriage_DCA_S125_quad_Neva_SOV_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_DCA_S125_quad_Neva_SOV.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Vehicle_Default_Showroom
+    WeaponInfos = ~/MissileCarriage_DCA_S125_quad_Neva_SOV.WeaponInfos
+)
+
+
+export MissileCarriage_DCA_S125_twin_Neva_SOV is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_DCA_S125_twin_Neva_SOV
+    PylonSet = ~/DepictionPylonSet_Vehicle_Default
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAAM WeaponIndex=1 ),
+    ]
+)
+
+export MissileCarriage_DCA_S125_twin_Neva_SOV_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_DCA_S125_twin_Neva_SOV.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Vehicle_Default_Showroom
+    WeaponInfos = ~/MissileCarriage_DCA_S125_twin_Neva_SOV.WeaponInfos
+)
+
+
 export MissileCarriage_DCA_Starstreak_LML_UK is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_DCA_Starstreak_LML_UK
@@ -3855,6 +3891,24 @@ export MissileCarriage_M151A2_TOW_NG_US_Showroom is TMissileCarriageConnoisseur
     MeshDescriptor = ~/MissileCarriage_M151A2_TOW_NG_US.MeshDescriptor
     PylonSet = ~/DepictionPylonSet_ATGM_Showroom
     WeaponInfos = ~/MissileCarriage_M151A2_TOW_NG_US.WeaponInfos
+)
+
+
+export MissileCarriage_M151A2_TOW_US is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_M151A2_TOW_US
+    PylonSet = ~/DepictionPylonSet_ATGM
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MeshDescriptor=$/GFX/DepictionResources/Modele_M151A2_TOW_US_Tourelle_01 MissileCount=4 MissileType=eAGM WeaponIndex=1 ),
+    ]
+)
+
+export MissileCarriage_M151A2_TOW_US_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_M151A2_TOW_US.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_ATGM_Showroom
+    WeaponInfos = ~/MissileCarriage_M151A2_TOW_US.WeaponInfos
 )
 
 
@@ -4993,6 +5047,24 @@ export MissileCarriage_T62MV_SOV_Showroom is TMissileCarriageConnoisseur
 )
 
 
+export MissileCarriage_T62M_APS_SOV is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_T62M_APS_SOV
+    PylonSet = ~/DepictionPylonSet_Vehicle_Default
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=6 MissileType=eAGM WeaponIndex=1 ),
+    ]
+)
+
+export MissileCarriage_T62M_APS_SOV_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_T62M_APS_SOV.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Vehicle_Default_Showroom
+    WeaponInfos = ~/MissileCarriage_T62M_APS_SOV.WeaponInfos
+)
+
+
 export MissileCarriage_T62M_CMD_SOV is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_T62M_CMD_SOV
@@ -5750,6 +5822,62 @@ export MissileCarriage_AH1E_Cobra_US_Showroom is TMissileCarriageConnoisseur
 )
 
 
+export MissileCarriage_AH1E_Cobra_noNG_AT1_US is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1E_Cobra_noNG_AT1_US
+    PylonSet = ~/DepictionPylonSet_Helico_Default
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=38 MissileType=eAGM MountingType=eMountingPod WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=4 MissileType=eAGM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_AH1E_Cobra_noNG_AT1_US_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_AH1E_Cobra_noNG_AT1_US.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Helico_Default_Showroom
+    WeaponInfos = ~/MissileCarriage_AH1E_Cobra_noNG_AT1_US.WeaponInfos
+)
+
+
+export MissileCarriage_AH1E_Cobra_noNG_AT2_US is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1E_Cobra_noNG_AT2_US
+    PylonSet = ~/DepictionPylonSet_Helico_Default
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=8 MissileType=eAGM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_AH1E_Cobra_noNG_AT2_US_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_AH1E_Cobra_noNG_AT2_US.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Helico_Default_Showroom
+    WeaponInfos = ~/MissileCarriage_AH1E_Cobra_noNG_AT2_US.WeaponInfos
+)
+
+
+export MissileCarriage_AH1E_Cobra_noNG_RKT_US is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_AH1E_Cobra_noNG_RKT_US
+    PylonSet = ~/DepictionPylonSet_Helico_Default
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=31 MissileType=eAGM MountingType=eMountingPod WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=31 MissileType=eAGM MountingType=eMountingPod WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_AH1E_Cobra_noNG_RKT_US_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_AH1E_Cobra_noNG_RKT_US.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Helico_Default_Showroom
+    WeaponInfos = ~/MissileCarriage_AH1E_Cobra_noNG_RKT_US.WeaponInfos
+)
+
+
 export MissileCarriage_AH1F_ATAS_US is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_AH1F_ATAS_US
@@ -6107,6 +6235,24 @@ export MissileCarriage_Alouette_III_SS11_FR_Showroom is TMissileCarriageConnoiss
 )
 
 
+export MissileCarriage_Alouette_II_SS11_FR is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Alouette_II_SS11_FR
+    PylonSet = ~/DepictionPylonSet_Helico_Default
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAGM WeaponIndex=1 ),
+    ]
+)
+
+export MissileCarriage_Alouette_II_SS11_FR_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_Alouette_II_SS11_FR.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Helico_Default_Showroom
+    WeaponInfos = ~/MissileCarriage_Alouette_II_SS11_FR.WeaponInfos
+)
+
+
 export MissileCarriage_Bo_105_PAH_1A1_RFA is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Bo_105_PAH_1A1_RFA
@@ -6448,6 +6594,25 @@ export MissileCarriage_Mi_14PL_AT_DDR_Showroom is TMissileCarriageConnoisseur
     MeshDescriptor = ~/MissileCarriage_Mi_14PL_AT_DDR.MeshDescriptor
     PylonSet = ~/DepictionPylonSet_Helico_Default_Showroom
     WeaponInfos = ~/MissileCarriage_Mi_14PL_AT_DDR.WeaponInfos
+)
+
+
+export MissileCarriage_Mi_24A_SOV is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mi_24A_SOV
+    PylonSet = ~/DepictionPylonSet_Helico_SOV
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=64 MissileType=eAGM MountingType=eMountingPod WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=4 MissileType=eAGM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_Mi_24A_SOV_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_Mi_24A_SOV.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Helico_SOV_Showroom
+    WeaponInfos = ~/MissileCarriage_Mi_24A_SOV.WeaponInfos
 )
 
 
@@ -8611,6 +8776,25 @@ export MissileCarriage_F15C_Eagle_AA2_US_Showroom is TMissileCarriageConnoisseur
     MeshDescriptor = ~/MissileCarriage_F15C_Eagle_AA2_US.MeshDescriptor
     PylonSet = ~/DepictionPylonSet_Airplane_Default_Showroom
     WeaponInfos = ~/MissileCarriage_F15C_Eagle_AA2_US.WeaponInfos
+)
+
+
+export MissileCarriage_F15C_Eagle_AA3_US is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_F15C_Eagle_AA3_US
+    PylonSet = ~/DepictionPylonSet_Airplane_Default
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=4 MissileType=eAAM WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=4 MissileType=eAAM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_F15C_Eagle_AA3_US_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_F15C_Eagle_AA3_US.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Airplane_Default_Showroom
+    WeaponInfos = ~/MissileCarriage_F15C_Eagle_AA3_US.WeaponInfos
 )
 
 
@@ -11723,6 +11907,25 @@ export MissileCarriage_MiG_27M_sead_SOV_Showroom is TMissileCarriageConnoisseur
 )
 
 
+export MissileCarriage_MiG_29S_SOV is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29S_SOV
+    PylonSet = ~/DepictionPylonSet_Airplane_SOV
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAAM WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=4 MissileType=eAAM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_MiG_29S_SOV_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_MiG_29S_SOV.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Airplane_SOV_Showroom
+    WeaponInfos = ~/MissileCarriage_MiG_29S_SOV.WeaponInfos
+)
+
+
 export MissileCarriage_MiG_29_9_13_SOV is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_MiG_29_9_13_SOV
@@ -11927,6 +12130,24 @@ export MissileCarriage_MiG_31_AA2_SOV_Showroom is TMissileCarriageConnoisseur
     MeshDescriptor = ~/MissileCarriage_MiG_31_AA2_SOV.MeshDescriptor
     PylonSet = ~/DepictionPylonSet_Airplane_SOV_Showroom
     WeaponInfos = ~/MissileCarriage_MiG_31_AA2_SOV.WeaponInfos
+)
+
+
+export MissileCarriage_Mirage_2000_C_CASCAD_FR is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_2000_C_CASCAD_FR
+    PylonSet = ~/DepictionPylonSet_Airplane_FR
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=6 MissileType=eAGM MountingType=eMountingBomb WeaponIndex=2 ),
+    ]
+)
+
+export MissileCarriage_Mirage_2000_C_CASCAD_FR_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_Mirage_2000_C_CASCAD_FR.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Airplane_FR_Showroom
+    WeaponInfos = ~/MissileCarriage_Mirage_2000_C_CASCAD_FR.WeaponInfos
 )
 
 
@@ -12157,6 +12378,25 @@ export MissileCarriage_Mirage_F1_CT_FR_Showroom is TMissileCarriageConnoisseur
 )
 
 
+export MissileCarriage_Mirage_F1_C_CLU_FR is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_CLU_FR
+    PylonSet = ~/DepictionPylonSet_Airplane_FR
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAGM MountingType=eMountingBomb WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAAM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_Mirage_F1_C_CLU_FR_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_Mirage_F1_C_CLU_FR.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Airplane_FR_Showroom
+    WeaponInfos = ~/MissileCarriage_Mirage_F1_C_CLU_FR.WeaponInfos
+)
+
+
 export MissileCarriage_Mirage_F1_C_ESP is TMissileCarriageConnoisseur
 (
     MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_ESP
@@ -12231,6 +12471,44 @@ export MissileCarriage_Mirage_F1_C_HE_ESP_Showroom is TMissileCarriageConnoisseu
     MeshDescriptor = ~/MissileCarriage_Mirage_F1_C_HE_ESP.MeshDescriptor
     PylonSet = ~/DepictionPylonSet_Airplane_FR_Showroom
     WeaponInfos = ~/MissileCarriage_Mirage_F1_C_HE_ESP.WeaponInfos
+)
+
+
+export MissileCarriage_Mirage_F1_C_HE_FR is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_HE_FR
+    PylonSet = ~/DepictionPylonSet_Airplane_FR
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAGM MountingType=eMountingBomb WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAAM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_Mirage_F1_C_HE_FR_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_Mirage_F1_C_HE_FR.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Airplane_FR_Showroom
+    WeaponInfos = ~/MissileCarriage_Mirage_F1_C_HE_FR.WeaponInfos
+)
+
+
+export MissileCarriage_Mirage_F1_C_RKT_FR is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Mirage_F1_C_RKT_FR
+    PylonSet = ~/DepictionPylonSet_Airplane_FR
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=36 MissileType=eAGM MountingType=eMountingPod WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAAM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_Mirage_F1_C_RKT_FR_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_Mirage_F1_C_RKT_FR.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Airplane_FR_Showroom
+    WeaponInfos = ~/MissileCarriage_Mirage_F1_C_RKT_FR.WeaponInfos
 )
 
 
@@ -13505,6 +13783,25 @@ export MissileCarriage_Su_25T_SOV_Showroom is TMissileCarriageConnoisseur
     MeshDescriptor = ~/MissileCarriage_Su_25T_SOV.MeshDescriptor
     PylonSet = ~/DepictionPylonSet_ATGM_Showroom
     WeaponInfos = ~/MissileCarriage_Su_25T_SOV.WeaponInfos
+)
+
+
+export MissileCarriage_Su_25_AT2_SOV is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = $/GFX/DepictionResources/Modele_Su_25_AT2_SOV
+    PylonSet = ~/DepictionPylonSet_Airplane_SOV
+    WeaponInfos = 
+    [
+        TMissileCarriageWeaponInfo( MissileCount=4 MissileType=eAGM WeaponIndex=2 ),
+        TMissileCarriageWeaponInfo( MissileCount=2 MissileType=eAAM WeaponIndex=3 ),
+    ]
+)
+
+export MissileCarriage_Su_25_AT2_SOV_Showroom is TMissileCarriageConnoisseur
+(
+    MeshDescriptor = ~/MissileCarriage_Su_25_AT2_SOV.MeshDescriptor
+    PylonSet = ~/DepictionPylonSet_Airplane_SOV_Showroom
+    WeaponInfos = ~/MissileCarriage_Su_25_AT2_SOV.WeaponInfos
 )
 
 

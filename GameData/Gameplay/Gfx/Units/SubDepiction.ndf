@@ -27,6 +27,19 @@ is TemplateDepictionPose
     Animation = $/GFX/DepictionResources/DriverLSV
 )
 
+template TemplateDepictionDriverBiker
+[
+    MeshDescriptorHigh,
+    MeshDescriptorLow,
+]
+is TemplateDepictionPose
+(
+    MeshDescriptorHigh = <MeshDescriptorHigh>
+    MeshDescriptorLow = <MeshDescriptorLow>
+    Selector = CommonPilotDepictionSelector
+    Animation = $/GFX/DepictionResources/DriverBiker
+)
+
 template TemplateDepictionPose
 [
     MeshDescriptorHigh,
@@ -77,6 +90,9 @@ is TSubDepiction ( Anchors = ['driver'] Depiction = TemplateDepictionDriver(Mesh
 
 template SubDepiction_DriverLSV [ MeshDescriptorHigh, MeshDescriptorLow ]
 is TSubDepiction ( Anchors = ['driver'] Depiction = TemplateDepictionDriverLSV(MeshDescriptorHigh = <MeshDescriptorHigh> MeshDescriptorLow = <MeshDescriptorLow>) )
+
+template SubDepiction_DriverBiker [ MeshDescriptorHigh, MeshDescriptorLow ]
+is TSubDepiction ( Anchors = ['biker'] Depiction = TemplateDepictionDriverBiker(MeshDescriptorHigh = <MeshDescriptorHigh> MeshDescriptorLow = <MeshDescriptorLow>) )
 
 template SubDepiction_DriverUndeployed [ MeshDescriptorHigh, MeshDescriptorLow ]
 is TSubDepiction
