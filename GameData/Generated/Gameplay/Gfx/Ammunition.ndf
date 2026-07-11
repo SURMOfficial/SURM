@@ -2290,7 +2290,7 @@ Ammo_AutoCanon_AP_20mm_M621_GIAT is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 0
     AimingTime                        = 3.0
-    TimeBetweenTwoSalvos              = 1.5
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                    = 12
@@ -2357,7 +2357,7 @@ Ammo_AutoCanon_AP_20mm_M621_GIAT_AMX30 is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 0
     AimingTime                        = 3.0
-    TimeBetweenTwoSalvos              = 1.5
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                    = 12
@@ -2424,15 +2424,15 @@ Ammo_AutoCanon_AP_20mm_MK_20_Rh_202 is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 1
     AimingTime                        = 3.5
-    TimeBetweenTwoSalvos              = 1.5
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 10
+    ShotsCountPerSalvo                    = 5
     SupplyCost                        = 2.2
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 2
-    AffichageMunitionParSalve         = 10
+    AffichageMunitionParSalve         = 5
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_mk20_rh202"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -2497,7 +2497,7 @@ Ammo_AutoCanon_AP_20mm_RH202 is TAmmunitionDescriptor //it's possible this could
     )
     MaxSuccessiveHitCount             = 5
     AimingTime                        = 2.5
-    TimeBetweenTwoSalvos              = 1.3
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                    = 10
@@ -2664,9 +2664,9 @@ Ammo_AutoCanon_AP_25mm_KBA is TAmmunitionDescriptor
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = 'CanonPetitM242APFSDST'
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 0.3
-    TimeBetweenTwoFx                  = 0.3
-    MaximumRangeGRU                   = 2000
+    TimeBetweenTwoShots               = 0.4
+    TimeBetweenTwoFx                  = 0.4
+    MaximumRangeGRU                   = 2300
     MinimumRangeGRU                   = 4
     AffecteParNombre                  = True
     AngleDispersion                   = 0.0
@@ -2700,16 +2700,16 @@ Ammo_AutoCanon_AP_25mm_KBA is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 0
     AimingTime                        = 3.0
-    TimeBetweenTwoSalvos              = 1.5
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 10
+    ShotsCountPerSalvo                    = 3
     SupplyCost                        = 2.6
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 10
+    AffichageMunitionParSalve         = 3
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_bushmaster"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -2732,9 +2732,9 @@ Ammo_AutoCanon_AP_25mm_M242_Bushmaster_Late is TAmmunitionDescriptor
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = 'CanonPetitM242APFSDST'
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 0.3
-    TimeBetweenTwoFx                  = 0.3
-    MaximumRangeGRU                   = 2000
+    TimeBetweenTwoShots               = 0.6
+    TimeBetweenTwoFx                  = 0.6
+    MaximumRangeGRU                   = 2300
     MinimumRangeGRU                   = 4
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 1.3
@@ -2767,16 +2767,16 @@ Ammo_AutoCanon_AP_25mm_M242_Bushmaster_Late is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 0
     AimingTime                        = 3.5
-    TimeBetweenTwoSalvos              = 1.5
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 10
+    ShotsCountPerSalvo                    = 3
     SupplyCost                        = 2.6
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 10
+    AffichageMunitionParSalve         = 3
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_bushmaster"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -2834,7 +2834,7 @@ Ammo_AutoCanon_AP_30mm_24A2 is TAmmunitionDescriptor //KA-50
     )
     MaxSuccessiveHitCount             = 0
     AimingTime                        = 1.0
-    TimeBetweenTwoSalvos              = 1.0
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
     ShotsCountPerSalvo                    = 25
@@ -2866,8 +2866,8 @@ Ammo_AutoCanon_AP_30mm_24A2_BMP2 is TAmmunitionDescriptor
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = 'CanonPetit24A2AP'
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 0.2
-    TimeBetweenTwoFx                  = 0.2
+    TimeBetweenTwoShots               = 0.3
+    TimeBetweenTwoFx                  = 0.3
     MaximumRangeGRU                   = 2000
     MinimumRangeGRU                   = 4
     AngleDispersion                   = 0.0
@@ -2901,16 +2901,16 @@ Ammo_AutoCanon_AP_30mm_24A2_BMP2 is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 0
     AimingTime                        = 3.0
-    TimeBetweenTwoSalvos              = 1.5
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 20
+    ShotsCountPerSalvo                    = 3
     SupplyCost                        = 5.60
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 20
+    AffichageMunitionParSalve         = 3
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_24A2_bmp2"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -2933,8 +2933,8 @@ Ammo_AutoCanon_AP_30mm_2A72_BMP3 is TAmmunitionDescriptor
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = 'CanonPetit2A72APT'
     FxPower                           = EFXPower/Moyen
-    TimeBetweenTwoShots               = 0.2
-    TimeBetweenTwoFx                  = 0.2
+    TimeBetweenTwoShots               = 0.3
+    TimeBetweenTwoFx                  = 0.3
     MaximumRangeGRU                   = 2000
     MinimumRangeGRU                   = 4
     AngleDispersion                   = 0.0
@@ -2968,16 +2968,16 @@ Ammo_AutoCanon_AP_30mm_2A72_BMP3 is TAmmunitionDescriptor
     )
     MaxSuccessiveHitCount             = 0
     AimingTime                        = 2.2
-    TimeBetweenTwoSalvos              = 1.5
+    TimeBetweenTwoSalvos              = 0.8
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 10
+    ShotsCountPerSalvo                    = 3
     SupplyCost                        = 2.80
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 10
+    AffichageMunitionParSalve         = 3
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_2A72"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -3069,7 +3069,7 @@ Ammo_AutoCanon_AP_30mm_L21A1_RARDEN is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.7
     TimeBetweenTwoFx                  = 0.7
-    MaximumRangeGRU                   = 2500
+    MaximumRangeGRU                   = 2700
     MinimumRangeGRU                   = 4
     AngleDispersion                   = 0.0
     DispersionAtMaxRangeGRU           = 1
@@ -3238,12 +3238,12 @@ Ammo_AutoCanon_AP_M693_F1_20mm is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 1.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 8
+    ShotsCountPerSalvo                    = 5
     SupplyCost                        = 1.76
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 2
-    AffichageMunitionParSalve         = 8
+    AffichageMunitionParSalve         = 5
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_M693_F1"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -3262,7 +3262,7 @@ Ammo_AutoCanon_AP_T20_20mm is TAmmunitionDescriptor
     TraitsToken                       = [ 'MOTION', 'HE', 'KINETIC', ]
     WeaponCursorType                  = Weapon_Cursor_FastCanon
     MinMaxCategory                    = MinMax_AutocanonHE
-    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=2)
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=3)
     ProjectileType                    = EProjectileType/Obus
     ImpactHappening                   = 'CanonPetit2A72APT'
     FxPower                           = EFXPower/Moyen
@@ -3304,12 +3304,12 @@ Ammo_AutoCanon_AP_T20_20mm is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 1.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 10
+    ShotsCountPerSalvo                    = 5
     SupplyCost                        = 2.2
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 2
-    AffichageMunitionParSalve         = 10
+    AffichageMunitionParSalve         = 5
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_fk20"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -3334,7 +3334,7 @@ Ammo_AutoCanon_HE_20mm_M621_GIAT is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.1
     TimeBetweenTwoFx                  = 0.075
-    MaximumRangeGRU                   = 2200
+    MaximumRangeGRU                   = 2000
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 1400
     MinimumRangeGRU                   = 4
@@ -3373,14 +3373,14 @@ Ammo_AutoCanon_HE_20mm_M621_GIAT is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 1.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 12
+    ShotsCountPerSalvo                    = 10
     SupplyCost                        = 2.2
     NbSalvosShootOnPosition           = 3
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 2
-    AffichageMunitionParSalve         = 12
+    AffichageMunitionParSalve         = 10
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_GIAT_M621"
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
@@ -3406,7 +3406,7 @@ Ammo_AutoCanon_HE_20mm_M621_GIAT_AMX30 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.1
     TimeBetweenTwoFx                  = 0.65
-    MaximumRangeGRU                   = 2200
+    MaximumRangeGRU                   = 2000
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 1400
     MinimumRangeGRU                   = 4
@@ -3477,7 +3477,7 @@ Ammo_AutoCanon_HE_20mm_MK_20_Rh_202 is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.1
     TimeBetweenTwoFx                  = 0.12
-    MaximumRangeGRU                   = 2200
+    MaximumRangeGRU                   = 2000
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 1400
     MinimumRangeGRU                   = 4
@@ -3548,7 +3548,7 @@ Ammo_AutoCanon_HE_20mm_RH202 is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 0.1
     TimeBetweenTwoFx                  = 0.1
     MinimumRangeGRU                   = 2
-    MaximumRangeGRU                   = 2500
+    MaximumRangeGRU                   = 2000
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 1500
     MinimumRangeAirplaneGRU           = 0
@@ -3907,7 +3907,7 @@ Ammo_AutoCanon_HE_25mm_M242_Bushmaster_Late is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.3
     TimeBetweenTwoFx                  = 0.3
-    MaximumRangeGRU                   = 2500
+    MaximumRangeGRU                   = 3000
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 1750
     MinimumRangeGRU                   = 4
@@ -3979,7 +3979,7 @@ Ammo_AutoCanon_HE_25mm_M242_Bushmaster_Late_BSV is TAmmunitionDescriptor
     TimeBetweenTwoShots               = 0.3
     TimeBetweenTwoFx                  = 0.3
     MinimumRangeGRU                   = 50
-    MaximumRangeGRU                   = 1750
+    MaximumRangeGRU                   = 3000
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 1750
     MinimumRangeAirplaneGRU           = 0
@@ -4161,14 +4161,14 @@ Ammo_AutoCanon_HE_30mm_24A2_BMP2 is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 1.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 20
+    ShotsCountPerSalvo                    = 10
     SupplyCost                        = 5.60
     NbSalvosShootOnPosition           = 3
     CanShootOnPosition                = True
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 20
+    AffichageMunitionParSalve         = 10
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_24A2_bmp2"
     SmokeDescriptor                   = nil
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
@@ -4476,7 +4476,7 @@ Ammo_AutoCanon_HE_M693_F1_20mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.1
     TimeBetweenTwoFx                  = 0.065
-    MaximumRangeGRU                   = 2200
+    MaximumRangeGRU                   = 2000
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 1400
     MinimumRangeGRU                   = 4
@@ -4514,13 +4514,13 @@ Ammo_AutoCanon_HE_M693_F1_20mm is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 1.5
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 8
+    ShotsCountPerSalvo                    = 10
     SupplyCost                        = 1.76
     NbSalvosShootOnPosition           = 3
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 2
-    AffichageMunitionParSalve         = 8
+    AffichageMunitionParSalve         = 10
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_M693_F1"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -4546,7 +4546,7 @@ Ammo_AutoCanon_HE_T20_20mm is TAmmunitionDescriptor
     FxPower                           = EFXPower/Moyen
     TimeBetweenTwoShots               = 0.1
     TimeBetweenTwoFx                  = 0.06
-    MaximumRangeGRU                   = 2200
+    MaximumRangeGRU                   = 2000
     MinimumRangeHelicopterGRU         = 0
     MaximumRangeHelicopterGRU         = 1400
     MinimumRangeGRU                   = 4
