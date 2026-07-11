@@ -102,14 +102,6 @@ AirplanePositionModuleDescriptor is TPositionModuleDescriptor
     ClampOutMap                = True
 )
 
-AirplaneCadavrePositionModuleDescriptor is TPositionModuleDescriptor
-(
-    InitialCollisionPlane      = TCollisionPlane/Ground
-    InGeoDb                    = False
-    ClampInWorld               = False
-    ClampOutMap                = True
-)
-
 UnitPositionModuleDescriptor is TPositionModuleDescriptor
 (
     InitialCollisionPlane      = TCollisionPlane/Ground
@@ -126,7 +118,7 @@ HelicopterPositionModuleDescriptor is TPositionModuleDescriptor
     ClampOutMap                = False
 )
 
-UnitCadavrePositionModuleDescriptor is TPositionModuleDescriptor
+UnitCadaverPositionModuleDescriptor is TPositionModuleDescriptor
 (
     InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
@@ -142,7 +134,7 @@ DistrictPositionModuleDescriptor is TPositionModuleDescriptor
     ClampOutMap                = False
 )
 
-DistrictCadavrePositionModuleDescriptor is TPositionModuleDescriptor
+DistrictCadaverPositionModuleDescriptor is TPositionModuleDescriptor
 (
     InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
@@ -150,15 +142,7 @@ DistrictCadavrePositionModuleDescriptor is TPositionModuleDescriptor
     ClampOutMap                = False
 )
 
-BunkerCadavrePositionModuleDescriptor is TPositionModuleDescriptor
-(
-    InitialCollisionPlane      = TCollisionPlane/Ground
-    InGeoDb                    = False
-    ClampInWorld               = False
-    ClampOutMap                = False
-)
-
-BuildingCadavrePositionModuleDescriptor is TPositionModuleDescriptor
+BuildingCadaverPositionModuleDescriptor is TPositionModuleDescriptor
 (
     InitialCollisionPlane      = TCollisionPlane/Ground
     InGeoDb                    = False
@@ -195,72 +179,61 @@ EKillMode is TBaseClass
     Building is 4
 )
 
-BuildingCadavreModuleDescriptor is TCadavreModuleDescriptor
+BuildingCadaverModuleDescriptor is TCadaverModuleDescriptor
 (
     KillMode = EKillMode/Building
-    CadavreDuration = ~/CadavreDurationApresFeu_Batiment
-    CadavreFireDurationMin = ~/CadavrePeriodeEnFeu_Minimum_Batiment
-    CadavreFireDurationMax = ~/CadavrePeriodeEnFeu_Maximum_Batiment
+    CadaverDuration = ~/CadaverDurationApresFeu_Batiment
+    CadaverFireDurationMin = ~/CadaverPeriodeEnFeu_Minimum_Batiment
+    CadaverFireDurationMax = ~/CadaverPeriodeEnFeu_Maximum_Batiment
     DeathExplosionAmmo = nil
 )
 
-template UnitCadavreModuleDescriptor [
-    KillMode : int,
-    CadavreDuration,
-    DeathExplosionAmmo,
-] is TCadavreModuleDescriptor
-(
-    KillMode = <KillMode>
-    CadavreDuration = <CadavreDuration>
-    CadavreFireDurationMin = ~/CadavrePeriodeEnFeu_Minimum
-    CadavreFireDurationMax = ~/CadavrePeriodeEnFeu_Maximum
-    DeathExplosionAmmo = <DeathExplosionAmmo>
-)
-
-template UnitCadavreGeneratorModuleDescriptor
+template UnitCadaverGeneratorModuleDescriptor
 [
     KillMode : int,
-    CadavreDuration,
+    CadaverDuration,
     DeathExplosionAmmo,
-] is TCadavreGeneratorModuleDescriptor
+] is TCadaverGeneratorModuleDescriptor
 (
-    CadavreModuleDescriptors =
+    CadaverModuleDescriptors =
     [
         ~/EmptyTagsModuleDescriptor,
         ~/DefaultFlagsModuleDescriptor,
-        ~/UnitCadavrePositionModuleDescriptor,
-        UnitCadavreModuleDescriptor
+        ~/UnitCadaverPositionModuleDescriptor,
+        TCadaverModuleDescriptor
         (
             KillMode = <KillMode>
-            CadavreDuration = <CadavreDuration>
+            CadaverDuration = <CadaverDuration>
+            CadaverFireDurationMin = ~/CadaverPeriodeEnFeu_Minimum
+            CadaverFireDurationMax = ~/CadaverPeriodeEnFeu_Maximum
             DeathExplosionAmmo = <DeathExplosionAmmo>
         ),
     ]
 )
 
-template BuildingCadavreGeneratorModuleDescriptor[] is TCadavreGeneratorModuleDescriptor
+template BuildingCadaverGeneratorModuleDescriptor[] is TCadaverGeneratorModuleDescriptor
 (
-    CadavreModuleDescriptors =
+    CadaverModuleDescriptors =
     [
         ~/DefaultFlagsModuleDescriptor,
-        ~/BuildingCadavrePositionModuleDescriptor,
-        ~/BuildingCadavreModuleDescriptor,
+        ~/BuildingCadaverPositionModuleDescriptor,
+        ~/BuildingCadaverModuleDescriptor,
     ]
 )
 
-template DistrictCadavreGeneratorModuleDescriptor[] is TCadavreGeneratorModuleDescriptor
+template DistrictCadaverGeneratorModuleDescriptor[] is TCadaverGeneratorModuleDescriptor
 (
-    CadavreModuleDescriptors =
+    CadaverModuleDescriptors =
     [
         ~/DistrictTagsModuleDescriptor,
         ~/DistrictFlagsModuleDescriptor,
-        ~/DistrictCadavrePositionModuleDescriptor,
+        ~/DistrictCadaverPositionModuleDescriptor,
         TIAStratModuleDescriptor
         (
             DatabaseId = 1
             GameplayBehavior = EGameplayBehavior/Nothing
         ),
-        ~/BuildingCadavreModuleDescriptor,
+        ~/BuildingCadaverModuleDescriptor,
     ]
 )
 

@@ -31,7 +31,7 @@ export CriticalEffectModule_apc is TCriticalEffectModuleDescriptor
 
     PierceEffectsOnFront =
     [
-        CriticalEffect_AmmoExplosion(Roll=(1,10)),
+        CriticalEffect_AmmoExplosion_small(Roll=(1,10)),
         CriticalEffect_BailedOut(Roll=(11,54)), 
         CriticalEffect_TransmissionDestroyed(Roll=(55,62)), // Transmission pétée -> Full stop
         CriticalEffect_TransmissionDamaged(Roll=(63,70)), // Transmission endommagée -> 50% vitesse
@@ -44,7 +44,7 @@ export CriticalEffectModule_apc is TCriticalEffectModuleDescriptor
 
     PierceEffectsOnSides =
     [
-        CriticalEffect_AmmoExplosion(Roll=(1,10)),
+        CriticalEffect_AmmoExplosion_small(Roll=(1,10)),
         CriticalEffect_BailedOut(Roll=(11,61)),
 		CriticalEffect_TransmissionDestroyed(Roll=(62,71) ), // Transmission pétée -> 50% vitesse
 		CriticalEffect_TransmissionDamaged(Roll=(72,74)), // Transmission endommagée -> 50% vitesse
@@ -55,7 +55,7 @@ export CriticalEffectModule_apc is TCriticalEffectModuleDescriptor
 
     PierceEffectsOnRear =
     [
-        CriticalEffect_AmmoExplosion(Roll=(1,10)),
+        CriticalEffect_AmmoExplosion_small(Roll=(1,10)),
         CriticalEffect_BailedOut(Roll=(11,54)), 
 		CriticalEffect_GunJammed(Roll=(55,64)), // Turret stuck -> no rotation tourelle
         CriticalEffect_ShooterKilled(Roll=(91,100)), 
@@ -63,7 +63,7 @@ export CriticalEffectModule_apc is TCriticalEffectModuleDescriptor
 
     PierceEffectsOnTop =
     [
-        CriticalEffect_AmmoExplosion(Roll=(1,8)),
+        CriticalEffect_AmmoExplosion_small(Roll=(1,8)),
         CriticalEffect_BailedOut(Roll=(9,65)),
 		CriticalEffect_TransmissionDestroyed(Roll=(66,75)), // Transmission pétée -> Full stop
         CriticalEffect_TransmissionDamaged(Roll=(76,80)), // Transmission endommagée -> 50% vitesse

@@ -4652,7 +4652,7 @@ export WeaponDescriptor_CCo_152_POL is TWeaponManagerModuleDescriptor //for AG 1
                     EffectTag                           = 'FireEffect_FM_kbk_AK'
                     HandheldEquipmentKey                = "WeaponAlternative_1"
                     NbWeapons                           = 2
-                    AmmoBoxIndex                     	= 0
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
@@ -4669,7 +4669,7 @@ export WeaponDescriptor_CCo_152_POL is TWeaponManagerModuleDescriptor //for AG 1
                     EffectTag                           = 'FireEffect_FM_kbk_AK'
                     HandheldEquipmentKey                = "WeaponAlternative_1"
                     NbWeapons                           = 2
-                    AmmoBoxIndex                     	= 0
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
@@ -4748,7 +4748,7 @@ export WeaponDescriptor_CCo_122_POL is TWeaponManagerModuleDescriptor //for AG 1
                     EffectTag                           = 'FireEffect_FM_kbk_AK'
                     HandheldEquipmentKey                = "WeaponAlternative_1"
                     NbWeapons                           = 2
-                    AmmoBoxIndex                     	= 0
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
@@ -4765,7 +4765,7 @@ export WeaponDescriptor_CCo_122_POL is TWeaponManagerModuleDescriptor //for AG 1
                     EffectTag                           = 'FireEffect_FM_kbk_AK'
                     HandheldEquipmentKey                = "WeaponAlternative_1"
                     NbWeapons                           = 2
-                    AmmoBoxIndex                     	= 0
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
@@ -6861,8 +6861,9 @@ export WeaponDescriptor_2S9_1_Sviristelka_SOV is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = True
     Salves = 
     [
-        6,
-        7,
+        5,
+        3,
+		12,
     ]
     TurretDescriptorList = 
     [
@@ -6897,7 +6898,7 @@ export WeaponDescriptor_2S9_1_Sviristelka_SOV is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 0
+                    AmmoBoxIndex = 1
                     Ammunition = $/GFX/Weapon/Ammo_Howz_Canon_2A51_Howitzer_120mm_SMOKE
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[255,0,0,0]
@@ -6917,7 +6918,7 @@ export WeaponDescriptor_2S9_1_Sviristelka_SOV is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 2
                     Ammunition = $/GFX/Weapon/Ammo_Canon_AP_2A51_120mm
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[255,0,0,0]
@@ -6937,7 +6938,7 @@ export WeaponDescriptor_2S9_1_Sviristelka_SOV is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 0
                     Ammunition = $/GFX/Weapon/Ammo_Canon_HE_direct_2A51_120mm
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -37260,6 +37261,26 @@ export WeaponDescriptor_Bedford_MJ_4t_AA_DK is TWeaponManagerModuleDescriptor
                         "WeaponShootData_0_1",
                     ]
                 ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_4_canon_Maxson_SP_12_7mm_plane
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_4_canon_Maxson_SP_12_7mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
             ]
             OutOfRangeTrackingDuration = 3.5
             Tag = "tourelle1"
@@ -37291,6 +37312,26 @@ export WeaponDescriptor_Berliet_GBC_8KT_20mm_twin_FR is TWeaponManagerModuleDesc
                 (
                     AmmoBoxIndex = 0
                     Ammunition = $/GFX/Weapon/Ammo_DCA_2_canon_76T2_20mm_SP
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_2_canon_76T2_20mm_SP"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_2_canon_76T2_20mm_SP_plane
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
@@ -43045,7 +43086,24 @@ export WeaponDescriptor_DCA_76T2_20mm_CPA_FR is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
-                )
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_76T2_20mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_76T2_20mm'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
             ]
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
@@ -43076,6 +43134,26 @@ export WeaponDescriptor_DCA_76T2_20mm_FR is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     Ammunition = $/GFX/Weapon/Ammo_DCA_2_canon_76T2_20mm
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_2_canon_76T2_20mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    AmmoBoxIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_2_canon_76T2_20mm_plane
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
@@ -43187,6 +43265,23 @@ export WeaponDescriptor_DCA_AZP_S60_POL is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_S60_57mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_S60_57mm'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -43213,6 +43308,23 @@ export WeaponDescriptor_DCA_AZP_S60_SOV is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_S60_57mm
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_1_canon_S60_57mm'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_1_canon_S60_57mm_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -43415,6 +43527,26 @@ export WeaponDescriptor_DCA_Bofors_ESP is TWeaponManagerModuleDescriptor
                         "WeaponShootData_0_1",
                     ]
                 ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_40mm_plane
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_1_canon_Bofors_40mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    AmmoBoxIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
             ]
             OutOfRangeTrackingDuration = 3.5
             Tag = "tourelle1"
@@ -43454,6 +43586,26 @@ export WeaponDescriptor_DCA_Bofors_L60_DK is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_DCA_1_canon_Bofors_40mm"
                     HandheldEquipmentKey = "WeaponAlternative_1"
                     NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_1_canon_Bofors_40mm_plane
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_1_canon_Bofors_40mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    AmmoBoxIndex = 0
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
                     WeaponIgnoredPropertyName = "WeaponIgnored_1"
@@ -45038,6 +45190,23 @@ export WeaponDescriptor_DCA_M55_NL is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canon_Maxson_towed_12_7mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canon_Maxson_towed_12_7mm'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -45186,7 +45355,7 @@ export WeaponDescriptor_DCA_PLDvK_30mm_TCH is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = False
     Salves = 
     [
-        20,
+        10,
     ]
     TurretDescriptorList = 
     [
@@ -45202,6 +45371,26 @@ export WeaponDescriptor_DCA_PLDvK_30mm_TCH is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     Ammunition = $/GFX/Weapon/Ammo_DCA_2_canon_Vz_53_59_30mm_TOWED
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_2_canon_Vz_53_59_30mm_TOWED"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    AmmoBoxIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_2_canon_Vz_53_59_30mm_TOWED_plane
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
@@ -45390,6 +45579,23 @@ export WeaponDescriptor_DCA_M55_BEL is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canon_Maxson_towed_12_7mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canon_Maxson_towed_12_7mm'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
                 )
             ]
             OutOfRangeTrackingDuration      = 3.5
@@ -45438,6 +45644,23 @@ export WeaponDescriptor_DCA_M55_DK is TWeaponManagerModuleDescriptor
                         "WeaponShootData_0_1",
                     ]
                 ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canon_Maxson_towed_12_7mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canon_Maxson_towed_12_7mm'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
             ]
             OutOfRangeTrackingDuration = 3.5
             Tag = "tourelle1"
@@ -45484,6 +45707,23 @@ export WeaponDescriptor_DCA_M55_FR is TWeaponManagerModuleDescriptor
                     [
                         "WeaponShootData_0_1",
                     ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canon_Maxson_towed_12_7mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canon_Maxson_towed_12_7mm'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
                 ),
             ]
             OutOfRangeTrackingDuration = 3.5
@@ -46176,6 +46416,26 @@ export WeaponDescriptor_DCA_ZU_23_2_Naval_SOV is TWeaponManagerModuleDescriptor
                         "WeaponShootData_0_1",
                     ]
                 ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED_plane
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_2_canon_ZU23_2_23mm_TOWED"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
             ]
             OutOfRangeTrackingDuration = 3.5
             Tag = "tourelle1"
@@ -46201,6 +46461,23 @@ export WeaponDescriptor_DCA_ZU_23_2_POL is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm_TOWED'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -46240,6 +46517,23 @@ export WeaponDescriptor_DCA_ZU_23_2_Para_POL is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm_TOWED'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -46391,6 +46685,23 @@ export WeaponDescriptor_DCA_ZU_23_2_nonPara_SOV is TWeaponManagerModuleDescripto
                 TMountedWeaponDescriptor
                 (
                     Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_2_canon_ZU23_2_23mm_TOWED'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_2_canon_ZU23_2_23mm_TOWED_plane
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -61962,7 +62273,7 @@ export WeaponDescriptor_Faun_Kraka_M40A1_RFA is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = True
     Salves = 
     [
-        12,
+        9,
     ]
     TurretDescriptorList = 
     [
@@ -63458,7 +63769,7 @@ export WeaponDescriptor_Gebirgsjager_CMD_RFA is TWeaponManagerModuleDescriptor
     Salves = 
     [
         28,
-        6,
+        3,
 		3,
         4,
         3,
@@ -63615,7 +63926,7 @@ export WeaponDescriptor_Gebirgsjager_CMD_RFA is TWeaponManagerModuleDescriptor
         ),
     ]
 )
-export WeaponDescriptor_Gebirgsjager_Hvy_RFA is TWeaponManagerModuleDescriptor
+export WeaponDescriptor_Gebirgsjager_Hvy_RFA is TWeaponManagerModuleDescriptor //plt HQ
 (
     AlwaysOrientArmorTowardsThreat = False
     Salves = 
@@ -63623,8 +63934,8 @@ export WeaponDescriptor_Gebirgsjager_Hvy_RFA is TWeaponManagerModuleDescriptor
         28,
         14,
         60,
-        6,
-		2,
+        4,
+		4,
 		30,
     ]
     TurretDescriptorList = 
@@ -63643,7 +63954,7 @@ export WeaponDescriptor_Gebirgsjager_Hvy_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_FM_G3KA4"
                     HandheldEquipmentKey = "WeaponAlternative_1"
-                    NbWeapons = 13
+                    NbWeapons = 7
                     AmmoBoxIndex = 0
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
@@ -63663,7 +63974,7 @@ export WeaponDescriptor_Gebirgsjager_Hvy_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_FM_G3KA4"
                     HandheldEquipmentKey = "WeaponAlternative_1"
-                    NbWeapons = 13
+                    NbWeapons = 7
                     AmmoBoxIndex = 0
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
@@ -63717,7 +64028,7 @@ export WeaponDescriptor_Gebirgsjager_Hvy_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_MMG_inf__MG3_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_3"
-                    NbWeapons = 2
+                    NbWeapons = 1
                     AmmoBoxIndex = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
@@ -63843,8 +64154,10 @@ export WeaponDescriptor_Gebirgsjager_JagdKdo_RFA is TWeaponManagerModuleDescript
     [
         28,
         14,
-        100,
-        5,
+        60,
+		4,
+		8,
+        30,
     ]
     TurretDescriptorList = 
     [
@@ -63955,6 +64268,56 @@ export WeaponDescriptor_Gebirgsjager_JagdKdo_RFA is TWeaponManagerModuleDescript
             [
                 TMountedWeaponDescriptor
                 (
+                    Ammunition = $/GFX/Weapon/Ammo_RocketInf_Armbrust
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_RocketInf_Armbrust"
+                    HandheldEquipmentKey = "WeaponAlternative_4"
+                    NbWeapons = 1
+                    AmmoBoxIndex = 3
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_4"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 3
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_RocketInf_Handflammpatrone
+                    AnimateOnlyOneSoldier               = True
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_RocketInf_Handflammpatrone'
+                    HandheldEquipmentKey                = "WeaponAlternative_2"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 4
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_5'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_5'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_5']
+                )
+            ]
+            YulBoneOrdinal              = 2
+        ),
+/*         TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
                     Ammunition = $/GFX/Weapon/Ammo_Grenade_Satchel_Charge
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -63975,7 +64338,64 @@ export WeaponDescriptor_Gebirgsjager_JagdKdo_RFA is TWeaponManagerModuleDescript
                 ),
             ]
             YulBoneOrdinal = 4
-        ),
+        ), */
+		TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_HK69
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 5
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                ),
+				TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_HK69_AP
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 5
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                ),
+				TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_UGL_Smoke
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 5
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                )
+            ]
+            YulBoneOrdinal              = 4
+        )
     ]
 )
 export WeaponDescriptor_Gebirgsjager_PzF3_RFA is TWeaponManagerModuleDescriptor
@@ -63985,8 +64405,9 @@ export WeaponDescriptor_Gebirgsjager_PzF3_RFA is TWeaponManagerModuleDescriptor
     [
         28,
         14,
-        100,
+        60,
         4,
+		30,
     ]
     TurretDescriptorList = 
     [
@@ -64004,7 +64425,7 @@ export WeaponDescriptor_Gebirgsjager_PzF3_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_FM_G3KA4"
                     HandheldEquipmentKey = "WeaponAlternative_1"
-                    NbWeapons = 8
+                    NbWeapons = 7
                     AmmoBoxIndex = 0
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
@@ -64024,7 +64445,7 @@ export WeaponDescriptor_Gebirgsjager_PzF3_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_FM_G3KA4"
                     HandheldEquipmentKey = "WeaponAlternative_1"
-                    NbWeapons = 8
+                    NbWeapons = 7
                     AmmoBoxIndex = 0
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
@@ -64078,7 +64499,7 @@ export WeaponDescriptor_Gebirgsjager_PzF3_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_MMG_inf__MG3_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_3"
-                    NbWeapons = 2
+                    NbWeapons = 1
                     AmmoBoxIndex = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
@@ -64118,6 +64539,63 @@ export WeaponDescriptor_Gebirgsjager_PzF3_RFA is TWeaponManagerModuleDescriptor
             ]
             YulBoneOrdinal = 4
         ),
+		TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_HK69
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 2
+                    AmmoBoxIndex                     	= 4
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                ),
+				TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_HK69_AP
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 2
+                    AmmoBoxIndex                     	= 4
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                ),
+				TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_UGL_Smoke
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 2
+                    AmmoBoxIndex                     	= 4
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                )
+            ]
+            YulBoneOrdinal              = 4
+        )
     ]
 )
 export WeaponDescriptor_Gebirgsjager_RFA is TWeaponManagerModuleDescriptor
@@ -64127,8 +64605,9 @@ export WeaponDescriptor_Gebirgsjager_RFA is TWeaponManagerModuleDescriptor
     [
         28,
         14,
-        100,
+        60,
         6,
+		30,
     ]
     TurretDescriptorList = 
     [
@@ -64146,7 +64625,7 @@ export WeaponDescriptor_Gebirgsjager_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_FM_G3KA4"
                     HandheldEquipmentKey = "WeaponAlternative_1"
-                    NbWeapons = 9
+                    NbWeapons = 7
                     AmmoBoxIndex = 0
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
@@ -64166,7 +64645,7 @@ export WeaponDescriptor_Gebirgsjager_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnThickness = -0.1
                     EffectTag = "FireEffect_FM_G3KA4"
                     HandheldEquipmentKey = "WeaponAlternative_1"
-                    NbWeapons = 9
+                    NbWeapons = 7
                     AmmoBoxIndex = 0
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
@@ -64260,6 +64739,63 @@ export WeaponDescriptor_Gebirgsjager_RFA is TWeaponManagerModuleDescriptor
             ]
             YulBoneOrdinal = 4
         ),
+		TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_HK69
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 2
+                    AmmoBoxIndex                     	= 4
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                ),
+				TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_HK69_AP
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 2
+                    AmmoBoxIndex                     	= 4
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                ),
+				TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_Lance_grenade_UGL_Smoke
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Grenade_Launcher'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 2
+                    AmmoBoxIndex                     	= 4
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_0']
+                )
+            ]
+            YulBoneOrdinal              = 4
+        )
     ]
 )
 export WeaponDescriptor_Gebirgsjager_Scout_RFA is TWeaponManagerModuleDescriptor
@@ -66173,6 +66709,128 @@ export WeaponDescriptor_Groupe_AT_Legion_FR is TWeaponManagerModuleDescriptor
                 ),
             ]
             YulBoneOrdinal = 3
+        ),
+    ]
+)
+export WeaponDescriptor_Groupe_AT_MVD_SOV is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = False
+    Salves = 
+    [
+        52,
+        52,
+        6,
+        6,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_FM_AKM
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_FM_AKM"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 2
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 1
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_FM_AK_74
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_FM_AK_74"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 2
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 2
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 2
+                    Ammunition = $/GFX/Weapon/Ammo_RocketInf_RPG7VL
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_RocketInf_RPG7VL"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 3
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 3
+                    Ammunition = $/GFX/Weapon/Ammo_RocketInf_RPG7VL
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_RocketInf_RPG7VL"
+                    HandheldEquipmentKey = "WeaponAlternative_4"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_4"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_4",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 4
         ),
     ]
 )
@@ -73904,7 +74562,7 @@ export WeaponDescriptor_Howz_L118_105mm_UK is TWeaponManagerModuleDescriptor
                 ),
 				TMountedWeaponDescriptor
                 (
-                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_AP_M118_Howitzer_105mm
+                    Ammunition                          = $/GFX/Weapon/Ammo_Howz_Canon_M118_105mm_Direct
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[255,0,0,0]
                     DispersionRadiusOffThickness        = 0.0
@@ -99118,6 +99776,23 @@ export WeaponDescriptor_M16_MGMC_FR is TWeaponManagerModuleDescriptor
                         "WeaponShootData_0_1",
                     ]
                 ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canon_Maxson_SP_12_7mm_plane
+                    AnimateOnlyOneSoldier               = False
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_DCA_4_canon_Maxson_SP_12_7mm'
+                    HandheldEquipmentKey                = "WeaponAlternative_1"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 0
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+                ),
             ]
             OutOfRangeTrackingDuration = 3.5
             Tag = "tourelle1"
@@ -106504,6 +107179,26 @@ export WeaponDescriptor_M53_59_Praga_TCH is TWeaponManagerModuleDescriptor
                         "WeaponShootData_0_1",
                     ]
                 ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_DCA_2_canon_Vz_53_59_30mm_plane
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_DCA_2_canon_Vz_53_59_30mm"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    AmmoBoxIndex = 0
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
             ]
             OutOfRangeTrackingDuration = 3.5
             Tag = "tourelle1"
@@ -112502,7 +113197,24 @@ export WeaponDescriptor_MAN_Z311_Mi50_BEL is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
                     WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
-                )
+                ),
+				TMountedWeaponDescriptor
+				(
+					Ammunition                          = $/GFX/Weapon/Ammo_DCA_4_canon_Maxson_SP_12_7mm_plane
+					AnimateOnlyOneSoldier               = False
+					DispersionRadiusOffColor            = RGBA[0,0,0,0]
+					DispersionRadiusOffThickness        = -0.1
+					DispersionRadiusOnColor             = RGBA[0,0,0,0]
+					DispersionRadiusOnThickness         = -0.1
+					EffectTag                           = 'FireEffect_DCA_4_canon_Maxson_SP_12_7mm'
+					HandheldEquipmentKey                = "WeaponAlternative_1"
+					NbWeapons                           = 1
+					AmmoBoxIndex                     	= 0
+					ShowDispersion                      = False
+					WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_1'
+					WeaponIgnoredPropertyName           = 'WeaponIgnored_1'
+					WeaponShootDataPropertyName         = ['WeaponShootData_0_1']
+				),
             ]
             OutOfRangeTrackingDuration      = 3.5
             Tag                             = 'tourelle1'
@@ -115246,7 +115958,7 @@ export WeaponDescriptor_MTLB_transp_SOV is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Marder_1A1_MILAN_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 125, 5, 70, 2, ]
+    Salves           = [ 125, 5, 200, 50, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -115332,36 +116044,75 @@ export WeaponDescriptor_Marder_1A1_MILAN_RFA is TWeaponManagerModuleDescriptor
         ),
         TTurretTwoAxisDescriptor
         (
-            AimingPriority              = 1
-            AngleRotationBase           = 0.0
-            AngleRotationBasePitch      = 0.0
-            AngleRotationMax            = 0.017453292519943295
-            AngleRotationMaxPitch       = 0.13962634015954636
-            AngleRotationMinPitch       = -0.13962634015954636
-            MasterTurretYulBoneOrdinal  = 1
-            MountedWeaponDescriptorList = [
+            AngleRotationBase = 3.141592653589793
+            AngleRotationBasePitch = 0.17453292519943275
+            AngleRotationMax = 3.141592653589793
+            AngleRotationMaxPitch = 1.91986217719
+            AngleRotationMinPitch = -0.52359877559
+            MountedWeaponDescriptorList = 
+            [
                 TMountedWeaponDescriptor
                 (
-                    Ammunition                          = $/GFX/Weapon/Ammo_MMG_MG3_7_62mm
-                    AnimateOnlyOneSoldier               = True
-                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
-                    DispersionRadiusOffThickness        = -0.1
-                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
-                    DispersionRadiusOnThickness         = -0.1
-                    EffectTag                           = 'FireEffect_MMG_MG3_7_62mm'
-                    HandheldEquipmentKey                = "WeaponAlternative_4"
-                    NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 2
-                    ShowDispersion                      = False
-                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
-                    WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
-                    WeaponShootDataPropertyName         = ['WeaponShootData_0_4']
-                )
+                    AmmoBoxIndex = 3
+                    Ammunition = $/GFX/Weapon/Ammo_MMG_MG3_7_62mm
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_MMG_MG3_7_62mm"
+                    HandheldEquipmentKey = "WeaponAlternative_5"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_5"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_5"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_5",
+                    ]
+                ),
             ]
-            OutOfRangeTrackingDuration  = 3.5
-            Tag                         = 'tourelle4'
-            VitesseRotation             = 1.5707963267948966
-            YulBoneOrdinal              = 4
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle3"
+            VitesseRotation = 1.0943951023931953
+            YulBoneOrdinal = 3
+        ),
+        TTurretTwoAxisDescriptor
+        (
+            AimingPriority = 1
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 0.017453292519943295
+            AngleRotationMaxPitch = 0.13962634015954636
+            AngleRotationMinPitch = -0.13962634015954636
+            MasterTurretYulBoneOrdinal = 1
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 2
+                    Ammunition = $/GFX/Weapon/Ammo_MMG_MG3_7_62mm
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_MMG_MG3_7_62mm"
+                    HandheldEquipmentKey = "WeaponAlternative_4"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_4"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_4",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle4"
+            VitesseRotation = 0.5707963267948966
+            YulBoneOrdinal = 4
         ),
         TTurretUnitDescriptor
         (
@@ -115378,14 +116129,14 @@ export WeaponDescriptor_Marder_1A1_MILAN_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnColor             = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness         = -0.1
                     EffectTag                           = 'FireEffect_SMOKE_Vehicle_Grenadex8'
-                    HandheldEquipmentKey                = "WeaponAlternative_5"
+                    HandheldEquipmentKey                = "WeaponAlternative_6"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 3
+                    AmmoBoxIndex                     	= 4
                     ShowDispersion                      = False
                     HideInInterface = True
-                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_5'
-                    WeaponIgnoredPropertyName           = 'WeaponIgnored_5'
-                    WeaponShootDataPropertyName         = ['WeaponShootData_0_5', 'WeaponShootData_1_5', 'WeaponShootData_2_5', 'WeaponShootData_3_5']
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_6'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_6'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_6', 'WeaponShootData_1_6', 'WeaponShootData_2_6', 'WeaponShootData_3_6']
                 )
             ]
             Tag                         = 'tourelle5'
@@ -115395,7 +116146,7 @@ export WeaponDescriptor_Marder_1A1_MILAN_RFA is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Marder_1A1_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 125, 70, 2, ]
+    Salves           = [ 125, 200, 50, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -115450,36 +116201,75 @@ export WeaponDescriptor_Marder_1A1_RFA is TWeaponManagerModuleDescriptor
         ),
         TTurretTwoAxisDescriptor
         (
-            AimingPriority              = 1
-            AngleRotationBase           = 0.0
-            AngleRotationBasePitch      = 0.0
-            AngleRotationMax            = 0.017453292519943295
-            AngleRotationMaxPitch       = 0.13962634015954636
-            AngleRotationMinPitch       = -0.13962634015954636
-            MasterTurretYulBoneOrdinal  = 1
-            MountedWeaponDescriptorList = [
+            AngleRotationBase = 3.141592653589793
+            AngleRotationBasePitch = 0.17453292519943275
+            AngleRotationMax = 3.141592653589793
+            AngleRotationMaxPitch = 1.91986217719
+            AngleRotationMinPitch = -0.52359877559
+            MountedWeaponDescriptorList = 
+            [
                 TMountedWeaponDescriptor
                 (
-                    Ammunition                          = $/GFX/Weapon/Ammo_MMG_MG3_7_62mm
-                    AnimateOnlyOneSoldier               = True
-                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
-                    DispersionRadiusOffThickness        = -0.1
-                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
-                    DispersionRadiusOnThickness         = -0.1
-                    EffectTag                           = 'FireEffect_MMG_MG3_7_62mm'
-                    HandheldEquipmentKey                = "WeaponAlternative_4"
-                    NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
-                    ShowDispersion                      = False
-                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
-                    WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
-                    WeaponShootDataPropertyName         = ['WeaponShootData_0_4']
-                )
+                    AmmoBoxIndex = 2
+                    Ammunition = $/GFX/Weapon/Ammo_MMG_MG3_7_62mm
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_MMG_MG3_7_62mm"
+                    HandheldEquipmentKey = "WeaponAlternative_5"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_5"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_5"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_5",
+                    ]
+                ),
             ]
-            OutOfRangeTrackingDuration  = 3.5
-            Tag                         = 'tourelle4'
-            VitesseRotation             = 1.5707963267948966
-            YulBoneOrdinal              = 4
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle3"
+            VitesseRotation = 1.0943951023931953
+            YulBoneOrdinal = 3
+        ),
+        TTurretTwoAxisDescriptor
+        (
+            AimingPriority = 1
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 0.017453292519943295
+            AngleRotationMaxPitch = 0.13962634015954636
+            AngleRotationMinPitch = -0.13962634015954636
+            MasterTurretYulBoneOrdinal = 1
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_MMG_MG3_7_62mm
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_MMG_MG3_7_62mm"
+                    HandheldEquipmentKey = "WeaponAlternative_4"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_4"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_4",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle4"
+            VitesseRotation = 0.5707963267948966
+            YulBoneOrdinal = 4
         ),
         TTurretUnitDescriptor
         (
@@ -115496,14 +116286,14 @@ export WeaponDescriptor_Marder_1A1_RFA is TWeaponManagerModuleDescriptor
                     DispersionRadiusOnColor             = RGBA[0,0,0,0]
                     DispersionRadiusOnThickness         = -0.1
                     EffectTag                           = 'FireEffect_SMOKE_Vehicle_Grenadex8'
-                    HandheldEquipmentKey                = "WeaponAlternative_5"
+                    HandheldEquipmentKey                = "WeaponAlternative_6"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 2
+                    AmmoBoxIndex                     	= 3
                     ShowDispersion                      = False
                     HideInInterface = True
-                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_5'
-                    WeaponIgnoredPropertyName           = 'WeaponIgnored_5'
-                    WeaponShootDataPropertyName         = ['WeaponShootData_0_5', 'WeaponShootData_1_5', 'WeaponShootData_2_5', 'WeaponShootData_3_5']
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_6'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_6'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_6', 'WeaponShootData_1_6', 'WeaponShootData_2_6', 'WeaponShootData_3_6']
                 )
             ]
             Tag                         = 'tourelle5'
@@ -115513,7 +116303,7 @@ export WeaponDescriptor_Marder_1A1_RFA is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Marder_1A2_MILAN_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 125, 5, 70, 2, ]
+    Salves           = [ 125, 5, 250, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -115662,7 +116452,7 @@ export WeaponDescriptor_Marder_1A2_MILAN_RFA is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Marder_1A2_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 125, 70, 2, ]
+    Salves           = [ 125, 250, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -115780,7 +116570,7 @@ export WeaponDescriptor_Marder_1A2_RFA is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Marder_1A3_MILAN_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 125, 5, 70, 2, ]
+    Salves           = [ 125, 5, 250, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -115929,7 +116719,7 @@ export WeaponDescriptor_Marder_1A3_MILAN_RFA is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Marder_1A3_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 125, 70, 2, ]
+    Salves           = [ 125, 250, 2, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -116047,7 +116837,7 @@ export WeaponDescriptor_Marder_1A3_RFA is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Marder_1A_MILAN_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 240, 5, 70, 1, ]
+    Salves           = [ 240, 5, 250, 1, ]
     AlwaysOrientArmorTowardsThreat = True
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -121244,7 +122034,7 @@ export WeaponDescriptor_Mortier_Tampella_120mm_RFA is TWeaponManagerModuleDescri
 )
 export WeaponDescriptor_Mortier_Tampella_120mm_para_RFA is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 20, ]
+    Salves           = [ 7, 3, ]
     AlwaysOrientArmorTowardsThreat = False
     TurretDescriptorList = [
         TTurretTwoAxisDescriptor
@@ -121283,7 +122073,7 @@ export WeaponDescriptor_Mortier_Tampella_120mm_para_RFA is TWeaponManagerModuleD
                     EffectTag                           = 'FireEffect_Mortier_Tampella_towed_120mm_SMOKE'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 0
+                    AmmoBoxIndex                     	= 1
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -135641,7 +136431,7 @@ export WeaponDescriptor_Pioneer_UK is TWeaponManagerModuleDescriptor
         )
     ]
 )
-export WeaponDescriptor_Prima_SOV is TWeaponManagerModuleDescriptor
+export WeaponDescriptor_Prima_SOV is TWeaponManagerModuleDescriptor //this is really airburst, not cluster
 (
     AlwaysOrientArmorTowardsThreat = True
     Salves = 
@@ -135661,7 +136451,7 @@ export WeaponDescriptor_Prima_SOV is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    Ammunition = $/GFX/Weapon/Ammo_RocketArt_9F53_122mm_cluster_x50
+                    Ammunition = $/GFX/Weapon/Ammo_RocketArt_9F53F_122mm_airburst_x50
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[255,0,0,0]
                     DispersionRadiusOffThickness = 0
@@ -135678,27 +136468,7 @@ export WeaponDescriptor_Prima_SOV is TWeaponManagerModuleDescriptor
                     [
                         "WeaponShootData_0_1",
                     ]
-                ),
-                TMountedWeaponDescriptor
-                (
-                    Ammunition = $/GFX/Weapon/Ammo_RocketArt_9F53_122mm_SMOKE_x50
-                    AnimateOnlyOneSoldier = False
-                    DispersionRadiusOffColor = RGBA[255,0,0,0]
-                    DispersionRadiusOffThickness = 0
-                    DispersionRadiusOnColor = RGBA[90,180,180,255]
-                    DispersionRadiusOnThickness = 0.8
-                    EffectTag = "FireEffect_RocketArt_9F53_122mm_SMOKE_x50"
-                    HandheldEquipmentKey = "WeaponAlternative_2"
-                    NbWeapons = 1
-                    AmmoBoxIndex = 0
-                    ShowDispersion = True
-                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
-                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
-                    WeaponShootDataPropertyName = 
-                    [
-                        "WeaponShootData_0_2",
-                    ]
-                ),
+                )
             ]
             OutOfRangeTrackingDuration = 3.5
             Tag = "tourelle1"
@@ -138386,6 +139156,100 @@ export WeaponDescriptor_Reserve_Hvy_TCH is TWeaponManagerModuleDescriptor
                 ),
             ]
             YulBoneOrdinal = 4
+        ),
+    ]
+)
+export WeaponDescriptor_Reserve_IFV_SOV is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = False
+    Salves = 
+    [
+        156,
+        92,
+        4,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_FM_AK_74
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_FM_AK_74"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 6
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 1
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_SAW_RPK_74_5_56mm
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_SAW_RPK_74_5_56mm"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 2
+        ),
+        TTurretInfanterieDescriptor
+        (
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 2
+                    Ammunition = $/GFX/Weapon/Ammo_RocketInf_RPG18_64mm
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_RocketInf_RPG18_64mm"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+            ]
+            YulBoneOrdinal = 3
         ),
     ]
 )
@@ -144014,7 +144878,7 @@ export WeaponDescriptor_Rifles_Mech_C90_ESP is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_RocketInf_C90CR"
                     HandheldEquipmentKey = "WeaponAlternative_3"
                     NbWeapons = 1
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
                     WeaponIgnoredPropertyName = "WeaponIgnored_3"
@@ -145191,7 +146055,7 @@ export WeaponDescriptor_Rifles_Mech_LMG_ESP is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_RocketInf_C90CR"
                     HandheldEquipmentKey = "WeaponAlternative_3"
                     NbWeapons = 1
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
                     WeaponIgnoredPropertyName = "WeaponIgnored_3"
@@ -154413,7 +155277,7 @@ export WeaponDescriptor_Scout_Militia_TCH is TWeaponManagerModuleDescriptor
 )
 export WeaponDescriptor_Scout_Motorized_UK is TWeaponManagerModuleDescriptor
 (
-    Salves           = [ 30, 42, 184, 6, 3, ]
+    Salves           = [ 30, 42, 100, 6, 3, ]
     AlwaysOrientArmorTowardsThreat = False
     TurretDescriptorList = [
         TTurretInfanterieDescriptor
@@ -154498,23 +155362,6 @@ export WeaponDescriptor_Scout_Motorized_UK is TWeaponManagerModuleDescriptor
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
                     WeaponShootDataPropertyName         = ['WeaponShootData_0_3']
-                ),
-                TMountedWeaponDescriptor
-                (
-                    Ammunition                          = $/GFX/Weapon/Ammo_SAW_L86A1_5_56mm
-                    AnimateOnlyOneSoldier               = False
-                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
-                    DispersionRadiusOffThickness        = -0.1
-                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
-                    DispersionRadiusOnThickness         = -0.1
-                    EffectTag                           = 'FireEffect_SAW_L86A1_5_56mm'
-                    HandheldEquipmentKey                = "WeaponAlternative_3"
-                    NbWeapons                           = 2
-                    AmmoBoxIndex                     	= 3
-                    ShowDispersion                      = False
-                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
-                    WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
-                    WeaponShootDataPropertyName         = ['WeaponShootData_0_3']
                 )
             ]
             YulBoneOrdinal              = 3
@@ -154534,6 +155381,23 @@ export WeaponDescriptor_Scout_Motorized_UK is TWeaponManagerModuleDescriptor
                     HandheldEquipmentKey                = "WeaponAlternative_4"
                     NbWeapons                           = 1
                     AmmoBoxIndex                     	= 3
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
+                    WeaponShootDataPropertyName         = ['WeaponShootData_0_4']
+                ),
+                TMountedWeaponDescriptor
+                (
+                    Ammunition                          = $/GFX/Weapon/Ammo_RocketInf_Carl_Gustav_HE
+                    AnimateOnlyOneSoldier               = True
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_RocketInf_Carl_Gustav'
+                    HandheldEquipmentKey                = "WeaponAlternative_4"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 4
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
@@ -159777,8 +160641,8 @@ export WeaponDescriptor_Sniper_Geb_RFA is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = False
     Salves = 
     [
-        100,
-        100,
+        10,
+        10,
     ]
     TurretDescriptorList = 
     [
@@ -160553,8 +161417,8 @@ export WeaponDescriptor_Sniper_USMC_US is TWeaponManagerModuleDescriptor
     Salves = 
     [
         26,
-        60,
-        100,
+        14,
+        14,
     ]
     TurretDescriptorList = 
     [
@@ -165517,7 +166381,7 @@ export WeaponDescriptor_T55AMS_Merida_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_SMOKE_Vehicle_Grenadex8'
                     HandheldEquipmentKey                = "WeaponAlternative_5"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 3
+                    AmmoBoxIndex                     	= 4
                     ShowDispersion                      = False
                     HideInInterface = True
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_5'
@@ -167497,6 +168361,148 @@ export WeaponDescriptor_T55A_DDR is TWeaponManagerModuleDescriptor
         )
     ]
 )
+export WeaponDescriptor_T55A_Naval_POL is TWeaponManagerModuleDescriptor
+(
+    AlwaysOrientArmorTowardsThreat = True
+    Salves = 
+    [
+        43,
+        65,
+        80,
+    ]
+    TurretDescriptorList = 
+    [
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 6.283185307179586
+            AngleRotationMaxPitch = 0.4363323129985824
+            AngleRotationMinPitch = -0.17453292519943295
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_Canon_AP_100mm_D10T_early
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Canon_AP_100mm_D10T_early"
+                    HandheldEquipmentKey = "WeaponAlternative_1"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_1"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_1"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_1",
+                    ]
+                ),
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 0
+                    Ammunition = $/GFX/Weapon/Ammo_Canon_HE_100mm_D10T_early
+                    AnimateOnlyOneSoldier = False
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_Canon_HE_100mm_D10T_early"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_2",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle1"
+            TurretIdleBehaviourDescriptor = ~/TurretIdle_WatchForwardNormal
+            VitesseRotation = 1.0471975511965976
+            YulBoneOrdinal = 1
+        ),
+        TTurretTwoAxisDescriptor
+        (
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 6.283185307179586
+            AngleRotationMaxPitch = 1.3089969389957472
+            AngleRotationMinPitch = -0.2617993877991494
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 1
+                    Ammunition = $/GFX/Weapon/Ammo_HMG_12_7_mm_DShKM
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_HMG_12_7_mm_DShKM"
+                    HandheldEquipmentKey = "WeaponAlternative_3"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_3"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_3",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle2"
+            TurretIdleBehaviourDescriptor = ~/TurretIdle_WatchForwardNormal
+            VitesseRotation = 2.0943951023931953
+            YulBoneOrdinal = 2
+        ),
+        TTurretTwoAxisDescriptor
+        (
+            AimingPriority = 3
+            AngleRotationBase = 0
+            AngleRotationBasePitch = 0
+            AngleRotationMax = 0.017453292519943295
+            AngleRotationMaxPitch = 0.13962634015954636
+            AngleRotationMinPitch = -0.13962634015954636
+            MasterTurretYulBoneOrdinal = 1
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    AmmoBoxIndex = 2
+                    Ammunition = $/GFX/Weapon/Ammo_MMG_PKT_7_62mm
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "FireEffect_MMG_PKT_7_62mm"
+                    HandheldEquipmentKey = "WeaponAlternative_4"
+                    NbWeapons = 1
+                    ShowDispersion = False
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_4"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_4",
+                    ]
+                ),
+            ]
+            OutOfRangeTrackingDuration = 3.5
+            Tag = "tourelle4"
+            VitesseRotation = 1.5707963267948966
+            YulBoneOrdinal = 4
+        ),
+    ]
+)
 export WeaponDescriptor_T55A_POL is TWeaponManagerModuleDescriptor
 (
     Salves           = [ 43, 30, 150, ]
@@ -169297,7 +170303,7 @@ export WeaponDescriptor_T62M_CMD_SOV is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_SMOKE_Vehicle_Grenadex8'
                     HandheldEquipmentKey                = "WeaponAlternative_6"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 3
+                    AmmoBoxIndex                     	= 4
                     ShowDispersion                      = False
                     HideInInterface = True
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_6'
@@ -170950,7 +171956,7 @@ export WeaponDescriptor_T64B1_SOV is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46_T64B_very_late
+                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46_T64B1_very_late
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -178633,7 +179639,7 @@ export WeaponDescriptor_T80U_CMD_SOV is TWeaponManagerModuleDescriptor
             MountedWeaponDescriptorList     = [
                 TMountedWeaponDescriptor
                 (
-                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_AP_125_mm_2A46M_late
+                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_AP_125_mm_2A46M_late_T80UD
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -178650,7 +179656,7 @@ export WeaponDescriptor_T80U_CMD_SOV is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46M_late
+                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46M_late_T80UD
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness        = -0.1
@@ -178790,7 +179796,7 @@ export WeaponDescriptor_T80U_Obr89_SOV is TWeaponManagerModuleDescriptor
     Salves = 
     [
         1,
-        4,
+        6,
         65,
         65,
         1,
@@ -178808,7 +179814,7 @@ export WeaponDescriptor_T80U_Obr89_SOV is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    Ammunition = $/GFX/Weapon/Ammo_Canon_AP_125_mm_2A46M_late
+                    Ammunition = $/GFX/Weapon/Ammo_Canon_AP_125_mm_2A46M_late_T80UD
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
@@ -178828,7 +179834,7 @@ export WeaponDescriptor_T80U_Obr89_SOV is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    Ammunition = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46M_late
+                    Ammunition = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46M_late_T80UD
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
@@ -179439,7 +180445,7 @@ export WeaponDescriptor_TPZ_Fuchs_1_RFA is TWeaponManagerModuleDescriptor
         (
             AngleRotationBase           = 0.0
             AngleRotationBasePitch      = 0.17453292519943275
-            AngleRotationMax            = 6.283185307179586
+            AngleRotationMax            = 2.09439510239
             AngleRotationMaxPitch       = 0.7853981633974483
             AngleRotationMinPitch       = -0.17453292519943295
             MountedWeaponDescriptorList = [
@@ -179510,7 +180516,7 @@ export WeaponDescriptor_TPZ_Fuchs_1_reco_RFA is TWeaponManagerModuleDescriptor
         (
             AngleRotationBase = 0
             AngleRotationBasePitch = 0
-            AngleRotationMax = 6.283185307179586
+            AngleRotationMax      = 2.09439510239
             AngleRotationMaxPitch = 0.4363323129985824
             AngleRotationMinPitch = -0.17453292519943295
             MountedWeaponDescriptorList = 
@@ -179587,7 +180593,7 @@ export WeaponDescriptor_TPZ_Fuchs_CMD_RFA is TWeaponManagerModuleDescriptor
         (
             AngleRotationBase           = 0.0
             AngleRotationBasePitch      = 0.0
-            AngleRotationMax            = 6.283185307179586
+            AngleRotationMax            = 2.09439510239
             AngleRotationMaxPitch       = 0.4363323129985824
             AngleRotationMinPitch       = -0.17453292519943295
             MountedWeaponDescriptorList = [
@@ -179653,7 +180659,7 @@ export WeaponDescriptor_TPZ_Fuchs_MILAN_RFA is TWeaponManagerModuleDescriptor
         (
             AngleRotationBase           = 0.0
             AngleRotationBasePitch      = 0.17453292519943275
-            AngleRotationMax            = 6.283185307179586
+            AngleRotationMax            = 2.09439510239
             AngleRotationMaxPitch       = 1.3089969389957472
             AngleRotationMinPitch       = -0.17453292519943295
             MountedWeaponDescriptorList = [
@@ -207755,9 +208761,11 @@ export WeaponDescriptor_F15C_Eagle_AA3_US is TWeaponManagerModuleDescriptor
         23,
         4,
         4,
+		1,
     ]
     SalvoIsMainSalvo = 
     [
+        False,
         False,
         False,
         False,
@@ -207860,12 +208868,44 @@ export WeaponDescriptor_F15C_Eagle_AA3_US is TWeaponManagerModuleDescriptor
             Tag = "tourelle3"
             YulBoneOrdinal = 3
         ),
+        TTurretUnitDescriptor
+        (
+            AngleRotationMax            = 6.283185307179586
+            AngleRotationMaxPitch       = 1.5707963267948966
+            AngleRotationMinPitch       = -1.5707963267948966
+            MountedWeaponDescriptorList = 
+            [
+                TMountedWeaponDescriptor
+                (
+                    Ammunition = $/GFX/Weapon/Ammo_Flares
+                    AnimateOnlyOneSoldier = True
+                    DispersionRadiusOffColor = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness = -0.1
+                    DispersionRadiusOnColor = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness = -0.1
+                    EffectTag = "L"
+                    HandheldEquipmentKey = "WeaponAlternative_2"
+                    NbWeapons = 1
+                    AmmoBoxIndex = 3
+                    ShowDispersion = False
+                    HideInInterface = True
+                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_9"
+                    WeaponIgnoredPropertyName = "WeaponIgnored_9"
+                    WeaponShootDataPropertyName = 
+                    [
+                        "WeaponShootData_0_9",
+                    ]
+                ),
+            ]
+            Tag = "tourelle9"
+            YulBoneOrdinal = 4
+        ),
     ]
 )
 export WeaponDescriptor_F15C_Eagle_AA_US is TWeaponManagerModuleDescriptor
 (
     AlwaysOrientArmorTowardsThreat = True
-    Salves           = [23, 4, 2, 1]
+    Salves           = [23, 4, 4, 1]
     SalvoIsMainSalvo = [False, False, False, False]
     TurretDescriptorList = 
     [
@@ -208002,7 +209042,7 @@ export WeaponDescriptor_F15C_Eagle_AA_US is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_F15E_StrikeEagle_US is TWeaponManagerModuleDescriptor
 (
     AlwaysOrientArmorTowardsThreat = True
-    Salves           = [23, 2, 4, 1]
+    Salves           = [23, 4, 4, 1]
     SalvoIsMainSalvo = [False, True, False, False]
     TurretDescriptorList = 
     [
@@ -208050,7 +209090,7 @@ export WeaponDescriptor_F15E_StrikeEagle_US is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     AmmoBoxIndex = 1
-                    Ammunition = $/GFX/Weapon/Ammo_Bomb_GBU_10_x2
+                    Ammunition = $/GFX/Weapon/Ammo_Bomb_GBU_10_x1
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
@@ -219242,7 +220282,7 @@ export WeaponDescriptor_Jaguar_HE_FR is TWeaponManagerModuleDescriptor
 export WeaponDescriptor_Jaguar_LGB_FR is TWeaponManagerModuleDescriptor
 (
     AlwaysOrientArmorTowardsThreat = True
-    Salves           = [4, 1, 1]
+    Salves           = [4, 2, 1]
     SalvoIsMainSalvo = [False, True, False]
     TurretDescriptorList = 
     [
@@ -219290,7 +220330,7 @@ export WeaponDescriptor_Jaguar_LGB_FR is TWeaponManagerModuleDescriptor
                 TMountedWeaponDescriptor
                 (
                     AmmoBoxIndex = 1
-                    Ammunition = $/GFX/Weapon/Ammo_Bomb_BGL_400_x2
+                    Ammunition = $/GFX/Weapon/Ammo_Bomb_BGL_400_x1
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
                     DispersionRadiusOffThickness = -0.1
@@ -246327,7 +247367,7 @@ export WeaponDescriptor_Tornado_IDS_RFA is TWeaponManagerModuleDescriptor
 (
     AlwaysOrientArmorTowardsThreat = True
     BombTrajectoryConfig = $/GFX/Weapon/DefaultBombTrajectory
-    Salves           = [8, 2, 2, 1]
+    Salves           = [8, 4, 2, 1]
     SalvoIsMainSalvo = [False, False, False, False]
     TurretDescriptorList = 
     [
@@ -246365,33 +247405,35 @@ export WeaponDescriptor_Tornado_IDS_RFA is TWeaponManagerModuleDescriptor
             VitesseRotation = 1.5707963267948966
             YulBoneOrdinal = 1
         ),
-        TTurretBombardierDescriptor
+        TTurretUnitDescriptor
         (
-            MountedWeaponDescriptorList = 
-            [
+            AngleRotationMax            = 1.3962634015954636
+            AngleRotationMaxPitch       = 0.2617993877991494
+            AngleRotationMinPitch       = -0.6981317007977318
+            MountedWeaponDescriptorList = [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 1
-                    Ammunition = $/GFX/Weapon/Ammo_Bomb_GBU_24_x2
-                    AnimateOnlyOneSoldier = True
-                    DispersionRadiusOffColor = RGBA[0,0,0,0]
-                    DispersionRadiusOffThickness = -0.1
-                    DispersionRadiusOnColor = RGBA[0,0,0,0]
-                    DispersionRadiusOnThickness = -0.1
-                    EffectTag = "FireEffect_Bomb_GBU_24_x2"
-                    HandheldEquipmentKey = "WeaponAlternative_2"
-                    NbWeapons = 1
-                    ShowDispersion = False
-                    WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
-                    WeaponIgnoredPropertyName = "WeaponIgnored_2"
+                    Ammunition                          = $/GFX/Weapon/Ammo_Bomb_GBU_10_x1
+                    AnimateOnlyOneSoldier               = True
+                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
+                    DispersionRadiusOffThickness        = -0.1
+                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
+                    DispersionRadiusOnThickness         = -0.1
+                    EffectTag                           = 'FireEffect_Bomb_GBU_10_x2'
+                    HandheldEquipmentKey                = "WeaponAlternative_2"
+                    NbWeapons                           = 1
+                    AmmoBoxIndex                     	= 1
+                    ShowDispersion                      = False
+                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
+                    WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
                     WeaponShootDataPropertyName = 
                     [
                         "WeaponShootData_0_2",
                     ]
-                ),
+                )
             ]
-            Tag = "tourelle2"
-            YulBoneOrdinal = 2
+            Tag                         = 'tourelle2'
+            YulBoneOrdinal              = 2
         ),
         TTurretUnitDescriptor
         (

@@ -857,13 +857,13 @@ export Descriptor_Missile_AA_AIM9L_Sidewinder_upgrade is TEntityDescriptor
             (
 				MaxSpeedGRU        = 750
 				MaxAccelerationGRU = 450
-                AutoGyr            = 1.5707963267948966
+				AutoGyr         = 1.0461
             )
             UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
             (
 				MaxSpeedGRU        = 750
 				MaxAccelerationGRU = 450
-                AutoGyr            = 1.3962634015954636
+				AutoGyr         = 1.0461
             )
             AscendantPhaseConfig = nil
             TerminalPhaseConfig = nil
@@ -887,10 +887,10 @@ export Descriptor_Missile_AA_AIM9L_Sidewinder_upgrade is TEntityDescriptor
             StunDamagesRegen = ~/Missile_StunDamagesRegen
             BlindageProperties = TBlindageProperties
             (
-                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
-                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
-                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
-                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=4)
+                ResistanceFront = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=6)
+                ResistanceSides = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=6)
+                ResistanceRear = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=6)
+                ResistanceTop = TResistanceTypeRTTI(Family=ResistanceFamily_blindage Index=6)
                 ExplosiveReactiveArmor = False
             )
             KillWhenDamagesReachMax = True
@@ -901,6 +901,7 @@ export Descriptor_Missile_AA_AIM9L_Sidewinder_upgrade is TEntityDescriptor
         TCapaciteModuleDescriptor
         (
             DefaultSkillList = [
+					$/GFX/EffectCapacity/Capacite_kill_missile_24_seconds,
                 $/GFX/EffectCapacity/Capacite_StressOnMiss_mid,
             ]
         ),
@@ -5456,25 +5457,38 @@ export Descriptor_Missile_Guided_Arty is TEntityDescriptor
             (
                 DefaultConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeedGRU        = ((3098) * 0.1209058738)
+                    MaxSpeedGRU        = 480
                     MaxAccelerationGRU = 110
-                    AutoGyr         = 4.3490658503988659
+                    AutoGyr         = 10.8726646259971648
                 )
                 UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
                 (
-                    MaxSpeedGRU        = ((3098) * 0.1209058738)
+                    MaxSpeedGRU        = 480
                     MaxAccelerationGRU = 110
-                    AutoGyr         = 0.0//17453292519943295
+                    AutoGyr         = 10.8726646259971648
                 )
-                AscendantPhaseConfig = nil
-                TerminalPhaseConfig = nil
-                CruiseAltitudeGRU = 0.0
-				TimeMaxBetweenRandomMoveWhenUncontrollable = 30
-				TimeMinBetweenRandomMoveWhenUncontrollable = 20.0
-				TimeBetweenChaosUpdates = 1.0
-				RangeChaos = 1
-				AngleMaxForRandomMouvUncontrollable = 0.001
-				RotationSpeedWhenUncontrollable = 1
+
+                AscendantPhaseConfig = TGuidedMissileMovementConfigDescriptor
+                (
+                    MaxSpeedGRU        = 480
+                    MaxAccelerationGRU = 1500 * 0.1209058738
+                    AutoGyr         = 10.5235987755982988
+                )
+
+            TerminalPhaseConfig = TGuidedMissileMovementConfigDescriptor
+            (
+                MaxSpeedGRU        = 480
+                MaxAccelerationGRU = 400
+                AutoGyr         = 10.5235987755982988
+            )
+            CruiseAltitudeGRU = 400
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 500
+            TimeMaxBetweenRandomMoveWhenUncontrollable = 2
+            TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
+            TimeBetweenChaosUpdates = 0.1
+            RangeChaos = 750
+            AngleMaxForRandomMouvUncontrollable = 6.0
+            RotationSpeedWhenUncontrollable = 30
             ),
         TBaseDamageModuleDescriptor
                 (
@@ -5559,7 +5573,8 @@ export Descriptor_Missile_AGM_AGM114A is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 300
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -5651,7 +5666,8 @@ export Descriptor_Missile_AGM_AGM114A_x16 is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 300
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -5742,7 +5758,8 @@ export Descriptor_Missile_AGM_AGM114A_x16_LOAL is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 400
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -5834,7 +5851,8 @@ export Descriptor_Missile_AGM_AGM114A_x2_salve is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 300
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -5925,7 +5943,8 @@ export Descriptor_Missile_AGM_AGM114A_x2_salve_LOAL is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 400
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -6017,7 +6036,8 @@ export Descriptor_Missile_AGM_AGM114A_x2_sol is TEntityDescriptor //unused
                     MaxAccelerationGRU = 400
                     AutoGyr         = 0.5235987755982988
                 )
-                CruiseAltitudeGRU = 100
+				CruiseAltitudeGRU = 300
+				HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
                 TimeMaxBetweenRandomMoveWhenUncontrollable = 2
                 TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
                 TimeBetweenChaosUpdates = 0.1
@@ -6109,7 +6129,8 @@ export Descriptor_Missile_AGM_AGM114A_x4 is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 300
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -6200,7 +6221,8 @@ export Descriptor_Missile_AGM_AGM114A_x4_LOAL is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 400
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -6292,7 +6314,8 @@ export Descriptor_Missile_AGM_AGM114A_x8 is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 300
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -6383,7 +6406,8 @@ export Descriptor_Missile_AGM_AGM114A_x8_LOAL is TEntityDescriptor
                 MaxAccelerationGRU = 400
                 AutoGyr         = 0.5235987755982988
             )
-            CruiseAltitudeGRU = 800 * 0.1209058738
+            CruiseAltitudeGRU = 400
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1500
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -6544,8 +6568,8 @@ export Descriptor_Missile_AGM_AGM45_Shrike is TEntityDescriptor
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
                 CruiseAltitudeGRU = 0.0
-                TimeMaxBetweenRandomMoveWhenUncontrollable = 2
-                TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
+                TimeMaxBetweenRandomMoveWhenUncontrollable = 0.5
+                TimeMinBetweenRandomMoveWhenUncontrollable = 0.2
                 TimeBetweenChaosUpdates = 0.1
                 RangeChaos = 3000
                 AngleMaxForRandomMouvUncontrollable = 6.0
@@ -6939,13 +6963,13 @@ export Descriptor_Missile_AGM_AGM88_HARM is TEntityDescriptor
                 (
                     MaxSpeedGRU        = 686
                     MaxAccelerationGRU = 300
-                    AutoGyr         = 1.7453292519943295
+                    AutoGyr         = 0.0//17453292519943295
                 )
                 AscendantPhaseConfig = nil
                 TerminalPhaseConfig = nil
                 CruiseAltitudeGRU = 0.0
-                TimeMaxBetweenRandomMoveWhenUncontrollable = 2
-                TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
+                TimeMaxBetweenRandomMoveWhenUncontrollable = 30
+                TimeMinBetweenRandomMoveWhenUncontrollable = 20.0
                 TimeBetweenChaosUpdates = 0.1
                 RangeChaos = 800
                 AngleMaxForRandomMouvUncontrollable = 6.0
@@ -7913,9 +7937,10 @@ export Descriptor_Missile_AGM_BGM71C_FITOW_x8 is TEntityDescriptor
             (
 				MaxSpeedGRU        = 188
 				MaxAccelerationGRU = 90
-                AutoGyr         = 0.5235987755982988
+                AutoGyr         = 20.5235987755982988
             )
-            CruiseAltitudeGRU = 32.2 
+            CruiseAltitudeGRU = 5.2
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 1
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -19389,6 +19414,7 @@ export Descriptor_Missile_Mortar_Merlin is TEntityDescriptor
                 AutoGyr         = 10.5235987755982988
             )
             CruiseAltitudeGRU = 400
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 200
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1
@@ -19651,24 +19677,11 @@ export Descriptor_Missile_SAM_9M330_Tor_x8 is TEntityDescriptor
 			)
 			UncontrollableConfig = TGuidedMissileMovementConfigDescriptor
 			(
-                MaxSpeedGRU        = 950 
-                MaxAccelerationGRU = 500
-                AutoGyr         = 0.6193894737
-			)
-
-			AscendantPhaseConfig = TGuidedMissileMovementConfigDescriptor
-			(
-				MaxSpeedGRU        = 25
-				MaxAccelerationGRU = 500
-				AutoGyr         = 0.8
-			)
-            TerminalPhaseConfig = TGuidedMissileMovementConfigDescriptor
-            (
                 MaxSpeedGRU        = 850 
                 MaxAccelerationGRU = 213
                 AutoGyr         = 0.6193894737
-            )
-            CruiseAltitudeGRU = 0.1
+			)
+            HorizontalDistanceToTargetToStartTerminalPhaseGRU = 2
             TimeMaxBetweenRandomMoveWhenUncontrollable = 2
             TimeMinBetweenRandomMoveWhenUncontrollable = 1.0
             TimeBetweenChaosUpdates = 0.1

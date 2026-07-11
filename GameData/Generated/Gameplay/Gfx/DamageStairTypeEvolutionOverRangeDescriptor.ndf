@@ -96,16 +96,34 @@ export DamageTypeEvolutionOverRangeDescriptor_heavyAC is TStairsDamageTypeEvolut
    DistanceGRU = 1200.0
    AP = 1.0
 )
+//AP 4-5 25mm and RARDEN
+export DamageTypeEvolutionOverRangeDescriptor_heavyAC_APDS is TStairsDamageTypeEvolutionOverRangeDescriptor
+(
+   DistanceGRU = 1400.0
+   AP = 1.0
+)
+//AP 3 2A42
+export DamageTypeEvolutionOverRangeDescriptor_heavyAC_AP is TStairsDamageTypeEvolutionOverRangeDescriptor
+(
+   DistanceGRU = 600.0
+   AP = 1.0
+)
 //AP 5 GAU-8
 export DamageTypeEvolutionOverRangeDescriptor_lightAC is TStairsDamageTypeEvolutionOverRangeDescriptor
 (
    DistanceGRU = 1000.0
    AP = 1.0
 )
+//AP 5 GAU-8
+export DamageTypeEvolutionOverRangeDescriptor_lightAC_AP is TStairsDamageTypeEvolutionOverRangeDescriptor
+(
+   DistanceGRU = 600.0
+   AP = 1.0
+)
 //KPVT
 export DamageTypeEvolutionOverRangeDescriptor_heavyMG is TStairsDamageTypeEvolutionOverRangeDescriptor
 (
-   DistanceGRU = 800.0
+   DistanceGRU = 600.0
    AP = 1.0
 )
 

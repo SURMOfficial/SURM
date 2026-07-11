@@ -1952,6 +1952,18 @@ unnamed TTextFormatScript
             TemplateTFS_Division(TextureToken = "CommonTexture_division_US_2ATAF")
         ),
         (
+            "US_26ID",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_26ID")
+        ),
+        (
+            "US_4MAR",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_4MAR")
+        ),
+        (
+            "US_101AB",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_US_101AB")
+        ),
+        (
             "UK_3armoured",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_UK_3armoured")
         ),
@@ -2166,6 +2178,22 @@ unnamed TTextFormatScript
             "SOV_guard",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_SOV_guard")
         ),
+        (
+            "CUB_1Div",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CUB_1Div")
+        ),
+        (
+            "CUB_MTT",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CUB_MTT")
+        ),
+        (
+            "CUB_7YA",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CUB_7YA")
+        ),
+        (
+            "CUB_2o",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CUB_2o")
+        ),
         //-------------------------------------------------------------------------------------
 
 
@@ -2311,6 +2339,16 @@ unnamed TTextFormatScript
             TTFSCommand_UISymbol
             (
                 TextureToken = "Icon_Locked"
+                BBMin=[0, -0.8, 0]
+                BBMax=[1, 0.2, 0]
+                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
+            )
+        ),
+        (
+            "contentDLC",
+            TTFSCommand_UISymbol
+            (
+                TextureToken = "Icon_ContentDLC"
                 BBMin=[0, -0.8, 0]
                 BBMax=[1, 0.2, 0]
                 ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend

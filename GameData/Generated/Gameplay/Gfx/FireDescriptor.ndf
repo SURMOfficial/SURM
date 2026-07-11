@@ -113,7 +113,7 @@ export Descriptor_Fire_Frag_HEAT_Small is TEntityDescriptor //ATGMs, RPGs, etc
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
                 RadiusGRU                         = 13
-                AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_small //Ammo_Degats_cluster 
+                AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_small
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
                 SmokeDescriptor                = nil//$/GFX/Weapon/Descriptor_Smoke_FumiDust_small //the dust cloud prevents sucessive hits unrealistically
@@ -153,7 +153,7 @@ export Descriptor_Fire_Frag_HEAT_Medium is TEntityDescriptor //Copperhead, AGM-1
                 SpreadProbability              = 0.0
                 IsNewFireProbability           = 0.0
                 RadiusGRU                         = 30
-                AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_med //Ammo_Degats_cluster
+                AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_frag_HEAT_med 
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
                 SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDust
@@ -437,6 +437,46 @@ export Descriptor_Fire_Direct_hit_AerialRocket_70 is TEntityDescriptor
                 TimeBetweenBurns               = 0.1
                 OverridenSpreadDescriptor      = nil
                 SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDust
+            ),
+
+    ]
+)
+export Descriptor_Fire_Direct_hit_250lb is TEntityDescriptor
+(
+    World              = WorldIndices_Fires
+    DescriptorId       = GUID:{cfec28d3-1d4e-4e1d-9038-119968ec179d}
+    ClassNameForDebug  = 'Fire_Direct_hit_250lb'
+    ModulesDescriptors = [
+        ~/SimpleTypeUnitModuleDescriptor,
+        ~/EmptyTagsModuleDescriptor,
+        ~/FirePositionModuleDescriptor,
+        ~/LinkTeamModuleDescriptor,
+        ApparenceModel is
+            TApparenceModuleDescriptor
+        (
+            ReferenceMesh  = $/GFX/DepictionResources/Rien
+            Depiction  = TTimelyDepictionReceiverFactory( DepictionDescriptor = Template_DescriptorFire_Depiction
+            (
+                     Radius               = 1
+                     FX                   = $/GFX/GameFx/fx_binder_fire
+                     Density              = 1
+            ))
+            DefaultVisibility  = True
+            ),
+
+        // Fire
+            TFireModuleDescriptor
+            (
+                TimeToLive                     = 0.19
+                TimeBeforeSpreading            = 0.2
+                TimeBeforeSpreadAttempt        = 0.2
+                SpreadProbability              = 0.0
+                IsNewFireProbability           = 0.0
+                RadiusGRU                         = 20
+                AmmunitionForBurn              = $/GFX/Weapon/Ammo_Degats_direct_hit_250lb//Ammo_Degats_cluster
+                TimeBetweenBurns               = 0.1
+                OverridenSpreadDescriptor      = nil
+                SmokeDescriptor                = $/GFX/Weapon/Descriptor_Smoke_FumiDustBomb
             ),
 
     ]

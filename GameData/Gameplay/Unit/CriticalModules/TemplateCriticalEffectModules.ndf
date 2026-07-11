@@ -21,6 +21,26 @@ template CriticalEffect_AmmoExplosion
     Roll = <Roll>
     Descriptor = ~/CriticalEffect_AmmoExplosion_Desc
 )
+//ammo explosiions now do more damage than fuel explosions
+CriticalEffect_AmmoExplosion_small_Desc is TCriticalEffectDescriptor
+(
+    Token = 'CRITIC1'
+    HappeningKey = 'critical_ammo'
+    EffectsPack = $/GFX/EffectCapacity/UnitEffect_Critic_Pert_2_PV
+    TimeOut = 0
+    RepairCost = -1
+    Unique = False
+    DisplayOnDeath = True
+)
+// Ammo explosion -> degats 2PV
+template CriticalEffect_AmmoExplosion_small
+[
+    Roll
+] is TCriticalEffect
+(
+    Roll = <Roll>
+    Descriptor = ~/CriticalEffect_AmmoExplosion_small_Desc
+)
 // fuel explosion removes all fuel and costs 2 HP
 CriticalEffect_FuelExplosion_Desc is TCriticalEffectDescriptor
 (
@@ -500,7 +520,7 @@ CriticalEffect_ERA_hit_Desc is TCriticalEffectDescriptor
 (
     Token = 'BOUNCE1'
     EffectsPack = $/GFX/EffectCapacity/UnitEffect_ERA_hit_tag
-    TimeOut = 0.3
+    TimeOut = 0.2
     RepairCost = -1
     Unique = False
     DisplayOnDeath = False

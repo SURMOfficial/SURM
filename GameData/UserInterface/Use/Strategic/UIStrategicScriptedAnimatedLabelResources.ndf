@@ -88,7 +88,6 @@ is  TUIScriptedAnimatedLabelDescriptor
                 (
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        MagnifiableWidthHeight = [32.0, 8.0]
                         AlignementToAnchor = [0.5, 0.0]
                         AlignementToFather = [0.5, 0.0]
                     )
@@ -169,7 +168,6 @@ is  TUIScriptedAnimatedLabelDescriptor
                 ElementName = "HeadingText"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    //RelativeWidthHeight = [1.0, 0.0]
                     MagnifiableOffset = [0.0, -5.0]
                     AlignementToAnchor = [0.5, 1.0]
                     AlignementToFather = [0.5, 0.0]
@@ -243,7 +241,6 @@ is  TUIScriptedAnimatedLabelDescriptor
                 (
                     ComponentFrame = TUIFramePropertyRTTI
                     (
-                        MagnifiableWidthHeight = [32.0, 8.0]
                         AlignementToAnchor = [0.5, 0.0]
                         AlignementToFather = [0.5, 0.0]
                     )
@@ -261,15 +258,13 @@ is  TUIScriptedAnimatedLabelDescriptor
                                 MagnifiableWidthHeight = [150, 0.0]
                                 AlignementToFather = [0.5, 0.5]
                                 AlignementToAnchor = [0.5, 0.5]
-                                )
+                            )
                             ParagraphStyle = paragraphStyleTextCenter
                             TextStyle = "Default"
                             VerticalFitStyle = ~/FitStyle/FitToContent
                             HorizontalFitStyle = ~/FitStyle/MinBetweenUserDefinedAndContent
 
                             BigLineAction = ~/BigLineAction/MultiLine
-                            // TextToken = 'PIU_weap'
-                            // TextDico = ~/LocalisationConstantes/dico_interface_ingame
                             TextDico = ~/LocalisationConstantes/dico_maps
 
                             HasBackground = true
@@ -278,12 +273,7 @@ is  TUIScriptedAnimatedLabelDescriptor
                             TypefaceToken = "Bombardier"
                             TextSize = "16"
                             TextColor = "ObjectiveLabel/Primary/Title"
-
-
-
                         )
-
-
                     ]
                 )
             ),
@@ -303,12 +293,6 @@ is  TUIScriptedAnimatedLabelDescriptor
 
         BackgroundComponents =
         [
-            // PanelRoundedCorner
-            // (
-            //     BackgroundBlockColorToken = 'SM_LDhint_texte_gen'
-            //     BorderLineColorToken = 'SM_LDhint_texte'
-            //     BorderThicknessToken = '2'
-            // ),
             BUCKContainerDescriptor
             (
                 ComponentFrame = TUIFramePropertyRTTI
@@ -337,7 +321,6 @@ is  TUIScriptedAnimatedLabelDescriptor
                 ElementName = "HeadingText"
                 ComponentFrame = TUIFramePropertyRTTI
                 (
-                    //RelativeWidthHeight = [1.0, 0.0]
                     MagnifiableOffset = [0.0, -5.0]
                     AlignementToAnchor = [0.5, 1.0]
                     AlignementToFather = [0.5, 0.0]

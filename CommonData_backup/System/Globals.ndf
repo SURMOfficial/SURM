@@ -411,14 +411,14 @@ AccCorrRifle				      is 0.2 // 0.04
 AccCorrCarb				      	  is 0.15 // 0.05
 AccCorrMG						  is 0.1 // 0.02
 AccCorrSMG						  is 0.12 // 0.04
-AccCorrRKT						  is 0.33 // 0.4
+AccCorrRKT						  is 0.23//33 // 0.4
 AccCorrATGM						  is 1.3 // 0.4
 AccCorrMANPAD					  is 0.6923076923 //cuts stinger A to 9% accuracy which aligns to 20%	
-AccCorrAirRKT					  is 1.0
+AccCorrAirRKT					  is 0.5
 AccCorrAA						  is 0.07 // 0.05
 AccCorrSniper					  is 10.0 //offsets inf size accuracy reduction (maybe too agressive)
 AccBaseManualAAMove				  is 0.0
-AccBaseManualAA					  is 0.08
+AccBaseManualAA					  is 14
 ProjSpeedCorr					  is 2.47
 ProjSpeedCorrBullet				  is 2.62
 ProjSpeedCorrAC					  is 2.0 // rough estimate from external ballistics calculator in spreadsheet
@@ -427,12 +427,12 @@ ArtySuppressRadCorr				  is 1.8
 ArtySuppressCorr				  is 1.5
 BulletSuppressCorr				  is 0.1
 ACSuppressCorr				      is 0.8
-BulletSuppressRadCorr			  is 0.33
+BulletSuppressRadCorr			  is 1.5
 FuelCorr						  is 45
 FuelCorrHeli					  is 12
 SupplyCorr						  is 1.85 //was 185 divide by 100
-OpticalStrengthReducer			  is 17.24//temporary fix//1.0//0.48//1.4 //4.088 // new value so inf see tanks at 2km in the open 3.212  //1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
-OpticAltCorr					  is 51.72//temporary fix //not sure why I need this but I do
+OpticalStrengthReducer			  is 1.0//17.24//temporary fix//1.0//0.48//1.4 //4.088 // new value so inf see tanks at 2km in the open 3.212  //1.1 // 1.95 // 2.63556116032 //0.95*2.7742749056
+OpticAltCorr					  is 1.0//51.72//temporary fix //not sure why I need this but I do
 Degre                             is 0.017453292
 SniperSuppress				      is 175.0 //suppression from sniper fire
 pinneddamagereducer				  is 0.101 //can't use these in  the table, so  they are for reference

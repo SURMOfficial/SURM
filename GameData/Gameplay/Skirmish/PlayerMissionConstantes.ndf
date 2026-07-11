@@ -209,7 +209,7 @@ export PlayerMissionDescriptorList is TPlayerMissionConstantesDescriptor
 (
     PlayerMissionDescriptorByType = MAP[
         (
-            EPlayerMissionRequestType_Seize,
+            PlayerMissionRequest/Seize,
             TPlayerMissionOrderDescriptor(
                 DescriptorPriority = [
                     PlayerMissionDescriptorAttack,
@@ -219,7 +219,7 @@ export PlayerMissionDescriptorList is TPlayerMissionConstantesDescriptor
             )
         ),
         (
-            EPlayerMissionRequestType_ManageArtillery_Focus,
+            PlayerMissionRequest/ManageArtillery_Focus,
             TPlayerMissionOrderDescriptor(
                 DescriptorPriority = [
                     PlayerMissionDescriptor_ManageArtillery_Focus,
@@ -229,7 +229,7 @@ export PlayerMissionDescriptorList is TPlayerMissionConstantesDescriptor
             )
         ),
         (
-            EPlayerMissionRequestType_Hold,
+            PlayerMissionRequest/Hold,
             TPlayerMissionOrderDescriptor(
                 DescriptorPriority = [
                     PlayerMissionDescriptor_Hold,
@@ -239,7 +239,7 @@ export PlayerMissionDescriptorList is TPlayerMissionConstantesDescriptor
             )
         ),
         (
-            EPlayerMissionRequestType_ManageArtillery_CounterBattery,
+            PlayerMissionRequest/ManageArtillery_CounterBattery,
             TPlayerMissionOrderDescriptor(
                 DescriptorPriority = [
                     PlayerMissionDescriptor_ManageArtillery_CounterBattery,
@@ -249,7 +249,7 @@ export PlayerMissionDescriptorList is TPlayerMissionConstantesDescriptor
             )
         ),
         (
-            EPlayerMissionRequestType_ManageArtillery_Auto,
+            PlayerMissionRequest/ManageArtillery_Auto,
             TPlayerMissionOrderDescriptor(
                 DescriptorPriority = [
                     PlayerMissionDescriptor_ManageArtillery_Auto,
@@ -259,7 +259,7 @@ export PlayerMissionDescriptorList is TPlayerMissionConstantesDescriptor
             )
         ),
         (
-            EPlayerMissionRequestType_ManageAirplanes,
+            PlayerMissionRequest/ManageAirplanes,
             TPlayerMissionOrderDescriptor(
                 DescriptorPriority = [
                     PlayerMissionDescriptor_ManageAirReco,
@@ -271,7 +271,7 @@ export PlayerMissionDescriptorList is TPlayerMissionConstantesDescriptor
             )
         ),
         (
-            EPlayerMissionRequestType_Stop,
+            PlayerMissionRequest/Stop,
             TPlayerMissionOrderDescriptor(
                 DescriptorPriority = [
                     PlayerMissionDescriptor_Stop,
@@ -281,7 +281,7 @@ export PlayerMissionDescriptorList is TPlayerMissionConstantesDescriptor
             )
         ),
         (
-            EPlayerMissionRequestType_Supply,
+            PlayerMissionRequest/Supply,
             TPlayerMissionOrderDescriptor(
                 DescriptorPriority = [
                     PlayerMissionDescriptor_Supply,
@@ -302,21 +302,21 @@ PlayerMissionFeedbackDescriptor is TUIPlayerMissionConstantesDescriptor
 
     PlayerMissionFeedbackDescriptorByType = MAP[
         (
-            EPlayerMissionRequestType_Seize,
+            PlayerMissionRequest/Seize,
             TFeedbackStyleDescriptor(
                              Thickness = 4000.0
                              Color = [221, 30, 30, 180]
                          )
         ),
         (
-            EPlayerMissionRequestType_ManageArtillery_Focus,
+            PlayerMissionRequest/ManageArtillery_Focus,
             TFeedbackStyleDescriptor(
                              Thickness = 4000.0
                              Color = [221, 30, 30, 180]
                          )
         ),
         (
-            EPlayerMissionRequestType_Hold,
+            PlayerMissionRequest/Hold,
             TFeedbackStyleDescriptor(
                              Thickness = 4000.0
                              Color = [30, 30, 222, 180]

@@ -412,7 +412,7 @@ is UnitDepictionRegistration
     DepictionDescriptor = ShowroomDepictionDescInternal
     (
         MeshDescriptor = <MeshDescriptor>
-        Operators = <Operators> + [ DepictionOperator_ShadowPointCloudProvider ]
+        Operators = [ DepictionOperator_Reset_Generic, DepictionOperator_ShadowPointCloudProvider ] + <Operators>
         SubDepictions = <SubDepictions>
         SubDepictionGenerators = <SubDepictionGenerators>
     )

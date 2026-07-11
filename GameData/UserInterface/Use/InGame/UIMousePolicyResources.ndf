@@ -484,7 +484,7 @@ is TUIMouseWidgetResource
 template Template_HardwareMouseWidgetResourcePlayerMission
 [
     HardwareMouseCursorAnimation = ~/MouseCursorAnimationDefault,
-    PlayerMissionType = ~/EPlayerMissionRequestType_Unknown
+    PlayerMissionType = ~/PlayerMissionRequest/Unknown
 ]
 is TUIMouseWidgetResource
 (
@@ -841,13 +841,13 @@ MouseWidget_InvalidDefense is Template_HardwareMouseWidgetResource
 MouseWidget_OrderAIAttack is Template_HardwareMouseWidgetResourcePlayerMission
 (
     HardwareMouseCursorAnimation = ~/Mousecurseur_ai_attack
-    PlayerMissionType = ~/EPlayerMissionRequestType_Seize
+    PlayerMissionType = ~/PlayerMissionRequest/Seize
 )
 
 MouseWidget_OrderAIArtilleryFocus is Template_HardwareMouseWidgetResourcePlayerMission
 (
     HardwareMouseCursorAnimation = ~/Mousecurseur_ai_artillery_focus
-    PlayerMissionType = ~/EPlayerMissionRequestType_ManageArtillery_Focus
+    PlayerMissionType = ~/PlayerMissionRequest/ManageArtillery_Focus
 )
 
 //--------------------------------------------------------

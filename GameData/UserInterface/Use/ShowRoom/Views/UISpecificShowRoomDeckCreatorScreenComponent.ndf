@@ -1038,9 +1038,21 @@ private DeckPanelContentList is BUCKListDescriptor
                                 (
                                     RelativeWidthHeight = [1.0, 1.0]
                                 )
-                                  TextureDrawer  = "ColorMultiply_Additive"
+
+                                TextureDrawer  = "ColorMultiply_Additive"
                                 TextureToken =  "ShowRoomTexture_foregroundEffetPapier"
-                            )
+                            ),
+
+                            ShowroomLightCycleButton
+                            (
+                                ComponentFrame = TUIFramePropertyRTTI
+                                (
+                                    MagnifiableWidthHeight = [32.0, 32.0]
+                                    AlignementToAnchor = [1.0, 0.0]
+                                    AlignementToFather = [1.0, 0.0]
+                                    MagnifiableOffset = [-10.0, 10.0]
+                                )
+                            ),
                         ]
                     ),
 					BUCKSpecificScrollingContainerDescriptor
@@ -1073,7 +1085,8 @@ private DeckPanelContentList is BUCKListDescriptor
                                 (
                                     RelativeWidthHeight = [1.0, 1.0]
                                 )
-                                  TextureDrawer  = "ColorMultiply_Additive"
+
+                                TextureDrawer  = "ColorMultiply_Additive"
                                 TextureToken =  "ShowRoomTexture_foregroundEffetPapier"
                             )
                         ]
@@ -1220,9 +1233,6 @@ private template DeckEditorTopBar
                 )
             ]
         ),
-
-        // Light cycle button
-        ShowroomLightCycleButton(MagnifiableOffset = [-10.0, 60.0])
     ]
 )
 
@@ -1430,7 +1440,7 @@ DeckCreatorScreenMainComponent is BUCKContainerDescriptor
         // Transports
         ~/TransportSelectionContainer,
         // affichage des Panelinfos
-        AnimationPanelUnitInfos(),
+        ~/AnimationPanelUnitInfos,
         // bouton "close" en bas à gauche
         ~/DeckEditorCloseButton,
     ]

@@ -1,7 +1,6 @@
 
 TabMagnifiableWidth is 160
 TabMagnifiableHeight is 36
-TabMagnifiableMarginIfFitContent is 30.0 //On ajoute la moitie de la hauteur, ce qui correspond a la diagonale
 
 template BUCKSpecificWithTabsComponentDescriptor
 [
@@ -62,7 +61,7 @@ is BUCKOneTabDescriptor
 
     ComponentFrame = TUIFramePropertyRTTI
     (
-        MagnifiableWidthHeight = (<HorizontalFitStyle> == ~/FitStyle/UserDefined ? [TabMagnifiableWidth, TabMagnifiableHeight] : [TabMagnifiableMarginIfFitContent * 2.0, TabMagnifiableHeight])
+        MagnifiableWidthHeight = (<HorizontalFitStyle> == ~/FitStyle/UserDefined ? [TabMagnifiableWidth, TabMagnifiableHeight] : [0.0, TabMagnifiableHeight])
     )
 
     FitStyle = (<HorizontalFitStyle> == ~/FitStyle/UserDefined ? ~/ContainerFitStyle/None : ~/ContainerFitStyle/FitToContentHorizontally)

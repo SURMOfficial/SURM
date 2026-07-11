@@ -67,6 +67,7 @@ StrategicResource is TUISpecificStrategicResources
     StartBattleResources        = ~/UISpecificStrategicStartBattleViewDescriptor
     BattlePlanningResources     = ~/StrategicBattlePlanningResources
     ConnectedPlayersResources   = ~/UISpecificStrategicConnectedPlayersViewDescriptor
+    BattleOrderResources        = ~/StrategicBattleOrderResources
 
     PlayerNameDisplayDescriptor = ~/UISpecificStrategicPlayerNameDisplayViewDescriptor
     StrategicBattleResources    = ~/StrategicBattleResources
@@ -247,8 +248,6 @@ private StrategicMainContainerResource is TUICommonMainContainerResource
                                 RelativeWidthHeight = [1.0, 0.0]
                                 MagnifiableWidthHeight = [0,120]
                             )
-
-                            //FitStyle = ~/ContainerFitStyle/FitToContentVertically
                         )
                     ),
 

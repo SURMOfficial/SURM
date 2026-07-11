@@ -29,56 +29,30 @@ template UnitButtonPackDescriptor
 
 //-------------------------------------------------------------------------------------
 
-template AnimationPanelUnitInfos
-[
-    FramePropertyBeforeAnimation : TUIFramePropertyRTTI = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [1.0, 1.0]
-        AlignementToAnchor = [0.5, 1.0]
-        AlignementToFather = [0.5, 1.0]
-        MagnifiableOffset = [400.0, 18.0]
-    ),
-    FramePropertyAfterAnimation : TUIFramePropertyRTTI = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [1.0, 1.0]
-        AlignementToAnchor = [0.5, 1.0]
-        AlignementToFather = [0.5, 1.0]
-        MagnifiableOffset = [0.0, 18.0]
-    ),
-] is BUCKTranslationAnimatedContainerDescriptor
+AnimationPanelUnitInfos is BUCKTranslationAnimatedContainerDescriptor
 (
     ElementName = "AnimationPanelUnitInfos"
-
-    FramePropertyBeforeAnimation = <FramePropertyBeforeAnimation>
 
     TriggerWhenSetVisible = true
     AnimationTotalDuration = 0.25
     AnimationModificator = ~/AnimModificator/CubicStep
     AnimationModificatorParameters = [0.0, 1.0]
 
-    FramePropertyAfterAnimation = <FramePropertyAfterAnimation>
-
-    Components =
-    [
-        ~/UnitInfosSheet
-    ]
-)
-
-//-------------------------------------------------------------------------------------
-
-UnitInfosSheet is BUCKContainerDescriptor
-(
-    ElementName = "UnitInfosSheet"
-    ComponentFrame = TUIFramePropertyRTTI
+    FramePropertyBeforeAnimation = TUIFramePropertyRTTI
     (
-        RelativeWidthHeight = [0.0, 1.0]
-        MagnifiableOffset = [20.0, 190.0]
+        AlignementToAnchor = [0.0, 0.0]
         AlignementToFather = [1.0, 0.0]
-        AlignementToAnchor = [1.0, 0.0]
+        MagnifiableOffset = [-120.0, 208.0]
     )
 
+    FramePropertyAfterAnimation = TUIFramePropertyRTTI
+    (
+        AlignementToAnchor = [1.0, 0.0]
+        AlignementToFather = [1.0, 0.0]
+        MagnifiableOffset = [-10.0, 208.0]
+    )
 
-    FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+    FitStyle = ~/ContainerFitStyle/FitToContent
 
     Components =
     [
@@ -91,15 +65,12 @@ UnitInfosSheet is BUCKContainerDescriptor
 UnitInfosPanels is BUCKListDescriptor
 (
     ElementName = "UnitInfosPanels"
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        MagnifiableWidthHeight  = [0.0, 890.0]
-    )
 
     Axis = ~/ListAxis/Horizontal
 
-    LastMargin = TRTTILength(Magnifiable = 30.0)
     InterItemMargin = TRTTILength( Magnifiable = 20.0 )
+
+    BreadthComputationMode = ~/BreadthComputationMode/ComputeBreadthFromLargestChild
 
     Elements =
     [
@@ -127,12 +98,9 @@ template UnitInfoPanelUnitAndAdditionalUnitContainer
 ] is BUCKContainerDescriptor
 (
     ElementName = 'UnitInfoPanelUnitAndAdditionalUnitContainer' + <ListElementName>
-    ComponentFrame = TUIFramePropertyRTTI
-    (
-        RelativeWidthHeight = [0.0, 1.0]
-    )
+    ComponentFrame = TUIFramePropertyRTTI()
 
-    FitStyle = ~/ContainerFitStyle/FitToContentHorizontally
+    FitStyle = ~/ContainerFitStyle/FitToContent
 
     Components = (<HasTransportPanel> ?
     [

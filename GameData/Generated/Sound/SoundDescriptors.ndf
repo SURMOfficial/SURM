@@ -946,6 +946,29 @@ export SoundHappening_CrashAvion is TSoundHappening
 )
 
 
+export Sound_DamAmbiance is TSoundSet
+(
+    Items = 
+    [
+        TSoundDescriptor
+        (
+            SoundSettings = $/SoundSettings/SoundSettings_Ambiance_Dam
+            TheSoundStream = TSoundStream
+            (
+                FileName = "GameData:/Assets/Sounds/SFX/Env/Amb_Dam.wav"
+            )
+            UseSpecialLoop = False
+        ),
+    ]
+)
+
+export SoundHappening_DamAmbiance is TSoundHappening
+(
+    SoundDescList = Sound_DamAmbiance
+    Volume = 1
+)
+
+
 export Sound_DestructionBatiment is TSoundSet
 (
     Items = 

@@ -13,15 +13,11 @@ Tactic_Descriptor_Unit_FakeTarget is TEntityDescriptor
         ),
         TPositionModuleDescriptor
         (
-            InitialCollisionPlane = ECollisionPlane/Ground
-            InGeoDb        = True
+            InitialCollisionPlane = TCollisionPlane/Ground
         ),
         TVisibilityModuleDescriptor
         (
             UnitConcealmentBonus = 1.0
-        ),
-        TScannerConfigurationDescriptor
-        (
         ),
         TReverseScannerWithIdentificationDescriptor
         (

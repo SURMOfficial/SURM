@@ -104,15 +104,25 @@ ConditionTagRaisedInUnit_Retraite_1 is TConditionTagRaisedInUnit
     DescriptorId    = GUID:{213cdfd5-b7db-447e-841d-6d1d14633b35}
     Tag             = "Retraite"
 )
-ConditionTagRaisedInUnit_Routed is TConditionTagRaisedInUnit
+ConditionTagRaisedInUnit_ERA_hit is TConditionTagRaisedInUnit
 (
     DescriptorId    = GUID:{183b90f8-9fe0-438c-9686-83a33958c708}
+    Tag             = "ERA_hit"
+)
+ConditionTagNotRaisedInUnit_ERA_hit is TConditionNot
+(
+    ConditionToInverse = ConditionTagRaisedInUnit_ERA_hit
+    DescriptorId    = GUID:{d2bb81a5-794e-42d1-bd26-f2976dcbbafe}
+)
+ConditionTagRaisedInUnit_Routed is TConditionTagRaisedInUnit
+(
+    DescriptorId    = GUID:{42b3f2f9-3d78-4dc7-9741-97bb031c7b62}
     Tag             = "Routed"
 )
 ConditionTagNotRaisedInUnit_Routed is TConditionNot
 (
     ConditionToInverse = ConditionTagRaisedInUnit_Routed
-    DescriptorId    = GUID:{d2bb81a5-794e-42d1-bd26-f2976dcbbafe}
+    DescriptorId    = GUID:{0923b142-b688-4a09-8b6c-4683efc7d4c8}
 )
 ConditionTagRaisedInUnit_Morale_level_1 is TConditionTagRaisedInUnit
 (
