@@ -14954,7 +14954,7 @@ Ammo_Canon_AP_105mm_M68_IP is TAmmunitionDescriptor //M900
          BaseHitValueModifiers =
          [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, AccCorr *  70),
+            (EBaseHitValueModifier/Idling, AccCorr *  65),
             (EBaseHitValueModifier/Moving, AccCorr *  60),
             (EBaseHitValueModifier/Targeted, 0.0),
          ]
@@ -15021,7 +15021,7 @@ Ammo_Canon_AP_105mm_M68_M1 is TAmmunitionDescriptor //M900 now M833
          BaseHitValueModifiers =
          [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, AccCorr *  70),
+            (EBaseHitValueModifier/Idling, AccCorr *  65),
             (EBaseHitValueModifier/Moving, AccCorr *  60),
             (EBaseHitValueModifier/Targeted, 0.0),
          ]
@@ -15297,7 +15297,7 @@ Ammo_Canon_AP_105mm_M68_M1_M900 is TAmmunitionDescriptor //M900
          BaseHitValueModifiers =
          [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, AccCorr *  70),
+            (EBaseHitValueModifier/Idling, AccCorr *  65),
             (EBaseHitValueModifier/Moving, AccCorr *  60),
             (EBaseHitValueModifier/Targeted, 0.0),
          ]
@@ -15364,7 +15364,7 @@ Ammo_Canon_AP_105mm_M68_M774 is TAmmunitionDescriptor //M774 for NG M1
          BaseHitValueModifiers =
          [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, AccCorr *  70),
+            (EBaseHitValueModifier/Idling, AccCorr *  65),
             (EBaseHitValueModifier/Moving, AccCorr *  60),
             (EBaseHitValueModifier/Targeted, 0.0),
          ]
@@ -15431,8 +15431,8 @@ Ammo_Canon_AP_105mm_M68_late is TAmmunitionDescriptor // switching 105s to M833 
          BaseHitValueModifiers =
          [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, AccCorr *  75),
-            (EBaseHitValueModifier/Moving, AccCorr *  60),
+            (EBaseHitValueModifier/Idling, AccCorr *  60),
+            (EBaseHitValueModifier/Moving, AccCorr *  50),
             (EBaseHitValueModifier/Targeted, 0.0),
          ]
         DistanceToTarget = True
@@ -15571,8 +15571,8 @@ Ammo_Canon_AP_105mm_M68_late_M774 is TAmmunitionDescriptor // NG gets M774
          BaseHitValueModifiers =
          [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, AccCorr *  75),
-            (EBaseHitValueModifier/Moving, AccCorr *  60),
+            (EBaseHitValueModifier/Idling, AccCorr *  60),
+            (EBaseHitValueModifier/Moving, AccCorr *  50),
             (EBaseHitValueModifier/Targeted, 0.0),
          ]
         DistanceToTarget = True
@@ -30599,7 +30599,7 @@ Ammo_Canon_HEAT_120_mm_L52_M68 is TAmmunitionDescriptor //HEAT
     DispersionAtMinRangeGRU           = 0
     SalvoShotsSorted          		  = False
 	RadiusSplashPhysicalDamagesGRU    = 0
-    PhysicalDamages                   = 1.25 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
     ShowDamageInUI                    = True
     RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
     SuppressDamages                   = ArtySuppressCorr * 95.0
@@ -30617,8 +30617,8 @@ Ammo_Canon_HEAT_120_mm_L52_M68 is TAmmunitionDescriptor //HEAT
          BaseHitValueModifiers =
          [
             (EBaseHitValueModifier/Base, 0.0),
-            (EBaseHitValueModifier/Idling, AccCorr * 65),
-            (EBaseHitValueModifier/Moving, AccCorr * 60),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 65),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 60),
             (EBaseHitValueModifier/Targeted, 0.0),
          ]
         DistanceToTarget = True
@@ -30628,15 +30628,715 @@ Ammo_Canon_HEAT_120_mm_L52_M68 is TAmmunitionDescriptor //HEAT
     TimeBetweenTwoSalvos              = 8.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 1
+    ShotsCountPerSalvo                = 1
     SupplyCost                        = 16.26
-    NbSalvosShootOnPosition           = 1
-    CanShootOnPosition                = True
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
-    SimultaneousShotsCount          = 1
+    SimultaneousShotsCount            = 1
     AffichageMunitionParSalve         = 1
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_M68_120"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_M68_M60A3 is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{0899efff-3d85-4231-b84d-91f617f707d5}
+    Name                              = 'MSXTHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 3500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 60),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 50),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 6.5
+    TimeBetweenTwoSalvos              = 7.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_M68_M60A1 is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{057061ea-c6a0-4117-821d-d3b1c0f546ff}
+    Name                              = 'MSXTHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 2500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 50),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 42),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 9.5 //still feels optimistic
+    TimeBetweenTwoSalvos              = 7.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_M68_M1 is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{d19e052d-18c9-43f8-b7a1-1bc99961adb0}
+    Name                              = 'MSXTHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 4000
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 65),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 60),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 6.
+    TimeBetweenTwoSalvos              = 7.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_L7_Leopard1A5 is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{226452fa-0d12-4203-a4ee-ecc2f9240059}
+    Name                              = 'LEOOHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 2500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 60),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 50),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 6.0
+    TimeBetweenTwoSalvos              = 7.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_L7_Leopard1A4 is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{95beb3fa-8a19-4490-b42e-8f05a2dfde52}
+    Name                              = 'LEOOHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 2500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 60),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 50),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 8.5
+    TimeBetweenTwoSalvos              = 7.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_L7_M48 is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{30acb63c-e35e-4f16-a900-357c58b8c616}
+    Name                              = 'LEOOHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 2500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 60),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 50),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 12.0
+    TimeBetweenTwoSalvos              = 7.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_L7_Leopard1A1 is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{0c4a7d70-baa6-4d0f-ab23-f756b90466c9}
+    Name                              = 'LEOOHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 2500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 60),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 50),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 11.0
+    TimeBetweenTwoSalvos              = 7.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_L7_Leopard1A3_CAN is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{b110b85a-4c01-41e2-88bf-2ad8117bbdac}
+    Name                              = 'LEOOHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 3500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 60),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 50),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 6.5
+    TimeBetweenTwoSalvos              = 7.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_L7_Leopard1V is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{d75c1576-b6ef-4dcd-ae88-22558e554bff}
+    Name                              = 'LEOOHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 3500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 60),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 50),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 8.0
+    TimeBetweenTwoSalvos              = 7.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HEAT_105_mm_L7_Leopard1BE is TAmmunitionDescriptor //HEAT M456
+(
+    DescriptorId                      = GUID:{47bb428e-67c3-4d97-99e8-6a27ae043e74}
+    Name                              = 'LEOOHEAT'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'BMQJOXODMC'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap Index=14)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonGrosHEM1Abrams'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 3500
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+	RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.4 //HEAT does more damage, pens less (I think that's right against APCs, etc)
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *40
+    SuppressDamages                   = ArtySuppressCorr * 95.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 800
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr  * AccCorrHE * 60),
+            (EBaseHitValueModifier/Moving, AccCorr * AccCorrHE * 50),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 9.5
+    TimeBetweenTwoSalvos              = 7.5
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 11.38
+    NbSalvosShootOnPosition           = 0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = True
+    HasDeploymentTime                 = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_m68_105"
     SmokeDescriptor                   = nil
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
