@@ -67,31 +67,31 @@ private SkirmishList is TIASkirmishList_Specific
     //Choix de la strategie suivant le mode de jeu et le type de map en skirmish/multi
     IAStrategyConfiguration = MAP
     [
-        (IADifficulty/TresFacile, MAP
+        (EIADifficulty/TresFacile, MAP
         [
             (EDeploymentMode/NotSpecified, ~/VeryEasyStrategyList),
         ]),
-        (IADifficulty/Facile, MAP
+        (EIADifficulty/Facile, MAP
         [
             (EDeploymentMode/NotSpecified, ~/EasyStrategyList),
         ]),
-        (IADifficulty/Normal, MAP
+        (EIADifficulty/Normal, MAP
         [
             (EDeploymentMode/NotSpecified, ~/DefaultStrategyList),
         ]),
-        (IADifficulty/Difficile, MAP
+        (EIADifficulty/Difficile, MAP
         [
             (EDeploymentMode/NotSpecified, ~/HardStrategyList),
         ]),
-        (IADifficulty/TresDifficile, MAP
+        (EIADifficulty/TresDifficile, MAP
         [
             (EDeploymentMode/NotSpecified, ~/VeryHardStrategyList),
         ]),
-        (IADifficulty/PlusDifficile, MAP
+        (EIADifficulty/PlusDifficile, MAP
         [
             (EDeploymentMode/NotSpecified, ~/VeryHardStrategyList),
         ]),
-        (IADifficulty/AnyDifficulty, MAP
+        (EIADifficulty/AnyDifficulty, MAP
         [
             (EDeploymentMode/NotSpecified, ~/DefaultStrategyList),
         ])
@@ -105,12 +105,12 @@ private SkirmishList is TIASkirmishList_Specific
     //Prioritaire par rapport a l'override
     IAStrategyOverrideForTicketsEconomy = MAP
     [
-        (IADifficulty/Facile, MAP
+        (EIADifficulty/Facile, MAP
         [
             (EDeploymentMode/Breakthrough, ~/BKTEasyStrategyList),
             (EDeploymentMode/NotSpecified, ~/DefaultStrategyList),
         ]),
-        (IADifficulty/AnyDifficulty, MAP
+        (EIADifficulty/AnyDifficulty, MAP
         [
             (EDeploymentMode/Breakthrough, ~/BKTDefaultStrategyList),
             (EDeploymentMode/NotSpecified, ~/DefaultStrategyList),

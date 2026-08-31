@@ -258,32 +258,32 @@ IAStratConstantes is TIAStratConstantesDescriptor_Specific
     [
         //Fallback AnyDifficulty doit toujours être présent
         (EDeploymentMode/NotSpecified, MAP[
-            (IADifficulty/AnyDifficulty, (0.9, 1.25)),
-            (IADifficulty/TresFacile, (0.9, 1.25)),         // On ne prend pas de risque, mais on perd aussi en réactivitée
-            (IADifficulty/Facile, (0.9, 1.25)),
-            (IADifficulty/Normal, (0.7, 1.0)),
-            (IADifficulty/Difficile, (0.65, 0.9)),
-            (IADifficulty/TresDifficile, (0.5, 0.75)),     // On prend plus de risque a partir de very hard
-            (IADifficulty/PlusDifficile, (0.35, 0.6)),
+            (EIADifficulty/AnyDifficulty, (0.9, 1.25)),
+            (EIADifficulty/TresFacile, (0.9, 1.25)),         // On ne prend pas de risque, mais on perd aussi en réactivitée
+            (EIADifficulty/Facile, (0.9, 1.25)),
+            (EIADifficulty/Normal, (0.7, 1.0)),
+            (EIADifficulty/Difficile, (0.65, 0.9)),
+            (EIADifficulty/TresDifficile, (0.5, 0.75)),     // On prend plus de risque a partir de very hard
+            (EIADifficulty/PlusDifficile, (0.35, 0.6)),
         ]),
 
         (EDeploymentMode/Breakthrough, MAP[
-            (IADifficulty/AnyDifficulty, (-1.0, 1.0)), //On ne sort jamais, on capture si on a au moins autant de force
+            (EIADifficulty/AnyDifficulty, (-1.0, 1.0)), //On ne sort jamais, on capture si on a au moins autant de force
         ]),
     ]
 
     MinimumScoreRatioForStayInCommandZonePerIADifficulty = MAP
     [
         (EDeploymentMode/NotSpecified, MAP[
-                (IADifficulty/AnyDifficulty, 1.0),
-                (IADifficulty/Normal, 0.8),
-                (IADifficulty/Difficile, 0.7),     // On prend plus de risque a partir de hard
-                (IADifficulty/TresDifficile, 0.7),
-                (IADifficulty/PlusDifficile, 0.7),
+                (EIADifficulty/AnyDifficulty, 1.0),
+                (EIADifficulty/Normal, 0.8),
+                (EIADifficulty/Difficile, 0.7),     // On prend plus de risque a partir de hard
+                (EIADifficulty/TresDifficile, 0.7),
+                (EIADifficulty/PlusDifficile, 0.7),
         ]),
 
         (EDeploymentMode/Breakthrough, MAP[
-            (IADifficulty/AnyDifficulty, 0.0), //On ne sort jamais
+            (EIADifficulty/AnyDifficulty, 0.0), //On ne sort jamais
         ]),
     ]
 
@@ -395,13 +395,13 @@ VisionConstantes is TIAStratVisionConstantes
 
     VisionParametersByDifficulty = MAP
     [
-        (IADifficulty/TresFacile, ~/IAStratVisionNoShootDetection),
-        (IADifficulty/Facile, ~/IAStratVisionNoShootDetection),
-        (IADifficulty/Normal, ~/IAStratVisionShootDetectionLittleMemory),
-        (IADifficulty/Difficile, ~/IAStratVisionShootDetectionLittleMemory),
-        (IADifficulty/TresDifficile, ~/IAStratVisionShootDetectionInfiniteMemory),
-        (IADifficulty/PlusDifficile, ~/IAStratVisionShootDetectionInfiniteMemory),
-        (IADifficulty/AnyDifficulty, ~/IAStratVisionShootDetectionLittleMemory)
+        (EIADifficulty/TresFacile, ~/IAStratVisionNoShootDetection),
+        (EIADifficulty/Facile, ~/IAStratVisionNoShootDetection),
+        (EIADifficulty/Normal, ~/IAStratVisionShootDetectionLittleMemory),
+        (EIADifficulty/Difficile, ~/IAStratVisionShootDetectionLittleMemory),
+        (EIADifficulty/TresDifficile, ~/IAStratVisionShootDetectionInfiniteMemory),
+        (EIADifficulty/PlusDifficile, ~/IAStratVisionShootDetectionInfiniteMemory),
+        (EIADifficulty/AnyDifficulty, ~/IAStratVisionShootDetectionLittleMemory)
     ]
 
     //--------------- Test de vision ----------------------------------------------//

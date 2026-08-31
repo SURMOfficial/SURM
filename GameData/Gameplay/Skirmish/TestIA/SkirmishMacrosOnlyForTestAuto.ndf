@@ -199,7 +199,6 @@ export Corridor_Defense_OnlyTestAuto is TMacroActionDescriptor_CorridorDefense_S
 
                     (EDefensePointScoringFeature/IsObjectifCoeff, 0.0),                     // Bonus si la case contient un objectif
                     (EDefensePointScoringFeature/MalusDefaultDefensePoint, 10.0),           // Malus si la case a été prise à défaut d'autres possibilités
-                    (EDefensePointScoringFeature/IsDefenseUnit, 0.0),                       // Bonus si la case contient une tranchée ou une position de tir
                 ]
             DefensePointPositioning = EDefensePointPositioningType/Offensive)
         ),

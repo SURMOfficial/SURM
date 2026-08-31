@@ -740,6 +740,30 @@ export Descriptor_Deck_Division_RFA_TerrKdo_Sud_multi is TDeckDivisionDescriptor
         $/GFX/Unit/Descriptor_Unit_GreenBerets_US,
     ]
 )
+export Descriptor_Deck_Division_RFA_VTK_42_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{7b2ff1ac-a9ea-434e-92a5-597feaec2ddb}
+    CfgName = 'RFA_VTK_42_multi'
+    DivisionName = 'XCPSGCVSXQ'
+    InterfaceOrder = 19.0
+    DivisionCoalition = TWargameCoalition/NATO
+    DivisionTags = ['DEFAULT', 'RFA', 'NATO', 'MECHANIZ']
+    DescriptionHintTitleToken = 'FTNBWSKUFD'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_RFA_VTK_42_multi_Rule
+    CostMatrix = MatrixCostName_RFA_VTK_42_multi
+    EmblemTexture     = "Texture_Division_Emblem_RFA_VTK_42"
+    TypeToken        = "MECHANIZ"
+    SummaryTextToken = "SUMRFAVTK"
+    HistoryTextToken = "HISRFAVTK"
+    CountryId = "RFA"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_Leopard_1A6_Instructor_RFA,
+        $/GFX/Unit/Descriptor_Unit_PzGrenadier_Instructor_RFA,
+        $/GFX/Unit/Descriptor_Unit_Bo_105_BSH1_RFA,
+    ]
+)
 export Descriptor_Deck_Division_SOV_119IndTkBrig_multi is TDeckDivisionDescriptor
 (
     DescriptorId = GUID:{b611cb29-bf44-4d02-a529-36312df5ec2c}
@@ -1068,6 +1092,30 @@ export Descriptor_Deck_Division_SOV_6IndMSBrig_multi is TDeckDivisionDescriptor
     [
         $/GFX/Unit/Descriptor_Unit_2S5_GiatsintS_SOV,
         $/GFX/Unit/Descriptor_Unit_TOS1_Buratino_SOV,
+    ]
+)
+export Descriptor_Deck_Division_SOV_71_Tank_multi is TDeckDivisionDescriptor
+(
+    DescriptorId = GUID:{f5dc6d46-a597-4b66-9b52-2aac7ff0fb2a}
+    CfgName = 'SOV_71_Tank_multi'
+    DivisionName = 'EYQOCYCZJT'
+    InterfaceOrder = 10.0
+    DivisionCoalition = TWargameCoalition/PACT
+    DivisionTags = ['DEFAULT', 'SOV', 'PACT', 'ARMORED']
+    DescriptionHintTitleToken = 'WEZHWRTPET'
+    MaxActivationPoints = 50
+    DivisionRule = Descriptor_Deck_Division_SOV_71_Tank_multi_Rule
+    CostMatrix = MatrixCostName_SOV_71_Tank_multi
+    EmblemTexture     = "Texture_Division_Emblem_SOV_71_TD"
+    TypeToken        = "ARMORED"
+    SummaryTextToken = "SUMSO71TD"
+    HistoryTextToken = "HISSOV71TD"
+    CountryId = "SOV"
+    StandoutUnits =
+    [
+        $/GFX/Unit/Descriptor_Unit_T72B_obr89_Instructor_SOV,
+        $/GFX/Unit/Descriptor_Unit_MotRifles_Instructor_SOV,
+        $/GFX/Unit/Descriptor_Unit_MiG_29_9_13_CCE_SOV,
     ]
 )
 export Descriptor_Deck_Division_SOV_76_VDV_multi is TDeckDivisionDescriptor

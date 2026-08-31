@@ -1352,6 +1352,80 @@ SubGenerators_Showroom_BMP_1_SP2_POL is TShowroomMissileCarriageSubDepictionGene
 )
 
 
+SubGenerators_BMP_1_SP2_Reserve_SOV is TMissileCarriageSubDepictionGenerator
+(
+    MissileCarriageConnoisseur = MissileCarriage_BMP_1_SP2_Reserve_SOV
+    Missiles = 
+    [
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 0
+                PhysicalProperty = "Tourelle4_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Malyutka
+            )
+            MissileIndex = 1
+            WeaponIndex = 4
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 1
+                PhysicalProperty = "Tourelle4_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Malyutka
+            )
+            MissileIndex = 2
+            WeaponIndex = 4
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 2
+                PhysicalProperty = "Tourelle4_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Malyutka
+            )
+            MissileIndex = 3
+            WeaponIndex = 4
+        ),
+        TMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileGroundUnit
+            (
+                MissileNumber = 3
+                PhysicalProperty = "Tourelle4_MissileCount"
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Malyutka
+            )
+            MissileIndex = 4
+            WeaponIndex = 4
+        ),
+    ]
+    Pylons = ~/DepictionPylonSet_ATGM
+    ReferenceMesh = $/GFX/DepictionResources/Modele_BMP_1_SP2_Reserve_SOV
+)
+
+SubGenerators_Showroom_BMP_1_SP2_Reserve_SOV is TShowroomMissileCarriageSubDepictionGenerator
+(
+    MissileCarriageConnoisseur = MissileCarriage_BMP_1_SP2_Reserve_SOV_Showroom
+    Missiles = 
+    [
+        TShowroomMissileCarriageSubDepictionMissileInfo
+        (
+            Depiction = TemplateDepictionMissileShowroom
+            (
+                ProjectileModelResource = $/GFX/DepictionResources/Modele_Missile_Malyutka
+            )
+            MissileCount = 4
+            WeaponIndex = 4
+        ),
+    ]
+    Pylons = ~/DepictionPylonSet_ATGM_Showroom
+    ReferenceMesh = $/GFX/DepictionResources/Modele_BMP_1_SP2_Reserve_SOV
+)
+
+
 SubGenerators_BMP_1_SP2_SOV is TMissileCarriageSubDepictionGenerator
 (
     MissileCarriageConnoisseur = MissileCarriage_BMP_1_SP2_SOV

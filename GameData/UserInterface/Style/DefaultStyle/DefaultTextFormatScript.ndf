@@ -1579,6 +1579,17 @@ unnamed TTextFormatScript
             )
         ),
         (
+            "INSTRUCTOR",
+            TTFSCommand_UISymbol
+            (
+                TextureToken = "Texture_Icon_instructor"
+                BBMin=[0.0, -0.718, 0]
+                BBMax=[1.68, 0.128, 0]
+                ShaderDescriptor = $/M3D/Shader/MaterialInterface2D_Blend
+                UseTextColor = true
+            )
+        ),
+        (
             "IFV",
             TTFSCommand_UISymbol
             (
@@ -2181,6 +2192,10 @@ unnamed TTextFormatScript
         (
             "CUB_1Div",
             TemplateTFS_Division(TextureToken = "CommonTexture_division_CUB_1Div")
+        ),
+        (
+            "CUB_12Div",
+            TemplateTFS_Division(TextureToken = "CommonTexture_division_CUB_12Div")
         ),
         (
             "CUB_MTT",

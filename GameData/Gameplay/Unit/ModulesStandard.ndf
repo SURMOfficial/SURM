@@ -123,4 +123,5 @@ DefaultFlagsModuleDescriptor is TFlagsModuleDescriptor
 
 LinkToDistrictModuleDescriptor is TLinkToDistrictModuleDescriptor()
 
-SellModuleDescriptor is TSellModuleDescriptor()
+SellModuleDescriptor is TSellModuleDescriptor(AllowAutosell = True)
+SellNoAutoSellModuleDescriptor is TSellModuleDescriptor(AllowAutosell = False)

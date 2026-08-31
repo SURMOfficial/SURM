@@ -5,7 +5,6 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
     Textures = MAP [
         ("OutgameTexture_ModCenter_Star",                            MAP [(~/ComponentState/Normal, ~/OutgameTexture_ModCenter_Star)]),
         ("OutgameTexture_LevelUp_Cadre",                             MAP [(~/ComponentState/Normal, ~/OutgameTexture_LevelUp_Cadre)]),
-        ("OutgameTexture_LevelUp_Background",                        MAP [(~/ComponentState/Normal, ~/OutgameTexture_LevelUp_Background)]),
         ("StyleDeskTexture_CheckBox",                                MAP [
                                                                             (~/ComponentState/Normal,                   ~/StyleDeskTexture_CheckBox_Vide),
                                                                             (~/ComponentState/Highlighted,              ~/StyleDeskTexture_CheckBox_Vide),
@@ -38,16 +37,6 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
                                                                             (~/ComponentState/Intermediate, ~/StyleDeskTexture_CheckBox_Vide),
                                                                             (~/ComponentState/IntermediateHighlighted, ~/StyleDeskTexture_CheckBox_Vide),
                                                                      ]),
-        ("StyleDeskTexture_treeview_plus_moins",                         MAP [
-                                                                            (~/ComponentState/Normal, ~/StyleDeskTexture_treeview_plus),
-                                                                            (~/ComponentState/Highlighted, ~/StyleDeskTexture_treeview_plus),
-                                                                            (~/ComponentState/Clicked, ~/StyleDeskTexture_treeview_plus),
-                                                                            (~/ComponentState/Toggled, ~/StyleDeskTexture_treeview_moins),
-                                                                            (~/ComponentState/ToggleHighlighted, ~/StyleDeskTexture_treeview_moins),
-                                                                            (~/ComponentState/ToggleClicked, ~/StyleDeskTexture_treeview_moins),
-                                                                            (~/ComponentState/Intermediate, ~/StyleDeskTexture_CheckBox_Vide),
-                                                                            (~/ComponentState/IntermediateHighlighted, ~/StyleDeskTexture_CheckBox_Vide),
-                                                                     ]),
         ("CommonTexture_Spotlight_TopTileTexture",                   MAP [(~/ComponentState/Normal, ~/CommonTexture_Spotlight_TopTileTexture)]),
         ("CommonTexture_Spotlight_BottomTileTexture",                MAP [(~/ComponentState/Normal, ~/CommonTexture_Spotlight_BottomTileTexture)]),
         ("CommonTexture_Spotlight_LeftTileTexture",                  MAP [(~/ComponentState/Normal, ~/CommonTexture_Spotlight_LeftTileTexture)]),
@@ -57,33 +46,9 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("CommonTexture_Spotlight_CornerTexture_BottomRight",        MAP [(~/ComponentState/Normal, ~/CommonTexture_Spotlight_CornerTexture_BottomRight)]),
         ("CommonTexture_Spotlight_CornerTexture_BottomLeft",         MAP [(~/ComponentState/Normal, ~/CommonTexture_Spotlight_CornerTexture_BottomLeft)]),
 
-        ("CommonTexture_Chanfrein_VerticalTileTexture",              MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein_VerticalTileTexture)]),
-        ("CommonTexture_Chanfrein_HorizontalTileTexture",            MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein_HorizontalTileTexture)]),
-        ("CommonTexture_Chanfrein_CornerTexture_TopLeft",            MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein_CornerTexture_TopLeft)]),
-        ("CommonTexture_Chanfrein_CornerTexture_TopRight",           MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein_CornerTexture_TopRight)]),
-        ("CommonTexture_Chanfrein_CornerTexture_BottomRight",        MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein_CornerTexture_BottomRight)]),
-        ("CommonTexture_Chanfrein_CornerTexture_BottomLeft",         MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein_CornerTexture_BottomLeft)]),
 
-        ("CommonTexture_Chanfrein5_VerticalTileTexture",              MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein5_VerticalTileTexture)]),
-        ("CommonTexture_Chanfrein5_HorizontalTileTexture",            MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein5_HorizontalTileTexture)]),
-        ("CommonTexture_Chanfrein5_CornerTexture_TopLeft",            MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein5_CornerTexture_TopLeft)]),
-        ("CommonTexture_Chanfrein5_CornerTexture_TopRight",           MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein5_CornerTexture_TopRight)]),
-        ("CommonTexture_Chanfrein5_CornerTexture_BottomRight",        MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein5_CornerTexture_BottomRight)]),
-        ("CommonTexture_Chanfrein5_CornerTexture_BottomLeft",         MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein5_CornerTexture_BottomLeft)]),
 
-        ("CommonTexture_Chanfrein4_VerticalTileTexture",              MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein4_VerticalTileTexture)]),
-        ("CommonTexture_Chanfrein4_HorizontalTileTexture",            MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein4_HorizontalTileTexture)]),
-        ("CommonTexture_Chanfrein4_CornerTexture_TopLeft",            MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein4_CornerTexture_TopLeft)]),
-        ("CommonTexture_Chanfrein4_CornerTexture_TopRight",           MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein4_CornerTexture_TopRight)]),
-        ("CommonTexture_Chanfrein4_CornerTexture_BottomRight",        MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein4_CornerTexture_BottomRight)]),
-        ("CommonTexture_Chanfrein4_CornerTexture_BottomLeft",         MAP [(~/ComponentState/Normal, ~/CommonTexture_Chanfrein4_CornerTexture_BottomLeft)]),
 
-        ("CommonTexture_ChanfreinTransparent5_VerticalTileTexture",              MAP [(~/ComponentState/Normal, ~/CommonTexture_ChanfreinTransparent5_VerticalTileTexture)]),
-        ("CommonTexture_ChanfreinTransparent5_HorizontalTileTexture",            MAP [(~/ComponentState/Normal, ~/CommonTexture_ChanfreinTransparent5_HorizontalTileTexture)]),
-        ("CommonTexture_ChanfreinTransparent5_CornerTexture_TopLeft",            MAP [(~/ComponentState/Normal, ~/CommonTexture_ChanfreinTransparent5_CornerTexture_TopLeft)]),
-        ("CommonTexture_ChanfreinTransparent5_CornerTexture_TopRight",           MAP [(~/ComponentState/Normal, ~/CommonTexture_ChanfreinTransparent5_CornerTexture_TopRight)]),
-        ("CommonTexture_ChanfreinTransparent5_CornerTexture_BottomRight",        MAP [(~/ComponentState/Normal, ~/CommonTexture_ChanfreinTransparent5_CornerTexture_BottomRight)]),
-        ("CommonTexture_ChanfreinTransparent5_CornerTexture_BottomLeft",         MAP [(~/ComponentState/Normal, ~/CommonTexture_ChanfreinTransparent5_CornerTexture_BottomLeft)]),
 
         ("CommonTexture_Ombre_TopTileTexture",                   MAP [(~/ComponentState/Normal, ~/CommonTexture_Ombre_TopTileTexture)]),
         ("CommonTexture_Ombre_BottomTileTexture",                MAP [(~/ComponentState/Normal, ~/CommonTexture_Ombre_BottomTileTexture)]),
@@ -94,15 +59,12 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("CommonTexture_Ombre_CornerTexture_BottomRight",        MAP [(~/ComponentState/Normal, ~/CommonTexture_Ombre_CornerTexture_BottomRight)]),
         ("CommonTexture_Ombre_CornerTexture_BottomLeft",         MAP [(~/ComponentState/Normal, ~/CommonTexture_Ombre_CornerTexture_BottomLeft)]),
 
-        ("OutgameTexture_DivisionBackground",                        MAP [(~/ComponentState/Normal, ~/OutgameTexture_DivisionBackground)]),
-        ("OutgameTexture_DivisionBackground_Frontal_Assault",        MAP [(~/ComponentState/Normal, ~/OutgameTexture_DivisionBackground_Frontal_Assault)]),
 
         ("OutgameTexture_GameRoomList_Observable",                                  MAP [(~/ComponentState/Normal, ~/OutgameTexture_GameRoomList_Observable)]),
         ("OutgameTexture_Division_Dlc_Corner",                                      MAP [(~/ComponentState/Normal, ~/OutgameTexture_Division_Dlc_Corner)]),
 
 
 
-        ("OutgameTexture_PlayerBanner",                                             MAP [(~/ComponentState/Normal, ~/OutgameTexture_PlayerBanner)]),
         ("OutgameTexture_UnknownMap",                                               MAP [(~/ComponentState/Normal, ~/OutgameTexture_UnknownMap)]),
         ("OutgameTexture_ConquestModeTexture",                                      MAP [(~/ComponentState/Normal, ~/OutgameTexture_ConquestModeTexture)]),
         ("OutgameTexture_ConquestModeTexture2",                                      MAP [(~/ComponentState/Normal, ~/OutgameTexture_ConquestModeTexture2)]),
@@ -119,16 +81,11 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("OutgameTexture_Mode_Breakthrough2",                                       MAP [(~/ComponentState/Normal, ~/OutgameTexture_Mode_Breakthrough2)]),
 
 
-        ("NotificationFrame_DefaultBackground",                                     MAP [(~/ComponentState/Normal, ~/NotificationFrame_DefaultBackground)]),
         ("OutgameTexture_GameRoomList_ModNotInLocal",                               MAP [(~/ComponentState/Normal, ~/OutgameTexture_GameRoomList_ModNotInLocal)]),
         ("OutgameTexture_GameRoomList_ModInLocal",                                  MAP [(~/ComponentState/Normal, ~/OutgameTexture_GameRoomList_ModInLocal)]),
         ("OutgameTexture_GameRoomList_ModActive",                                   MAP [(~/ComponentState/Normal, ~/OutgameTexture_GameRoomList_ModActive)]),
 
-        ("OutgameTexture_WG2_BgOutGame_Erase_Button",                               MAP [(~/ComponentState/Normal, ~/OutgameTexture_WG2_BgOutGame_Erase_Button)]),
-        ("OutgameTexture_WG2_BgOutGame_AddFriend_Button",                           MAP [(~/ComponentState/Normal, ~/OutgameTexture_WG2_BgOutGame_AddFriend_Button)]),
-        ("OutgameTexture_WG2_BgOutGame_BlackList_Button",                           MAP [(~/ComponentState/Normal, ~/OutgameTexture_WG2_BgOutGame_BlackList_Button)]),
 
-        ("ModCenter_LineBackground",                                                MAP [(~/ComponentState/Normal, ~/ModCenter_LineBackground)]),
 
         ("ExpandSectionTexture", MAP [
                             (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/Expandable/vitesseUpn.png' )),
@@ -147,18 +104,8 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
                             (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseOutGame/InviteLobby.png' )),
                             ] ),
 
-        ("PreviousFriendTexture", MAP [
-                            (~/ComponentState/Grayed, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseOutGame/PreviousLock.png' )),
-                            (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseOutGame/Previous.png' )),
-                            ] ),
 
-        ("NextFriendTexture", MAP [
-                            (~/ComponentState/Grayed, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseOutGame/NextLock.png' )),
-                            (~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseOutGame/Next.png' )),
-                            ] ),
 
-        ("texture_difficulty_expert",                               MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/difficulty_expert.png' ))]),
-        ("texture_difficulty_normal",                               MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/difficulty_normal.png' ))]),
         ("UseInGame_LDhint_Intel_Arty",                               MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/UseInGame/LDHint/Intel_Arty.png' ))]),
 
 
@@ -199,20 +146,15 @@ Base_AdditionalTextureBank is TBUCKToolAdditionalTextureBank
         ("Texture_TraitUni_Icon_half",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/half.png' )), ] ),
         ("Texture_TraitUni_Icon_para",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/para.png' )), ] ),
         ("Texture_TraitUni_Icon_shock",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/shock.png' )), ] ),
-        ("Texture_TraitUni_Icon_militia",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/militia.png' )), ] ),
         ("Texture_TraitUni_Icon_sf",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/sf.png' )), ] ),
         ("Texture_TraitUni_Icon_ifv",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/ifv.png' )), ] ),
         ("Texture_TraitUni_Icon_cmd",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/cmd.png' )), ] ),
         ("Texture_TraitUni_Icon_mp",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/mp.png' )), ] ),
-        ("Texture_TraitUni_Icon_instructor_INF",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/instructor.png' )), ] ),
-        ("Texture_TraitUni_Icon_instructor_TNK",                          MAP [(~/ComponentState/Normal, TUIResourceTexture_Common( FileName='GameData:/Assets/2D/Interface/Common/traits/instructor.png' )), ] ),
 
 
         ("size_s", MAP [( ~/ComponentState/Normal, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/Common/TFS/small.png" )),]),
         ("size_m", MAP [( ~/ComponentState/Normal, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/Common/TFS/medium.png" )),]),
         ("size_l", MAP [( ~/ComponentState/Normal, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/Common/TFS/large.png" )),]),
-        ("size_xl", MAP [( ~/ComponentState/Normal, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/Common/TFS/xl.png" )),]),
-        ("size_xs", MAP [( ~/ComponentState/Normal, TUIResourceTexture_Common( FileName = "GameData:/Assets/2D/Interface/Common/TFS/xs.png" )),]),
 
 
         //-------------------------------------------------------------------------------------

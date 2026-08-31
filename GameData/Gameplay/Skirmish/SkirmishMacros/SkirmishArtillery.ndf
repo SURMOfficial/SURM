@@ -19,7 +19,7 @@ is TMacroActionDescriptor_Artillery_Specific
         <GenerationSettingHolder>,
         TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 SupportZoneMaxRangeGRU = 6310),
         TArtilleryStrikeThreatSettingHolder(MinimumThreatPerSplashForKill = 30 MinimumThreatForSupport = 200 ),
-        TArtilleryStrikeThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 20 MinimumThreatForSupport = 100),
+        TArtilleryStrikeThreatSettingHolder(DifficultyList = [EIADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 20 MinimumThreatForSupport = 100),
         TMacroActionProductionSettingHolder(PoolModelList = <PoolModelList>),
         TArtilleryStrikeSettingHolder(
             ArtilleryStrikeThreatBonusPerTags =
@@ -102,7 +102,7 @@ export Artillery_Support is TMacroActionDescriptor_Artillery_Specific
         TCoordinationSettingHolder(CoordinationType = ESupportingStatus/IsSupport),
         TArtilleryPositionningSettingHolder(SupportPointSafetyMargin = 1 SupportZoneMaxRangeGRU = 5049),
         TArtilleryStrikeThreatSettingHolder(MinimumThreatPerSplashForKill = 20  MinimumThreatForSupport = 150 ),
-        TArtilleryStrikeThreatSettingHolder(DifficultyList = [IADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 15 MinimumThreatForSupport = 100),
+        TArtilleryStrikeThreatSettingHolder(DifficultyList = [EIADifficulty/TresDifficile] MinimumThreatPerSplashForKill = 15 MinimumThreatForSupport = 100),
         TArtilleryStrikeSettingHolder(
             ArtilleryStrikeThreatBonusPerTags =
             [
@@ -155,7 +155,7 @@ is TMacroActionDescriptor_Artillery_Specific
         ),
 
         TArtilleryStrikeSettingHolder(
-            DifficultyList = [IADifficulty/TresDifficile]
+            DifficultyList = [EIADifficulty/TresDifficile]
             ArtilleryStrikeThreatBonusPerTags =
             [
                 (["Canon_AT"], 1.0),
