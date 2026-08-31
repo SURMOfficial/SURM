@@ -12544,7 +12544,7 @@ Ammo_Canon_AP_100mm_D10S is TAmmunitionDescriptor
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_APFSDS"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = True
@@ -12611,7 +12611,7 @@ Ammo_Canon_AP_100mm_D10T_Merida is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_APFSDS"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = True
@@ -12678,7 +12678,7 @@ Ammo_Canon_AP_100mm_D10T_T55obr81 is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_APFSDS"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = True
@@ -12745,7 +12745,7 @@ Ammo_Canon_AP_100mm_D10T_early is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_APFSDS"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -12811,7 +12811,7 @@ Ammo_Canon_AP_100mm_D10T_early_HEAT is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HEAT"
     SmokeDescriptor                   = nil
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
@@ -12880,7 +12880,7 @@ Ammo_Canon_AP_100mm_D10T_late is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_APFSDS"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -12947,7 +12947,7 @@ Ammo_Canon_AP_100mm_D10T_mid is TAmmunitionDescriptor //unused
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_APFSDS"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = True
@@ -13012,7 +13012,7 @@ Ammo_Canon_AP_100mm_D10T_med is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_APFSDS"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -18025,16 +18025,16 @@ Ammo_Canon_AP_125_mm_2A46_T64A is TAmmunitionDescriptor //T-64As
     )
     MaxSuccessiveHitCount             = 5
     AimingTime                        = 10.0 //needs work, guess
-    TimeBetweenTwoSalvos              = 140.0
+    TimeBetweenTwoSalvos              = 140.0 //takes around 5 minutes to reload entire carousel
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 28
-    SupplyCost                        = 357.72
+    ShotsCountPerSalvo                = 10
+    SupplyCost                        = 162.6
     CanShootOnPosition                = False
     CanShootWhileMoving               = True
     HasDeploymentTime                 = False
-    SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 28
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 10
     InterfaceWeaponTexture            = "Texture_Interface_Weapon_APFSDS"
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
@@ -22616,7 +22616,7 @@ Ammo_Canon_HE_100mm_D10S is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HE"
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
@@ -22686,7 +22686,7 @@ Ammo_Canon_HE_100mm_D10T_Merida is TAmmunitionDescriptor //needs work
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HE"
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
@@ -22756,7 +22756,7 @@ Ammo_Canon_HE_100mm_D10T_T55obr81 is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HE"
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
@@ -22826,7 +22826,7 @@ Ammo_Canon_HE_100mm_D10T_early is TAmmunitionDescriptor
     HasDeploymentTime                 = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_d10t"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HE"
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
@@ -22908,7 +22908,7 @@ Ammo_Canon_HEAT_100mm_D10T_early is TAmmunitionDescriptor
 )
 Ammo_Canon_HE_HEAT_100mm_D10T_early is TAmmunitionDescriptor
 (
-    DescriptorId                      = GUID:{ab71bc83-3235-49d0-b2cf-990d5995ca3e}
+    DescriptorId                      = GUID:{93be0f7f-1aed-4bd3-b48f-22a9a1aeaaf1}
     Name                              = '3BK5M'
     TypeCategoryName                  = 'HEATR'
     Caliber                           = 'EOFGRIGVYK'
@@ -22978,7 +22978,7 @@ Ammo_Canon_HE_HEAT_100mm_D10T_early is TAmmunitionDescriptor
 )
 Ammo_Canon_HE_100mm_D10T_late is TAmmunitionDescriptor
 (
-    DescriptorId                      = GUID:{ab71bc83-3235-49d0-b2cf-990d5995ca3e}
+    DescriptorId                      = GUID:{c5fd9465-292c-4f7b-9097-238226b208e8}
     Name                              = '3OF412'
     TypeCategoryName                  = 'HERND'
     Caliber                           = 'EOFGRIGVYK'
@@ -23048,7 +23048,7 @@ Ammo_Canon_HE_100mm_D10T_late is TAmmunitionDescriptor
 )
 Ammo_Canon_HEAT_100mm_D10T_late is TAmmunitionDescriptor
 (
-    DescriptorId                      = GUID:{ab71bc83-3235-49d0-b2cf-990d5995ca3e}
+    DescriptorId                      = GUID:{f17ec756-6c79-4990-9b2a-e9c81b457f8b}
     Name                              = '3BK5M'
     TypeCategoryName                  = 'HEATR'
     Caliber                           = 'EOFGRIGVYK'
@@ -23118,7 +23118,7 @@ Ammo_Canon_HEAT_100mm_D10T_late is TAmmunitionDescriptor
 )
 Ammo_Canon_HE_HEAT_100mm_D10T_late is TAmmunitionDescriptor
 (
-    DescriptorId                      = GUID:{ab71bc83-3235-49d0-b2cf-990d5995ca3e}
+    DescriptorId                      = GUID:{3ce04ef5-52c1-4098-b271-575d05c06a4b}
     Name                              = '3BK5M'
     TypeCategoryName                  = 'HEATR'
     Caliber                           = 'EOFGRIGVYK'
@@ -28283,7 +28283,7 @@ Ammo_Canon_HE_HEAT_125_mm_2A46M is TAmmunitionDescriptor
     PiercingWeapon                    = False
 	TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
-) */
+)
 /* Ammo_Canon_HEAT_125_mm_2A46M is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{32985008-0579-4a69-aa28-4761a4ed57b5}
@@ -28354,7 +28354,7 @@ Ammo_Canon_HE_HEAT_125_mm_2A46M is TAmmunitionDescriptor
 )
 Ammo_Canon_HE_HEAT_125_mm_2A46M is TAmmunitionDescriptor
 (
-    DescriptorId                      = GUID:{a1c39376-a3cd-42e1-95a8-80297967dc62}
+    DescriptorId                      = GUID:{1311a1e7-f045-42ad-9661-a0a48ceb3b28}
     Name                              = 'BK31'
     TypeCategoryName                  = 'HEATR'
     Caliber                           = 'GPFACVPVNW'
@@ -42468,7 +42468,7 @@ export Ammo_Degats_incendie is TAmmunitionDescriptor
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -42532,7 +42532,7 @@ export Ammo_Degats_dust is TAmmunitionDescriptor //no damage, just used in the f
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -42596,7 +42596,7 @@ export Ammo_Degats_dust_arty is TAmmunitionDescriptor //no damage, jsut used in 
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_med
@@ -42662,7 +42662,7 @@ export Ammo_Degats_dust_bomb is TAmmunitionDescriptor //no damage, jsut used in 
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_large
@@ -42727,7 +42727,7 @@ export Ammo_Degats_wreck is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_tank_wreck
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -42790,7 +42790,7 @@ export Ammo_Degats_cluster is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -42853,7 +42853,7 @@ export Ammo_Degats_direct_hit_Arty is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_med
@@ -42919,7 +42919,7 @@ export Ammo_Degats_frag_HEAT_verysmall is TAmmunitionDescriptor // small caliber
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -42983,7 +42983,7 @@ export Ammo_Degats_frag_HEAT_small is TAmmunitionDescriptor // eg TOW, HOT, Konk
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -43047,7 +43047,7 @@ export Ammo_Degats_frag_HEAT_med is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount            = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -43111,7 +43111,7 @@ export Ammo_Degats_frag_HEAT_large is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_med
@@ -43176,7 +43176,7 @@ export Ammo_Degats_direct_hit_HeavyMortar is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_med
@@ -43242,7 +43242,7 @@ export Ammo_Degats_direct_hit_AerialRocket_127 is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_med
@@ -43308,7 +43308,7 @@ export Ammo_Degats_direct_hit_AerialRocket_80 is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
@@ -43374,7 +43374,7 @@ export Ammo_Degats_direct_hit_AerialRocket_70 is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
@@ -43439,7 +43439,7 @@ export Ammo_Degats_direct_hit_250lb is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_large //currently these don't actually get called (seems like you can't have a fire trigger another fire)
@@ -43504,7 +43504,7 @@ export Ammo_Degats_direct_hit_500lb is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_large //currently these don't actually get called (seems like you can't have a fire trigger another fire)
@@ -43569,7 +43569,7 @@ export Ammo_Degats_direct_hit_1000lb is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_large
@@ -43632,7 +43632,7 @@ export Ammo_Degats_direct_hit_2000lb is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_large
@@ -43696,7 +43696,7 @@ export Ammo_Degats_direct_hit_3000lb is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Crater_large
@@ -43759,7 +43759,7 @@ export Ammo_Degats_direct_hit_MICLIC is TAmmunitionDescriptor //basically just f
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     FireTriggeringProbability         = 0.0
@@ -43821,7 +43821,7 @@ export Ammo_Degats_smoke is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -43881,7 +43881,7 @@ export Ammo_Degats_napalm is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -43941,7 +43941,7 @@ export Ammo_Degats_napalm_buratino is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -44001,7 +44001,7 @@ export Ammo_Degats_napalm_leger is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -44061,7 +44061,7 @@ export Ammo_Degats_napalm_leger_Cluster is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -44121,7 +44121,7 @@ export Ammo_Degats_napalm_leger_Cluster_petit is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -44181,7 +44181,7 @@ export Ammo_Degats_napalm_lourd is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -72282,7 +72282,7 @@ export Ammo_Mort_Avion_ExtraLourd is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_tank_wreck
@@ -72342,7 +72342,7 @@ export Ammo_Mort_Avion_Leger is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
     FireTriggeringProbability         = 0.05
@@ -72401,7 +72401,7 @@ export Ammo_Mort_Avion_Lourd is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
     IsHarmlessForAllies               = False
@@ -72459,7 +72459,7 @@ export Ammo_Mort_Avion_Moyen is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Incendie
     IsHarmlessForAllies               = False
@@ -72517,7 +72517,7 @@ export Ammo_Mort_Avion_UltraLourd is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_tank_wreck
@@ -72576,7 +72576,7 @@ export Ammo_Mort_Helico_Leger is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_tank_wreck
@@ -72635,7 +72635,7 @@ export Ammo_Mort_Helico_Moyen is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_tank_wreck
@@ -72694,7 +72694,7 @@ export Ammo_Mort_Helico_Ultra_Leger is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_tank_wreck
@@ -72752,7 +72752,7 @@ export Ammo_Mort_Unite_faible is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_tank_wreck
@@ -72810,7 +72810,7 @@ export Ammo_Mort_Unite_forte is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_tank_wreck
@@ -72868,7 +72868,7 @@ export Ammo_Mort_Unite_infanterie is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     FireTriggeringProbability         = 0.1
@@ -72925,7 +72925,7 @@ export Ammo_Mort_Unite_moyenne is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -72981,7 +72981,7 @@ export Ammo_Mort_Unite_ravitaillement is TAmmunitionDescriptor //may roll this b
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = $/GFX/Weapon/Descriptor_Smoke_Fumi_burning_tank
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_tank_wreck
@@ -73048,7 +73048,7 @@ export Ammo_Mort_Unite_ravitaillement_UltraLourd is TAmmunitionDescriptor
     CanShootWhileMoving               = False
     HasDeploymentTime                 = False
     SimultaneousShotsCount            = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False
@@ -73104,7 +73104,7 @@ export Ammo_Mort_Unite_suicide is TAmmunitionDescriptor
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 0
+    AffichageMunitionParSalve         = 1
     SmokeDescriptor                   = nil
     FireDescriptor                    = nil
     IsHarmlessForAllies               = False

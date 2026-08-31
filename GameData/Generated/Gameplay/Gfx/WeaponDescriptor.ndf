@@ -120292,7 +120292,8 @@ export WeaponDescriptor_Marder_1A3_reco_RFA is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = True
     Salves = 
     [
-        240,
+        50, 
+		100,
         8,
         70,
         1,
@@ -120331,7 +120332,7 @@ export WeaponDescriptor_Marder_1A3_reco_RFA is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 0
+                    AmmoBoxIndex = 1
                     Ammunition = $/GFX/Weapon/Ammo_AutoCanon_HE_20mm_MK_20_Rh_202
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -120367,7 +120368,7 @@ export WeaponDescriptor_Marder_1A3_reco_RFA is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 2
                     Ammunition = $/GFX/Weapon/Ammo_ATGM_MILAN_2_IFV
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -120404,7 +120405,7 @@ export WeaponDescriptor_Marder_1A3_reco_RFA is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 3
                     Ammunition = $/GFX/Weapon/Ammo_MMG_MG3_7_62mm
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -120437,7 +120438,7 @@ export WeaponDescriptor_Marder_1A3_reco_RFA is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 3
+                    AmmoBoxIndex = 4
                     Ammunition = $/GFX/Weapon/Ammo_SMOKE_Vehicle_Grenadex8
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -167746,7 +167747,7 @@ export WeaponDescriptor_T54B_CMD_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
+                    AmmoBoxIndex                     	= 0
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -167763,7 +167764,7 @@ export WeaponDescriptor_T54B_CMD_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_early'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 2
+                    AmmoBoxIndex                     	= 1
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -167795,7 +167796,7 @@ export WeaponDescriptor_T54B_CMD_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_HMG_12_7_mm_DShKM'
                     HandheldEquipmentKey                = "WeaponAlternative_3"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 3
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
@@ -167829,7 +167830,7 @@ export WeaponDescriptor_T54B_CMD_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_MMG_PKT_7_62mm'
                     HandheldEquipmentKey                = "WeaponAlternative_4"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 4
+                    AmmoBoxIndex                     	= 3
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
@@ -167884,7 +167885,7 @@ export WeaponDescriptor_T54B_CMD_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
+                    AmmoBoxIndex                     	= 0
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -167901,7 +167902,7 @@ export WeaponDescriptor_T54B_CMD_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_early'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 2
+                    AmmoBoxIndex                     	= 1
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -167933,7 +167934,7 @@ export WeaponDescriptor_T54B_CMD_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_HMG_12_7_mm_DShKM'
                     HandheldEquipmentKey                = "WeaponAlternative_3"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 3
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
@@ -167967,7 +167968,7 @@ export WeaponDescriptor_T54B_CMD_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_MMG_PKT_7_62mm'
                     HandheldEquipmentKey                = "WeaponAlternative_4"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 4
+                    AmmoBoxIndex                     	= 3
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
@@ -168034,7 +168035,7 @@ export WeaponDescriptor_T54B_CMD_TCH is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
+                    AmmoBoxIndex                     	= 0
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168051,7 +168052,7 @@ export WeaponDescriptor_T54B_CMD_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_Canon_HE_100mm_D10T_early"
                     HandheldEquipmentKey = "WeaponAlternative_2"
                     NbWeapons = 1
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 1
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
                     WeaponIgnoredPropertyName = "WeaponIgnored_2"
@@ -168087,7 +168088,7 @@ export WeaponDescriptor_T54B_CMD_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_HMG_12_7_mm_DShKM"
                     HandheldEquipmentKey = "WeaponAlternative_3"
                     NbWeapons = 1
-                    AmmoBoxIndex = 3
+                    AmmoBoxIndex = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
                     WeaponIgnoredPropertyName = "WeaponIgnored_3"
@@ -168123,7 +168124,7 @@ export WeaponDescriptor_T54B_CMD_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_MMG_PKT_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_5"
                     NbWeapons = 1
-                    AmmoBoxIndex = 5
+                    AmmoBoxIndex = 4
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_5"
                     WeaponIgnoredPropertyName = "WeaponIgnored_5"
@@ -168160,7 +168161,7 @@ export WeaponDescriptor_T54B_CMD_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_MMG_PKT_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_4"
                     NbWeapons = 1
-                    AmmoBoxIndex = 4
+                    AmmoBoxIndex = 3
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
                     WeaponIgnoredPropertyName = "WeaponIgnored_4"
@@ -168218,7 +168219,7 @@ export WeaponDescriptor_T54B_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
+                    AmmoBoxIndex                     	= 0
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168235,7 +168236,7 @@ export WeaponDescriptor_T54B_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_early'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 2
+                    AmmoBoxIndex                     	= 1
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168267,7 +168268,7 @@ export WeaponDescriptor_T54B_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_HMG_12_7_mm_DShKM'
                     HandheldEquipmentKey                = "WeaponAlternative_3"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 3
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
@@ -168301,7 +168302,7 @@ export WeaponDescriptor_T54B_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_MMG_PKT_7_62mm'
                     HandheldEquipmentKey                = "WeaponAlternative_4"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 4
+                    AmmoBoxIndex                     	= 3
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
@@ -168356,7 +168357,7 @@ export WeaponDescriptor_T54B_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
+                    AmmoBoxIndex                     	= 0
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168373,7 +168374,7 @@ export WeaponDescriptor_T54B_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_early'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 2
+                    AmmoBoxIndex                     	= 1
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168405,7 +168406,7 @@ export WeaponDescriptor_T54B_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_HMG_12_7_mm_DShKM'
                     HandheldEquipmentKey                = "WeaponAlternative_3"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 3
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
@@ -168439,7 +168440,7 @@ export WeaponDescriptor_T54B_POL is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_MMG_PKT_7_62mm'
                     HandheldEquipmentKey                = "WeaponAlternative_4"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 4
+                    AmmoBoxIndex                     	= 3
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
@@ -168506,7 +168507,7 @@ export WeaponDescriptor_T54B_Reserve_DDR is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
+                    AmmoBoxIndex                     	= 0
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168514,7 +168515,7 @@ export WeaponDescriptor_T54B_Reserve_DDR is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 1
                     Ammunition = $/GFX/Weapon/Ammo_Canon_HE_100mm_D10T_early
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -168550,7 +168551,7 @@ export WeaponDescriptor_T54B_Reserve_DDR is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 3
+                    AmmoBoxIndex = 2
                     Ammunition = $/GFX/Weapon/Ammo_HMG_12_7_mm_DShKM
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -168586,7 +168587,7 @@ export WeaponDescriptor_T54B_Reserve_DDR is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 5
+                    AmmoBoxIndex = 4
                     Ammunition = $/GFX/Weapon/Ammo_MMG_PKT_7_62mm
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -168623,7 +168624,7 @@ export WeaponDescriptor_T54B_Reserve_DDR is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 4
+                    AmmoBoxIndex = 3
                     Ammunition = $/GFX/Weapon/Ammo_MMG_PKT_7_62mm
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -168690,7 +168691,7 @@ export WeaponDescriptor_T54B_SOV is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
+                    AmmoBoxIndex                     	= 0
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168707,7 +168708,7 @@ export WeaponDescriptor_T54B_SOV is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_early'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 2
+                    AmmoBoxIndex                     	= 1
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168739,7 +168740,7 @@ export WeaponDescriptor_T54B_SOV is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_HMG_12_7_mm_DShKM'
                     HandheldEquipmentKey                = "WeaponAlternative_3"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 3
+                    AmmoBoxIndex                     	= 2
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_3'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_3'
@@ -168773,7 +168774,7 @@ export WeaponDescriptor_T54B_SOV is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_MMG_PKT_7_62mm'
                     HandheldEquipmentKey                = "WeaponAlternative_4"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 4
+                    AmmoBoxIndex                     	= 3
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_4'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_4'
@@ -168831,23 +168832,6 @@ export WeaponDescriptor_T54B_TCH is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    Ammunition                          = $/GFX/Weapon/Ammo_Canon_HEAT_100mm_D10T_early
-                    AnimateOnlyOneSoldier               = False
-                    DispersionRadiusOffColor            = RGBA[0,0,0,0]
-                    DispersionRadiusOffThickness        = -0.1
-                    DispersionRadiusOnColor             = RGBA[0,0,0,0]
-                    DispersionRadiusOnThickness         = -0.1
-                    EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
-                    HandheldEquipmentKey                = "WeaponAlternative_2"
-                    NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
-                    ShowDispersion                      = False
-                    WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
-                    WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
-                    WeaponShootDataPropertyName         = ['WeaponShootData_0_2']
-                ),
-                TMountedWeaponDescriptor
-                (
                     Ammunition                          = $/GFX/Weapon/Ammo_Canon_HE_HEAT_100mm_D10T_early
                     AnimateOnlyOneSoldier               = False
                     DispersionRadiusOffColor            = RGBA[0,0,0,0]
@@ -168857,7 +168841,7 @@ export WeaponDescriptor_T54B_TCH is TWeaponManagerModuleDescriptor
                     EffectTag                           = 'FireEffect_Canon_HE_100mm_D10T_late'
                     HandheldEquipmentKey                = "WeaponAlternative_2"
                     NbWeapons                           = 1
-                    AmmoBoxIndex                     	= 1
+                    AmmoBoxIndex                     	= 0
                     ShowDispersion                      = False
                     WeaponActiveAndCanShootPropertyName = 'WeaponActiveAndCanShoot_2'
                     WeaponIgnoredPropertyName           = 'WeaponIgnored_2'
@@ -168874,7 +168858,7 @@ export WeaponDescriptor_T54B_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_Canon_HE_100mm_D10T_early"
                     HandheldEquipmentKey = "WeaponAlternative_2"
                     NbWeapons = 1
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 1
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
                     WeaponIgnoredPropertyName = "WeaponIgnored_2"
@@ -168910,7 +168894,7 @@ export WeaponDescriptor_T54B_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_HMG_12_7_mm_DShKM"
                     HandheldEquipmentKey = "WeaponAlternative_3"
                     NbWeapons = 1
-                    AmmoBoxIndex = 3
+                    AmmoBoxIndex = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
                     WeaponIgnoredPropertyName = "WeaponIgnored_3"
@@ -168946,7 +168930,7 @@ export WeaponDescriptor_T54B_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_MMG_PKT_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_5"
                     NbWeapons = 1
-                    AmmoBoxIndex = 5
+                    AmmoBoxIndex = 4
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_5"
                     WeaponIgnoredPropertyName = "WeaponIgnored_5"
@@ -168983,7 +168967,7 @@ export WeaponDescriptor_T54B_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_MMG_PKT_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_4"
                     NbWeapons = 1
-                    AmmoBoxIndex = 4
+                    AmmoBoxIndex = 3
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
                     WeaponIgnoredPropertyName = "WeaponIgnored_4"
@@ -169087,7 +169071,7 @@ export WeaponDescriptor_T55AM1_CMD_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_Canon_HE_100mm_D10T_late"
                     HandheldEquipmentKey = "WeaponAlternative_2"
                     NbWeapons = 1
-                    AmmoBoxIndex = 0
+                    AmmoBoxIndex = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
                     WeaponIgnoredPropertyName = "WeaponIgnored_2"
@@ -169123,7 +169107,7 @@ export WeaponDescriptor_T55AM1_CMD_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_HMG_12_7_mm_DShKM"
                     HandheldEquipmentKey = "WeaponAlternative_3"
                     NbWeapons = 1
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 3
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
                     WeaponIgnoredPropertyName = "WeaponIgnored_3"
@@ -169161,7 +169145,7 @@ export WeaponDescriptor_T55AM1_CMD_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_MMG_PKT_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_4"
                     NbWeapons = 1
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 4
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
                     WeaponIgnoredPropertyName = "WeaponIgnored_4"
@@ -169265,7 +169249,7 @@ export WeaponDescriptor_T55AM1_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_Canon_HE_100mm_D10T_late"
                     HandheldEquipmentKey = "WeaponAlternative_2"
                     NbWeapons = 1
-                    AmmoBoxIndex = 0
+                    AmmoBoxIndex = 2
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_2"
                     WeaponIgnoredPropertyName = "WeaponIgnored_2"
@@ -169301,7 +169285,7 @@ export WeaponDescriptor_T55AM1_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_HMG_12_7_mm_DShKM"
                     HandheldEquipmentKey = "WeaponAlternative_3"
                     NbWeapons = 1
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 3
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_3"
                     WeaponIgnoredPropertyName = "WeaponIgnored_3"
@@ -169339,7 +169323,7 @@ export WeaponDescriptor_T55AM1_TCH is TWeaponManagerModuleDescriptor
                     EffectTag = "FireEffect_MMG_PKT_7_62mm"
                     HandheldEquipmentKey = "WeaponAlternative_4"
                     NbWeapons = 1
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 4
                     ShowDispersion = False
                     WeaponActiveAndCanShootPropertyName = "WeaponActiveAndCanShoot_4"
                     WeaponIgnoredPropertyName = "WeaponIgnored_4"
@@ -177428,7 +177412,8 @@ export WeaponDescriptor_T64A_Instructor_SOV is TWeaponManagerModuleDescriptor
     AlwaysOrientArmorTowardsThreat = True
     Salves = 
     [
-        1,
+        2,
+		2,
         65,
         132,
         1,
@@ -177466,7 +177451,7 @@ export WeaponDescriptor_T64A_Instructor_SOV is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 0
+                    AmmoBoxIndex = 1
                     Ammunition = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46_T64A
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -177502,7 +177487,7 @@ export WeaponDescriptor_T64A_Instructor_SOV is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 2
                     Ammunition = $/GFX/Weapon/Ammo_HMG_12_7_mm_NSVT
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -177538,7 +177523,7 @@ export WeaponDescriptor_T64A_Instructor_SOV is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 3
                     Ammunition = $/GFX/Weapon/Ammo_MMG_PKT_7_62mm
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -177571,7 +177556,7 @@ export WeaponDescriptor_T64A_Instructor_SOV is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 3
+                    AmmoBoxIndex = 4
                     Ammunition = $/GFX/Weapon/Ammo_SMOKE_Vehicle_Grenadex8
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -180917,7 +180902,8 @@ export WeaponDescriptor_T72B_obr89_Instructor_SOV is TWeaponManagerModuleDescrip
     Salves = 
     [
         2,
-        4,
+		2,
+        2,
         65,
         65,
         1,
@@ -180955,7 +180941,7 @@ export WeaponDescriptor_T72B_obr89_Instructor_SOV is TWeaponManagerModuleDescrip
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 0
+                    AmmoBoxIndex = 1
                     Ammunition = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46M1
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -180975,7 +180961,7 @@ export WeaponDescriptor_T72B_obr89_Instructor_SOV is TWeaponManagerModuleDescrip
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 2
                     Ammunition = $/GFX/Weapon/Ammo_ATGM_9M119M_Svir
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -181011,7 +180997,7 @@ export WeaponDescriptor_T72B_obr89_Instructor_SOV is TWeaponManagerModuleDescrip
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 3
                     Ammunition = $/GFX/Weapon/Ammo_HMG_12_7_mm_NSVT
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -181049,7 +181035,7 @@ export WeaponDescriptor_T72B_obr89_Instructor_SOV is TWeaponManagerModuleDescrip
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 3
+                    AmmoBoxIndex = 4
                     Ammunition = $/GFX/Weapon/Ammo_MMG_PKT_7_62mm
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -181082,7 +181068,7 @@ export WeaponDescriptor_T72B_obr89_Instructor_SOV is TWeaponManagerModuleDescrip
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 4
+                    AmmoBoxIndex = 5
                     Ammunition = $/GFX/Weapon/Ammo_SMOKE_Vehicle_Grenadex8
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -182184,6 +182170,7 @@ export WeaponDescriptor_T72M1_Instructor_SOV is TWeaponManagerModuleDescriptor
     Salves = 
     [
         2,
+		2,
         65,
         132,
         1,
@@ -182221,7 +182208,7 @@ export WeaponDescriptor_T72M1_Instructor_SOV is TWeaponManagerModuleDescriptor
                 ),
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 0
+                    AmmoBoxIndex = 1
                     Ammunition = $/GFX/Weapon/Ammo_Canon_HE_125_mm_2A46_T72M
                     AnimateOnlyOneSoldier = False
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -182257,7 +182244,7 @@ export WeaponDescriptor_T72M1_Instructor_SOV is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 1
+                    AmmoBoxIndex = 2
                     Ammunition = $/GFX/Weapon/Ammo_HMG_12_7_mm_NSVT
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -182295,7 +182282,7 @@ export WeaponDescriptor_T72M1_Instructor_SOV is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 2
+                    AmmoBoxIndex = 3
                     Ammunition = $/GFX/Weapon/Ammo_MMG_PKT_7_62mm
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]
@@ -182328,7 +182315,7 @@ export WeaponDescriptor_T72M1_Instructor_SOV is TWeaponManagerModuleDescriptor
             [
                 TMountedWeaponDescriptor
                 (
-                    AmmoBoxIndex = 3
+                    AmmoBoxIndex = 4
                     Ammunition = $/GFX/Weapon/Ammo_SMOKE_Vehicle_Grenadex8
                     AnimateOnlyOneSoldier = True
                     DispersionRadiusOffColor = RGBA[0,0,0,0]

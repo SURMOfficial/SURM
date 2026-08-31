@@ -380,7 +380,6 @@ ELevelLaunch is TBaseClass
     LaunchIA is 1
     Scripted is 2
     Skirmish is 3
-    Load    is 4
     TestSuite  is 5
 )
 
@@ -400,13 +399,17 @@ RangeCorr                         is 2.7742749056
 RangeCorrRkt					  is 1.629372515
 RangeCorrFix				      is 0.88
 RangeCorrVis					  is 2.5
-AC_AP_corr						  is 2.0 //reduced since I can't stop the crits anymore, went up to 2.0 as TTK was getting slow
+AC_AP_corr						  is 2.5 //increased as we go to ammo rack system and shorter bursts reduced since I can't stop the crits anymore, went up to 2.0 as TTK was getting slow
 Accnostab						  is 0.0
 AccCorr							  is 0.26 // 0.57 //this reduces the hit roll to compensate for the range corr increase
+AccCorr35						  is 0.34 // 0.68 //for 3.3 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
 AccCorrSov						  is 0.38 // 0.68 //for 3.3 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
+AccCorr30						  is 0.44 // 0.68 //for 3.3 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
 AccCorr25						  is 0.55 // 0.68 //for 2.5 km range T-72s this reduces the hit roll to compensate for the range corr increase smaller due to shorter range
-AccCorrAC						  is 0.3 // 0.35 //autocannons
-AccCorrHE						  is 0.4 // for direct fire HE apply on top of standard acc corr
+AccCorrAC						  is 0.6 // 0.35 //autocannons
+AccCorrHE						  is 0.65 // for direct fire HE and HEAT apply on top of standard acc corr to account for greater drop
+AccCorrHEAT						  is 0.8 // for flatter shooting NATO HEAT rounds
+AccCorrHEAC						  is 0.2 // for HE autocannons
 AccCorrRifle				      is 0.2 // 0.04 
 AccCorrCarb				      	  is 0.15 // 0.05
 AccCorrMG						  is 0.1 // 0.02
