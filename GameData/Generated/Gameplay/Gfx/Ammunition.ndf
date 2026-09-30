@@ -20653,11 +20653,11 @@ Ammo_Canon_AP_85mm_Vz52 is TAmmunitionDescriptor
 Ammo_Canon_AP_90_mm__F3 is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{ad46f2e6-3991-4c5b-be89-c287520564bd}
-    Name                              = 'OKKNBAPJCH'
-    TypeCategoryName                  = 'FIQMEQMUTK'
+    Name                              = 'OCC9062'
+    TypeCategoryName                  = 'HEATR'
     Caliber                           = 'DUSWQRGOFW'
     WeaponDescriptionToken            = 'YDWRGQLHYI'
-    TraitsToken                       = [ 'autoloader', 'HE', 'HEAT', ]
+    TraitsToken                       = [ 'autoloader', 'HEAT', ]
     WeaponCursorType                  = Weapon_Cursor_Canon
     MinMaxCategory                    = MinMax_CanonAP
     Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=12)
@@ -20681,7 +20681,7 @@ Ammo_Canon_AP_90_mm__F3 is TAmmunitionDescriptor
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
     TirReflexe                        = True
-    ProjectileSpeedGRU                = 800
+    ProjectileSpeedGRU                = 714
     NoiseDissimulationMalus           = 3.0
     ShotsBeforeMaxNoise               = 3
     TargetOnlyOneUnitInDistrict       = True
@@ -20701,13 +20701,13 @@ Ammo_Canon_AP_90_mm__F3 is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 150.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 12
-    SupplyCost                        = 122.4
+    ShotsCountPerSalvo                    = 6
+    SupplyCost                        = 61.2
     CanShootOnPosition                = False
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 12
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_F3"
+    AffichageMunitionParSalve         = 6
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HEAT"
     SmokeDescriptor                   = nil
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_VerySmall
@@ -20717,11 +20717,78 @@ Ammo_Canon_AP_90_mm__F3 is TAmmunitionDescriptor
     TandemCharge                      = False
     DamageTypeEvolutionOverRangeDescriptor  = nil
 )
+Ammo_Canon_AP_HE_90_mm__F3 is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{f0ca7ce1-36d4-4535-907f-63d2fae7ea43}
+    Name                              = 'OE90F1'
+    TypeCategoryName                  = 'HERND'
+    Caliber                           = 'DUSWQRGOFW'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'autoloader', 'HE', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=6)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonAPM48'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 5.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 2000
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0.5
+    SalvoShotsSorted          		  = False
+    RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = False
+    RadiusSplashSuppressDamagesGRU    = 5
+    SuppressDamages                   = 150.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 714
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorr25 * 40),
+            (EBaseHitValueModifier/Moving, AccCorr25 * 5 * Accnostab),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    AimingTime                        = 12.0
+    TimeBetweenTwoSalvos              = 150.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                    = 6
+    SupplyCost                        = 61.2
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    SimultaneousShotsCount          = 1
+    AffichageMunitionParSalve         = 6
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HE"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
 Ammo_Canon_AP_90_mm_CATI is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{be26b49e-fb37-4dc7-a7ce-a0665e27dc58}
-    Name                              = 'QJDCDAYHWK'
-    TypeCategoryName                  = 'FIQMEQMUTK'
+    Name                              = 'OCC9062'
+    TypeCategoryName                  = 'HEATR'
     Caliber                           = 'DUSWQRGOFW'
     WeaponDescriptionToken            = 'YDWRGQLHYI'
     TraitsToken                       = [ 'MOTION', 'HE', 'HEAT', ]
@@ -20786,8 +20853,8 @@ Ammo_Canon_AP_90_mm_CATI is TAmmunitionDescriptor
 Ammo_Canon_AP_90_mm_GIAT_F1 is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{2305d857-b5f1-4e1e-8308-4f224cf97e57}
-    Name                              = 'IVEEQGYMXG'
-    TypeCategoryName                  = 'FIQMEQMUTK'
+    Name                              = 'OCC9062'
+    TypeCategoryName                  = 'HEATR'
     Caliber                           = 'DUSWQRGOFW'
     WeaponDescriptionToken            = 'YDWRGQLHYI'
     TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
@@ -20814,7 +20881,7 @@ Ammo_Canon_AP_90_mm_GIAT_F1 is TAmmunitionDescriptor
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
     TirReflexe                        = True
-    ProjectileSpeedGRU                = 800
+    ProjectileSpeedGRU                = 714
     NoiseDissimulationMalus           = 3.0
     ShotsBeforeMaxNoise               = 3
     TargetOnlyOneUnitInDistrict       = True
@@ -20840,10 +20907,77 @@ Ammo_Canon_AP_90_mm_GIAT_F1 is TAmmunitionDescriptor
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_F3"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HEAT"
     SmokeDescriptor                   = nil
     IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_VerySmall
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = True
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_AP_HE_90_mm_GIAT_F1 is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{754b982f-fd66-441d-95a2-27c2d0da0ea9}
+    Name                              = 'OE90F1'
+    TypeCategoryName                  = 'HERND'
+    Caliber                           = 'DUSWQRGOFW'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'STAT', 'HE', 'HEAT', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_ap_missile Index=6)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonAPM48'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 2000
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0.0
+    DispersionAtMaxRangeGRU           = 3
+    DispersionAtMinRangeGRU           = 0.5
+    SalvoShotsSorted          		  = False
+    RadiusSplashPhysicalDamagesGRU    = 0
+    PhysicalDamages                   = 1.0
+    ShowDamageInUI                    = False
+    RadiusSplashSuppressDamagesGRU    = 5
+    SuppressDamages                   = 150.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 620
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 0
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorrSov * 40),
+            (EBaseHitValueModifier/Moving, AccCorrSov * 5 * Accnostab),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    AimingTime                        = 11.0
+    TimeBetweenTwoSalvos              = 8.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                = 1
+    SupplyCost                        = 10.0
+    CanShootOnPosition                = False
+    CanShootWhileMoving               = False
+    SimultaneousShotsCount            = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HE"
+    SmokeDescriptor                   = nil
+    IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Frag_HEAT_Small
     FireTriggeringProbability         = 1.0
     IsHarmlessForAllies               = False
     PiercingWeapon                    = True
@@ -33748,8 +33882,8 @@ Ammo_Canon_HE_85mm_Vz52 is TAmmunitionDescriptor
 Ammo_Canon_HE_90_mm__F3 is TAmmunitionDescriptor
 (
     DescriptorId                      = GUID:{efce722b-1ec8-4026-8943-21e23fedc961}
-    Name                              = 'OKKNBAPJCH'
-    TypeCategoryName                  = 'FIQMEQMUTK'
+    Name                              = 'OE90F1'
+    TypeCategoryName                  = 'HERND'
     Caliber                           = 'DUSWQRGOFW'
     WeaponDescriptionToken            = 'YDWRGQLHYI'
     TraitsToken                       = [ 'MOTION', 'HE', ]
@@ -33776,6 +33910,75 @@ Ammo_Canon_HE_90_mm__F3 is TAmmunitionDescriptor
     DisplaySalveAccuracy              = False
     TirIndirect                       = False
     TirReflexe                        = True
+    ProjectileSpeedGRU                = 620
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 15
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorrHE * AccCorr25 *  40),
+            (EBaseHitValueModifier/Moving, AccCorrHE * AccCorr25 *  5 * Accnostab),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 11.0
+    TimeBetweenTwoSalvos              = 150.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                    = 6
+    SupplyCost                        = 61.2
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    SimultaneousShotsCount          = 1
+    AffichageMunitionParSalve         = 6
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HE"
+    SmokeDescriptor                   = nil
+	IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HE_HEAT_90_mm__F3 is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{be88e094-da59-49f6-92ed-43a42aac2a7d}
+    Name                              = 'OCC9062'
+    TypeCategoryName                  = 'HEATR'
+    Caliber                           = 'DUSWQRGOFW'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'MOTION', 'HE', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonHEM48'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 5.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 2000
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0.002
+    DispersionAtMaxRangeGRU           = 0
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted          		  = False
+    RadiusSplashPhysicalDamagesGRU    = 12
+    PhysicalDamages                   = 1.8
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *20
+    SuppressDamages                   = ArtySuppressCorr * 70.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
     ProjectileSpeedGRU                = 714
     NoiseDissimulationMalus           = 3.0
     ShotsBeforeMaxNoise               = 3
@@ -33797,14 +34000,14 @@ Ammo_Canon_HE_90_mm__F3 is TAmmunitionDescriptor
     TimeBetweenTwoSalvos              = 150.0
     TimeBetweenTwoSalvos_Min          = -1.0
     TimeBetweenTwoSalvos_Max          = -1.0
-    ShotsCountPerSalvo                    = 12
-    SupplyCost                        = 122.4
+    ShotsCountPerSalvo                    = 6
+    SupplyCost                        = 61.2
     NbSalvosShootOnPosition           = 1
     CanShootOnPosition                = True
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
-    AffichageMunitionParSalve         = 12
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_F3"
+    AffichageMunitionParSalve         = 6
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HEAT"
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
@@ -33942,7 +34145,76 @@ Ammo_Canon_HE_90_mm_GIAT_F1 is TAmmunitionDescriptor
     CanShootWhileMoving               = False
     SimultaneousShotsCount          = 1
     AffichageMunitionParSalve         = 1
-    InterfaceWeaponTexture            = "Texture_Interface_Weapon_F3"
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HE"
+    SmokeDescriptor                   = nil
+	IgnoreInflammabilityConditions    = True
+    FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
+    FireTriggeringProbability         = 1.0
+    IsHarmlessForAllies               = False
+    PiercingWeapon                    = False
+    TandemCharge                      = False
+    DamageTypeEvolutionOverRangeDescriptor  = nil
+)
+Ammo_Canon_HE_HEAT_90_mm_GIAT_F1 is TAmmunitionDescriptor
+(
+    DescriptorId                      = GUID:{fe1d278e-a629-4845-9e50-c3fbcdff6a27}
+    Name                              = 'IVEEQGYMXG'
+    TypeCategoryName                  = 'FIQMEQMUTK'
+    Caliber                           = 'DUSWQRGOFW'
+    WeaponDescriptionToken            = 'YDWRGQLHYI'
+    TraitsToken                       = [ 'STAT', 'HE', ]
+    WeaponCursorType                  = Weapon_Cursor_Canon
+    MinMaxCategory                    = MinMax_CanonAP
+    Arme                              = TDamageTypeRTTI(Family=DamageFamily_he Index=1)
+    ProjectileType                    = EProjectileType/Obus
+    ImpactHappening                   = 'CanonHEM48'
+    FxPower                           = EFXPower/Moyen
+    TimeBetweenTwoShots               = 1.0
+    TimeBetweenTwoFx                  = 1.0
+    MaximumRangeGRU                   = 1925
+    MinimumRangeGRU                   = 6
+    AngleDispersion                   = 0.002
+    DispersionAtMaxRangeGRU           = 0
+    DispersionAtMinRangeGRU           = 0
+    SalvoShotsSorted                  = False
+    RadiusSplashPhysicalDamagesGRU    = 12
+    PhysicalDamages                   = 1.8
+    ShowDamageInUI                    = True
+    RadiusSplashSuppressDamagesGRU    = ArtySuppressRadCorr *20
+    SuppressDamages                   = ArtySuppressCorr * 70.0
+    AllowSuppressDamageWhenNoImpact   = True
+    DisplaySalveAccuracy              = False
+    TirIndirect                       = False
+    TirReflexe                        = True
+    ProjectileSpeedGRU                = 714
+    NoiseDissimulationMalus           = 3.0
+    ShotsBeforeMaxNoise               = 3
+    TargetOnlyOneUnitInDistrict       = True
+    HitRollRuleDescriptor = TDiceHitRollRuleDescriptor
+    (
+         BaseCriticModifier = 15
+         BaseHitValueModifiers =
+         [
+            (EBaseHitValueModifier/Base, 0.0),
+            (EBaseHitValueModifier/Idling, AccCorrSov * AccCorrHE * 40),
+            (EBaseHitValueModifier/Moving, AccCorrSov * AccCorrHE * 5),
+            (EBaseHitValueModifier/Targeted, 0.0),
+         ]
+        DistanceToTarget = True
+    )
+    MaxSuccessiveHitCount             = 3
+    AimingTime                        = 8.0
+    TimeBetweenTwoSalvos              = 8.0
+    TimeBetweenTwoSalvos_Min          = -1.0
+    TimeBetweenTwoSalvos_Max          = -1.0
+    ShotsCountPerSalvo                    = 1
+    SupplyCost                        = 10.0
+    NbSalvosShootOnPosition           = 1
+    CanShootOnPosition                = True
+    CanShootWhileMoving               = False
+    SimultaneousShotsCount          = 1
+    AffichageMunitionParSalve         = 1
+    InterfaceWeaponTexture            = "Texture_Interface_Weapon_HEAT"
     SmokeDescriptor                   = nil
 	IgnoreInflammabilityConditions    = True
     FireDescriptor                    = $/GFX/Weapon/Descriptor_Fire_Dust
